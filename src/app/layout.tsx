@@ -1,4 +1,10 @@
 import { ReactNode } from "react";
+import { DM_Sans } from "next/font/google";
+
+const dm_sans = DM_Sans({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -7,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={dm_sans.className}>{children}</body>
     </html>
   );
 }

@@ -1,0 +1,115 @@
+@use "@/shared/styles/tokens/typography" as size;
+@use "@/shared/styles/tokens/colors" as color;
+@use "@/shared/styles/tokens/spacing" as spacing;
+
+/* Basic */
+
+.button {
+  border-radius: 1.875rem;
+  font-weight: size.$font-weight-semibold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+
+  &:disabled {
+    background: color.$color-black-300;
+    color: color.$color-button-disabled;
+    border: none;
+  }
+}
+
+/* Variants */
+
+.primary {
+  background: color.$color-primary-800;
+  color: color.$color-black-100;
+  transition:
+    background 0.5s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    border 0.4s ease-in-out;
+
+  &:hover {
+    background: color.$color-primary-1100;
+  }
+}
+
+.outline {
+  color: color.$color-primary-800;
+  border: 0.125rem solid color.$color-primary-800;
+}
+
+.soft {
+  background: color.$color-primary-100;
+  color: color.$color-primary-800;
+  border: 0.125rem solid color.$color-primary-800;
+}
+
+.tertiary {
+  color: color.$color-primary-800;
+  text-decoration: underline;
+}
+
+/* Sizes */
+
+.sm {
+  padding: spacing.$space-2 spacing.$space-7;
+  min-height: 2.5rem;
+  font-size: size.$font-size-body-sm;
+}
+
+.md {
+  padding: spacing.$space-3 spacing.$space-7;
+  min-height: 2.75rem;
+  font-size: size.$font-size-body-md;
+}
+
+.lg {
+  padding: spacing.$space-4 spacing.$space-7;
+  min-height: 3.375rem;
+  font-size: size.$font-size-body-lg;
+}
+
+/* Icons */
+
+.startIcon,
+.endIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outlines */
+
+.white {
+  box-shadow: inset 0 0 0 0.094rem color.$color-white;
+  border: 0.125rem solid color.$color-primary-800;
+
+  &:hover {
+    border: 0.125rem solid color.$color-primary-1100;
+  }
+}
+
+.disabled {
+  box-shadow: inset 0 0 0 0.094rem color.$color-white;
+  border: 0.125rem solid color.$color-primary-800;
+
+  &:disabled {
+    border: 0.156rem solid color.$color-black-300;
+  }
+}
+
+.light-blue {
+  box-shadow: inset 0 0 0 0.094rem color.$color-primary-800;
+  border: 0.125rem solid color.$color-primary-100;
+}
+
+.none {
+  box-shadow: none;
+  border: none;
+}

@@ -1,0 +1,56 @@
+@use "@/shared/styles/tokens/spacing" as spacing;
+@use "@/shared/styles/tokens/colors" as color;
+@use "@/shared/styles/tokens/typography" as size;
+
+.wrapper {
+  padding: spacing.$space-10;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 46.563rem;
+  min-height: calc(100vh - 3.75rem - 3rem);
+  background-image: url("/login/images/primary-banner.svg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 1.875rem;
+  padding: 1.875rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: color.$linear-gradient-100;
+    border-radius: 1.875rem;
+    z-index: 0;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1.375rem;
+}
+
+.logoCapture {
+  font-weight: size.$font-weight-semibold;
+  line-height: 150%;
+  font-size: size.$font-size-h4;
+}
+
+.logoHeading {
+  position: absolute;
+  width: 100%;
+  max-width: 33rem;
+  bottom: 1.875rem;
+  line-height: 150%;
+  z-index: 1;
+  font-weight: size.$font-weight-bold;
+  color: color.$color-white;
+  font-size: size.$font-size-h5;
+}

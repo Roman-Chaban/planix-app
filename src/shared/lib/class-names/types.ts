@@ -1,1 +1,3 @@
-export type ClassValue = string | undefined | null | false;
+export type ClassPrimitive = string | number | null | undefined | false;
+export type ClassObject = Record<string, boolean | undefined | null>;
+export type ClassValue = ClassPrimitive | ClassObject;

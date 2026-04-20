@@ -1,7 +1,9 @@
 import type { FC } from "react";
-import type { GridProps } from "./types";
 
 import styles from "./grid.module.scss";
+
+import type { GridProps } from "./types";
+
 
 export const Grid: FC<GridProps> = ({ children, className }) => {
   const classes = [styles.grid, className].filter(Boolean).join(" ");

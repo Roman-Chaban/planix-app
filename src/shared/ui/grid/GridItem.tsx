@@ -1,7 +1,9 @@
 import type { FC } from "react";
-import type { GridItemProps } from "./types";
 
 import styles from "./grid.module.scss";
+
+import type { GridItemProps } from "./types";
+
 
 export const GridItem: FC<GridItemProps> = ({
   children,

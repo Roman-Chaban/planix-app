@@ -1,7 +1,10 @@
 import type { FC } from "react";
-import type { ButtonProps } from "./types";
+
 import { classNames } from "@/shared/lib/class-names/index";
+
 import styles from "./button.module.scss";
+
+import type { ButtonProps } from "./types";
 
 export const Button: FC<ButtonProps> = ({
   variant = "primary",

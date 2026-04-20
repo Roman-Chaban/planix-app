@@ -1,8 +1,12 @@
-import { forwardRef } from "react";
-import type { InputProps } from "./types";
+import { forwardRef, useId } from "react";
+
 import { classNames } from "@/shared/lib/class-names";
+import { Box } from "@/shared/ui/box/Box";
+import { Typography } from "@/shared/ui/typography/Typography";
 
 import styles from "./input.module.scss";
+
+import type { InputProps } from "./types";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
@@ -17,51 +21,76 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       errorMessage,
       className,
       disabled,
-      icon,
+      startIcon,
+      endIcon,
+      label,
       isSeparator,
       onChange,
     },
     ref,
   ) => {
+    const inputId = useId();
     const isError = Boolean(error);
+    const hasStartIcon = Boolean(startIcon);
+    const hasEndIcon = Boolean(endIcon);
 
     const wrapperClasses = classNames(
       styles.inputWrapper,
       styles[variant],
       {
-        [styles.withIcon]: !!icon,
-        [styles.withSeparator]: isSeparator && !!icon,
+        [styles.withIcon]: !!startIcon,
+        [styles.withSeparator]: isSeparator && !!startIcon,
         [styles.error]: isError,
       },
       className,
     );
 
-    const hasIcon = Boolean(icon);
-
     return (
-      <div className={wrapperClasses}>
-        {hasIcon && <span className={styles.iconWrapper}>{icon}</span>}
-
-        {isSeparator && <span className={styles.separator} />}
-
-        <input
-          ref={ref}
-          type={type}
-          value={value}
-          placeholder={placeholder}
-          required={required}
-          name={name}
-          disabled={disabled}
-          className={styles.input}
-          onChange={onChange}
-        />
-
-        {error && errorMessage && (
-          <span id={`${name}-error`} className={styles.errorMessage}>
-            {errorMessage}
-          </span>
+      <Box className={styles.wrapper}>
+        {label && (
+          <label htmlFor={inputId} className={styles.label}>
+            {label}
+          </label>
         )}
-      </div>
+
+        <Box className={wrapperClasses}>
+          {hasStartIcon && (
+            <Typography as="span" className={styles.startIcon}>
+              {startIcon}
+            </Typography>
+          )}
+
+          {isSeparator && <Typography as="span" className={styles.separator} />}
+
+          <input
+            ref={ref}
+            type={type}
+            value={value}
+            placeholder={placeholder}
+            required={required}
+            name={name}
+            disabled={disabled}
+            className={styles.input}
+            onChange={onChange}
+          />
+
+          {hasEndIcon && (
+            <Typography as="span" className={styles.endIcon}>
+              {endIcon}
+            </Typography>
+          )}
+
+          {error && errorMessage && (
+            <Typography
+              as="span"
+              id={`${name}-error`}
+              className={styles.errorMessage}
+            >
+              {errorMessage}
+            </Typography>
+          )}
+        </Box>
+      </Box>
     );
   },
 );

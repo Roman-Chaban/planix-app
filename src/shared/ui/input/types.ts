@@ -20,7 +20,8 @@ export type InputProps = {
   errorMessage?: string;
   disabled?: boolean;
   label?: string;
-  icon?: ReactNode;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
   isSeparator?: boolean;
   onEndIconClick?: () => void;
 } & InputHTMLAttributes<HTMLInputElement>;

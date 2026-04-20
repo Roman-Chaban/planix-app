@@ -1,4 +1,5 @@
 import type { FC } from "react";
+
 import type { IconProps } from "./types";
 
 export const ProfileIcon: FC<IconProps> = ({ width, height }) => {
@@ -22,7 +23,7 @@ export const ProfileIcon: FC<IconProps> = ({ width, height }) => {
   );
 };
 
-export const PostIcon: FC<IconProps> = ({ width, height }) => {
+export const PostIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   return (
     <svg
       width={width}
@@ -108,6 +109,95 @@ export const PlanixLogo: FC<IconProps> = ({ width = 78, height = 88 }) => {
           />
         </filter>
       </defs>
+    </svg>
+  );
+};
+
+export const LockIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 8.33341V6.66675C5 3.90841 5.83333 1.66675 10 1.66675C14.1667 1.66675 15 3.90841 15 6.66675V8.33341"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.99996 15.4167C11.1506 15.4167 12.0833 14.4839 12.0833 13.3333C12.0833 12.1827 11.1506 11.25 9.99996 11.25C8.84937 11.25 7.91663 12.1827 7.91663 13.3333C7.91663 14.4839 8.84937 15.4167 9.99996 15.4167Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.1666 18.3333H5.83329C2.49996 18.3333 1.66663 17.4999 1.66663 14.1666V12.4999C1.66663 9.16659 2.49996 8.33325 5.83329 8.33325H14.1666C17.5 8.33325 18.3333 9.16659 18.3333 12.4999V14.1666C18.3333 17.4999 17.5 18.3333 14.1666 18.3333Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const VisibleIcon: FC<IconProps> = () => {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.1084 7.8916L7.89172 12.1083C7.35006 11.5666 7.01672 10.8249 7.01672 9.99993C7.01672 8.34993 8.35006 7.0166 10.0001 7.0166C10.8251 7.0166 11.5667 7.34994 12.1084 7.8916Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.85 4.8084C13.3917 3.7084 11.725 3.1084 9.99999 3.1084C7.05833 3.1084 4.31666 4.84173 2.40833 7.84173C1.65833 9.01673 1.65833 10.9917 2.40833 12.1667C3.06666 13.2001 3.83333 14.0917 4.66666 14.8084"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.01672 16.2751C7.96672 16.6751 8.97506 16.8917 10.0001 16.8917C12.9417 16.8917 15.6834 15.1584 17.5917 12.1584C18.3417 10.9834 18.3417 9.0084 17.5917 7.8334C17.3167 7.40006 17.0167 6.99173 16.7084 6.6084"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.925 10.5833C12.7083 11.7583 11.75 12.7166 10.575 12.9333"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.89163 12.1084L1.66663 18.3334"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M18.3333 1.66675L12.1083 7.89175"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 };

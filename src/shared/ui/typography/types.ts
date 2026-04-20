@@ -12,6 +12,7 @@ export type TypographyAs =
 
 export type TypographyProps = {
   as?: TypographyAs;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
+  id?: string;
 };

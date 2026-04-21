@@ -6,7 +6,7 @@ import { Box } from "@shared/ui/box/Box";
 
 import styles from "./avatar.module.scss";
 
-import type { AvatarProps } from "./types";
+import type { AvatarProps } from "./model/avatar.types";
 
 
 export const Avatar: FC<AvatarProps> = ({

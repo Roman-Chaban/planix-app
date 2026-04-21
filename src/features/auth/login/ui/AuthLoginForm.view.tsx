@@ -13,7 +13,7 @@ import { AppLink } from "@/shared/ui/link/AppLink";
 import { AuthFooter } from "@/widgets/auth-layout/ui/AuthFooter";
 import { AuthHeader } from "@/widgets/auth-layout/ui/AuthHeader";
 
-import styles from "./auth-login-form.module.scss";
+import styles from "./auth-login.form.module.scss";
 
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
   register,

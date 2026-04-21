@@ -7,12 +7,20 @@ import type { AuthHeaderProps } from "@/widgets/auth-layout/model/auth-layout.ty
 
 import styles from "./auth-header.module.scss";
 
-export const AuthHeader: FC<AuthHeaderProps> = ({ title, subtitle, icon }) => {
+export const AuthHeader: FC<AuthHeaderProps> = ({
+  title,
+  subtitle,
+  decorationText,
+  icon,
+}) => {
   return (
     <Box className={styles.wrapper}>
       <Box className={styles.wrapperInfo}>
         <Typography as="h1" className={styles.title}>
-          {title}
+          {title}{" "}
+          <Typography as="span" className={styles.decorationText}>
+            {decorationText}
+          </Typography>
         </Typography>
         {icon && <Avatar icon={icon} />}
       </Box>

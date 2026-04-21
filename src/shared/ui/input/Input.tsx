@@ -6,7 +6,7 @@ import { Typography } from "@/shared/ui/typography/Typography";
 
 import styles from "./input.module.scss";
 
-import type { InputProps } from "./types";
+import type { InputProps } from "./model/input.types";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
@@ -25,6 +25,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       endIcon,
       label,
       isSeparator,
+      autoComplete,
       onChange,
     },
     ref,
@@ -63,6 +64,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           {isSeparator && <Typography as="span" className={styles.separator} />}
 
           <input
+            id={inputId}
             ref={ref}
             type={type}
             value={value}
@@ -72,6 +74,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             disabled={disabled}
             className={styles.input}
             onChange={onChange}
+            autoComplete={autoComplete}
           />
 
           {hasEndIcon && (

@@ -1,1 +1,1 @@
-export type { InputProps } from "@/shared/ui/input/types";
+export type { InputProps } from "@/shared/ui/input/model/input.types";

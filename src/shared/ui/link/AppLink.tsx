@@ -2,28 +2,33 @@ import type { FC } from "react";
 
 import Link from "next/link";
 
-import { LinkTargets } from "@/shared/constants/constants";
+import { LINK_TARGETS } from "@/shared/constants/constants";
 import { classNames } from "@/shared/lib/class-names";
 
 import styles from "./app-link.module.scss";
 
-import type { LinkProps } from "./types";
+import type { LinkProps } from "./model/app-link.types";
 
 export const AppLink: FC<LinkProps> = ({
   children,
   href,
-  underline = false,
+  isUnderline = false,
   external = false,
+  className,
   ...props
 }) => {
-  const linkClasses = classNames(styles.link, underline && styles.underline);
+  const linkClasses = classNames(
+    styles.link,
+    isUnderline && styles.underline,
+    className,
+  );
 
   if (external) {
     return (
       <a
         href={href}
         className={linkClasses}
-        target={LinkTargets.BLANK}
+        target={LINK_TARGETS.BLANK}
         rel="noopener noreferrer"
         {...props}
       >

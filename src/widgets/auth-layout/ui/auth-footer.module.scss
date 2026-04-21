@@ -1,0 +1,6 @@
+@use "@/shared/styles/tokens/flex" as *;
+
+.wrapper {
+  @include flex-row(0.313rem, center, center);
+  margin-block-end: 1rem;
+}

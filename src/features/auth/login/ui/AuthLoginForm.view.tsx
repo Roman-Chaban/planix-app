@@ -23,7 +23,11 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
   return (
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginContent}>
-        <AuthHeader title="Log In" subtitle="Log In to Your CRM Dashboard" />
+        <AuthHeader
+          title="Log "
+          subtitle="Log In to Your CRM Dashboard"
+          decorationText="In 👋"
+        />
 
         <form className={styles.loginForm} onSubmit={onSubmit}>
           <Input

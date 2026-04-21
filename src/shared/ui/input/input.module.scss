@@ -1,6 +1,7 @@
 @use "@/shared/styles/tokens/typography" as size;
 @use "@/shared/styles/tokens/colors" as color;
 @use "@/shared/styles/tokens/spacing" as spacing;
+@use "@/shared/styles/tokens/mixins" as *;
 
 /* Basic */
 
@@ -17,14 +18,10 @@
   align-items: center;
   border-radius: 1rem;
   border: 0.125rem solid color.$color-black-400;
-}
+  transition: all 0.35s ease-in-out 0s;
 
-.inputWrapper:hover {
-  border-color: color.$color-primary-600;
-}
-
-.inputWrapper:focus-within {
-  border-color: color.$color-primary-600;
+  @include input-border-active(color.$color-primary-600);
+  @include input-disabled(color.$color-black-300, color.$color-black-200);
 }
 
 .input {
@@ -59,35 +56,14 @@
   color: color.$color-black-1100;
 }
 
-.inputWrapper:has(.input:disabled) {
-  border: 0.125rem solid color.$color-black-300;
-  background: color.$color-black-200;
-}
-
 /* Icons */
 
 .startIcon {
-  position: absolute;
-  z-index: 3;
-  left: spacing.$space-8;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  pointer-events: none;
-  color: color.$color-black-700;
+  @include input-icon(left);
 }
 
 .endIcon {
-  position: absolute;
-  z-index: 3;
-  right: spacing.$space-8;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  pointer-events: none;
-  color: color.$color-black-700;
+  @include input-icon(right);
 }
 
 .typing .iconWrapper {
@@ -106,7 +82,6 @@
 }
 
 .label {
+  @include text-body-sm;
   color: color.$color-black-800;
-  font-size: size.$font-size-body-sm;
-  line-height: 150%;
 }

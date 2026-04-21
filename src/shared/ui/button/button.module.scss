@@ -1,8 +1,8 @@
 @use "@/shared/styles/tokens/typography" as size;
 @use "@/shared/styles/tokens/colors" as color;
 @use "@/shared/styles/tokens/spacing" as spacing;
-
-/* Basic */
+@use "@/shared/styles/tokens/flex" as *;
+@use "@/shared/styles/tokens/mixins" as *;
 
 .button {
   border-radius: 1.875rem;
@@ -17,45 +17,40 @@
   cursor: pointer;
   background: transparent;
 
-  &:disabled {
-    background: color.$color-black-300;
-    color: color.$color-button-disabled;
-    border: none;
-  }
+  @include button-disabled();
 }
-
-/* Variants */
 
 .primary {
   background: color.$color-primary-800;
   color: color.$color-black-100;
-  transition:
-    background 0.5s ease-in-out,
-    box-shadow 0.4s ease-in-out,
-    border 0.4s ease-in-out;
 
-  &:hover {
-    background: color.$color-primary-1100;
-  }
+  @include button-interaction(color.$color-primary-1100);
 }
 
 .outline {
   color: color.$color-primary-800;
-  border: 0.125rem solid color.$color-primary-800;
+
+  @include button-outline(
+    color.$color-primary-800,
+    none,
+    color.$color-primary-1100
+  );
 }
 
 .soft {
   background: color.$color-primary-100;
   color: color.$color-primary-800;
-  border: 0.125rem solid color.$color-primary-800;
+
+  @include button-outline(
+    color.$color-primary-800,
+    none,
+    color.$color-primary-1100
+  );
 }
 
 .tertiary {
-  color: color.$color-primary-800;
-  text-decoration: underline;
+  @include button-link;
 }
-
-/* Sizes */
 
 .sm {
   padding: spacing.$space-2 spacing.$space-7;
@@ -77,41 +72,7 @@
   font-size: size.$font-size-body-lg;
 }
 
-/* Icons */
-
 .startIcon,
 .endIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Outlines */
-
-.white {
-  box-shadow: inset 0 0 0 0.094rem color.$color-white;
-  border: 0.125rem solid color.$color-primary-800;
-
-  &:hover {
-    border: 0.125rem solid color.$color-primary-1100;
-  }
-}
-
-.disabled {
-  box-shadow: inset 0 0 0 0.094rem color.$color-white;
-  border: 0.125rem solid color.$color-primary-800;
-
-  &:disabled {
-    border: 0.156rem solid color.$color-black-300;
-  }
-}
-
-.light-blue {
-  box-shadow: inset 0 0 0 0.094rem color.$color-primary-800;
-  border: 0.125rem solid color.$color-primary-100;
-}
-
-.none {
-  box-shadow: none;
-  border: none;
+  @include flex-center;
 }

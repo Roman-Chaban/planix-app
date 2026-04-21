@@ -1,0 +1,180 @@
+@use "@/shared/styles/tokens/typography" as size;
+@use "@/shared/styles/tokens/colors" as color;
+@use "@/shared/styles/tokens/spacing" as spacing;
+
+/* Bounding Container mixins */
+
+@mixin bounding-container($padding: 0) {
+  width: 100%;
+  max-width: 93rem;
+  margin: 0 auto;
+  padding: $padding;
+}
+
+/* Input mixins */
+
+@mixin input-icon(
+  $side: left,
+  $offset: spacing.$space-8,
+  $z-index: 3,
+  $top: 50%,
+  $transform: translateY(-50%),
+  $display: flex,
+  $align-items: center,
+  $pointer-events: none,
+  $color: color.$color-black-700
+) {
+  position: absolute;
+  z-index: $z-index;
+  top: $top;
+  transform: $transform;
+  display: $display;
+  align-items: $align-items;
+  pointer-events: $pointer-events;
+  color: $color;
+
+  @if $side == left {
+    left: $offset;
+  } @else if $side == right {
+    right: $offset;
+  }
+}
+
+@mixin icon-color($color) {
+  .iconWrapper {
+    color: $color;
+  }
+}
+
+@mixin input-border-active($color) {
+  &:hover,
+  &:focus-within {
+    border-color: $color;
+  }
+}
+
+@mixin input-disabled($border, $bg) {
+  &:has(input:disabled) {
+    border: 0.125rem solid $border;
+    background: $bg;
+  }
+}
+
+@mixin text-body-sm {
+  font: {
+    size: size.$font-size-body-sm;
+  }
+  line-height: 150%;
+}
+
+/* Link mixins */
+
+@mixin link-style(
+  $color: color.$color-primary-800,
+  $weight: size.$font-weight-semibold,
+  $decoration: none
+) {
+  color: $color;
+  font-weight: $weight;
+  text-decoration: $decoration;
+}
+
+/* Checkbox mixins */
+
+@mixin checkbox-checked($bg, $border, $bg-hover: null, $border-hover: null) {
+  .input:checked + .box {
+    background: $bg;
+    border-color: $border;
+  }
+
+  .input:checked:hover + .box {
+    background: if($bg-hover != null, $bg-hover, $bg);
+    border-color: if($border-hover != null, $border-hover, $border);
+  }
+}
+
+@mixin reveal-on-checked {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.35s ease-in-out;
+
+  .input:checked + .box & {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Transition mixins */
+
+@mixin smooth-transition($props...) {
+  transition: $props 0.35s ease-in-out;
+}
+
+/* Buttons mixins */
+
+@mixin button-interaction($hover-bg: null) {
+  transition:
+    background 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &:hover {
+    @if $hover-bg {
+      background: $hover-bg;
+    }
+  }
+}
+
+@mixin button-disabled(
+  $bg: color.$color-black-300,
+  $text: color.$color-button-disabled,
+  $border: none
+) {
+  &.disabled {
+    background: $bg;
+    color: $text;
+    border: $border;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+@mixin button-outline($border, $shadow: none, $hover-border: null) {
+  box-shadow: $shadow;
+  border: 0.125rem solid $border;
+
+  &:hover {
+    @if $hover-border {
+      border-color: $hover-border;
+    }
+  }
+}
+
+@mixin button-link {
+  color: color.$color-primary-800;
+  text-decoration: underline;
+}
+
+/* Overlay mixins */
+
+@mixin overlay($radius: 0, $bg: null) {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  @if $bg {
+    background: $bg;
+  }
+
+  border-radius: $radius;
+}
+
+@mixin overlay-content {
+  position: relative;
+  z-index: 1;
+}
+
+@mixin bottom-overlay($bottom: 0) {
+  position: absolute;
+  bottom: $bottom;
+  width: 100%;
+}

@@ -1,8 +1,11 @@
 @use "@/shared/styles/tokens/spacing" as spacing;
+@use "@/shared/styles/tokens/flex" as *;
+@use "@/shared/styles/tokens/mixins" as *;
 
 .wrapper {
-  padding: spacing.$space-10;
-  min-height: 100vh;
+  min-height: 100svh;
+  @include bounding_container(spacing.$space-10);
+  @include flex(flex, row, center, stretch, 0);
 }
 
 .wrapperContainer {

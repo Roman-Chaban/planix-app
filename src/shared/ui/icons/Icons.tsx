@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import type { IconProps } from "./types";
+import type { IconProps } from "./model/icons.types";
 
 export const ProfileIcon: FC<IconProps> = ({ width, height }) => {
   return (
@@ -195,6 +195,31 @@ export const VisibleIcon: FC<IconProps> = () => {
         d="M18.3333 1.66675L12.1083 7.89175"
         stroke="currentColor"
         strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const CheckmarkIcon: FC<IconProps> = ({
+  width = 16,
+  height = 16,
+  className,
+}) => {
+  return (
+    <svg
+      className={className}
+      width={width}
+      height={height}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.3337 4L6.00033 11.3333L2.66699 8"
+        stroke="currentColor"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

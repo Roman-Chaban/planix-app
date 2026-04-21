@@ -27,3 +27,9 @@
   align-items: $align;
   gap: $gap;
 }
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

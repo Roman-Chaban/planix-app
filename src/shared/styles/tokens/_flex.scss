@@ -1,14 +1,21 @@
-@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
-  display: flex;
+@mixin flex(
+  $display: flex,
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0
+) {
+  display: $display;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
 }
 
-@mixin flex-col($gap: 0, $align: stretch) {
+@mixin flex-col($gap: 0, $justify: start, $align: stretch) {
   display: flex;
   flex-direction: column;
+  justify-content: $justify;
   align-items: $align;
   gap: $gap;
 }

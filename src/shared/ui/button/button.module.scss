@@ -64,6 +64,8 @@
 }
 
 .md {
+  width: 100%;
+  max-width: 8.188rem;
   padding: spacing.$space-3 spacing.$space-7;
   min-height: 2.75rem;
   font-size: size.$font-size-body-md;

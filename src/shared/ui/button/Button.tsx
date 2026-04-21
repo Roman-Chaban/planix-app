@@ -4,7 +4,7 @@ import { classNames } from "@/shared/lib/class-names/index";
 
 import styles from "./button.module.scss";
 
-import type { ButtonProps } from "./types";
+import type { ButtonProps } from "./model/button.types";
 
 export const Button: FC<ButtonProps> = ({
   variant = "primary",
@@ -15,6 +15,7 @@ export const Button: FC<ButtonProps> = ({
   startIcon,
   disabled,
   children,
+  type,
 }) => {
   const classes = classNames(
     styles.button,
@@ -25,7 +26,7 @@ export const Button: FC<ButtonProps> = ({
   );
 
   return (
-    <button className={classes} disabled={disabled}>
+    <button className={classes} disabled={disabled} type={type}>
       {startIcon}
       {children}
       {endIcon}

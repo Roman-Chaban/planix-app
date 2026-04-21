@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 export type ButtonVariant = "primary" | "outline" | "soft" | "tertiary";
 export type ButtonSize = "sm" | "md" | "lg";
@@ -19,4 +19,4 @@ export type ButtonProps = {
   outline?: ButtonOutline;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-} & HTMLAttributes<HTMLButtonElement>;
+} & ButtonHTMLAttributes<HTMLButtonElement>;

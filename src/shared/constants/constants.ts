@@ -17,6 +17,7 @@ export const INPUT_TYPES = {
   TEL: "tel",
   EMAIL: "email",
   PASSWORD: "password",
+  SEARCH: "search",
 } as const;
 
 export const BUTTON_TYPES = {

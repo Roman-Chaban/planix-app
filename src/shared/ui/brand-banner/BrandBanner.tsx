@@ -1,9 +1,7 @@
 import type { FC } from "react";
 
-import { Avatar } from "@/shared/ui/avatar";
-import { Box } from "@/shared/ui/box/index";
+import { Avatar, Box, Typography } from "@/shared/ui/index";
 import { PlanixLogo } from "@/shared/ui/icons/Icons";
-import { Typography } from "@/shared/ui/typography/Typography";
 
 import styles from "./brand-banner.module.scss";
 

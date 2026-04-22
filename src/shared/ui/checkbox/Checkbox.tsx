@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { classNames } from "@/shared/lib/class-names";
+import { classNames } from "@/shared/lib/helpers/class-names";
 import { CheckmarkIcon } from "@/shared/ui/icons/Icons";
 import { Typography } from "@/shared/ui/typography/Typography";
 import { INPUT_TYPES } from "@shared/constants/constants";

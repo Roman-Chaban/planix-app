@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { classNames } from "@/shared/lib/class-names/index";
+import { classNames } from "@/shared/lib/helpers/class-names/index";
 
 import styles from "./button.module.scss";
 

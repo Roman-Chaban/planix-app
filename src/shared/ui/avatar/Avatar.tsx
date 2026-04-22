@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import Image from "next/image";
 
-import { classNames } from "@/shared/lib/class-names/class-names";
+import { classNames } from "@/shared/lib/helpers/class-names/class-names";
 import { Box } from "@shared/ui/box/Box";
 
 import styles from "./avatar.module.scss";

@@ -21,8 +21,8 @@
   $transform: translateY(-50%),
   $display: flex,
   $align-items: center,
-  $pointer-events: none,
-  $color: color.$color-black-700
+  $color: color.$color-black-700,
+  $cursor: pointer
 ) {
   position: absolute;
   z-index: $z-index;
@@ -30,13 +30,16 @@
   transform: $transform;
   display: $display;
   align-items: $align-items;
-  pointer-events: $pointer-events;
   color: $color;
 
   @if $side == left {
     left: $offset;
+    cursor: default;
+    pointer-events: none;
   } @else if $side == right {
     right: $offset;
+    cursor: pointer;
+    pointer-events: auto;
   }
 }
 
@@ -88,8 +91,17 @@
   }
 
   .input:checked:hover + .box {
-    background: if($bg-hover != null, $bg-hover, $bg);
-    border-color: if($border-hover != null, $border-hover, $border);
+    @if $bg-hover != null {
+      background: $bg-hover;
+    } @else {
+      background: $bg;
+    }
+
+    @if $border-hover != null {
+      border-color: $border-hover;
+    } @else {
+      border-color: $border;
+    }
   }
 }
 

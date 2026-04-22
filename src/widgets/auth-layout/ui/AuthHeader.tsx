@@ -1,11 +1,9 @@
 import type { FC } from "react";
 
-import { Avatar } from "@/shared/ui/avatar";
-import { Box } from "@/shared/ui/box";
-import { Typography } from "@/shared/ui/typography/Typography";
+import { Avatar, Box, Typography } from "@/shared/ui/index";
 import type { AuthHeaderProps } from "@/widgets/auth-layout/model/auth-layout.types";
 
-import styles from "./auth-header.module.scss";
+import styles from "./auth-layout.module.scss";
 
 export const AuthHeader: FC<AuthHeaderProps> = ({
   title,
@@ -14,16 +12,15 @@ export const AuthHeader: FC<AuthHeaderProps> = ({
   icon,
 }) => {
   return (
-    <Box className={styles.wrapper}>
-      <Box className={styles.wrapperInfo}>
-        <Typography as="h1" className={styles.title}>
-          {title}{" "}
-          <Typography as="span" className={styles.decorationText}>
-            {decorationText}
-          </Typography>
+    <Box className={styles.headerWrapper}>
+      <Typography as="h1" className={styles.title}>
+        {title}{" "}
+        <Typography as="span" className={styles.decorationText}>
+          {decorationText}
         </Typography>
-        {icon && <Avatar icon={icon} />}
-      </Box>
+      </Typography>
+
+      {icon && <Avatar icon={icon} />}
       {subtitle && (
         <Typography as="p" className={styles.subtitle}>
           {subtitle}

@@ -1,18 +1,17 @@
 import type { FC } from "react";
 
-import { Box } from "@/shared/ui/box";
-import { AppLink } from "@/shared/ui/link/AppLink";
-import { Typography } from "@/shared/ui/typography/Typography";
+import { Box, AppLink, Typography } from "@/shared/ui/index";
 import type { AuthFooterProps } from "@/widgets/auth-layout/model/auth-layout.types";
 
-import styles from "./auth-footer.module.scss";
-
+import styles from "./auth-layout.module.scss";
 
 export const AuthFooter: FC<AuthFooterProps> = ({ title, link }) => {
   return (
-    <Box className={styles.wrapper}>
+    <Box className={styles.footerWrapper}>
       <Typography as="span">{title}</Typography>
-      <AppLink href="" className={styles.link}>
+
+      {/* Mock: [Added the correct link when it will need] */}
+      <AppLink href="/#" className={styles.link}>
         {link}
       </AppLink>
     </Box>

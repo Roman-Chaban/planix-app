@@ -1,9 +1,7 @@
 import type { FC } from "react";
 
 import { AuthLoginForm } from "@/features/auth/login/ui/AuthLoginForm";
-import { Box } from "@/shared/ui/box/index";
-import { BrandBanner } from "@/shared/ui/brand-banner/index";
-import { Grid, GridItem } from "@/shared/ui/grid/index";
+import { Box, BrandBanner, Grid, GridItem } from "@/shared/ui/index";
 
 import styles from "./auth-layout.module.scss";
 

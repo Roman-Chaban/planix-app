@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
 export type TypographyAs =
   | "h1"
@@ -15,4 +15,4 @@ export type TypographyProps = {
   children?: ReactNode;
   className?: string;
   id?: string;
-};
+} & HTMLAttributes<HTMLElement>;

@@ -7,11 +7,12 @@ export const Typography: FC<TypographyProps> = ({
   children,
   id = "",
   className = "",
+  onClick,
 }) => {
   const Component = as;
 
   return (
-    <Component id={id} className={className}>
+    <Component id={id} className={className} onClick={onClick}>
       {children}
     </Component>
   );

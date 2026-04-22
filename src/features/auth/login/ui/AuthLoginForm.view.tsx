@@ -3,13 +3,10 @@ import type { FC } from "react";
 import { Controller } from "react-hook-form";
 
 import type { AuthLoginFormViewProps } from "@/features/auth/login/model/types/form.types";
-import { BUTTON_TYPES } from "@/shared/constants/constants";
-import { Box } from "@/shared/ui/box";
-import { Button } from "@/shared/ui/button";
-import { Checkbox } from "@/shared/ui/checkbox/Checkbox";
-import { LockIcon, PostIcon, VisibleIcon } from "@/shared/ui/icons";
-import { Input } from "@/shared/ui/input/Input";
-import { AppLink } from "@/shared/ui/link/AppLink";
+import { BUTTON_TYPES, INPUT_TYPES } from "@/shared/constants/constants";
+import { Box, Button, Checkbox, AppLink } from "@/shared/ui/index";
+import { LockIcon, PostIcon } from "@/shared/ui/icons";
+import { Input } from "@/shared/ui/input/lib/index";
 import { AuthFooter } from "@/widgets/auth-layout/ui/AuthFooter";
 import { AuthHeader } from "@/widgets/auth-layout/ui/AuthHeader";
 
@@ -33,20 +30,18 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
           <Input
             startIcon={<PostIcon />}
             {...register("email")}
+            type={INPUT_TYPES.EMAIL}
             placeholder="Enter Email Address"
             label="Email Address"
             variant="primary"
             autoComplete="email"
           />
 
-          <Input
+          <Input.Password
             startIcon={<LockIcon />}
-            endIcon={<VisibleIcon />}
             {...register("password")}
             placeholder="Enter Password"
             label="Password"
-            variant="primary"
-            autoComplete="current-password"
           />
 
           <Box className={styles.loginFormMainWrapper}>
@@ -63,7 +58,8 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
                 )}
               />
 
-              <AppLink href="" className={styles.loginFormLink}>
+              {/* Mock: [Added the correct link when it will need] */}
+              <AppLink href="/#" className={styles.loginFormLink}>
                 Forgot Password?
               </AppLink>
             </Box>

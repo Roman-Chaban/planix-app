@@ -8,6 +8,6 @@ export type AuthFormValues = {
 
 export type AuthLoginFormViewProps = {
   register: UseFormRegister<AuthFormValues>;
-  control: Control<AuthFormValues>;
   onSubmit: () => void;
+  control: Control<AuthFormValues>;
 };

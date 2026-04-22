@@ -4,6 +4,8 @@ export type InputSize = "sm" | "md" | "lg";
 
 export type InputVariant = "primary" | "typing" | "filed" | "error";
 
+export type IsPasswordToggleable = boolean;
+
 export type InputTypes =
   | "email"
   | "tel"
@@ -23,5 +25,6 @@ export type InputProps = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   isSeparator?: boolean;
+  isPasswordToggleable?: boolean;
   onEndIconClick?: () => void;
 } & InputHTMLAttributes<HTMLInputElement>;

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 import { Avatar, Box, Typography } from "@/shared/ui/index";
-import type { AuthHeaderProps } from "@/widgets/auth-layout/model/types";
+import type { AuthHeaderProps } from "@/widgets/authLayout/model/types";
 
 import styles from "./styles.module.scss";
 

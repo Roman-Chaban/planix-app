@@ -4,7 +4,7 @@ import type { FC } from "react";
 
 import { Controller } from "react-hook-form";
 
-import type { AuthLoginFormViewProps } from "@/features/auth/login/model/types/types";
+import type { AuthLoginFormViewProps } from "@/features/auth/Login/model/types/types";
 import {
   BUTTON_SIZES,
   BUTTON_TYPES,
@@ -13,8 +13,8 @@ import {
 import { Box, Button, Checkbox, AppLink } from "@/shared/ui/index";
 import { LockIcon, PostIcon } from "@/shared/ui/icons";
 import { Input } from "@/shared/ui/input/lib/index";
-import { AuthFooter } from "@/widgets/auth-layout/ui/AuthFooter";
-import { AuthHeader } from "@/widgets/auth-layout/ui/AuthHeader";
+import { AuthFooter } from "@/widgets/authLayout/ui/AuthFooter";
+import { AuthHeader } from "@/widgets/authLayout/ui/AuthHeader";
 
 import styles from "./styles.module.scss";
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery";

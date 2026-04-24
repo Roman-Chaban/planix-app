@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "@/shared/styles/tokens/typography" as size;
 @use "@/shared/styles/tokens/colors" as color;
 @use "@/shared/styles/tokens/spacing" as spacing;
@@ -6,7 +7,7 @@
 /* Media Query mixins */
 
 @mixin respond($key) {
-  $size: map-get(breakpoint.$breakpoints, $key);
+  $size: map.get(breakpoint.$breakpoints, $key);
 
   @if $size != null {
     @media (max-width: $size) {

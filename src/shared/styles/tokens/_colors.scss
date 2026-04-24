@@ -92,7 +92,17 @@ $color-error-1200: #55160c;
 
 $color-button-disabled: #aaa;
 
+/* Linear Gradients */
+
+$linear-gradient-100: linear-gradient(
+  360deg,
+  rgba(65, 101, 183, 0.73) 0%,
+  rgba(65, 101, 183, 0) 50%,
+  rgba(255, 255, 255, 0) 100%
+);
+
 /* Other */
 
 $color-white: #ffffff;
 $color-border-line: #bbb;
+$color-decoration-text: #565dbf;

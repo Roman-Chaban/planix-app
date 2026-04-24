@@ -1,0 +1,17 @@
+/// Centralized z-index scale
+
+$z-index-base: 0;
+
+$z-index-dropdown: 100;
+$z-index-sticky: 200;
+$z-index-header: 300;
+
+$z-index-overlay: 500;
+$z-index-modal: 600;
+
+$z-index-popover: 700;
+$z-index-tooltip: 800;
+
+$z-index-toast: 900;
+
+$z-index-maximum: 9999;

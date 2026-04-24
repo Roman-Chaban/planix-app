@@ -1,16 +1,22 @@
-import type { FC } from "react";
-import type { GridItemProps } from "./types";
 
-import styles from "./grid.module.scss";
+
+import type { GridItemProps } from "./model/types";
+
+import type { FC } from "react";
+
+import { classNames } from "@/shared/lib/helpers/class-names";
+import { Box } from "@/shared/ui/index";
+
+import styles from "./styles.module.scss";
 
 export const GridItem: FC<GridItemProps> = ({
   children,
   span = 12,
   className,
 }) => {
-  const spanClass = styles[`col-span-${span}`];
+  const SPAN_CLASS = styles[`col-span-${span}`];
 
-  const classes = [styles.item, spanClass, className].filter(Boolean).join(" ");
+  const classes = classNames(styles.item, SPAN_CLASS, className);
 
-  return <div className={classes}>{children}</div>;
+  return <Box className={classes}>{children}</Box>;
 };

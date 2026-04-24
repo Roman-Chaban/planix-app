@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 import { DM_Sans } from "next/font/google";
 
 import "@shared/styles/reset/_reset.scss";

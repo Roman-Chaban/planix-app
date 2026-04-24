@@ -7,7 +7,7 @@ import { Controller } from "react-hook-form";
 import { AuthFooter } from "@/widgets/authLayout/ui/AuthFooter";
 import { AuthHeader } from "@/widgets/authLayout/ui/AuthHeader";
 
-import type { AuthLoginFormViewProps } from "@/features/auth/Login/model/types/types";
+import type { AuthLoginFormViewProps } from "@/features/auth/login/model/types/types";
 
 import { BREAKPOINTS } from "@/shared/constants/breakpoints";
 import {

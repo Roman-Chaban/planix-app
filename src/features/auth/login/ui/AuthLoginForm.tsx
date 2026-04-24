@@ -16,5 +16,3 @@ export const AuthLoginForm: FC = () => {
     />
   );
 };
-
-AuthLoginForm.displayName = "AuthLoginForm";

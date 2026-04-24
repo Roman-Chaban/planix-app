@@ -2,9 +2,9 @@ import { forwardRef, useId } from "react";
 import { classNames } from "@/shared/lib/helpers/class-names";
 import { Box } from "@/shared/ui/box/Box";
 import { Typography } from "@/shared/ui/typography/Typography";
-import styles from "./input.module.scss";
+import styles from "./styles.module.scss";
 
-import type { InputProps } from "@/shared/ui/input/model/input.types";
+import type { InputProps } from "@/shared/ui/input/model/types";
 
 export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   (

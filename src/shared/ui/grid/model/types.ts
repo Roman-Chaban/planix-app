@@ -9,6 +9,6 @@ type WithChildren = {
 
 export type GridProps = WithChildren;
 
-export type GridItemProps = WithChildren & {
+export type GridItemProps = {
   span?: SpanItems;
-};
+} & WithChildren;

@@ -5,7 +5,7 @@ import type { FC } from "react";
 import { Avatar, Box, Typography } from "@/shared/ui/index";
 import { PlanixLogo } from "@/shared/ui/icons/Icons";
 
-import styles from "./brand-banner.module.scss";
+import styles from "./styles.module.scss";
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
 import { BREAKPOINTS } from "@/shared/constants/breakpoints";
 

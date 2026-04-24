@@ -1,6 +1,6 @@
 /* Icons Types */
 
-export type { IconProps } from "@/shared/ui/icons/model/icons.types";
+export type { IconProps } from "@/shared/ui/icons/model/types";
 
 /* Icons Exports */
 

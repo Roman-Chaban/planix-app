@@ -5,8 +5,8 @@ import { CheckmarkIcon } from "@/shared/ui/icons/Icons";
 import { Typography } from "@/shared/ui/typography/Typography";
 import { INPUT_TYPES } from "@shared/constants/constants";
 
-import styles from "./checkbox.module.scss";
-import { CheckboxProps } from "./model/checkbox.types";
+import styles from "./styles.module.scss";
+import { CheckboxProps } from "./model/types";
 
 export const Checkbox: FC<CheckboxProps> = ({
   checked,

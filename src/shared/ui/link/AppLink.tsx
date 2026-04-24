@@ -5,9 +5,9 @@ import Link from "next/link";
 import { LINK_TARGETS } from "@/shared/constants/constants";
 import { classNames } from "@/shared/lib/helpers/class-names";
 
-import styles from "./app-link.module.scss";
+import styles from "./styles.module.scss";
 
-import type { LinkProps } from "./model/app-link.types";
+import type { LinkProps } from "./model/types";
 
 export const AppLink: FC<LinkProps> = ({
   children,

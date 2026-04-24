@@ -5,9 +5,9 @@ import Image from "next/image";
 import { classNames } from "@/shared/lib/helpers/class-names/class-names";
 import { Box } from "@shared/ui/box/Box";
 
-import styles from "./avatar.module.scss";
+import styles from "./styles.module.scss";
 
-import type { AvatarProps } from "./model/avatar.types";
+import type { AvatarProps } from "./model/types";
 
 export const Avatar: FC<AvatarProps> = ({
   src,

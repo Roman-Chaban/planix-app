@@ -1,6 +1,6 @@
 export { Avatar } from "@/shared/ui/avatar/Avatar";
 export { Box } from "@/shared/ui/box/Box";
-export { BrandBanner } from "@/shared/ui/brand-banner/BrandBanner";
+export { BrandBanner } from "@/shared/ui/brandBanner/BrandBanner";
 export { Button } from "@/shared/ui/button/Button";
 export { Checkbox } from "@/shared/ui/checkbox/Checkbox";
 export { Grid } from "@/shared/ui/grid/Grid";

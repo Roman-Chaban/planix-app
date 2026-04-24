@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { AuthLoginForm } from "@/features/auth/login/ui/AuthLoginForm";
 import { Box, BrandBanner, Grid, GridItem } from "@/shared/ui/index";
 
-import styles from "./auth-layout.module.scss";
+import styles from "./styles.module.scss";
 
 export const AuthLayout: FC = () => {
   return (

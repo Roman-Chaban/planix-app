@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import type { IconProps } from "./model/icons.types";
+import type { IconProps } from "./model/types";
 
 export const ProfileIcon: FC<IconProps> = ({ width, height }) => {
   return (

@@ -1,8 +1,9 @@
-import type { FC } from "react";
-
 import type { IconProps } from "./model/types";
 
-export const ProfileIcon: FC<IconProps> = ({ width, height }) => {
+import type { FC } from "react";
+
+
+export const UserIcon: FC<IconProps> = ({ width, height }) => {
   return (
     <svg
       width={width}
@@ -23,7 +24,7 @@ export const ProfileIcon: FC<IconProps> = ({ width, height }) => {
   );
 };
 
-export const PostIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const MessageIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   return (
     <svg
       width={width}
@@ -44,7 +45,7 @@ export const PostIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const PlanixLogo: FC<IconProps> = ({ width = 78, height = 88 }) => {
+export const PlanixLogoIcon: FC<IconProps> = ({ width = 78, height = 88 }) => {
   return (
     <svg
       width={width}
@@ -147,7 +148,7 @@ export const LockIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const HiddenIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const EyeOffIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   return (
     <svg
       width={width}
@@ -202,7 +203,7 @@ export const HiddenIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const VisibleIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const EyeIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   return (
     <svg
       width={width}
@@ -256,7 +257,7 @@ export const SearchIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const CheckmarkIcon: FC<IconProps> = ({
+export const CheckIcon: FC<IconProps> = ({
   width = 16,
   height = 16,
   className,

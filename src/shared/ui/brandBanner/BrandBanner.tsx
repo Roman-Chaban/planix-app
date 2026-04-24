@@ -2,32 +2,33 @@
 
 import type { FC } from "react";
 
+import { BREAKPOINTS } from "@/shared/constants/breakpoints";
+import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
+import { PlanixLogoIcon } from "@/shared/ui/icons/Icons";
 import { Avatar, Box, Typography } from "@/shared/ui/index";
-import { PlanixLogo } from "@/shared/ui/icons/Icons";
 
 import styles from "./styles.module.scss";
-import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
-import { BREAKPOINTS } from "@/shared/constants/breakpoints";
+
 
 export const BrandBanner: FC = () => {
   const isMobileLarge = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
 
   const ICON_RESPONSIVE = isMobileLarge ? (
-    <PlanixLogo width={60} height={60} />
+    <PlanixLogoIcon width={60} height={60} />
   ) : (
-    <PlanixLogo />
+    <PlanixLogoIcon />
   );
 
   return (
     <Box className={styles.banner}>
-      <Box className={styles.logoContainer}>
+      <Box className={styles.header}>
         <Avatar alt="Palnix Logo" icon={ICON_RESPONSIVE} />
 
-        <Typography as="span" className={styles.logoCapture}>
+        <Typography as="span" className={styles.title}>
           Planix
         </Typography>
       </Box>
-      <Typography as="h5" className={styles.logoHeading}>
+      <Typography as="h5" className={styles.subtitle}>
         Empowering You to Plan, Track, and Deliver with Clarity
       </Typography>
     </Box>

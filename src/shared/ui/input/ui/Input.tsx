@@ -1,10 +1,11 @@
 import { forwardRef, useId } from "react";
+
 import { classNames } from "@/shared/lib/helpers/class-names";
-import { Box } from "@/shared/ui/box/Box";
-import { Typography } from "@/shared/ui/typography/Typography";
+import { Box, Typography } from "@/shared/ui/index";
+import type { InputProps } from "@/shared/ui/input/model/types";
+
 import styles from "./styles.module.scss";
 
-import type { InputProps } from "@/shared/ui/input/model/types";
 
 export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   (
@@ -19,12 +20,19 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
       endIcon,
       onEndIconClick,
       isSeparator,
-      ...props
+      ...inputProps
     },
     ref,
   ) => {
     const id = useId();
     const hasError = Boolean(error);
+
+    const rootClassname = classNames(
+      styles.inputWrapper,
+      styles[variant],
+      { [styles.error]: hasError },
+      className,
+    );
 
     return (
       <Box className={styles.wrapper}>
@@ -34,34 +42,27 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
           </label>
         )}
 
-        <Box
-          className={classNames(
-            styles.inputWrapper,
-            styles[variant],
-            { [styles.error]: hasError },
-            className,
-          )}
-        >
+        <Box className={rootClassname}>
           {startIcon && (
-            <Typography as="span" className={styles.startIcon}>
+            <Typography as="span" className={styles.slotStart}>
               {startIcon}
             </Typography>
           )}
 
-          {isSeparator && <Typography as="span" className={styles.separator} />}
+          {isSeparator && <Typography as="span" className={styles.divider} />}
 
           <input
             id={id}
             ref={ref}
             className={styles.input}
             type={type}
-            {...props}
+            {...inputProps}
           />
 
           {endIcon && (
             <Typography
               as="span"
-              className={styles.endIcon}
+              className={styles.slotEnd}
               onClick={onEndIconClick}
             >
               {endIcon}
@@ -69,9 +70,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
           )}
 
           {error && errorMessage && (
-            <Typography className={styles.errorMessage}>
-              {errorMessage}
-            </Typography>
+            <Typography className={styles.errorText}>{errorMessage}</Typography>
           )}
         </Box>
       </Box>

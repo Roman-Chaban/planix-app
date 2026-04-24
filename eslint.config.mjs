@@ -16,27 +16,58 @@ const eslintConfig = defineConfig([
         "error",
         {
           groups: [
+            "type",
             "builtin",
             "external",
             "internal",
             "parent",
             "sibling",
             "index",
-            "type",
           ],
+
           pathGroups: [
             {
               pattern: "react",
-              group: "builtin",
+              group: "external",
+              position: "before",
+            },
+            /* FSD PATTERNS */
+            {
+              pattern: "@/app/**",
+              group: "internal",
               position: "before",
             },
             {
-              pattern: "@/**",
+              pattern: "@/pages/**",
               group: "internal",
+              position: "before",
+            },
+            {
+              pattern: "@/widgets/**",
+              group: "internal",
+              position: "before",
+            },
+            {
+              pattern: "@/features/**",
+              group: "internal",
+              position: "before",
+            },
+            {
+              pattern: "@/entities/**",
+              group: "internal",
+              position: "before",
+            },
+            {
+              pattern: "@/shared/**",
+              group: "internal",
+              position: "before",
             },
           ],
+
           pathGroupsExcludedImportTypes: ["react"],
+
           "newlines-between": "always",
+
           alphabetize: {
             order: "asc",
             caseInsensitive: true,

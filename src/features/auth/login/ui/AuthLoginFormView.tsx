@@ -4,21 +4,24 @@ import type { FC } from "react";
 
 import { Controller } from "react-hook-form";
 
-import type { AuthLoginFormViewProps } from "@/features/auth/Login/model/types/types";
-import {
-  BUTTON_SIZES,
-  BUTTON_TYPES,
-  INPUT_TYPES,
-} from "@/shared/constants/constants";
-import { Box, Button, Checkbox, AppLink } from "@/shared/ui/index";
-import { LockIcon, PostIcon } from "@/shared/ui/icons";
-import { Input } from "@/shared/ui/input/lib/index";
 import { AuthFooter } from "@/widgets/authLayout/ui/AuthFooter";
 import { AuthHeader } from "@/widgets/authLayout/ui/AuthHeader";
 
-import styles from "./styles.module.scss";
-import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
+import type { AuthLoginFormViewProps } from "@/features/auth/Login/model/types/types";
+
 import { BREAKPOINTS } from "@/shared/constants/breakpoints";
+import {
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  BUTTON_VARIANTS,
+} from "@/shared/constants/buttons";
+import { INPUT_TYPES, INPUT_VARIANTS } from "@/shared/constants/inputs";
+import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
+import { LockIcon, MessageIcon } from "@/shared/ui/icons";
+import { Box, Button, Checkbox, AppLink } from "@/shared/ui/index";
+import { Input } from "@/shared/ui/input/lib/index";
+
+import styles from "./styles.module.scss";
 
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
   register,
@@ -41,12 +44,12 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
 
         <form className={styles.loginForm} onSubmit={onSubmit}>
           <Input
-            startIcon={<PostIcon />}
+            startIcon={<MessageIcon />}
             {...register("email")}
             type={INPUT_TYPES.EMAIL}
+            variant={INPUT_VARIANTS.PRIMARY}
             placeholder="Enter Email Address"
             label="Email Address"
-            variant="primary"
             autoComplete="email"
           />
 
@@ -79,7 +82,7 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
 
             <Button
               type={BUTTON_TYPES.SUBMIT}
-              variant="primary"
+              variant={BUTTON_VARIANTS.PRIMARY}
               size={BUTTON_RESPONSIVE}
             >
               Log in

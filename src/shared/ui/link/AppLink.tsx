@@ -1,3 +1,5 @@
+import type { LinkProps } from "./model/types";
+
 import type { FC } from "react";
 
 import Link from "next/link";
@@ -7,7 +9,6 @@ import { classNames } from "@/shared/lib/helpers/class-names";
 
 import styles from "./styles.module.scss";
 
-import type { LinkProps } from "./model/types";
 
 export const AppLink: FC<LinkProps> = ({
   children,

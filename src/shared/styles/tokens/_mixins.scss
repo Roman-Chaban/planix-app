@@ -206,3 +206,10 @@
   bottom: $bottom;
   width: 100%;
 }
+
+@mixin hidden-overlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}

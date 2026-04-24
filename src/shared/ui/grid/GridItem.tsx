@@ -1,10 +1,13 @@
-import type { FC } from "react";
 
-import styles from "./styles.module.scss";
 
 import type { GridItemProps } from "./model/types";
+
+import type { FC } from "react";
+
 import { classNames } from "@/shared/lib/helpers/class-names";
 import { Box } from "@/shared/ui/index";
+
+import styles from "./styles.module.scss";
 
 export const GridItem: FC<GridItemProps> = ({
   children,

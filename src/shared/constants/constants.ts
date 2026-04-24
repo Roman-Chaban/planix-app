@@ -10,24 +10,3 @@ export const LINK_TARGETS = {
   TOP: "_top",
   FRAMENAME: "framename",
 } as const;
-
-export const INPUT_TYPES = {
-  TEXT: "text",
-  CHECKBOX: "checkbox",
-  TEL: "tel",
-  EMAIL: "email",
-  PASSWORD: "password",
-  SEARCH: "search",
-} as const;
-
-export const BUTTON_TYPES = {
-  BUTTON: "button",
-  RESET: "reset",
-  SUBMIT: "submit",
-} as const;
-
-export const BUTTON_SIZES = {
-  SMALL: "sm",
-  MEDIUM: "md",
-  LARGE: "lg",
-} as const;

@@ -1,7 +1,8 @@
 import type { FC } from "react";
 
-import { Avatar, Box, Typography } from "@/shared/ui/index";
 import type { AuthHeaderProps } from "@/widgets/authLayout/model/types";
+
+import { Avatar, Box, Typography } from "@/shared/ui/index";
 
 import styles from "./styles.module.scss";
 
@@ -12,10 +13,10 @@ export const AuthHeader: FC<AuthHeaderProps> = ({
   icon,
 }) => {
   return (
-    <Box className={styles.headerWrapper}>
+    <Box className={styles.header}>
       <Typography as="h1" className={styles.title}>
         {title}{" "}
-        <Typography as="span" className={styles.decorationText}>
+        <Typography as="span" className={styles.highlight}>
           {decorationText}
         </Typography>
       </Typography>

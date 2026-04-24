@@ -8,10 +8,12 @@ import styles from "./auth-layout.module.scss";
 export const AuthFooter: FC<AuthFooterProps> = ({ title, link }) => {
   return (
     <Box className={styles.footerWrapper}>
-      <Typography as="span">{title}</Typography>
+      <Typography as="span" className={styles.footerTitle}>
+        {title}
+      </Typography>
 
       {/* Mock: [Added the correct link when it will need] */}
-      <AppLink href="/#" className={styles.link}>
+      <AppLink href="/#" className={styles.footerLink}>
         {link}
       </AppLink>
     </Box>

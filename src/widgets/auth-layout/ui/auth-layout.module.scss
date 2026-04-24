@@ -5,13 +5,31 @@
 @use "@/shared/styles/tokens/mixins" as *;
 
 .wrapper {
-  min-height: 100svh;
+  min-height: 100dvh;
   @include bounding_container(spacing.$space-10);
-  @include flex(flex, row, center, stretch, 0);
+
+  @include respond(tablet) {
+    padding: 1rem;
+  }
 }
 
 .wrapperContainer {
+  display: grid;
   gap: 3.5rem;
+
+  @include respond(laptop) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(mobile-lg) {
+    gap: 2rem;
+  }
+}
+
+.item {
+  @include respond(laptop) {
+    grid-column: span 1;
+  }
 }
 
 /* Auth Header */
@@ -40,4 +58,14 @@
 .footerWrapper {
   @include flex-row(0.313rem, center, center);
   margin-block-end: 1rem;
+
+  @include respond(mobile-lg) {
+    margin-block-start: 1.5rem;
+    gap: 0.5rem;
+  }
+}
+
+.footerTitle,
+.footerLink {
+  font-size: size.$font-size-body-sm;
 }

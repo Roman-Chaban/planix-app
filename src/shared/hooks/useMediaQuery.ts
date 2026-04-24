@@ -1,27 +1,19 @@
 import { useEffect, useState } from "react";
 
-export function useMediaQuery(breakpoint: number): boolean {
-  const query = `(min-width: ${breakpoint}px)`;
+export function useMediaQuery(breakpoint: number): boolean | null {
+  const query = `(max-width: ${breakpoint}px)`;
 
-  const [matches, setMatches] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia(query).matches;
-  });
+  const [matches, setMatches] = useState<boolean | null>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
     const media = window.matchMedia(query);
 
-    const handler = (event: MediaQueryListEvent) => {
-      setMatches(event.matches);
-    };
+    const update = () => setMatches(media.matches);
 
-    setMatches(media.matches);
+    update();
 
-    media.addEventListener("change", handler);
-
-    return () => media.removeEventListener("change", handler);
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
   }, [query]);
 
   return matches;

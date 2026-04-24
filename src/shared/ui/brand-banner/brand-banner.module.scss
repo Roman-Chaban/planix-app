@@ -7,7 +7,7 @@
 .banner {
   position: relative;
   overflow: hidden;
-  min-height: 100%;
+  height: calc(100dvh - 3rem);
   background-image: url("/login/images/primary-banner.svg");
   background-size: cover;
   background-position: right;
@@ -23,6 +23,19 @@
   > * {
     @include overlay-content;
   }
+
+  @include respond(desktop) {
+    background-position: 20%;
+  }
+
+  @include respond(laptop) {
+    background-position: top;
+    max-height: 45dvh;
+  }
+
+  @include respond(mobile-lg) {
+    padding: 1rem;
+  }
 }
 
 .logoContainer {
@@ -30,20 +43,36 @@
   width: fit-content;
 
   @include flex-row(1.375rem, start, center);
+
+  @include respond(mobile-lg) {
+    gap: 1rem;
+  }
 }
 
 .logoCapture {
   font-weight: size.$font-weight-semibold;
   line-height: 150%;
   font-size: size.$font-size-h4;
+
+  @include respond(mobile-lg) {
+    font-size: size.$font-size-h5;
+  }
 }
 
 .logoHeading {
   @include bottom-overlay(1.875rem);
-
+  width: 100%;
   max-width: 33rem;
   line-height: 150%;
   font-weight: size.$font-weight-bold;
   color: color.$color-white;
   font-size: size.$font-size-h5;
+
+  @include respond(tablet) {
+    font-size: size.$font-size-h6;
+  }
+
+  @include respond(mobile-lg) {
+    font-size: size.$font-size-subtitle;
+  }
 }

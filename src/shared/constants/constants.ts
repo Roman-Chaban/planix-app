@@ -25,3 +25,9 @@ export const BUTTON_TYPES = {
   RESET: "reset",
   SUBMIT: "submit",
 } as const;
+
+export const BUTTON_SIZES = {
+  SMALL: "sm",
+  MEDIUM: "md",
+  LARGE: "lg",
+} as const;

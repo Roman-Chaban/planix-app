@@ -1,9 +1,15 @@
+"use client";
+
 import type { FC } from "react";
 
 import { Controller } from "react-hook-form";
 
 import type { AuthLoginFormViewProps } from "@/features/auth/login/model/types/form.types";
-import { BUTTON_TYPES, INPUT_TYPES } from "@/shared/constants/constants";
+import {
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  INPUT_TYPES,
+} from "@/shared/constants/constants";
 import { Box, Button, Checkbox, AppLink } from "@/shared/ui/index";
 import { LockIcon, PostIcon } from "@/shared/ui/icons";
 import { Input } from "@/shared/ui/input/lib/index";
@@ -11,12 +17,19 @@ import { AuthFooter } from "@/widgets/auth-layout/ui/AuthFooter";
 import { AuthHeader } from "@/widgets/auth-layout/ui/AuthHeader";
 
 import styles from "./auth-login.form.module.scss";
+import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
+import { BREAKPOINTS } from "@/shared/constants/breakpoints";
 
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
   register,
   control,
   onSubmit,
 }) => {
+  const isMobileLarge = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
+  const BUTTON_RESPONSIVE = isMobileLarge
+    ? BUTTON_SIZES.SMALL
+    : BUTTON_SIZES.MEDIUM;
+
   return (
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginContent}>
@@ -64,7 +77,11 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
               </AppLink>
             </Box>
 
-            <Button type={BUTTON_TYPES.SUBMIT} variant="primary" size="md">
+            <Button
+              type={BUTTON_TYPES.SUBMIT}
+              variant="primary"
+              size={BUTTON_RESPONSIVE}
+            >
               Log in
             </Button>
           </Box>

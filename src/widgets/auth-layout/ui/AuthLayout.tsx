@@ -9,11 +9,11 @@ export const AuthLayout: FC = () => {
   return (
     <Box className={styles.wrapper}>
       <Grid className={styles.wrapperContainer}>
-        <GridItem span={7}>
+        <GridItem span={7} className={styles.item}>
           <BrandBanner />
         </GridItem>
 
-        <GridItem span={5}>
+        <GridItem span={5} className={styles.item}>
           <AuthLoginForm />
         </GridItem>
       </Grid>

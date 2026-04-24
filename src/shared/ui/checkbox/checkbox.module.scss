@@ -8,6 +8,10 @@
   @include flex(inline-flex, row, start, center, 0.625rem);
   cursor: pointer;
   user-select: none;
+
+  @include respond(mobile-lg) {
+    gap: 0.5rem;
+  }
 }
 
 .input {
@@ -53,4 +57,8 @@
 .label {
   line-height: 150%;
   color: color.$color-black-1200;
+
+  @include respond(mobile-lg) {
+    font-size: size.$font-size-body-sm;
+  }
 }

@@ -49,7 +49,7 @@ export const PlanixLogo: FC<IconProps> = ({ width = 78, height = 88 }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 78 88"
+      viewBox="0 0 78 78"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

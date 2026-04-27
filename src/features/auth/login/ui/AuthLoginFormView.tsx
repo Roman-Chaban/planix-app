@@ -3,6 +3,7 @@
 import type { FC } from "react";
 
 import { Controller } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 import { AuthFooter } from "@/widgets/authLayout/ui/AuthFooter";
 import { AuthHeader } from "@/widgets/authLayout/ui/AuthHeader";
@@ -28,6 +29,7 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
   control,
   onSubmit,
 }) => {
+  const { t } = useTranslation();
   const isMobileLarge = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
   const BUTTON_RESPONSIVE = isMobileLarge
     ? BUTTON_SIZES.SMALL
@@ -37,9 +39,9 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginContent}>
         <AuthHeader
-          title="Log "
-          subtitle="Log In to Your CRM Dashboard"
-          decorationText="In 👋"
+          title={t("AuthLoginForm.header.title")}
+          subtitle={t("AuthLoginForm.header.subtitle")}
+          decorationText={t("AuthLoginForm.header.decorationText")}
         />
 
         <form className={styles.loginForm} onSubmit={onSubmit}>
@@ -48,16 +50,16 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
             {...register("email")}
             type={INPUT_TYPES.EMAIL}
             variant={INPUT_VARIANTS.PRIMARY}
-            placeholder="Enter Email Address"
-            label="Email Address"
+            placeholder={t("AuthLoginForm.form.email.placeholder")}
+            label={t("AuthLoginForm.form.email.label")}
             autoComplete="email"
           />
 
           <Input.Password
             startIcon={<LockIcon />}
             {...register("password")}
-            placeholder="Enter Password"
-            label="Password"
+            placeholder={t("AuthLoginForm.form.password.placeholder")}
+            label={t("AuthLoginForm.form.password.label")}
           />
 
           <Box className={styles.loginFormMainWrapper}>
@@ -69,14 +71,14 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
                   <Checkbox
                     checked={field.value}
                     onChange={field.onChange}
-                    label="Remember me"
+                    label={t("AuthLoginForm.form.checkbox.rememberMe")}
                   />
                 )}
               />
 
               {/* Mock: [Added the correct link when it will need] */}
               <AppLink href="/#" className={styles.loginFormLink}>
-                Forgot Password?
+                {t("AuthLoginForm.form.links.forgotPassword")}
               </AppLink>
             </Box>
 
@@ -85,13 +87,16 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
               variant={BUTTON_VARIANTS.PRIMARY}
               size={BUTTON_RESPONSIVE}
             >
-              Log in
+              {t("AuthLoginForm.form.submit.button")}
             </Button>
           </Box>
         </form>
       </Box>
 
-      <AuthFooter title="Don't have account yet?" link="Registration" />
+      <AuthFooter
+        title={t("AuthLoginForm.footer.noAccount")}
+        link={t("AuthLoginForm.footer.registration")}
+      />
     </Box>
   );
 };

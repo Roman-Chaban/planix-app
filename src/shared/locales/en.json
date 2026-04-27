@@ -1,0 +1,37 @@
+{
+  "BrandBanner": {
+    "title": "Planix",
+    "subtitle": "Empowering You to Plan, Track, and Deliver with Clarity",
+    "logoAlt": "Planix Logo"
+  },
+  "AuthLoginForm": {
+    "header": {
+      "title": "Log",
+      "decorationText": "In 👋",
+      "subtitle": "Log In to Your CRM Dashboard"
+    },
+    "form": {
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter Email Address"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter Password"
+      },
+      "checkbox": {
+        "rememberMe": "Remember me"
+      },
+      "links": {
+        "forgotPassword": "Forgot Password?"
+      },
+      "submit": {
+        "button": "Log in"
+      }
+    },
+    "footer": {
+      "noAccount": "Don't have account yet?",
+      "registration": "Registration"
+    }
+  }
+}

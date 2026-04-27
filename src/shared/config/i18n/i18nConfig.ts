@@ -9,11 +9,11 @@ const resources = {
   uk: { translation: uk },
 };
 
-const options: InitOptions = {
+const options = {
   resources,
 
   fallbackLng: "en",
-  supportedLanguages: ["en", "uk"],
+  supportedLngs: ["en", "uk"],
 
   defaultNS: "translation",
 

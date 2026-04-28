@@ -23,7 +23,7 @@
 @mixin bounding-container($padding: 0) {
   width: 100%;
   max-width: 93rem;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: $padding;
 }
 

@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 
 import type { AuthFormValues } from '@/features/auth/login/model/types/types';
 
+/* Mock: [Mocked hook, waiting for the future implementation] */
 export const useAuthLogin = () => {
   const form = useForm<AuthFormValues>({
     defaultValues: {

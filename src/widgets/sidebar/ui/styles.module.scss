@@ -6,8 +6,7 @@
 @use '@/shared/styles/tokens/mixins' as *;
 
 .sidebar {
-  width: 100%;
-  max-width: 18.125rem;
+  width: fit-content;
   border-right: 0.094rem solid color.$color-black-200;
   box-shadow: shadow.$shadow-elevation-1;
   background: color.$color-white;

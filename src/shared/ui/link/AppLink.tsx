@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import Link from 'next/link';
 
-import { LINK_TARGETS } from '@/shared/constants/constants';
+import { LINK_TARGETS } from '@/shared/constants/common';
 import { classNames } from '@/shared/lib/helpers/class-names';
 
 import styles from './styles.module.scss';

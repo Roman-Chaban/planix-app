@@ -33,5 +33,10 @@
       "noAccount": "Don't have account yet?",
       "registration": "Registration"
     }
+  },
+  "NotFound": {
+    "error": "Error",
+    "404": "404",
+    "pageNotFound": "Page Not Found"
   }
 }

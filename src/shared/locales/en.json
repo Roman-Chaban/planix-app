@@ -33,5 +33,14 @@
       "noAccount": "Don't have account yet?",
       "registration": "Registration"
     }
+  },
+  "SidebarNav": {
+    "dashboard": "Dashboard",
+    "projects": "Project Management",
+    "client": "Client Management",
+    "lead": "Lead Management",
+    "inbox": "Inbox",
+    "analytics": "Analytics",
+    "settings": "Settings"
   }
 }

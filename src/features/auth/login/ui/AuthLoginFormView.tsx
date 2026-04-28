@@ -20,10 +20,17 @@ import { Input } from '@/shared/ui/input/lib/index';
 
 import styles from './styles.module.scss';
 
+const { MOBILE_LARGE } = BREAKPOINTS;
+const { SMALL, MEDIUM } = BUTTON_SIZES;
+const { EMAIL } = INPUT_TYPES;
+const { SUBMIT } = BUTTON_TYPES;
+const { PRIMARY: INPUT_PRIMARY } = INPUT_VARIANTS;
+const { PRIMARY: BUTTON_PRIMARY } = BUTTON_VARIANTS;
+
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({ register, control, onSubmit }) => {
   const { t } = useTranslation();
-  const isMobileLarge = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
-  const BUTTON_RESPONSIVE = isMobileLarge ? BUTTON_SIZES.SMALL : BUTTON_SIZES.MEDIUM;
+  const isMobileLarge = useMediaQuery(MOBILE_LARGE);
+  const BUTTON_RESPONSIVE = isMobileLarge ? SMALL : MEDIUM;
 
   return (
     <Box className={styles.loginWrapper}>
@@ -38,8 +45,8 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({ register, contro
           <Input
             startIcon={<MessageIcon />}
             {...register('email')}
-            type={INPUT_TYPES.EMAIL}
-            variant={INPUT_VARIANTS.PRIMARY}
+            type={EMAIL}
+            variant={INPUT_PRIMARY}
             placeholder={t('AuthLoginForm.form.email.placeholder')}
             label={t('AuthLoginForm.form.email.label')}
             autoComplete="email"
@@ -72,11 +79,7 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({ register, contro
               </AppLink>
             </Box>
 
-            <Button
-              type={BUTTON_TYPES.SUBMIT}
-              variant={BUTTON_VARIANTS.PRIMARY}
-              size={BUTTON_RESPONSIVE}
-            >
+            <Button type={SUBMIT} variant={BUTTON_PRIMARY} size={BUTTON_RESPONSIVE}>
               {t('AuthLoginForm.form.submit.button')}
             </Button>
           </Box>

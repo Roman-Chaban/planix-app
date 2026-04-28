@@ -7,7 +7,7 @@ import '@shared/styles/reset/_reset.scss';
 
 import { LOCALES, type Locale } from '@/shared/config/i18n/locales';
 import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
-import TranslationProvider from '@/shared/providers/TranslationProvider';
+import { GlobalProviders } from '@/shared/providers/GlobalProviders';
 
 const dm_sans = DM_Sans({
   weight: ['400', '500', '600', '700', '800'],
@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html lang={locale}>
       <body className={dm_sans.className}>
-        <TranslationProvider locale={locale}>{children}</TranslationProvider>
+        <GlobalProviders locale={locale}>{children}</GlobalProviders>
       </body>
     </html>
   );

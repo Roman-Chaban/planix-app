@@ -42,5 +42,8 @@
     "inbox": "Inbox",
     "analytics": "Analytics",
     "settings": "Settings"
+  },
+  "DashboardHeader": {
+    "title": "Dashboard"
   }
 }

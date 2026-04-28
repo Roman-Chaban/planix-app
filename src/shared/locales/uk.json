@@ -42,5 +42,8 @@
     "inbox": "Вхідні",
     "analytics": "Аналітика",
     "settings": "Налаштування"
+  },
+  "DashboardHeader": {
+    "title": "Панель керування"
   }
 }

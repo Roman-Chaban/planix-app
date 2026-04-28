@@ -19,3 +19,4 @@ export { LeadIcon } from '@/shared/ui/icons/Icons';
 export { InboxIcon } from '@/shared/ui/icons/Icons';
 export { AnalyticsIcon } from '@/shared/ui/icons/Icons';
 export { SettingsIcon } from '@/shared/ui/icons/Icons';
+export { NotificationIcon } from '@/shared/ui/icons/Icons';

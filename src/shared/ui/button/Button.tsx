@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 export const Button: FC<ButtonProps> = ({
   variant = 'primary',
   outline = 'primary',
-  size = 'md',
+  size = 'none',
   className,
   endIcon,
   startIcon,

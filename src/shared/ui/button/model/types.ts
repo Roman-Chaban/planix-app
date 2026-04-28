@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export type ButtonVariant = 'primary' | 'outline' | 'soft' | 'tertiary';
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonVariant = 'primary' | 'outline' | 'soft' | 'tertiary' | 'circle';
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'none';
 export type ButtonOutline =
   | 'white'
   | 'light-blue'

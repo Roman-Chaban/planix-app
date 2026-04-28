@@ -44,6 +44,21 @@
   @include button-link;
 }
 
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: color.$color-primary-800;
+  border-radius: 50%;
+}
+
+.none {
+  background: none;
+  padding: 0;
+  min-height: unset;
+  font-size: inherit;
+}
+
 .sm {
   padding: spacing.$space-2 spacing.$space-7;
   min-height: 2.5rem;
@@ -51,7 +66,6 @@
 }
 
 .md {
-  width: 100%;
   max-width: 8.188rem;
   padding: spacing.$space-3 spacing.$space-7;
   min-height: 2.75rem;

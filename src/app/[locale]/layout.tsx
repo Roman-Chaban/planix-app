@@ -1,41 +1,37 @@
-import { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { DM_Sans } from "next/font/google";
-import { notFound } from "next/navigation";
+import { DM_Sans } from 'next/font/google';
+import { notFound } from 'next/navigation';
 
-import "@shared/styles/reset/_reset.scss";
+import '@shared/styles/reset/_reset.scss';
 
-import { LOCALES, Locale } from "@/shared/config/i18n/locales";
-import TranslationProvider from "@/shared/providers/TranslationProvider";
+import { LOCALES, type Locale } from '@/shared/config/i18n/locales';
+import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
+import TranslationProvider from '@/shared/providers/TranslationProvider';
 
 const dm_sans = DM_Sans({
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
 });
+
+type RootLayoutProps = {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
 export function generateStaticParams(): { locale: Locale }[] {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
+export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
 
-  if (!LOCALES.includes(locale as Locale)) {
-    notFound();
-  }
+  if (!isLocale(locale)) notFound();
 
   return (
-    <html lang={locale as Locale}>
+    <html lang={locale}>
       <body className={dm_sans.className}>
-        <TranslationProvider locale={locale as Locale}>
-          {children}
-        </TranslationProvider>
+        <TranslationProvider locale={locale}>{children}</TranslationProvider>
       </body>
     </html>
   );

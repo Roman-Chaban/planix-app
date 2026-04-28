@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useEffect, useState } from 'react';
 
-import { I18nextProvider } from "react-i18next";
+import { I18nextProvider } from 'react-i18next';
 
-import i18n from "@/shared/config/i18n/i18nConfig";
-import { Locale } from "@/shared/config/i18n/locales";
+import i18n from '@/shared/config/i18n/i18nConfig';
+import type { Locale } from '@/shared/config/i18n/locales';
 
 export default function TranslationProvider({
   children,
@@ -23,7 +23,7 @@ export default function TranslationProvider({
     };
 
     if (!i18n.isInitialized) {
-      i18n.on("initialized", handleReady);
+      i18n.on('initialized', handleReady);
     } else {
       handleReady();
     }

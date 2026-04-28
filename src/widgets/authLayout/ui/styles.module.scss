@@ -1,8 +1,8 @@
-@use "@/shared/styles/tokens/colors" as color;
-@use "@/shared/styles/tokens/typography" as size;
-@use "@/shared/styles/tokens/spacing" as spacing;
-@use "@/shared/styles/tokens/flex" as *;
-@use "@/shared/styles/tokens/mixins" as *;
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles/tokens/mixins' as *;
 
 .layout {
   min-height: 100dvh;

@@ -1,9 +1,9 @@
-import "react-i18next";
-import type { TranslationSchema } from "@/shared/config/i18n/types";
+import 'react-i18next';
+import type { TranslationSchema } from '@/shared/config/i18n/types';
 
-declare module "react-i18next" {
+declare module 'react-i18next' {
   interface CustomTypeOptions {
-    defaultNS: "translation";
+    defaultNS: 'translation';
     resources: {
       translation: TranslationSchema;
     };

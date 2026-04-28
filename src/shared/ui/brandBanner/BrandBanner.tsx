@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import type { FC } from "react";
+import type { FC } from 'react';
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import { BREAKPOINTS } from "@/shared/constants/breakpoints";
-import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
-import { PlanixLogoIcon } from "@/shared/ui/icons/Icons";
-import { Avatar, Box, Typography } from "@/shared/ui/index";
+import { BREAKPOINTS } from '@/shared/constants/breakpoints';
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
+import { PlanixLogoIcon } from '@/shared/ui/icons/Icons';
+import { Avatar, Box, Typography } from '@/shared/ui/index';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();
@@ -24,14 +24,14 @@ export const BrandBanner: FC = () => {
   return (
     <Box className={styles.banner}>
       <Box className={styles.header}>
-        <Avatar alt={t("BrandBanner.logoAlt")} icon={ICON_RESPONSIVE} />
+        <Avatar alt={t('BrandBanner.logoAlt')} icon={ICON_RESPONSIVE} />
 
         <Typography as="span" className={styles.title}>
-          {t("BrandBanner.title")}
+          {t('BrandBanner.title')}
         </Typography>
       </Box>
       <Typography as="h5" className={styles.subtitle}>
-        {t("BrandBanner.subtitle")}
+        {t('BrandBanner.subtitle')}
       </Typography>
     </Box>
   );

@@ -1,12 +1,14 @@
-import type { GridProps } from "./model/types";
+import type { GridProps } from './model/types';
 
-import type { FC } from "react";
+import type { FC } from 'react';
 
-import styles from "./styles.module.scss";
+import { classNames } from '@/shared/lib/helpers/class-names';
+import { Box } from '@/shared/ui/index';
 
+import styles from './styles.module.scss';
 
 export const Grid: FC<GridProps> = ({ children, className }) => {
-  const classes = [styles.grid, className].filter(Boolean).join(" ");
+  const classes = classNames(styles.grid, className);
 
-  return <div className={classes}>{children}</div>;
+  return <Box className={classes}>{children}</Box>;
 };

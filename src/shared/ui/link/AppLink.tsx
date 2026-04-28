@@ -1,14 +1,13 @@
-import type { LinkProps } from "./model/types";
+import type { LinkProps } from './model/types';
 
-import type { FC } from "react";
+import type { FC } from 'react';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-import { LINK_TARGETS } from "@/shared/constants/constants";
-import { classNames } from "@/shared/lib/helpers/class-names";
+import { LINK_TARGETS } from '@/shared/constants/constants';
+import { classNames } from '@/shared/lib/helpers/class-names';
 
-import styles from "./styles.module.scss";
-
+import styles from './styles.module.scss';
 
 export const AppLink: FC<LinkProps> = ({
   children,
@@ -18,11 +17,7 @@ export const AppLink: FC<LinkProps> = ({
   className,
   ...props
 }) => {
-  const linkClasses = classNames(
-    styles.link,
-    isUnderline && styles.underline,
-    className,
-  );
+  const linkClasses = classNames(styles.link, isUnderline && styles.underline, className);
 
   if (external) {
     return (

@@ -1,11 +1,11 @@
-import type { ClassObject, ClassValue } from "./model/class-names.types";
+import type { ClassObject, ClassValue } from './model/class-names.types';
 
 const isString = (value: ClassValue): value is string => {
-  return typeof value === "string";
+  return typeof value === 'string';
 };
 
 const isObject = (value: ClassValue): value is ClassObject => {
-  return typeof value === "object" && value !== null;
+  return typeof value === 'object' && value !== null;
 };
 
 export const classNames = (...values: ClassValue[]): string => {
@@ -30,5 +30,5 @@ export const classNames = (...values: ClassValue[]): string => {
     }
   }
 
-  return result.join(" ");
+  return result.join(' ');
 };

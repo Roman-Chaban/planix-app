@@ -1,16 +1,15 @@
-import type { ButtonProps } from "./model/types";
+import type { ButtonProps } from './model/types';
 
-import type { FC } from "react";
+import type { FC } from 'react';
 
-import { classNames } from "@/shared/lib/helpers/class-names/index";
+import { classNames } from '@/shared/lib/helpers/class-names/index';
 
-import styles from "./styles.module.scss";
-
+import styles from './styles.module.scss';
 
 export const Button: FC<ButtonProps> = ({
-  variant = "primary",
-  outline = "primary",
-  size = "md",
+  variant = 'primary',
+  outline = 'primary',
+  size = 'md',
   className,
   endIcon,
   startIcon,

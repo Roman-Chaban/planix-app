@@ -1,31 +1,25 @@
-import type { AvatarProps } from "./model/types";
+import type { AvatarProps } from './model/types';
 
-import type { FC } from "react";
+import type { FC } from 'react';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import { classNames } from "@/shared/lib/helpers/class-names/class-names";
+import { classNames } from '@/shared/lib/helpers/class-names/class-names';
 
-import { Box } from "@shared/ui/box/Box";
+import { Box } from '@shared/ui/box/Box';
 
-import styles from "./styles.module.scss";
-
+import styles from './styles.module.scss';
 
 export const Avatar: FC<AvatarProps> = ({
   src,
   icon,
-  alt = "avatar",
-  size = "md",
-  variant = "circle",
+  alt = 'avatar',
+  size = 'md',
+  variant = 'circle',
   fallback,
   className,
 }) => {
-  const avatarClassNames = classNames(
-    styles.avatar,
-    styles[size],
-    styles[variant],
-    className,
-  );
+  const avatarClassNames = classNames(styles.avatar, styles[size], styles[variant], className);
 
   return (
     <Box className={avatarClassNames}>
@@ -34,7 +28,7 @@ export const Avatar: FC<AvatarProps> = ({
       ) : src ? (
         <Image src={src} alt={alt} fill className={styles.image} />
       ) : (
-        <Box className={styles.fallback}>{fallback ?? "Fallback Icon"}</Box>
+        <Box className={styles.fallback}>{fallback ?? 'Fallback Icon'}</Box>
       )}
     </Box>
   );

@@ -5,7 +5,8 @@
 }
 
 html,
-body, #__next {
+body,
+#__next {
   height: 100%;
 }
 
@@ -125,7 +126,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {

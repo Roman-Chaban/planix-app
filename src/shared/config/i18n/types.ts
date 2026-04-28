@@ -1,3 +1,3 @@
-import en from "@/shared/locales/en.json";
+import type en from '@/shared/locales/en.json';
 
 export type TranslationSchema = typeof en;

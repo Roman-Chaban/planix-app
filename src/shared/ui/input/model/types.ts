@@ -1,19 +1,12 @@
-import type { InputHTMLAttributes, ReactNode } from "react";
+import type { InputHTMLAttributes, ReactNode } from 'react';
 
-export type InputSize = "sm" | "md" | "lg";
+export type InputSize = 'sm' | 'md' | 'lg';
 
-export type InputVariant = "primary" | "typing" | "filed" | "error";
+export type InputVariant = 'primary' | 'typing' | 'filed' | 'error';
 
 export type IsPasswordToggleable = boolean;
 
-export type InputTypes =
-  | "email"
-  | "tel"
-  | "password"
-  | "radio"
-  | "search"
-  | "hidden"
-  | "checkbox";
+export type InputTypes = 'email' | 'tel' | 'password' | 'radio' | 'search' | 'hidden' | 'checkbox';
 
 export type InputProps = {
   variant?: InputVariant;

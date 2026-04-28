@@ -1,16 +1,15 @@
-import { forwardRef, useId } from "react";
+import { forwardRef, useId } from 'react';
 
-import { classNames } from "@/shared/lib/helpers/class-names";
-import { Box, Typography } from "@/shared/ui/index";
-import type { InputProps } from "@/shared/ui/input/model/types";
+import { classNames } from '@/shared/lib/helpers/class-names';
+import { Box, Typography } from '@/shared/ui/index';
+import type { InputProps } from '@/shared/ui/input/model/types';
 
-import styles from "./styles.module.scss";
-
+import styles from './styles.module.scss';
 
 export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      variant = "primary",
+      variant = 'primary',
       type,
       label,
       error,
@@ -51,20 +50,10 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
 
           {isSeparator && <Typography as="span" className={styles.divider} />}
 
-          <input
-            id={id}
-            ref={ref}
-            className={styles.input}
-            type={type}
-            {...inputProps}
-          />
+          <input id={id} ref={ref} className={styles.input} type={type} {...inputProps} />
 
           {endIcon && (
-            <Typography
-              as="span"
-              className={styles.slotEnd}
-              onClick={onEndIconClick}
-            >
+            <Typography as="span" className={styles.slotEnd} onClick={onEndIconClick}>
               {endIcon}
             </Typography>
           )}
@@ -78,4 +67,4 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   },
 );
 
-InputRoot.displayName = "InputRoot";
+InputRoot.displayName = 'InputRoot';

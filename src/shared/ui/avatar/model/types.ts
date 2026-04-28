@@ -1,7 +1,7 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-type AvatarSize = "sm" | "md" | "lg";
-type AvatarVariant = "circle" | "square";
+type AvatarSize = 'sm' | 'md' | 'lg';
+type AvatarVariant = 'circle' | 'square';
 
 export type AvatarProps = {
   src?: string;

@@ -1,7 +1,6 @@
-import type { IconProps } from "./model/types";
+import type { IconProps } from './model/types';
 
-import type { FC } from "react";
-
+import type { FC } from 'react';
 
 export const UserIcon: FC<IconProps> = ({ width, height }) => {
   return (
@@ -93,15 +92,8 @@ export const PlanixLogoIcon: FC<IconProps> = ({ width = 78, height = 88 }) => {
           <feOffset dy="9" />
           <feGaussianBlur stdDeviation="9" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_12137_21218"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_12137_21218" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -257,11 +249,7 @@ export const SearchIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const CheckIcon: FC<IconProps> = ({
-  width = 16,
-  height = 16,
-  className,
-}) => {
+export const CheckIcon: FC<IconProps> = ({ width = 16, height = 16, className }) => {
   return (
     <svg
       className={className}

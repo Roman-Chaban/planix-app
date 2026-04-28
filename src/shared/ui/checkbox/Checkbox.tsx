@@ -1,36 +1,26 @@
-import { useId, type ChangeEvent, type FC } from "react";
+import type { CheckboxProps } from './model/types';
 
-import { classNames } from "@/shared/lib/helpers/class-names";
-import { CheckIcon } from "@/shared/ui/icons/Icons";
-import { Typography } from "@/shared/ui/typography/Typography";
+import { useId, type ChangeEvent, type FC } from 'react';
 
-import { INPUT_TYPES } from "@shared/constants/inputs";
+import { classNames } from '@/shared/lib/helpers/class-names';
+import { CheckIcon } from '@/shared/ui/icons/Icons';
+import { Typography } from '@/shared/ui/typography/Typography';
 
-import { CheckboxProps } from "./model/types";
-import styles from "./styles.module.scss";
+import { INPUT_TYPES } from '@shared/constants/inputs';
 
-export const Checkbox: FC<CheckboxProps> = ({
-  checked,
-  onChange,
-  label,
-  disabled,
-}) => {
+import styles from './styles.module.scss';
+
+export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
   const id = useId();
 
-  const CHECKBOX_CLASSNAMES = classNames(
-    styles.checkIcon,
-    checked && styles.visible,
-  );
+  const CHECKBOX_CLASSNAMES = classNames(styles.checkIcon, checked && styles.visible);
 
   const handleCheckChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.checked);
   };
 
   return (
-    <label
-      htmlFor={id}
-      className={classNames(styles.wrapper, disabled && styles.disabled)}
-    >
+    <label htmlFor={id} className={classNames(styles.wrapper, disabled && styles.disabled)}>
       <input
         id={id}
         type={INPUT_TYPES.CHECKBOX}

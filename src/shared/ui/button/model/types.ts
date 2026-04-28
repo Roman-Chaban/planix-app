@@ -1,14 +1,14 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export type ButtonVariant = "primary" | "outline" | "soft" | "tertiary";
-export type ButtonSize = "sm" | "md" | "lg";
+export type ButtonVariant = 'primary' | 'outline' | 'soft' | 'tertiary';
+export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonOutline =
-  | "white"
-  | "light-blue"
-  | "transparent"
-  | "disabled"
-  | "double-outline"
-  | "none";
+  | 'white'
+  | 'light-blue'
+  | 'transparent'
+  | 'disabled'
+  | 'double-outline'
+  | 'none';
 
 export type ButtonProps = {
   children: ReactNode;

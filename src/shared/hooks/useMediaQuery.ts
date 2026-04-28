@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useMediaQuery(breakpoint: number): boolean | null {
   const query = `(max-width: ${breakpoint}px)`;
@@ -12,8 +12,8 @@ export function useMediaQuery(breakpoint: number): boolean | null {
 
     update();
 
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
   }, [query]);
 
   return matches;

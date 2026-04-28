@@ -1,13 +1,12 @@
-import type { TypographyProps } from "./model/types";
+import type { TypographyProps } from './model/types';
 
-import type { FC } from "react";
-
+import type { FC } from 'react';
 
 export const Typography: FC<TypographyProps> = ({
-  as = "span",
+  as = 'span',
   children,
-  id = "",
-  className = "",
+  id = '',
+  className = '',
   onClick,
 }) => {
   const Component = as;

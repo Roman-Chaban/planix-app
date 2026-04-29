@@ -8,3 +8,4 @@ export { GridItem } from '@/shared/ui/grid/GridItem';
 export { AppLink } from '@/shared/ui/link/AppLink';
 export { Typography } from '@/shared/ui/typography/Typography';
 export { List } from '@/shared/ui/list/ui/List';
+export { LanguageSelect } from '@/shared/ui/languageSelect/ui/LanguageSelect';

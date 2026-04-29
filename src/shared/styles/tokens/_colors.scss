@@ -101,6 +101,12 @@ $linear-gradient-100: linear-gradient(
   rgba(255, 255, 255, 0) 100%
 );
 
+$linear-gradient-200: linear-gradient(
+  360deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(65, 101, 183, 0.11) 100%
+);
+
 /* Other */
 
 $color-white: #ffffff;

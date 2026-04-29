@@ -14,16 +14,17 @@ const dm_sans = DM_Sans({
   subsets: ['latin'],
 });
 
-type RootLayoutProps = {
-  children: ReactNode;
-  params: Promise<{ locale: string }>;
-};
-
 export function generateStaticParams(): { locale: Locale }[] {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({ children, params }: RootLayoutProps) {
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
 
   if (!isLocale(locale)) notFound();

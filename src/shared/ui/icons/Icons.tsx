@@ -493,3 +493,32 @@ export const NotificationIcon: FC<IconProps> = ({ width = 24, height = 24 }) => 
     </svg>
   );
 };
+
+export const NotificationErrorIcon: FC<IconProps> = ({ width = 12, height = 12 }) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="6" cy="6" r="6" fill="#D92D20" />
+      <path
+        d="M6 3L6.00537 6.44444"
+        stroke="white"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path fillRule="evenodd" clipRule="evenodd" d="M6 9.11108H6.00898H6Z" fill="#D92D20" />
+      <path
+        d="M6 9.11108H6.00898"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

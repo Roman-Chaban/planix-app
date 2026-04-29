@@ -11,26 +11,13 @@
   box-shadow: shadow.$shadow-elevation-1;
   background: color.$color-white;
   min-height: 100dvh;
+  grid-area: sidebar;
 }
 
 .content {
   @include flex-col(3.063rem, start, stretch);
   padding: 1.125rem 1rem 0 1rem;
   min-height: 100dvh;
-}
-
-.header {
-  width: fit-content;
-  @include flex-row(0.813rem, start, center);
-}
-
-.title {
-  color: color.$color-black-1200;
-  line-height: 150%;
-  font: {
-    weight: size.$font-weight-semibold;
-    size: size.$line-height-body-md;
-  }
 }
 
 .list {
@@ -65,13 +52,7 @@
   }
 
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--sidebar-active);
-    opacity: 0.05;
-    border-radius: inherit;
-    pointer-events: none;
+    @include button-background-overlay('', absolute, 0, var(--sidebar-active), 0.05, inherit, none);
   }
 
   &::before {

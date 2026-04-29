@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { usePathname } from 'next/navigation';
 
-import { sidebarNavItems } from '@/widgets/sidebar/model/sidebarNavItems';
+import { sidebarNavItems } from '@/widgets/sidebar/lib/sidebarNavItems';
 
 import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/helpers/isActiveRoute/isActiveRoute';

@@ -4,7 +4,7 @@ export const List = <T extends { id: ListItemKey }>({
   tag: Tag = 'ul',
   renderList,
   className = '',
-  itemClassName = '',
+  itemClassName,
   renderItem,
   getItemKey = (item) => item.id,
   ...listProps

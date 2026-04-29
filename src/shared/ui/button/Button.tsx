@@ -4,6 +4,8 @@ import type { FC } from 'react';
 
 import { classNames } from '@/shared/lib/helpers/class-names/index';
 
+import { Box, Typography } from '@/shared/ui/index';
+
 import styles from './styles.module.scss';
 
 export const Button: FC<ButtonProps> = ({
@@ -11,8 +13,10 @@ export const Button: FC<ButtonProps> = ({
   outline = 'primary',
   size = 'none',
   className,
-  endIcon,
   startIcon,
+  endIcon,
+  startIconClassName,
+  endIconClassName,
   disabled,
   children,
   type,
@@ -27,9 +31,21 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <button className={classes} disabled={disabled} type={type}>
-      {startIcon}
-      {children}
-      {endIcon}
+      {startIcon && (
+        <Typography as="span" className={classNames(styles.icon, startIconClassName)}>
+          {startIcon}
+        </Typography>
+      )}
+
+      <Box className={styles.iconWrapper}>
+        {children}
+
+        {endIcon && (
+          <Typography as="span" className={classNames(styles.icon, endIconClassName)}>
+            {endIcon}
+          </Typography>
+        )}
+      </Box>
     </button>
   );
 };

@@ -57,6 +57,10 @@
   padding: 0;
   min-height: unset;
   font-size: inherit;
+
+  &:hover {
+    background: none;
+  }
 }
 
 .sm {
@@ -76,6 +80,11 @@
   padding: spacing.$space-4 spacing.$space-7;
   min-height: 3.375rem;
   font-size: size.$font-size-body-lg;
+}
+
+.iconWrapper {
+  position: relative;
+  display: inline-flex;
 }
 
 .startIcon,

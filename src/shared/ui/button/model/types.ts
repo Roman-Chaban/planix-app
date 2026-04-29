@@ -19,4 +19,6 @@ export type ButtonProps = {
   outline?: ButtonOutline;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
+  startIconClassName?: string;
+  endIconClassName?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;

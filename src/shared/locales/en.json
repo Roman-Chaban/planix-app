@@ -45,5 +45,13 @@
   },
   "DashboardHeader": {
     "title": "Dashboard"
+  },
+  "DashboardCard": {
+    "totalProjects": "Total Projects",
+    "clients": "Clients",
+    "revenue": "Revenue",
+    "newLead": "New Lead",
+    "totalTask": "Total Task",
+    "vsLastMonth": "vs Last month"
   }
 }

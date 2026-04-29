@@ -45,5 +45,13 @@
   },
   "DashboardHeader": {
     "title": "Панель керування"
+  },
+  "DashboardCard": {
+    "totalProjects": "Усього проєктів",
+    "clients": "Клієнти",
+    "revenue": "Дохід",
+    "newLead": "Нові ліди",
+    "totalTask": "Усього задач",
+    "vsLastMonth": "за останній місяць"
   }
 }

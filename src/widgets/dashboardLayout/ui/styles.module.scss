@@ -1,0 +1,102 @@
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/shadows' as shadow;
+@use '@/shared/styles/tokens/mixins' as *;
+@use '@/shared/styles/tokens/flex' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: 18.125rem 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header header'
+    'sidebar content';
+  gap: 0;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 0.094rem solid color.$color-black-200;
+  box-shadow: shadow.$shadow-elevation-1;
+  grid-area: header;
+}
+
+.wrapper {
+  width: 100%;
+  @include flex(flex, row, start, center);
+  padding: 1.125rem 1rem;
+}
+
+.content {
+  grid-area: content;
+}
+
+.headerLeftSide {
+  width: 100%;
+  max-width: 18.125rem;
+  @include flex-row(0.813rem, start, center);
+}
+
+.logoTitle {
+  color: color.$color-black-1200;
+  line-height: 150%;
+  font: {
+    weight: size.$font-weight-semibold;
+    size: size.$line-height-body-md;
+  }
+}
+
+.headerRightSide {
+  width: 100%;
+  @include flex(flex, row, space-between, center);
+}
+
+.title {
+  font: {
+    size: size.$font-size-h6;
+    weight: size.$font-weight-bold;
+  }
+  line-height: 150%;
+}
+
+.button {
+  position: relative;
+
+  &::after {
+    @include button-background-overlay(
+      '',
+      absolute,
+      0,
+      color.$color-primary-800,
+      0.05,
+      inherit,
+      none
+    );
+  }
+}
+
+.endIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transform: translate(25%, -40%);
+}
+
+.headerAuth {
+  @include flex-center;
+  gap: spacing.$space-9;
+}
+
+/* Styles Mock: [Temporary mock these styles] */
+.authAvatar {
+  @include flex-center;
+  width: 3rem;
+  height: 3rem;
+  background: color.$color-primary-300;
+  color: color.$color-white;
+  border-radius: 100%;
+}

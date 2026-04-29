@@ -17,16 +17,18 @@ export default function TranslationProvider({
   const [ready, setReady] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleReady = async () => {
+    let mounted = true;
+
+    const run = async () => {
       await i18n.changeLanguage(locale);
-      setReady(true);
+      if (mounted) setReady(true);
     };
 
-    if (!i18n.isInitialized) {
-      i18n.on('initialized', handleReady);
-    } else {
-      handleReady();
-    }
+    run();
+
+    return () => {
+      mounted = false;
+    };
   }, [locale]);
 
   if (!ready) {

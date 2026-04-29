@@ -21,3 +21,5 @@ export { AnalyticsIcon } from '@/shared/ui/icons/Icons';
 export { SettingsIcon } from '@/shared/ui/icons/Icons';
 export { NotificationIcon } from '@/shared/ui/icons/Icons';
 export { NotificationErrorIcon } from '@/shared/ui/icons/Icons';
+export { UnitedStatesIcon } from '@/shared/ui/icons/Icons';
+export { UkraineIcon } from '@/shared/ui/icons/Icons';

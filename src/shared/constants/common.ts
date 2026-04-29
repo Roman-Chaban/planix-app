@@ -24,3 +24,5 @@ export const LOCALES = {
 } as const;
 
 export const LOCALE_VALUES = Object.values(LOCALES);
+
+export const INSTANCE_ID = 'language-switcher' as const;

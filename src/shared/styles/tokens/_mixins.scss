@@ -182,6 +182,24 @@
   text-decoration: underline;
 }
 
+@mixin text-before-decoration(
+  $content: '',
+  $position,
+  $left,
+  $width,
+  $height,
+  $border-radius,
+  $background
+) {
+  content: $content;
+  position: $position;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background: $background;
+}
+
 /* Overlay mixins */
 
 @mixin overlay($radius: 0, $bg: null) {

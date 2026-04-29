@@ -16,8 +16,12 @@
 
 .content {
   @include flex-col(3.063rem, start, stretch);
-  padding: 1.125rem 1rem 0 1rem;
+  padding: 1.938rem 1rem 0 1rem;
   min-height: 100dvh;
+
+  @include respond(laptop) {
+    display: none;
+  }
 }
 
 .list {
@@ -28,6 +32,7 @@
   @include flex-row(spacing.$space-4);
   padding: 0.813rem 1.688rem 0.875rem 0.75rem;
   color: color.$color-black-800;
+  min-width: 0;
 
   & > a {
     font: {
@@ -35,6 +40,7 @@
       weight: size.$font-weight-regular;
     }
     color: inherit;
+    @include text-ellipsis;
   }
 }
 
@@ -56,13 +62,15 @@
   }
 
   &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 0.156rem;
-    height: 1.75rem;
-    border-radius: 0 0.5rem 0.5rem 0;
-    background: var(--sidebar-active);
+    @include text-before-decoration(
+      '',
+      absolute,
+      0,
+      0.156rem,
+      1.75rem,
+      0 0.5rem 0.5rem 0,
+      var(--sidebar-active)
+    );
   }
 }
 

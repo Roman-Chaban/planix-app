@@ -18,7 +18,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
       startIcon,
       endIcon,
       onEndIconClick,
-      isSeparator,
+      isDivider,
       ...inputProps
     },
     ref,
@@ -48,7 +48,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
             </Typography>
           )}
 
-          {isSeparator && <Typography as="span" className={styles.divider} />}
+          {isDivider && <Typography as="span" className={styles.divider} />}
 
           <input id={id} ref={ref} className={styles.input} type={type} {...inputProps} />
 

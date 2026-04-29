@@ -4,9 +4,9 @@ export type InputSize = 'sm' | 'md' | 'lg';
 
 export type InputVariant = 'primary' | 'typing' | 'filed' | 'error';
 
-export type IsPasswordToggleable = boolean;
-
 export type InputTypes = 'email' | 'tel' | 'password' | 'radio' | 'search' | 'hidden' | 'checkbox';
+
+export type IsPasswordToggleable = boolean;
 
 export type InputProps = {
   variant?: InputVariant;
@@ -17,7 +17,7 @@ export type InputProps = {
   label?: string;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-  isSeparator?: boolean;
+  isDivider?: boolean;
   isPasswordToggleable?: boolean;
   onEndIconClick?: () => void;
 } & InputHTMLAttributes<HTMLInputElement>;

@@ -13,6 +13,13 @@
     'header header'
     'sidebar content';
   gap: 0;
+
+  @include respond(laptop) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'content';
+  }
 }
 
 .header {
@@ -26,16 +33,25 @@
   width: 100%;
   @include flex(flex, row, start, center);
   padding: 1.125rem 1rem;
+
+  @include respond(laptop) {
+    gap: 2rem;
+  }
 }
 
 .content {
   grid-area: content;
+  padding-inline: 1.875rem;
 }
 
 .headerLeftSide {
   width: 100%;
   max-width: 18.125rem;
   @include flex-row(0.813rem, start, center);
+
+  @include respond(laptop) {
+    max-width: fit-content;
+  }
 }
 
 .logoTitle {
@@ -50,6 +66,7 @@
 .headerRightSide {
   width: 100%;
   @include flex(flex, row, space-between, center);
+  padding-inline: 0.875rem;
 }
 
 .title {
@@ -99,4 +116,39 @@
   background: color.$color-primary-300;
   color: color.$color-white;
   border-radius: 100%;
+}
+
+.cardsWrapper {
+  width: 100%;
+  padding-block-start: 1.938rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: 1.875rem;
+}
+
+.card {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: shadow.$shadow-elevation-2;
+  background: color.$color-white;
+  border: 0.125rem solid color.$color-black-300;
+  padding: 1.25rem 1.375rem;
+  background:
+    color.$linear-gradient-200 top / 100% 6rem no-repeat,
+    color.$color-white;
+
+  &::before {
+    @include text-before-decoration(
+      '',
+      absolute,
+      0,
+      0.25rem,
+      1.188rem,
+      0 0.5rem 0.5rem 0,
+      color.$color-primary-800
+    );
+  }
 }

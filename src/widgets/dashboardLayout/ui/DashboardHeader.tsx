@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import type { DashboardHeaderProps } from '@/widgets/dashboardLayout/model/types';
 import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
-import { Avatar, Box, Button, Typography } from '@/shared/ui';
+import { Avatar, Box, Button, LanguageSelect, Typography } from '@/shared/ui';
 
 import { PlanixLogoIcon, NotificationErrorIcon } from '@/shared/ui/icons';
 
@@ -30,6 +30,8 @@ export const DashboardHeader: FC<DashboardHeaderProps> = ({ title, icon }) => {
             {title}
           </Typography>
           <Box className={styles.headerAuth}>
+            <LanguageSelect />
+
             <Button
               type={BUTTON}
               variant={CIRCLE}

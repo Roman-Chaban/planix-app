@@ -200,6 +200,13 @@
   background: $background;
 }
 
+@mixin text-ellipsis {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* Overlay mixins */
 
 @mixin overlay($radius: 0, $bg: null) {
@@ -248,4 +255,12 @@
   opacity: $opacity;
   border-radius: $border-radius;
   pointer-events: $pointer-events;
+}
+
+/* State mixins */
+
+@mixin trend-state($border, $background, $color) {
+  border: $border;
+  background: $background;
+  color: $color;
 }

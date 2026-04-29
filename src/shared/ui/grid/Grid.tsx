@@ -8,7 +8,5 @@ import { Box } from '@/shared/ui/index';
 import styles from './styles.module.scss';
 
 export const Grid: FC<GridProps> = ({ children, className }) => {
-  const classes = classNames(styles.grid, className);
-
-  return <Box className={classes}>{children}</Box>;
+  return <Box className={classNames(styles.grid, className)}>{children}</Box>;
 };

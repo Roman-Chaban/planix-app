@@ -10,7 +10,5 @@ import styles from './styles.module.scss';
 export const GridItem: FC<GridItemProps> = ({ children, span = 12, className }) => {
   const SPAN_CLASS = styles[`col-span-${span}`];
 
-  const classes = classNames(styles.item, SPAN_CLASS, className);
-
-  return <Box className={classes}>{children}</Box>;
+  return <Box className={classNames(styles.item, SPAN_CLASS, className)}>{children}</Box>;
 };

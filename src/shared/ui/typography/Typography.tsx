@@ -5,8 +5,8 @@ import type { FC } from 'react';
 export const Typography: FC<TypographyProps> = ({
   as = 'span',
   children,
-  id = '',
-  className = '',
+  id,
+  className,
   onClick,
 }) => {
   const Component = as;

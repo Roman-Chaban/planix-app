@@ -1,18 +1,28 @@
+'use client';
+
 import type { FC } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
+import { DashboardContent } from '@/widgets/dashboardLayout/ui/DashboardContent';
+import { DashboardHeader } from '@/widgets/dashboardLayout/ui/DashboardHeader';
 import { Sidebar } from '@/widgets/sidebar/ui/Sidebar';
 
-import { Grid, GridItem } from '@/shared/ui';
+import { Grid } from '@/shared/ui';
+import { NotificationIcon } from '@/shared/ui/icons';
+
+import styles from './styles.module.scss';
 
 export const DashboardLayout: FC = () => {
-  return (
-    <Grid>
-      <GridItem span={3}>
-        <Sidebar />
-      </GridItem>
+  const { t } = useTranslation();
 
-      {/* Mock: [Waiting for implementation Dashboard Content] */}
-      <GridItem span={9}>Content</GridItem>
+  return (
+    <Grid className={styles.grid}>
+      <Sidebar />
+
+      <DashboardHeader title={t('DashboardHeader.title')} icon={<NotificationIcon />} />
+
+      <DashboardContent />
     </Grid>
   );
 };

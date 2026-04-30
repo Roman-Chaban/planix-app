@@ -1,10 +1,10 @@
-import { type FC } from "react";
+import { type FC } from 'react';
 
-import { NotFoundBanner } from "@/shared/ui/icons/index";
-import { Box, Grid, GridItem, Typography } from "@/shared/ui/index";
+import { NotFoundBanner } from '@/shared/ui/icons/index';
+import { Box, Grid, GridItem, Typography } from '@/shared/ui/index';
 
-import styles from "./styles.module.scss";
-import "@/shared/styles/reset/_reset.scss";
+import styles from './styles.module.scss';
+import '@/shared/styles/reset/_reset.scss';
 
 export const NotFoundLayout: FC = () => {
   return (

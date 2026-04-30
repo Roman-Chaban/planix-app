@@ -53,5 +53,12 @@
     "newLead": "Нові ліди",
     "totalTask": "Усього задач",
     "vsLastMonth": "за останній місяць"
+  },
+  "DashboardAnalytics": {
+    "Header": {
+      "revenueTitle": "Аналітика доходів",
+      "projectTitle": "Зведення проєктів",
+      "taskOverview": "Огляд завдань"
+    }
   }
 }

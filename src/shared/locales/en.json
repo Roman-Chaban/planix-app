@@ -53,5 +53,12 @@
     "newLead": "New Lead",
     "totalTask": "Total Task",
     "vsLastMonth": "vs Last month"
+  },
+  "DashboardAnalytics": {
+    "Header": {
+      "revenueTitle": "Revenue Analytics",
+      "projectTitle": "Projects Summary",
+      "taskOverview": "Task Overview"
+    }
   }
 }

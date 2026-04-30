@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 
 import '@shared/styles/reset/_reset.scss';
 
-import { LOCALES, type Locale } from '@/shared/config/i18n/locales';
+import { LOCALES, type Locale } from '@/shared/config/i18n/lib/locales';
 import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
 import { GlobalProviders } from '@/shared/providers/GlobalProviders';
 

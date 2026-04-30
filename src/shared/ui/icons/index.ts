@@ -12,3 +12,4 @@ export { LockIcon } from "@/shared/ui/icons/Icons";
 export { EyeOffIcon } from "@/shared/ui/icons/Icons";
 export { EyeIcon } from "@/shared/ui/icons/Icons";
 export { SearchIcon } from "@/shared/ui/icons/Icons";
+export { NotFoundBanner } from "@/shared/ui/icons/Icons";

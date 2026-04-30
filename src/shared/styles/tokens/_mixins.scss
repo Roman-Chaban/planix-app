@@ -213,3 +213,13 @@
   height: 0;
   opacity: 0;
 }
+
+/* Text mixins */
+
+@mixin notFoundText($color, $weight, $size) {
+  color: $color;
+  font: {
+    weight: $weight;
+    size: $size;
+  }
+}

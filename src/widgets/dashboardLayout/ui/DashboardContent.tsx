@@ -1,4 +1,4 @@
-import { DashboardAnalytics } from '@/widgets/dashboardLayout/ui/DashboardAnalytics';
+import { DashboardAnalytics } from '@/widgets/dashboardLayout/ui/DashboardAnalytics/DashboardAnalytics';
 import { DashboardCards } from '@/widgets/dashboardLayout/ui/DashboardCards';
 import { Box } from '@/shared/ui';
 

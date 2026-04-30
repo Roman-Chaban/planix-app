@@ -3,6 +3,7 @@
 @use '@/shared/styles/tokens/colors' as color;
 @use '@/shared/styles/tokens/spacing' as spacing;
 @use '@/shared/styles/tokens/breakpoints' as breakpoint;
+@use '@/shared/styles/tokens/shadows' as shadow;
 
 /* Media Query mixins */
 
@@ -189,7 +190,8 @@
   $width,
   $height,
   $border-radius,
-  $background
+  $background,
+  $centerY: false
 ) {
   content: $content;
   position: $position;
@@ -198,6 +200,11 @@
   height: $height;
   border-radius: $border-radius;
   background: $background;
+
+  @if $centerY == true {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 @mixin text-ellipsis {
@@ -263,4 +270,14 @@
   border: $border;
   background: $background;
   color: $color;
+}
+
+@mixin widget-box {
+  border: 0.125rem solid color.$color-black-300;
+  border-radius: 1rem;
+  min-height: 24rem;
+  box-shadow: shadow.$shadow-elevation-2;
+  background: color.$color-white;
+  padding-inline: 0.625rem;
+  padding-block: 0.625rem 1.438rem;
 }

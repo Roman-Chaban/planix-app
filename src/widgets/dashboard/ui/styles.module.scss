@@ -155,6 +155,14 @@
 
 .analyticsWrapper {
   @include responsive-grid-widgets(2.45fr 1fr 1fr, 1.875rem);
+
+  @include respond(wide) {
+    @include responsive-grid-widgets(2fr 1fr, 1.875rem);
+  }
+
+  @include respond(desktop) {
+    @include responsive-grid-widgets(1fr, 1.875rem);
+  }
 }
 
 .primary,

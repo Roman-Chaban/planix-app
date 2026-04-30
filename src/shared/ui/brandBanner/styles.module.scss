@@ -8,10 +8,14 @@
   position: relative;
   overflow: hidden;
   height: calc(100dvh - 3rem);
-  background-image: url('/images/login/images/primary-banner.svg');
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+
+  background: {
+    image: url('/images/login/images/primary-banner.svg');
+    size: cover;
+    position: right;
+    repeat: no-repeat;
+  }
+
   border-radius: 1.875rem;
   padding: 1.875rem;
 

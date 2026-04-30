@@ -17,6 +17,7 @@ export const SidebarNav: FC = () => {
 
   return (
     <List
+      className={styles.list}
       getItemKey={(item) => item.id}
       renderList={sidebarNavItems}
       renderItem={(item) => {
@@ -32,7 +33,6 @@ export const SidebarNav: FC = () => {
           />
         );
       }}
-      className={styles.list}
     />
   );
 };

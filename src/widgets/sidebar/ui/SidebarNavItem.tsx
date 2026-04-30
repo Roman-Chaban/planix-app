@@ -17,10 +17,8 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({
 }) => {
   const { t } = useTranslation();
 
-  const classes = classNames(styles.item, isActive && styles.active);
-
   return (
-    <Box className={classes} key={key}>
+    <Box className={classNames(styles.item, isActive && styles.active)} key={key}>
       <Icon />
       <AppLink href={href}>{t(label)}</AppLink>
     </Box>

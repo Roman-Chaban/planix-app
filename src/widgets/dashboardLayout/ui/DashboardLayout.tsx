@@ -1,7 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { DashboardContent } from '@/widgets/dashboardLayout/ui/DashboardContent';
@@ -13,7 +11,7 @@ import { NotificationIcon } from '@/shared/ui/icons';
 
 import styles from './styles.module.scss';
 
-export const DashboardLayout: FC = () => {
+export const DashboardLayout = () => {
   const { t } = useTranslation();
 
   return (

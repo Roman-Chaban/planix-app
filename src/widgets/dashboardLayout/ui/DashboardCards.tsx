@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import { dashboardCards } from '@/widgets/dashboardLayout/lib/dashboardCards';
 import { Box, List } from '@/shared/ui';
 
@@ -7,7 +5,7 @@ import { DashboardCard } from '@/shared/ui/dashboardCard/ui/DashboardCard';
 
 import styles from './styles.module.scss';
 
-export const DashboardCards: FC = () => {
+export const DashboardCards = () => {
   return (
     <Box className={styles.cardsWrapper}>
       <List

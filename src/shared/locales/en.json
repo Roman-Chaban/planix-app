@@ -61,4 +61,10 @@
       "taskOverview": "Task Overview"
     }
   }
+},
+  "NotFound": {
+    "error": "Error",
+    "404": "404",
+    "pageNotFound": "Page Not Found"
+  }
 }

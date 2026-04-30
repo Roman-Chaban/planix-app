@@ -1,4 +1,4 @@
-import { DashboardAnalyticsHeaders } from '@/widgets/dashboardLayout/ui/DashboardAnalytics/DashboardAnalyticsHeaders';
+import { DashboardAnalyticsHeaders } from '@/widgets/dashboard/ui/DashboardAnalytics/DashboardAnalyticsHeaders';
 import { Box } from '@/shared/ui';
 
 import styles from '../styles.module.scss';

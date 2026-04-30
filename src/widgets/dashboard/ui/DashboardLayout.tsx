@@ -2,8 +2,8 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { DashboardContent } from '@/widgets/dashboardLayout/ui/DashboardContent';
-import { DashboardHeader } from '@/widgets/dashboardLayout/ui/DashboardHeader';
+import { DashboardContent } from '@/widgets/dashboard/ui/DashboardContent';
+import { DashboardHeader } from '@/widgets/dashboard/ui/DashboardHeader';
 import { Sidebar } from '@/widgets/sidebar/ui/Sidebar';
 
 import { Grid } from '@/shared/ui';

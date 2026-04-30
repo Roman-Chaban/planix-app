@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-import { dashboardHeaderTitles } from '@/widgets/dashboardLayout/lib/dashboardHeaderTitles';
+import { dashboardHeaderTitles } from '@/widgets/dashboard/lib/dashboardHeaderTitles';
 
-import { DashboardAnalyticsHeader } from '@/widgets/dashboardLayout/ui/DashboardAnalytics/DashboardAnalyticsHeader';
+import { DashboardAnalyticsHeader } from '@/widgets/dashboard/ui/DashboardAnalytics/DashboardAnalyticsHeader';
 import { Box } from '@/shared/ui';
 
 import styles from '../styles.module.scss';

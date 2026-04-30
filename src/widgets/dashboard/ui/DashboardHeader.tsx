@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { DashboardHeaderProps } from '@/widgets/dashboardLayout/model/types';
+import type { DashboardHeaderProps } from '@/widgets/dashboard/model/types';
 import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
 import { Avatar, Box, Button, LanguageSelect, Typography } from '@/shared/ui';
 

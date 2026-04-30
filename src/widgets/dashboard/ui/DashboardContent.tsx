@@ -1,5 +1,5 @@
-import { DashboardAnalytics } from '@/widgets/dashboardLayout/ui/DashboardAnalytics/DashboardAnalytics';
-import { DashboardCards } from '@/widgets/dashboardLayout/ui/DashboardCards';
+import { DashboardAnalytics } from '@/widgets/dashboard/ui/DashboardAnalytics/DashboardAnalytics';
+import { DashboardCards } from '@/widgets/dashboard/ui/DashboardCards';
 import { Box } from '@/shared/ui';
 
 import styles from './styles.module.scss';

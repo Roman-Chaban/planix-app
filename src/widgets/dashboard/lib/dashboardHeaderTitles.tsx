@@ -1,4 +1,4 @@
-import type { DashboardAnalyticsHeaderList } from '@/widgets/dashboardLayout/model/types';
+import type { DashboardAnalyticsHeaderList } from '@/widgets/dashboard/model/types';
 
 export const dashboardHeaderTitles: DashboardAnalyticsHeaderList = [
   {

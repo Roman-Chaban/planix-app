@@ -1,4 +1,4 @@
-import { dashboardCards } from '@/widgets/dashboardLayout/lib/dashboardCards';
+import { dashboardCards } from '@/widgets/dashboard/lib/dashboardCards';
 import { Box, List } from '@/shared/ui';
 
 import { DashboardCard } from '@/shared/ui/dashboardCard/ui/DashboardCard';

@@ -5,8 +5,8 @@ import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { AuthFooter } from '@/widgets/authLayout/ui/AuthFooter';
-import { AuthHeader } from '@/widgets/authLayout/ui/AuthHeader';
+import { AuthFooter } from '@/widgets/auth/ui/AuthFooter';
+import { AuthHeader } from '@/widgets/auth/ui/AuthHeader';
 
 import type { AuthLoginFormViewProps } from '@/features/auth/login/model/types/types';
 

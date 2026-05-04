@@ -1,17 +1,19 @@
 import type { LanguageSelectStyles } from '@/shared/ui/languageSelect/model/types';
 
-export const createSelectStyles = (): LanguageSelectStyles => ({
+export const createSelectStyles = (isTablet: boolean): LanguageSelectStyles => ({
   /* Container */
 
   container: (base) => ({
     ...base,
     width: '10rem',
+    display: isTablet ? 'none' : 'flex',
   }),
 
   /* Control */
 
   control: (base) => ({
     ...base,
+    width: '10rem',
     minHeight: '2.5rem',
   }),
 

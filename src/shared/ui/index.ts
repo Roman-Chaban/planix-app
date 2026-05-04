@@ -9,3 +9,4 @@ export { AppLink } from '@/shared/ui/link/AppLink';
 export { Typography } from '@/shared/ui/typography/Typography';
 export { List } from '@/shared/ui/list/ui/List';
 export { LanguageSelect } from '@/shared/ui/languageSelect/ui/LanguageSelect';
+export { NotFoundLayout } from '@/shared/ui/notFound/NotFound';

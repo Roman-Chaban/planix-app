@@ -8,6 +8,10 @@
   min-height: 100dvh;
   @include flex-center;
   padding: 2rem;
+
+  @include respond(laptop) {
+    padding: 1rem;
+  }
 }
 
 .container {
@@ -20,7 +24,7 @@
   border-radius: 1.875rem;
 
   @include respond(laptop) {
-    grid-template-columns: 1fr 1fr;
+    @include flex-col(3rem, center, center);
   }
 }
 

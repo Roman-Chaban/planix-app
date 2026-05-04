@@ -2,7 +2,7 @@ import type { CheckboxProps } from './model/types';
 
 import { useId, type ChangeEvent, type FC } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/classNames';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import { CheckIcon } from '@/shared/ui/icons/Icons';
 import { Typography } from '@/shared/ui/typography/Typography';
 
@@ -12,8 +12,6 @@ import styles from './styles.module.scss';
 
 export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
   const id = useId();
-
-  const CHECKBOX_CLASSNAMES = classNames(styles.checkIcon, checked && styles.visible);
 
   const handleCheckChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.checked);
@@ -31,7 +29,7 @@ export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled
       />
 
       <Typography as="span" className={styles.box}>
-        <CheckIcon className={CHECKBOX_CLASSNAMES} />
+        <CheckIcon className={classNames(styles.checkIcon, checked && styles.visible)} />
       </Typography>
 
       {label && (

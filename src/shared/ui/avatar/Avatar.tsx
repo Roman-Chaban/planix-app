@@ -19,10 +19,8 @@ export const Avatar: FC<AvatarProps> = ({
   fallback,
   className,
 }) => {
-  const avatarClassNames = classNames(styles.avatar, styles[size], styles[variant], className);
-
   return (
-    <Box className={avatarClassNames}>
+    <Box className={classNames(styles.avatar, styles[size], styles[variant], className)}>
       {icon ? (
         <Box className={styles.icon}>{icon}</Box>
       ) : src ? (

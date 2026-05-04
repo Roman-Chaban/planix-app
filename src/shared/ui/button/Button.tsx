@@ -2,7 +2,7 @@ import type { ButtonProps } from './model/types';
 
 import type { FC } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/classNames/index';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 
 import { Box, Typography } from '@/shared/ui/index';
 

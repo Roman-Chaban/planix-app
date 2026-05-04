@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/model/types';
-import { classNames } from '@/shared/lib/helpers/classNames';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 import { AppLink, Box } from '@/shared/ui';
 
 import styles from './styles.module.scss';

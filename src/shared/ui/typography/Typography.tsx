@@ -1,6 +1,6 @@
-import type { TypographyProps } from './model/types';
-
 import type { FC } from 'react';
+
+import type { TypographyProps } from '@/shared/ui/typography/model/types';
 
 export const Typography: FC<TypographyProps> = ({
   as = 'span',

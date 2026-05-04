@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { LOCALES, type Locale } from '@/shared/config/i18n/lib/locales';
+import { LOCALES, type Locale } from '@/shared/constants/locales';
 import { GlobalProviders } from '@/shared/providers/GlobalProviders';
 
 export function generateStaticParams() {

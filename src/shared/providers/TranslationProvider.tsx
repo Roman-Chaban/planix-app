@@ -5,7 +5,7 @@ import { type ReactNode, useEffect, useState } from 'react';
 import { I18nextProvider } from 'react-i18next';
 
 import i18n from '@/shared/config/i18n/config';
-import type { Locale } from '@/shared/config/i18n/lib/locales';
+import type { Locale } from '@/shared/constants/locales';
 
 export default function TranslationProvider({
   children,

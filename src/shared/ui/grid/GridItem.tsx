@@ -2,7 +2,7 @@ import type { GridItemProps } from './model/types';
 
 import type { FC } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/class-names';
+import { classNames } from '@/shared/lib/helpers/classNames';
 import { Box } from '@/shared/ui/index';
 
 import styles from './styles.module.scss';

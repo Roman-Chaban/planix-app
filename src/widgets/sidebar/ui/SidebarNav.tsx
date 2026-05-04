@@ -6,7 +6,7 @@ import { sidebarNavItems } from '@/widgets/sidebar/lib/sidebarNavItems';
 
 import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/helpers/isActiveRoute/isActiveRoute';
-import { normalizePathname } from '@/shared/lib/helpers/normalizePathname/normalizePathname ';
+import { normalizePathname } from '@/shared/lib/helpers/normalizePathname/normalizePathname';
 import { List } from '@/shared/ui';
 
 import styles from './styles.module.scss';

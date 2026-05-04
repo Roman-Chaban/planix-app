@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { classNames } from '@/shared/lib/helpers/class-names';
+import { classNames } from '@/shared/lib/helpers/classNames';
 import type { DashboardCardProps } from '@/shared/ui/dashboardCard/model/types';
 import { Box, Typography } from '@/shared/ui/index';
 

@@ -18,11 +18,4 @@ export const LINK_TARGETS = {
   FRAMENAME: 'framename',
 } as const;
 
-export const LOCALES = {
-  EN: 'en',
-  UK: 'uk',
-} as const;
-
-export const LOCALE_VALUES = Object.values(LOCALES);
-
 export const INSTANCE_ID = 'language-switcher' as const;

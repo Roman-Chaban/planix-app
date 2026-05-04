@@ -2,7 +2,7 @@ import type { CheckboxProps } from './model/types';
 
 import { useId, type ChangeEvent, type FC } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/class-names';
+import { classNames } from '@/shared/lib/helpers/classNames';
 import { CheckIcon } from '@/shared/ui/icons/Icons';
 import { Typography } from '@/shared/ui/typography/Typography';
 

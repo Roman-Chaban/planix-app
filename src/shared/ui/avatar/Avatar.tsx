@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import Image from 'next/image';
 
-import { classNames } from '@/shared/lib/helpers/class-names/class-names';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 
 import { Box } from '@shared/ui/box/Box';
 

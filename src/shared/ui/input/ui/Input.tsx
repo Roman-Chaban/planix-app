@@ -1,6 +1,6 @@
 import { forwardRef, useId } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/class-names';
+import { classNames } from '@/shared/lib/helpers/classNames';
 import { Box, Typography } from '@/shared/ui/index';
 import type { InputProps } from '@/shared/ui/input/model/types';
 

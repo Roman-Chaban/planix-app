@@ -18,6 +18,10 @@
   border-top: 3px solid color.$color-primary-800;
   box-shadow: shadow.$shadow-not-found;
   border-radius: 1.875rem;
+
+  @include respond(laptop) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .errorBlock {

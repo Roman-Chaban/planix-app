@@ -9,3 +9,13 @@
   grid-template-columns: $columns;
   gap: $gap;
 }
+
+@mixin grid($columns: $columns, $rows: $rows, $areas: $areas, $gap: $gap) {
+  display: grid;
+  grid: {
+    template-columns: $columns;
+    template-rows: $rows;
+    template-areas: $areas;
+  }
+  gap: $gap;
+}

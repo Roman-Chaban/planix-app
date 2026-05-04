@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import type { Locale } from '@/shared/config/i18n/lib/locales';
+import type { Locale } from '@/shared/constants/locales';
 
 export type GlobalProvidersProps = {
   children: ReactNode;

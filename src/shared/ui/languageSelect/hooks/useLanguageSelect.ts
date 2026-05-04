@@ -1,3 +1,4 @@
+// useLanguageSelect.ts
 'use client';
 
 import { useMemo, useCallback } from 'react';
@@ -10,40 +11,40 @@ export const useLanguageSelect = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const segments = useMemo(() => pathname.split('/'), [pathname]);
+  const segments = useMemo(() => pathname.split('/').filter(Boolean), [pathname]);
 
   const currentLocale = useMemo(() => {
-    return (
-      languageOptions.find((option) => option.value === segments[1])?.value ??
-      languageOptions[0].value
-    );
+    const possibleLocale = segments[0];
+    return languageOptions.some((option) => option.value === possibleLocale)
+      ? possibleLocale
+      : languageOptions[0].value;
   }, [segments]);
 
-  const value = useMemo(() => {
-    return languageOptions.find((option) => option.value === currentLocale);
-  }, [currentLocale]);
+  const value = useMemo(
+    () => languageOptions.find((option) => option.value === currentLocale) ?? languageOptions[0],
+    [currentLocale],
+  );
 
   const handleChange = useCallback(
     (option: LanguageOption | null) => {
-      if (!option) return;
+      if (!option || option.value === currentLocale) return;
 
       const newLocale = option.value;
       const newSegments = [...segments];
+      newSegments[0] = newLocale;
 
-      newSegments[1] = newLocale;
-
-      const newPath = newSegments.join('/') || `/${newLocale}`;
+      const newPath = '/' + newSegments.join('/');
       const search = typeof window !== 'undefined' ? window.location.search : '';
 
-      router.prefetch(newPath);
-      router.replace(newPath + search);
+      router.push(newPath + search);
     },
-    [router, segments],
+    [router, segments, currentLocale],
   );
 
   return {
     value,
     options: languageOptions,
+    currentLocale,
     handleChange,
   };
 };

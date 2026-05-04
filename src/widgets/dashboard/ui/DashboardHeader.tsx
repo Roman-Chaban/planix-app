@@ -13,6 +13,8 @@ import styles from './styles.module.scss';
 const { CIRCLE } = BUTTON_VARIANTS;
 const { BUTTON } = BUTTON_TYPES;
 
+const FALLBACK_PROFILE_AVATAR = 'RC';
+
 export const DashboardHeader: FC<DashboardHeaderProps> = ({ title, icon }) => {
   const { t } = useTranslation();
   return (
@@ -43,7 +45,7 @@ export const DashboardHeader: FC<DashboardHeaderProps> = ({ title, icon }) => {
             </Button>
 
             {/* Mock: [Waiting for implementation AuthLogic] */}
-            <Avatar className={styles.authAvatar} fallback={'RC'} />
+            <Avatar className={styles.avatar} fallback={FALLBACK_PROFILE_AVATAR} />
           </Box>
         </Box>
       </Box>

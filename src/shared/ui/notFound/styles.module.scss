@@ -23,15 +23,3 @@
 .errorBlock {
   @include flex-col(2rem, center, stretch);
 }
-
-.errorTitle {
-  @include notFoundText(color.$color-black-900, size.$font-weight-semibold, size.$font-size-h2);
-}
-
-.errorSubtitle {
-  @include notFoundText(color.$color-black-900, size.$font-weight-semibold, size.$font-size-h3);
-}
-
-.errorText {
-  @include notFoundText(color.$color-primary-800, size.$font-weight-semibold, size.$font-size-h4);
-}

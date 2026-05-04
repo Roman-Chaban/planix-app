@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import Select from 'react-select';
 
-import { MEDIA } from '@/shared/constants/breakpoints';
+import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { INSTANCE_ID } from '@/shared/constants/common';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { useLanguageSelect } from '@/shared/ui/languageSelect/hooks/useLanguageSelect';
@@ -13,7 +13,7 @@ import type { LanguageOption } from '@/shared/ui/languageSelect/model/types';
 import { Option } from '@/shared/ui/languageSelect/ui/Option';
 import { SingleValue } from '@/shared/ui/languageSelect/ui/SingleValue';
 
-const { TABLET } = MEDIA;
+const { TABLET } = BREAKPOINTS;
 
 export const LanguageSelect = () => {
   const { value, options, handleChange } = useLanguageSelect();

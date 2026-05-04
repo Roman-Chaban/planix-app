@@ -5,7 +5,7 @@ import { dashboardHeaderTitles } from '@/widgets/dashboard/lib/dashboardHeaderTi
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard/ui/DashboardAnalytics/DashboardAnalyticsHeader';
 import { Box } from '@/shared/ui';
 
-import styles from '../styles.module.scss';
+import styles from '../DashboardAnalytics/styles.module.scss';
 
 export const DashboardAnalyticsHeaders = () => {
   const { t } = useTranslation();

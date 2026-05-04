@@ -1,5 +1,5 @@
 import { Box } from '@/shared/ui';
 
-export const AnalyticsRevenue = () => {
+export const DashboardAnalyticsRevenue = () => {
   return <Box>AnalyticsRevenue</Box>;
 };

@@ -1,7 +1,8 @@
 import { DashboardAnalyticsHeaders } from '@/widgets/dashboard/ui/DashboardAnalytics/DashboardAnalyticsHeaders';
+
 import { Box } from '@/shared/ui';
 
-import styles from '../styles.module.scss';
+import styles from '../DashboardAnalytics/styles.module.scss';
 
 export const DashboardAnalytics = () => {
   return (

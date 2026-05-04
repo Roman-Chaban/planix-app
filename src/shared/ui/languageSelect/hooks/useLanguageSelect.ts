@@ -1,4 +1,3 @@
-// useLanguageSelect.ts
 'use client';
 
 import { useMemo, useCallback } from 'react';

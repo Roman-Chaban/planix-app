@@ -2,11 +2,12 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { DashboardContent } from '@/widgets/dashboard/ui/DashboardContent';
+import { DashboardAnalytics } from '@/widgets/dashboard/ui/DashboardAnalytics/DashboardAnalytics';
+import { DashboardCards } from '@/widgets/dashboard/ui/DashboardCards';
 import { DashboardHeader } from '@/widgets/dashboard/ui/DashboardHeader';
 import { Sidebar } from '@/widgets/sidebar/ui/Sidebar';
+import { Box, Grid } from '@/shared/ui';
 
-import { Grid } from '@/shared/ui';
 import { NotificationIcon } from '@/shared/ui/icons';
 
 import styles from './styles.module.scss';
@@ -17,10 +18,11 @@ export const DashboardLayout = () => {
   return (
     <Grid className={styles.grid}>
       <Sidebar />
-
       <DashboardHeader title={t('DashboardHeader.title')} icon={<NotificationIcon />} />
-
-      <DashboardContent />
+      <Box className={styles.content}>
+        <DashboardCards />
+        <DashboardAnalytics />
+      </Box>
     </Grid>
   );
 };

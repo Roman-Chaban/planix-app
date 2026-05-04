@@ -1,4 +1,4 @@
-import type { LinkProps } from './model/types';
+import type { LinkProps } from '../model/types';
 
 import type { FC } from 'react';
 

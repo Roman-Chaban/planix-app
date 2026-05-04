@@ -1,4 +1,4 @@
-import type { GridProps } from './model/types';
+import type { GridProps } from '../model/types';
 
 import type { FC } from 'react';
 

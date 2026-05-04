@@ -1,4 +1,4 @@
-import type { ButtonProps } from './model/types';
+import type { ButtonProps } from '../model/types';
 
 import type { FC } from 'react';
 

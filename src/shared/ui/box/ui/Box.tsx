@@ -1,4 +1,4 @@
-import type { BoxProps } from './model/types';
+import type { BoxProps } from '../model/types';
 
 import type { ElementType } from 'react';
 

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
-import { PlanixLogoIcon } from '@/shared/ui/icons/Icons';
+import { PlanixLogoIcon } from '@/shared/ui/icons/ui/Icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
 import styles from './styles.module.scss';

@@ -1,4 +1,4 @@
-import type { IconProps } from './model/types';
+import type { IconProps } from '../model/types';
 
 import type { FC } from 'react';
 

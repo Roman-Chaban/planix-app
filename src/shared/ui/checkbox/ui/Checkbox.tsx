@@ -1,10 +1,10 @@
-import type { CheckboxProps } from './model/types';
+import type { CheckboxProps } from '../model/types';
 
 import { useId, type ChangeEvent, type FC } from 'react';
 
 import { classNames } from '@/shared/lib/helpers/classNames/classNames';
-import { CheckIcon } from '@/shared/ui/icons/Icons';
-import { Typography } from '@/shared/ui/typography/Typography';
+import { CheckIcon } from '@/shared/ui/icons/ui/Icons';
+import { Typography } from '@/shared/ui/typography/ui/Typography';
 
 import { INPUT_TYPES } from '@shared/constants/inputs';
 

@@ -66,5 +66,12 @@
     "error": "Помилка",
     "404": "404",
     "pageNotFound": "Сторінку не знайдено"
+  },
+  "PROJECTS_HEADER": {
+    "allProjects": "Усі проєкти",
+    "inProgress": "У процесі",
+    "pending": "Очікує",
+    "completed": "Завершені",
+    "canceled": "Скасовані"
   }
 }

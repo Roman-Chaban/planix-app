@@ -66,5 +66,12 @@
     "error": "Error",
     "404": "404",
     "pageNotFound": "Page Not Found"
+  },
+  "PROJECTS_HEADER": {
+    "allProjects": "All Project",
+    "inProgress": "In Progress",
+    "pending": "Pending",
+    "completed": "Completed",
+    "canceled": "Canceled"
   }
 }

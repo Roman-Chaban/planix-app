@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 
 export const Sidebar: FC = () => {
   return (
-    <Box className={styles.sidebar}>
+    <Box as="aside" className={styles.sidebar}>
       <Box className={styles.content}>
         <SidebarNav />
       </Box>

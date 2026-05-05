@@ -14,6 +14,7 @@ export const useLanguageSelect = () => {
 
   const currentLocale = useMemo(() => {
     const possibleLocale = segments[0];
+
     return languageOptions.some((option) => option.value === possibleLocale)
       ? possibleLocale
       : languageOptions[0].value;

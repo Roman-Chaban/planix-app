@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 export type AuthHeaderProps = {
   title: string;
-  decorationText?: string;
+  highlightedText?: string;
   subtitle?: string;
   icon?: ReactNode;
 };

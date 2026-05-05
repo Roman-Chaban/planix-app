@@ -6,17 +6,20 @@ import { Avatar, Box, Typography } from '@/shared/ui/index';
 
 import styles from './styles.module.scss';
 
-export const AuthHeader: FC<AuthHeaderProps> = ({ title, subtitle, decorationText, icon }) => {
+export const AuthHeader: FC<AuthHeaderProps> = ({ title, subtitle, highlightedText, icon }) => {
   return (
     <Box className={styles.header}>
       <Typography as="h1" className={styles.title}>
         {title}{' '}
-        <Typography as="span" className={styles.highlight}>
-          {decorationText}
-        </Typography>
+        {highlightedText && (
+          <Typography as="span" className={styles.highlight}>
+            {highlightedText}
+          </Typography>
+        )}
       </Typography>
 
       {icon && <Avatar icon={icon} />}
+
       {subtitle && (
         <Typography as="p" className={styles.subtitle}>
           {subtitle}

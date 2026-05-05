@@ -6,7 +6,7 @@ import { SidebarNav } from '@/widgets/sidebar/ui/SidebarNav';
 
 import { Box } from '@/shared/ui';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const Sidebar: FC = () => {
   return (

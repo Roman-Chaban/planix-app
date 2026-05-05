@@ -1,19 +1,17 @@
-import type { FC } from 'react';
+'use client';
 
+import type { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
-import { sidebarNavItems } from '@/widgets/sidebar/lib/sidebarNavItems';
-
+import { sidebarNavItems } from '@/widgets/sidebar/lib/sidebarNaItems/sidebarNavItems';
 import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/helpers/isActiveRoute/isActiveRoute';
-import { normalizePathname } from '@/shared/lib/helpers/normalizePathname/normalizePathname';
 import { List } from '@/shared/ui';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const SidebarNav: FC = () => {
   const pathname = usePathname();
-  const currentPath = normalizePathname(pathname);
 
   return (
     <List
@@ -21,7 +19,7 @@ export const SidebarNav: FC = () => {
       getItemKey={(item) => item.id}
       renderList={sidebarNavItems}
       renderItem={(item) => {
-        const isActive = isActiveRoute(currentPath, item.href);
+        const isActive = isActiveRoute(pathname, item.href);
 
         return (
           <SidebarNavItem

@@ -6,7 +6,7 @@ import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/mo
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import { AppLink, Box } from '@/shared/ui';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   id: key,

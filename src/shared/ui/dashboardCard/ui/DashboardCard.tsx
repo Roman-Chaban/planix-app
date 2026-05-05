@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import type { DashboardCardProps } from '@/shared/ui/dashboardCard/model/types';
 import { Box, Typography } from '@/shared/ui/index';
 
@@ -34,7 +34,7 @@ export const DashboardCard: FC<DashboardCardProps> = ({
           <Typography as="span" className={styles.name}>
             {t(name)}
           </Typography>
-          <Typography as="span" className={classNames(styles.trend, styles[trendType])}>
+          <Typography as="span" className={buildClassName(styles.trend, styles[trendType])}>
             {t(trend)}
           </Typography>
         </Box>

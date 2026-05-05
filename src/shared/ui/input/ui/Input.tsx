@@ -1,6 +1,6 @@
 import { forwardRef, useId } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import { Box, Typography } from '@/shared/ui/index';
 import type { InputProps } from '@/shared/ui/input/model/types';
 
@@ -26,7 +26,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
     const id = useId();
     const hasError = Boolean(error);
 
-    const rootClassname = classNames(
+    const rootClassname = buildClassName(
       styles.inputWrapper,
       styles[variant],
       { [styles.error]: hasError },

@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/model/types';
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import { AppLink, Box } from '@/shared/ui';
 
 import styles from './styles.module.scss';
@@ -18,7 +18,7 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   const { t } = useTranslation();
 
   return (
-    <Box className={classNames(styles.item, isActive && styles.active)} key={key}>
+    <Box className={buildClassName(styles.item, isActive && styles.active)} key={key}>
       <Icon />
       <AppLink href={href}>{t(label)}</AppLink>
     </Box>

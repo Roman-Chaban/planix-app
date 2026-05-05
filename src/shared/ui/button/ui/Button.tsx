@@ -2,7 +2,7 @@ import type { ButtonProps } from '../model/types';
 
 import type { FC } from 'react';
 
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 
 import { Box, Typography } from '@/shared/ui/index';
 
@@ -21,7 +21,7 @@ export const Button: FC<ButtonProps> = ({
   children,
   type,
 }) => {
-  const classes = classNames(
+  const buttonClasses = buildClassName(
     styles.button,
     styles[variant],
     styles[size],
@@ -30,9 +30,9 @@ export const Button: FC<ButtonProps> = ({
   );
 
   return (
-    <button className={classes} disabled={disabled} type={type}>
+    <button className={buttonClasses} disabled={disabled} type={type}>
       {startIcon && (
-        <Typography as="span" className={classNames(styles.icon, startIconClassName)}>
+        <Typography as="span" className={buildClassName(styles.icon, startIconClassName)}>
           {startIcon}
         </Typography>
       )}
@@ -41,7 +41,7 @@ export const Button: FC<ButtonProps> = ({
         {children}
 
         {endIcon && (
-          <Typography as="span" className={classNames(styles.icon, endIconClassName)}>
+          <Typography as="span" className={buildClassName(styles.icon, endIconClassName)}>
             {endIcon}
           </Typography>
         )}

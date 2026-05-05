@@ -5,7 +5,7 @@ import type { FC } from 'react';
 import Link from 'next/link';
 
 import { LINK_TARGETS } from '@/shared/constants/common';
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 
 import styles from './styles.module.scss';
 
@@ -17,7 +17,7 @@ export const AppLink: FC<LinkProps> = ({
   className,
   ...props
 }) => {
-  const linkClasses = classNames(styles.link, isUnderline && styles.underline, className);
+  const linkClasses = buildClassName(styles.link, isUnderline && styles.underline, className);
 
   if (external) {
     return (

@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
 
-import { LOCALES, type Locale } from '@/shared/constants/locales';
+import { notFound } from 'next/navigation';
+
+import { LOCALES } from '@/shared/constants/locales';
+import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
 import { GlobalProviders } from '@/shared/providers/GlobalProviders';
 
 export function generateStaticParams() {
@@ -12,9 +15,13 @@ export default async function LocaleLayout({
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+
+  if (!isLocale(locale)) {
+    notFound();
+  }
 
   return <GlobalProviders locale={locale}>{children}</GlobalProviders>;
 }

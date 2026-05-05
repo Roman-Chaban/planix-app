@@ -1,0 +1,22 @@
+import type { PageWrapperProps } from '../model/types';
+
+import type { FC } from 'react';
+
+import { Sidebar } from '@/widgets/sidebar/ui/Sidebar';
+import { Box, Grid } from '@/shared/ui/index';
+
+import styles from '../styles/styles.module.scss';
+
+export const PageWrapper: FC<PageWrapperProps> = ({ children, header }) => {
+  return (
+    <Grid className={styles.grid}>
+      <Sidebar />
+
+      {header}
+
+      <Box as="main" className={styles.main}>
+        {children}
+      </Box>
+    </Grid>
+  );
+};

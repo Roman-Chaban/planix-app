@@ -1,0 +1,29 @@
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/shadows' as shadow;
+@use '@/shared/styles/tokens/mixins' as *;
+@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles/tokens/grid' as *;
+
+.grid {
+  @include grid(18.125rem 1fr, auto 1fr, 'header header' 'sidebar content', 0);
+
+  @include respond(laptop) {
+    grid: {
+      template-columns: 1fr;
+      template-areas: 'header' 'content';
+    }
+  }
+}
+
+.main {
+  grid-area: content;
+  padding-block-start: 1.938rem;
+  padding-inline: 1.875rem;
+  @include flex-col(1.875rem, start, stretch);
+
+  @include respond(tablet) {
+    padding-inline: 1rem;
+  }
+}

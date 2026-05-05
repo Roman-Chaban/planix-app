@@ -2,7 +2,7 @@ import { AuthLoginForm } from '@/features/auth/login/ui/AuthLoginForm';
 
 import { Box, BrandBanner, Grid, GridItem } from '@/shared/ui/index';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const AuthLayout = () => {
   return (

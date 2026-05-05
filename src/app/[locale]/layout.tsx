@@ -12,9 +12,9 @@ export default async function LocaleLayout({
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
 
-  return <GlobalProviders locale={locale as Locale}>{children}</GlobalProviders>;
+  return <GlobalProviders locale={locale}>{children}</GlobalProviders>;
 }

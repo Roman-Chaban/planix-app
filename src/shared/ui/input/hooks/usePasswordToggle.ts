@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 export const usePasswordToggle = () => {
-  const [visible, setVisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const toggle = () => setVisible((toggleable) => !toggleable);
+  const toggle = () => setIsVisible((toggleable) => !toggleable);
 
   return {
-    visible,
+    isVisible,
     toggle,
   };
 };

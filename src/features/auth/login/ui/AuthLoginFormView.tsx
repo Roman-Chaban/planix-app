@@ -29,8 +29,10 @@ const { PRIMARY: BUTTON_PRIMARY } = BUTTON_VARIANTS;
 
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({ register, control, onSubmit }) => {
   const { t } = useTranslation();
-  const isMobileLarge = useMediaQuery(MOBILE_LARGE);
-  const BUTTON_RESPONSIVE = isMobileLarge ? SMALL : MEDIUM;
+
+  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
+
+  const SUBMIT_BUTTON_SIZES = isMobileLargeScreen ? SMALL : MEDIUM;
 
   return (
     <Box className={styles.loginWrapper}>
@@ -38,7 +40,7 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({ register, contro
         <AuthHeader
           title={t('AuthLoginForm.header.title')}
           subtitle={t('AuthLoginForm.header.subtitle')}
-          decorationText={t('AuthLoginForm.header.decorationText')}
+          highlightedText={t('AuthLoginForm.header.decorationText')}
         />
 
         <form className={styles.loginForm} onSubmit={onSubmit}>
@@ -79,7 +81,7 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({ register, contro
               </AppLink>
             </Box>
 
-            <Button type={SUBMIT} variant={BUTTON_PRIMARY} size={BUTTON_RESPONSIVE}>
+            <Button type={SUBMIT} variant={BUTTON_PRIMARY} size={SUBMIT_BUTTON_SIZES}>
               {t('AuthLoginForm.form.submit.button')}
             </Button>
           </Box>

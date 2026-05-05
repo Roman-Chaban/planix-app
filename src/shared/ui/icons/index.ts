@@ -25,3 +25,4 @@ export { UnitedStatesIcon } from '@/shared/ui/icons/ui/Icons';
 export { UkraineIcon } from '@/shared/ui/icons/ui/Icons';
 export { NotFoundBanner } from '@/shared/ui/icons/ui/Icons';
 export { NotFoundTextDecartionIcon } from '@/shared/ui/icons/ui/Icons';
+export { NoProjectsIcon } from '@/shared/ui/icons/ui/Icons';

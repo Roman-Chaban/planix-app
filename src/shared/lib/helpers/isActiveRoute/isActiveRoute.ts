@@ -1,9 +1,12 @@
-import { ROUTES } from '@shared/constants/common';
+import { getCleanPathname } from '@/shared/lib/helpers/getCleanPathname/getCleanPathname';
 
-const { HOME } = ROUTES;
+const normalize = (path: string) => path.replace(/\/$/, '');
 
 export const isActiveRoute = (currentPath: string, href: string) => {
-  if (href === HOME) return currentPath === HOME;
+  const current = normalize(getCleanPathname(currentPath));
+  const target = normalize(href);
 
-  return currentPath === href || currentPath.startsWith(href + HOME);
+  if (target === '/') return current === '/';
+
+  return current === target || current.startsWith(target + '/');
 };

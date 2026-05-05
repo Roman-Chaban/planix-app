@@ -1,12 +1,15 @@
 import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
 
-export const normalizePathname = (pathname: string) => {
-  const clean = pathname.split('?')[0];
-  const segments = clean.split('/');
+export const normalizePathname = (pathname: string): string => {
+  const pathnameWithoutQuery = pathname.split('?')[0];
+  const pathnameSegments = pathnameWithoutQuery.split('/');
 
-  if (isLocale(segments[1])) {
-    return '/' + segments.slice(2).join('/');
+  const maybeLocaleSegment = pathnameSegments[1];
+
+  if (isLocale(maybeLocaleSegment)) {
+    const pathWithoutLocale = pathnameSegments.slice(2).join('/');
+    return '/' + pathWithoutLocale;
   }
 
-  return clean;
+  return pathnameWithoutQuery;
 };

@@ -13,18 +13,14 @@ import styles from './styles.module.scss';
 
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();
-  const isMobileLarge = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
+  const isMobileLargeScreen = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
 
-  const ICON_RESPONSIVE = isMobileLarge ? (
-    <PlanixLogoIcon width={60} height={60} />
-  ) : (
-    <PlanixLogoIcon />
-  );
+  const LOGO_SIZES_PROPS = isMobileLargeScreen ? { width: 60, height: 60 } : {};
 
   return (
     <Box className={styles.banner}>
       <Box className={styles.header}>
-        <Avatar alt={t('BrandBanner.logoAlt')} icon={ICON_RESPONSIVE} />
+        <Avatar alt={t('BrandBanner.logoAlt')} icon={<PlanixLogoIcon {...LOGO_SIZES_PROPS} />} />
 
         <Typography as="span" className={styles.title}>
           {t('BrandBanner.title')}

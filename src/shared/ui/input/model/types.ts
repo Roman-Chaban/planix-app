@@ -1,9 +1,7 @@
 import type { InputHTMLAttributes, ReactNode } from 'react';
 
 export type InputSize = 'sm' | 'md' | 'lg';
-
 export type InputVariant = 'primary' | 'typing' | 'filed' | 'error';
-
 export type InputTypes = 'email' | 'tel' | 'password' | 'radio' | 'search' | 'hidden' | 'checkbox';
 
 export type IsPasswordToggleable = boolean;

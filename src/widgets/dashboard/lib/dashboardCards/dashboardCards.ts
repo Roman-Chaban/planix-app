@@ -1,4 +1,4 @@
-import type { DashboardCards } from '@/widgets/dashboard/model/types';
+import type { DashboardCards } from '@/widgets/dashboard/ui/DashboardCards/model/types';
 
 export const dashboardCards: DashboardCards = [
   {

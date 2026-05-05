@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
 
-export function useMediaQuery(query: string): boolean {
+export const useMediaQuery = (query: string): boolean => {
   const getSnapshot = () => {
     if (typeof window === 'undefined') return false;
     return window.matchMedia(query).matches;
@@ -17,4 +17,4 @@ export function useMediaQuery(query: string): boolean {
   };
 
   return useSyncExternalStore(subscribe, getSnapshot, () => false);
-}
+};

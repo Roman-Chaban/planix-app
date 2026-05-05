@@ -1,13 +1,6 @@
-import type { ReactNode } from 'react';
-
-import type { DashboardCardProps } from '@/shared/ui/dashboardCard/model/types';
+import type { ReactNode } from "react";
 
 type WidgetVariant = 'primary' | 'secondary' | 'tertiary';
-
-export type DashboardHeaderProps = {
-  title: string;
-  icon: ReactNode;
-};
 
 export type DashboardAnalyticsHeaderProps = {
   title: string;
@@ -22,5 +15,3 @@ export type DashboardAnalyticsHeaderListItem = {
 };
 
 export type DashboardAnalyticsHeaderList = DashboardAnalyticsHeaderListItem[];
-export type DashboardCard = DashboardCardProps;
-export type DashboardCards = DashboardCard[];

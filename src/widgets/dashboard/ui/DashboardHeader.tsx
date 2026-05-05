@@ -17,6 +17,7 @@ const FALLBACK_PROFILE_AVATAR = 'RC';
 
 export const DashboardHeader: FC<DashboardHeaderProps> = ({ title, icon }) => {
   const { t } = useTranslation();
+
   return (
     <header className={styles.header}>
       <Box className={styles.wrapper}>

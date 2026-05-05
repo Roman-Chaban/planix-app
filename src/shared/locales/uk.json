@@ -43,8 +43,9 @@
     "analytics": "Аналітика",
     "settings": "Налаштування"
   },
-  "DashboardHeader": {
-    "title": "Панель керування"
+  "DashboardHeaders": {
+    "dashboard": "Панель керування",
+    "projects": "Управління проєктами"
   },
   "DashboardCard": {
     "totalProjects": "Усього проєктів",

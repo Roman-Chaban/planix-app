@@ -43,8 +43,9 @@
     "analytics": "Analytics",
     "settings": "Settings"
   },
-  "DashboardHeader": {
-    "title": "Dashboard"
+  "DashboardHeaders": {
+    "dashboard": "Dashboard",
+    "projects": "Project Management"
   },
   "DashboardCard": {
     "totalProjects": "Total Projects",

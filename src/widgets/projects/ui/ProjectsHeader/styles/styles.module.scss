@@ -1,0 +1,44 @@
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/shadows' as shadow;
+@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles/tokens/mixins' as *;
+
+.list {
+  @include flex-row(1rem, start, center);
+
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: shadow.$shadow-not-found;
+  background: color.$color-white;
+}
+
+.box {
+  @include flex-center;
+
+  padding: 0.406rem 1.563rem;
+  border-radius: 0.75rem;
+  border: 0.125rem solid transparent;
+}
+
+.label {
+  line-height: 150%;
+  color: color.$color-black-1200;
+
+  font: {
+    weight: size.$font-weight-regular;
+    size: size.$font-size-body-lg;
+  }
+}
+
+.active {
+  border-color: color.$color-primary-800;
+  box-shadow: shadow.$shadow-not-found;
+}
+
+.activeLabel {
+  font-weight: size.$font-weight-semibold;
+  color: color.$color-primary-800;
+}

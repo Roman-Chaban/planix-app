@@ -6,7 +6,7 @@ import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassNa
 
 import { Box, Typography } from '@/shared/ui/index';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const Button: FC<ButtonProps> = ({
   variant = 'primary',

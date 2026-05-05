@@ -8,7 +8,7 @@ import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassNa
 import type { DashboardCardProps } from '@/shared/ui/dashboardCard/model/types';
 import { Box, Typography } from '@/shared/ui/index';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const DashboardCard: FC<DashboardCardProps> = ({
   id,

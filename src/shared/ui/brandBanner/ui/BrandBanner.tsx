@@ -9,7 +9,7 @@ import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { PlanixLogoIcon } from '@/shared/ui/icons/ui/Icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();

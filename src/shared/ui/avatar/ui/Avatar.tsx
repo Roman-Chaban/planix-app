@@ -8,7 +8,7 @@ import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassNa
 
 import { Box } from '@/shared/ui/box/ui/Box';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const Avatar: FC<AvatarProps> = ({
   src,

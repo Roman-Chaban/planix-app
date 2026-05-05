@@ -7,13 +7,13 @@ import type { InputProps } from '@/shared/ui/input/model/types';
 import { InputRoot } from '@/shared/ui/input/ui/Input';
 
 export const InputPassword: FC<InputProps> = ({ ...inputProps }) => {
-  const { visible, toggle } = usePasswordToggle();
+  const { isVisible, toggle } = usePasswordToggle();
 
   return (
     <InputRoot
       {...inputProps}
-      type={visible ? INPUT_TYPES.TEXT : INPUT_TYPES.PASSWORD}
-      endIcon={visible ? <EyeOffIcon /> : <EyeIcon />}
+      type={isVisible ? INPUT_TYPES.TEXT : INPUT_TYPES.PASSWORD}
+      endIcon={isVisible ? <EyeOffIcon /> : <EyeIcon />}
       onEndIconClick={toggle}
     />
   );

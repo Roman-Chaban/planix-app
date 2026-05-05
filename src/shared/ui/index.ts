@@ -10,3 +10,5 @@ export { Typography } from '@/shared/ui/typography/ui/Typography';
 export { List } from '@/shared/ui/list/ui/List';
 export { LanguageSelect } from '@/shared/ui/languageSelect/ui/LanguageSelect';
 export { NotFoundLayout } from '@/shared/ui/notFound/ui/NotFound';
+export { Header } from '@shared/ui/header/ui/Header';
+export { PageWrapper } from '@shared/ui/pageWrapper/ui/PageWrapper';

@@ -8,7 +8,7 @@ import { Typography } from '@/shared/ui/typography/ui/Typography';
 
 import { INPUT_TYPES } from '@shared/constants/inputs';
 
-import styles from './styles.module.scss';
+import styles from '../styles/styles.module.scss';
 
 export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
   const checkboxId = useId();

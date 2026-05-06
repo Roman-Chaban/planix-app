@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Typography forwards all important props correctly 1`] = `
+<div>
+  <p
+    aria-label="Styled typography"
+    class="text-2xl font-bold text-blue-600"
+    data-testid="typography-element"
+    id="test-id"
+    title="This is a tooltip"
+  >
+    Content with many props
+  </p>
+</div>
+`;
+
+exports[`Typography renders correctly as h1 tag 1`] = `
+<div>
+  <h1>
+    Main heading
+  </h1>
+</div>
+`;
+
+exports[`Typography renders correctly as h2 tag 1`] = `
+<div>
+  <h2>
+    Section heading
+  </h2>
+</div>
+`;
+
+exports[`Typography renders correctly as p tag 1`] = `
+<div>
+  <p>
+    Paragraph text
+  </p>
+</div>
+`;
+
+exports[`Typography renders correctly as span tag 1`] = `
+<div>
+  <span>
+    Inline text
+  </span>
+</div>
+`;
+
+exports[`Typography renders with default span 1`] = `
+<div>
+  <span>
+    Default text
+  </span>
+</div>
+`;

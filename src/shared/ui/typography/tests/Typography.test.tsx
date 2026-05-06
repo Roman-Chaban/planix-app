@@ -1,11 +1,15 @@
+import type { ReactElement } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { Typography } from '@/shared/ui/typography/ui/Typography';
 
+const setup = (component: ReactElement) => render(component);
+
 describe('Typography', () => {
   it('renders with default span', () => {
-    const { container } = render(<Typography>Default text</Typography>);
+    const { container } = setup(<Typography>Default text</Typography>);
+
     expect(container).toMatchSnapshot();
   });
 
@@ -15,12 +19,13 @@ describe('Typography', () => {
     { as: 'p' as const, text: 'Paragraph text' },
     { as: 'span' as const, text: 'Inline text' },
   ])('renders correctly as $as tag', ({ as, text }) => {
-    const { container } = render(<Typography as={as}>{text}</Typography>);
+    const { container } = setup(<Typography as={as}>{text}</Typography>);
+
     expect(container).toMatchSnapshot();
   });
 
   it('forwards all important props correctly', () => {
-    const { container } = render(
+    const { container } = setup(
       <Typography
         as="p"
         id="test-id"
@@ -40,7 +45,7 @@ describe('Typography', () => {
     const user = userEvent.setup();
     const handleClick = jest.fn();
 
-    render(
+    setup(
       <Typography as="span" onClick={handleClick}>
         Clickable Typography
       </Typography>,

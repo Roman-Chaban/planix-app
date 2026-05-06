@@ -14,7 +14,8 @@
     "check": "pnpm run lint && pnpm run type-check && pnpm run format:check",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "test:update": "jest -u"
   },
   "dependencies": {
     "i18next": "^26.0.8",

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Avatar F behavior renders fallback correctly 1`] = `
+<div
+  class="avatar md circle"
+>
+  <div
+    class="fallback"
+  >
+    AB
+  </div>
+</div>
+`;
+
+exports[`Avatar Fallback behavior renders fallback correctly 1`] = `
+<div
+  class="avatar md circle"
+>
+  <div
+    class="fallback"
+  >
+    AB
+  </div>
+</div>
+`;
+
+exports[`Avatar fallback behavior renders fallback correctly 1`] = `
+<div
+  class="avatar md circle"
+>
+  <div
+    class="fallback"
+  >
+    AB
+  </div>
+</div>
+`;
+
+exports[`Avatar rendering matches snapshot (default) 1`] = `
+<div
+  class="avatar md circle"
+>
+  <div
+    class="fallback"
+  >
+    Fallback
+  </div>
+</div>
+`;
+
+exports[`Avatar rendering matches snapshot default 1`] = `
+<div
+  class="avatar md circle"
+>
+  <div
+    class="fallback"
+  >
+    Fallback
+  </div>
+</div>
+`;

@@ -1,16 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 
+import { createSetup } from '@/shared/tests/mocks/mocks';
 import { Box } from '@/shared/ui';
 
-const setup = (props: React.ComponentProps<typeof Box>) => {
-  const user = userEvent.setup();
-
-  return {
-    user,
-    ...render(<Box {...props} />),
-  };
-};
+const setup = createSetup(Box);
 
 describe('Box', () => {
   it('renders children', () => {

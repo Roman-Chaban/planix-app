@@ -1,19 +1,16 @@
-import type { FC } from 'react';
+import type { TypographyProps, TypographyTag } from '@/shared/ui/typography/model/types';
 
-import type { TypographyProps } from '@/shared/ui/typography/model/types';
-
-export const Typography: FC<TypographyProps> = ({
-  as = 'span',
+export const Typography = <T extends TypographyTag = 'span'>({
+  as,
   children,
-  id,
   className,
-  onClick,
-  ...typographyPops
-}) => {
-  const Component = as;
+  testId,
+  ...props
+}: TypographyProps<T>) => {
+  const Component = as || 'span';
 
   return (
-    <Component id={id} className={className} onClick={onClick} {...typographyPops}>
+    <Component className={className} data-testid={testId} {...props}>
       {children}
     </Component>
   );

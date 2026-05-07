@@ -1,16 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 
+import { createSetup } from '@/shared/tests/mocks/mocks';
 import { Checkbox } from '@/shared/ui/index';
 
-const setup = (props: React.ComponentProps<typeof Checkbox>) => {
-  const user = userEvent.setup();
-
-  return {
-    user,
-    ...render(<Checkbox {...props} />),
-  };
-};
+const setup = createSetup(Checkbox);
 
 describe('Checkbox', () => {
   it('renders checkbox', () => {

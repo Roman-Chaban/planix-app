@@ -1,23 +1,14 @@
-import type { ReactElement } from 'react';
+import { screen } from '@testing-library/react';
 
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-
+import { createSetup } from '@/shared/tests/mocks/mocks';
 import { Typography } from '@/shared/ui/typography/ui/Typography';
 
-const setup = (component: ReactElement) => {
-  const user = userEvent.setup();
-
-  return {
-    user,
-    ...render(component),
-  };
-};
+const setup = createSetup(Typography);
 
 describe('Typography', () => {
   describe('rendering', () => {
     it('renders with default span', () => {
-      setup(<Typography>Default text</Typography>);
+      setup({ children: 'Default text' });
 
       const element = screen.getByText('Default text');
 
@@ -30,7 +21,7 @@ describe('Typography', () => {
       { as: 'p' as const, text: 'Paragraph text' },
       { as: 'span' as const, text: 'Inline text' },
     ])('renders correctly as $as tag', ({ as, text }) => {
-      setup(<Typography as={as}>{text}</Typography>);
+      setup({ as, children: text });
 
       const element = screen.getByText(text);
 
@@ -38,27 +29,21 @@ describe('Typography', () => {
     });
 
     it('forwards props correctly', () => {
-      setup(
-        <Typography
-          as="p"
-          id="test-id"
-          className="custom-class"
-          title="Tooltip"
-          data-testid="typography-element"
-          aria-label="Styled typography"
-        >
-          Content
-        </Typography>,
-      );
+      setup({
+        as: 'p',
+        id: 'test-id',
+        className: 'custom-class',
+        title: 'Tooltip',
+        'data-testid': 'typography-element',
+        'aria-label': 'Styled typography',
+        children: 'Content',
+      });
 
       const element = screen.getByTestId('typography-element');
 
       expect(element).toHaveAttribute('id', 'test-id');
-
       expect(element).toHaveAttribute('title', 'Tooltip');
-
       expect(element).toHaveClass('custom-class');
-
       expect(element.tagName).toBe('P');
     });
   });
@@ -67,13 +52,15 @@ describe('Typography', () => {
     it('calls onClick when clicked', async () => {
       const handleClick = jest.fn();
 
-      const { user } = setup(
-        <Typography as="span" onClick={handleClick}>
-          Clickable Typography
-        </Typography>,
-      );
+      const { user } = setup({
+        as: 'span',
+        onClick: handleClick,
+        children: 'Clickable Typography',
+      });
 
-      await user.click(screen.getByText('Clickable Typography'));
+      const element = screen.getByText('Clickable Typography');
+
+      await user.click(element);
 
       expect(handleClick).toHaveBeenCalledTimes(1);
     });

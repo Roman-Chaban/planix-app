@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { BrandBanner } from '@/shared/ui/index';
 
 jest.mock('react-i18next', () => ({
@@ -8,23 +9,21 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-jest.mock('@/shared/hooks/useMediaQuery', () => ({
-  useMediaQuery: jest.fn(),
-}));
+jest.mock('@/shared/hooks/useMediaQuery');
 
-jest.mock('@/shared/ui/icons/ui/Icons', () => ({
-  PlanixLogoIcon: (props: React.SVGProps<SVGSVGElement>) => (
-    <svg data-testid="logo-icon" {...props} />
-  ),
-}));
-
-const mockedUseMediaQuery = jest.requireMock('@/shared/hooks/useMediaQuery').useMediaQuery;
+const mockedUseMediaQuery = useMediaQuery as jest.Mock;
 
 const setup = (isMobile: boolean) => {
   mockedUseMediaQuery.mockReturnValue(isMobile);
 
   return render(<BrandBanner />);
 };
+
+jest.mock('@/shared/ui/icons/ui/Icons', () => ({
+  PlanixLogoIcon: (props: React.SVGProps<SVGSVGElement>) => (
+    <svg data-testid="logo-icon" {...props} />
+  ),
+}));
 
 describe('BrandBanner', () => {
   beforeEach(() => {

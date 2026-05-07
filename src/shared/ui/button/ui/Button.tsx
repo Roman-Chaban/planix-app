@@ -20,6 +20,7 @@ export const Button: FC<ButtonProps> = ({
   disabled,
   children,
   type,
+  ...buttonProps
 }) => {
   const buttonClasses = buildClassName(
     styles.button,
@@ -30,7 +31,7 @@ export const Button: FC<ButtonProps> = ({
   );
 
   return (
-    <button className={buttonClasses} disabled={disabled} type={type}>
+    <button className={buttonClasses} disabled={disabled} type={type} {...buttonProps}>
       {startIcon && (
         <Typography as="span" className={buildClassName(styles.icon, startIconClassName)}>
           {startIcon}

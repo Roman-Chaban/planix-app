@@ -1,16 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 
+import { createSetup } from '@/shared/tests/mocks/mocks';
 import { Button } from '@/shared/ui/index';
 
-const setup = (props: React.ComponentProps<typeof Button>) => {
-  const user = userEvent.setup();
-
-  return {
-    user,
-    ...render(<Button {...props} />),
-  };
-};
+const setup = createSetup(Button);
 
 describe('Button', () => {
   it('renders children', () => {

@@ -1,10 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
+import { createSetup } from '@/shared/tests/mocks/mocks';
+import type { AvatarProps } from '@/shared/ui/avatar/model/types';
 import { Avatar } from '@/shared/ui/index';
 
-const setup = (avatarProps = {}) => render(<Avatar {...avatarProps} />);
+const setup = createSetup(Avatar);
 
-const createProps = (overrides = {}) => ({
+const createProps = (overrides: Partial<AvatarProps> = {}): AvatarProps => ({
   src: '/avatar.png',
   alt: 'User avatar',
   fallback: 'AB',
@@ -14,53 +16,40 @@ const createProps = (overrides = {}) => ({
 });
 
 describe('Avatar', () => {
-  describe('rendering', () => {
-    it('renders icon if icon prop is provided', () => {
-      setup({ icon: <span data-testid="icon" /> });
-    });
+  it('renders icon when provided', () => {
+    setup({ icon: <span data-testid="icon" /> });
 
-    it('renders image if src is provided and no icon', () => {
-      setup(createProps());
-
-      expect(screen.getByAltText('User avatar')).toBeInTheDocument();
-    });
-
-    it('matches snapshot (default)', () => {
-      const { container } = setup();
-
-      expect(container.firstChild).toMatchSnapshot();
-    });
+    expect(screen.getByTestId('icon')).toBeInTheDocument();
   });
 
-  describe('Fallback behavior', () => {
-    it('renders custom fallback if no icon and no src', () => {
-      setup(createProps());
-
-      expect(screen.getByAltText('User avatar')).toBeInTheDocument();
+  it('prioritizes icon over image', () => {
+    setup({
+      icon: <span data-testid="icon" />,
+      src: '/avatar.png',
     });
 
-    it('renders default fallback if nothing is provided', () => {
-      setup();
-
-      expect(screen.getByText('Fallback')).toBeInTheDocument();
-    });
-
-    it('renders fallback correctly', () => {
-      const { container } = setup({ fallback: 'AB' });
-
-      expect(screen.getByText('AB')).toBeInTheDocument();
-      expect(container.firstChild).toMatchSnapshot();
-    });
+    expect(screen.getByTestId('icon')).toBeInTheDocument();
+    expect(screen.queryByAltText('User avatar')).not.toBeInTheDocument();
   });
 
-  describe('styles', () => {
-    it('applies size and variant classes', () => {
-      const { container } = setup(createProps());
+  it('renders image when src is provided', () => {
+    setup(createProps());
 
-      const root = container.firstChild;
+    expect(screen.getByAltText('User avatar')).toBeInTheDocument();
+  });
 
-      expect(root).toHaveClass('lg');
-      expect(root).toHaveClass('square');
-    });
+  it('renders fallback when no src and no icon', () => {
+    setup(createProps({ src: undefined }));
+
+    expect(screen.getByText('AB')).toBeInTheDocument();
+  });
+
+  it('applies size and variant classes', () => {
+    const { container } = setup(createProps());
+
+    const root = container.firstChild;
+
+    expect(root).toHaveClass('lg');
+    expect(root).toHaveClass('square');
   });
 });

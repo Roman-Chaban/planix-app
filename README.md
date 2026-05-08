@@ -1,4 +1,4 @@
-# 🚀 Planix — Modern CRM Dashboard
+# 🚀 Planix: Modern CRM Dashboard
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![React](https://img.shields.io/badge/React-19-blue)
@@ -51,6 +51,11 @@ Unlike typical UI templates, Planix is built as a **real application architectur
 ### Forms
 
 - React Hook Form
+
+### Testing
+
+- Jest
+- React Testing Library
 
 ### Internationalization
 
@@ -106,13 +111,11 @@ pnpm start
 ## 📁 Project Structure
 
 ```
-/app            # Next.js App Router
-/components     # Reusable UI
-/features       # Business logic modules
-/hooks          # Custom hooks
-/lib            # Utilities
-/public         # Static assets
-/styles         # Global styles
+/app            # Next.js App Router (routing layer)
+/widgets        # Composite UI blocks (page sections)
+/features       # Application features (user actions)
+/entities       # Business entities (domain models)
+/shared         # Reusable UI, utils, and infrastructure
 ```
 
 ---

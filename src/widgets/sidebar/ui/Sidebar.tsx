@@ -11,7 +11,7 @@ import styles from '../styles/styles.module.scss';
 export const Sidebar: FC = () => {
   return (
     <Box as="aside" className={styles.sidebar}>
-      <Box className={styles.content}>
+      <Box as="nav" className={styles.content}>
         <SidebarNav />
       </Box>
     </Box>

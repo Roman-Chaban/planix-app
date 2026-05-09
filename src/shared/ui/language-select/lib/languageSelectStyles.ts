@@ -1,4 +1,4 @@
-import type { LanguageSelectStyles } from '@/shared/ui/languageSelect/model/types';
+import type { LanguageSelectStyles } from '@/shared/ui/language-select/model/types';
 
 export const createSelectStyles = (isTablet: boolean): LanguageSelectStyles => ({
   container: (base) => ({

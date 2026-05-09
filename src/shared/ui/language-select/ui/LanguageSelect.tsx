@@ -6,12 +6,12 @@ import Select from 'react-select';
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { INSTANCE_ID } from '@/shared/constants/common';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
-import { useLanguageSelect } from '@/shared/ui/languageSelect/hooks/useLanguageSelect';
-import { createSelectStyles } from '@/shared/ui/languageSelect/lib/languageSelectStyles';
-import type { LanguageOption } from '@/shared/ui/languageSelect/model/types';
+import { useLanguageSelect } from '@/shared/ui/language-select/hooks/useLanguageSelect';
+import { createSelectStyles } from '@/shared/ui/language-select/lib/languageSelectStyles';
+import type { LanguageOption } from '@/shared/ui/language-select/model/types';
 
-import { Option } from '@/shared/ui/languageSelect/ui/Option';
-import { SingleValue } from '@/shared/ui/languageSelect/ui/SingleValue';
+import { Option } from '@/shared/ui/language-select/ui/Option';
+import { SingleValue } from '@/shared/ui/language-select/ui/SingleValue';
 
 const { TABLET } = BREAKPOINTS;
 

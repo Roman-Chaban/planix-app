@@ -1,5 +1,5 @@
 import { UkraineIcon, UnitedStatesIcon } from '@/shared/ui/icons/index';
-import type { LanguageOption } from '@/shared/ui/languageSelect/model/types';
+import type { LanguageOption } from '@/shared/ui/language-select/model/types';
 
 export const languageOptions = [
   { value: 'en', label: 'English', icon: UnitedStatesIcon },

@@ -2,7 +2,7 @@ import { type OptionProps, components } from 'react-select';
 
 import { OPTION_STYLES, OPTION_ICON_SHRINK } from '@/shared/constants/styles';
 import { Box, Typography } from '@/shared/ui/index';
-import type { LanguageOption } from '@/shared/ui/languageSelect/model/types';
+import type { LanguageOption } from '@/shared/ui/language-select/model/types';
 
 export const Option = (props: OptionProps<LanguageOption>) => {
   const Icon = props.data.icon;

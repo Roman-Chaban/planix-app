@@ -1,7 +1,7 @@
 import { dashboardCards } from '@/widgets/dashboard/lib/dashboard-cards/dashboardCards';
 import { Box, List } from '@/shared/ui';
 
-import { Card } from '@/shared/ui/dashboardCard/ui/Card';
+import { Card } from '@/shared/ui/card/ui/Card';
 
 import styles from '../styles/styles.module.scss';
 

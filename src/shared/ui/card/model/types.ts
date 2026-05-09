@@ -1,6 +1,6 @@
 export type TrendType = 'success' | 'error' | 'neutral';
 
-export type DashboardCardProps = {
+export type CardProps = {
   id: string;
   label: string;
   value: string;

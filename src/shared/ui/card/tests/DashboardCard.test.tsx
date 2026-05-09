@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 
 import { createSetup } from '@/shared/tests/mocks/mocks';
-import { DashboardCard } from '@/shared/ui/index';
+import { Card } from '@/shared/ui/index';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -9,7 +9,7 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-const setup = createSetup(DashboardCard);
+const setup = createSetup(Card);
 
 describe('DashboardCard', () => {
   it('renders label', () => {

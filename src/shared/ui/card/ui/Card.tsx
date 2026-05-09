@@ -5,19 +5,11 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
-import type { DashboardCardProps } from '@/shared/ui/dashboardCard/model/types';
+import type { CardProps } from '@/shared/ui/card/model/types';
+import styles from '@/shared/ui/dashboardCard/styles/styles.module.scss';
 import { Box, Typography } from '@/shared/ui/index';
 
-import styles from '../styles/styles.module.scss';
-
-export const DashboardCard: FC<DashboardCardProps> = ({
-  id,
-  label,
-  name,
-  value,
-  trend,
-  trendType,
-}) => {
+export const Card: FC<CardProps> = ({ id, label, name, value, trend, trendType }) => {
   const { t } = useTranslation();
 
   return (

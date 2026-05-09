@@ -1,7 +1,7 @@
-import { dashboardCards } from '@/widgets/dashboard/lib/dashboardCards/dashboardCards';
+import { dashboardCards } from '@/widgets/dashboard/lib/dashboard-cards/dashboardCards';
 import { Box, List } from '@/shared/ui';
 
-import { DashboardCard } from '@/shared/ui/dashboardCard/ui/DashboardCard';
+import { Card } from '@/shared/ui/dashboardCard/ui/Card';
 
 import styles from '../styles/styles.module.scss';
 
@@ -15,7 +15,7 @@ export const DashboardCards = () => {
         renderList={dashboardCards}
         renderItem={(card) => {
           return (
-            <DashboardCard
+            <Card
               key={card.id}
               id={card.id}
               label={card.label}

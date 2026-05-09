@@ -1,13 +1,15 @@
 import type { ReactNode } from 'react';
 
-export type AuthHeaderProps = {
+type BaseAuthProps = {
   title: string;
+};
+
+export type AuthHeaderProps = BaseAuthProps & {
   highlightedText?: string;
   subtitle?: string;
   icon?: ReactNode;
 };
 
-export type AuthFooterProps = {
-  title: string;
+export type AuthFooterProps = BaseAuthProps & {
   link: string;
 };

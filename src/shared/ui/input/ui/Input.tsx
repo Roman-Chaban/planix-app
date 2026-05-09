@@ -1,70 +1,26 @@
-import { forwardRef, useId } from 'react';
+import { forwardRef, type InputHTMLAttributes } from 'react';
 
+import { useFormContext } from '@/shared/context/form-context';
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
-import { Box, Typography } from '@/shared/ui/index';
-import type { InputProps } from '@/shared/ui/input/model/types';
 
 import styles from '../styles/styles.module.scss';
 
-export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      variant = 'primary',
-      type,
-      label,
-      error,
-      errorMessage,
-      className,
-      startIcon,
-      endIcon,
-      onEndIconClick,
-      isDivider,
-      ...inputProps
-    },
-    ref,
-  ) => {
-    const id = useId();
-    const hasError = Boolean(error);
+type FormInputProps = InputHTMLAttributes<HTMLInputElement>;
 
-    const rootClassname = buildClassName(
-      styles.inputWrapper,
-      styles[variant],
-      { [styles.error]: hasError },
-      className,
-    );
+export const Input = forwardRef<HTMLInputElement, FormInputProps>(
+  ({ className, ...inputProps }, ref) => {
+    const { id, disabled } = useFormContext();
 
     return (
-      <Box className={styles.wrapper}>
-        {label && (
-          <label htmlFor={id} className={styles.label}>
-            {label}
-          </label>
-        )}
-
-        <Box className={rootClassname}>
-          {startIcon && (
-            <Typography as="span" className={styles.slotStart}>
-              {startIcon}
-            </Typography>
-          )}
-
-          {isDivider && <Typography as="span" className={styles.divider} />}
-
-          <input id={id} ref={ref} className={styles.input} type={type} {...inputProps} />
-
-          {endIcon && (
-            <Typography as="span" className={styles.slotEnd} onClick={onEndIconClick}>
-              {endIcon}
-            </Typography>
-          )}
-
-          {error && errorMessage && (
-            <Typography className={styles.errorText}>{errorMessage}</Typography>
-          )}
-        </Box>
-      </Box>
+      <input
+        id={id}
+        ref={ref}
+        disabled={disabled}
+        className={buildClassName(styles.input, className)}
+        {...inputProps}
+      />
     );
   },
 );
 
-InputRoot.displayName = 'InputRoot';
+Input.displayName = 'Input';

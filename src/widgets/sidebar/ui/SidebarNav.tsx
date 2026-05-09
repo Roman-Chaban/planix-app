@@ -3,12 +3,11 @@
 import type { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
-import { sidebarNavItems } from '@/widgets/sidebar/lib/sidebarNaItems/sidebarNavItems';
+import { sidebarNavItems } from '@/widgets/sidebar/lib/sidebar-nav-items/sidebarNavItems';
+import styles from '@/widgets/sidebar/styles/sidebar.module.scss';
 import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/helpers/isActiveRoute/isActiveRoute';
 import { List } from '@/shared/ui';
-
-import styles from '../styles/styles.module.scss';
 
 export const SidebarNav: FC = () => {
   const pathname = usePathname();

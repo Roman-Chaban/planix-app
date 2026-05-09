@@ -2,11 +2,10 @@
 
 import type { FC } from 'react';
 
+import styles from '@/widgets/sidebar/styles/sidebar.module.scss';
 import { SidebarNav } from '@/widgets/sidebar/ui/SidebarNav';
 
 import { Box } from '@/shared/ui';
-
-import styles from '../styles/styles.module.scss';
 
 export const Sidebar: FC = () => {
   return (

@@ -1,8 +1,7 @@
 import styles from '@/widgets/auth/styles/auth.module.scss';
-import { AuthLoginForm } from '@/features/auth/login/ui/AuthLoginForm';
+import { AuthLoginForm } from '@/features/auth/ui/AuthLoginForm';
 
 import { Box, BrandBanner, Grid, GridItem } from '@/shared/ui/index';
-
 
 export const AuthLayout = () => {
   return (

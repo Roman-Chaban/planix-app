@@ -1,4 +1,4 @@
-import { DashboardAnalyticsHeaders } from '@/widgets/dashboard/ui/DashboardAnalytics/ui/DashboardAnalyticsHeaders';
+import { DashboardAnalyticsHeaders } from '@/widgets/dashboard/ui/dashboard-analytics/ui/DashboardAnalyticsHeaders';
 
 import { Box } from '@/shared/ui';
 

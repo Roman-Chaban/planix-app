@@ -18,4 +18,9 @@ export const LINK_TARGETS = {
   FRAMENAME: 'framename',
 } as const;
 
+export const ICON_POSITION = {
+  START: 'start',
+  END: 'end',
+} as const;
+
 export const INSTANCE_ID = 'language-switcher' as const;

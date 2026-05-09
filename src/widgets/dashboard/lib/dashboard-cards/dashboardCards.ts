@@ -1,6 +1,6 @@
-import type { DashboardCards } from '@/widgets/dashboard/ui/dashboard-cards/model/types';
+import type { Cards } from '@/widgets/dashboard/ui/dashboard-cards/model/types';
 
-export const dashboardCards: DashboardCards = [
+export const dashboardCards: Cards = [
   {
     id: '1',
     label: 'DashboardCard.totalProjects',

@@ -2,6 +2,7 @@ import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import type { FormControl } from '@/features/auth/login/model/types';
+import styles from '@/features/auth/login/styles/auth.module.scss';
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
@@ -9,8 +10,6 @@ import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
 
 const { SUBMIT } = BUTTON_TYPES;
 const { PRIMARY: BUTTON_PRIMARY } = BUTTON_VARIANTS;
-
-import styles from '../styles/styles.module.scss';
 
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;

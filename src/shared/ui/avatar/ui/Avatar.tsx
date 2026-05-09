@@ -18,12 +18,13 @@ export const Avatar: FC<AvatarProps> = ({
   variant = 'circle',
   fallback,
   className,
+  ...avatarProps
 }) => {
   return (
     <Box className={buildClassName(styles.avatar, styles[size], styles[variant], className)}>
       {icon && <Box className={styles.icon}>{icon}</Box>}
 
-      {!icon && src && <Image src={src} alt={alt} fill className={styles.image} />}
+      {!icon && src && <Image {...avatarProps} src={src} alt={alt} fill className={styles.image} />}
 
       {!icon && !src && <Box className={styles.fallback}>{fallback ?? 'Fallback'}</Box>}
     </Box>

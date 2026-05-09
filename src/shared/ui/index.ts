@@ -3,6 +3,7 @@ export { Box } from '@/shared/ui/box/ui/Box';
 export { BrandBanner } from '@/shared/ui/brandBanner/ui/BrandBanner';
 export { Button } from '@/shared/ui/button/ui/Button';
 export { Checkbox } from '@/shared/ui/checkbox/ui/Checkbox';
+export { DashboardCard } from '@/shared/ui/dashboardCard/ui/DashboardCard';
 export { Grid } from '@/shared/ui/grid/ui/Grid';
 export { GridItem } from '@/shared/ui/grid/ui/GridItem';
 export { AppLink } from '@/shared/ui/link/ui/AppLink';

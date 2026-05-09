@@ -4,3 +4,8 @@
 @use '@/shared/styles/tokens/shadows' as shadow;
 @use '@/shared/styles/tokens/flex' as *;
 @use '@/shared/styles/tokens/mixins' as *;
+
+.headerTollbar {
+  width: 100%;
+  @include flex(flex, row, space-between, center, 0);
+}

@@ -1,10 +1,21 @@
+'use client';
+
 import { ProjectsHeader } from '@/widgets/projects/ui/ProjectsHeader/ui/ProjectsHeader';
-import { Header, PageWrapper } from '@/shared/ui';
+import { ProjectToolbar } from '@/widgets/projects/ui/ProjectsToolbar/ui/ProjectsToolbar';
+import { useProjectsFilters } from '@/features/projects/hooks/useProjectsFilters';
+import { Box, Header, PageWrapper } from '@/shared/ui';
+
+import styles from '../styles/styles.module.scss';
 
 export const ProjectsLayout = () => {
+  const { control } = useProjectsFilters();
+
   return (
     <PageWrapper header={<Header title={'DashboardHeaders.projects'} />}>
-      <ProjectsHeader />
+      <Box className={styles.headerTollbar}>
+        <ProjectsHeader />
+        <ProjectToolbar control={control} />
+      </Box>
     </PageWrapper>
   );
 };

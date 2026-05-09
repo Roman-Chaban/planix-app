@@ -1,0 +1,51 @@
+import { Controller } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+
+import type { FormControl } from '@/features/auth/login/model/types';
+import { BREAKPOINTS } from '@/shared/constants/breakpoints';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
+import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
+import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
+
+const { SUBMIT } = BUTTON_TYPES;
+const { PRIMARY: BUTTON_PRIMARY } = BUTTON_VARIANTS;
+
+import styles from '../styles/styles.module.scss';
+
+const { MOBILE_LARGE } = BREAKPOINTS;
+const { SMALL, MEDIUM } = BUTTON_SIZES;
+
+export const AuthLoginMain = ({ control }: { control: FormControl }) => {
+  const { t } = useTranslation();
+
+  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
+
+  const SUBMIT_BUTTON_SIZES = isMobileLargeScreen ? SMALL : MEDIUM;
+
+  return (
+    <Box className={styles.loginFormMainWrapper}>
+      <Box className={styles.loginFormMain}>
+        <Controller
+          name="checked"
+          control={control}
+          render={({ field }) => (
+            <Checkbox
+              checked={field.value}
+              onChange={field.onChange}
+              label={t('AuthLoginForm.form.checkbox.rememberMe')}
+            />
+          )}
+        />
+
+        {/* Mock: [Added the correct link when it will need] */}
+        <AppLink href="/#" className={styles.loginFormLink}>
+          {t('AuthLoginForm.form.links.forgotPassword')}
+        </AppLink>
+      </Box>
+
+      <Button type={SUBMIT} variant={BUTTON_PRIMARY} size={SUBMIT_BUTTON_SIZES}>
+        {t('AuthLoginForm.form.submit.button')}
+      </Button>
+    </Box>
+  );
+};

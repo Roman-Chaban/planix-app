@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 
-import type { AuthFormValues } from '@/features/auth/login/model/types/types';
+import type { AuthFormValues } from '@/features/auth/login/model/types';
 
 /* Mock: [Mocked hook, waiting for the future implementation] */
 export const useAuthLogin = () => {
@@ -21,5 +21,6 @@ export const useAuthLogin = () => {
   return {
     ...form,
     onSubmit,
+    errors: form.formState.errors,
   };
 };

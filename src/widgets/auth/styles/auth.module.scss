@@ -33,8 +33,6 @@
   }
 }
 
-/* Auth Header */
-
 .header {
   width: 100%;
   @include flex-col(0.375rem);
@@ -53,8 +51,6 @@
 .highlight {
   color: color.$color-decoration-text;
 }
-
-/* Auth Footer */
 
 .footer {
   @include flex-row(0.313rem, center, center);

@@ -2,9 +2,8 @@ import type { FC } from 'react';
 
 import type { AuthFooterProps } from '@/widgets/auth/model/types';
 
+import styles from '@/widgets/auth/styles/auth.module.scss';
 import { Box, AppLink, Typography } from '@/shared/ui/index';
-
-import styles from '../styles/styles.module.scss';
 
 export const AuthFooter: FC<AuthFooterProps> = ({ title, link }) => {
   return (

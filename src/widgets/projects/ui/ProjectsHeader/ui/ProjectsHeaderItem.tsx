@@ -2,13 +2,12 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { HeaderItem } from '@/widgets/projects/ui/ProjectsHeader/model/types';
+import styles from '@/widgets/projects/ui/ProjectsHeader/styles/projects-header.module.scss';
 import { BUTTON_TYPES } from '@/shared/constants/buttons';
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import { Box, Button, Typography } from '@/shared/ui';
 
 const { BUTTON } = BUTTON_TYPES;
-
-import styles from '../styles/styles.module.scss';
 
 export const ProjectsHeaderItem: FC<HeaderItem> = ({ label, isActive, onClick }) => {
   const { t } = useTranslation();

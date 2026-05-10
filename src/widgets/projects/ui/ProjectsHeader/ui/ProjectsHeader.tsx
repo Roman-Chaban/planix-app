@@ -3,10 +3,9 @@
 import { useState } from 'react';
 
 import { headerItems } from '@/widgets/projects/lib/headerItems/headerItems';
+import styles from '@/widgets/projects/ui/ProjectsHeader/styles/projects-header.module.scss';
 import { ProjectsHeaderItem } from '@/widgets/projects/ui/ProjectsHeader/ui/ProjectsHeaderItem';
 import { Box, List } from '@/shared/ui';
-
-import styles from '../styles/styles.module.scss';
 
 export const ProjectsHeader = () => {
   const [activeId, setActiveId] = useState<string>(headerItems[0].id);

@@ -67,7 +67,7 @@
     "404": "404",
     "pageNotFound": "Page Not Found"
   },
-  "PROJECTS_HEADER": {
+  "ProjectsHeader": {
     "allProjects": "All Project",
     "inProgress": "In Progress",
     "pending": "Pending",

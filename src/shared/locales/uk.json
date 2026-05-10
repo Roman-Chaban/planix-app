@@ -67,7 +67,7 @@
     "404": "404",
     "pageNotFound": "Сторінку не знайдено"
   },
-  "PROJECTS_HEADER": {
+  "ProjectsHeader": {
     "allProjects": "Усі проєкти",
     "inProgress": "У процесі",
     "pending": "Очікує",

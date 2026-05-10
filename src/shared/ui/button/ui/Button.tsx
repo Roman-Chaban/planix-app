@@ -4,9 +4,9 @@ import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 
+import styles from '@/shared/ui/button/styles/button.module.scss';
 import { Box, Typography } from '@/shared/ui/index';
 
-import styles from '../styles/styles.module.scss';
 
 export const Button: FC<ButtonProps> = ({
   variant = '',

@@ -3,7 +3,7 @@ import { forwardRef, type InputHTMLAttributes } from 'react';
 import { useFormContext } from '@/shared/context/form-context';
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 
-import styles from '../styles/styles.module.scss';
+import styles from '@/shared/ui/input/styles/input.module.scss';
 
 type FormInputProps = InputHTMLAttributes<HTMLInputElement>;
 

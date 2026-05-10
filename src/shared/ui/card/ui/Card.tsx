@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import type { CardProps } from '@/shared/ui/card/model/types';
-import styles from '@/shared/ui/card/styles/styles.module.scss';
+import styles from '@/shared/ui/card/styles/card.module.scss';
 import { Box, Typography } from '@/shared/ui/index';
 
 export const Card: FC<CardProps> = ({ id, label, name, value, trend, trendType }) => {

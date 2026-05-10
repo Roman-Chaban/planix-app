@@ -3,7 +3,7 @@
 import { useMemo, useCallback } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-import { languageOptions } from '@/shared/ui/language-select/lib/languageOptions';
+import { languageOptions } from '@/shared/ui/language-select/lib/language-options/language-options';
 import type { LanguageOption } from '@/shared/ui/language-select/model/types';
 
 export const useLanguageSelect = () => {

@@ -7,18 +7,15 @@ import { useTranslation } from 'react-i18next';
 import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
 import { Avatar, Box, Button, LanguageSelect, Typography } from '@/shared/ui';
 
+import type {HeaderProps} from '@/shared/ui/header/model/types';
+import styles from '@/shared/ui/header/styles/header.module.scss';
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
-import styles from '../styles/styles.module.scss';
 
 const { CIRCLE } = BUTTON_VARIANTS;
 const { BUTTON } = BUTTON_TYPES;
 
 const FALLBACK_PROFILE_AVATAR = 'RC';
-
-export type HeaderProps = {
-  title: string;
-};
 
 export const Header: FC<HeaderProps> = ({ title }) => {
   const { t } = useTranslation();

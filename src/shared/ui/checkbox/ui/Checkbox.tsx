@@ -3,12 +3,12 @@ import type { CheckboxProps } from '../model/types';
 import { useId, type ChangeEvent, type FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import styles from '@/shared/ui/checkbox/styles/checkbox.module.scss';
 import { CheckIcon } from '@/shared/ui/icons/ui/Icons';
 import { Typography } from '@/shared/ui/typography/ui/Typography';
 
 import { INPUT_TYPES } from '@shared/constants/inputs';
 
-import styles from '../styles/styles.module.scss';
 
 export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
   const checkboxId = useId();

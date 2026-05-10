@@ -1,14 +1,12 @@
-import type { AvatarProps } from '../model/types';
-
 import type { FC } from 'react';
 
 import Image from 'next/image';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import type { AvatarProps } from '@/shared/ui/avatar/model/types';
 
+import styles from '@/shared/ui/avatar/styles/avatar.module.scss';
 import { Box } from '@/shared/ui/box/ui/Box';
-
-import styles from '../styles/styles.module.scss';
 
 export const Avatar: FC<AvatarProps> = ({
   src,

@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
+import styles from '@/shared/ui/brand-banner/styles/brand-banner.module.scss';
 import { PlanixLogoIcon } from '@/shared/ui/icons/ui/Icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
-import styles from '../styles/styles.module.scss';
 
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();

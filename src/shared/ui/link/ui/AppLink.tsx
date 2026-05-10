@@ -14,7 +14,7 @@ import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassNa
 
 import { buildHref } from '@/shared/lib/helpers/buildHref/buildHref';
 
-import styles from '../styles/styles.module.scss';
+import styles from '@/shared/ui/link/styles/link.module.scss';
 
 export const AppLink: FC<LinkProps> = ({
   children,
@@ -22,7 +22,7 @@ export const AppLink: FC<LinkProps> = ({
   isUnderline = false,
   external = false,
   className,
-  ...props
+  ...appLinkProps
 }) => {
   const params = useParams();
   const locale = (params?.locale as string) || DEFAULT_LOCALE;
@@ -37,7 +37,7 @@ export const AppLink: FC<LinkProps> = ({
         className={linkClasses}
         target={LINK_TARGETS.BLANK}
         rel="noopener noreferrer"
-        {...props}
+        {...appLinkProps}
       >
         {children}
       </a>

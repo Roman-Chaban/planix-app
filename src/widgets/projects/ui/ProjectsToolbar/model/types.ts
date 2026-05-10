@@ -4,6 +4,6 @@ type ProjectsFilterForm = {
   search: string;
 };
 
-export type ProjectsTollbarProps = {
+export type ProjectsToolbarProps = {
   control: Control<ProjectsFilterForm>;
 };

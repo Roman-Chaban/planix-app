@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 
-import type { AuthFormValues } from '@/features/auth/login/model/types';
+import type { AuthFormValues } from '@/features/auth/model/types';
 
 /* Mock: [Mocked hook, waiting for the future implementation] */
 export const useAuthLogin = () => {

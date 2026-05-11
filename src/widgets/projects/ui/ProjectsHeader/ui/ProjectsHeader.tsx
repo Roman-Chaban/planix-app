@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { headerItems } from '@/widgets/projects/lib/header-items/header-items';
-import styles from '@/widgets/projects/ui/ProjectsHeader/styles/projects-header.module.scss';
+import styles from '@/widgets/projects/styles/projects.module.scss';
 import { ProjectsHeaderItem } from '@/widgets/projects/ui/ProjectsHeader/ui/ProjectsHeaderItem';
 import { Box, List } from '@/shared/ui';
 
@@ -11,7 +11,7 @@ export const ProjectsHeader = () => {
   const [activeId, setActiveId] = useState<string>(headerItems[0].id);
 
   return (
-    <Box>
+    <Box className={styles.scrollContainer}>
       <List
         className={styles.list}
         renderList={headerItems}

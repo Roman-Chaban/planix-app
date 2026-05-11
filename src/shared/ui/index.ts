@@ -1,6 +1,6 @@
 export { Avatar } from '@/shared/ui/avatar/ui/Avatar';
 export { Box } from '@/shared/ui/box/ui/Box';
-export { BrandBanner } from '@/shared/ui/brandBanner/ui/BrandBanner';
+export { BrandBanner } from '@/shared/ui/brand-banner/ui/BrandBanner';
 export { Button } from '@/shared/ui/button/ui/Button';
 export { Checkbox } from '@/shared/ui/checkbox/ui/Checkbox';
 export { Card } from '@/shared/ui/card/ui/Card';
@@ -10,6 +10,6 @@ export { AppLink } from '@/shared/ui/link/ui/AppLink';
 export { Typography } from '@/shared/ui/typography/ui/Typography';
 export { List } from '@/shared/ui/list/ui/List';
 export { LanguageSelect } from '@/shared/ui/language-select/ui/LanguageSelect';
-export { NotFoundLayout } from '@/shared/ui/notFound/ui/NotFound';
+export { NotFoundLayout } from '@/shared/ui/not-found/ui/NotFound';
 export { Header } from '@shared/ui/header/ui/Header';
-export { PageWrapper } from '@shared/ui/pageWrapper/ui/PageWrapper';
+export { PageWrapper } from '@shared/ui/page-wrapper/ui/PageWrapper';

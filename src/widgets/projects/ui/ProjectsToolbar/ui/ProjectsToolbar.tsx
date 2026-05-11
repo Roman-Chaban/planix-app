@@ -24,8 +24,8 @@ export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
 
   return (
     <Box className={styles.toolbar}>
-      <FormField variant="search">
-        <FormWrapper>
+      <FormField>
+        <FormWrapper variant={SEARCH}>
           <FormIcon position={START}>
             <SearchIconPrimary />
           </FormIcon>

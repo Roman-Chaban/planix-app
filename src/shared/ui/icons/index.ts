@@ -12,6 +12,7 @@ export { LockIcon } from '@/shared/ui/icons/ui/Icons';
 export { EyeOffIcon } from '@/shared/ui/icons/ui/Icons';
 export { EyeIcon } from '@/shared/ui/icons/ui/Icons';
 export { SearchIcon } from '@/shared/ui/icons/ui/Icons';
+export { SearchIconPrimary } from '@/shared/ui/icons/ui/Icons';
 export { DashboardIcon } from '@/shared/ui/icons/ui/Icons';
 export { ProjectIcon } from '@/shared/ui/icons/ui/Icons';
 export { ClientIcon } from '@/shared/ui/icons/ui/Icons';

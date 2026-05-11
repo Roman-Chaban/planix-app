@@ -2,9 +2,9 @@ import { type FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 import type { FormIconProps } from '@/shared/ui/form-field/model/types';
+import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
 import { Typography } from '@/shared/ui/index';
 
-import styles from '../styles/styles.module.scss';
 
 export const FormIcon: FC<FormIconProps> = ({
   children,

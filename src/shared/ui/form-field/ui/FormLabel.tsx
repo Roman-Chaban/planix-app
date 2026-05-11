@@ -5,7 +5,7 @@ import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassNa
 
 import type { FormLabelProps } from '@/shared/ui/form-field/model/types';
 
-import styles from '../styles/styles.module.scss';
+import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
 
 export const FormLabel: FC<FormLabelProps> = ({ children, className }) => {
   const { id } = useFormContext();

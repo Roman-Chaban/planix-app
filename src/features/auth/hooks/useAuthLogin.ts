@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 
 import type { AuthFormValues } from '@/features/auth/model/types';
 
-/* Mock: [Mocked hook, waiting for the future implementation] */
 export const useAuthLogin = () => {
   const form = useForm<AuthFormValues>({
     defaultValues: {
@@ -15,7 +14,7 @@ export const useAuthLogin = () => {
   });
 
   const onSubmit = form.handleSubmit((data) => {
-    console.log(`Login Submit: ${data}`);
+    console.log('Login Submit:', data);
   });
 
   return {

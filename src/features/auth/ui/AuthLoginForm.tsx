@@ -6,9 +6,16 @@ import { useAuthLogin } from '@/features/auth/hooks/useAuthLogin';
 import { AuthLoginFormView } from '@/features/auth/ui/AuthLoginFormView';
 
 export const AuthLoginForm: FC = () => {
-  const { register, onSubmit, control, errors } = useAuthLogin();
+  const form = useAuthLogin();
 
   return (
-    <AuthLoginFormView register={register} onSubmit={onSubmit} control={control} errors={errors} />
+    <AuthLoginFormView
+      onSubmit={form.onSubmit}
+      emailField={form.register('email')}
+      passwordField={form.register('password')}
+      emailError={form.errors.email?.message}
+      passwordError={form.errors.password?.message}
+      control={form.control}
+    />
   );
 };

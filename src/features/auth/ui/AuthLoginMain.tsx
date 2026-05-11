@@ -1,7 +1,7 @@
-import { Controller } from 'react-hook-form';
+import { Controller, type Control } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { FormControl } from '@/features/auth/model/types';
+import type { AuthFormValues } from '@/features/auth/model/types';
 import styles from '@/features/auth/styles/auth.module.scss';
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
@@ -10,11 +10,10 @@ import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
 
 const { SUBMIT } = BUTTON_TYPES;
 const { PRIMARY: BUTTON_PRIMARY } = BUTTON_VARIANTS;
-
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 
-export const AuthLoginMain = ({ control }: { control: FormControl }) => {
+export const AuthLoginMain = ({ control }: { control: Control<AuthFormValues> }) => {
   const { t } = useTranslation();
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 

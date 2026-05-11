@@ -1,10 +1,4 @@
-import type { Control, FieldErrors, UseFormRegister } from 'react-hook-form';
-
-import type { BaseSyntheticEvent } from 'react';
-
-export type Register = UseFormRegister<AuthFormValues>;
-export type Errors = FieldErrors<AuthFormValues>;
-export type FormControl = Control<AuthFormValues>;
+import type { Control, UseFormRegisterReturn } from 'react-hook-form';
 
 export type AuthFormValues = {
   email: string;
@@ -13,13 +7,17 @@ export type AuthFormValues = {
 };
 
 export type AuthLoginFormViewProps = {
-  register: Register;
-  errors: Errors;
-  control: FormControl;
-  onSubmit: (event: BaseSyntheticEvent) => Promise<void>;
+  onSubmit: VoidFunction;
+  emailField: UseFormRegisterReturn;
+  passwordField: UseFormRegisterReturn;
+  emailError?: string;
+  passwordError?: string;
+  control: Control<AuthFormValues>;
 };
 
 export type AuthLoginFieldsProps = {
-  register: Register;
-  errors: Errors;
+  emailField: UseFormRegisterReturn;
+  passwordField: UseFormRegisterReturn;
+  emailError?: string;
+  passwordError?: string;
 };

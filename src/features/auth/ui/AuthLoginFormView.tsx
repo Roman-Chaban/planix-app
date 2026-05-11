@@ -1,7 +1,6 @@
 'use client';
 
 import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { AuthFooter } from '@/widgets/auth/ui/AuthFooter';
@@ -16,10 +15,12 @@ import { AuthLoginFields } from './AuthLoginFields';
 import { AuthLoginMain } from './AuthLoginMain';
 
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
-  register,
-  control,
   onSubmit,
-  errors,
+  emailField,
+  passwordField,
+  emailError,
+  passwordError,
+  control,
 }) => {
   const { t } = useTranslation();
 
@@ -33,7 +34,13 @@ export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
         />
 
         <form className={styles.loginForm} onSubmit={onSubmit}>
-          <AuthLoginFields register={register} errors={errors} />
+          <AuthLoginFields
+            emailField={emailField}
+            passwordField={passwordField}
+            emailError={emailError}
+            passwordError={passwordError}
+          />
+
           <AuthLoginMain control={control} />
         </form>
       </Box>

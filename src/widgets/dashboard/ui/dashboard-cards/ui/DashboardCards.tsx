@@ -1,9 +1,8 @@
-import { dashboardCards } from '@/widgets/dashboard/lib/dashboard-cards/dashboardCards';
+import { dashboardCards } from '@/widgets/dashboard/lib/dashboard-cards/dashboard-cards';
+import styles from '@/widgets/dashboard/ui/dashboard-cards/styles/dashboard-cards.module.scss';
 import { Box, List } from '@/shared/ui';
 
 import { Card } from '@/shared/ui/card/ui/Card';
-
-import styles from '../styles/styles.module.scss';
 
 export const DashboardCards = () => {
   return (

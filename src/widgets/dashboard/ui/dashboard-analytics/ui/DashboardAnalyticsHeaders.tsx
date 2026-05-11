@@ -2,12 +2,12 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { dashboardHeaderTitles } from '@/widgets/dashboard/lib/dashboard-header-titles/dashboardHeaderTitles';
+import { dashboardHeaderTitles } from '@/widgets/dashboard/lib/dashboard-header-titles/dashboard-header-titles';
 
+import styles from '@/widgets/dashboard/ui/dashboard-analytics/styles/dashboard-analytics.module.scss';
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard/ui/dashboard-analytics/ui/DashboardAnalyticsHeader';
 import { Box } from '@/shared/ui';
 
-import styles from '../styles/styles.module.scss';
 
 export const DashboardAnalyticsHeaders = () => {
   const { t } = useTranslation();

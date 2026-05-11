@@ -1,8 +1,8 @@
+import styles from '@/widgets/dashboard/ui/dashboard-analytics/styles/dashboard-analytics.module.scss';
 import { DashboardAnalyticsHeaders } from '@/widgets/dashboard/ui/dashboard-analytics/ui/DashboardAnalyticsHeaders';
 
 import { Box } from '@/shared/ui';
 
-import styles from '../styles/styles.module.scss';
 
 export const DashboardAnalytics = () => {
   return (

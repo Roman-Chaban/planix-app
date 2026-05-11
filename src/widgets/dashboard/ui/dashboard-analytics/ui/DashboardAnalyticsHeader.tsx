@@ -1,9 +1,9 @@
 import { type FC } from 'react';
 
 import type { DashboardAnalyticsHeaderProps } from '@/widgets/dashboard/ui/dashboard-analytics/model/types';
+import styles from '@/widgets/dashboard/ui/dashboard-analytics/styles/dashboard-analytics.module.scss';
 import { Box, Typography } from '@/shared/ui';
 
-import styles from '../styles/styles.module.scss';
 
 export const DashboardAnalyticsHeader: FC<DashboardAnalyticsHeaderProps> = ({
   title,

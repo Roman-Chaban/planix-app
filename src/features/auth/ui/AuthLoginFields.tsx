@@ -10,7 +10,7 @@ import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
 import { Input } from '@/shared/ui/input/ui/Input';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
-const { PRIMARY } = INPUT_VARIANTS;
+const { DEFAULT: PRIMARY } = INPUT_VARIANTS;
 const { START, END } = ICON_POSITION;
 
 export const AuthLoginFields: FC<AuthLoginFieldsProps> = ({ register, errors }) => {

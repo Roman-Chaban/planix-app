@@ -5,9 +5,7 @@
 @use '@/shared/styles/tokens/flex' as *;
 
 .input {
-  flex: 1;
   width: 100%;
-  min-width: 0;
   padding-block: spacing.$space-6;
   padding-inline-end: 0;
   padding-inline-start: spacing.$space-13;

@@ -5,7 +5,93 @@
 @use '@/shared/styles/tokens/flex' as *;
 @use '@/shared/styles/tokens/mixins' as *;
 
-.headerTollbar {
+.headerToolbar {
   width: 100%;
-  @include flex(flex, row, space-between, center, 0);
+  min-width: 0;
+  @include flex(flex, row, space-between, center, 2rem, nowrap);
+
+  @include respond(desktop) {
+    @include flex-col(1rem, start);
+    place-items: start;
+  }
+}
+
+.toolbar {
+  width: 100%;
+  max-width: 43.875rem;
+  flex-shrink: 0;
+  @include flex(flex, row, end, center, 1rem, nowrap);
+
+  @include respond(wide) {
+    max-width: 37rem;
+  }
+
+  @include respond(desktop) {
+    max-width: 100%;
+    justify-content: start;
+  }
+}
+
+.scrollContainer {
+  width: 100%;
+  max-width: fit-content;
+  @include menu-horizontal-scroll;
+
+  box-shadow: shadow.$shadow-not-found;
+  background: color.$color-white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  @include respond(desktop) {
+    max-width: 100%;
+  }
+}
+
+.list {
+  @include flex-row(1rem, start, center);
+  width: 100%;
+  min-width: max-content;
+
+  @include respond(desktop) {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.box {
+  @include flex-center;
+  flex-shrink: 0;
+  padding: 0.406rem 1.563rem;
+  border-radius: 0.75rem;
+  border: 0.125rem solid transparent;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  @include respond(wide) {
+    padding-inline: 0.7rem;
+  }
+}
+
+.label {
+  color: color.$color-black-1200;
+
+  font: {
+    weight: size.$font-weight-regular;
+    size: size.$font-size-body-lg;
+  }
+}
+
+.active {
+  border-color: color.$color-primary-800;
+  box-shadow: shadow.$shadow-not-found;
+}
+
+.activeLabel {
+  font-weight: size.$font-weight-semibold;
+  color: color.$color-primary-800;
+}
+
+.button {
+  max-width: 11.438rem;
+  min-height: 3.375rem;
 }

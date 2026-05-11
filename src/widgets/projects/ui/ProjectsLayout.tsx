@@ -11,7 +11,7 @@ export const ProjectsLayout = () => {
 
   return (
     <PageWrapper header={<Header title={'DashboardHeaders.projects'} />}>
-      <Box className={styles.headerTollbar}>
+      <Box className={styles.headerToolbar}>
         <ProjectsHeader />
         <ProjectToolbar control={control} />
       </Box>

@@ -10,7 +10,7 @@ import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
 import { Input } from '@/shared/ui/input/ui/Input';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
-const { DEFAULT: PRIMARY } = INPUT_VARIANTS;
+const { DEFAULT } = INPUT_VARIANTS;
 const { START, END } = ICON_POSITION;
 
 export const AuthLoginFields: FC<AuthLoginFieldsProps> = ({ register, errors }) => {
@@ -19,7 +19,7 @@ export const AuthLoginFields: FC<AuthLoginFieldsProps> = ({ register, errors }) 
 
   return (
     <>
-      <FormField variant={PRIMARY} error={errors.email?.message}>
+      <FormField variant={DEFAULT} error={errors.email?.message}>
         <FormLabel>{t('AuthLoginForm.form.email.label')}</FormLabel>
         <FormWrapper>
           <FormIcon position={START}>
@@ -35,7 +35,7 @@ export const AuthLoginFields: FC<AuthLoginFieldsProps> = ({ register, errors }) 
         <FormError />
       </FormField>
 
-      <FormField variant={PRIMARY} error={errors.password?.message}>
+      <FormField variant={DEFAULT} error={errors.password?.message}>
         <FormLabel>{t('AuthLoginForm.form.password.label')}</FormLabel>
         <FormWrapper>
           <FormIcon position={START}>

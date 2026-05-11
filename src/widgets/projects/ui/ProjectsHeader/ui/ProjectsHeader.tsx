@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { headerItems } from '@/widgets/projects/lib/headerItems/headerItems';
+import { headerItems } from '@/widgets/projects/lib/header-items/header-items';
 import styles from '@/widgets/projects/ui/ProjectsHeader/styles/projects-header.module.scss';
 import { ProjectsHeaderItem } from '@/widgets/projects/ui/ProjectsHeader/ui/ProjectsHeaderItem';
 import { Box, List } from '@/shared/ui';

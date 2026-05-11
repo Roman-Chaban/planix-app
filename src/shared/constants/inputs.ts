@@ -8,8 +8,9 @@ export const INPUT_TYPES = {
 } as const;
 
 export const INPUT_VARIANTS = {
-  PRIMARY: 'primary',
-  TYPING: 'typing',
+  DEFAULT: 'default',
+  HOVER: 'hover',
   FILED: 'filed',
+  DISABLED: 'disabled',
   ERROR: 'error',
 } as const;

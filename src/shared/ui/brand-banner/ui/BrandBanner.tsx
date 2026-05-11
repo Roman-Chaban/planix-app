@@ -10,7 +10,6 @@ import styles from '@/shared/ui/brand-banner/styles/brand-banner.module.scss';
 import { PlanixLogoIcon } from '@/shared/ui/icons/ui/Icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
-
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();
   const isMobileLargeScreen = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);

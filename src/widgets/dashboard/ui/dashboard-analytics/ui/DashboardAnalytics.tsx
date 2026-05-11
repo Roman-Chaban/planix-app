@@ -3,7 +3,6 @@ import { DashboardAnalyticsHeaders } from '@/widgets/dashboard/ui/dashboard-anal
 
 import { Box } from '@/shared/ui';
 
-
 export const DashboardAnalytics = () => {
   return (
     <Box className={styles.analytics}>

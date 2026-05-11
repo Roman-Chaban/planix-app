@@ -7,10 +7,9 @@ import { useTranslation } from 'react-i18next';
 import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
 import { Avatar, Box, Button, LanguageSelect, Typography } from '@/shared/ui';
 
-import type {HeaderProps} from '@/shared/ui/header/model/types';
+import type { HeaderProps } from '@/shared/ui/header/model/types';
 import styles from '@/shared/ui/header/styles/header.module.scss';
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
-
 
 const { CIRCLE } = BUTTON_VARIANTS;
 const { BUTTON } = BUTTON_TYPES;

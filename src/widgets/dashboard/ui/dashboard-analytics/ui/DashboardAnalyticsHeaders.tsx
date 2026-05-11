@@ -8,7 +8,6 @@ import styles from '@/widgets/dashboard/ui/dashboard-analytics/styles/dashboard-
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard/ui/dashboard-analytics/ui/DashboardAnalyticsHeader';
 import { Box } from '@/shared/ui';
 
-
 export const DashboardAnalyticsHeaders = () => {
   const { t } = useTranslation();
 

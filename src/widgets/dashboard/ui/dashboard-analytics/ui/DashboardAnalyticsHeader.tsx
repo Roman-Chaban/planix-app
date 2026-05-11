@@ -4,7 +4,6 @@ import type { DashboardAnalyticsHeaderProps } from '@/widgets/dashboard/ui/dashb
 import styles from '@/widgets/dashboard/ui/dashboard-analytics/styles/dashboard-analytics.module.scss';
 import { Box, Typography } from '@/shared/ui';
 
-
 export const DashboardAnalyticsHeader: FC<DashboardAnalyticsHeaderProps> = ({
   title,
   children,

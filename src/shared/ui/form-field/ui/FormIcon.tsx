@@ -5,7 +5,6 @@ import type { FormIconProps } from '@/shared/ui/form-field/model/types';
 import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
 import { Typography } from '@/shared/ui/index';
 
-
 export const FormIcon: FC<FormIconProps> = ({
   children,
   position = 'start',

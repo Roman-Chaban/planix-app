@@ -9,7 +9,6 @@ import { Typography } from '@/shared/ui/typography/ui/Typography';
 
 import { INPUT_TYPES } from '@shared/constants/inputs';
 
-
 export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
   const checkboxId = useId();
 

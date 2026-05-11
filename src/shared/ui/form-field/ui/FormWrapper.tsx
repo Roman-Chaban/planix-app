@@ -6,7 +6,6 @@ import type { FormInputWrapperProps } from '@/shared/ui/form-field/model/types';
 import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
 import { Box } from '@/shared/ui/index';
 
-
 export const FormWrapper: FC<FormInputWrapperProps> = ({ children, className }) => {
   const { hasError, variant } = useFormContext();
 

@@ -7,7 +7,6 @@ import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassNa
 import styles from '@/shared/ui/button/styles/button.module.scss';
 import { Box, Typography } from '@/shared/ui/index';
 
-
 export const Button: FC<ButtonProps> = ({
   variant = '',
   outline = '',

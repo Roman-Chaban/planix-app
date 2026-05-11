@@ -282,12 +282,16 @@
   padding-block: 0.625rem 1.438rem;
 }
 
-/* Text mixins */
+@mixin menu-horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
 
-@mixin notFoundText($color, $weight, $size) {
-  color: $color;
-  font: {
-    weight: $weight;
-    size: $size;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

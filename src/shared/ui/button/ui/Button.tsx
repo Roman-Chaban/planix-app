@@ -9,8 +9,8 @@ import { Box, Typography } from '@/shared/ui/index';
 
 export const Button: FC<ButtonProps> = ({
   variant = '',
-  outline = '',
-  size = 'none',
+  outlined = '',
+  size = 'compact',
   className,
   startIcon,
   endIcon,
@@ -25,7 +25,7 @@ export const Button: FC<ButtonProps> = ({
     styles.button,
     styles[variant],
     styles[size],
-    styles[outline],
+    styles[outlined],
     className,
   );
 

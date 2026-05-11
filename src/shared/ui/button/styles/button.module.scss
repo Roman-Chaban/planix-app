@@ -5,6 +5,7 @@
 @use '@/shared/styles/tokens/mixins' as *;
 
 .button {
+  width: 100%;
   border-radius: 1.875rem;
   font-weight: size.$font-weight-semibold;
   display: inline-flex;
@@ -27,7 +28,7 @@
   @include button-interaction(color.$color-primary-1100);
 }
 
-.outline {
+.outlined {
   color: color.$color-primary-800;
 
   @include button-outline(color.$color-primary-800, none, color.$color-primary-1100);
@@ -48,12 +49,11 @@
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  background: color.$color-primary-800;
+  background: none;
   border-radius: 50%;
 }
 
-.none {
-  background: none;
+.compact {
   padding: 0;
   min-height: unset;
   font-size: inherit;
@@ -65,20 +65,16 @@
 
 .sm {
   padding: spacing.$space-2 spacing.$space-7;
-  min-height: 2.5rem;
   font-size: size.$font-size-body-sm;
 }
 
 .md {
-  max-width: 8.188rem;
   padding: spacing.$space-3 spacing.$space-7;
-  min-height: 2.75rem;
   font-size: size.$font-size-body-md;
 }
 
 .lg {
   padding: spacing.$space-4 spacing.$space-7;
-  min-height: 3.375rem;
   font-size: size.$font-size-body-lg;
 }
 

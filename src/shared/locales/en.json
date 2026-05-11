@@ -72,6 +72,10 @@
     "inProgress": "In Progress",
     "pending": "Pending",
     "completed": "Completed",
-    "canceled": "Canceled"
+    "canceled": "Canceled",
+
+    "Search": {
+      "placeholder": "Search Here..."
+    }
   }
 }

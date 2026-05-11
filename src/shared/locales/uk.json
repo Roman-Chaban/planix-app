@@ -72,6 +72,10 @@
     "inProgress": "У процесі",
     "pending": "Очікує",
     "completed": "Завершені",
-    "canceled": "Скасовані"
+    "canceled": "Скасовані",
+
+    "Search": {
+      "placeholder": "Пошук тут..."
+    }
   }
 }

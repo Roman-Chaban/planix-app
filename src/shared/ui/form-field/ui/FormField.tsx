@@ -1,18 +1,8 @@
-import { type FC } from 'react';
+import type { FC } from 'react';
 
-import { FormProvider } from '@/shared/providers/FormProvider';
 import type { FormFieldProps } from '@/shared/ui/form-field/model/types';
+import { Box } from '@/shared/ui/index';
 
-export const FormField: FC<FormFieldProps> = ({
-  children,
-  variant = 'default',
-  inputSize = 'md',
-  error,
-  disabled,
-}) => {
-  return (
-    <FormProvider variant={variant} inputSize={inputSize} error={error} disabled={disabled}>
-      {children}
-    </FormProvider>
-  );
+export const FormField: FC<FormFieldProps> = ({ children, className }) => {
+  return <Box className={className}>{children}</Box>;
 };

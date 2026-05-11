@@ -1,18 +1,26 @@
-import { type FC } from 'react';
+import type { FC } from 'react';
 
-import { useFormContext } from '@/shared/context/form-context';
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
-import type { FormInputWrapperProps } from '@/shared/ui/form-field/model/types';
-import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
-import { Box } from '@/shared/ui/index';
 
-export const FormWrapper: FC<FormInputWrapperProps> = ({ children, className }) => {
-  const { hasError, variant } = useFormContext();
+import { Box } from '@/shared/ui';
+import type { FormWrapperProps } from '@/shared/ui/form-field/model/types';
+
+import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
+
+export const FormWrapper: FC<FormWrapperProps> = ({
+  children,
+  className,
+  variant = 'default',
+  error,
+}) => {
+  const hasError = Boolean(error);
 
   const rootClassname = buildClassName(
     styles.inputWrapper,
-    variant ? styles[variant] : '',
-    { [styles.error]: hasError },
+    styles[variant],
+    {
+      [styles.error]: hasError,
+    },
     className,
   );
 

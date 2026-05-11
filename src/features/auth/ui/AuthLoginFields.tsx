@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import type { AuthLoginFieldsProps } from '@/features/auth/login/model/types';
+import type { AuthLoginFieldsProps } from '@/features/auth/model/types';
 import { ICON_POSITION } from '@/shared/constants/common';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/constants/inputs';
 import { usePasswordToggle } from '@/shared/hooks/usePasswordToggle';

@@ -7,9 +7,9 @@ import { useTranslation } from 'react-i18next';
 import { AuthFooter } from '@/widgets/auth/ui/AuthFooter';
 import { AuthHeader } from '@/widgets/auth/ui/AuthHeader';
 
-import type { AuthLoginFormViewProps } from '@/features/auth/login/model/types';
+import type { AuthLoginFormViewProps } from '@/features/auth/model/types';
 
-import styles from '@/features/auth/login/styles/auth.module.scss';
+import styles from '@/features/auth/styles/auth.module.scss';
 import { Box } from '@/shared/ui/index';
 
 import { AuthLoginFields } from './AuthLoginFields';

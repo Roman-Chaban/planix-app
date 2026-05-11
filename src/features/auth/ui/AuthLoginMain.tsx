@@ -1,8 +1,8 @@
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { FormControl } from '@/features/auth/login/model/types';
-import styles from '@/features/auth/login/styles/auth.module.scss';
+import type { FormControl } from '@/features/auth/model/types';
+import styles from '@/features/auth/styles/auth.module.scss';
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
@@ -16,7 +16,6 @@ const { SMALL, MEDIUM } = BUTTON_SIZES;
 
 export const AuthLoginMain = ({ control }: { control: FormControl }) => {
   const { t } = useTranslation();
-
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const SUBMIT_BUTTON_SIZES = isMobileLargeScreen ? SMALL : MEDIUM;

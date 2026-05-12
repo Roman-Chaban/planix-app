@@ -158,7 +158,7 @@
   $text: color.$color-button-disabled,
   $border: none
 ) {
-  &.disabled {
+  &:disabled {
     background: $bg;
     color: $text;
     border: $border;
@@ -293,5 +293,38 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@mixin table-cell($padding: 1rem 1rem) {
+  padding: $padding;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 150%;
+}
+
+@mixin icon-text($gap: 0.5rem) {
+  display: inline-flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin table-scroll {
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+}
+
+@mixin table-col($width, $min-width: null) {
+  width: $width;
+
+  @if $min-width {
+    min-width: $min-width;
   }
 }

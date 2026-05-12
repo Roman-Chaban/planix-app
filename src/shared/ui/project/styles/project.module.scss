@@ -1,0 +1,96 @@
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles/tokens/mixins' as *;
+
+.wrapper {
+  width: 100%;
+  padding: 0.5rem;
+  background: color.$color-white;
+  @include table-scroll;
+}
+
+.table {
+  width: 100%;
+  min-width: 96.25rem;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.head {
+  .row {
+    width: 100%;
+  }
+
+  .heading {
+    background: color.$color-black-200;
+    @include table-cell(0.563rem 1rem);
+
+    &:first-child {
+      border-radius: 0.75rem 0 0 0.75rem;
+    }
+
+    &:last-child {
+      border-radius: 0 0.75rem 0.75rem 0;
+    }
+  }
+}
+
+.heading {
+  color: color.$color-black-1200;
+  font-weight: size.$font-weight-semibold;
+}
+
+.cell {
+  @include table-cell(0.563rem 1.813rem);
+}
+
+.bodyRow {
+  td {
+    @include table-cell(1rem);
+    border-bottom: 0.094rem solid color.$color-black-300;
+  }
+
+  &:last-child td {
+    border-bottom: none;
+  }
+}
+
+.calendarCell {
+  white-space: nowrap;
+  @include icon-text(0.438rem);
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+td,
+th {
+  &:nth-child(1) {
+    @include table-col(8%, 11.813rem);
+  }
+  &:nth-child(2) {
+    @include table-col(10%, 8.313rem);
+  }
+  &:nth-child(3) {
+    @include table-col(8%, 11.5rem);
+  }
+  &:nth-child(4) {
+    @include table-col(5%, 4.875rem);
+  }
+  &:nth-child(5) {
+    @include table-col(8%, 6.875rem);
+  }
+  &:nth-child(6) {
+    @include table-col(5%, 4.063rem);
+  }
+  &:nth-child(7) {
+    @include table-col(6%, 5.938rem);
+  }
+  &:nth-child(8) {
+    @include table-col(7%, 5.25rem);
+  }
+}

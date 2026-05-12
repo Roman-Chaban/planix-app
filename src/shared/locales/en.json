@@ -73,6 +73,7 @@
     "pending": "Pending",
     "completed": "Completed",
     "canceled": "Canceled",
+    "button": "Add Project",
 
     "Search": {
       "placeholder": "Search Here..."

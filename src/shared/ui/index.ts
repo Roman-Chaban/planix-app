@@ -13,3 +13,5 @@ export { LanguageSelect } from '@/shared/ui/language-select/ui/LanguageSelect';
 export { NotFoundLayout } from '@/shared/ui/not-found/ui/NotFound';
 export { Header } from '@shared/ui/header/ui/Header';
 export { PageWrapper } from '@shared/ui/page-wrapper/ui/PageWrapper';
+export { ProjectButton } from '@shared/ui/project-button/ui/ProjectButton';
+export { StatusBadge } from '@shared/ui/status-badge/ui/StatusBadge';

@@ -74,9 +74,6 @@
     "completed": "Завершені",
     "canceled": "Скасовані",
     "button": "Додати проєкт",
-
-    "Search": {
-      "placeholder": "Пошук тут..."
-    }
+    "placeholder": "Пошук тут..."
   }
 }

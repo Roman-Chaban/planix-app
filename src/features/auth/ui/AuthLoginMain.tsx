@@ -9,7 +9,7 @@ import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
 
 const { SUBMIT } = BUTTON_TYPES;
-const { DEFAULT: BUTTON_PRIMARY } = BUTTON_VARIANTS;
+const { DEFAULT } = BUTTON_VARIANTS;
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 
@@ -40,7 +40,7 @@ export const AuthLoginMain = ({ control }: { control: Control<AuthFormValues> })
         </AppLink>
       </Box>
 
-      <Button type={SUBMIT} variant={BUTTON_PRIMARY} size={SUBMIT_BUTTON_SIZES}>
+      <Button type={SUBMIT} variant={DEFAULT} size={SUBMIT_BUTTON_SIZES}>
         {t('AuthLoginForm.form.submit.button')}
       </Button>
     </Box>

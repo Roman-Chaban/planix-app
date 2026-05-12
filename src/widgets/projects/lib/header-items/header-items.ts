@@ -21,4 +21,4 @@ export const headerItems: HeaderItems = [
     id: 'canceled',
     label: 'ProjectsHeader.canceled',
   },
-];
+] as const;

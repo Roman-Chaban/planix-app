@@ -8,33 +8,29 @@
 .headerToolbar {
   width: 100%;
   min-width: 0;
-  @include flex(flex, row, space-between, center, 2rem, nowrap);
+  @include flex(flex, row, space-between, center, 1rem, nowrap);
 
   @include respond(desktop) {
-    @include flex-col(1rem, start);
-    place-items: start;
+    @include flex-col(1rem, stretch);
   }
 }
 
 .toolbar {
-  width: 100%;
-  max-width: 43.875rem;
-  flex-shrink: 0;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  min-width: 0;
   @include flex(flex, row, end, center, 1rem, nowrap);
 
-  @include respond(wide) {
-    max-width: 37rem;
-  }
-
   @include respond(desktop) {
-    max-width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 
 .scrollContainer {
-  width: 100%;
-  max-width: fit-content;
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 100%;
   @include menu-horizontal-scroll;
 
   box-shadow: shadow.$shadow-not-found;
@@ -43,7 +39,9 @@
   border-radius: 1rem;
 
   @include respond(desktop) {
-    max-width: 100%;
+    order: 2;
+    width: 100%;
+    margin-top: 0.5rem;
   }
 }
 
@@ -89,11 +87,6 @@
 .activeLabel {
   font-weight: size.$font-weight-semibold;
   color: color.$color-primary-800;
-}
-
-.button {
-  max-width: 11.438rem;
-  min-height: 3.375rem;
 }
 
 .content {

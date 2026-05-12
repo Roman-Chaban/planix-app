@@ -1,15 +1,13 @@
-import type { ButtonProps } from '../model/types';
-
 import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import type { ButtonProps } from '@/shared/ui/button/model/types';
 
 import styles from '@/shared/ui/button/styles/button.module.scss';
 import { Box, Typography } from '@/shared/ui/index';
 
 export const Button: FC<ButtonProps> = ({
   variant = '',
-  outlined = '',
   size = 'compact',
   className,
   startIcon,
@@ -21,13 +19,7 @@ export const Button: FC<ButtonProps> = ({
   type,
   onClick,
 }) => {
-  const buttonClasses = buildClassName(
-    styles.button,
-    styles[variant],
-    styles[size],
-    styles[outlined],
-    className,
-  );
+  const buttonClasses = buildClassName(styles.button, styles[variant], styles[size], className);
 
   return (
     <button className={buttonClasses} disabled={disabled} type={type} onClick={onClick}>

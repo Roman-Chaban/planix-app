@@ -75,5 +75,21 @@
     "canceled": "Canceled",
     "button": "Add Project",
     "placeholder": "Search Here..."
+  },
+  "NoProjects": {
+    "title": "No Projects Yet",
+    "subtitle": "You haven’t created any projects yet. Start by adding your first project to track progress, deadlines, and pricing in one place."
+  },
+  "ProjectTable": {
+    "TableColumns": {
+      "clientName": "Client Name",
+      "projectName": "Project Name",
+      "dueDate": "Due Date",
+      "platform": "Platform",
+      "progress": "Progress",
+      "price": "Price",
+      "status": "Status",
+      "action": "Action"
+    }
   }
 }

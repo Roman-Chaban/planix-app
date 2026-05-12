@@ -1,5 +1,5 @@
 import type { TabsContent } from '@/widgets/projects/model/types';
-import { AllProjects } from '@/widgets/projects/ui/ProjectsContent/AllProjects';
+import { AllProjects } from '@/features/projects/ui/AllProjects';
 
 export const tabsContent: TabsContent = {
   allProjects: AllProjects,

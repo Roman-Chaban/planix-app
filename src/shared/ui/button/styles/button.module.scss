@@ -5,40 +5,43 @@
 @use '@/shared/styles/tokens/mixins' as *;
 
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+
   width: 100%;
   border-radius: 1.875rem;
-  font-weight: size.$font-weight-semibold;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
   font-family: inherit;
+  font-weight: size.$font-weight-semibold;
+
   border: none;
-  outline: none;
   cursor: pointer;
   background: transparent;
 
-  @include button-disabled();
+  transition: all 0.2s ease;
+
+  @include button-disabled;
 }
 
-.primary {
+.default {
   background: color.$color-primary-800;
   color: color.$color-black-100;
 
   @include button-interaction(color.$color-primary-1100);
 }
 
-.outlined {
+.outline {
   color: color.$color-primary-800;
 
-  @include button-outline(color.$color-primary-800, none, color.$color-primary-1100);
+  @include button-outline(color.$color-primary-800, none, null);
 }
 
 .soft {
   background: color.$color-primary-100;
   color: color.$color-primary-800;
 
-  @include button-outline(color.$color-primary-800, none, color.$color-primary-1100);
+  @include button-outline(color.$color-primary-800, none, null);
 }
 
 .tertiary {

@@ -12,7 +12,7 @@ export const BUTTON_SIZES = {
 } as const;
 
 export const BUTTON_VARIANTS = {
-  PRIMARY: 'primary',
+  DEFAULT: 'default',
   OUTLINE: 'outline',
   SOFT: 'soft',
   TERTIARY: 'tertiary',

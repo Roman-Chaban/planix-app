@@ -9,7 +9,7 @@ import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
 
 const { SUBMIT } = BUTTON_TYPES;
-const { PRIMARY: BUTTON_PRIMARY } = BUTTON_VARIANTS;
+const { DEFAULT: BUTTON_PRIMARY } = BUTTON_VARIANTS;
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 

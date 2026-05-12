@@ -22,7 +22,7 @@
   max-width: 100vw;
   overflow-x: hidden;
   grid-area: content;
-  padding-block-start: 1.938rem;
+  padding-block: 1.938rem 3.313rem;
   padding-inline: 1.875rem;
   @include flex-col(1.875rem, start, stretch);
 

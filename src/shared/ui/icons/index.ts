@@ -27,3 +27,8 @@ export { UkraineIcon } from '@/shared/ui/icons/ui/Icons';
 export { NotFoundBanner } from '@/shared/ui/icons/ui/Icons';
 export { NotFoundTextDecartionIcon } from '@/shared/ui/icons/ui/Icons';
 export { NoProjectsIcon } from '@/shared/ui/icons/ui/Icons';
+export { CalendarIcon } from '@/shared/ui/icons/ui/Icons';
+export { PendingIcon } from '@/shared/ui/icons/ui/Icons';
+export { InProgressIcon } from '@/shared/ui/icons/ui/Icons';
+export { CanceledIcon } from '@/shared/ui/icons/ui/Icons';
+export { CompletedIcon } from '@/shared/ui/icons/ui/Icons';

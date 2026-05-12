@@ -29,12 +29,12 @@ export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
           <FormIcon position={START}>
             <SearchIconPrimary />
           </FormIcon>
-          <Input type={SEARCH} placeholder={t('ProjectsHeader.Search.placeholder')} />
+          <Input type={SEARCH} placeholder={t('ProjectsHeader.placeholder')} />
         </FormWrapper>
       </FormField>
 
       <Button type={BUTTON} variant={PRIMARY} size="md" className={styles.button}>
-        Add Project
+        {t('ProjectsHeader.button')}
       </Button>
     </Box>
   );

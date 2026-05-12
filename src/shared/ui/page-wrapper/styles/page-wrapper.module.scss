@@ -24,7 +24,8 @@
   grid-area: content;
   padding-block: 1.938rem 3.313rem;
   padding-inline: 1.875rem;
-  @include flex-col(1.875rem, start, stretch);
+  @include flex-col(1rem, start, stretch);
+  @include hide-scrollbar;
 
   @include respond(tablet) {
     padding-inline: 1rem;

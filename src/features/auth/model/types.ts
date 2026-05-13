@@ -1,5 +1,12 @@
 import type { Control, UseFormRegisterReturn } from 'react-hook-form';
 
+type BaseAuthFields = {
+  emailField: UseFormRegisterReturn;
+  passwordField: UseFormRegisterReturn;
+  emailError?: string;
+  passwordError?: string;
+};
+
 export type AuthFormValues = {
   email: string;
   password: string;
@@ -8,16 +15,7 @@ export type AuthFormValues = {
 
 export type AuthLoginFormViewProps = {
   onSubmit: VoidFunction;
-  emailField: UseFormRegisterReturn;
-  passwordField: UseFormRegisterReturn;
-  emailError?: string;
-  passwordError?: string;
   control: Control<AuthFormValues>;
-};
+} & BaseAuthFields;
 
-export type AuthLoginFieldsProps = {
-  emailField: UseFormRegisterReturn;
-  passwordField: UseFormRegisterReturn;
-  emailError?: string;
-  passwordError?: string;
-};
+export type AuthLoginFieldsProps = BaseAuthFields;

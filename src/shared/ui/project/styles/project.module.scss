@@ -1,6 +1,7 @@
 @use '@/shared/styles/tokens/spacing' as spacing;
 @use '@/shared/styles/tokens/colors' as color;
 @use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/shadows' as shadow;
 @use '@/shared/styles/tokens/flex' as *;
 @use '@/shared/styles/tokens/mixins' as *;
 
@@ -8,7 +9,10 @@
   width: 100%;
   padding: 0.5rem;
   background: color.$color-white;
+  box-shadow: shadow.$shadow-elevation-2;
+  border-radius: 1rem;
   @include table-scroll;
+  @include hide-scrollbar;
 }
 
 .table {
@@ -60,10 +64,10 @@
 
 .calendarCell {
   white-space: nowrap;
-  @include icon-text(0.438rem);
 
   svg {
-    flex-shrink: 0;
+    vertical-align: -0.19rem;
+    margin-right: 0.4rem;
   }
 }
 
@@ -91,6 +95,6 @@ th {
     @include table-col(6%, 5.938rem);
   }
   &:nth-child(8) {
-    @include table-col(7%, 5.25rem);
+    @include table-col(4%, 5.25rem);
   }
 }

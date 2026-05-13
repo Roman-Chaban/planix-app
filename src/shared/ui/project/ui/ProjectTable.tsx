@@ -7,14 +7,18 @@ import { ProjectRow } from '@/shared/ui/project/ui/ProjectRow';
 import { ProjectTableHeader } from '@/shared/ui/project/ui/ProjectsTableHeader';
 import { Box } from '@shared/ui/index';
 
-export const ProjectsTable: FC<ProjectsTableProps> = ({ projects }) => {
+export const ProjectsTable: FC<ProjectsTableProps> = ({ projects, onTrashClick }) => {
   return (
     <Box className={styles.wrapper}>
       <table className={styles.table}>
         <ProjectTableHeader columns={projectTableColumns} />
         <tbody className={styles.body}>
           {projects.map((project) => (
-            <ProjectRow key={project.id} project={project} />
+            <ProjectRow
+              key={project.id}
+              project={project}
+              onTrashClick={() => onTrashClick(project.id)}
+            />
           ))}
         </tbody>
       </table>

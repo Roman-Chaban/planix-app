@@ -2,38 +2,27 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import type { GetProjectsParams, ProjectsResponse } from '@/features/projects/model/types';
+import type { ProjectsResponse } from '@/features/projects/model/types';
 
 import { delay } from '@/shared/lib/helpers/delay/delay';
 import { mockProjects } from '@/shared/mocks/projects.mock';
 
-export const useAllProjects = (params: GetProjectsParams = {}) => {
+export const useAllProjects = () => {
   return useQuery({
-    queryKey: ['projects', 'all', params],
+    queryKey: ['projects', 'all'],
     queryFn: async (): Promise<ProjectsResponse> => {
       await delay(400);
 
-      let projects = [...mockProjects];
-
-      if (params.search) {
-        const search = params.search.toLowerCase();
-        projects = projects.filter(
-          (project) =>
-            project.name.toLowerCase().includes(search) ||
-            project.client.name.toLowerCase().includes(search),
-        );
-      }
-
       return {
-        data: projects,
+        data: [...mockProjects],
         meta: {
-          total: projects.length,
+          total: mockProjects.length,
           page: 1,
-          limit: projects.length,
+          limit: mockProjects.length,
           totalPages: 1,
         },
       };
     },
-    staleTime: 5 * 60 * 1000, // 5 minutes delay
+    staleTime: 5 * 60 * 1000,
   });
 };

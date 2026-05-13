@@ -1,6 +1,5 @@
 import { type FC } from 'react';
 
-
 import { CalendarIcon } from '@/shared/ui/icons/index';
 import { StatusBadge, ActionsBar } from '@/shared/ui/index';
 import type { ProjectRowProps } from '@/shared/ui/project/model/types';

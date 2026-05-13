@@ -4,7 +4,7 @@
   $justify: flex-start,
   $align: stretch,
   $gap: 0,
-  $wrap: none
+  $wrap: nowrap
 ) {
   display: $display;
   flex-direction: $direction;

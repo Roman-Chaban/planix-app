@@ -1,15 +1,9 @@
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/spacing' as spacing;
-@use '@/shared/styles/tokens/shadows' as shadow;
-@use '@/shared/styles/tokens/mixins' as *;
-@use '@/shared/styles/tokens/flex' as *;
-@use '@/shared/styles/tokens/grid' as *;
+@use '@/shared/styles' as s;
 
 .grid {
-  @include grid(18.125rem 1fr, auto 1fr, 'header header' 'sidebar content', 0);
+  @include s.grid(18.125rem 1fr, auto 1fr, 'header header' 'sidebar content', 0);
 
-  @include respond(laptop) {
+  @include s.respond(laptop) {
     grid: {
       template-columns: 1fr;
       template-areas: 'header' 'content';
@@ -24,10 +18,10 @@
   grid-area: content;
   padding-block: 1.938rem 3.313rem;
   padding-inline: 1.875rem;
-  @include flex-col(1rem, start, stretch);
-  @include hide-scrollbar;
+  @include s.flex-col(1rem, start, stretch);
+  @include s.hide-scrollbar;
 
-  @include respond(tablet) {
+  @include s.respond(tablet) {
     padding-inline: 1rem;
   }
 }

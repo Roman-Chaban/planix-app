@@ -1,9 +1,4 @@
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/spacing' as spacing;
-@use '@/shared/styles/tokens/shadows' as shadow;
-@use '@/shared/styles/tokens/flex' as *;
-@use '@/shared/styles/tokens/mixins' as *;
+@use '@/shared/styles' as *;
 
 .headerToolbar {
   width: 100%;
@@ -33,8 +28,9 @@
   max-width: 100%;
   @include menu-horizontal-scroll;
 
-  box-shadow: shadow.$shadow-not-found;
-  background: color.$color-white;
+  // Використовуємо префікси shadow- та color- без s.
+  box-shadow: $shadow-shadow-not-found;
+  background: $color-color-white;
   padding: 0.5rem;
   border-radius: 1rem;
 
@@ -71,29 +67,29 @@
 }
 
 .label {
-  color: color.$color-black-1200;
+  color: $color-color-black-1200;
 
   font: {
-    weight: size.$font-weight-regular;
-    size: size.$font-size-body-lg;
+    weight: $size-font-weight-regular;
+    size: $size-font-size-body-lg;
   }
 }
 
 .active {
-  border-color: color.$color-primary-800;
-  box-shadow: shadow.$shadow-not-found;
+  border-color: $color-color-primary-800;
+  box-shadow: $shadow-shadow-not-found;
 }
 
 .activeLabel {
-  font-weight: size.$font-weight-semibold;
-  color: color.$color-primary-800;
+  font-weight: $size-font-weight-semibold;
+  color: $color-color-primary-800;
 }
 
 .content {
   width: 100%;
   height: 100%;
-  background: color.$color-white;
-  box-shadow: shadow.$shadow-elevation-2;
+  background: $color-color-white;
+  box-shadow: $shadow-shadow-elevation-2;
   border-radius: 1rem;
 }
 

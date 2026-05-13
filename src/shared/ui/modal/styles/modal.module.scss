@@ -1,44 +1,40 @@
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/shadows' as shadow;
-@use '@/shared/styles/tokens/z-index' as index;
-@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles' as s;
 
 .overlay {
   position: fixed;
   inset: 0;
-  z-index: index.$z-index-modal;
-  background: color.$color-modal-overlay;
+  z-index: s.$z-index-modal;
+  background: s.$color-color-modal-overlay;
 }
 
 .modal {
   width: 100vw;
   min-height: 100dvh;
-  @include flex-center;
+  @include s.flex-center;
 }
 
 .content {
   padding: 2.5rem;
   border: {
-    top: 0.188rem solid color.$color-primary-800;
+    top: 0.188rem solid s.$color-color-primary-800;
     radius: 0.75rem;
   }
   width: 100%;
   max-width: 35.313rem;
   min-height: 24.813rem;
-  background: color.$color-white;
-  box-shadow: shadow.$shadow-not-found;
+  background: s.$color-color-white;
+  box-shadow: s.$shadow-shadow-not-found;
 }
 
 .header {
-  @include flex(flex, row, space-between, center, 0);
+  @include s.flex(flex, row, space-between, center, 0);
 }
 
 .title {
   line-height: 150%;
   font: {
-    weight: size.$font-weight-extrabold;
-    size: size.$line-height-body-md;
+    weight: s.$size-font-weight-extrabold;
+    size: s.$size-line-height-body-md;
   }
 }
 

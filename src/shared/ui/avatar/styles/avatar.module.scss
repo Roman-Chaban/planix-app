@@ -1,7 +1,7 @@
-@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles' as s;
 
 .icon {
-  @include flex-row(0, center, center);
+  @include s.flex-row(0, center, center);
 }
 
 .avatar {

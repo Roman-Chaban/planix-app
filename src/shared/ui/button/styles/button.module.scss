@@ -1,8 +1,4 @@
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/spacing' as spacing;
-@use '@/shared/styles/tokens/flex' as *;
-@use '@/shared/styles/tokens/mixins' as *;
+@use '@/shared/styles' as s;
 
 .button {
   display: inline-flex;
@@ -13,7 +9,7 @@
   width: 100%;
   border-radius: 1.875rem;
   font-family: inherit;
-  font-weight: size.$font-weight-semibold;
+  font-weight: s.$size-font-weight-semibold;
 
   border: none;
   cursor: pointer;
@@ -21,31 +17,31 @@
 
   transition: all 0.2s ease;
 
-  @include button-disabled;
+  @include s.button-disabled;
 }
 
 .default {
-  background: color.$color-primary-800;
-  color: color.$color-black-100;
+  background: s.$color-color-primary-800;
+  color: s.$color-color-black-100;
 
-  @include button-interaction(color.$color-primary-1100);
+  @include s.button-interaction(s.$color-color-primary-1100);
 }
 
 .outline {
-  color: color.$color-primary-800;
+  color: s.$color-color-primary-800;
 
-  @include button-outline(color.$color-primary-800, none, null);
+  @include s.button-outline(s.$color-color-primary-800, none, null);
 }
 
 .soft {
-  background: color.$color-primary-100;
-  color: color.$color-primary-800;
+  background: s.$color-color-primary-100;
+  color: s.$color-color-primary-800;
 
-  @include button-outline(color.$color-primary-800, none, null);
+  @include s.button-outline(s.$color-color-primary-800, none, null);
 }
 
 .tertiary {
-  @include button-link;
+  @include s.button-link;
 }
 
 .circle {
@@ -67,18 +63,18 @@
 }
 
 .sm {
-  padding: spacing.$space-2 spacing.$space-7;
-  font-size: size.$font-size-body-sm;
+  padding: s.$spacing-space-2 s.$spacing-space-7;
+  font-size: s.$size-font-size-body-sm;
 }
 
 .md {
-  padding: spacing.$space-3 spacing.$space-7;
-  font-size: size.$font-size-body-md;
+  padding: s.$spacing-space-3 s.$spacing-space-7;
+  font-size: s.$size-font-size-body-md;
 }
 
 .lg {
-  padding: spacing.$space-4 spacing.$space-7;
-  font-size: size.$font-size-body-lg;
+  padding: s.$spacing-space-4 s.$spacing-space-7;
+  font-size: s.$size-font-size-body-lg;
 }
 
 .iconWrapper {
@@ -88,5 +84,5 @@
 
 .startIcon,
 .endIcon {
-  @include flex-center;
+  @include s.flex-center;
 }

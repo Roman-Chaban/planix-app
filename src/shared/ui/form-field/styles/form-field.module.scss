@@ -1,52 +1,47 @@
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/spacing' as spacing;
-@use '@shared/styles/tokens/shadows' as shadow;
-@use '@/shared/styles/tokens/mixins' as *;
-@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles' as s;
 
 .field {
-  @include flex-col(0.188rem);
+  @include s.flex-col(0.188rem);
 }
 
 .inputWrapper {
   width: 100%;
   position: relative;
   border-radius: 1rem;
-  border: 0.063rem solid color.$color-black-400;
+  border: 0.063rem solid s.$color-color-black-400;
   transition: all 0.35s ease-in-out 0s;
 
-  @include input-border-active(color.$color-primary-600);
-  @include input-disabled(color.$color-black-300, color.$color-black-200);
+  @include s.input-border-active(s.$color-color-primary-600);
+  @include s.input-disabled(s.$color-color-black-300, s.$color-color-black-200);
 }
 
 .label {
-  @include text-body-sm;
-  color: color.$color-black-800;
+  @include s.text-body-sm;
+  color: s.$color-color-black-800;
 }
 
 .slotStart {
-  @include input-icon(left);
+  @include s.input-icon(left);
 }
 
 .slotEnd {
-  @include input-icon(right);
+  @include s.input-icon(right);
 }
 
 .divider {
   position: absolute;
-  left: calc(spacing.$space-8 + 1.25rem + spacing.$space-4);
+  left: calc(s.$spacing-space-8 + 1.25rem + s.$spacing-space-4);
   top: 50%;
   transform: translateY(-50%);
   width: 0.113rem;
   height: 1.313rem;
-  background: color.$color-border-line;
+  background: s.$color-color-border-line;
   z-index: 2;
 }
 
 /* Variants */
 
 .search {
-  box-shadow: shadow.$shadow-input-search;
-  border-color: color.$color-black-300;
+  box-shadow: s.$shadow-shadow-input-search;
+  border-color: s.$color-color-black-300;
 }

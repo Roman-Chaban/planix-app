@@ -1,46 +1,42 @@
-@use '@/shared/styles/tokens/spacing' as spacing;
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/flex' as *;
-@use '@/shared/styles/tokens/mixins' as *;
+@use '@/shared/styles' as s;
 
 .loginWrapper {
-  @include flex-col(0, space-between);
+  @include s.flex-col(0, space-between);
   height: 100%;
 }
 
 .loginContent {
-  @include flex-col(2.813rem);
+  @include s.flex-col(2.813rem);
   padding-block-start: 2.625rem;
 
-  @include respond(tablet) {
+  @include s.respond(tablet) {
     padding-block-start: 0;
     gap: 2rem;
   }
 }
 
 .loginForm {
-  @include flex-col(1.5rem);
+  @include s.flex-col(1.5rem);
 }
 
 .loginFormMainWrapper {
-  @include flex-col(3.625rem);
+  @include s.flex-col(3.625rem);
 
-  @include respond(tablet) {
+  @include s.respond(tablet) {
     gap: 1.5rem;
   }
 }
 
 .loginFormMain {
-  @include flex-row(0, space-between, center);
+  @include s.flex-row(0, space-between, center);
 }
 
 .loginFormLink {
   line-height: 150%;
-  color: color.$color-black-1200;
+  color: s.$color-color-black-1200;
 
-  @include respond(mobile-lg) {
-    font-size: size.$font-size-body-sm;
+  @include s.respond(mobile-lg) {
+    font-size: s.$size-font-size-body-sm;
   }
 }
 

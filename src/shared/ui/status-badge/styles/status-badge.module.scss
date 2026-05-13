@@ -1,37 +1,33 @@
-@use '@/shared/styles/tokens/colors' as color;
-@use '@/shared/styles/tokens/typography' as size;
-@use '@/shared/styles/tokens/shadows' as shadow;
-@use '@/shared/styles/tokens/mixins' as *;
-@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles' as s;
 
 .statusBadge {
-  @include flex-center;
+  @include s.flex-center;
   gap: 0.375rem;
   border-radius: 0.563rem;
   padding: 0.063rem 0.625rem;
   line-height: 150%;
   width: fit-content;
   font: {
-    weight: size.$font-weight-semibold;
+    weight: s.$size-font-weight-semibold;
   }
 }
 
 .pending {
-  background: color.$color-black-300;
-  color: color.$color-black-800;
+  background: s.$color-color-black-300;
+  color: s.$color-color-black-800;
 }
 
 .inProgress {
-  background: color.$color-warning-200;
-  color: color.$color-warning-800;
+  background: s.$color-color-warning-200;
+  color: s.$color-color-warning-800;
 }
 
 .canceled {
-  background: color.$color-error-300;
-  color: color.$color-error-900;
+  background: s.$color-color-error-300;
+  color: s.$color-color-error-900;
 }
 
 .completed {
-  background: color.$color-success-300;
-  color: color.$color-success-900;
+  background: s.$color-color-success-300;
+  color: s.$color-color-success-900;
 }

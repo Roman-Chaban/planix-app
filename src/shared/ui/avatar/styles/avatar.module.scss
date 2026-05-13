@@ -3,3 +3,9 @@
 .icon {
   @include flex-row(0, center, center);
 }
+
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}

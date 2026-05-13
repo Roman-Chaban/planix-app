@@ -7,6 +7,8 @@ import { Avatar } from '@/shared/ui/index';
 const setup = createSetup(Avatar);
 
 const createProps = (overrides: Partial<AvatarProps> = {}): AvatarProps => ({
+  width: 20,
+  height: 20,
   src: '/avatar.png',
   alt: 'User avatar',
   fallback: 'AB',

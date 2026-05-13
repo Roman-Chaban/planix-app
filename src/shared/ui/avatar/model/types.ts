@@ -4,6 +4,8 @@ type AvatarSize = 'sm' | 'md' | 'lg';
 type AvatarVariant = 'circle' | 'square';
 
 type BaseAvatarProps = {
+  width?: number;
+  height?: number;
   alt?: string;
   size?: AvatarSize;
   variant?: AvatarVariant;

@@ -12,10 +12,12 @@ export const dashboardHeaderTitles: DashboardAnalyticsHeaderList = [
     id: '2',
     title: 'DashboardAnalytics.Header.projectTitle',
     variant: 'secondary',
+    content: null,
   },
   {
     id: '3',
     title: 'DashboardAnalytics.Header.taskOverview',
     variant: 'tertiary',
+    content: null,
   },
 ];

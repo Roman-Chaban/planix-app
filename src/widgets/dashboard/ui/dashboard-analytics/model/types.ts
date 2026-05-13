@@ -11,7 +11,7 @@ export type DashboardAnalyticsHeaderListItem = {
   id: string;
   title: string;
   variant: WidgetVariant;
-  content?: ReactNode;
+  content?: ReactNode | null;
 };
 
 export type DashboardAnalyticsHeaderList = DashboardAnalyticsHeaderListItem[];

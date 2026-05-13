@@ -46,9 +46,7 @@ export const ProjectsLayout = () => {
         <ProjectsTable onTrashClick={(id) => setProjectToDelete(id)} projects={filteredProjects} />
       )}
 
-      <Modal isOpen={!!projectToDelete} onClose={() => setProjectToDelete(null)}>
-        Modal
-      </Modal>
+      <Modal isOpen={!!projectToDelete} onClose={() => setProjectToDelete(null)} />
     </PageWrapper>
   );
 };

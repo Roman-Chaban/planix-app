@@ -32,3 +32,6 @@ export { PendingIcon } from '@/shared/ui/icons/ui/Icons';
 export { InProgressIcon } from '@/shared/ui/icons/ui/Icons';
 export { CanceledIcon } from '@/shared/ui/icons/ui/Icons';
 export { CompletedIcon } from '@/shared/ui/icons/ui/Icons';
+export { EditIcon } from '@/shared/ui/icons/ui/Icons';
+export { TrashIcon } from '@/shared/ui/icons/ui/Icons';
+export { CloseIcon } from '@/shared/ui/icons/ui/Icons';

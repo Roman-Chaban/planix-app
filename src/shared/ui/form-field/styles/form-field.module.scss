@@ -5,6 +5,10 @@
 @use '@/shared/styles/tokens/mixins' as *;
 @use '@/shared/styles/tokens/flex' as *;
 
+.field {
+  @include flex-col(0.188rem);
+}
+
 .inputWrapper {
   width: 100%;
   position: relative;
@@ -43,12 +47,6 @@
 /* Variants */
 
 .search {
-  width: 100%;
-  max-width: 18.875rem;
   box-shadow: shadow.$shadow-input-search;
   border-color: color.$color-black-300;
-
-  &.wrapper {
-    max-width: 18.875rem;
-  }
 }

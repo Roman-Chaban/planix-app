@@ -9,6 +9,12 @@ export type ProjectTableHeaderProps = {
   columns: TableColumn[];
 };
 
+export type ProjectRowProps = {
+  project: ProjectTableItem;
+  onTrashClick?: () => void;
+};
+
 export type ProjectsTableProps = {
   projects: ProjectTableItem[];
+  onTrashClick: (id: string) => void;
 };

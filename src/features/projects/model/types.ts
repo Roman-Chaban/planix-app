@@ -1,8 +1,8 @@
+import type { FC, SVGProps } from 'react';
+
 export type ProjectsLayoutFormValues = {
   search: string;
 };
-
-import type { FC, SVGProps } from 'react';
 
 export type ProjectStatus = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 export type Platform = 'Freelancer' | 'Upwork' | 'Fiverr';
@@ -34,10 +34,6 @@ export type ProjectTableItem = {
   statusColor: StatusColor;
   formattedPrice: string;
 } & Project;
-
-export type ProjectRowProps = {
-  project: ProjectTableItem;
-};
 
 export type StatusClasses = Record<ProjectStatus, string>;
 export type StatusIcons = Record<ProjectStatus, FC<SVGProps<SVGSVGElement>>>;

@@ -1,9 +1,11 @@
+export { ActionsBar } from '@shared/ui/actions-bar/ui/ActionsBar';
 export { Avatar } from '@/shared/ui/avatar/ui/Avatar';
 export { Box } from '@/shared/ui/box/ui/Box';
 export { BrandBanner } from '@/shared/ui/brand-banner/ui/BrandBanner';
 export { Button } from '@/shared/ui/button/ui/Button';
-export { Checkbox } from '@/shared/ui/checkbox/ui/Checkbox';
 export { Card } from '@/shared/ui/card/ui/Card';
+export { Checkbox } from '@/shared/ui/checkbox/ui/Checkbox';
+export { FormField } from '@/shared/ui/form-field/ui/FormField';
 export { Grid } from '@/shared/ui/grid/ui/Grid';
 export { GridItem } from '@/shared/ui/grid/ui/GridItem';
 export { AppLink } from '@/shared/ui/link/ui/AppLink';
@@ -16,5 +18,4 @@ export { PageWrapper } from '@shared/ui/page-wrapper/ui/PageWrapper';
 export { NoProjects } from '@shared/ui/no-projects/ui/NoProjects';
 export { ProjectButton } from '@shared/ui/project-button/ui/ProjectButton';
 export { StatusBadge } from '@shared/ui/status-badge/ui/StatusBadge';
-export { ActionsBar } from '@shared/ui/actions-bar/ui/ActionsBar';
 export { Modal } from '@shared/ui/modal/ui/Modal';

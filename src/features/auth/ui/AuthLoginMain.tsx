@@ -40,7 +40,7 @@ export const AuthLoginMain = ({ control }: { control: Control<AuthFormValues> })
         </AppLink>
       </Box>
 
-      <Button type={SUBMIT} variant={DEFAULT} size={SUBMIT_BUTTON_SIZES}>
+      <Button type={SUBMIT} variant={DEFAULT} size={SUBMIT_BUTTON_SIZES} className={styles.button}>
         {t('AuthLoginForm.form.submit.button')}
       </Button>
     </Box>

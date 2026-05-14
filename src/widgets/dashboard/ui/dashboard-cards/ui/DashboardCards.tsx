@@ -1,4 +1,4 @@
-import { dashboardCards } from '@/widgets/dashboard/lib/dashboard-cards/dashboard-cards';
+import { dashboardCards } from '@/widgets/dashboard/config/dashboard-cards/dashboard-cards';
 import styles from '@/widgets/dashboard/ui/dashboard-cards/styles/dashboard-cards.module.scss';
 import { Box, List } from '@/shared/ui';
 

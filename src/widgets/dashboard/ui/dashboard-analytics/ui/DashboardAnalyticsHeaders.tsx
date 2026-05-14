@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { dashboardHeaderTitles } from '@/widgets/dashboard/lib/dashboard-header-titles/dashboard-header-titles';
+import { dashboardHeaderTitles } from '@/widgets/dashboard/config/dashboard-header-titles/dashboard-header-titles';
 
 import styles from '@/widgets/dashboard/ui/dashboard-analytics/styles/dashboard-analytics.module.scss';
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard/ui/dashboard-analytics/ui/DashboardAnalyticsHeader';

@@ -6,14 +6,9 @@
   justify-content: center;
   gap: 0.625rem;
 
-  width: 100%;
-  border-radius: 1.875rem;
   font-family: inherit;
-  font-weight: s.$font-weight-semibold;
-
   border: none;
   cursor: pointer;
-  background: transparent;
 
   transition: all 0.2s ease;
 
@@ -29,6 +24,7 @@
 
 .outline {
   color: s.$color-primary-800;
+  background: none;
 
   @include s.button-outline(s.$color-primary-800, none, null);
 }
@@ -56,10 +52,6 @@
   padding: 0;
   min-height: unset;
   font-size: inherit;
-
-  &:hover {
-    background: none;
-  }
 }
 
 .sm {
@@ -75,6 +67,10 @@
 .lg {
   padding: s.$space-4 s.$space-7;
   font-size: s.$font-size-body-lg;
+}
+
+.fullWidth {
+  width: 100%;
 }
 
 .iconWrapper {

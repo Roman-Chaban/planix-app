@@ -14,4 +14,5 @@ export type ButtonProps = {
   endIcon?: ReactNode;
   startIconClassName?: string;
   endIconClassName?: string;
+  fullWidth?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;

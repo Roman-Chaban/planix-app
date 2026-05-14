@@ -9,6 +9,7 @@ import { Box, Typography } from '@/shared/ui/index';
 export const Button: FC<ButtonProps> = ({
   variant = '',
   size = 'compact',
+  fullWidth = false,
   className,
   startIcon,
   endIcon,
@@ -19,7 +20,13 @@ export const Button: FC<ButtonProps> = ({
   type,
   onClick,
 }) => {
-  const buttonClasses = buildClassName(styles.button, styles[variant], styles[size], className);
+  const buttonClasses = buildClassName(
+    styles.button,
+    styles[variant],
+    styles[size],
+    fullWidth && styles.fullWidth,
+    className,
+  );
 
   return (
     <button className={buttonClasses} disabled={disabled} type={type} onClick={onClick}>

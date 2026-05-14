@@ -1,4 +1,4 @@
-import { statusMap } from '@/widgets/projects/lib/status-map/status-map';
+import { statusMap } from '@/widgets/projects/config/status-map/status-map';
 import type { TabId } from '@/widgets/projects/model/types';
 
 import type { ProjectTableItem } from '@/features/projects/model/types';

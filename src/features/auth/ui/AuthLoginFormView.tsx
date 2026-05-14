@@ -3,8 +3,8 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AuthFooter } from '@/widgets/auth/ui/AuthFooter';
-import { AuthHeader } from '@/widgets/auth/ui/AuthHeader';
+import { AuthFooter } from '@/widgets/auth/ui/auth-footer/AuthFooter';
+import { AuthHeader } from '@/widgets/auth/ui/auth-header/AuthHeader';
 
 import type { AuthLoginFormViewProps } from '@/features/auth/model/types';
 

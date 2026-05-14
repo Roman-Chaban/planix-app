@@ -16,7 +16,6 @@ import { toProjectTableItem } from '@/features/projects/model/adapters';
 import { Box, Header, NoProjects, PageWrapper } from '@/shared/ui';
 import { ProjectsTable } from '@/shared/ui/project/ui/ProjectTable';
 
-
 export const ProjectsLayout = () => {
   const [activeId, setActiveId] = useState<TabId>(headerItems[0].id);
   const { projectToDelete, openDeleteModal, closeDeleteModal, isOpen } = useProjectDeleteModal();

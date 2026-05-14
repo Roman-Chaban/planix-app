@@ -69,25 +69,25 @@
 td,
 th {
   &:nth-child(1) {
-    @include table-col(8%, 11.813rem);
+    @include table-col(6%, 11.813rem);
   }
   &:nth-child(2) {
-    @include table-col(10%, 8.313rem);
+    @include table-col(7%, 8.313rem);
   }
   &:nth-child(3) {
-    @include table-col(8%, 11.5rem);
+    @include table-col(6%, 11.5rem);
   }
   &:nth-child(4) {
     @include table-col(5%, 4.875rem);
   }
   &:nth-child(5) {
-    @include table-col(8%, 6.875rem);
+    @include table-col(6%, 6.875rem);
   }
   &:nth-child(6) {
-    @include table-col(5%, 4.063rem);
+    @include table-col(4%, 4.063rem);
   }
   &:nth-child(7) {
-    @include table-col(6%, 5.938rem);
+    @include table-col(5%, 5.938rem);
   }
   &:nth-child(8) {
     @include table-col(4%, 5.25rem);

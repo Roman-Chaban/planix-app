@@ -1,0 +1,5 @@
+@use '@shared/styles' as s;
+
+.wrapper {
+  @include s.flex-col(0.188rem, start);
+}

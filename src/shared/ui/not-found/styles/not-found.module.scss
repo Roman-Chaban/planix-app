@@ -1,29 +1,29 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .layout {
   min-height: 100dvh;
-  @include s.flex-center;
+  @include flex-center;
   padding: 2rem;
 
-  @include s.respond(laptop) {
+  @include respond(laptop) {
     padding: 1rem;
   }
 }
 
 .container {
-  @include s.bounding-container;
+  @include bounding-container;
   place-items: center;
   min-height: 90dvh;
-  background: s.$color-white;
-  border-top: 3px solid s.$color-primary-800;
-  box-shadow: s.$shadow-not-found;
+  background: $color-white;
+  border-top: 3px solid $color-primary-800;
+  box-shadow: $shadow-not-found;
   border-radius: 1.875rem;
 
-  @include s.respond(laptop) {
-    @include s.flex-col(3rem, center, center);
+  @include respond(laptop) {
+    @include flex-col(3rem, center, center);
   }
 }
 
 .errorBlock {
-  @include s.flex-col(2rem, center, stretch);
+  @include flex-col(2rem, center, stretch);
 }

@@ -1,33 +1,33 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .cardsWrapper {
   width: 100%;
 }
 
 .cards {
-  @include s.responsive-grid(18rem, 1.875rem);
+  @include responsive-grid(18rem, 1.875rem);
 }
 
 .card {
   position: relative;
   border-radius: 1rem;
-  box-shadow: s.$shadow-elevation-2;
-  background: s.$color-white;
-  border: 0.125rem solid s.$color-black-300;
+  box-shadow: $shadow-elevation-2;
+  background: $color-white;
+  border: 0.125rem solid $color-black-300;
   padding: 1.25rem 1.375rem;
   background:
-    s.$linear-gradient-200 top / 100% 6rem no-repeat,
-    s.$color-white;
+    $linear-gradient-200 top / 100% 6rem no-repeat,
+    $color-white;
 
   &::before {
-    @include s.text-before-decoration(
+    @include text-before-decoration(
       '',
       absolute,
       0,
       0.25rem,
       1.188rem,
       0 0.5rem 0.5rem 0,
-      s.$color-primary-800
+      $color-primary-800
     );
   }
 }

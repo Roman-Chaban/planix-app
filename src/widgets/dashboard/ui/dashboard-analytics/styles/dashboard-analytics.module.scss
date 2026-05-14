@@ -1,22 +1,22 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .analyticsWrapper {
-  @include s.responsive-grid-widgets(2.45fr 1fr 1fr, 1.875rem);
+  @include responsive-grid-widgets(2.45fr 1fr 1fr, 1.875rem);
 
-  @include s.respond(wide) {
-    @include s.responsive-grid-widgets(2fr 1fr, 1.875rem);
+  @include respond(wide) {
+    @include responsive-grid-widgets(2fr 1fr, 1.875rem);
   }
 
-  @include s.respond(desktop) {
-    @include s.responsive-grid-widgets(1fr, 1.875rem);
+  @include respond(desktop) {
+    @include responsive-grid-widgets(1fr, 1.875rem);
   }
 }
 
 .primary,
 .secondary,
 .tertiary {
-  @include s.widget-box;
-  @include s.flex-col(0, start, stretch);
+  @include widget-box;
+  @include flex-col(0, start, stretch);
 }
 
 .primary {
@@ -25,29 +25,29 @@
 
 .analyticsHeader {
   position: relative;
-  @include s.flex(flex, row, start, center, 0, none);
+  @include flex(flex, row, start, center, 0, none);
   padding: 0.688rem 0.5rem 0.688rem 1.25rem;
   border-radius: 0.75rem;
-  background: s.$color-black-200;
+  background: $color-black-200;
 }
 
 .analyticsTitle {
   line-height: 150%;
-  color: s.$color-black-800;
+  color: $color-black-800;
   font: {
-    size: s.$font-size-body-lg;
-    weight: s.$font-weight-semibold;
+    size: $font-size-body-lg;
+    weight: $font-weight-semibold;
   }
 
   &::before {
-    @include s.text-before-decoration(
+    @include text-before-decoration(
       '',
       absolute,
       0,
       0.25rem,
       1.125rem,
       0 0.5rem 0.5rem 0,
-      s.$color-primary-800,
+      $color-primary-800,
       true
     );
   }

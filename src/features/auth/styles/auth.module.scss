@@ -1,46 +1,47 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .loginWrapper {
-  @include s.flex-col(0, space-between);
+  @include flex-col(0, space-between);
   height: 100%;
 }
 
 .loginContent {
-  @include s.flex-col(2.813rem);
+  @include flex-col(2.813rem);
   padding-block-start: 2.625rem;
 
-  @include s.respond(tablet) {
+  @include respond(tablet) {
     padding-block-start: 0;
     gap: 2rem;
   }
 }
 
 .loginForm {
-  @include s.flex-col(1.5rem);
+  @include flex-col(1.5rem);
 }
 
 .loginFormMainWrapper {
-  @include s.flex-col(3.625rem);
+  @include flex-col(3.625rem);
 
-  @include s.respond(tablet) {
+  @include respond(tablet) {
     gap: 1.5rem;
   }
 }
 
 .loginFormMain {
-  @include s.flex-row(0, space-between, center);
+  @include flex-row(0, space-between, center);
 }
 
 .loginFormLink {
   line-height: 150%;
-  color: s.$color-black-1200;
+  color: $color-black-1200;
 
-  @include s.respond(mobile-lg) {
-    font-size: s.$font-size-body-sm;
+  @include respond(mobile-lg) {
+    font-size: $font-size-body-sm;
   }
 }
 
 .button {
   width: 100%;
   max-width: 8.188rem;
+  border-radius: 1.875rem;
 }

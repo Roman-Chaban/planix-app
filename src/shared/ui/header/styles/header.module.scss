@@ -1,22 +1,22 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .header {
   width: 100%;
-  border-bottom: 0.094rem solid s.$color-black-200;
-  box-shadow: s.$shadow-elevation-1;
+  border-bottom: 0.094rem solid $color-black-200;
+  box-shadow: $shadow-elevation-1;
   grid-area: header;
 }
 
 .wrapper {
   width: 100%;
-  @include s.flex(flex, row, start, center);
+  @include flex(flex, row, start, center);
   padding: 1.125rem 1rem;
 
-  @include s.respond(laptop) {
+  @include respond(laptop) {
     gap: 2rem;
   }
 
-  @include s.respond(tablet) {
+  @include respond(tablet) {
     padding-inline: 1rem;
   }
 }
@@ -24,40 +24,40 @@
 .headerLeftSide {
   width: 100%;
   max-width: 18.125rem;
-  @include s.flex-row(0.813rem, start, center);
+  @include flex-row(0.813rem, start, center);
 
-  @include s.respond(laptop) {
+  @include respond(laptop) {
     max-width: fit-content;
   }
 
-  @include s.respond(tablet) {
+  @include respond(tablet) {
     display: none;
   }
 }
 
 .logoTitle {
-  color: s.$color-black-1200;
+  color: $color-black-1200;
   line-height: 150%;
   font: {
-    weight: s.$font-weight-semibold;
-    size: s.$line-height-body-md;
+    weight: $font-weight-semibold;
+    size: $line-height-body-md;
   }
 }
 
 .headerRightSide {
   width: 100%;
-  @include s.flex(flex, row, space-between, center, 0, nowrap);
+  @include flex(flex, row, space-between, center, 0, nowrap);
   padding-inline: 0.875rem;
 
-  @include s.respond(tablet) {
+  @include respond(tablet) {
     padding-inline: 0;
   }
 }
 
 .title {
   font: {
-    size: s.$font-size-h6;
-    weight: s.$font-weight-bold;
+    size: $font-size-h6;
+    weight: $font-weight-bold;
   }
   line-height: 150%;
 }
@@ -66,15 +66,7 @@
   position: relative;
 
   &::after {
-    @include s.button-background-overlay(
-      '',
-      absolute,
-      0,
-      s.$color-primary-800,
-      0.05,
-      inherit,
-      none
-    );
+    @include button-background-overlay('', absolute, 0, $color-primary-800, 0.05, inherit, none);
   }
 }
 
@@ -89,16 +81,16 @@
 }
 
 .headerAuth {
-  @include s.flex-center;
-  gap: s.$space-9;
+  @include flex-center;
+  gap: $space-9;
 }
 
 /* Styles Mock: [Temporary mock these styles] */
 .avatar {
-  @include s.flex-center;
+  @include flex-center;
   width: 3rem;
   height: 3rem;
-  background: s.$color-primary-300;
-  color: s.$color-white;
+  background: $color-primary-300;
+  color: $color-white;
   border-radius: 100%;
 }

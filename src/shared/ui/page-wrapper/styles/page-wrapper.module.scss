@@ -1,9 +1,9 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .grid {
-  @include s.grid(18.125rem 1fr, auto 1fr, 'header header' 'sidebar content', 0);
+  @include grid(18.125rem 1fr, auto 1fr, 'header header' 'sidebar content', 0);
 
-  @include s.respond(laptop) {
+  @include respond(laptop) {
     grid: {
       template-columns: 1fr;
       template-areas: 'header' 'content';
@@ -18,10 +18,10 @@
   grid-area: content;
   padding-block: 1.938rem 3.313rem;
   padding-inline: 1.875rem;
-  @include s.flex-col(1rem, start, stretch);
-  @include s.hide-scrollbar;
+  @include flex-col(1rem, start, stretch);
+  @include hide-scrollbar;
 
-  @include s.respond(tablet) {
+  @include respond(tablet) {
     padding-inline: 1rem;
   }
 }

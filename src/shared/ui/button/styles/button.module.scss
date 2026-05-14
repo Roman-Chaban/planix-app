@@ -1,4 +1,4 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .button {
   display: inline-flex;
@@ -12,32 +12,32 @@
 
   transition: all 0.2s ease;
 
-  @include s.button-disabled;
+  @include button-disabled;
 }
 
 .default {
-  background: s.$color-primary-800;
-  color: s.$color-black-100;
+  background: $color-primary-800;
+  color: $color-black-100;
 
-  @include s.button-interaction(s.$color-primary-1100);
+  @include button-interaction($color-primary-1100);
 }
 
 .outline {
-  color: s.$color-primary-800;
+  color: $color-primary-800;
   background: none;
 
-  @include s.button-outline(s.$color-primary-800, none, null);
+  @include button-outline($color-primary-800, none, null);
 }
 
 .soft {
-  background: s.$color-primary-100;
-  color: s.$color-primary-800;
+  background: $color-primary-100;
+  color: $color-primary-800;
 
-  @include s.button-outline(s.$color-primary-800, none, null);
+  @include button-outline($color-primary-800, none, null);
 }
 
 .tertiary {
-  @include s.button-link;
+  @include button-link;
 }
 
 .circle {
@@ -55,18 +55,18 @@
 }
 
 .sm {
-  padding: s.$space-2 s.$space-7;
-  font-size: s.$font-size-body-sm;
+  padding: $space-2 $space-7;
+  font-size: $font-size-body-sm;
 }
 
 .md {
-  padding: s.$space-3 s.$space-7;
-  font-size: s.$font-size-body-md;
+  padding: $space-3 $space-7;
+  font-size: $font-size-body-md;
 }
 
 .lg {
-  padding: s.$space-4 s.$space-7;
-  font-size: s.$font-size-body-lg;
+  padding: $space-4 $space-7;
+  font-size: $font-size-body-lg;
 }
 
 .fullWidth {
@@ -80,5 +80,5 @@
 
 .startIcon,
 .endIcon {
-  @include s.flex-center;
+  @include flex-center;
 }

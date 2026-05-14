@@ -1,9 +1,9 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .link {
-  @include s.link-style;
+  @include link-style;
 }
 
 .underline {
-  @include s.link-style(underline);
+  @include link-style(underline);
 }

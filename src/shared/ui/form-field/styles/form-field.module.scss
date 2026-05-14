@@ -1,47 +1,47 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .field {
-  @include s.flex-col(0.188rem);
+  @include flex-col(0.188rem);
 }
 
 .inputWrapper {
   width: 100%;
   position: relative;
   border-radius: 1rem;
-  border: 0.063rem solid s.$color-black-400;
+  border: 0.063rem solid $color-black-400;
   transition: all 0.35s ease-in-out 0s;
 
-  @include s.input-border-active(s.$color-primary-600);
-  @include s.input-disabled(s.$color-black-300, s.$color-black-200);
+  @include input-border-active($color-primary-600);
+  @include input-disabled($color-black-300, $color-black-200);
 }
 
 .label {
-  @include s.text-body-sm;
-  color: s.$color-black-800;
+  @include text-body-sm;
+  color: $color-black-800;
 }
 
 .slotStart {
-  @include s.input-icon(left);
+  @include input-icon(left);
 }
 
 .slotEnd {
-  @include s.input-icon(right);
+  @include input-icon(right);
 }
 
 .divider {
   position: absolute;
-  left: calc(s.$space-8 + 1.25rem + s.$space-4);
+  left: calc($space-8 + 1.25rem + $space-4);
   top: 50%;
   transform: translateY(-50%);
   width: 0.113rem;
   height: 1.313rem;
-  background: s.$color-border-line;
+  background: $color-border-line;
   z-index: 2;
 }
 
 /* Variants */
 
 .search {
-  box-shadow: s.$shadow-input-search;
-  border-color: s.$color-black-300;
+  box-shadow: $shadow-input-search;
+  border-color: $color-black-300;
 }

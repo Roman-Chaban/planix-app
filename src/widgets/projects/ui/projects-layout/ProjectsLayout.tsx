@@ -6,16 +6,16 @@ import { headerItems } from '@/widgets/projects/config/header-items/header-items
 import { filterProjects } from '@/widgets/projects/lib/filter-projects/filter-projects';
 import type { TabId } from '@/widgets/projects/model/types';
 import styles from '@/widgets/projects/styles/projects.module.scss';
-import { useProjectDeleteModal } from '@/widgets/projects/ui/ProjectsDeleteModal/hooks/useProjectDeleteModal';
-import { ProjectsHeader } from '@/widgets/projects/ui/ProjectsHeader/ui/ProjectsHeader';
-import { ProjectToolbar } from '@/widgets/projects/ui/ProjectsToolbar/ui/ProjectsToolbar';
+import { useProjectDeleteModal } from '@/widgets/projects/ui/projects-delete-modal/hooks/useProjectDeleteModal';
+import { ProjectDeleteModal } from '@/widgets/projects/ui/projects-delete-modal/ui/ProjectDeleteModal';
+import { ProjectsHeader } from '@/widgets/projects/ui/projects-header/ui/ProjectsHeader';
+import { ProjectToolbar } from '@/widgets/projects/ui/projects-toolbar/ui/ProjectsToolbar';
 import { useAllProjects } from '@/features/projects/hooks/useAllProjects';
 import { useProjectsFilters } from '@/features/projects/hooks/useProjectsFilters';
 import { toProjectTableItem } from '@/features/projects/model/adapters';
 import { Box, Header, NoProjects, PageWrapper } from '@/shared/ui';
 import { ProjectsTable } from '@/shared/ui/project/ui/ProjectTable';
 
-import { ProjectDeleteModal } from './ProjectsDeleteModal/ui/ProjectDeleteModal';
 
 export const ProjectsLayout = () => {
   const [activeId, setActiveId] = useState<TabId>(headerItems[0].id);

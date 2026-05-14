@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 
 import { useAuthLogin } from '@/features/auth/hooks/useAuthLogin';
-import { AuthLoginFormView } from '@/features/auth/ui/AuthLoginFormView';
+import { AuthLoginFormView } from '@/features/auth/ui/auth-login-form-view/AuthLoginFormView';
 
 export const AuthLoginForm: FC = () => {
   const form = useAuthLogin();

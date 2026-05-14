@@ -9,10 +9,10 @@ import { AuthHeader } from '@/widgets/auth/ui/auth-header/AuthHeader';
 import type { AuthLoginFormViewProps } from '@/features/auth/model/types';
 
 import styles from '@/features/auth/styles/auth.module.scss';
-import { Box } from '@/shared/ui/index';
 
-import { AuthLoginFields } from './AuthLoginFields';
-import { AuthLoginMain } from './AuthLoginMain';
+import { AuthLoginFields } from '@/features/auth/ui/auth-login-fields/AuthLoginFields';
+import { AuthLoginMain } from '@/features/auth/ui/auth-login-main/AuthLoginMain';
+import { Box } from '@/shared/ui/index';
 
 export const AuthLoginFormView: FC<AuthLoginFormViewProps> = ({
   onSubmit,

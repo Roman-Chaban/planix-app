@@ -1,4 +1,4 @@
-import type { HeaderItems } from '@/widgets/projects/ui/ProjectsHeader/model/types';
+import type { HeaderItems } from '@/widgets/projects/ui/projects-header/model/types';
 
 export const headerItems: HeaderItems = [
   {

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { sidebarNavItems } from '@/widgets/sidebar/config/sidebar-nav-items/sidebar-nav-items';
 import styles from '@/widgets/sidebar/styles/sidebar.module.scss';
-import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
+import { SidebarNavItem } from '@/widgets/sidebar/ui/sidebar-nav-item/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/helpers/isActiveRoute/isActiveRoute';
 import { List } from '@/shared/ui';
 

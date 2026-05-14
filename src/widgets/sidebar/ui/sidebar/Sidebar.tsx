@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 
 import styles from '@/widgets/sidebar/styles/sidebar.module.scss';
-import { SidebarNav } from '@/widgets/sidebar/ui/SidebarNav';
+import { SidebarNav } from '@/widgets/sidebar/ui/sidebar-nav/SidebarNav';
 
 import { Box } from '@/shared/ui';
 

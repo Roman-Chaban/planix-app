@@ -5,7 +5,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@/widgets/projects/styles/projects.module.scss';
-import type { ProjectsToolbarProps } from '@/widgets/projects/ui/ProjectsToolbar/model/types';
+import type { ProjectsToolbarProps } from '@/widgets/projects/ui/projects-toolbar/model/types';
 import { ICON_POSITION } from '@/shared/constants/common';
 import { INPUT_TYPES } from '@/shared/constants/inputs';
 import { Box, ProjectButton } from '@/shared/ui';

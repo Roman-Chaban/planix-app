@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
-import { filterProjects } from '@/widgets/projects/lib/filter-projects/filter-projects';
 import { headerItems } from '@/widgets/projects/config/header-items/header-items';
+import { filterProjects } from '@/widgets/projects/lib/filter-projects/filter-projects';
 import type { TabId } from '@/widgets/projects/model/types';
 import styles from '@/widgets/projects/styles/projects.module.scss';
 import { useProjectDeleteModal } from '@/widgets/projects/ui/ProjectsDeleteModal/hooks/useProjectDeleteModal';

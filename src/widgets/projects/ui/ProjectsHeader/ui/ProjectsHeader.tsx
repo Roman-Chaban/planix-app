@@ -2,7 +2,7 @@
 
 import type { FC } from 'react';
 
-import { headerItems } from '@/widgets/projects/lib/header-items/header-items';
+import { headerItems } from '@/widgets/projects/config/header-items/header-items';
 
 import styles from '@/widgets/projects/styles/projects.module.scss';
 import type { ProjectsHeaderProps } from '@/widgets/projects/ui/ProjectsHeader/model/types';

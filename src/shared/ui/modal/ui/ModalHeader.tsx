@@ -1,23 +1,23 @@
-import { type FC } from 'react';
+import type { FC } from 'react';
 
-import { CloseIcon } from '@/shared/ui/icons/index';
+import { useTranslation } from 'react-i18next';
+
 import { Box, Button, Typography } from '@/shared/ui/index';
 
+import type { ModalHeaderProps } from '@/shared/ui/modal/model/types';
 import styles from '@/shared/ui/modal/styles/modal.module.scss';
 
-type ModalHeaderProps = {
-  onClose: () => void;
-};
+export const ModalHeader: FC<ModalHeaderProps> = ({ onClose, title, icon }) => {
+  const { t } = useTranslation();
 
-export const ModalHeader: FC<ModalHeaderProps> = ({ onClose }) => {
   return (
     <Box className={styles.header}>
       <Typography as="h3" className={styles.title}>
-        Reason For Cancel
+        {t(title)}
       </Typography>
 
       <Button className={styles.button} onClick={onClose}>
-        <CloseIcon />
+        {icon}
       </Button>
     </Box>
   );

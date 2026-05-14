@@ -6,19 +6,22 @@ import { createPortal } from 'react-dom';
 
 import { useModalBehavior } from '@/shared/hooks/useModalBehavior';
 
-import { ModalContent, ModalHeader, ModalOverlay } from '@/shared/ui/modal/index';
+import { ModalContent, ModalOverlay } from '@/shared/ui/modal/index';
 import type { ModalProps } from '@/shared/ui/modal/model/types';
 
-export const Modal: FC<ModalProps> = ({ isOpen, onClose, closeOnOverlayClick = true }) => {
+export const Modal: FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  closeOnOverlayClick = true,
+  children,
+}) => {
   useModalBehavior({ isOpen, onClose });
 
   if (!isOpen) return null;
 
   return createPortal(
     <ModalOverlay onClose={onClose} closeOnOverlayClick={closeOnOverlayClick}>
-      <ModalContent>
-        <ModalHeader onClose={onClose} />
-      </ModalContent>
+      <ModalContent>{children}</ModalContent>
     </ModalOverlay>,
     document.body,
   );

@@ -1,44 +1,46 @@
-@use '@/shared/styles' as s;
+@use '@/shared/styles' as *;
 
 .overlay {
   position: fixed;
   inset: 0;
-  z-index: s.$z-index-modal;
-  background: s.$color-modal-overlay;
+  z-index: $z-index-modal;
+  background: $color-modal-overlay;
 }
 
 .modal {
   width: 100vw;
   min-height: 100dvh;
-  @include s.flex-center;
+  @include flex-center;
 }
 
 .content {
+  @include s.flex-col(1.75rem);
   padding: 2.5rem;
   border: {
-    top: 0.188rem solid s.$color-primary-800;
+    top: 0.188rem solid $color-primary-800;
     radius: 0.75rem;
   }
   width: 100%;
   max-width: 35.313rem;
   min-height: 24.813rem;
-  background: s.$color-white;
-  box-shadow: s.$shadow-not-found;
+  background: $color-white;
+  box-shadow: $shadow-not-found;
 }
 
 .header {
-  @include s.flex(flex, row, space-between, center, 0);
+  @include flex(flex, row, space-between, center, 0);
 }
 
 .title {
   line-height: 150%;
   font: {
-    weight: s.$font-weight-extrabold;
-    size: s.$line-height-body-md;
+    weight: $font-weight-extrabold;
+    size: $line-height-body-md;
   }
 }
 
 .button {
   width: 1.625rem;
   height: 1.625rem;
+  background: transparent;
 }

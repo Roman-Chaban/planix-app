@@ -91,5 +91,16 @@
       "status": "Status",
       "action": "Action"
     }
+  },
+  "ProjectsModal": {
+    "Header": {
+      "title": "Reason For Cancel"
+    },
+    "Content": {
+      "label": "Reason",
+      "placeholder": "Enter Here...",
+      "cancel": "Cancel",
+      "save": "Save"
+    }
   }
 }

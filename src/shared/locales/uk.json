@@ -91,5 +91,16 @@
       "status": "Статус",
       "action": "Дії"
     }
+  },
+  "ProjectsModal": {
+    "Header": {
+      "title": "Причина скасування"
+    },
+    "Content": {
+      "label": "Причина",
+      "placeholder": "Введіть тут...",
+      "cancel": "Скасувати",
+      "save": "Зберегти"
+    }
   }
 }

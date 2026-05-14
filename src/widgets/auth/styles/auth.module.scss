@@ -2,7 +2,7 @@
 
 .layout {
   min-height: 100dvh;
-  @include s.bounding_container(s.$spacing-space-10);
+  @include s.bounding_container(s.$space-10);
 
   @include s.respond(tablet) {
     padding: 1rem;
@@ -35,17 +35,17 @@
 }
 
 .title {
-  font-weight: s.$size-font-weight-semibold;
-  font-size: s.$size-font-size-h4;
+  font-weight: s.$font-weight-semibold;
+  font-size: s.$font-size-h4;
 }
 
 .subtitle {
-  font-size: s.$size-font-size-body-md;
-  color: s.$color-color-black-800;
+  font-size: s.$font-size-body-md;
+  color: s.$color-black-800;
 }
 
 .highlight {
-  color: s.$color-color-decoration-text;
+  color: s.$color-decoration-text;
 }
 
 .footer {
@@ -60,5 +60,5 @@
 
 .text,
 .link {
-  font-size: s.$size-font-size-body-sm;
+  font-size: s.$font-size-body-sm;
 }

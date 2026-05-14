@@ -11,13 +11,13 @@
 .card {
   position: relative;
   border-radius: 1rem;
-  box-shadow: s.$shadow-shadow-elevation-2;
-  background: s.$color-color-white;
-  border: 0.125rem solid s.$color-color-black-300;
+  box-shadow: s.$shadow-elevation-2;
+  background: s.$color-white;
+  border: 0.125rem solid s.$color-black-300;
   padding: 1.25rem 1.375rem;
   background:
-    s.$color-linear-gradient-200 top / 100% 6rem no-repeat,
-    s.$color-color-white;
+    s.$linear-gradient-200 top / 100% 6rem no-repeat,
+    s.$color-white;
 
   &::before {
     @include s.text-before-decoration(
@@ -27,7 +27,7 @@
       0.25rem,
       1.188rem,
       0 0.5rem 0.5rem 0,
-      s.$color-color-primary-800
+      s.$color-primary-800
     );
   }
 }

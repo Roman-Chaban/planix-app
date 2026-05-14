@@ -8,26 +8,26 @@
   line-height: 150%;
   width: fit-content;
   font: {
-    weight: s.$size-font-weight-semibold;
+    weight: s.$font-weight-semibold;
   }
 }
 
 .pending {
-  background: s.$color-color-black-300;
-  color: s.$color-color-black-800;
+  background: s.$color-black-300;
+  color: s.$color-black-800;
 }
 
 .inProgress {
-  background: s.$color-color-warning-200;
-  color: s.$color-color-warning-800;
+  background: s.$color-warning-200;
+  color: s.$color-warning-800;
 }
 
 .canceled {
-  background: s.$color-color-error-300;
-  color: s.$color-color-error-900;
+  background: s.$color-error-300;
+  color: s.$color-error-900;
 }
 
 .completed {
-  background: s.$color-color-success-300;
-  color: s.$color-color-success-900;
+  background: s.$color-success-300;
+  color: s.$color-success-900;
 }

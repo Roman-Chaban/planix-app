@@ -3,8 +3,8 @@
 .wrapper {
   width: 100%;
   padding: 0.5rem;
-  background: s.$color-color-white;
-  box-shadow: s.$shadow-shadow-elevation-2;
+  background: s.$color-white;
+  box-shadow: s.$shadow-elevation-2;
   border-radius: 1rem;
   @include s.table-scroll;
   @include s.hide-scrollbar;
@@ -24,7 +24,7 @@
   }
 
   .heading {
-    background: s.$color-color-black-200;
+    background: s.$color-black-200;
     @include s.table-cell(0.563rem 1rem);
 
     &:first-child {
@@ -38,8 +38,8 @@
 }
 
 .heading {
-  color: s.$color-color-black-1200;
-  font-weight: s.$size-font-weight-semibold;
+  color: s.$color-black-1200;
+  font-weight: s.$font-weight-semibold;
 }
 
 .cell {
@@ -49,7 +49,7 @@
 .bodyRow {
   td {
     @include s.table-cell(1rem);
-    border-bottom: 0.094rem solid s.$color-color-black-300;
+    border-bottom: 0.094rem solid s.$color-black-300;
   }
 
   &:last-child td {

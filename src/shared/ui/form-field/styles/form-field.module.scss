@@ -8,16 +8,16 @@
   width: 100%;
   position: relative;
   border-radius: 1rem;
-  border: 0.063rem solid s.$color-color-black-400;
+  border: 0.063rem solid s.$color-black-400;
   transition: all 0.35s ease-in-out 0s;
 
-  @include s.input-border-active(s.$color-color-primary-600);
-  @include s.input-disabled(s.$color-color-black-300, s.$color-color-black-200);
+  @include s.input-border-active(s.$color-primary-600);
+  @include s.input-disabled(s.$color-black-300, s.$color-black-200);
 }
 
 .label {
   @include s.text-body-sm;
-  color: s.$color-color-black-800;
+  color: s.$color-black-800;
 }
 
 .slotStart {
@@ -30,18 +30,18 @@
 
 .divider {
   position: absolute;
-  left: calc(s.$spacing-space-8 + 1.25rem + s.$spacing-space-4);
+  left: calc(s.$space-8 + 1.25rem + s.$space-4);
   top: 50%;
   transform: translateY(-50%);
   width: 0.113rem;
   height: 1.313rem;
-  background: s.$color-color-border-line;
+  background: s.$color-border-line;
   z-index: 2;
 }
 
 /* Variants */
 
 .search {
-  box-shadow: s.$shadow-shadow-input-search;
-  border-color: s.$color-color-black-300;
+  box-shadow: s.$shadow-input-search;
+  border-color: s.$color-black-300;
 }

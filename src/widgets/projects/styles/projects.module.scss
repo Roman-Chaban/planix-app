@@ -28,9 +28,8 @@
   max-width: 100%;
   @include menu-horizontal-scroll;
 
-  // Використовуємо префікси shadow- та color- без s.
-  box-shadow: $shadow-shadow-not-found;
-  background: $color-color-white;
+  box-shadow: $shadow-not-found;
+  background: $color-white;
   padding: 0.5rem;
   border-radius: 1rem;
 
@@ -67,29 +66,29 @@
 }
 
 .label {
-  color: $color-color-black-1200;
+  color: $color-black-1200;
 
   font: {
-    weight: $size-font-weight-regular;
-    size: $size-font-size-body-lg;
+    weight: $font-weight-regular;
+    size: $font-size-body-lg;
   }
 }
 
 .active {
-  border-color: $color-color-primary-800;
-  box-shadow: $shadow-shadow-not-found;
+  border-color: $color-primary-800;
+  box-shadow: $shadow-not-found;
 }
 
 .activeLabel {
-  font-weight: $size-font-weight-semibold;
-  color: $color-color-primary-800;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-800;
 }
 
 .content {
   width: 100%;
   height: 100%;
-  background: $color-color-white;
-  box-shadow: $shadow-shadow-elevation-2;
+  background: $color-white;
+  box-shadow: $shadow-elevation-2;
   border-radius: 1rem;
 }
 

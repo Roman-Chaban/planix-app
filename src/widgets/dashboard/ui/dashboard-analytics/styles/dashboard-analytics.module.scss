@@ -28,15 +28,15 @@
   @include s.flex(flex, row, start, center, 0, none);
   padding: 0.688rem 0.5rem 0.688rem 1.25rem;
   border-radius: 0.75rem;
-  background: s.$color-color-black-200;
+  background: s.$color-black-200;
 }
 
 .analyticsTitle {
   line-height: 150%;
-  color: s.$color-color-black-800;
+  color: s.$color-black-800;
   font: {
-    size: s.$size-font-size-body-lg;
-    weight: s.$size-font-weight-semibold;
+    size: s.$font-size-body-lg;
+    weight: s.$font-weight-semibold;
   }
 
   &::before {
@@ -47,7 +47,7 @@
       0.25rem,
       1.125rem,
       0 0.5rem 0.5rem 0,
-      s.$color-color-primary-800,
+      s.$color-primary-800,
       true
     );
   }

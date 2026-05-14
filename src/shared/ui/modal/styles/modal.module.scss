@@ -4,7 +4,7 @@
   position: fixed;
   inset: 0;
   z-index: s.$z-index-modal;
-  background: s.$color-color-modal-overlay;
+  background: s.$color-modal-overlay;
 }
 
 .modal {
@@ -16,14 +16,14 @@
 .content {
   padding: 2.5rem;
   border: {
-    top: 0.188rem solid s.$color-color-primary-800;
+    top: 0.188rem solid s.$color-primary-800;
     radius: 0.75rem;
   }
   width: 100%;
   max-width: 35.313rem;
   min-height: 24.813rem;
-  background: s.$color-color-white;
-  box-shadow: s.$shadow-shadow-not-found;
+  background: s.$color-white;
+  box-shadow: s.$shadow-not-found;
 }
 
 .header {
@@ -33,8 +33,8 @@
 .title {
   line-height: 150%;
   font: {
-    weight: s.$size-font-weight-extrabold;
-    size: s.$size-line-height-body-md;
+    weight: s.$font-weight-extrabold;
+    size: s.$line-height-body-md;
   }
 }
 

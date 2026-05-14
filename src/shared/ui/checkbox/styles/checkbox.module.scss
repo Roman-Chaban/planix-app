@@ -17,10 +17,10 @@
 .box {
   @include s.flex(flex, row, center, center);
   position: relative;
-  width: s.$size-line-height-body-md;
-  height: s.$size-line-height-body-md;
+  width: s.$line-height-body-md;
+  height: s.$line-height-body-md;
   border-radius: 0.375rem;
-  border: 0.125rem solid s.$color-color-black-400;
+  border: 0.125rem solid s.$color-black-400;
 
   transition:
     background 0.35s ease-in-out,
@@ -28,14 +28,14 @@
 }
 
 @include s.checkbox-checked(
-  s.$color-color-primary-700,
-  s.$color-color-primary-700,
-  s.$color-color-primary-800,
-  s.$color-color-primary-800
+  s.$color-primary-700,
+  s.$color-primary-700,
+  s.$color-primary-800,
+  s.$color-primary-800
 );
 
 .checkIcon {
-  color: s.$color-color-white;
+  color: s.$color-white;
   opacity: 0;
   transition:
     opacity 0.35s ease-in-out,
@@ -49,9 +49,9 @@
 
 .label {
   line-height: 150%;
-  color: s.$color-color-black-1200;
+  color: s.$color-black-1200;
 
   @include s.respond(mobile-lg) {
-    font-size: s.$size-font-size-body-sm;
+    font-size: s.$font-size-body-sm;
   }
 }

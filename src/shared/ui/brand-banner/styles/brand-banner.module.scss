@@ -16,7 +16,7 @@
   padding: 1.875rem;
 
   &::after {
-    @include s.overlay(1.875rem, s.$color-linear-gradient-100);
+    @include s.overlay(1.875rem, s.$linear-gradient-100);
     z-index: 0;
   }
 
@@ -50,12 +50,12 @@
 }
 
 .title {
-  font-weight: s.$size-font-weight-semibold;
+  font-weight: s.$font-weight-semibold;
   line-height: 150%;
-  font-size: s.$size-font-size-h4;
+  font-size: s.$font-size-h4;
 
   @include s.respond(mobile-lg) {
-    font-size: s.$size-font-size-h5;
+    font-size: s.$font-size-h5;
   }
 }
 
@@ -64,15 +64,15 @@
   width: 100%;
   max-width: 33rem;
   line-height: 150%;
-  font-weight: s.$size-font-weight-bold;
-  color: s.$color-color-white;
-  font-size: s.$size-font-size-h5;
+  font-weight: s.$font-weight-bold;
+  color: s.$color-white;
+  font-size: s.$font-size-h5;
 
   @include s.respond(tablet) {
-    font-size: s.$size-font-size-h6;
+    font-size: s.$font-size-h6;
   }
 
   @include s.respond(mobile-lg) {
-    font-size: s.$size-font-size-subtitle;
+    font-size: s.$font-size-subtitle;
   }
 }

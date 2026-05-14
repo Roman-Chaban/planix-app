@@ -2,8 +2,8 @@
 
 .header {
   width: 100%;
-  border-bottom: 0.094rem solid s.$color-color-black-200;
-  box-shadow: s.$shadow-shadow-elevation-1;
+  border-bottom: 0.094rem solid s.$color-black-200;
+  box-shadow: s.$shadow-elevation-1;
   grid-area: header;
 }
 
@@ -36,11 +36,11 @@
 }
 
 .logoTitle {
-  color: s.$color-color-black-1200;
+  color: s.$color-black-1200;
   line-height: 150%;
   font: {
-    weight: s.$size-font-weight-semibold;
-    size: s.$size-line-height-body-md;
+    weight: s.$font-weight-semibold;
+    size: s.$line-height-body-md;
   }
 }
 
@@ -56,8 +56,8 @@
 
 .title {
   font: {
-    size: s.$size-font-size-h6;
-    weight: s.$size-font-weight-bold;
+    size: s.$font-size-h6;
+    weight: s.$font-weight-bold;
   }
   line-height: 150%;
 }
@@ -70,7 +70,7 @@
       '',
       absolute,
       0,
-      s.$color-color-primary-800,
+      s.$color-primary-800,
       0.05,
       inherit,
       none
@@ -90,7 +90,7 @@
 
 .headerAuth {
   @include s.flex-center;
-  gap: s.$spacing-space-9;
+  gap: s.$space-9;
 }
 
 /* Styles Mock: [Temporary mock these styles] */
@@ -98,7 +98,7 @@
   @include s.flex-center;
   width: 3rem;
   height: 3rem;
-  background: s.$color-color-primary-300;
-  color: s.$color-color-white;
+  background: s.$color-primary-300;
+  color: s.$color-white;
   border-radius: 100%;
 }

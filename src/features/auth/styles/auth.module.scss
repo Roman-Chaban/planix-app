@@ -33,10 +33,10 @@
 
 .loginFormLink {
   line-height: 150%;
-  color: s.$color-color-black-1200;
+  color: s.$color-black-1200;
 
   @include s.respond(mobile-lg) {
-    font-size: s.$size-font-size-body-sm;
+    font-size: s.$font-size-body-sm;
   }
 }
 

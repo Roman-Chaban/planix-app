@@ -14,9 +14,9 @@
   @include s.bounding-container;
   place-items: center;
   min-height: 90dvh;
-  background: s.$color-color-white;
-  border-top: 3px solid s.$color-color-primary-800;
-  box-shadow: s.$shadow-shadow-not-found;
+  background: s.$color-white;
+  border-top: 3px solid s.$color-primary-800;
+  box-shadow: s.$shadow-not-found;
   border-radius: 1.875rem;
 
   @include s.respond(laptop) {

@@ -12,7 +12,7 @@
   width: 8.75rem;
   height: 8.75rem;
   border-radius: 100%;
-  background: s.$color-color-black-200;
+  background: s.$color-black-200;
 }
 
 .content {
@@ -20,16 +20,16 @@
 }
 
 .title {
-  color: s.$color-color-black-1200;
+  color: s.$color-black-1200;
   line-height: 150%;
   font: {
-    weight: s.$size-font-weight-semibold;
-    size: s.$size-line-height-body-md;
+    weight: s.$font-weight-semibold;
+    size: s.$line-height-body-md;
   }
 }
 
 .subtitle {
-  color: s.$color-color-black-700;
+  color: s.$color-black-700;
   width: 100%;
   max-width: 36.375rem;
   text-align: center;

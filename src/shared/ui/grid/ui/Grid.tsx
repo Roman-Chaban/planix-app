@@ -1,4 +1,3 @@
-
 import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';

@@ -15,7 +15,7 @@ export const ProjectButton: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Button type={BUTTON} variant={DEFAULT} size="md" className={styles.button}>
+    <Button type={BUTTON} variant={DEFAULT} size="md" className={styles.button} fullWidth>
       {t('ProjectsHeader.button')}
     </Button>
   );

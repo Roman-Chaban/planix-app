@@ -1,9 +1,9 @@
-@forward '@/shared/styles/tokens/colors' as color-*;
-@forward '@/shared/styles/tokens/spacing' as spacing-*;
-@forward '@/shared/styles/tokens/typography' as size-*;
-@forward '@/shared/styles/tokens/breakpoints' as bp-*;
+@forward '@/shared/styles/tokens/colors';
+@forward '@/shared/styles/tokens/spacing';
+@forward '@/shared/styles/tokens/typography';
+@forward '@/shared/styles/tokens/breakpoints';
 @forward '@/shared/styles/tokens/z-index';
-@forward '@/shared/styles/tokens/shadows' as shadow-*;
+@forward '@/shared/styles/tokens/shadows';
 
 @forward '@/shared/styles/mixins/flex';
 @forward '@/shared/styles/mixins/grid';

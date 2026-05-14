@@ -14,7 +14,7 @@ export const ProjectsHeaderItem: FC<HeaderItem> = ({ label, isActive, onClick })
 
   return (
     <Box className={buildClassName(styles.box, isActive && styles.active)} onClick={onClick}>
-      <Button type={BUTTON}>
+      <Button type={BUTTON} className={styles.button}>
         <Typography
           as="span"
           className={buildClassName(styles.label, isActive && styles.activeLabel)}

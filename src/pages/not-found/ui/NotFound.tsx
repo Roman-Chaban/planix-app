@@ -1,11 +1,10 @@
 'use client';
 
+import styles from '@/pages/not-found/styles/not-found.module.scss';
 import { BREAKPOINTS } from '@/shared/constants/breakpoints';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons/index';
 import { Box, Grid, GridItem } from '@/shared/ui/index';
-
-import styles from '@/shared/ui/not-found/styles/not-found.module.scss';
 
 const { LAPTOP } = BREAKPOINTS;
 

@@ -10,6 +10,6 @@ export { GridItem } from '@/shared/ui/grid/ui/GridItem';
 export { AppLink } from '@/shared/ui/link/ui/AppLink';
 export { Typography } from '@/shared/ui/typography/ui/Typography';
 export { List } from '@/shared/ui/list/ui/List';
-export { NotFoundLayout } from '@/shared/ui/not-found/ui/NotFound';
+export { NotFoundLayout } from '@/pages/not-found/ui/NotFound';
 export { ProjectButton } from '@/features/create-project/ui/ProjectButton';
 export { Modal } from '@shared/ui/modal/ui/Modal';

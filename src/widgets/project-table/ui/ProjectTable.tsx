@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
+import { projectTableColumns } from '@/widgets/project-table/lib/columns';
 import { ProjectTableHeader } from '@/widgets/project-table/ui/ProjectsTableHeader';
-import { projectTableColumns } from '@/entities/project/lib/project-table-columns';
 import type { ProjectsTableProps } from '@/entities/project/model/ui-types';
 import styles from '@/entities/project/styles/project.module.scss';
 import { ProjectRow } from '@/entities/project/ui/ProjectRow';

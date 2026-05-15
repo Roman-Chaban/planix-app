@@ -12,7 +12,7 @@ import { LINK_TARGETS } from '@/shared/constants/common';
 import { DEFAULT_LOCALE } from '@/shared/constants/locales';
 import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
 
-import { buildHref } from '@/shared/lib/helpers/buildHref/buildHref';
+import { buildHref } from '@/shared/lib/routing/build-href';
 
 import styles from '@/shared/ui/link/styles/link.module.scss';
 

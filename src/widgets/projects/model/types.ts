@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react';
 
-import type { ProjectStatus } from '@/features/projects/model/types';
+import type { ProjectStatus } from '@/entities/project/model/types';
 
 export type TabId = 'allProjects' | 'inProgress' | 'pending' | 'completed' | 'canceled';
 export type TabsContent = Record<TabId, ComponentType>;

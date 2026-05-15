@@ -4,7 +4,7 @@ import { type FC } from 'react';
 
 import { createPortal } from 'react-dom';
 
-import { useModalBehavior } from '@/shared/hooks/useModalBehavior';
+import { useModalBehavior } from '@/shared/ui/modal/hooks/useModalBehavior';
 
 import { ModalContent, ModalOverlay } from '@/shared/ui/modal/index';
 import type { ModalProps } from '@/shared/ui/modal/model/types';

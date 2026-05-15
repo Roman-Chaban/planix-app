@@ -2,26 +2,28 @@
 
 import { useMemo, useState } from 'react';
 
+import { Header } from '@/widgets/header/ui/Header';
 import { headerItems } from '@/widgets/projects/config/header-items/header-items';
 import { filterProjects } from '@/widgets/projects/lib/filter-projects/filter-projects';
 import type { TabId } from '@/widgets/projects/model/types';
 import styles from '@/widgets/projects/styles/projects.module.scss';
 import { useProjectDeleteModal } from '@/widgets/projects/ui/projects-delete-modal/hooks/useProjectDeleteModal';
 import { ProjectDeleteModal } from '@/widgets/projects/ui/projects-delete-modal/ui/ProjectDeleteModal';
+import { ProjectsEmpty } from '@/widgets/projects/ui/projects-empty/ui/ProjectsEmpty';
 import { ProjectsHeader } from '@/widgets/projects/ui/projects-header/ui/ProjectsHeader';
 import { ProjectToolbar } from '@/widgets/projects/ui/projects-toolbar/ui/ProjectsToolbar';
-import { useAllProjects } from '@/features/projects/hooks/useAllProjects';
-import { useProjectsFilters } from '@/features/projects/hooks/useProjectsFilters';
-import { toProjectTableItem } from '@/features/projects/model/adapters';
-import { Box, Header, NoProjects, PageWrapper } from '@/shared/ui';
-import { ProjectsTable } from '@/shared/ui/project/ui/ProjectTable';
+import { useProjectsFilters } from '@/features/projects/filter-projects/model/useProjectsFilters';
+import { useProjects } from '@/entities/project/api/useProjects';
+import { toProjectTableItem } from '@/entities/project/lib/adapters';
+import { ProjectsTable } from '@/entities/project/ui/ProjectTable';
+import { Box, PageWrapper } from '@/shared/ui';
 
 export const ProjectsLayout = () => {
   const [activeId, setActiveId] = useState<TabId>(headerItems[0].id);
   const { projectToDelete, openDeleteModal, closeDeleteModal, isOpen } = useProjectDeleteModal();
 
   const { control, watch } = useProjectsFilters();
-  const { data } = useAllProjects();
+  const { data } = useProjects();
 
   const search = watch('search');
 
@@ -38,7 +40,7 @@ export const ProjectsLayout = () => {
       </Box>
 
       {filteredProjects.length === 0 ? (
-        <NoProjects />
+        <ProjectsEmpty />
       ) : (
         <ProjectsTable onTrashClick={openDeleteModal} projects={filteredProjects} />
       )}

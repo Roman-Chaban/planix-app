@@ -1,4 +1,7 @@
-import { Controller, type Control } from 'react-hook-form';
+'use client';
+
+import { type Control, Controller } from 'react-hook-form';
+
 import { useTranslation } from 'react-i18next';
 
 import type { AuthFormValues } from '@/features/auth/model/types';

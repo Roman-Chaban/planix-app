@@ -1,10 +1,9 @@
 import type { FC } from 'react';
 
+import type { PageWrapperProps } from '@/widgets/page-wrapper/model/types';
+import styles from '@/widgets/page-wrapper/styles/page-wrapper.module.scss';
 import { Sidebar } from '@/widgets/sidebar/ui/sidebar/Sidebar';
 import { Box, Grid } from '@/shared/ui/index';
-import type { PageWrapperProps } from '@/shared/ui/page-wrapper/model/types';
-
-import styles from '@/shared/ui/page-wrapper/styles/page-wrapper.module.scss';
 
 export const PageWrapper: FC<PageWrapperProps> = ({ children, header }) => {
   return (

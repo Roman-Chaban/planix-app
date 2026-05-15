@@ -11,6 +11,5 @@ export { AppLink } from '@/shared/ui/link/ui/AppLink';
 export { Typography } from '@/shared/ui/typography/ui/Typography';
 export { List } from '@/shared/ui/list/ui/List';
 export { NotFoundLayout } from '@/shared/ui/not-found/ui/NotFound';
-export { PageWrapper } from '@shared/ui/page-wrapper/ui/PageWrapper';
 export { ProjectButton } from '@/features/create-project/ui/ProjectButton';
 export { Modal } from '@shared/ui/modal/ui/Modal';

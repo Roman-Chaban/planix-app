@@ -3,6 +3,8 @@
 import { useMemo, useState } from 'react';
 
 import { Header } from '@/widgets/header/ui/Header';
+import { PageWrapper } from '@/widgets/page-wrapper/ui/PageWrapper';
+import { ProjectsTable } from '@/widgets/project-table/ui/ProjectTable';
 import { headerItems } from '@/widgets/projects/config/header-items/header-items';
 import { filterProjects } from '@/widgets/projects/lib/filter-projects/filter-projects';
 import type { TabId } from '@/widgets/projects/model/types';
@@ -15,8 +17,7 @@ import { ProjectToolbar } from '@/widgets/projects/ui/projects-toolbar/ui/Projec
 import { useProjectsFilters } from '@/features/projects/filter-projects/model/useProjectsFilters';
 import { useProjects } from '@/entities/project/api/useProjects';
 import { toProjectTableItem } from '@/entities/project/lib/adapters';
-import { ProjectsTable } from '@/entities/project/ui/ProjectTable';
-import { Box, PageWrapper } from '@/shared/ui';
+import { Box } from '@/shared/ui';
 
 export const ProjectsLayout = () => {
   const [activeId, setActiveId] = useState<TabId>(headerItems[0].id);

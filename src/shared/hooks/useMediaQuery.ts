@@ -1,3 +1,5 @@
+'use client';
+
 import { useSyncExternalStore } from 'react';
 
 export const useMediaQuery = (query: string): boolean => {

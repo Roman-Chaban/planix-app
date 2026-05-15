@@ -1,5 +1,5 @@
 import type { StatusClasses, StatusIcons } from '@/entities/project/model/types';
-import styles from '@/entities/project/styles/project.module.scss';
+import styles from '@/entities/project/ui/status-badge/styles/status-badge.module.scss';
 import { CanceledIcon, CompletedIcon, InProgressIcon, PendingIcon } from '@/shared/ui/icons';
 
 export const statusClasses: StatusClasses = {

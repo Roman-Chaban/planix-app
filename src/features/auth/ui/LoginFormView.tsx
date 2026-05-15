@@ -6,10 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { AuthFooter } from '@/widgets/auth/ui/auth-footer/AuthFooter';
 import { AuthHeader } from '@/widgets/auth/ui/auth-header/AuthHeader';
 
-import { LoginFields, LoginMain } from '@/features/auth/index';
 import type { AuthLoginFormViewProps } from '@/features/auth/model/types';
 
 import styles from '@/features/auth/styles/auth.module.scss';
+import { LoginFields } from '@/features/auth/ui/LoginFields';
+import { LoginMain } from '@/features/auth/ui/LoginMain';
 
 import { Box } from '@/shared/ui/index';
 

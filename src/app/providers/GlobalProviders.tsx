@@ -2,9 +2,9 @@
 
 import type { FC } from 'react';
 
-import type { BasedProviderProps } from '@/shared/providers/model/types';
-import { QueryProvider } from '@/shared/providers/QueryProvider';
-import { TranslationProvider } from '@/shared/providers/TranslationProvider';
+import type { BasedProviderProps } from '@/app/providers/model/types';
+import { QueryProvider } from '@/app/providers/QueryProvider';
+import { TranslationProvider } from '@/app/providers/TranslationProvider';
 
 export const GlobalProviders: FC<BasedProviderProps> = ({ children, locale }) => {
   return (

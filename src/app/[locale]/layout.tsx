@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { LOCALES } from '@/shared/constants/locales';
 import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
-import { GlobalProviders } from '@/shared/providers/GlobalProviders';
+import { GlobalProviders } from '@/app/providers/GlobalProviders';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));

@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next';
 import type { ProjectDeleteModalProps } from '@/widgets/projects/model/types';
 
 import styles from '@/widgets/projects/styles/projects.module.scss';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/config/ui/buttons';
 import { Button, Modal } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 import { ModalHeader, ModalActions } from '@/shared/ui/modal';
-import { Textarea } from '@/shared/ui/textarea/ui/Textarea';
+import { Textarea } from '@/shared/ui/textarea/Textarea';
 
 export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onClose, isOpen }) => {
   const { t } = useTranslation();

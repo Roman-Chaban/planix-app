@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/model/types';
 import styles from '@/widgets/sidebar/styles/sidebar.module.scss';
-import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+
+import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { AppLink, Box } from '@/shared/ui';
 
 export const SidebarNavItem: FC<SidebarNavItemProps> = ({

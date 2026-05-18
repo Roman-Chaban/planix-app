@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next';
 
 import { usePasswordToggle } from '@/features/auth/hooks/usePasswordToggle';
 import type { AuthLoginFieldsProps } from '@/features/auth/model/types';
-import { ICON_POSITION } from '@/shared/constants/common';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/constants/inputs';
+import { ICON_POSITION } from '@/shared/config/ui/common';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/config/ui/inputs';
 import { FormError, FormField, FormIcon, FormLabel, FormWrapper } from '@/shared/ui/form-field';
 import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
-import { Input } from '@/shared/ui/input/ui/Input';
+import { Input } from '@/shared/ui/input/Input';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 const { DEFAULT } = INPUT_VARIANTS;

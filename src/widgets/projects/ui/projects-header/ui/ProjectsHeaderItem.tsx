@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import styles from '@/widgets/projects/styles/projects.module.scss';
 import type { HeaderItem } from '@/widgets/projects/ui/projects-header/model/types';
-import { BUTTON_TYPES } from '@/shared/constants/buttons';
-import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import { BUTTON_TYPES } from '@/shared/config/ui/buttons';
+import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { Box, Button, Typography } from '@/shared/ui';
 
 const { BUTTON } = BUTTON_TYPES;

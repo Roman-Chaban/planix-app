@@ -4,7 +4,7 @@ import { type FC, useEffect, useState } from 'react';
 
 import { I18nextProvider } from 'react-i18next';
 
-import type { BasedProviderProps } from '@/app/providers/model/types';
+import type { BasedProviderProps } from '@/app/providers/provider.types';
 import i18n from '@/shared/config/i18n/i18nConfig';
 
 export const TranslationProvider: FC<BasedProviderProps> = ({ children, locale }) => {

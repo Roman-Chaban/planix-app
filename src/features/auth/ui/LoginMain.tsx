@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 import type { AuthFormValues } from '@/features/auth/model/types';
 import styles from '@/features/auth/styles/auth.module.scss';
-import { BREAKPOINTS } from '@/shared/constants/breakpoints';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
+import { BREAKPOINTS } from '@/shared/config/ui/breakpoints';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/config/ui/buttons';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
 

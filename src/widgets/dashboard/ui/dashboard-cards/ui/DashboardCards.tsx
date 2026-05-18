@@ -2,7 +2,7 @@ import { dashboardCards } from '@/widgets/dashboard/config/dashboard-cards/dashb
 import styles from '@/widgets/dashboard/ui/dashboard-cards/styles/dashboard-cards.module.scss';
 import { Box, List } from '@/shared/ui';
 
-import { Card } from '@/shared/ui/card/ui/Card';
+import { Card } from '@/shared/ui/card/Card';
 
 export const DashboardCards = () => {
   return (

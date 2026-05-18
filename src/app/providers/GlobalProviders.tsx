@@ -2,7 +2,7 @@
 
 import type { FC } from 'react';
 
-import type { BasedProviderProps } from '@/app/providers/model/types';
+import type { BasedProviderProps } from '@/app/providers/provider.types';
 import { QueryProvider } from '@/app/providers/QueryProvider';
 import { TranslationProvider } from '@/app/providers/TranslationProvider';
 

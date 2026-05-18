@@ -5,9 +5,9 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@/widgets/brand-banner/styles/brand-banner.module.scss';
-import { BREAKPOINTS } from '@/shared/constants/breakpoints';
+import { BREAKPOINTS } from '@/shared/config/ui/breakpoints';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
-import { PlanixLogoIcon } from '@/shared/ui/icons/ui/Icons';
+import { PlanixLogoIcon } from '@/shared/ui/icons/Icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
 export const BrandBanner: FC = () => {

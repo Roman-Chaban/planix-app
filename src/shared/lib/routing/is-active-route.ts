@@ -2,8 +2,10 @@ import { getCleanPathname } from '@/shared/lib/routing/get-clean-pathname';
 
 const normalize = (path: string) => path.replace(/\/$/, '');
 
-export const isActiveRoute = (currentPath: string, href: string) => {
-  const current = normalize(getCleanPathname(currentPath));
+export const isActiveRoute = (currentPath: string | null | undefined, href: string) => {
+  const safeCurrent = currentPath ?? '/';
+
+  const current = normalize(getCleanPathname(safeCurrent));
   const target = normalize(href);
 
   if (target === '/') return current === '/';

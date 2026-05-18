@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import { mockProjects } from '@/entities/project/mocks/projects.mock';
 import type { ProjectsResponse } from '@/entities/project/model/types';
 
-import { delay } from '@/shared/lib/helpers/delay/delay';
+import { delay } from '@/shared/lib/async/delay/delay';
 
 export const useProjects = () => {
   return useQuery({

@@ -8,7 +8,7 @@ import type { LanguageOption } from '@/features/change-language/model/types';
 
 export const useLanguageSelect = () => {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname() ?? '/';
 
   const segments = useMemo(() => pathname.split('/').filter(Boolean), [pathname]);
 

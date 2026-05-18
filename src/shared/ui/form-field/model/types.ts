@@ -2,7 +2,7 @@ import type { ClassName } from '@types';
 
 import type { InputHTMLAttributes, LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
-import type { IconPosition, InputSize, InputVariant } from '@/shared/ui/input/model/types';
+import type { IconPosition, InputSize, InputVariant } from '@/shared/ui/input/input.types';
 
 export type FormFieldProps = PropsWithChildren<{
   className?: ClassName;

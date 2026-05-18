@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
-import { statusClasses, statusIcons } from '@/entities/project/lib/statuses';
+import { statusClasses, statusIcons } from '@/entities/project/model/statuses';
 import type { ProjectStatus } from '@/entities/project/model/types';
 import styles from '@/entities/project/ui/status-badge/styles/status-badge.module.scss';
-import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { Typography } from '@/shared/ui/index';
 
 export const StatusBadge: FC<{ status: ProjectStatus }> = ({ status }) => {

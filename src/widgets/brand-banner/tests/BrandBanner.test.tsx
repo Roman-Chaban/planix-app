@@ -19,7 +19,7 @@ const setup = (isMobile: boolean) => {
   return render(<BrandBanner />);
 };
 
-jest.mock('@/shared/ui/icons/ui/Icons', () => ({
+jest.mock('@/shared/ui/icons/Icons', () => ({
   PlanixLogoIcon: (props: React.SVGProps<SVGSVGElement>) => (
     <svg data-testid="logo-icon" {...props} />
   ),

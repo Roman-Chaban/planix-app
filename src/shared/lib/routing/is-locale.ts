@@ -1,4 +1,4 @@
-import { type Locale, LOCALES } from '@/shared/constants/locales';
+import { type Locale, LOCALES } from '@/shared/config/ui/locales';
 
 export const isLocale = (value: string): value is Locale => {
   return LOCALES.includes(value as Locale);

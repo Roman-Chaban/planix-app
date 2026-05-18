@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 
-import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
-
+import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { Typography } from '@/shared/ui';
 import type { FormErrorProps } from '@/shared/ui/form-field/model/types';
 

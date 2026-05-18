@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import type { HeaderProps } from '@/widgets/header/model/types';
 import styles from '@/widgets/header/styles/header.module.scss';
 import { LanguageSelect } from '@/features/change-language';
-import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
+import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/config/ui/buttons';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
 
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';

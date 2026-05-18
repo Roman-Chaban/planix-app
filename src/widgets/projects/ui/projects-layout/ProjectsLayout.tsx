@@ -14,9 +14,9 @@ import { ProjectDeleteModal } from '@/widgets/projects/ui/projects-delete-modal/
 import { ProjectsEmpty } from '@/widgets/projects/ui/projects-empty/ui/ProjectsEmpty';
 import { ProjectsHeader } from '@/widgets/projects/ui/projects-header/ui/ProjectsHeader';
 import { ProjectToolbar } from '@/widgets/projects/ui/projects-toolbar/ui/ProjectsToolbar';
-import { useProjectsFilters } from '@/features/projects/filter-projects/model/useProjectsFilters';
+import { useProjectsFilters } from '@/features/filter-projects/model/useProjectsFilters';
 import { useProjects } from '@/entities/project/api/useProjects';
-import { toProjectTableItem } from '@/entities/project/lib/adapters';
+import { toProjectTableItem } from '@/entities/project/model/adapters';
 import { Box } from '@/shared/ui';
 
 export const ProjectsLayout = () => {

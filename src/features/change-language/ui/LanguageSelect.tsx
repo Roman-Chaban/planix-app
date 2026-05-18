@@ -7,8 +7,8 @@ import { useLanguageSelect } from '@/features/change-language/hooks/useLanguageS
 import { SingleValue, Option } from '@/features/change-language/index';
 import { createSelectStyles } from '@/features/change-language/lib/language-select-styles/language-select-styles';
 import type { LanguageOption } from '@/features/change-language/model/types';
-import { BREAKPOINTS } from '@/shared/constants/breakpoints';
-import { INSTANCE_ID } from '@/shared/constants/common';
+import { BREAKPOINTS } from '@/shared/config/ui/breakpoints';
+import { INSTANCE_ID } from '@/shared/config/ui/common';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
 
 const { TABLET } = BREAKPOINTS;

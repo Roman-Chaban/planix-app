@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import type { FormIconProps } from '@/shared/ui/form-field/model/types';
 import styles from '@/shared/ui/form-field/styles/form-field.module.scss';
 import { Typography } from '@/shared/ui/index';

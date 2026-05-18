@@ -4,8 +4,8 @@ import { type FC } from 'react';
 
 import { createPortal } from 'react-dom';
 
-import { ModalContent, ModalOverlay } from '@/shared/ui/modal/index';
-import type { ModalProps } from '@/shared/ui/modal/modal.types';
+import { ModalContent, ModalOverlay } from '@/shared/ui/modal';
+import type { ModalProps } from '@/shared/ui/modal/Modal.types';
 import { useModalBehavior } from '@/shared/ui/modal/useModalBehavior';
 
 export const Modal: FC<ModalProps> = ({

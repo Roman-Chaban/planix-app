@@ -1,4 +1,4 @@
-import type { TypographyProps, TypographyTag } from '@/shared/ui/typography/typography.types';
+import type { TypographyProps, TypographyTag } from '@/shared/ui/typography/Typography.types';
 
 export const Typography = <T extends TypographyTag = 'span'>({
   as,

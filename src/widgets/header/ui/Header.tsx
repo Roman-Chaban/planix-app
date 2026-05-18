@@ -4,11 +4,11 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { HeaderProps } from '@/widgets/header/model/types';
-import styles from '@/widgets/header/styles/header.module.scss';
+import type { HeaderProps } from '@/widgets/header/config/Header.types';
+import styles from '@/widgets/header/ui/Header.module.scss';
 import { LanguageSelect } from '@/features/change-language';
-import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/config/ui/buttons';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
+import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/Button.constants';
 
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 

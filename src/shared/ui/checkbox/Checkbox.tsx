@@ -1,12 +1,13 @@
-import type { CheckboxProps } from './checkbox.types';
-
 import { useId, type ChangeEvent, type FC } from 'react';
 
-import { INPUT_TYPES } from '@/shared/config/ui/inputs';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import styles from '@/shared/ui/checkbox/Checkbox.module.scss';
+import type { CheckboxProps } from '@/shared/ui/checkbox/Checkbox.types';
 import { CheckIcon } from '@/shared/ui/icons/Icons';
+import { INPUT_TYPES } from '@/shared/ui/input/Input.constants';
 import { Typography } from '@/shared/ui/typography/Typography';
+
+const { CHECKBOX } = INPUT_TYPES;
 
 export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled }) => {
   const checkboxId = useId();
@@ -22,7 +23,7 @@ export const Checkbox: FC<CheckboxProps> = ({ checked, onChange, label, disabled
     >
       <input
         id={checkboxId}
-        type={INPUT_TYPES.CHECKBOX}
+        type={CHECKBOX}
         className={styles.input}
         checked={checked}
         disabled={disabled}

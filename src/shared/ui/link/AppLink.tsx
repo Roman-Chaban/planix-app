@@ -1,6 +1,6 @@
 'use client';
 
-import type { LinkProps } from './app-link.types';
+import type { LinkProps } from './AppLink.types';
 
 import type { FC } from 'react';
 
@@ -8,11 +8,11 @@ import Link from 'next/link';
 
 import { useParams } from 'next/navigation';
 
-import { LINK_TARGETS } from '@/shared/config/common/common';
-import { DEFAULT_LOCALE } from '@/shared/config/locales/locales';
+import { LINK_TARGETS } from '@/shared/config/common';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
+import { DEFAULT_LOCALE } from '@/shared/lib/i18n/locales';
 
-import { buildHref } from '@/shared/lib/routing/build-href';
+import { buildHref } from '@/shared/lib/routing/buildHref';
 
 import styles from '@/shared/ui/link/AppLink.module.scss';
 

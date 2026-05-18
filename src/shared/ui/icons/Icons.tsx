@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { IconProps } from '@/shared/ui/icons/icons.types';
+import type { IconProps } from '@/shared/ui/icons/Icons.types';
 
 export const UserIcon: FC<IconProps> = ({ width, height }) => {
   return (

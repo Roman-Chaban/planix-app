@@ -2,10 +2,10 @@
 
 import { useQuery } from '@tanstack/react-query';
 
+import type { ProjectsResponse } from '@/widgets/project-table/config/ProjectTable.types';
 import { mockProjects } from '@/entities/project/mocks/projects.mock';
-import type { ProjectsResponse } from '@/entities/project/model/types';
 
-import { delay } from '@/shared/lib/async/delay/delay';
+import { delay } from '@/shared/lib/async/delay';
 
 export const useProjects = () => {
   return useQuery({

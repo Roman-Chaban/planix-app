@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
-import { ROUTES } from '@/shared/config/common/common';
-import { DEFAULT_LOCALE } from '@/shared/config/locales/locales';
+import { ROUTES } from '@/shared/config/common';
+import { DEFAULT_LOCALE } from '@/shared/lib/i18n/locales';
 
 const { DASHBOARD } = ROUTES;
 

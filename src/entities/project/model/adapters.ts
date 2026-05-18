@@ -1,4 +1,4 @@
-import type { Project, ProjectTableItem } from '@/entities/project/model/types';
+import type { Project, ProjectTableItem } from '@/widgets/project-table/config/ProjectTable.types';
 
 export const toProjectTableItem = (project: Project): ProjectTableItem => ({
   ...project,

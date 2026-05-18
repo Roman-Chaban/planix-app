@@ -1,4 +1,4 @@
-import type { ClassObject, ClassValue } from './model/types';
+import type { ClassObject, ClassValue } from './buildClassName.types';
 
 const isStringValue = (input: ClassValue): input is string => {
   return typeof input === 'string';

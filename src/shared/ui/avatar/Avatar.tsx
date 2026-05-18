@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import styles from '@/shared/ui/avatar/Avatar.module.scss';
-import type { AvatarProps } from '@/shared/ui/avatar/avatar.types';
+import type { AvatarProps } from '@/shared/ui/avatar/Avatar.types';
 
 import { Box } from '@/shared/ui/box/Box';
 

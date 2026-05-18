@@ -1,4 +1,4 @@
-import { ProjectsLayout } from '@/widgets/projects/ui/projects-layout/ProjectsLayout';
+import { ProjectsLayout } from '@/widgets/projects/ui/ProjectsLayout';
 
 export const ProjectsPage = () => {
   return <ProjectsLayout />;

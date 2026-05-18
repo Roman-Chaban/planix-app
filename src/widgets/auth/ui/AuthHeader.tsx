@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import type { AuthHeaderProps } from '@/pages/auth/config/Auth.types';
+import type { AuthHeaderProps } from '@/widgets/auth/config/Auth.types';
 
-import styles from '@/pages/auth/ui/Auth.module.scss';
+import styles from '@/widgets/auth/ui/Auth.module.scss';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
 export const AuthHeader: FC<AuthHeaderProps> = ({ title, subtitle, highlightedText, icon }) => {

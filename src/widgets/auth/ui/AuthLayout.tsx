@@ -1,4 +1,4 @@
-import styles from '@/pages/auth/ui/Auth.module.scss';
+import styles from '@/widgets/auth/ui/Auth.module.scss';
 import { BrandBanner } from '@/widgets/brand-banner/ui/BrandBanner';
 import { LoginForm } from '@/features/auth-by-credentials/LoginForm';
 

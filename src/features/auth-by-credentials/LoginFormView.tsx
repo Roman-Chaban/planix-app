@@ -9,8 +9,8 @@ import type { AuthLoginFormViewProps } from '@/features/auth-by-credentials/Auth
 import { LoginFields } from '@/features/auth-by-credentials/LoginFields';
 import { LoginMain } from '@/features/auth-by-credentials/LoginMain';
 import { Box } from '@/shared/ui/index';
-import { AuthFooter } from '@/pages/auth/ui/AuthFooter';
-import { AuthHeader } from '@/pages/auth/ui/AuthHeader';
+import { AuthFooter } from '@/widgets/auth/ui/AuthFooter';
+import { AuthHeader } from '@/widgets/auth/ui/AuthHeader';
 
 export const LoginFormView: FC<AuthLoginFormViewProps> = ({
   onSubmit,

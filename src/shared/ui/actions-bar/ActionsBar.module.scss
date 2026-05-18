@@ -1,0 +1,12 @@
+@use '@/shared/styles' as *;
+
+.actions {
+  @include flex(flex, row, start, center, 0.4rem, nowrap);
+}
+
+.action {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.4rem;
+  background: $color-black-200;
+}

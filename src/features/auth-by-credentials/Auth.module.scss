@@ -1,0 +1,47 @@
+@use '@/shared/styles' as *;
+
+.loginWrapper {
+  @include flex-col(0, space-between);
+  height: 100%;
+}
+
+.loginContent {
+  @include flex-col(2.813rem);
+  padding-block-start: 2.625rem;
+
+  @include respond(tablet) {
+    padding-block-start: 0;
+    gap: 2rem;
+  }
+}
+
+.loginForm {
+  @include flex-col(1.5rem);
+}
+
+.loginFormMainWrapper {
+  @include flex-col(3.625rem);
+
+  @include respond(tablet) {
+    gap: 1.5rem;
+  }
+}
+
+.loginFormMain {
+  @include flex-row(0, space-between, center);
+}
+
+.loginFormLink {
+  line-height: 150%;
+  color: $color-black-1200;
+
+  @include respond(mobile-lg) {
+    font-size: $font-size-body-sm;
+  }
+}
+
+.button {
+  width: 100%;
+  max-width: 8.188rem;
+  border-radius: 1.875rem;
+}

@@ -1,0 +1,115 @@
+/* Primary */
+
+$color-primary-100: #dfe2f5;
+$color-primary-200: #bdc5ef;
+$color-primary-300: #9aaae8;
+$color-primary-400: #879ce5;
+$color-primary-500: #748fe1;
+$color-primary-600: #5e82de;
+$color-primary-700: #4c75d3;
+$color-primary-800: #4165b7;
+$color-primary-900: #3b5da9;
+$color-primary-1000: #335195;
+$color-primary-1100: #3f1d71;
+$color-primary-1200: #1e305a;
+
+/* Secondary */
+
+$color-secondary-100: #b1dde2;
+$color-secondary-200: #7fd7e0;
+$color-secondary-300: #80dae4;
+$color-secondary-400: #7ad5df;
+$color-secondary-500: #6fc7d1;
+$color-secondary-600: #67bac3;
+$color-secondary-700: #5eaab2;
+$color-secondary-800: #559ca4;
+$color-secondary-900: #4d8e95;
+$color-secondary-1000: #458187;
+$color-secondary-1100: #2e595e;
+$color-secondary-1200: #1a3538;
+
+/* Black */
+
+$color-black-100: #fafafa;
+$color-black-200: #f5f5f5;
+$color-black-300: #e3e3e3;
+$color-black-400: #b9b9b9;
+$color-black-500: #919191;
+$color-black-600: #848484;
+$color-black-700: #6a6a6a;
+$color-black-800: #525252;
+$color-black-900: #474747;
+$color-black-1000: #303030;
+$color-black-1100: #262626;
+$color-black-1200: #000000;
+
+/* Warning */
+
+$color-warning-100: #fffbf2;
+$color-warning-200: #fff6db;
+$color-warning-300: #ffe6a1;
+$color-warning-400: #fdd876;
+$color-warning-500: #ffd050;
+$color-warning-600: #ffc11c;
+$color-warning-700: #dea50b;
+$color-warning-800: #bb8900;
+$color-warning-900: #997001;
+$color-warning-1000: #765700;
+$color-warning-1100: #694d00;
+$color-warning-1200: #553e00;
+
+/* Success */
+
+$color-success-100: #f6fef9;
+$color-success-200: #ecfdf3;
+$color-success-300: #d1fadf;
+$color-success-400: #a6f4c5;
+$color-success-500: #6ce9a6;
+$color-success-600: #32d583;
+$color-success-700: #12b76a;
+$color-success-800: #039855;
+$color-success-900: #027a48;
+$color-success-1000: #05603a;
+$color-success-1100: #054f31;
+$color-success-1200: #053321;
+
+/* Error */
+
+$color-error-100: #fffbfa;
+$color-error-200: #fef3f2;
+$color-error-300: #fee4e2;
+$color-error-400: #fecdca;
+$color-error-500: #fda29b;
+$color-error-600: #f97066;
+$color-error-700: #f04438;
+$color-error-800: #d92d20;
+$color-error-900: #b42318;
+$color-error-1000: #912018;
+$color-error-1100: #7a271a;
+$color-error-1200: #55160c;
+
+/* Disabled */
+
+$color-button-disabled: #aaa;
+
+/* Linear Gradients */
+
+$linear-gradient-100: linear-gradient(
+  360deg,
+  rgba(65, 101, 183, 0.73) 0%,
+  rgba(65, 101, 183, 0) 50%,
+  rgba(255, 255, 255, 0) 100%
+);
+
+$linear-gradient-200: linear-gradient(
+  360deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(65, 101, 183, 0.11) 100%
+);
+
+/* Other */
+
+$color-white: #ffffff;
+$color-border-line: #bbb;
+$color-decoration-text: #565dbf;
+$color-modal-overlay: rgba($color-black-1200, 0.22);

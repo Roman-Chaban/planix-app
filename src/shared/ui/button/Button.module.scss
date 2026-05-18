@@ -1,0 +1,84 @@
+@use '@/shared/styles' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  @include button-disabled;
+}
+
+.default {
+  background: $color-primary-800;
+  color: $color-black-100;
+
+  @include button-interaction($color-primary-1100);
+}
+
+.outline {
+  color: $color-primary-800;
+  background: none;
+
+  @include button-outline($color-primary-800, none, null);
+}
+
+.soft {
+  background: $color-primary-100;
+  color: $color-primary-800;
+
+  @include button-outline($color-primary-800, none, null);
+}
+
+.tertiary {
+  @include button-link;
+}
+
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: none;
+  border-radius: 50%;
+}
+
+.compact {
+  padding: 0;
+  min-height: unset;
+  font-size: inherit;
+}
+
+.sm {
+  padding: $space-2 $space-7;
+  font-size: $font-size-body-sm;
+}
+
+.md {
+  padding: $space-3 $space-7;
+  font-size: $font-size-body-md;
+}
+
+.lg {
+  padding: $space-4 $space-7;
+  font-size: $font-size-body-lg;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.iconWrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.startIcon,
+.endIcon {
+  @include flex-center;
+}

@@ -1,0 +1,29 @@
+@use '@/shared/styles' as *;
+
+.layout {
+  min-height: 100dvh;
+  @include flex-center;
+  padding: 2rem;
+
+  @include respond(laptop) {
+    padding: 1rem;
+  }
+}
+
+.container {
+  @include bounding-container;
+  place-items: center;
+  min-height: 90dvh;
+  background: $color-white;
+  border-top: 3px solid $color-primary-800;
+  box-shadow: $shadow-not-found;
+  border-radius: 1.875rem;
+
+  @include respond(laptop) {
+    @include flex-col(3rem, center, center);
+  }
+}
+
+.errorBlock {
+  @include flex-col(2rem, center, stretch);
+}

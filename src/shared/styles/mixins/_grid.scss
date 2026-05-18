@@ -1,0 +1,21 @@
+@mixin responsive-grid($min-col: 18rem, $gap: 1.875rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(#{$min-col}, 100%), 1fr));
+  gap: $gap;
+}
+
+@mixin responsive-grid-widgets($columns, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+@mixin grid($columns: $columns, $rows: $rows, $areas: $areas, $gap: $gap) {
+  display: grid;
+  grid: {
+    template-columns: $columns;
+    template-rows: $rows;
+    template-areas: $areas;
+  }
+  gap: $gap;
+}

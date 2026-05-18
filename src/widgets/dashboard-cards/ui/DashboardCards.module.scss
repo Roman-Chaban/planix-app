@@ -1,0 +1,33 @@
+@use '@/shared/styles' as *;
+
+.cardsWrapper {
+  width: 100%;
+}
+
+.cards {
+  @include responsive-grid(18rem, 1.875rem);
+}
+
+.card {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: $shadow-elevation-2;
+  background: $color-white;
+  border: 0.125rem solid $color-black-300;
+  padding: 1.25rem 1.375rem;
+  background:
+    $linear-gradient-200 top / 100% 6rem no-repeat,
+    $color-white;
+
+  &::before {
+    @include text-before-decoration(
+      '',
+      absolute,
+      0,
+      0.25rem,
+      1.188rem,
+      0 0.5rem 0.5rem 0,
+      $color-primary-800
+    );
+  }
+}

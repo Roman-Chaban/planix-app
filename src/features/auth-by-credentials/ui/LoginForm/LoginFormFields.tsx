@@ -2,8 +2,8 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { AuthLoginFieldsProps } from '@/features/auth-by-credentials/AuthByCredentials.types';
-import { usePasswordToggle } from '@/features/auth-by-credentials/usePasswordToggle';
+import { usePasswordToggle } from '@/features/auth-by-credentials/lib/usePasswordToggle';
+import type { LoginFormFieldsProps } from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.types';
 import { ICON_POSITION } from '@/shared/config/common';
 import { FormError, FormField, FormIcon, FormLabel, FormWrapper } from '@/shared/ui/form-field';
 import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
@@ -14,7 +14,7 @@ const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 const { DEFAULT } = INPUT_VARIANTS;
 const { START, END } = ICON_POSITION;
 
-export const LoginFields: FC<AuthLoginFieldsProps> = ({
+export const LoginFormFields: FC<LoginFormFieldsProps> = ({
   emailField,
   passwordField,
   emailError,

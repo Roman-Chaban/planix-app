@@ -1,6 +1,6 @@
 import styles from '@/widgets/auth/ui/Auth.module.scss';
 import { BrandBanner } from '@/widgets/brand-banner/ui/BrandBanner';
-import { LoginForm } from '@/features/auth-by-credentials/LoginForm';
+import { LoginForm } from '@/features/auth-by-credentials/ui/LoginForm/LoginForm';
 
 import { Box, Grid, GridItem } from '@/shared/ui/index';
 

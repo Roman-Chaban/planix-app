@@ -1,11 +1,12 @@
 'use client';
 
-import { type Control, Controller } from 'react-hook-form';
+import type { FC } from 'react';
+import { Controller } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import styles from '@/features/auth-by-credentials/Auth.module.scss';
-import type { AuthFormValues } from '@/features/auth-by-credentials/AuthByCredentials.types';
+import type { LoginFormMainProps } from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.types';
+import styles from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.module.scss';
 import { useMediaQuery } from '@/shared/lib/hooks/index';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/Button.constants';
 import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
@@ -16,7 +17,7 @@ const { DEFAULT } = BUTTON_VARIANTS;
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 
-export const LoginMain = ({ control }: { control: Control<AuthFormValues> }) => {
+export const LoginFormMain: FC<LoginFormMainProps> = ({ control }) => {
   const { t } = useTranslation();
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 

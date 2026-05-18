@@ -13,9 +13,8 @@ export type AuthFormValues = {
   checked: boolean;
 };
 
-export type AuthLoginFormViewProps = {
-  onSubmit: VoidFunction;
+export type LoginFormMainProps = {
   control: Control<AuthFormValues>;
-} & BaseAuthFields;
+};
 
-export type AuthLoginFieldsProps = BaseAuthFields;
+export type LoginFormFieldsProps = BaseAuthFields;

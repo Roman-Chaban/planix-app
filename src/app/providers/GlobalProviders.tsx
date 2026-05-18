@@ -1,12 +1,16 @@
 'use client';
 
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
-import type { BasedProviderProps } from '@/app/providers/provider.types';
-import { QueryProvider } from '@/app/providers/QueryProvider';
-import { TranslationProvider } from '@/app/providers/TranslationProvider';
+import type { Locale } from '@/shared/config/locales/locales';
+import { TranslationProvider, QueryProvider } from '@/shared/providers/index';
 
-export const GlobalProviders: FC<BasedProviderProps> = ({ children, locale }) => {
+type GlobalProvidersProps = {
+  children: ReactNode;
+  locale: Locale;
+};
+
+export const GlobalProviders: FC<GlobalProvidersProps> = ({ children, locale }) => {
   return (
     <QueryProvider>
       <TranslationProvider locale={locale}>{children}</TranslationProvider>

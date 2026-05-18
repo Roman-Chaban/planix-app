@@ -1,13 +1,18 @@
 'use client';
 
-import { type FC, useEffect, useState } from 'react';
+import { type FC, type ReactNode, useEffect, useState } from 'react';
 
 import { I18nextProvider } from 'react-i18next';
 
-import type { BasedProviderProps } from '@/app/providers/provider.types';
 import i18n from '@/shared/config/i18n/i18nConfig';
+import type { Locale } from '@/shared/config/locales/locales';
 
-export const TranslationProvider: FC<BasedProviderProps> = ({ children, locale }) => {
+type I18nProviderProps = {
+  children: ReactNode;
+  locale: Locale;
+};
+
+export const I18nProvider: FC<I18nProviderProps> = ({ children, locale }) => {
   const [isTranslationReady, setIsTranslationReady] = useState<boolean>(false);
 
   useEffect(() => {

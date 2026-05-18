@@ -1,9 +1,0 @@
-@use '@/shared/styles' as *;
-
-.link {
-  @include link-style;
-}
-
-.underline {
-  @include link-style(underline);
-}

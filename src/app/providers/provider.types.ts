@@ -2,7 +2,7 @@ import type { ClassName } from '@types';
 
 import type { ReactNode } from 'react';
 
-import type { Locale } from '@/shared/config/ui/locales';
+import type { Locale } from '@/shared/config/locales/locales';
 import type { InputSize, InputVariant } from '@/shared/ui/input/input.types';
 
 export type BasedProviderProps = {

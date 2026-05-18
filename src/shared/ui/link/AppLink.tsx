@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 import { useParams } from 'next/navigation';
 
-import { LINK_TARGETS } from '@/shared/config/ui/common';
-import { DEFAULT_LOCALE } from '@/shared/config/ui/locales';
+import { LINK_TARGETS } from '@/shared/config/common/common';
+import { DEFAULT_LOCALE } from '@/shared/config/locales/locales';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 
 import { buildHref } from '@/shared/lib/routing/build-href';

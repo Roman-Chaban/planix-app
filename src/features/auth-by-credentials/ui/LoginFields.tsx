@@ -2,9 +2,9 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { usePasswordToggle } from '@/features/auth/hooks/usePasswordToggle';
-import type { AuthLoginFieldsProps } from '@/features/auth/model/types';
-import { ICON_POSITION } from '@/shared/config/ui/common';
+import { usePasswordToggle } from '@/features/auth-by-credentials/hooks/usePasswordToggle';
+import type { AuthLoginFieldsProps } from '@/features/auth-by-credentials/model/auth-by-credentials.types';
+import { ICON_POSITION } from '@/shared/config/common/common';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/config/ui/inputs';
 import { FormError, FormField, FormIcon, FormLabel, FormWrapper } from '@/shared/ui/form-field';
 import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';

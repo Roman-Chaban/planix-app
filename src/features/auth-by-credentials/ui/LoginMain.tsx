@@ -4,8 +4,8 @@ import { type Control, Controller } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import type { AuthFormValues } from '@/features/auth/model/types';
-import styles from '@/features/auth/styles/auth.module.scss';
+import type { AuthFormValues } from '@/features/auth-by-credentials/model/auth-by-credentials.types';
+import styles from '@/features/auth-by-credentials/styles/Auth.module.scss';
 import { BREAKPOINTS } from '@/shared/config/ui/breakpoints';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/config/ui/buttons';
 import { useMediaQuery } from '@/shared/hooks/useMediaQuery';
@@ -37,7 +37,7 @@ export const LoginMain = ({ control }: { control: Control<AuthFormValues> }) => 
           )}
         />
 
-        {/* Mock: [Added the correct link when it will need] */}
+        {/* TODO: [Added the correct link when it will need] */}
         <AppLink href="/#" className={styles.loginFormLink}>
           {t('AuthLoginForm.form.links.forgotPassword')}
         </AppLink>

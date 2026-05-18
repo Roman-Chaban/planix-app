@@ -20,7 +20,7 @@ export const useLanguageSelect = () => {
       : languageOptions[0].value;
   }, [segments]);
 
-  const value = useMemo(
+  const selectValue = useMemo(
     () => languageOptions.find((option) => option.value === currentLocale) ?? languageOptions[0],
     [currentLocale],
   );
@@ -42,8 +42,8 @@ export const useLanguageSelect = () => {
   );
 
   return {
-    value,
-    options: languageOptions,
+    selectValue,
+    languageOptions,
     currentLocale,
     handleChange,
   };

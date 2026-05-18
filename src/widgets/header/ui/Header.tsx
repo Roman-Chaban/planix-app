@@ -47,7 +47,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
               <NotificationIcon />
             </Button>
 
-            {/* Mock: [Waiting for implementation AuthLogic] */}
+            {/* TODO: [Waiting for implementation AuthLogic] */}
             <Avatar className={styles.avatar} fallback={FALLBACK_PROFILE_AVATAR} />
           </Box>
         </Box>

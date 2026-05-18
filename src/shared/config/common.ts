@@ -2,7 +2,7 @@ export const ROUTES = {
   HOME: '/',
   LOGIN: '/login',
   DASHBOARD: '/dashboard',
-  PROJECTS: '/projects',
+  PROJECTS: '/project-management',
   CLIENTS: '/clients',
   LEADS: '/leads',
   INBOX: '/inbox',

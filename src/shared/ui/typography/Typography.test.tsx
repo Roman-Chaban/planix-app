@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 
 import { Typography } from '@/shared/ui/typography/Typography';
-import { createSetup } from '@/test/mocks/mocks';
+import { createSetup } from '@/mocks';
 
 const setup = createSetup(Typography);
 

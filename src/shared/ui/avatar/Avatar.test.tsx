@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 
 import type { AvatarProps } from '@/shared/ui/avatar/Avatar.types';
 import { Avatar } from '@/shared/ui/index';
-import { createSetup } from '@/test/mocks/mocks';
+import { createSetup } from '@/mocks';
 
 const setup = createSetup(Avatar);
 

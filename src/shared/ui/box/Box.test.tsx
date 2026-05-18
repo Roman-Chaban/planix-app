@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 
 import { Box } from '@/shared/ui';
-import { createSetup } from '@/test/mocks/mocks';
+import { createSetup } from '@/mocks';
 
 const setup = createSetup(Box);
 

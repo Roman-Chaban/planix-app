@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 
 import { Card } from '@/shared/ui/index';
-import { createSetup } from '@/test/mocks/mocks';
+import { createSetup } from '@/mocks';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

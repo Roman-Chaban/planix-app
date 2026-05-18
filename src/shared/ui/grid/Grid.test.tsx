@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 
 import styles from '@/shared/ui/grid/Grid.module.scss';
 import { Grid } from '@/shared/ui/index';
-import { createSetup } from '@/test/mocks/mocks';
+import { createSetup } from '@/mocks';
 
 const setup = createSetup(Grid);
 

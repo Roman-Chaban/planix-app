@@ -1,4 +1,4 @@
-import { AuthLayout } from '@/screens/auth/ui/AuthLayout';
+import { AuthLayout } from '@/pages/auth/ui/AuthLayout';
 
 export const LoginPage = () => {
   return <AuthLayout />;

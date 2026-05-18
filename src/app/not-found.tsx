@@ -1,4 +1,4 @@
-import { NotFoundLayout } from '@/screens/not-found/NotFound';
+import { NotFoundLayout } from '@/pages/not-found/NotFound';
 
 export default function NotFound() {
   return <NotFoundLayout />;

@@ -1,4 +1,4 @@
-import { LoginPage } from '@/screens/login/ui/LoginPage';
+import { LoginPage } from '@/pages/login/ui/LoginPage';
 
 export default function Page() {
   return <LoginPage />;

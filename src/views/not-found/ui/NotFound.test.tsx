@@ -2,7 +2,8 @@ import { render, screen } from '@testing-library/react';
 
 import { useMediaQuery } from '@/shared/lib/hooks';
 import type { IconProps } from '@/shared/ui/icons/Icons.types';
-import { NotFoundLayout } from '@/views/not-found/NotFound';
+
+import { NotFoundLayout } from '@/views/not-found/ui/NotFound';
 
 jest.mock('@/shared/lib/hooks/useMediaQuery');
 

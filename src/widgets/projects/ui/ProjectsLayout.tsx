@@ -16,6 +16,7 @@ import { filterProjects } from '@/features/filter-projects/model/filter';
 import { useProjectsFilters } from '@/features/filter-projects/model/useProjectsFilters';
 import { useProjects } from '@/entities/project/api/useProjects';
 import { toProjectTableItem } from '@/entities/project/model/adapters';
+import { STATUSES } from '@/shared/config';
 import { Box } from '@/shared/ui';
 import { PageWrapper } from '@/shared/ui/page-wrapper/PageWrapper';
 
@@ -43,7 +44,11 @@ export const ProjectsLayout = () => {
       {filteredProjects.length === 0 ? (
         <ProjectsEmpty />
       ) : (
-        <ProjectsTable onTrashClick={openDeleteModal} projects={filteredProjects} />
+        <ProjectsTable
+          isShowReason={activeId === STATUSES.CANCELED}
+          onTrashClick={openDeleteModal}
+          projects={filteredProjects}
+        />
       )}
 
       <ProjectDeleteModal isOpen={isOpen} projectId={projectToDelete} onClose={closeDeleteModal} />

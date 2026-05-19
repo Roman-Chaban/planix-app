@@ -15,7 +15,7 @@ export const ProjectButton: FC = () => {
 
   return (
     <Button type={BUTTON} variant={DEFAULT} size="md" className={styles.button} fullWidth>
-      {t('ProjectsHeader.button')}
+      {t('projects.header.addProjectButton')}
     </Button>
   );
 };

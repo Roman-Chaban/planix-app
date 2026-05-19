@@ -26,7 +26,7 @@ export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
           <FormIcon position={START}>
             <SearchIconPrimary />
           </FormIcon>
-          <Input type={SEARCH} placeholder={t('ProjectsHeader.placeholder')} />
+          <Input type={SEARCH} placeholder={t('projects.header.searchPlaceholder')} />
         </FormWrapper>
       </FormField>
 

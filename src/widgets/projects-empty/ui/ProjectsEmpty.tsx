@@ -17,10 +17,10 @@ export const ProjectsEmpty = () => {
 
       <Box className={styles.content}>
         <Typography as="h4" className={styles.title}>
-          {t('NoProjects.title')}
+          {t('projects.emptyState.title')}
         </Typography>
         <Typography as="p" className={styles.subtitle}>
-          {t('NoProjects.subtitle')}
+          {t('projects.emptyState.subtitle')}
         </Typography>
 
         <ProjectButton />

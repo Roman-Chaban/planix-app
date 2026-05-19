@@ -4,19 +4,19 @@ import { DashboardAnalyticsRevenue } from '@/widgets/dashboard-analytics/ui/Dash
 export const dashboardHeaderTitles: DashboardAnalyticsHeaderList = [
   {
     id: '1',
-    title: 'DashboardAnalytics.Header.revenueTitle',
+    title: 'dashboard.analytics.revenueTitle',
     variant: 'primary',
     content: <DashboardAnalyticsRevenue />,
   },
   {
     id: '2',
-    title: 'DashboardAnalytics.Header.projectTitle',
+    title: 'dashboard.analytics.projectsTitle',
     variant: 'secondary',
     content: null,
   },
   {
     id: '3',
-    title: 'DashboardAnalytics.Header.taskOverview',
+    title: 'dashboard.analytics.taskOverview',
     variant: 'tertiary',
     content: null,
   },

@@ -2,24 +2,24 @@ import type { TableColumn } from '@/widgets/project-table/model/types';
 
 export const getProjectTableColumns = (isShowReason: boolean): TableColumn[] => {
   return [
-    { key: 'client', label: 'ProjectTable.TableColumns.clientName' },
-    { key: 'name', label: 'ProjectTable.TableColumns.projectName' },
-    { key: 'dueDate', label: 'ProjectTable.TableColumns.dueDate' },
-    { key: 'platform', label: 'ProjectTable.TableColumns.platform' },
-    { key: 'progressText', label: 'ProjectTable.TableColumns.progress' },
-    { key: 'formattedPrice', label: 'ProjectTable.TableColumns.price' },
+    { key: 'client', label: 'projects.table.columns.clientName' },
+    { key: 'name', label: 'projects.table.columns.projectName' },
+    { key: 'dueDate', label: 'projects.table.columns.dueDate' },
+    { key: 'platform', label: 'projects.table.columns.platform' },
+    { key: 'progressText', label: 'projects.table.columns.progress' },
+    { key: 'formattedPrice', label: 'projects.table.columns.price' },
 
     ...(isShowReason
       ? [
           {
             key: 'reason' as const,
-            label: 'ProjectTable.TableColumns.reason',
+            label: 'projects.table.columns.reason',
           },
         ]
       : []),
 
-    { key: 'status', label: 'ProjectTable.TableColumns.status' },
-    { key: 'actions', label: 'ProjectTable.TableColumns.action' },
+    { key: 'status', label: 'projects.table.columns.status' },
+    { key: 'actions', label: 'projects.table.columns.action' },
   ];
 };
 

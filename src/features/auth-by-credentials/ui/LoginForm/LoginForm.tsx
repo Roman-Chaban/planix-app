@@ -19,9 +19,9 @@ export const LoginForm: FC = () => {
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginContent}>
         <AuthHeader
-          title={t('AuthLoginForm.header.title')}
-          subtitle={t('AuthLoginForm.header.subtitle')}
-          highlightedText={t('AuthLoginForm.header.decorationText')}
+          title={t('auth.login.title')}
+          subtitle={t('auth.login.subtitle')}
+          highlightedText={t('auth.login.highlightedText')}
         />
 
         <form className={styles.loginForm} onSubmit={form.onSubmit}>
@@ -37,8 +37,8 @@ export const LoginForm: FC = () => {
       </Box>
 
       <AuthFooter
-        title={t('AuthLoginForm.footer.noAccount')}
-        link={t('AuthLoginForm.footer.registration')}
+        title={t('auth.login.footer.noAccount')}
+        link={t('auth.login.footer.registration')}
       />
     </Box>
   );

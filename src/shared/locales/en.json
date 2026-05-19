@@ -1,107 +1,111 @@
 {
-  "BrandBanner": {
+  "brand": {
     "title": "Planix",
     "subtitle": "Empowering You to Plan, Track, and Deliver with Clarity",
     "logoAlt": "Planix Logo"
   },
-  "AuthLoginForm": {
-    "header": {
+
+  "auth": {
+    "login": {
       "title": "Log",
-      "decorationText": "In 👋",
-      "subtitle": "Log In to Your CRM Dashboard"
-    },
-    "form": {
+      "highlightedText": "In 👋",
+      "subtitle": "Log in to your CRM dashboard",
+
       "email": {
         "label": "Email Address",
-        "placeholder": "Enter Email Address"
+        "placeholder": "Enter your email address"
       },
+
       "password": {
         "label": "Password",
-        "placeholder": "Enter Password"
+        "placeholder": "Enter your password"
       },
-      "checkbox": {
-        "rememberMe": "Remember me"
-      },
-      "links": {
-        "forgotPassword": "Forgot Password?"
-      },
-      "submit": {
-        "button": "Log in"
+
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot Password?",
+
+      "submitButton": "Log In",
+
+      "footer": {
+        "noAccount": "Don't have an account yet?",
+        "registration": "Registration"
       }
-    },
-    "footer": {
-      "noAccount": "Don't have account yet?",
-      "registration": "Registration"
     }
   },
-  "SidebarNav": {
+
+  "sidebar": {
     "dashboard": "Dashboard",
     "projects": "Project Management",
-    "client": "Client Management",
-    "lead": "Lead Management",
+    "clients": "Client Management",
+    "leads": "Lead Management",
     "inbox": "Inbox",
     "analytics": "Analytics",
     "settings": "Settings"
   },
-  "DashboardHeaders": {
-    "dashboard": "Dashboard",
-    "projects": "Project Management"
-  },
-  "DashboardCard": {
-    "totalProjects": "Total Projects",
-    "clients": "Clients",
-    "revenue": "Revenue",
-    "newLead": "New Lead",
-    "totalTask": "Total Task",
-    "vsLastMonth": "vs Last month"
-  },
-  "DashboardAnalytics": {
-    "Header": {
+
+  "dashboard": {
+    "headers": {
+      "dashboard": "Dashboard",
+      "projects": "Project Management"
+    },
+
+    "cards": {
+      "totalProjects": "Total Projects",
+      "clients": "Clients",
+      "revenue": "Revenue",
+      "newLeads": "New Leads",
+      "totalTasks": "Total Tasks",
+      "vsLastMonth": "vs last month"
+    },
+
+    "analytics": {
       "revenueTitle": "Revenue Analytics",
-      "projectTitle": "Projects Summary",
+      "projectsTitle": "Projects Summary",
       "taskOverview": "Task Overview"
     }
   },
-  "NotFound": {
-    "error": "Error",
-    "404": "404",
-    "pageNotFound": "Page Not Found"
-  },
-  "ProjectsHeader": {
-    "allProjects": "All Project",
-    "inProgress": "In Progress",
-    "pending": "Pending",
-    "completed": "Completed",
-    "canceled": "Canceled",
-    "button": "Add Project",
-    "placeholder": "Search Here..."
-  },
-  "NoProjects": {
-    "title": "No Projects Yet",
-    "subtitle": "You haven’t created any projects yet. Start by adding your first project to track progress, deadlines, and pricing in one place."
-  },
-  "ProjectTable": {
-    "TableColumns": {
-      "clientName": "Client Name",
-      "projectName": "Project Name",
-      "dueDate": "Due Date",
-      "platform": "Platform",
-      "progress": "Progress",
-      "reason": "Reason",
-      "price": "Price",
-      "status": "Status",
-      "action": "Action"
-    }
-  },
-  "ProjectsModal": {
-    "Header": {
-      "title": "Reason For Cancel"
+
+  "projects": {
+    "header": {
+      "allProjects": "All Projects",
+      "inProgress": "In Progress",
+      "pending": "Pending",
+      "completed": "Completed",
+      "canceled": "Canceled",
+
+      "addProjectButton": "Add Project",
+      "searchPlaceholder": "Search here..."
     },
-    "Content": {
-      "label": "Reason",
-      "placeholder": "Enter Here...",
-      "cancel": "Cancel",
-      "save": "Save"
+
+    "emptyState": {
+      "title": "No Projects Yet",
+      "subtitle": "You haven’t created any projects yet. Start by adding your first project to track progress, deadlines, and pricing in one place."
+    },
+
+    "table": {
+      "columns": {
+        "clientName": "Client Name",
+        "projectName": "Project Name",
+        "dueDate": "Due Date",
+        "platform": "Platform",
+        "progress": "Progress",
+        "reason": "Reason",
+        "price": "Price",
+        "status": "Status",
+        "action": "Action"
+      }
+    },
+
+    "cancelModal": {
+      "title": "Cancellation Reason",
+
+      "reason": {
+        "label": "Reason",
+        "placeholder": "Enter the reason..."
+      },
+
+      "cancelButton": "Cancel",
+      "saveButton": "Save"
     }
   }
 }

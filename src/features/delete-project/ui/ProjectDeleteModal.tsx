@@ -22,10 +22,10 @@ export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onC
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalHeader onClose={onClose} title={t('ProjectsModal.Header.title')} icon={<CloseIcon />} />
+      <ModalHeader onClose={onClose} title={t('projects.cancelModal.title')} icon={<CloseIcon />} />
       <Textarea
-        placeholder={t('ProjectsModal.Content.placeholder')}
-        label={t('ProjectsModal.Content.label')}
+        placeholder={t('projects.cancelModal.reason.label')}
+        label={t('projects.cancelModal.reason.label')}
         textareaClassName={styles.textarea}
         labelClassName={styles.reasonLabel}
       />

@@ -26,7 +26,7 @@ export const LoginFormFields: FC<LoginFormFieldsProps> = ({
   return (
     <>
       <FormField>
-        <FormLabel htmlFor="email">{t('AuthLoginForm.form.email.label')}</FormLabel>
+        <FormLabel htmlFor="email">{t('auth.login.email.label')}</FormLabel>
 
         <FormWrapper variant={DEFAULT} error={emailError}>
           <FormIcon position={START}>
@@ -37,7 +37,7 @@ export const LoginFormFields: FC<LoginFormFieldsProps> = ({
             id="email"
             {...emailField}
             type={EMAIL}
-            placeholder={t('AuthLoginForm.form.email.placeholder')}
+            placeholder={t('auth.login.email.placeholder')}
             autoComplete="email"
             aria-invalid={Boolean(emailError)}
           />
@@ -47,7 +47,7 @@ export const LoginFormFields: FC<LoginFormFieldsProps> = ({
       </FormField>
 
       <FormField>
-        <FormLabel htmlFor="password">{t('AuthLoginForm.form.password.label')}</FormLabel>
+        <FormLabel htmlFor="password">{t('auth.login.password.label')}</FormLabel>
 
         <FormWrapper variant={DEFAULT} error={passwordError}>
           <FormIcon position={START}>
@@ -58,7 +58,7 @@ export const LoginFormFields: FC<LoginFormFieldsProps> = ({
             id="password"
             {...passwordField}
             type={isVisible ? TEXT : PASSWORD}
-            placeholder={t('AuthLoginForm.form.password.placeholder')}
+            placeholder={t('auth.login.password.placeholder')}
             autoComplete="current-password"
             aria-invalid={Boolean(passwordError)}
           />

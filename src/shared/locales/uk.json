@@ -1,107 +1,111 @@
 {
-  "BrandBanner": {
+  "brand": {
     "title": "Planix",
-    "subtitle": "Допомагаємо планувати, контролювати та досягати результатів із ясністю",
+    "subtitle": "Допомагаємо вам планувати, контролювати та досягати результатів із ясністю",
     "logoAlt": "Логотип Planix"
   },
-  "AuthLoginForm": {
-    "header": {
+
+  "auth": {
+    "login": {
       "title": "Увійти",
-      "decorationText": "👋",
-      "subtitle": "Увійдіть до вашої CRM-панелі"
-    },
-    "form": {
+      "highlightedText": "👋",
+      "subtitle": "Увійдіть до вашої CRM-панелі",
+
       "email": {
         "label": "Електронна пошта",
         "placeholder": "Введіть електронну пошту"
       },
+
       "password": {
         "label": "Пароль",
         "placeholder": "Введіть пароль"
       },
-      "checkbox": {
-        "rememberMe": "Запам’ятати мене"
-      },
-      "links": {
-        "forgotPassword": "Забули пароль?"
-      },
-      "submit": {
-        "button": "Увійти"
+
+      "rememberMe": "Запам’ятати мене",
+      "forgotPassword": "Забули пароль?",
+
+      "submitButton": "Увійти",
+
+      "footer": {
+        "noAccount": "Ще не маєте акаунта?",
+        "registration": "Реєстрація"
       }
-    },
-    "footer": {
-      "noAccount": "Ще не маєте акаунта?",
-      "registration": "Реєстрація"
     }
   },
-  "SidebarNav": {
+
+  "sidebar": {
     "dashboard": "Панель керування",
     "projects": "Управління проєктами",
-    "client": "Управління клієнтами",
-    "lead": "Управління лідами",
+    "clients": "Управління клієнтами",
+    "leads": "Управління лідами",
     "inbox": "Вхідні",
     "analytics": "Аналітика",
     "settings": "Налаштування"
   },
-  "DashboardHeaders": {
-    "dashboard": "Панель керування",
-    "projects": "Управління проєктами"
-  },
-  "DashboardCard": {
-    "totalProjects": "Усього проєктів",
-    "clients": "Клієнти",
-    "revenue": "Дохід",
-    "newLead": "Нові ліди",
-    "totalTask": "Усього задач",
-    "vsLastMonth": "за останній місяць"
-  },
-  "DashboardAnalytics": {
-    "Header": {
+
+  "dashboard": {
+    "headers": {
+      "dashboard": "Панель керування",
+      "projects": "Управління проєктами"
+    },
+
+    "cards": {
+      "totalProjects": "Усього проєктів",
+      "clients": "Клієнти",
+      "revenue": "Дохід",
+      "newLeads": "Нові ліди",
+      "totalTasks": "Усього завдань",
+      "vsLastMonth": "у порівнянні з минулим місяцем"
+    },
+
+    "analytics": {
       "revenueTitle": "Аналітика доходів",
-      "projectTitle": "Зведення проєктів",
+      "projectsTitle": "Зведення проєктів",
       "taskOverview": "Огляд завдань"
     }
   },
-  "NotFound": {
-    "error": "Помилка",
-    "404": "404",
-    "pageNotFound": "Сторінку не знайдено"
-  },
-  "ProjectsHeader": {
-    "allProjects": "Усі проєкти",
-    "inProgress": "У процесі",
-    "pending": "Очікує",
-    "completed": "Завершені",
-    "canceled": "Скасовані",
-    "button": "Додати проєкт",
-    "placeholder": "Пошук тут..."
-  },
-  "NoProjects": {
-    "title": "Проєктів ще немає",
-    "subtitle": "Ви ще не створили жодного проєкту. Почніть із додавання першого проєкту, щоб відстежувати прогрес, дедлайни та вартість в одному місці."
-  },
-  "ProjectTable": {
-    "TableColumns": {
-      "clientName": "Назва клієнта",
-      "projectName": "Назва проєкту",
-      "dueDate": "Термін виконання",
-      "platform": "Платформа",
-      "progress": "Прогрес",
-      "reason": "Причина",
-      "price": "Ціна",
-      "status": "Статус",
-      "action": "Дії"
-    }
-  },
-  "ProjectsModal": {
-    "Header": {
-      "title": "Причина скасування"
+
+  "projects": {
+    "header": {
+      "allProjects": "Усі проєкти",
+      "inProgress": "У процесі",
+      "pending": "Очікують",
+      "completed": "Завершені",
+      "canceled": "Скасовані",
+
+      "addProjectButton": "Додати проєкт",
+      "searchPlaceholder": "Пошук..."
     },
-    "Content": {
-      "label": "Причина",
-      "placeholder": "Введіть тут...",
-      "cancel": "Скасувати",
-      "save": "Зберегти"
+
+    "emptyState": {
+      "title": "Проєктів ще немає",
+      "subtitle": "Ви ще не створили жодного проєкту. Почніть із додавання першого проєкту, щоб відстежувати прогрес, дедлайни та вартість в одному місці."
+    },
+
+    "table": {
+      "columns": {
+        "clientName": "Назва клієнта",
+        "projectName": "Назва проєкту",
+        "dueDate": "Термін виконання",
+        "platform": "Платформа",
+        "progress": "Прогрес",
+        "reason": "Причина",
+        "price": "Ціна",
+        "status": "Статус",
+        "action": "Дії"
+      }
+    },
+
+    "cancelModal": {
+      "title": "Причина скасування",
+
+      "reason": {
+        "label": "Причина",
+        "placeholder": "Введіть причину..."
+      },
+
+      "cancelButton": "Скасувати",
+      "saveButton": "Зберегти"
     }
   }
 }

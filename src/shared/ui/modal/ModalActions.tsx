@@ -19,7 +19,7 @@ export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDelete }) =
         onClick={onClose}
         className={styles.cancel}
       >
-        {t('ProjectsModal.Content.cancel')}
+        {t('projects.cancelModal.cancelButton')}
       </Button>
       <Button
         fullWidth
@@ -29,7 +29,7 @@ export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDelete }) =
         onClick={handleDelete}
         className={styles.save}
       >
-        {t('ProjectsModal.Content.save')}
+        {t('projects.cancelModal.saveButton')}
       </Button>
     </Box>
   );

@@ -33,19 +33,19 @@ export const LoginFormMain: FC<LoginFormMainProps> = ({ control }) => {
             <Checkbox
               checked={field.value}
               onChange={field.onChange}
-              label={t('AuthLoginForm.form.checkbox.rememberMe')}
+              label={t('auth.login.rememberMe')}
             />
           )}
         />
 
         {/* TODO: [Added the correct link when it will need] */}
         <AppLink href="/#" className={styles.loginFormLink}>
-          {t('AuthLoginForm.form.links.forgotPassword')}
+          {t('auth.login.forgotPassword')}
         </AppLink>
       </Box>
 
       <Button type={SUBMIT} variant={DEFAULT} size={SUBMIT_BUTTON_SIZES} className={styles.button}>
-        {t('AuthLoginForm.form.submit.button')}
+        {t('auth.login.submitButton')}
       </Button>
     </Box>
   );

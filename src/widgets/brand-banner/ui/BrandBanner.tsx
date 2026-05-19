@@ -19,14 +19,14 @@ export const BrandBanner: FC = () => {
   return (
     <Box className={styles.banner}>
       <Box className={styles.header}>
-        <Avatar alt={t('BrandBanner.logoAlt')} icon={<PlanixLogoIcon {...LOGO_SIZES_PROPS} />} />
+        <Avatar alt={t('brand.logoAlt')} icon={<PlanixLogoIcon {...LOGO_SIZES_PROPS} />} />
 
         <Typography as="span" className={styles.title}>
-          {t('BrandBanner.title')}
+          {t('brand.title')}
         </Typography>
       </Box>
       <Typography as="h5" className={styles.subtitle}>
-        {t('BrandBanner.subtitle')}
+        {t('brand.subtitle')}
       </Typography>
     </Box>
   );

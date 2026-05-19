@@ -35,7 +35,7 @@ export const ProjectsLayout = () => {
   }, [data, activeId, search]);
 
   return (
-    <PageWrapper header={<Header title={'DashboardHeaders.projects'} />}>
+    <PageWrapper header={<Header title={'dashboard.headers.projects'} />}>
       <Box className={styles.headerToolbar}>
         <ProjectsHeader activeId={activeId} setActiveId={setActiveId} />
         <ProjectToolbar control={control} />

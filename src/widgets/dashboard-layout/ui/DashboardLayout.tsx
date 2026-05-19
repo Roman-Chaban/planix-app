@@ -5,7 +5,7 @@ import { PageWrapper } from '@/shared/ui/page-wrapper/PageWrapper';
 
 export const DashboardLayout = () => {
   return (
-    <PageWrapper header={<Header title={'DashboardHeaders.dashboard'} />}>
+    <PageWrapper header={<Header title={'dashboard.headers.dashboard'} />}>
       <DashboardCards />
       <DashboardAnalytics />
     </PageWrapper>

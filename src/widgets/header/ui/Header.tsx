@@ -26,7 +26,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
         <Box className={styles.headerLeftSide}>
           <PlanixLogoIcon width={44} height={44} />
           <Typography as="span" className={styles.logoTitle}>
-            {t('BrandBanner.title')}
+            {t('brand.title')}
           </Typography>
         </Box>
 

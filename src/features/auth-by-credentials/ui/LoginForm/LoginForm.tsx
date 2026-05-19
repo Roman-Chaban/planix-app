@@ -3,13 +3,10 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AuthFooter } from '@/widgets/auth/ui/AuthFooter';
-import { AuthHeader } from '@/widgets/auth/ui/AuthHeader';
+import { AuthFooter, AuthHeader } from '@/widgets/auth/index';
+import { LoginFormMain, LoginFormFields } from '@/features/auth-by-credentials/index';
 import { useAuthLogin } from '@/features/auth-by-credentials/model/useAuthLogin';
 import styles from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.module.scss';
-
-import { LoginFormFields } from '@/features/auth-by-credentials/ui/LoginForm/LoginFormFields';
-import { LoginFormMain } from '@/features/auth-by-credentials/ui/LoginForm/LoginFormMain';
 
 import { Box } from '@/shared/ui';
 

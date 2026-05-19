@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { AuthHeaderProps } from '@/widgets/auth/config/Auth.types';
+import type { AuthHeaderProps } from '@/widgets/auth/model/types';
 
 import styles from '@/widgets/auth/ui/Auth.module.scss';
 import { Avatar, Box, Typography } from '@/shared/ui/index';

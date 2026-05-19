@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { AuthFooterProps } from '@/widgets/auth/config/Auth.types';
+import type { AuthFooterProps } from '@/widgets/auth/model/types';
 
 import styles from '@/widgets/auth/ui/Auth.module.scss';
 import { Box, AppLink, Typography } from '@/shared/ui/index';

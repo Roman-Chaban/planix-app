@@ -1,4 +1,4 @@
-import type { SidebarNavItems } from '@/widgets/sidebar/config/Sidebar.types';
+import type { SidebarNavItems } from '@/widgets/sidebar/model/types';
 import { ROUTES } from '@/shared/config/common';
 import {
   AnalyticsIcon,

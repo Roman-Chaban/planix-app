@@ -1,4 +1,4 @@
-import type { TableColumn } from '@/widgets/project-table/config/ProjectTable.types';
+import type { TableColumn } from '@/widgets/project-table/model/types';
 
 export const projectTableColumns: TableColumn[] = [
   { key: 'client', label: 'ProjectTable.TableColumns.clientName' },

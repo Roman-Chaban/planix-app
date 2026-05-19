@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { HeaderProps } from '@/widgets/header/config/Header.types';
+import type { HeaderProps } from '@/widgets/header/model/types';
 import styles from '@/widgets/header/ui/Header.module.scss';
 import { LanguageSelect } from '@/features/change-language';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';

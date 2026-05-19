@@ -4,8 +4,8 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectsToolbarProps } from '@/widgets/projects/config/ProjectsToolbar.types';
-import styles from '@/widgets/projects/ui/ProjectsToolbar.module.scss';
+import type { ProjectsToolbarProps } from '@/widgets/projects-toolbar/model/types';
+import styles from '@/widgets/projects-toolbar/ui/ProjectsToolbar.module.scss';
 import { ICON_POSITION } from '@/shared/config/common';
 import { Box, ProjectButton } from '@/shared/ui';
 import { FormField, FormIcon, FormWrapper } from '@/shared/ui/form-field';

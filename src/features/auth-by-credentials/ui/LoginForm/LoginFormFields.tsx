@@ -2,8 +2,8 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { usePasswordToggle } from '@/features/auth-by-credentials/model/usePasswordToggle';
 import type { LoginFormFieldsProps } from '@/features/auth-by-credentials/model/types';
+import { usePasswordToggle } from '@/features/auth-by-credentials/model/usePasswordToggle';
 import { ICON_POSITION } from '@/shared/config/common';
 import { FormError, FormField, FormIcon, FormLabel, FormWrapper } from '@/shared/ui/form-field';
 import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';

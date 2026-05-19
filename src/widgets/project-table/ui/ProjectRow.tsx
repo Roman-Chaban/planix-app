@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import type { ProjectRowProps } from '@/widgets/project-table/config/ProjectTable.types';
+import type { ProjectRowProps } from '@/widgets/project-table/model/types';
 import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
 import { CalendarIcon } from '@/shared/ui/icons/index';
 import { StatusBadge, ActionsBar } from '@/shared/ui/index';

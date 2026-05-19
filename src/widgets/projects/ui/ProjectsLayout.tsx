@@ -4,12 +4,12 @@ import { useMemo, useState } from 'react';
 
 import { Header } from '@/widgets/header/ui/Header';
 import { ProjectsTable } from '@/widgets/project-table/ui/ProjectTable';
-import { headerItems } from '@/widgets/projects/config/HeaderItems.constants';
-import type { TabId } from '@/widgets/projects/config/ProjectsLayout.types';
+import type { TabId } from '@/widgets/projects/model/types';
 import styles from '@/widgets/projects/ui/Projects.module.scss';
-import { ProjectsEmpty } from '@/widgets/projects/ui/ProjectsEmpty';
-import { ProjectsHeader } from '@/widgets/projects/ui/ProjectsHeader';
-import { ProjectToolbar } from '@/widgets/projects/ui/ProjectsToolbar';
+import { ProjectsEmpty } from '@/widgets/projects-empty/ui/ProjectsEmpty';
+import { headerItems } from '@/widgets/projects-header/model/constants';
+import { ProjectsHeader } from '@/widgets/projects-header/ui/ProjectsHeader';
+import { ProjectToolbar } from '@/widgets/projects-toolbar/ui/ProjectsToolbar';
 import { useProjectDeleteModal } from '@/features/delete-project/model/useProjectDeleteModal';
 import { ProjectDeleteModal } from '@/features/delete-project/ui/ProjectDeleteModal';
 import { filterProjects } from '@/features/filter-projects/model/filter';

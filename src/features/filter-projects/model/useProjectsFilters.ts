@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 
-import type { ProjectsLayoutFormValues } from '@/widgets/projects/config/ProjectsLayout.types';
+import type { ProjectsLayoutFormValues } from '@/widgets/projects/model/types';
 
 export const useProjectsFilters = () => {
   const form = useForm<ProjectsLayoutFormValues>({

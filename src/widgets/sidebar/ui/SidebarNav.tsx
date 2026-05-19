@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import { sidebarNavItems } from '@/widgets/sidebar/config/SidebarNavItems.constants';
+import { sidebarNavItems } from '@/widgets/sidebar/model/constants';
 import styles from '@/widgets/sidebar/ui/Sidebar.module.scss';
 import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/routing/isActiveRoute';

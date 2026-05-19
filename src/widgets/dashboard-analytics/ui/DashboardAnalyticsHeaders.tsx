@@ -2,9 +2,9 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { dashboardHeaderTitles } from '@/widgets/dashboard-analytics/model/constants';
 import styles from '@/widgets/dashboard-analytics/ui/DashboardAnalytics.module.scss';
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard-analytics/ui/DashboardAnalyticsHeader';
-import { dashboardHeaderTitles } from '@/widgets/dashboard-layout/config/DashboardHeaderTitles.constants';
 import { Box } from '@/shared/ui';
 
 export const DashboardAnalyticsHeaders = () => {

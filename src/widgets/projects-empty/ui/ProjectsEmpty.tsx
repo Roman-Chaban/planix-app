@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import styles from '@/widgets/projects/ui/ProjectsEmpty.module.scss';
+import styles from '@/widgets/projects-empty/ui/ProjectsEmpty.module.scss';
 import { NoProjectsIcon } from '@/shared/ui/icons';
 import { Box, ProjectButton, Typography } from '@/shared/ui/index';
 

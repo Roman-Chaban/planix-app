@@ -1,5 +1,5 @@
+import { dashboardCards } from '@/widgets/dashboard-cards/model/constants';
 import styles from '@/widgets/dashboard-cards/ui/DashboardCards.module.scss';
-import { dashboardCards } from '@/widgets/dashboard-layout/config/dashboardCards.constants';
 import { Box, List } from '@/shared/ui';
 
 import { Card } from '@/shared/ui/card/Card';

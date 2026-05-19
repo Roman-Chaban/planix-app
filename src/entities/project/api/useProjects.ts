@@ -2,7 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import type { ProjectsResponse } from '@/widgets/project-table/config/ProjectTable.types';
+import type { ProjectsResponse } from '@/widgets/project-table/model/types';
 import { mockProjects } from '@/entities/project/mocks/projects.mock';
 
 import { delay } from '@/shared/lib/async/delay';

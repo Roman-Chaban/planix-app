@@ -3,10 +3,10 @@
 import { useMemo } from 'react';
 import Select from 'react-select';
 
-import { createSelectStyles } from '@/features/change-language/ui/styles';
 import { SingleValue, Option } from '@/features/change-language/index';
-import { useLanguageSelect } from '@/features/change-language/model/useLanguageSelect';
 import type { LanguageOption } from '@/features/change-language/model/types';
+import { useLanguageSelect } from '@/features/change-language/model/useLanguageSelect';
+import { createSelectStyles } from '@/features/change-language/ui/styles';
 import { INSTANCE_ID } from '@/shared/config/common';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';

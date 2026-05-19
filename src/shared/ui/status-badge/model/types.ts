@@ -1,6 +1,6 @@
 import type { FC, SVGProps } from 'react';
 
-import type { TabId } from '@/widgets/projects/config/ProjectsLayout.types';
+import type { TabId } from '@/widgets/projects/model/types';
 
 export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 export type StatusMap = Record<TabId, Status | null>;

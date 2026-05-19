@@ -1,5 +1,5 @@
+import { DashboardAnalyticsHeaders } from '@/widgets/dashboard-analytics/index';
 import styles from '@/widgets/dashboard-analytics/ui/DashboardAnalytics.module.scss';
-import { DashboardAnalyticsHeaders } from '@/widgets/dashboard-analytics/ui/DashboardAnalyticsHeaders';
 
 import { Box } from '@/shared/ui';
 

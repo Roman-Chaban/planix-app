@@ -60,6 +60,7 @@ export const mockProjects: Project[] = [
     progress: 0,
     price: 2400,
     status: 'Canceled',
+    reason: 'Client budget issue',
   },
   {
     id: '7',
@@ -130,6 +131,7 @@ export const mockProjects: Project[] = [
     progress: 68,
     price: 1966,
     status: 'Canceled',
+    reason: 'Scope change requested',
   },
   {
     id: '14',
@@ -140,5 +142,6 @@ export const mockProjects: Project[] = [
     progress: 0,
     price: 963,
     status: 'Canceled',
+    reason: 'Requirement mismatch',
   },
 ] as const;

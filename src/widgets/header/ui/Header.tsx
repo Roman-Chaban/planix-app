@@ -8,7 +8,7 @@ import type { HeaderProps } from '@/widgets/header/config/Header.types';
 import styles from '@/widgets/header/ui/Header.module.scss';
 import { LanguageSelect } from '@/features/change-language';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
-import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/Button.constants';
+import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
 
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 

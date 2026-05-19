@@ -5,7 +5,7 @@ import type { ProjectsHeaderItemProps } from '@/widgets/projects/config/Projects
 import styles from '@/widgets/projects/ui/ProjectsHeader.module.scss';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { Box, Button, Typography } from '@/shared/ui';
-import { BUTTON_TYPES } from '@/shared/ui/button/Button.constants';
+import { BUTTON_TYPES } from '@/shared/ui/button/model/constants';
 
 const { BUTTON } = BUTTON_TYPES;
 

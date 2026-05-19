@@ -2,11 +2,11 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDeleteModalProps } from '@/features/delete-project/config/ProjectsDeleteModal.types';
+import type { ProjectDeleteModalProps } from '@/features/delete-project/model/types';
 import styles from '@/features/delete-project/ui/ProjectsDeleteModal.module.scss';
 
 import { Button, Modal } from '@/shared/ui';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/Button.constants';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
 import { CloseIcon } from '@/shared/ui/icons';
 import { ModalHeader, ModalActions } from '@/shared/ui/modal';
 import { Textarea } from '@/shared/ui/textarea/Textarea';

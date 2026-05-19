@@ -23,4 +23,11 @@ export const ICON_POSITION = {
   END: 'end',
 } as const;
 
+export const STATUSES = {
+  PENDING: 'Pending',
+  IN_PROGRESS: 'In Progress',
+  COMPLETED: 'Completed',
+  CANCELED: 'Canceled',
+} as const;
+
 export const INSTANCE_ID = 'language-switcher' as const;

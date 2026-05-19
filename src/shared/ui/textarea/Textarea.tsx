@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { Box } from '@/shared/ui/index';
 import styles from '@/shared/ui/textarea/Textarea.module.scss';
-import type { TextareaProps } from '@/shared/ui/textarea/Textarea.types';
+import type { TextareaProps } from '@/shared/ui/textarea/model/types';
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ label, id, textareaClassName, labelClassName, placeholder, ...props }, ref) => {

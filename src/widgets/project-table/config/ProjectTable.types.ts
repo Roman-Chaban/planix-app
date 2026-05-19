@@ -1,4 +1,4 @@
-import type { Status, StatusColor } from '@/shared/ui/status-badge/StatusBadge.types';
+import type { Status, StatusColor } from '@/shared/ui/status-badge/model/types';
 
 export type TableColumn = {
   key: keyof ProjectTableItem | 'actions';

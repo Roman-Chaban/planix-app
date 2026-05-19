@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Box, Button, Typography } from '@/shared/ui/index';
 
 import styles from '@/shared/ui/modal/Modal.module.scss';
-import type { ModalHeaderProps } from '@/shared/ui/modal/Modal.types';
+import type { ModalHeaderProps } from '@/shared/ui/modal/model/types';
 
 export const ModalHeader: FC<ModalHeaderProps> = ({ onClose, title, icon }) => {
   const { t } = useTranslation();

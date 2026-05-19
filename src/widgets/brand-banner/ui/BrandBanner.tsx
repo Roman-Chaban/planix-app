@@ -8,7 +8,7 @@ import styles from '@/widgets/brand-banner/ui/BrandBanner.module.scss';
 import { useMediaQuery } from '@/shared/lib/hooks/useMediaQuery';
 import { PlanixLogoIcon } from '@/shared/ui/icons/Icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
-import { BREAKPOINTS } from '@/shared/ui/theme/breakpoints';
+import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();

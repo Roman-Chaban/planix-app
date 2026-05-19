@@ -1,7 +1,7 @@
 import type { ProjectTableItem } from '@/widgets/project-table/config/ProjectTable.types';
 import type { TabId } from '@/widgets/projects/config/ProjectsLayout.types';
 
-import { statusMap } from '@/shared/ui/status-badge/Statuses.constants';
+import { statusMap } from '@/shared/ui/status-badge/model/constants';
 
 export const filterProjects = (
   projects: ProjectTableItem[],

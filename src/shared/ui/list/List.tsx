@@ -1,4 +1,4 @@
-import type { ListItemKey, ListProps } from '@/shared/ui/list/List.types';
+import type { ListItemKey, ListProps } from '@/shared/ui/list/model/types';
 
 export const List = <T extends { id: ListItemKey }>({
   tag: Tag = 'ul',

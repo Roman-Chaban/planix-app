@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
 import { useMediaQuery } from '@/shared/lib/hooks';
-import type { IconProps } from '@/shared/ui/icons/Icons.types';
+import type { IconProps } from '@/shared/ui/icons/model/types';
 
 import { NotFoundLayout } from '@/views/not-found/ui/NotFound';
 

@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { Typography } from '@/shared/ui/index';
 import styles from '@/shared/ui/status-badge/StatusBadge.module.scss';
-import type { Status } from '@/shared/ui/status-badge/StatusBadge.types';
-import { statusClasses, statusIcons } from '@/shared/ui/status-badge/Statuses.constants';
+import type { Status } from '@/shared/ui/status-badge/model/types';
+import { statusClasses, statusIcons } from '@/shared/ui/status-badge/model/constants';
 
 type StatusBadgeProps = { status: Status };
 

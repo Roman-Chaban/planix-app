@@ -10,7 +10,7 @@ import styles from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.module
 import { useMediaQuery } from '@/shared/lib/hooks/index';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
 import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
-import { BREAKPOINTS } from '@/shared/ui/theme/breakpoints';
+import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 const { SUBMIT } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;

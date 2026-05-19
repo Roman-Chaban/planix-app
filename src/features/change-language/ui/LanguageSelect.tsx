@@ -9,7 +9,7 @@ import { useLanguageSelect } from '@/features/change-language/model/useLanguageS
 import type { LanguageOption } from '@/features/change-language/model/types';
 import { INSTANCE_ID } from '@/shared/config/common';
 import { useMediaQuery } from '@/shared/lib/hooks';
-import { BREAKPOINTS } from '@/shared/ui/theme/breakpoints';
+import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 const { TABLET } = BREAKPOINTS;
 

@@ -2,7 +2,7 @@ import { useId, type ChangeEvent, type FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import styles from '@/shared/ui/checkbox/Checkbox.module.scss';
-import type { CheckboxProps } from '@/shared/ui/checkbox/Checkbox.types';
+import type { CheckboxProps } from '@/shared/ui/checkbox/model/types';
 import { CheckIcon } from '@/shared/ui/icons/Icons';
 import { INPUT_TYPES } from '@/shared/ui/input/Input.constants';
 import { Typography } from '@/shared/ui/typography/Typography';

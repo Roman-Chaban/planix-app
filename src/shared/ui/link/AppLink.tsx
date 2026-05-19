@@ -1,6 +1,6 @@
 'use client';
 
-import type { LinkProps } from './AppLink.types';
+import type { LinkProps } from './model/types';
 
 import type { FC } from 'react';
 

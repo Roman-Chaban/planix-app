@@ -4,7 +4,7 @@ import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 
 import { Box } from '@/shared/ui';
 import styles from '@/shared/ui/form-field/FormField.module.scss';
-import type { FormWrapperProps } from '@/shared/ui/form-field/FormField.types';
+import type { FormWrapperProps } from '@/shared/ui/form-field/model/types';
 
 export const FormWrapper: FC<FormWrapperProps> = ({
   children,

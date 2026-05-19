@@ -1,3 +1,4 @@
+import type { PROJECT_REASONS } from '@/widgets/project-table/model/constants';
 import type { Status, StatusColor } from '@/shared/ui/status-badge/model/types';
 
 export type TableColumn = {
@@ -17,6 +18,8 @@ export type Client = {
 
 export type Platform = 'Freelancer' | 'Upwork' | 'Fiverr';
 
+export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];
+
 export type Project = {
   id: string;
   client: Client;
@@ -28,6 +31,7 @@ export type Project = {
   status: Status;
   createdAt?: string;
   updatedAt?: string;
+  reason?: RejectReason;
 };
 
 export type ProjectsResponse = {
@@ -46,12 +50,14 @@ export type ProjectTableItem = {
   formattedPrice: string;
 } & Project;
 
-export type ProjectRowProps = {
+export type ProjectTableRowProps = {
   project: ProjectTableItem;
   onTrashClick?: () => void;
+  isShowReason?: boolean;
 };
 
 export type ProjectsTableProps = {
   projects: ProjectTableItem[];
   onTrashClick: (id: string) => void;
+  isShowReason?: boolean;
 };

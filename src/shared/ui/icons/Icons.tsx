@@ -1104,7 +1104,7 @@ export const CanceledIcon = () => {
 
 export const CompletedIcon = () => {
   return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M9.70832 5.16565L6.0395 8.83447L4.29297 7.08797"
         stroke="currentColor"

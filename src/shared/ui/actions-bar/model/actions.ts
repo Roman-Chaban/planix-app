@@ -1,4 +1,4 @@
-import type { Actions } from '@/shared/ui/actions-bar/ActionsBar.types';
+import type { Actions } from '@/shared/ui/actions-bar/model/types';
 import { EyeIcon, EditIcon, TrashIcon } from '@/shared/ui/icons/index';
 
 export const createActions = (onTrashClick?: () => void): Actions => [

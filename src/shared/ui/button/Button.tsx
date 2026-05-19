@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import styles from '@/shared/ui/button/Button.module.scss';
-import type { ButtonProps } from '@/shared/ui/button/Button.types';
+import type { ButtonProps } from '@/shared/ui/button/model/types';
 
 import { Box, Typography } from '@/shared/ui/index';
 

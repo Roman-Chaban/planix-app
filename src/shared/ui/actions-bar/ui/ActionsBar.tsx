@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-import { createActions } from '@/shared/ui/actions-bar/ActionBar.constants';
-import styles from '@/shared/ui/actions-bar/ActionsBar.module.scss';
-import type { ActionsBarProps } from '@/shared/ui/actions-bar/ActionsBar.types';
+import { createActions } from '@/shared/ui/actions-bar/model/actions';
+import type { ActionsBarProps } from '@/shared/ui/actions-bar/model/types';
+import styles from '@/shared/ui/actions-bar/ui/ActionsBar.module.scss';
 import { Box, Button } from '@/shared/ui/index';
 
 export const ActionsBar: FC<ActionsBarProps> = ({ onTrashClick }) => {

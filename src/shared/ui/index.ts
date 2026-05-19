@@ -1,4 +1,4 @@
-export { ActionsBar } from '@/shared/ui/actions-bar/ActionsBar';
+export { ActionsBar } from '@/shared/ui/actions-bar/ui/ActionsBar';
 export { Avatar } from '@/shared/ui/avatar/Avatar';
 export { Box } from '@/shared/ui/box/Box';
 export { Button } from '@/shared/ui/button/Button';
@@ -10,6 +10,6 @@ export { GridItem } from '@/shared/ui/grid/GridItem';
 export { AppLink } from '@/shared/ui/link/AppLink';
 export { Typography } from '@/shared/ui/typography/Typography';
 export { List } from '@/shared/ui/list/List';
-export { ProjectButton } from '@/features/create-project/ProjectButton';
+export { ProjectButton } from '@/shared/ui/project-button/ProjectButton';
 export { Modal } from '@/shared/ui/modal/Modal';
 export { StatusBadge } from '@/shared/ui/status-badge/StatusBadge';

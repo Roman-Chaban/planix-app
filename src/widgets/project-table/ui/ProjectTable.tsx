@@ -1,27 +1,46 @@
 import type { FC } from 'react';
 
-import { projectTableColumns } from '@/widgets/project-table/model/constants';
+import {
+  ProjectTableHeader,
+  ProjectTableRow,
+  ProjectTableColGroup,
+} from '@/widgets/project-table/index';
+import { getProjectTableColumns } from '@/widgets/project-table/model/constants';
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
-import { ProjectRow } from '@/widgets/project-table/ui/ProjectRow';
-import { ProjectTableHeader } from '@/widgets/project-table/ui/ProjectsTableHeader';
 import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
-import { Box } from '@shared/ui/index';
+import { AXIS, useDragScroll } from '@/shared/lib/hooks';
 
-export const ProjectsTable: FC<ProjectsTableProps> = ({ projects, onTrashClick }) => {
+const { X } = AXIS;
+
+export const ProjectsTable: FC<ProjectsTableProps> = ({
+  projects,
+  onTrashClick,
+  isShowReason = false,
+}) => {
+  const columns = getProjectTableColumns(isShowReason);
+
+  const dragRef = useDragScroll<HTMLDivElement>({
+    axis: X,
+  });
+
   return (
-    <Box className={styles.wrapper}>
+    <div ref={dragRef} className={styles.wrapper}>
       <table className={styles.table}>
-        <ProjectTableHeader columns={projectTableColumns} />
+        <ProjectTableColGroup isShowReason={isShowReason} />
+
+        <ProjectTableHeader columns={columns} />
+
         <tbody className={styles.body}>
           {projects.map((project) => (
-            <ProjectRow
+            <ProjectTableRow
               key={project.id}
               project={project}
+              isShowReason={isShowReason}
               onTrashClick={() => onTrashClick(project.id)}
             />
           ))}
         </tbody>
       </table>
-    </Box>
+    </div>
   );
 };

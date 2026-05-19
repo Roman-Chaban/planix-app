@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import type { UseEscapeKeyParams } from '@/shared/lib/hooks/Hooks.types';
+import type { UseEscapeKeyParams } from '@/shared/lib/hooks/model/types';
 
 export const useEscapeKey = ({ enabled, onEscape }: UseEscapeKeyParams) => {
   useEffect(() => {

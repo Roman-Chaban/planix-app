@@ -1,12 +1,18 @@
 import { type FC } from 'react';
 
-import type { ProjectRowProps } from '@/widgets/project-table/model/types';
+import type { ProjectTableRowProps } from '@/widgets/project-table/model/types';
 import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
+import { STATUSES } from '@/shared/config';
+import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { CalendarIcon } from '@/shared/ui/icons/index';
 import { StatusBadge, ActionsBar } from '@/shared/ui/index';
 
-export const ProjectRow: FC<ProjectRowProps> = ({ project, onTrashClick }) => {
-  const { status, client, name, dueDate, platform, progressText, formattedPrice } = project;
+export const ProjectTableRow: FC<ProjectTableRowProps> = ({
+  project,
+  onTrashClick,
+  isShowReason,
+}) => {
+  const { status, client, name, dueDate, platform, progressText, formattedPrice, reason } = project;
 
   return (
     <tr className={styles.bodyRow}>
@@ -23,6 +29,11 @@ export const ProjectRow: FC<ProjectRowProps> = ({ project, onTrashClick }) => {
       <td className={styles.cell}>{platform}</td>
       <td className={styles.cell}>{progressText}</td>
       <td className={styles.cell}>{formattedPrice}</td>
+      {isShowReason && (
+        <td className={buildClassName(styles.cell, styles.reason)}>
+          {status === STATUSES.CANCELED ? reason : null}
+        </td>
+      )}
       <td className={styles.cell}>
         <StatusBadge status={status} />
       </td>

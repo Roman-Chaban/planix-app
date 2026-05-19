@@ -5,8 +5,7 @@ import { useTranslation } from 'react-i18next';
 import type { ProjectDeleteModalProps } from '@/features/delete-project/model/types';
 import styles from '@/features/delete-project/ui/ProjectsDeleteModal.module.scss';
 
-import { Button, Modal } from '@/shared/ui';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
+import { Modal } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 import { ModalHeader, ModalActions } from '@/shared/ui/modal';
 import { Textarea } from '@/shared/ui/textarea/Textarea';
@@ -30,28 +29,7 @@ export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onC
         textareaClassName={styles.textarea}
         labelClassName={styles.reasonLabel}
       />
-      <ModalActions className={styles.actions}>
-        <Button
-          fullWidth
-          type={BUTTON_TYPES.BUTTON}
-          variant={BUTTON_VARIANTS.OUTLINE}
-          size={BUTTON_SIZES.LARGE}
-          onClick={onClose}
-          className={styles.cancel}
-        >
-          {t('ProjectsModal.Content.cancel')}
-        </Button>
-        <Button
-          fullWidth
-          type={BUTTON_TYPES.BUTTON}
-          variant={BUTTON_VARIANTS.DEFAULT}
-          size={BUTTON_SIZES.LARGE}
-          onClick={handleDelete}
-          className={styles.save}
-        >
-          {t('ProjectsModal.Content.save')}
-        </Button>
-      </ModalActions>
+      <ModalActions onClose={onClose} handleDelete={handleDelete} />
     </Modal>
   );
 };

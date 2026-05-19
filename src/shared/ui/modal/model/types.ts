@@ -14,8 +14,8 @@ export type ModalHeaderProps = {
 };
 
 export type ModalActionsProps = {
-  className?: string;
-  children?: ReactNode;
+  onClose: () => void;
+  handleDelete: () => void;
 };
 
 export type UseModalBehaviorParams = {

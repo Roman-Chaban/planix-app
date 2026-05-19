@@ -1,5 +1,5 @@
-import { AuthLayout } from '@/widgets/auth/ui/auth-layout/AuthLayout';
+import { LoginPage } from '@/views/login/ui/LoginPage';
 
-export default function LoginPage() {
-  return <AuthLayout />;
+export default function Page() {
+  return <LoginPage />;
 }

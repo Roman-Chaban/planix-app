@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectTableHeaderProps } from '@/entities/project/model/ui-types';
-import styles from '@/entities/project/styles/project.module.scss';
+import type { ProjectTableHeaderProps } from '@/widgets/project-table/model/types';
+import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
 
 export const ProjectTableHeader: FC<ProjectTableHeaderProps> = ({ columns }) => {
   const { t } = useTranslation();

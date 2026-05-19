@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
+import { projectTableColumns } from '@/widgets/project-table/model/constants';
+import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
+import { ProjectRow } from '@/widgets/project-table/ui/ProjectRow';
 import { ProjectTableHeader } from '@/widgets/project-table/ui/ProjectsTableHeader';
-import { projectTableColumns } from '@/entities/project/lib/project-table-columns';
-import type { ProjectsTableProps } from '@/entities/project/model/ui-types';
-import styles from '@/entities/project/styles/project.module.scss';
-import { ProjectRow } from '@/entities/project/ui/ProjectRow';
+import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
 import { Box } from '@shared/ui/index';
 
 export const ProjectsTable: FC<ProjectsTableProps> = ({ projects, onTrashClick }) => {

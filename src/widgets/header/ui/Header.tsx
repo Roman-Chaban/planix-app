@@ -5,10 +5,10 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { HeaderProps } from '@/widgets/header/model/types';
-import styles from '@/widgets/header/styles/header.module.scss';
+import styles from '@/widgets/header/ui/Header.module.scss';
 import { LanguageSelect } from '@/features/change-language';
-import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/constants/buttons';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
+import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
 
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
@@ -47,7 +47,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
               <NotificationIcon />
             </Button>
 
-            {/* Mock: [Waiting for implementation AuthLogic] */}
+            {/* TODO: [Waiting for implementation AuthLogic] */}
             <Avatar className={styles.avatar} fallback={FALLBACK_PROFILE_AVATAR} />
           </Box>
         </Box>

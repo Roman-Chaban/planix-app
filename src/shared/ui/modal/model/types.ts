@@ -17,3 +17,8 @@ export type ModalActionsProps = {
   className?: string;
   children?: ReactNode;
 };
+
+export type UseModalBehaviorParams = {
+  isOpen: boolean;
+  onClose: () => void;
+};

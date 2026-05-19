@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 
 import { notFound } from 'next/navigation';
 
-import { LOCALES } from '@/shared/constants/locales';
-import { isLocale } from '@/shared/lib/helpers/isLocale/isLocale';
-import { GlobalProviders } from '@/shared/providers/GlobalProviders';
+import { AppProvider } from '@/app/providers/index';
+import { LOCALES } from '@/shared/lib/i18n/locales';
+import { isLocale } from '@/shared/lib/routing/isLocale';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -23,5 +23,5 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  return <GlobalProviders locale={locale}>{children}</GlobalProviders>;
+  return <AppProvider locale={locale}>{children}</AppProvider>;
 }

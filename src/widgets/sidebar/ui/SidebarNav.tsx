@@ -2,9 +2,9 @@
 
 import { usePathname } from 'next/navigation';
 
+import { SidebarNavItem } from '@/widgets/sidebar/index';
 import { sidebarNavItems } from '@/widgets/sidebar/model/constants';
 import styles from '@/widgets/sidebar/ui/Sidebar.module.scss';
-import { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
 import { isActiveRoute } from '@/shared/lib/routing/isActiveRoute';
 import { List } from '@/shared/ui';
 

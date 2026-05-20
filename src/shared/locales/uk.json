@@ -106,6 +106,16 @@
 
       "cancelButton": "Скасувати",
       "saveButton": "Зберегти"
+    },
+
+    "createProject": {
+      "header": {
+        "title": "Додати проєкт",
+        "meta": {
+          "label": "Додати проєкт  /",
+          "value": "Список проектів"
+        }
+      }
     }
   }
 }

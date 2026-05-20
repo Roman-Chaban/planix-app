@@ -15,7 +15,7 @@
   min-width: 96.25rem;
   table-layout: fixed;
   border-collapse: separate;
-  border-spacing: 0 0.875rem;
+  border-spacing: 0 0.575rem;
 }
 
 .head {
@@ -53,7 +53,7 @@
 
 .bodyRow {
   td {
-    @include table-cell(0.5rem);
+    @include table-cell(0.5rem 1rem);
     border-bottom: 0.094rem solid $color-black-300;
   }
 

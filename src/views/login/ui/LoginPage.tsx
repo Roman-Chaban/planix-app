@@ -1,5 +1,5 @@
-import { AuthLayout } from '@/widgets/auth/ui/AuthLayout';
+import { LoginLayout } from '@/widgets/login/ui/LoginLayout';
 
 export const LoginPage = () => {
-  return <AuthLayout />;
+  return <LoginLayout />;
 };

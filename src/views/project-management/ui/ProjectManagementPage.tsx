@@ -1,5 +1,5 @@
-import { ProjectsLayout } from '@/widgets/projects/ui/ProjectsLayout';
+import { ProjectLayout } from '@/widgets/project-layout/ui/ProjectLayout';
 
 export const ProjectManagementPage = () => {
-  return <ProjectsLayout />;
+  return <ProjectLayout />;
 };

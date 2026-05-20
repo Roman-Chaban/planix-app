@@ -1,8 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 
-import type { UseQueryWithSkeletonOptions } from '@/shared/lib/hooks/model/types';
+import type {
+  UseQueryWithSkeletonOptions,
+  UseQueryWithSkeletonResult,
+} from '@/shared/lib/hooks/model/types';
 
-export const useQueryWithSkeleton = <T>(options: UseQueryWithSkeletonOptions<T>) => {
+export const useQueryWithSkeleton = <T>(
+  options: UseQueryWithSkeletonOptions<T>,
+): UseQueryWithSkeletonResult<T> => {
   const query = useQuery(options);
 
   return {

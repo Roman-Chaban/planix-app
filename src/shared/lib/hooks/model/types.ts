@@ -1,7 +1,12 @@
-import { type UseQueryOptions } from '@tanstack/react-query';
+import { type UseQueryResult, type UseQueryOptions } from '@tanstack/react-query';
 
 export type UseQueryWithSkeletonOptions<T> = UseQueryOptions<T> & {
   Skeleton?: React.ComponentType;
+};
+
+export type UseQueryWithSkeletonResult<T> = UseQueryResult<T> & {
+  Skeleton?: React.ComponentType;
+  showSkeleton: boolean;
 };
 
 export type Point = { x: number; y: number };

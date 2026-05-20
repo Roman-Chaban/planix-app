@@ -13,34 +13,43 @@ import { Box } from '@/shared/ui';
 import { PageWrapper } from '@/shared/ui/page-wrapper/PageWrapper';
 
 export const ProjectLayout = () => {
-  const projectsPage = useProjectsPageModel();
-
-  const Skeleton = projectsPage.Skeleton;
+  const {
+    activeId,
+    setActiveId,
+    control,
+    showSkeleton,
+    Skeleton,
+    isEmpty,
+    hasData,
+    isCanceled,
+    deleteModal,
+    projects,
+  } = useProjectsPageModel();
 
   return (
     <PageWrapper header={<Header title={sharedI18n.sidebar.projects} />}>
       <Box className={styles.headerToolbar}>
-        <ProjectsHeader activeId={projectsPage.activeId} setActiveId={projectsPage.setActiveId} />
+        <ProjectsHeader activeId={activeId} setActiveId={setActiveId} />
 
-        <ProjectToolbar control={projectsPage.control} />
+        <ProjectToolbar control={control} />
       </Box>
 
-      {projectsPage.showSkeleton && Skeleton && <Skeleton />}
+      {showSkeleton && Skeleton && <Skeleton />}
 
-      {projectsPage.isEmpty && <ProjectsEmpty />}
+      {isEmpty && <ProjectsEmpty />}
 
-      {projectsPage.hasData && (
+      {hasData && (
         <ProjectsTable
-          isShowReason={projectsPage.isCanceled}
-          onTrashClick={projectsPage.deleteModal.openDeleteModal}
-          projects={projectsPage.projects}
+          isShowReason={isCanceled}
+          onTrashClick={deleteModal.openDeleteModal}
+          projects={projects}
         />
       )}
 
       <ProjectDeleteModal
-        isOpen={projectsPage.deleteModal.isOpen}
-        projectId={projectsPage.deleteModal.projectToDelete}
-        onClose={projectsPage.deleteModal.closeDeleteModal}
+        isOpen={deleteModal.isOpen}
+        projectId={deleteModal.projectToDelete}
+        onClose={deleteModal.closeDeleteModal}
       />
     </PageWrapper>
   );

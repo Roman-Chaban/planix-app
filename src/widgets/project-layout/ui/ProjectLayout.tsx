@@ -3,9 +3,9 @@
 import { useMemo, useState } from 'react';
 
 import { Header } from '@/widgets/header/ui/Header';
+import type { TabId } from '@/widgets/project-layout/model/types';
+import styles from '@/widgets/project-layout/ui/ProjectLayout.module.scss';
 import { ProjectsTable } from '@/widgets/project-table/ui/ProjectTable';
-import type { TabId } from '@/widgets/projects/model/types';
-import styles from '@/widgets/projects/ui/Projects.module.scss';
 import { ProjectsEmpty } from '@/widgets/projects-empty/ui/ProjectsEmpty';
 import { headerItems } from '@/widgets/projects-header/model/constants';
 import { ProjectsHeader } from '@/widgets/projects-header/ui/ProjectsHeader';
@@ -20,7 +20,7 @@ import { STATUSES } from '@/shared/config';
 import { Box } from '@/shared/ui';
 import { PageWrapper } from '@/shared/ui/page-wrapper/PageWrapper';
 
-export const ProjectsLayout = () => {
+export const ProjectLayout = () => {
   const [activeId, setActiveId] = useState<TabId>(headerItems[0].id);
   const { projectToDelete, openDeleteModal, closeDeleteModal, isOpen } = useProjectDeleteModal();
 

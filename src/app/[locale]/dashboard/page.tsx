@@ -1,5 +1,5 @@
-import { DashboardPage } from '@/views/dashboard/ui/DashboardPage';
+import { DashboardLayout } from '@/widgets/dashboard-layout';
 
-export default function Page() {
-  return <DashboardPage />;
+export default function DashboardPage() {
+  return <DashboardLayout />;
 }

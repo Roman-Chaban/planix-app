@@ -1,5 +1,5 @@
-import { ProjectManagementCreatePage } from '@/views/project-management-create/ui/ProjectManagementCreatePage';
+import { ProjectCreateLayout } from '@/widgets/project-create';
 
-export default function Page() {
-  return <ProjectManagementCreatePage />;
+export default function ProjectCreatePage() {
+  return <ProjectCreateLayout />;
 }

@@ -1,5 +1,5 @@
-import { LoginPage } from '@/views/login/ui/LoginPage';
+import { LoginLayout } from '@/widgets/login';
 
-export default function Page() {
-  return <LoginPage />;
+export default function LoginPage() {
+  return <LoginLayout />;
 }

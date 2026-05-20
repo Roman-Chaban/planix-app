@@ -17,6 +17,7 @@ import { useProjectsFilters } from '@/features/filter-projects/model/useProjects
 import { useProjects } from '@/entities/project/api/useProjects';
 import { toProjectTableItem } from '@/entities/project/model/adapters';
 import { STATUSES } from '@/shared/config';
+import { sharedI18n } from '@/shared/lib/i18n/keys';
 import { Box } from '@/shared/ui';
 import { PageWrapper } from '@/shared/ui/page-wrapper/PageWrapper';
 
@@ -35,7 +36,7 @@ export const ProjectLayout = () => {
   }, [data, activeId, search]);
 
   return (
-    <PageWrapper header={<Header title={'dashboard.headers.projects'} />}>
+    <PageWrapper header={<Header title={sharedI18n.sidebar.projects} />}>
       <Box className={styles.headerToolbar}>
         <ProjectsHeader activeId={activeId} setActiveId={setActiveId} />
         <ProjectToolbar control={control} />

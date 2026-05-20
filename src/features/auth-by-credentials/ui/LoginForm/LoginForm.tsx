@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AuthFooter, AuthHeader } from '@/widgets/auth/index';
+import { LoginHeader, LoginFooter } from '@/widgets/login/index';
 import { LoginFormMain, LoginFormFields } from '@/features/auth-by-credentials/index';
 import { useAuthLogin } from '@/features/auth-by-credentials/model/useAuthLogin';
 import styles from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.module.scss';
@@ -18,7 +18,7 @@ export const LoginForm: FC = () => {
   return (
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginContent}>
-        <AuthHeader
+        <LoginHeader
           title={t('auth.login.title')}
           subtitle={t('auth.login.subtitle')}
           highlightedText={t('auth.login.highlightedText')}
@@ -36,7 +36,7 @@ export const LoginForm: FC = () => {
         </form>
       </Box>
 
-      <AuthFooter
+      <LoginFooter
         title={t('auth.login.footer.noAccount')}
         link={t('auth.login.footer.registration')}
       />

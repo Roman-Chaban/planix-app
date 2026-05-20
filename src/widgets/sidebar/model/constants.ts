@@ -10,7 +10,7 @@ import {
   SettingsIcon,
 } from '@/shared/ui/icons';
 
-const { DASHBOARD, PROJECTS, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } = ROUTES;
+const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } = ROUTES;
 
 export const sidebarNavItems: SidebarNavItems = [
   {
@@ -23,7 +23,7 @@ export const sidebarNavItems: SidebarNavItems = [
     id: 'projects',
     icon: ProjectIcon,
     label: 'sidebar.projects',
-    href: PROJECTS,
+    href: PROJECT,
   },
   {
     id: 'clients',

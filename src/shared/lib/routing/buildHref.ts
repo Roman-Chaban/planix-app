@@ -1,5 +1,5 @@
 export const buildHref = (path: string, locale: string): string => {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
 
-  return `/${locale}${cleanPath}`;
+  return `/${locale}${normalizedPath}`;
 };

@@ -1,0 +1,97 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  width: 100%;
+  padding: 0 0.5rem;
+  background: $color-white;
+  box-shadow: $shadow-elevation-2;
+  border-radius: 1rem;
+  @include table-scroll;
+  @include hide-scrollbar;
+}
+
+.table {
+  width: 100%;
+  min-width: 96.25rem;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 0.575rem;
+}
+
+.head {
+  .heading {
+    background: $color-black-200;
+    @include table-cell(0.563rem 1rem);
+
+    &:first-child {
+      border-radius: 0.75rem 0 0 0.75rem;
+    }
+
+    &:last-child {
+      border-radius: 0 0.75rem 0.75rem 0;
+    }
+  }
+}
+
+.bodyRow {
+  td {
+    @include table-cell(0.85rem 1rem);
+    border-bottom: 0.094rem solid $color-black-300;
+  }
+
+  &:last-child td {
+    border-bottom: none;
+  }
+}
+
+.colClient {
+  width: 10%;
+}
+.colName {
+  width: 10%;
+}
+.colDueDate {
+  width: 8%;
+}
+.colPlatform {
+  width: 7%;
+}
+.colProgress {
+  width: 8%;
+}
+.colPrice {
+  width: 6%;
+}
+.colReason {
+  width: 10%;
+}
+.colStatus {
+  width: 8%;
+}
+.colActions {
+  width: 6%;
+}
+
+.skeleton {
+  height: 14px;
+  width: 100%;
+  border-radius: 6px;
+
+  background: $linear-gradient-400;
+
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+.colActions .skeleton {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.colPrice .skeleton {
+  width: 70%;
+}
+
+.colProgress .skeleton {
+  width: 80%;
+}

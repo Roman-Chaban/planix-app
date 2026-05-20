@@ -1,0 +1,34 @@
+@use '@/shared/styles' as *;
+
+.container {
+  @include flex(flex, row, space-between, center, 0);
+}
+
+.meta {
+  @include flex-row(0.438rem, center, center);
+}
+
+.heading {
+  position: relative;
+  left: 1rem;
+
+  @include title-bold($font-weight-semibold, $font-size-subtitle, $color-black-1200);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+
+    @include circle(0.5rem, $linear-gradient-300);
+  }
+}
+
+.metaLabel {
+  @include title-bold($font-weight-semibold, $font-size-body-lg, $color-black-1200);
+}
+
+.metaValue {
+  @include title-bold($font-weight-regular, $font-size-body-lg, $color-black-800, 0.62);
+}

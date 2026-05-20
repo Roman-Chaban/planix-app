@@ -6,7 +6,7 @@ import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/mo
 import styles from '@/widgets/sidebar/ui/Sidebar.module.scss';
 
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
-import { AppLink, Box } from '@/shared/ui';
+import { AppLink, Box, Typography } from '@/shared/ui';
 
 export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   id: key,
@@ -18,9 +18,11 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   const { t } = useTranslation();
 
   return (
-    <Box className={buildClassName(styles.item, isActive && styles.active)} key={key}>
-      <Icon />
-      <AppLink href={href}>{t(label)}</AppLink>
-    </Box>
+    <AppLink href={href} key={key}>
+      <Box className={buildClassName(styles.item, isActive && styles.active)}>
+        <Icon />
+        <Typography className={styles.label}>{t(label)}</Typography>
+      </Box>
+    </AppLink>
   );
 };

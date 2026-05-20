@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from 'react';
 
-import type { TabId } from '@/widgets/projects/model/types';
+import type { TabId } from '@/widgets/project-layout/model/types';
 
 export type ProjectsHeaderItemProps = {
   id: TabId;

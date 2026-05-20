@@ -1,5 +1,5 @@
+import type { TabId } from '@/widgets/project-layout/model/types';
 import type { ProjectTableItem } from '@/widgets/project-table/model/types';
-import type { TabId } from '@/widgets/projects/model/types';
 
 import { statusMap } from '@/shared/ui/status-badge/model/constants';
 

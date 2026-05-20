@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
-import type { AuthHeaderProps } from '@/widgets/auth/model/types';
+import type { LoginHeaderProps } from '@/widgets/login/model/types';
 
-import styles from '@/widgets/auth/ui/Auth.module.scss';
+import styles from '@/widgets/login/ui/Login.module.scss';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
-export const AuthHeader: FC<AuthHeaderProps> = ({ title, subtitle, highlightedText, icon }) => {
+export const LoginHeader: FC<LoginHeaderProps> = ({ title, subtitle, highlightedText, icon }) => {
   return (
     <Box className={styles.header}>
       <Typography as="h1" className={styles.title}>

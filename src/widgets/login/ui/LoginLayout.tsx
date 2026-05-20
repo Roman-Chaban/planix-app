@@ -1,10 +1,10 @@
-import styles from '@/widgets/auth/ui/Auth.module.scss';
 import { BrandBanner } from '@/widgets/brand-banner/ui/BrandBanner';
+import styles from '@/widgets/login/ui/Login.module.scss';
 import { LoginForm } from '@/features/auth-by-credentials/ui/LoginForm/LoginForm';
 
 import { Box, Grid, GridItem } from '@/shared/ui/index';
 
-export const AuthLayout = () => {
+export const LoginLayout = () => {
   return (
     <Box className={styles.layout}>
       <Grid className={styles.grid}>

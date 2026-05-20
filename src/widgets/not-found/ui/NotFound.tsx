@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/pages/not-found/ui/NotFound.module.scss';
+import styles from '@/widgets/not-found/ui/NotFound.module.scss';
 import { useMediaQuery } from '@/shared/lib/hooks/useMediaQuery';
 import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons/index';
 import { Box, Grid, GridItem } from '@/shared/ui/index';

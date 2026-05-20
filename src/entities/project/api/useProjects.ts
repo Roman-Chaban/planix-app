@@ -1,17 +1,18 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
-
-import type { ProjectsResponse } from '@/widgets/project-table/model/types';
 import { mockProjects } from '@/entities/project/mocks/projects.mock';
 
 import { delay } from '@/shared/lib/async/delay';
+import { useQueryWithSkeleton } from '@/shared/lib/hooks/useQueryWithSkeleton';
+import { ProjectsTableSkeleton } from '@/shared/ui/skeletons/project-table/ui/ProjectTableSkeleton';
 
 export const useProjects = () => {
-  return useQuery({
+  return useQueryWithSkeleton({
     queryKey: ['projects', 'all'],
-    queryFn: async (): Promise<ProjectsResponse> => {
-      await delay(400);
+    Skeleton: ProjectsTableSkeleton,
+
+    queryFn: async () => {
+      await delay(1500);
 
       return {
         data: [...mockProjects],
@@ -23,6 +24,7 @@ export const useProjects = () => {
         },
       };
     },
+
     staleTime: 5 * 60 * 1000,
   });
 };

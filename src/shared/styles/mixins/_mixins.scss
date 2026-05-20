@@ -328,3 +328,20 @@
     min-width: $min-width;
   }
 }
+
+@mixin title-bold($weight, $size, $color, $opacity: 1) {
+  font: {
+    weight: $weight;
+    size: $size;
+  }
+  color: $color;
+  opacity: $opacity;
+  line-height: 150%;
+}
+
+@mixin circle($size, $background, $radius: 50%) {
+  width: $size;
+  height: $size;
+  background: $background;
+  border-radius: $radius;
+}

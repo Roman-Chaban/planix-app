@@ -1,5 +1,3 @@
-'use client';
-
 import type { FC, ReactNode } from 'react';
 
 import { I18nProvider } from '@/app/providers/i18n/I18nProvider';

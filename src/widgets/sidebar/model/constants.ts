@@ -1,5 +1,5 @@
+import { ROUTES } from '@/app/routes';
 import type { SidebarNavItems } from '@/widgets/sidebar/model/types';
-import { ROUTES } from '@/shared/config/common';
 import {
   AnalyticsIcon,
   ClientIcon,

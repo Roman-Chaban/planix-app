@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import { useParams } from 'next/navigation';
 
-import { LINK_TARGETS } from '@/shared/config/common';
+import { LINK_TARGETS } from '@/shared/constants/index';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { DEFAULT_LOCALE } from '@/shared/lib/i18n/locales';
 

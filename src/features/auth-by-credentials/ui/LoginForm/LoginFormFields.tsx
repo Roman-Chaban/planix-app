@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import type { LoginFormFieldsProps } from '@/features/auth-by-credentials/model/types';
 import { usePasswordToggle } from '@/features/auth-by-credentials/model/usePasswordToggle';
-import { ICON_POSITION } from '@/shared/config/common';
+import { ICON_POSITION } from '@/shared/constants';
 import { FormError, FormField, FormIcon, FormLabel, FormWrapper } from '@/shared/ui/form-field';
 import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
 import { Input } from '@/shared/ui/input/Input';

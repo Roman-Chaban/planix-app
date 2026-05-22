@@ -9,8 +9,16 @@ import styles from '@/shared/ui/card/Card.module.scss';
 import type { CardProps } from '@/shared/ui/card/model/types';
 import { Box, Typography } from '@/shared/ui/index';
 
-export const Card: FC<CardProps> = ({ id, label, name, value, trend, trendType }) => {
-  const { t } = useTranslation();
+export const Card: FC<CardProps> = ({
+  id,
+  label,
+  name,
+  value,
+  trend,
+  trendType,
+  translationKey,
+}) => {
+  const { t } = useTranslation(translationKey);
 
   return (
     <Box key={id} className={styles.card}>

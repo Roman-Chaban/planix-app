@@ -11,7 +11,7 @@ import { Box, Typography } from '@/shared/ui';
 import styles from './ProjectHeader.module.scss';
 
 export const ProjectHeader: FC<ProjectHeaderProps> = ({ title, metaInfo }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('addHeader');
 
   return (
     <Box className={styles.container}>

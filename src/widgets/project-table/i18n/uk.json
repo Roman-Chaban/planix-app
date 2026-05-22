@@ -1,0 +1,11 @@
+{
+  "clientName": "Назва клієнта",
+  "projectName": "Назва проєкту",
+  "dueDate": "Термін виконання",
+  "platform": "Платформа",
+  "progress": "Прогрес",
+  "reason": "Причина",
+  "price": "Ціна",
+  "status": "Статус",
+  "action": "Дії"
+}

@@ -8,7 +8,7 @@ import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/
 import type { ModalActionsProps } from '@/shared/ui/modal/model/types';
 
 export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDelete }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('modal');
   return (
     <Box className={styles.actions}>
       <Button
@@ -19,7 +19,7 @@ export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDelete }) =
         onClick={onClose}
         className={styles.cancel}
       >
-        {t('projects.cancelModal.cancelButton')}
+        {t('cancelButton')}
       </Button>
       <Button
         fullWidth
@@ -29,7 +29,7 @@ export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDelete }) =
         onClick={handleDelete}
         className={styles.save}
       >
-        {t('projects.cancelModal.saveButton')}
+        {t('saveButton')}
       </Button>
     </Box>
   );

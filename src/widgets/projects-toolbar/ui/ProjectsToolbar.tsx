@@ -23,7 +23,7 @@ const { PROJECT_CREATE } = ROUTES;
 export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
   const localizedRouter = useLocalizedRouter();
 
-  const { t } = useTranslation();
+  const { t } = useTranslation('toolbar');
 
   const handleCreateProject = () => {
     localizedRouter.push(PROJECT_CREATE);
@@ -36,7 +36,7 @@ export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
           <FormIcon position={START}>
             <SearchIconPrimary />
           </FormIcon>
-          <Input type={SEARCH} placeholder={t('projects.header.searchPlaceholder')} />
+          <Input type={SEARCH} placeholder={t('searchPlaceholder')} />
         </FormWrapper>
       </FormField>
 

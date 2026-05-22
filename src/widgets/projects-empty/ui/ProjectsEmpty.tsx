@@ -8,7 +8,7 @@ import { NoProjectsIcon } from '@/shared/ui/icons';
 import styles from './ProjectsEmpty.module.scss';
 
 export const ProjectsEmpty = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('projectsEmpty');
 
   return (
     <Box className={styles.box}>
@@ -18,10 +18,10 @@ export const ProjectsEmpty = () => {
 
       <Box className={styles.content}>
         <Typography as="h4" className={styles.title}>
-          {t('projects.emptyState.title')}
+          {t('title')}
         </Typography>
         <Typography as="p" className={styles.subtitle}>
-          {t('projects.emptyState.subtitle')}
+          {t('subtitle')}
         </Typography>
 
         <ProjectButton />

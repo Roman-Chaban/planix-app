@@ -8,7 +8,6 @@ import { ProjectsEmpty } from '@/widgets/projects-empty';
 import { ProjectsHeader } from '@/widgets/projects-header';
 import { ProjectToolbar } from '@/widgets/projects-toolbar';
 import { ProjectDeleteModal } from '@/features/delete-project';
-import { sharedI18n } from '@/shared/lib/i18n';
 import { Box, PageWrapper } from '@/shared/ui';
 
 import styles from './ProjectLayout.module.scss';
@@ -28,7 +27,7 @@ export const ProjectLayout = () => {
   } = useProjectsPageModel();
 
   return (
-    <PageWrapper header={<Header title={sharedI18n.sidebar.projects} />}>
+    <PageWrapper header={<Header title={'projects'} />}>
       <Box className={styles.headerToolbar}>
         <ProjectsHeader activeId={activeId} setActiveId={setActiveId} />
 

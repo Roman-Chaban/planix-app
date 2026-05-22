@@ -3,22 +3,22 @@ import type { ProjectsHeaderItems } from '@/widgets/projects-header/model/types'
 export const headerItems: ProjectsHeaderItems = [
   {
     id: 'AllProjects',
-    label: 'projects.header.allProjects',
+    label: 'allProjects',
   },
   {
     id: 'In Progress',
-    label: 'projects.header.inProgress',
+    label: 'inProgress',
   },
   {
     id: 'Pending',
-    label: 'projects.header.pending',
+    label: 'pending',
   },
   {
     id: 'Completed',
-    label: 'projects.header.completed',
+    label: 'completed',
   },
   {
     id: 'Canceled',
-    label: 'projects.header.canceled',
+    label: 'canceled',
   },
 ] as const;

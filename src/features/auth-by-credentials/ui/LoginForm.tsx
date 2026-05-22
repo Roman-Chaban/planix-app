@@ -6,12 +6,13 @@ import { useTranslation } from 'react-i18next';
 import { LoginHeader, LoginFooter } from '@/widgets/login/index';
 import { LoginFormMain, LoginFormFields } from '@/features/auth-by-credentials/index';
 import { useAuthLogin } from '@/features/auth-by-credentials/model/useAuthLogin';
-import styles from '@/features/auth-by-credentials/ui/LoginForm/LoginForm.module.scss';
 
 import { Box } from '@/shared/ui';
 
+import styles from './LoginForm.module.scss';
+
 export const LoginForm: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('login');
 
   const form = useAuthLogin();
 
@@ -19,9 +20,9 @@ export const LoginForm: FC = () => {
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginContent}>
         <LoginHeader
-          title={t('auth.login.title')}
-          subtitle={t('auth.login.subtitle')}
-          highlightedText={t('auth.login.highlightedText')}
+          title={t('title')}
+          subtitle={t('subtitle')}
+          highlightedText={t('highlightedText')}
         />
 
         <form className={styles.loginForm} onSubmit={form.onSubmit}>
@@ -36,10 +37,7 @@ export const LoginForm: FC = () => {
         </form>
       </Box>
 
-      <LoginFooter
-        title={t('auth.login.footer.noAccount')}
-        link={t('auth.login.footer.registration')}
-      />
+      <LoginFooter title={t('noAccount')} link={t('registration')} />
     </Box>
   );
 };

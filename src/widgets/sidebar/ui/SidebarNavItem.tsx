@@ -16,7 +16,7 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   href,
   isActive,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('sidebar');
 
   return (
     <AppLink href={href} key={key}>

@@ -33,13 +33,13 @@ describe('BrandBanner', () => {
   it('renders title', () => {
     setup(false);
 
-    expect(screen.getByText('brand.title')).toBeInTheDocument();
+    expect(screen.getByText('title')).toBeInTheDocument();
   });
 
   it('renders subtitle', () => {
     setup(false);
 
-    expect(screen.getByText('brand.subtitle')).toBeInTheDocument();
+    expect(screen.getByText('subtitle')).toBeInTheDocument();
   });
 
   it('renders logo icon', () => {

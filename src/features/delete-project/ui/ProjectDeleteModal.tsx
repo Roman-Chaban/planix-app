@@ -11,7 +11,7 @@ import { ModalHeader, ModalActions } from '@/shared/ui/modal';
 import { Textarea } from '@/shared/ui/textarea/Textarea';
 
 export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onClose, isOpen }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('modal');
 
   // TODO: [Implement delete mutation]
   const handleDelete = () => {
@@ -22,10 +22,10 @@ export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onC
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalHeader onClose={onClose} title={t('projects.cancelModal.title')} icon={<CloseIcon />} />
+      <ModalHeader onClose={onClose} title={t('title')} icon={<CloseIcon />} />
       <Textarea
-        placeholder={t('projects.cancelModal.reason.label')}
-        label={t('projects.cancelModal.reason.label')}
+        placeholder={t('label')}
+        label={t('label')}
         textareaClassName={styles.textarea}
         labelClassName={styles.reasonLabel}
       />

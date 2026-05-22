@@ -4,7 +4,6 @@ import { Box } from '@/shared/ui';
 
 import styles from './DashboardAnalytics.module.scss';
 
-
 export const DashboardAnalytics = () => {
   return (
     <Box className={styles.analytics}>

@@ -12,7 +12,7 @@ const { BUTTON } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 
 export const ProjectButton: FC<ProjectButtonProps> = ({ onClick }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('toolbar');
 
   return (
     <Button
@@ -23,7 +23,7 @@ export const ProjectButton: FC<ProjectButtonProps> = ({ onClick }) => {
       fullWidth
       onClick={onClick}
     >
-      {t('projects.header.addProjectButton')}
+      {t('addProjectButton')}
     </Button>
   );
 };

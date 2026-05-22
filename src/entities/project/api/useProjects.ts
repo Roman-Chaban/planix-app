@@ -1,7 +1,7 @@
 'use client';
 
+import { queryKeys } from '@/entities/project/api/queryKeys';
 import { mockProjects } from '@/entities/project/mocks/projects.mock';
-import { queryKeys } from '@/shared/api/queryKeys';
 
 import { delay } from '@/shared/lib/async/delay';
 import { useQueryWithSkeleton } from '@/shared/lib/hooks/useQueryWithSkeleton';

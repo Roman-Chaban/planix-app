@@ -1,4 +1,4 @@
-export { AXIS } from '@/shared/lib/hooks/model/constants';
+export { AXIS } from './model/constants';
 
 export { useMediaQuery } from './useMediaQuery';
 export { useEscapeKey } from './useEscapeKey';

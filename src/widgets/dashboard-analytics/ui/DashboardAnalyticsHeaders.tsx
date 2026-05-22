@@ -10,7 +10,7 @@ import { Box } from '@/shared/ui';
 import styles from './DashboardAnalytics.module.scss';
 
 export const DashboardAnalyticsHeaders = () => {
-  const { t } = useTranslation('widgets');
+  const { t } = useTranslation('dashboardAnalytics');
 
   return (
     <>

@@ -12,7 +12,7 @@ import styles from './ProjectsHeader.module.scss';
 const { BUTTON } = BUTTON_TYPES;
 
 export const ProjectsHeaderItem: FC<ProjectsHeaderItemProps> = ({ label, isActive, onClick }) => {
-  const { t } = useTranslation('toolbar');
+  const { t } = useTranslation('addProjectHeader');
 
   return (
     <Box className={buildClassName(styles.box, isActive && styles.active)} onClick={onClick}>

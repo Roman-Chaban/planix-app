@@ -23,7 +23,7 @@ const { PROJECT_CREATE } = ROUTES;
 export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
   const localizedRouter = useLocalizedRouter();
 
-  const { t } = useTranslation('toolbar');
+  const { t } = useTranslation('addProjectHeader');
 
   const handleCreateProject = () => {
     localizedRouter.push(PROJECT_CREATE);

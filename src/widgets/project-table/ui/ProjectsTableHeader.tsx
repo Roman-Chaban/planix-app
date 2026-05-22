@@ -6,7 +6,7 @@ import type { ProjectTableHeaderProps } from '@/widgets/project-table/model/type
 import styles from './ProjectTable.module.scss';
 
 export const ProjectTableHeader: FC<ProjectTableHeaderProps> = ({ columns }) => {
-  const { t } = useTranslation('tableHeader');
+  const { t } = useTranslation('projectTableHeader');
 
   return (
     <thead className={styles.head}>

@@ -1,1 +1,1 @@
-export { ProjectToolbar } from '@/widgets/projects-toolbar/ui/ProjectsToolbar';
+export { ProjectToolbar } from './ui/ProjectsToolbar';

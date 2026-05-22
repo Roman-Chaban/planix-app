@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
-import { BrandBanner } from '@/widgets/brand-banner/ui/BrandBanner';
-import { useMediaQuery } from '@/shared/lib/hooks/useMediaQuery';
+import { BrandBanner } from '@/widgets/brand-banner';
+import { useMediaQuery } from '@/shared/lib/hooks';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -9,7 +9,7 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-jest.mock('@/shared/lib/hooks/useMediaQuery');
+jest.mock('@/shared/lib/hooks');
 
 const mockedUseMediaQuery = useMediaQuery as jest.Mock;
 

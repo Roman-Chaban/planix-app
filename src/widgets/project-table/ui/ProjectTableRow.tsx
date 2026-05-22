@@ -1,11 +1,13 @@
 import { type FC } from 'react';
 
 import type { ProjectTableRowProps } from '@/widgets/project-table/model/types';
-import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
+
 import { STATUSES } from '@/entities/project/model/statuses';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
-import { CalendarIcon } from '@/shared/ui/icons/index';
-import { StatusBadge, ActionsBar } from '@/shared/ui/index';
+import { StatusBadge, ActionsBar } from '@/shared/ui';
+import { CalendarIcon } from '@/shared/ui/icons';
+
+import styles from './ProjectTable.module.scss';
 
 export const ProjectTableRow: FC<ProjectTableRowProps> = ({
   project,

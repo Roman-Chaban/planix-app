@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import type { LoginFooterProps } from '@/widgets/login/model/types';
 
 import styles from '@/widgets/login/ui/Login.module.scss';
-import { Box, AppLink, Typography } from '@/shared/ui/index';
+import { Box, AppLink, Typography } from '@/shared/ui';
 
 export const LoginFooter: FC<LoginFooterProps> = ({ title, link }) => {
   return (
@@ -12,7 +12,7 @@ export const LoginFooter: FC<LoginFooterProps> = ({ title, link }) => {
         {title}
       </Typography>
 
-      {/* TODO: [Added the correct link when it will need] */}
+      {/* TODO: [Add the correct link when it will need] */}
       <AppLink href="/#" className={styles.link}>
         {link}
       </AppLink>

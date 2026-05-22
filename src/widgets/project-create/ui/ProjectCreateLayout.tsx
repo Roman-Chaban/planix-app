@@ -1,7 +1,7 @@
 import { Header } from '@/widgets/header';
 import { ProjectHeader } from '@/widgets/project-header';
-import { sharedI18n } from '@/shared/lib/i18n/keys';
-import { PageWrapper } from '@/shared/ui/page-wrapper';
+import { sharedI18n } from '@/shared/lib/i18n';
+import { PageWrapper } from '@/shared/ui';
 
 export const ProjectCreateLayout = () => {
   return (

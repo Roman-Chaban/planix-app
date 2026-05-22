@@ -1,1 +1,1 @@
-export { ProjectHeader } from '@/widgets/project-header/ui/ProjectHeader';
+export { ProjectHeader } from './ui/ProjectHeader';

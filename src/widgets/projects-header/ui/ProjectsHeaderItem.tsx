@@ -2,10 +2,12 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectsHeaderItemProps } from '@/widgets/projects-header/model/types';
-import styles from '@/widgets/projects-header/ui/ProjectsHeader.module.scss';
-import { buildClassName } from '@/shared/lib/classnames/buildClassName';
+
+import { buildClassName } from '@/shared/lib';
 import { Box, Button, Typography } from '@/shared/ui';
 import { BUTTON_TYPES } from '@/shared/ui/button/model/constants';
+
+import styles from './ProjectsHeader.module.scss';
 
 const { BUTTON } = BUTTON_TYPES;
 

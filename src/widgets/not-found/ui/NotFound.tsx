@@ -1,10 +1,11 @@
 'use client';
 
-import styles from '@/widgets/not-found/ui/NotFound.module.scss';
-import { useMediaQuery } from '@/shared/lib/hooks/useMediaQuery';
-import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons/index';
-import { Box, Grid, GridItem } from '@/shared/ui/index';
+import { useMediaQuery } from '@/shared/lib/hooks';
+import { Box, Grid, GridItem } from '@/shared/ui';
+import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
+
+import styles from './NotFound.module.scss';
 
 const { LAPTOP } = BREAKPOINTS;
 

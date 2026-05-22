@@ -6,14 +6,15 @@ import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 import type { ProjectsToolbarProps } from '@/widgets/projects-toolbar/model/types';
-import styles from '@/widgets/projects-toolbar/ui/ProjectsToolbar.module.scss';
+
 import { ICON_POSITION } from '@/shared/constants';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
-import { Box, ProjectButton } from '@/shared/ui';
-import { FormField, FormIcon, FormWrapper } from '@/shared/ui/form-field';
+import { Box, ProjectButton, Input, FormField } from '@/shared/ui';
+import { FormIcon, FormWrapper } from '@/shared/ui/form-field';
 import { SearchIconPrimary } from '@/shared/ui/icons';
-import { Input } from '@/shared/ui/input/Input';
 import { INPUT_TYPES } from '@/shared/ui/input/Input.constants';
+
+import styles from './ProjectsToolbar.module.scss';
 
 const { START } = ICON_POSITION;
 const { SEARCH } = INPUT_TYPES;

@@ -1,1 +1,1 @@
-export { ProjectCreateLayout } from '@/widgets/project-create/ui/ProjectCreateLayout';
+export { ProjectCreateLayout } from './ui/ProjectCreateLayout';

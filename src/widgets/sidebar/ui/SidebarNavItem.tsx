@@ -3,10 +3,11 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/model/types';
-import styles from '@/widgets/sidebar/ui/Sidebar.module.scss';
 
-import { buildClassName } from '@/shared/lib/classnames/buildClassName';
+import { buildClassName } from '@/shared/lib';
 import { AppLink, Box, Typography } from '@/shared/ui';
+
+import styles from './Sidebar.module.scss';
 
 export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   id: key,

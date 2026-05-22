@@ -4,11 +4,12 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import styles from '@/widgets/brand-banner/ui/BrandBanner.module.scss';
-import { useMediaQuery } from '@/shared/lib/hooks/useMediaQuery';
-import { PlanixLogoIcon } from '@/shared/ui/icons/Icons';
+import { useMediaQuery } from '@/shared/lib/hooks';
+import { PlanixLogoIcon } from '@/shared/ui/icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
+
+import styles from './BrandBanner.module.scss';
 
 export const BrandBanner: FC = () => {
   const { t } = useTranslation();

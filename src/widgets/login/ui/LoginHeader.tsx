@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import type { LoginHeaderProps } from '@/widgets/login/model/types';
 
 import styles from '@/widgets/login/ui/Login.module.scss';
-import { Avatar, Box, Typography } from '@/shared/ui/index';
+import { Avatar, Box, Typography } from '@/shared/ui';
 
 export const LoginHeader: FC<LoginHeaderProps> = ({ title, subtitle, highlightedText, icon }) => {
   return (

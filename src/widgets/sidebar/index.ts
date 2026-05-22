@@ -1,3 +1,3 @@
-export { Sidebar } from '@/widgets/sidebar/ui/Sidebar';
-export { SidebarNav } from '@/widgets/sidebar/ui/SidebarNav';
-export { SidebarNavItem } from '@/widgets/sidebar/ui/SidebarNavItem';
+export { Sidebar } from './ui/Sidebar';
+export { SidebarNav } from './ui/SidebarNav';
+export { SidebarNavItem } from './ui/SidebarNavItem';

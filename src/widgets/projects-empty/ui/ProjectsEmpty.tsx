@@ -2,9 +2,10 @@
 
 import { useTranslation } from 'react-i18next';
 
-import styles from '@/widgets/projects-empty/ui/ProjectsEmpty.module.scss';
+import { Box, ProjectButton, Typography } from '@/shared/ui';
 import { NoProjectsIcon } from '@/shared/ui/icons';
-import { Box, ProjectButton, Typography } from '@/shared/ui/index';
+
+import styles from './ProjectsEmpty.module.scss';
 
 export const ProjectsEmpty = () => {
   const { t } = useTranslation();

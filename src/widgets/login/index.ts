@@ -1,3 +1,3 @@
-export { LoginLayout } from '@/widgets/login/ui/LoginLayout';
-export { LoginHeader } from '@/widgets/login/ui/LoginHeader';
-export { LoginFooter } from '@/widgets/login/ui/LoginFooter';
+export { LoginLayout } from './ui/LoginLayout';
+export { LoginHeader } from './ui/LoginHeader';
+export { LoginFooter } from './ui/LoginFooter';

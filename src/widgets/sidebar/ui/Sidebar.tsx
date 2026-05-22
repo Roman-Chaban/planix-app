@@ -1,9 +1,10 @@
 'use client';
 
-import { SidebarNav } from '@/widgets/sidebar/index';
-import styles from '@/widgets/sidebar/ui/Sidebar.module.scss';
+import { SidebarNav } from '@/widgets/sidebar';
 
 import { Box } from '@/shared/ui';
+
+import styles from './Sidebar.module.scss';
 
 export const Sidebar = () => {
   return (

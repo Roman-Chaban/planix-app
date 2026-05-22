@@ -1,5 +1,5 @@
+import { DashboardAnalyticsRevenue } from '@/widgets/dashboard-analytics';
 import type { DashboardAnalyticsHeaderList } from '@/widgets/dashboard-analytics/model/types';
-import { DashboardAnalyticsRevenue } from '@/widgets/dashboard-analytics/ui/DashboardAnalyticsRevenue';
 
 export const dashboardHeaderTitles: DashboardAnalyticsHeaderList = [
   {

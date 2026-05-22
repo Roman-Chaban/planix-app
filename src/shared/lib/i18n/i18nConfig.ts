@@ -1,26 +1,32 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import en from '@/shared/locales/en.json';
-import uk from '@/shared/locales/uk.json';
-
-const localesResources = {
-  en: { translation: en },
-  uk: { translation: uk },
-};
+import { resources } from './resources';
 
 const configOptions = {
-  resources: localesResources,
+  resources: resources,
   fallbackLng: 'en',
   supportedLngs: ['en', 'uk'],
-  defaultNS: 'translation',
+  lng: 'en',
+  ns: [
+    'brand',
+    'login',
+    'sidebar',
+    'modal',
+    'dashboardCards',
+    'header',
+    'dashboardAnalytics',
+    'addProjectHeader',
+    'projectsEmpty',
+    'projectTableHeader',
+    'projectCreate',
+  ],
   interpolation: {
     escapeValue: false,
   },
   react: {
     useSuspense: false,
   },
-  initImmediate: false,
 };
 
 i18n.use(initReactI18next).init(configOptions);

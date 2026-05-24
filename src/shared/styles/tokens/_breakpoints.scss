@@ -1,8 +1,8 @@
 $breakpoints: (
-  mobile: 320px,
-  mobile-lg: 640px,
-  tablet: 768px,
-  laptop: 1024px,
-  desktop: 1280px,
-  wide: 1536px,
+  xs: 320px, // mobile
+  sm: 640px, //mobile-lg
+  md: 768px, //tablet
+  lg: 1024px, // laptop
+  xl: 1280px, // desktop
+  2xl: 1536px, // wide
 );

@@ -1,0 +1,39 @@
+@use '../tokens' as *;
+
+@mixin button-interaction($hover-bg: null) {
+  transition:
+    background 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &:hover {
+    @if $hover-bg {
+      background: $hover-bg;
+    }
+  }
+}
+
+@mixin button-disabled($bg: $neutral-200, $text: $button-disabled-bg, $border: none) {
+  &:disabled {
+    background: $bg;
+    color: $text;
+    border: $border;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+@mixin button-outline($border, $shadow: none, $hover-border: null) {
+  box-shadow: $shadow;
+  border: 0.125rem solid $border;
+
+  &:hover {
+    @if $hover-border {
+      border-color: $hover-border;
+    }
+  }
+}
+
+@mixin button-link {
+  color: $primary-700;
+  text-decoration: underline;
+}

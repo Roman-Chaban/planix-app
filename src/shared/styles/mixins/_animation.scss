@@ -1,0 +1,3 @@
+@mixin smooth-transition($props...) {
+  transition: $props 0.35s ease-in-out;
+}

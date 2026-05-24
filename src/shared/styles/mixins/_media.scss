@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+@use '../tokens' as *;
+
+@mixin respond($key) {
+  $size: map.get($breakpoints, $key);
+
+  @if $size != null {
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$key}` not found.";
+  }
+}

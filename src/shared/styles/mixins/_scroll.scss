@@ -1,0 +1,20 @@
+@mixin menu-horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

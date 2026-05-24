@@ -1,0 +1,47 @@
+@mixin overlay($radius: 0, $bg: null) {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  @if $bg {
+    background: $bg;
+  }
+
+  border-radius: $radius;
+}
+
+@mixin overlay-content {
+  position: relative;
+  z-index: 1;
+}
+
+@mixin bottom-overlay($bottom: 0) {
+  position: absolute;
+  bottom: $bottom;
+  width: 100%;
+}
+
+@mixin hidden-overlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+@mixin button-background-overlay(
+  $content: '',
+  $position,
+  $inset,
+  $background,
+  $opacity,
+  $border-radius,
+  $pointer-events
+) {
+  content: $content;
+  position: $position;
+  inset: $inset;
+  background: $background;
+  opacity: $opacity;
+  border-radius: $border-radius;
+  pointer-events: $pointer-events;
+}

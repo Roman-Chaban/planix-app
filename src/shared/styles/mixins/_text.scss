@@ -1,0 +1,61 @@
+@use '../tokens' as *;
+
+@mixin text-body-sm {
+  font: {
+    size: $font-size-body-sm;
+  }
+  line-height: 150%;
+}
+
+@mixin title-bold($weight, $size, $color, $opacity: 1) {
+  font: {
+    weight: $weight;
+    size: $size;
+  }
+  color: $color;
+  opacity: $opacity;
+  line-height: 150%;
+}
+
+@mixin text-before-decoration(
+  $content: '',
+  $position,
+  $left,
+  $width,
+  $height,
+  $border-radius,
+  $background,
+  $centerY: false
+) {
+  content: $content;
+  position: $position;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background: $background;
+
+  @if $centerY == true {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin text-ellipsis {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin icon-text($gap: 0.5rem) {
+  display: inline-flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin link-style($color: $primary-700, $weight: $font-weight-semibold, $decoration: none) {
+  color: $color;
+  font-weight: $weight;
+  text-decoration: $decoration;
+}

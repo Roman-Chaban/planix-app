@@ -1,0 +1,37 @@
+@mixin trend-state($border, $background, $color) {
+  border: $border;
+  background: $background;
+  color: $color;
+}
+
+@mixin checkbox-checked($bg, $border, $bg-hover: null, $border-hover: null) {
+  .input:checked + .box {
+    background: $bg;
+    border-color: $border;
+  }
+
+  .input:checked:hover + .box {
+    @if $bg-hover != null {
+      background: $bg-hover;
+    } @else {
+      background: $bg;
+    }
+
+    @if $border-hover != null {
+      border-color: $border-hover;
+    } @else {
+      border-color: $border;
+    }
+  }
+}
+
+@mixin reveal-on-checked {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.35s ease-in-out;
+
+  .input:checked + .box & {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

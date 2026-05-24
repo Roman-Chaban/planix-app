@@ -1,7 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { useMediaQuery } from '@/shared/lib/hooks';
@@ -11,7 +9,7 @@ import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 import styles from './BrandBanner.module.scss';
 
-export const BrandBanner: FC = () => {
+export const BrandBanner = () => {
   const { t } = useTranslation('brand');
   const isMobileLargeScreen = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
 

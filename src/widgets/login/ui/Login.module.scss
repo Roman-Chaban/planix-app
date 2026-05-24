@@ -3,7 +3,7 @@
 
 .layout {
   min-height: 100dvh;
-  @include bounding_container($space-10);
+  @include bounding_container($space-6);
 
   @include respond(md) {
     padding: 1rem;

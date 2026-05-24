@@ -37,11 +37,11 @@
 
 .title {
   font-weight: $font-weight-semibold;
-  font-size: $font-size-h4;
+  font-size: $h4-font-size;
 }
 
 .subtitle {
-  font-size: $font-size-body-md;
+  font-size: $body-md-font-size;
   color: $neutral-700;
 }
 
@@ -61,5 +61,5 @@
 
 .text,
 .link {
-  font-size: $font-size-body-sm;
+  font-size: $body-sm-font-size;
 }

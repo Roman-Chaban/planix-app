@@ -8,7 +8,7 @@
 .label {
   font: {
     weight: $font-weight-semibold;
-    size: $font-size-body-lg;
+    size: $body-lg-font-size;
   }
 
   color: $neutral-700;
@@ -23,7 +23,7 @@
 .value {
   font: {
     weight: $font-weight-bold;
-    size: $line-height-body-md;
+    size: $body-md-line-height;
   }
 
   line-height: 150%;
@@ -35,7 +35,7 @@
 
 .name {
   color: $neutral-700;
-  font-size: $font-size-body-sm;
+  font-size: $body-sm-font-size;
   line-height: 150%;
 }
 
@@ -43,7 +43,7 @@
   @include flex-center;
   border-radius: 0.625rem;
   padding: 0.125rem 0.438rem;
-  font-size: $font-size-caption-lg;
+  font-size: $caption-lg-font-size;
 }
 
 .success {

@@ -13,7 +13,7 @@
   position: relative;
   left: 1rem;
 
-  @include title-bold($font-weight-semibold, $font-size-subtitle, $neutral-950);
+  @include title-bold($font-weight-semibold, $subtitle-font-size, $neutral-950);
 
   &::before {
     content: '';
@@ -27,9 +27,9 @@
 }
 
 .metaLabel {
-  @include title-bold($font-weight-semibold, $font-size-body-lg, $neutral-950);
+  @include title-bold($font-weight-semibold, $body-lg-font-size, $neutral-950);
 }
 
 .metaValue {
-  @include title-bold($font-weight-regular, $font-size-body-lg, $neutral-700, 0.62);
+  @include title-bold($font-weight-regular, $body-lg-font-size, $neutral-700, 0.62);
 }

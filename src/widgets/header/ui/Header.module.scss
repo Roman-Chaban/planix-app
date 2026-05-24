@@ -41,7 +41,7 @@
   line-height: 150%;
   font: {
     weight: $font-weight-semibold;
-    size: $line-height-body-md;
+    size: $body-md-line-height;
   }
 }
 
@@ -57,7 +57,7 @@
 
 .title {
   font: {
-    size: $font-size-h6;
+    size: $h6-font-size;
     weight: $font-weight-bold;
   }
   line-height: 150%;

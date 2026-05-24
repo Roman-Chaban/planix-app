@@ -1,4 +1,5 @@
 @use '@shared/styles' as *;
+@use '@shared/styles/mixins' as *;
 
 .wrapper {
   @include flex-col(0.188rem, start);

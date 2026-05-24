@@ -1,4 +1,5 @@
-@use '@/shared/styles' as *;
+@use '@/shared/styles/tokens' as *;
+@use '@/shared/styles/mixins' as *;
 
 .statusBadge {
   @include flex-center;
@@ -13,21 +14,21 @@
 }
 
 .pending {
-  background: $color-black-300;
-  color: $color-black-800;
+  background: $neutral-200;
+  color: $neutral-700;
 }
 
 .inProgress {
-  background: $color-warning-200;
-  color: $color-warning-800;
+  background: $warning-100;
+  color: $warning-700;
 }
 
 .canceled {
-  background: $color-error-300;
-  color: $color-error-900;
+  background: $error-200;
+  color: $error-900;
 }
 
 .completed {
-  background: $color-success-300;
-  color: $color-success-900;
+  background: $success-200;
+  color: $success-800;
 }

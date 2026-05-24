@@ -1,4 +1,5 @@
-@use '@/shared/styles' as *;
+@use '@/shared/styles/tokens' as *;
+@use '@/shared/styles/mixins' as *;
 
 .actions {
   @include flex(flex, row, start, center, 0.4rem, nowrap);
@@ -8,5 +9,5 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 0.4rem;
-  background: $color-black-200;
+  background: $neutral-100;
 }

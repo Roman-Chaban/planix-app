@@ -1,4 +1,5 @@
-@use '@/shared/styles' as *;
+@use '@/shared/styles/tokens' as *;
+@use '@/shared/styles/mixins' as *;
 
 .button {
   display: inline-flex;
@@ -16,24 +17,24 @@
 }
 
 .default {
-  background: $color-primary-800;
-  color: $color-black-100;
+  background: $primary-700;
+  color: $neutral-50;
 
-  @include button-interaction($color-primary-1100);
+  @include button-interaction($primary-925);
 }
 
 .outline {
-  color: $color-primary-800;
+  color: $primary-700;
   background: none;
 
-  @include button-outline($color-primary-800, none, null);
+  @include button-outline($primary-700, none, null);
 }
 
 .soft {
-  background: $color-primary-100;
-  color: $color-primary-800;
+  background: $primary-50;
+  color: $primary-700;
 
-  @include button-outline($color-primary-800, none, null);
+  @include button-outline($primary-700, none, null);
 }
 
 .tertiary {

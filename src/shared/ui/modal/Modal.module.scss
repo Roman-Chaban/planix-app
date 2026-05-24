@@ -1,10 +1,11 @@
-@use '@/shared/styles' as *;
+@use '@/shared/styles/tokens' as *;
+@use '@/shared/styles/mixins' as *;
 
 .overlay {
   position: fixed;
   inset: 0;
   z-index: $z-index-modal;
-  background: $color-modal-overlay;
+  background: $overlay-primary;
 }
 
 .modal {
@@ -17,13 +18,13 @@
   @include flex-col(1.75rem);
   padding: 2.5rem;
   border: {
-    top: 0.188rem solid $color-primary-800;
+    top: 0.188rem solid $primary-700;
     radius: 0.75rem;
   }
   width: 100%;
   max-width: 35.313rem;
   min-height: 24.813rem;
-  background: $color-white;
+  background: $neutral-0;
   box-shadow: $shadow-not-found;
 }
 

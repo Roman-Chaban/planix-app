@@ -1,4 +1,5 @@
-@use '@/shared/styles' as *;
+@use '@/shared/styles/tokens' as *;
+@use '@/shared/styles/mixins' as *;
 
 .card {
   @include flex-col(0, start, stretch);
@@ -10,7 +11,7 @@
     size: $font-size-body-lg;
   }
 
-  color: $color-black-800;
+  color: $neutral-700;
   min-height: 2.125rem;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .name {
-  color: $color-black-800;
+  color: $neutral-700;
   font-size: $font-size-body-sm;
   line-height: 150%;
 }
@@ -46,9 +47,9 @@
 }
 
 .success {
-  @include trend-state(0.025rem solid $color-success-800, $color-success-200, $color-success-800);
+  @include trend-state(0.025rem solid $success-700, $success-100, $success-700);
 }
 
 .error {
-  @include trend-state(0.025rem solid $color-error-800, $color-error-200, $color-error-800);
+  @include trend-state(0.025rem solid $error-700, $error-100, $error-700);
 }

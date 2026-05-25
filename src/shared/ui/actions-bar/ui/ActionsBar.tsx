@@ -1,8 +1,7 @@
 import type { FC } from 'react';
 
-import type { ActionsBarProps } from '@/shared/ui/actions-bar/model/types';
-
-import { Box, Button } from '@/shared/ui/index';
+import { Box, Button } from '@/shared/ui';
+import type { ActionsBarProps } from '@/shared/ui/actions-bar';
 
 import styles from './ActionsBar.module.scss';
 

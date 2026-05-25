@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
 
-import type { BoxProps } from '@/shared/ui/box/model/types';
+import type { BoxProps } from '@/shared/ui/box';
 
 export const Box = <T extends ElementType = 'div'>({
   as,

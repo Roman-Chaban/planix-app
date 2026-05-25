@@ -4,10 +4,10 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { buildClassName } from '@/shared/lib/classnames/buildClassName';
+import { buildClassName } from '@/shared/lib';
 
-import type { CardProps } from '@/shared/ui/card/model/types';
-import { Box, Typography } from '@/shared/ui/index';
+import { Box, Typography } from '@/shared/ui';
+import type { CardProps } from '@/shared/ui/card';
 
 import styles from './Card.module.scss';
 

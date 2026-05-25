@@ -4,7 +4,7 @@ import { buildClassName } from '@/shared/lib';
 
 import { Box } from '@/shared/ui';
 
-import type { FormWrapperProps } from '@/shared/ui/form-field/model/types';
+import type { FormWrapperProps } from '@/shared/ui/form-field';
 
 import styles from './FormField.module.scss';
 

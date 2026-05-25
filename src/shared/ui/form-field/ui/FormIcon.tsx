@@ -3,7 +3,7 @@ import { type FC } from 'react';
 import { buildClassName } from '@/shared/lib';
 
 import { Typography } from '@/shared/ui';
-import type { FormIconProps } from '@/shared/ui/form-field/model/types';
+import type { FormIconProps } from '@/shared/ui/form-field';
 
 import styles from './FormField.module.scss';
 

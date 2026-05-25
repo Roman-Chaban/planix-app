@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { Sidebar } from '@/widgets/sidebar/ui/Sidebar';
+import { Sidebar } from '@/widgets/sidebar';
 import { Box, Grid } from '@/shared/ui';
 import type { PageWrapperProps } from '@/shared/ui/page-wrapper';
 

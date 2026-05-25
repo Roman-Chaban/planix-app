@@ -2,10 +2,10 @@ import type { FC } from 'react';
 
 import Image from 'next/image';
 
-import { buildClassName } from '@/shared/lib/classnames/buildClassName';
+import { buildClassName } from '@/shared/lib';
 
-import type { AvatarProps } from '@/shared/ui/avatar/model/types';
-import { Box } from '@/shared/ui/box/ui/Box';
+import { Box } from '@/shared/ui';
+import type { AvatarProps } from '@/shared/ui/avatar';
 
 import styles from './Avatar.module.scss';
 

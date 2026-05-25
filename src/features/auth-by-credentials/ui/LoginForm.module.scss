@@ -35,8 +35,8 @@
   line-height: 150%;
   color: $neutral-950;
 
-  @include respond(mobile-lg) {
-    font-size: $font-size-body-sm;
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
   }
 }
 

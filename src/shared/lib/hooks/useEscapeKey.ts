@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 
 import type { UseEscapeKeyParams } from '@/shared/lib/hooks/model/types';

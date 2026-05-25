@@ -1,3 +1,5 @@
+'use client';
+
 import { type FC } from 'react';
 
 import type { ProjectTableRowProps } from '@/widgets/project-table/model/types';

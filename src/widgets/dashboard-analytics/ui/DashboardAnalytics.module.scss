@@ -1,5 +1,4 @@
-@use '@/shared/styles/tokens' as *;
-@use '@/shared/styles/mixins' as *;
+@use '@/shared/styles' as *;
 
 .analyticsWrapper {
   @include responsive-grid-widgets(2.45fr 1fr 1fr, 1.875rem);

@@ -1,1 +1,1 @@
-export { Card } from '@/shared/ui/card/Card';
+export { Card } from './ui/Card';

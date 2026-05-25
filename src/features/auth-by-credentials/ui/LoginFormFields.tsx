@@ -7,8 +7,8 @@ import { usePasswordToggle } from '@/features/auth-by-credentials/model/usePassw
 import { ICON_POSITION } from '@/shared/constants';
 import { FormError, FormField, FormIcon, FormLabel, FormWrapper } from '@/shared/ui/form-field';
 import { EyeIcon, EyeOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
-import { Input } from '@/shared/ui/input/Input';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input/Input.constants';
+import { Input } from '@/shared/ui/input/ui/Input';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input/model/constants';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 const { DEFAULT } = INPUT_VARIANTS;

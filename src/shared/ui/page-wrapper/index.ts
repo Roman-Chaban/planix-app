@@ -1,1 +1,3 @@
-export { PageWrapper } from '@/shared/ui/page-wrapper/PageWrapper';
+export type { PageWrapperProps } from './model/types';
+
+export { PageWrapper } from './ui/PageWrapper';

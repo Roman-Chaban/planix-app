@@ -1,1 +1,2 @@
-export { Grid } from '@/shared/ui/grid/Grid';
+export { Grid } from './ui/Grid';
+export { GridItem } from './ui/GridItem';

@@ -1,1 +1,1 @@
-export { ProjectsTableSkeleton } from '@/shared/ui/skeletons/project-table/ui/ProjectTableSkeleton';
+export { ProjectsTableSkeleton } from './project-table/ui/ProjectTableSkeleton';

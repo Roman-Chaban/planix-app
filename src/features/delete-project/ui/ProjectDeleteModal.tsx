@@ -8,7 +8,7 @@ import styles from '@/features/delete-project/ui/ProjectsDeleteModal.module.scss
 import { Modal } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 import { ModalHeader, ModalActions } from '@/shared/ui/modal';
-import { Textarea } from '@/shared/ui/textarea/Textarea';
+import { Textarea } from '@/shared/ui/textarea/ui/Textarea';
 
 export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onClose, isOpen }) => {
   const { t } = useTranslation('modal');

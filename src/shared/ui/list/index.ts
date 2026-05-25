@@ -1,1 +1,1 @@
-export { List } from '@/shared/ui/list/List';
+export { List } from './ui/List';

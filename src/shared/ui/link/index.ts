@@ -1,1 +1,1 @@
-export { AppLink } from '@/shared/ui/link/AppLink';
+export { AppLink } from '@/shared/ui/link/ui/AppLink';

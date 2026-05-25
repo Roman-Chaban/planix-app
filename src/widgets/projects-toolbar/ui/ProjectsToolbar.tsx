@@ -12,7 +12,7 @@ import { useLocalizedRouter } from '@/shared/lib/hooks';
 import { Box, ProjectButton, Input, FormField } from '@/shared/ui';
 import { FormIcon, FormWrapper } from '@/shared/ui/form-field';
 import { SearchIconPrimary } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input/Input.constants';
+import { INPUT_TYPES } from '@/shared/ui/input/model/constants';
 
 import styles from './ProjectsToolbar.module.scss';
 

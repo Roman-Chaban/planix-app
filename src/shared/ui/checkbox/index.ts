@@ -1,1 +1,1 @@
-export { Checkbox } from '@/shared/ui/checkbox/Checkbox';
+export { Checkbox } from './ui/Checkbox';

@@ -3,8 +3,8 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LoginHeader, LoginFooter } from '@/widgets/login/index';
-import { LoginFormMain, LoginFormFields } from '@/features/auth-by-credentials/index';
+import { LoginHeader, LoginFooter } from '@/widgets/login';
+import { LoginFormMain, LoginFormFields } from '@/features/auth-by-credentials';
 import { useAuthLogin } from '@/features/auth-by-credentials/model/useAuthLogin';
 
 import { Box } from '@/shared/ui';

@@ -1,7 +1,7 @@
 import { type SingleValueProps, components } from 'react-select';
 
 import type { LanguageOption } from '@/features/change-language/model/types';
-import { Box, Typography } from '@/shared/ui/index';
+import { Box, Typography } from '@/shared/ui';
 import { OPTION_STYLES, OPTION_ICON_SHRINK } from '@/shared/ui/theme/model/styles';
 
 export const SingleValue = (valueProps: SingleValueProps<LanguageOption>) => {

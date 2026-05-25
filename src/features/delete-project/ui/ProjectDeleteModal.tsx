@@ -4,13 +4,12 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDeleteModalProps } from '@/features/delete-project/model/types';
-import styles from '@/features/delete-project/ui/ProjectsDeleteModal.module.scss';
+import type { ProjectDeleteModalProps } from '@/features/delete-project';
 
-import { Modal } from '@/shared/ui';
+import { Modal, ModalHeader, ModalActions, Textarea } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
-import { ModalHeader, ModalActions } from '@/shared/ui/modal';
-import { Textarea } from '@/shared/ui/textarea/ui/Textarea';
+
+import styles from './ProjectsDeleteModal.module.scss';
 
 export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onClose, isOpen }) => {
   const { t } = useTranslation('modal');

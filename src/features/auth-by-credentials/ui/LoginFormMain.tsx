@@ -7,9 +7,9 @@ import { useTranslation } from 'react-i18next';
 
 import type { LoginFormMainProps } from '@/features/auth-by-credentials/model/types';
 
-import { useMediaQuery } from '@/shared/lib/hooks/index';
+import { useMediaQuery } from '@/shared/lib/hooks';
+import { Box, Button, Checkbox, AppLink } from '@/shared/ui';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
-import { Box, Button, Checkbox, AppLink } from '@/shared/ui/index';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 import styles from './LoginForm.module.scss';

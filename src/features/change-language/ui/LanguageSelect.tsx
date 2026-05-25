@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import Select from 'react-select';
 
-import { SingleValue, Option } from '@/features/change-language/index';
+import { SingleValue, Option } from '@/features/change-language';
 import { INSTANCE_ID } from '@/features/change-language/model/config';
 import type { LanguageOption } from '@/features/change-language/model/types';
 import { useLanguageSelect } from '@/features/change-language/model/useLanguageSelect';

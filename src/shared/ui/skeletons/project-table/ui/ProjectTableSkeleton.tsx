@@ -1,6 +1,6 @@
 import { columns } from '@/shared/ui/skeletons/project-table/model/constants';
 
-import styles from '@/shared/ui/skeletons/project-table/ui/ProjectTableSkeleton.module.scss';
+import styles from './ProjectTableSkeleton.module.scss';
 
 export const ProjectsTableSkeleton = () => {
   return (

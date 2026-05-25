@@ -3,11 +3,11 @@
 .analyticsWrapper {
   @include responsive-grid-widgets(2.45fr 1fr 1fr, 1.875rem);
 
-  @include respond(wide) {
+  @include respond(2xl) {
     @include responsive-grid-widgets(2fr 1fr, 1.875rem);
   }
 
-  @include respond(desktop) {
+  @include respond(xl) {
     @include responsive-grid-widgets(1fr, 1.875rem);
   }
 }
@@ -28,14 +28,14 @@
   @include flex(flex, row, start, center, 0, none);
   padding: 0.688rem 0.5rem 0.688rem 1.25rem;
   border-radius: 0.75rem;
-  background: $color-black-200;
+  background: $neutral-100;
 }
 
 .analyticsTitle {
   line-height: 150%;
-  color: $color-black-800;
+  color: $neutral-700;
   font: {
-    size: $font-size-body-lg;
+    size: $body-lg-font-size;
     weight: $font-weight-semibold;
   }
 
@@ -47,7 +47,7 @@
       0.25rem,
       1.125rem,
       0 0.5rem 0.5rem 0,
-      $color-primary-800,
+      $primary-700,
       true
     );
   }

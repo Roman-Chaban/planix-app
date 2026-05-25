@@ -12,7 +12,7 @@
   position: relative;
   left: 1rem;
 
-  @include title-bold($font-weight-semibold, $font-size-subtitle, $color-black-1200);
+  @include title-bold($font-weight-semibold, $subtitle-font-size, $neutral-950);
 
   &::before {
     content: '';
@@ -21,14 +21,14 @@
     left: -1rem;
     transform: translateY(-50%);
 
-    @include circle(0.5rem, $linear-gradient-300);
+    @include circle(0.5rem, $gradient-brand);
   }
 }
 
 .metaLabel {
-  @include title-bold($font-weight-semibold, $font-size-body-lg, $color-black-1200);
+  @include title-bold($font-weight-semibold, $body-lg-font-size, $neutral-950);
 }
 
 .metaValue {
-  @include title-bold($font-weight-regular, $font-size-body-lg, $color-black-800, 0.62);
+  @include title-bold($font-weight-regular, $body-lg-font-size, $neutral-700, 0.62);
 }

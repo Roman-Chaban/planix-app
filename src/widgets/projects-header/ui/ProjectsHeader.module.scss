@@ -1,4 +1,4 @@
-@use '@shared/styles' as *;
+@use '@/shared/styles' as *;
 
 .scrollContainer {
   flex: 0 1 auto;
@@ -7,11 +7,11 @@
   @include menu-horizontal-scroll;
 
   box-shadow: $shadow-not-found;
-  background: $color-white;
+  background: $neutral-0;
   padding: 0.5rem;
   border-radius: 1rem;
 
-  @include respond(desktop) {
+  @include respond(xl) {
     order: 2;
     width: 100%;
     margin-top: 0.5rem;
@@ -23,7 +23,7 @@
   width: 100%;
   min-width: max-content;
 
-  @include respond(desktop) {
+  @include respond(xl) {
     max-width: 100%;
     justify-content: space-between;
   }
@@ -38,28 +38,28 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
 
-  @include respond(wide) {
+  @include respond(2xl) {
     padding-inline: 0.7rem;
   }
 }
 
 .label {
-  color: $color-black-1200;
+  color: $neutral-950;
 
   font: {
     weight: $font-weight-regular;
-    size: $font-size-body-lg;
+    size: $body-lg-font-size;
   }
 }
 
 .active {
-  border-color: $color-primary-800;
+  border-color: $primary-700;
   box-shadow: $shadow-not-found;
 }
 
 .activeLabel {
   font-weight: $font-weight-semibold;
-  color: $color-primary-800;
+  color: $primary-700;
 }
 
 .button {

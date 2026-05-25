@@ -1,0 +1,10 @@
+{
+  "allProjects": "Усі проєкти",
+  "inProgress": "У процесі",
+  "pending": "Очікують",
+  "completed": "Завершені",
+  "canceled": "Скасовані",
+
+  "addProjectButton": "Додати проєкт",
+  "searchPlaceholder": "Пошук..."
+}

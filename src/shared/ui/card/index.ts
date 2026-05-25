@@ -1,1 +1,3 @@
-export { Card } from '@/shared/ui/card/Card';
+export type { CardProps } from './model/types';
+
+export { Card } from './ui/Card';

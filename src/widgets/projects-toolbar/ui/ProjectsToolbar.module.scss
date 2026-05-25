@@ -6,7 +6,7 @@
   min-width: 0;
   @include flex(flex, row, end, center, 1rem, nowrap);
 
-  @include respond(desktop) {
+  @include respond(xl) {
     justify-content: flex-start;
     width: 100%;
   }

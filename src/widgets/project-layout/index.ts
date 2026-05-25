@@ -1,1 +1,1 @@
-export { ProjectLayout as ProjectsLayout } from '@/widgets/project-layout/ui/ProjectLayout';
+export { ProjectLayout } from './ui/ProjectLayout';

@@ -2,12 +2,13 @@
 
 import { useTranslation } from 'react-i18next';
 
-import styles from '@/widgets/projects-empty/ui/ProjectsEmpty.module.scss';
+import { Box, ProjectButton, Typography } from '@/shared/ui';
 import { NoProjectsIcon } from '@/shared/ui/icons';
-import { Box, ProjectButton, Typography } from '@/shared/ui/index';
+
+import styles from './ProjectsEmpty.module.scss';
 
 export const ProjectsEmpty = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('projectsEmpty');
 
   return (
     <Box className={styles.box}>
@@ -17,10 +18,10 @@ export const ProjectsEmpty = () => {
 
       <Box className={styles.content}>
         <Typography as="h4" className={styles.title}>
-          {t('projects.emptyState.title')}
+          {t('title')}
         </Typography>
         <Typography as="p" className={styles.subtitle}>
-          {t('projects.emptyState.subtitle')}
+          {t('subtitle')}
         </Typography>
 
         <ProjectButton />

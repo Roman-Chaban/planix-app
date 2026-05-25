@@ -12,7 +12,7 @@
   width: 8.75rem;
   height: 8.75rem;
   border-radius: 100%;
-  background: $color-black-200;
+  background: $neutral-100;
 }
 
 .content {
@@ -20,16 +20,16 @@
 }
 
 .title {
-  color: $color-black-1200;
+  color: $neutral-950;
   line-height: 150%;
   font: {
     weight: $font-weight-semibold;
-    size: $line-height-body-md;
+    size: $body-md-line-height;
   }
 }
 
 .subtitle {
-  color: $color-black-700;
+  color: $neutral-600;
   width: 100%;
   max-width: 36.375rem;
   text-align: center;

@@ -1,3 +1,3 @@
-export { LoginForm } from '@/features/auth-by-credentials/ui/LoginForm/LoginForm';
-export { LoginFormFields } from '@/features/auth-by-credentials/ui/LoginForm/LoginFormFields';
-export { LoginFormMain } from '@/features/auth-by-credentials/ui/LoginForm/LoginFormMain';
+export { LoginForm } from './ui/LoginForm';
+export { LoginFormFields } from './ui/LoginFormFields';
+export { LoginFormMain } from './ui/LoginFormMain';

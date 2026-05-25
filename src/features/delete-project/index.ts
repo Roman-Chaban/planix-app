@@ -1,11 +1,11 @@
 /* Types */
 
-export type { ProjectDeleteModalProps } from '@/features/delete-project/model/types';
+export type { ProjectDeleteModalProps } from './model/types';
 
 /* Hooks */
 
-export { useProjectDeleteModal } from '@/features/delete-project/model/useProjectDeleteModal';
+export { useProjectDeleteModal } from './model/useProjectDeleteModal';
 
 /* Components */
 
-export { ProjectDeleteModal } from '@/features/delete-project/ui/ProjectDeleteModal';
+export { ProjectDeleteModal } from './ui/ProjectDeleteModal';

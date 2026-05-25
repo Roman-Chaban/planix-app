@@ -1,0 +1,19 @@
+@mixin table-cell($padding: 1rem 1rem) {
+  padding: $padding;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 150%;
+}
+
+@mixin table-scroll {
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+}
+
+@mixin table-col($width, $min-width: null) {
+  width: $width;
+
+  @if $min-width {
+    min-width: $min-width;
+  }
+}

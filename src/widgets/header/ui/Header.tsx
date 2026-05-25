@@ -5,12 +5,14 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { HeaderProps } from '@/widgets/header/model/types';
-import styles from '@/widgets/header/ui/Header.module.scss';
+
 import { LanguageSelect } from '@/features/change-language';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
 import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
 
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
+
+import styles from './Header.module.scss';
 
 const { CIRCLE } = BUTTON_VARIANTS;
 const { BUTTON } = BUTTON_TYPES;
@@ -18,7 +20,7 @@ const { BUTTON } = BUTTON_TYPES;
 const FALLBACK_PROFILE_AVATAR = 'RC';
 
 export const Header: FC<HeaderProps> = ({ title }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('header');
 
   return (
     <header className={styles.header}>
@@ -26,7 +28,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
         <Box className={styles.headerLeftSide}>
           <PlanixLogoIcon width={44} height={44} />
           <Typography as="span" className={styles.logoTitle}>
-            {t('brand.title')}
+            {t('title')}
           </Typography>
         </Box>
 

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
+import styles from './ProjectTable.module.scss';
 
 export const ProjectTableColGroup: FC<{ isShowReason: boolean }> = ({ isShowReason }) => {
   return (

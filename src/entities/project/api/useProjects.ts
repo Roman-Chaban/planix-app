@@ -1,5 +1,6 @@
 'use client';
 
+import { queryKeys } from '@/entities/project/api/queryKeys';
 import { mockProjects } from '@/entities/project/mocks/projects.mock';
 
 import { delay } from '@/shared/lib/async/delay';
@@ -8,7 +9,7 @@ import { ProjectsTableSkeleton } from '@/shared/ui/skeletons/project-table/ui/Pr
 
 export const useProjects = () => {
   return useQueryWithSkeleton({
-    queryKey: ['projects', 'all'],
+    queryKey: queryKeys.projects.all,
     Skeleton: ProjectsTableSkeleton,
 
     queryFn: async () => {

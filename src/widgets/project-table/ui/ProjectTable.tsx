@@ -1,14 +1,14 @@
+'use client';
+
 import type { FC } from 'react';
 
-import {
-  ProjectTableHeader,
-  ProjectTableRow,
-  ProjectTableColGroup,
-} from '@/widgets/project-table/index';
+import { ProjectTableHeader, ProjectTableRow, ProjectTableColGroup } from '@/widgets/project-table';
 import { getProjectTableColumns } from '@/widgets/project-table/model/constants';
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
-import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
+
 import { AXIS, useDragScroll } from '@/shared/lib/hooks';
+
+import styles from './ProjectTable.module.scss';
 
 const { X } = AXIS;
 

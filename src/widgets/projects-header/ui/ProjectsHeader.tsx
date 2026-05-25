@@ -2,12 +2,14 @@
 
 import type { FC } from 'react';
 
-import { ProjectsHeaderItem } from '@/widgets/projects-header/index';
+import { ProjectsHeaderItem } from '@/widgets/projects-header';
 import { headerItems } from '@/widgets/projects-header/model/constants';
 
 import type { ProjectsHeaderProps } from '@/widgets/projects-header/model/types';
-import styles from '@/widgets/projects-header/ui/ProjectsHeader.module.scss';
+
 import { Box, List } from '@/shared/ui';
+
+import styles from './ProjectsHeader.module.scss';
 
 export const ProjectsHeader: FC<ProjectsHeaderProps> = ({ activeId, setActiveId }) => {
   return (

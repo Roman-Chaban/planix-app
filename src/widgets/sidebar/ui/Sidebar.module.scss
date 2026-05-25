@@ -2,9 +2,9 @@
 
 .sidebar {
   width: fit-content;
-  border-right: 0.094rem solid $color-black-200;
-  box-shadow: $shadow-elevation-1;
-  background: $color-white;
+  border-right: 0.094rem solid $neutral-100;
+  box-shadow: $shadow-xs;
+  background: $neutral-0;
   grid-area: sidebar;
 }
 
@@ -12,7 +12,7 @@
   @include flex-col(3.063rem, start, stretch);
   padding: 1.938rem 1rem 0 1rem;
 
-  @include respond(laptop) {
+  @include respond(lg) {
     display: none;
   }
 }
@@ -31,13 +31,13 @@
   @include flex-row($space-4);
   padding: 0.813rem 1.688rem 0.875rem 0.75rem;
   border: 0.125rem solid transparent;
-  color: $color-black-800;
+  color: $neutral-700;
   min-width: 0;
   cursor: pointer;
 
   .label {
     font: {
-      size: $font-size-body-lg;
+      size: $body-lg-font-size;
       weight: $font-weight-regular;
     }
     color: inherit;
@@ -46,7 +46,7 @@
 }
 
 .active {
-  --sidebar-active: #{$color-primary-800};
+  --sidebar-active: #{$primary-700};
 
   position: relative;
   border: 0.125rem solid var(--sidebar-active);

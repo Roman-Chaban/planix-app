@@ -9,7 +9,7 @@ import { useProjects } from '@/entities/project/api/useProjects';
 
 import { toProjectTableItem } from '@/entities/project/model/adapters';
 
-import { STATUSES } from '@/shared/config';
+import { STATUSES } from '@/entities/project/model/statuses';
 
 export const useProjectsPageModel = () => {
   const [activeId, setActiveId] = useState<TabId>(headerItems[0].id);

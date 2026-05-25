@@ -16,7 +16,7 @@
   padding: 1.875rem;
 
   &::after {
-    @include overlay(1.875rem, $linear-gradient-100);
+    @include overlay(1.875rem, $gradient-overlay-primary);
     z-index: 0;
   }
 
@@ -24,16 +24,16 @@
     @include overlay-content;
   }
 
-  @include respond(desktop) {
+  @include respond(xl) {
     background-position: 20%;
   }
 
-  @include respond(laptop) {
+  @include respond(lg) {
     background-position: top;
     max-height: 45dvh;
   }
 
-  @include respond(mobile-lg) {
+  @include respond(sm) {
     padding: 1rem;
   }
 }
@@ -44,7 +44,7 @@
 
   @include flex-row(1.375rem, start, center);
 
-  @include respond(mobile-lg) {
+  @include respond(sm) {
     gap: 1rem;
   }
 }
@@ -52,10 +52,10 @@
 .title {
   font-weight: $font-weight-semibold;
   line-height: 150%;
-  font-size: $font-size-h4;
+  font-size: $h4-font-size;
 
-  @include respond(mobile-lg) {
-    font-size: $font-size-h5;
+  @include respond(sm) {
+    font-size: $h5-font-size;
   }
 }
 
@@ -65,14 +65,14 @@
   max-width: 33rem;
   line-height: 150%;
   font-weight: $font-weight-bold;
-  color: $color-white;
-  font-size: $font-size-h5;
+  color: $neutral-0;
+  font-size: $h5-font-size;
 
-  @include respond(tablet) {
-    font-size: $font-size-h6;
+  @include respond(md) {
+    font-size: $h6-font-size;
   }
 
-  @include respond(mobile-lg) {
-    font-size: $font-size-subtitle;
+  @include respond(sm) {
+    font-size: $subtitle-font-size;
   }
 }

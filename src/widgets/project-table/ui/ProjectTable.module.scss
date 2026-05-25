@@ -3,8 +3,8 @@
 .wrapper {
   width: 100%;
   padding: 0 0.5rem;
-  background: $color-white;
-  box-shadow: $shadow-elevation-2;
+  background: $neutral-0;
+  box-shadow: $shadow-sm;
   border-radius: 1rem;
   @include table-scroll;
   @include hide-scrollbar;
@@ -24,7 +24,7 @@
   }
 
   .heading {
-    background: $color-black-200;
+    background: $neutral-100;
     @include table-cell(0.563rem 1rem);
 
     &:first-child {
@@ -38,7 +38,7 @@
 }
 
 .heading {
-  color: $color-black-1200;
+  color: $neutral-950;
   font-weight: $font-weight-semibold;
 }
 
@@ -53,7 +53,7 @@
 .bodyRow {
   td {
     @include table-cell(0.5rem 1rem);
-    border-bottom: 0.094rem solid $color-black-300;
+    border-bottom: 0.094rem solid $neutral-200;
   }
 
   &:last-child td {

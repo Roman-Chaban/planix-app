@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 
-import { NotFoundLayout } from '@/widgets/not-found/ui/NotFound';
+import { NotFoundLayout } from '@/widgets/not-found';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import type { IconProps } from '@/shared/ui/icons/model/types';
 
-jest.mock('@/shared/lib/hooks/useMediaQuery');
+jest.mock('@/shared/lib/hooks');
 
-jest.mock('@/shared/ui/icons/index', () => ({
+jest.mock('@/shared/ui/icons', () => ({
   NotFoundBanner: (props: IconProps) => (
     <div data-testid="banner" data-props={JSON.stringify(props)} />
   ),

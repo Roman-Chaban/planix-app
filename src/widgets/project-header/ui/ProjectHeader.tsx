@@ -5,11 +5,13 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectHeaderProps } from '@/widgets/project-header/model/types';
-import styles from '@/widgets/project-header/ui/ProjectHeader.module.scss';
+
 import { Box, Typography } from '@/shared/ui';
 
+import styles from './ProjectHeader.module.scss';
+
 export const ProjectHeader: FC<ProjectHeaderProps> = ({ title, metaInfo }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('projectCreate');
 
   return (
     <Box className={styles.container}>

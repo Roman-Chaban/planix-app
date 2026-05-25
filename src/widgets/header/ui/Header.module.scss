@@ -2,8 +2,8 @@
 
 .header {
   width: 100%;
-  border-bottom: 0.094rem solid $color-black-200;
-  box-shadow: $shadow-elevation-1;
+  border-bottom: 0.094rem solid $neutral-100;
+  box-shadow: $shadow-xs;
   grid-area: header;
 }
 
@@ -12,11 +12,11 @@
   @include flex(flex, row, start, center);
   padding: 1.125rem 1rem;
 
-  @include respond(laptop) {
+  @include respond(lg) {
     gap: 2rem;
   }
 
-  @include respond(tablet) {
+  @include respond(md) {
     padding-inline: 1rem;
   }
 }
@@ -26,21 +26,21 @@
   max-width: 18.125rem;
   @include flex-row(0.813rem, start, center);
 
-  @include respond(laptop) {
+  @include respond(lg) {
     max-width: fit-content;
   }
 
-  @include respond(tablet) {
+  @include respond(md) {
     display: none;
   }
 }
 
 .logoTitle {
-  color: $color-black-1200;
+  color: $neutral-950;
   line-height: 150%;
   font: {
     weight: $font-weight-semibold;
-    size: $line-height-body-md;
+    size: $body-md-line-height;
   }
 }
 
@@ -49,14 +49,14 @@
   @include flex(flex, row, space-between, center, 0, nowrap);
   padding-inline: 0.875rem;
 
-  @include respond(tablet) {
+  @include respond(md) {
     padding-inline: 0;
   }
 }
 
 .title {
   font: {
-    size: $font-size-h6;
+    size: $h6-font-size;
     weight: $font-weight-bold;
   }
   line-height: 150%;
@@ -66,7 +66,7 @@
   position: relative;
 
   &::after {
-    @include button-background-overlay('', absolute, 0, $color-primary-800, 0.05, inherit, none);
+    @include button-background-overlay('', absolute, 0, $primary-700, 0.05, inherit, none);
   }
 }
 
@@ -82,7 +82,7 @@
 
 .headerAuth {
   @include flex-center;
-  gap: $space-9;
+  gap: $space-5;
 }
 
 /* Styles Mock: [Temporary mock these styles] */
@@ -90,7 +90,7 @@
   @include flex-center;
   width: 3rem;
   height: 3rem;
-  background: $color-primary-300;
-  color: $color-white;
+  background: $primary-200;
+  color: $neutral-0;
   border-radius: 100%;
 }

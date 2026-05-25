@@ -5,7 +5,7 @@
   min-width: 0;
   @include flex(flex, row, space-between, center, 1rem, nowrap);
 
-  @include respond(desktop) {
+  @include respond(xl) {
     @include flex-col(1rem, stretch);
   }
 }
@@ -17,7 +17,7 @@
 .content {
   width: 100%;
   height: 100%;
-  background: $color-white;
-  box-shadow: $shadow-elevation-2;
+  background: $neutral-0;
+  box-shadow: $shadow-sm;
   border-radius: 1rem;
 }

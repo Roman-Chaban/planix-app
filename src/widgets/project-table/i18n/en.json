@@ -1,0 +1,11 @@
+{
+  "clientName": "Client Name",
+  "projectName": "Project Name",
+  "dueDate": "Due Date",
+  "platform": "Platform",
+  "progress": "Progress",
+  "reason": "Reason",
+  "price": "Price",
+  "status": "Status",
+  "action": "Action"
+}

@@ -1,8 +1,8 @@
-import { BrandBanner } from '@/widgets/brand-banner/ui/BrandBanner';
+import { BrandBanner } from '@/widgets/brand-banner';
 import styles from '@/widgets/login/ui/Login.module.scss';
-import { LoginForm } from '@/features/auth-by-credentials/ui/LoginForm/LoginForm';
+import { LoginForm } from '@/features/auth-by-credentials/ui/LoginForm';
 
-import { Box, Grid, GridItem } from '@/shared/ui/index';
+import { Box, Grid, GridItem } from '@/shared/ui';
 
 export const LoginLayout = () => {
   return (

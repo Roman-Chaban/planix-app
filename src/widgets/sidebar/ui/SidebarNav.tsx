@@ -2,11 +2,13 @@
 
 import { usePathname } from 'next/navigation';
 
-import { SidebarNavItem } from '@/widgets/sidebar/index';
+import { SidebarNavItem } from '@/widgets/sidebar';
 import { sidebarNavItems } from '@/widgets/sidebar/model/constants';
-import styles from '@/widgets/sidebar/ui/Sidebar.module.scss';
-import { isActiveRoute } from '@/shared/lib/routing/isActiveRoute';
+
+import { isActiveRoute } from '@/shared/lib';
 import { List } from '@/shared/ui';
+
+import styles from './Sidebar.module.scss';
 
 export const SidebarNav = () => {
   const pathname = usePathname();

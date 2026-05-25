@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import { notFound } from 'next/navigation';
 
-import { AppProvider } from '@/app/providers/index';
+import { AppProviders } from '@/app/providers/index';
 import { LOCALES } from '@/shared/lib/i18n/locales';
 import { isLocale } from '@/shared/lib/routing/isLocale';
 
@@ -23,5 +23,5 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  return <AppProvider locale={locale}>{children}</AppProvider>;
+  return <AppProviders locale={locale}>{children}</AppProviders>;
 }

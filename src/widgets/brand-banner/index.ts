@@ -1,1 +1,1 @@
-export { BrandBanner } from '@/widgets/brand-banner/ui/BrandBanner';
+export { BrandBanner } from './ui/BrandBanner';

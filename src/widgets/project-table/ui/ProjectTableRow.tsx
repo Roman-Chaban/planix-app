@@ -1,11 +1,16 @@
+'use client';
+
 import { type FC } from 'react';
 
 import type { ProjectTableRowProps } from '@/widgets/project-table/model/types';
-import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
-import { STATUSES } from '@/shared/config';
+
+import { projectActions } from '@/features/project/model/actions';
+import { STATUSES } from '@/entities/project/model/statuses';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
-import { CalendarIcon } from '@/shared/ui/icons/index';
-import { StatusBadge, ActionsBar } from '@/shared/ui/index';
+import { StatusBadge, ActionsBar } from '@/shared/ui';
+import { CalendarIcon } from '@/shared/ui/icons';
+
+import styles from './ProjectTable.module.scss';
 
 export const ProjectTableRow: FC<ProjectTableRowProps> = ({
   project,
@@ -13,6 +18,8 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
   isShowReason,
 }) => {
   const { status, client, name, dueDate, platform, progressText, formattedPrice, reason } = project;
+
+  const actions = projectActions(onTrashClick, project.id);
 
   return (
     <tr className={styles.bodyRow}>
@@ -38,7 +45,7 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
         <StatusBadge status={status} />
       </td>
       <td className={styles.cell}>
-        <ActionsBar onTrashClick={onTrashClick} />
+        <ActionsBar actions={actions} />
       </td>
     </tr>
   );

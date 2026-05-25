@@ -1,11 +1,14 @@
+'use client';
+
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectTableHeaderProps } from '@/widgets/project-table/model/types';
-import styles from '@/widgets/project-table/ui/ProjectTable.module.scss';
+
+import styles from './ProjectTable.module.scss';
 
 export const ProjectTableHeader: FC<ProjectTableHeaderProps> = ({ columns }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('projectTableHeader');
 
   return (
     <thead className={styles.head}>

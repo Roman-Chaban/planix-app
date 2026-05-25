@@ -5,7 +5,7 @@
   @include flex-center;
   padding: 2rem;
 
-  @include respond(laptop) {
+  @include respond(lg) {
     padding: 1rem;
   }
 }
@@ -14,12 +14,12 @@
   @include bounding-container;
   place-items: center;
   min-height: 90dvh;
-  background: $color-white;
-  border-top: 3px solid $color-primary-800;
+  background: $neutral-0;
+  border-top: 3px solid $primary-700;
   box-shadow: $shadow-not-found;
   border-radius: 1.875rem;
 
-  @include respond(laptop) {
+  @include respond(lg) {
     @include flex-col(3rem, center, center);
   }
 }

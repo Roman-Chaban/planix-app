@@ -2,9 +2,9 @@
 
 .layout {
   min-height: 100dvh;
-  @include bounding_container($space-10);
+  @include bounding_container($space-6);
 
-  @include respond(tablet) {
+  @include respond(md) {
     padding: 1rem;
   }
 }
@@ -13,18 +13,18 @@
   display: grid;
   gap: 3.5rem;
 
-  @include respond(laptop) {
+  @include respond(lg) {
     grid-template-columns: 1fr;
   }
 
-  @include respond(mobile-lg) {
+  @include respond(sm) {
     gap: 2rem;
   }
 }
 
 .banner,
 .form {
-  @include respond(laptop) {
+  @include respond(lg) {
     grid-column: span 1;
   }
 }
@@ -36,23 +36,23 @@
 
 .title {
   font-weight: $font-weight-semibold;
-  font-size: $font-size-h4;
+  font-size: $h4-font-size;
 }
 
 .subtitle {
-  font-size: $font-size-body-md;
-  color: $color-black-800;
+  font-size: $body-md-font-size;
+  color: $neutral-700;
 }
 
 .highlight {
-  color: $color-decoration-text;
+  color: $decoration-text;
 }
 
 .footer {
   @include flex-row(0.313rem, center, center);
   margin-block-end: 1rem;
 
-  @include respond(mobile-lg) {
+  @include respond(sm) {
     margin-block-start: 1.5rem;
     gap: 0.5rem;
   }
@@ -60,5 +60,5 @@
 
 .text,
 .link {
-  font-size: $font-size-body-sm;
+  font-size: $body-sm-font-size;
 }

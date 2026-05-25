@@ -1,13 +1,11 @@
 import type { FC, SVGProps } from 'react';
 
-export type ActionsBarProps = {
-  onTrashClick?: () => void;
-};
-
-export type Action = {
+export type ActionItem = {
   id: string;
   icon: FC<SVGProps<SVGSVGElement>>;
-  onClick?: () => void;
+  onClick: () => void;
 };
 
-export type Actions = Action[];
+export type ActionsBarProps = {
+  actions: ActionItem[];
+};

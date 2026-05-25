@@ -2,6 +2,7 @@ import { type FC } from 'react';
 
 import type { ProjectTableRowProps } from '@/widgets/project-table/model/types';
 
+import { projectActions } from '@/features/project/model/actions';
 import { STATUSES } from '@/entities/project/model/statuses';
 import { buildClassName } from '@/shared/lib/classnames/buildClassName';
 import { StatusBadge, ActionsBar } from '@/shared/ui';
@@ -15,6 +16,8 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
   isShowReason,
 }) => {
   const { status, client, name, dueDate, platform, progressText, formattedPrice, reason } = project;
+
+  const actions = projectActions(onTrashClick, project.id);
 
   return (
     <tr className={styles.bodyRow}>
@@ -40,7 +43,7 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
         <StatusBadge status={status} />
       </td>
       <td className={styles.cell}>
-        <ActionsBar onTrashClick={onTrashClick} />
+        <ActionsBar actions={actions} />
       </td>
     </tr>
   );

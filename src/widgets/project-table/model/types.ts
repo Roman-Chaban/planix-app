@@ -52,7 +52,7 @@ export type ProjectTableItem = {
 
 export type ProjectTableRowProps = {
   project: ProjectTableItem;
-  onTrashClick?: () => void;
+  onTrashClick: (id: string) => void;
   isShowReason?: boolean;
 };
 

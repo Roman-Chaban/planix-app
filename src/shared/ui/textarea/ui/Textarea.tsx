@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef, useId } from 'react';
 
 import { useTranslation } from 'react-i18next';

@@ -41,7 +41,7 @@ export const ProjectLayout = () => {
       {hasData && (
         <ProjectsTable
           isShowReason={isCanceled}
-          onTrashClick={deleteModal.openDeleteModal}
+          onDelete={deleteModal.openDeleteModal}
           projects={projects}
         />
       )}

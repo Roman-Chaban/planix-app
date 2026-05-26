@@ -1,9 +1,10 @@
 import type { FC } from 'react';
 
-import type { LoginFooterProps } from '@/widgets/login/model/types';
+import type { LoginFooterProps } from '@/widgets/login';
 
-import styles from '@/widgets/login/ui/Login.module.scss';
 import { Box, AppLink, Typography } from '@/shared/ui';
+
+import styles from './Login.module.scss';
 
 export const LoginFooter: FC<LoginFooterProps> = ({ title, link }) => {
   return (

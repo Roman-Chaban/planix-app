@@ -1,4 +1,4 @@
-import { dashboardCards } from '@/widgets/dashboard-cards/model/constants';
+import { dashboardCards } from '@/widgets/dashboard-cards/data/dashboard-cards';
 
 import { Box, List, Card } from '@/shared/ui';
 

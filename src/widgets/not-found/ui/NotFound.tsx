@@ -1,5 +1,6 @@
 'use client';
 
+import { getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { Box, Grid, GridItem } from '@/shared/ui';
 import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons';
@@ -12,16 +13,14 @@ const { LAPTOP } = BREAKPOINTS;
 export const NotFoundLayout = () => {
   const isLaptopScreen = useMediaQuery(LAPTOP);
 
-  const ILLUSTRATION_SIZES_PROPS = isLaptopScreen ? { width: 330, height: 330 } : {};
+  const logoSize = getLogoSized(isLaptopScreen, 330, 330);
 
   return (
     <Box className={styles.layout}>
       <Grid className={styles.container}>
-        <GridItem span={6}>{<NotFoundBanner {...ILLUSTRATION_SIZES_PROPS} />}</GridItem>
+        <GridItem span={6}>{<NotFoundBanner {...logoSize} />}</GridItem>
         <GridItem span={6}>
-          <Box className={styles.errorBlock}>
-            {<NotFoundTextDecartionIcon {...ILLUSTRATION_SIZES_PROPS} />}
-          </Box>
+          <Box className={styles.errorBlock}>{<NotFoundTextDecartionIcon {...logoSize} />}</Box>
         </GridItem>
       </Grid>
     </Box>

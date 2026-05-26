@@ -6,6 +6,7 @@ import { ProjectTableHeader, ProjectTableRow, ProjectTableColGroup } from '@/wid
 import { getProjectTableColumns } from '@/widgets/project-table/model/constants';
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
 
+import { createProjectRowActions } from '@/features/project-table/createProjectRowActions';
 import { AXIS, useDragScroll } from '@/shared/lib/hooks';
 
 import styles from './ProjectTable.module.scss';
@@ -14,13 +15,19 @@ const { X } = AXIS;
 
 export const ProjectsTable: FC<ProjectsTableProps> = ({
   projects,
-  onTrashClick,
+  onDelete,
   isShowReason = false,
 }) => {
   const columns = getProjectTableColumns(isShowReason);
 
   const dragRef = useDragScroll<HTMLDivElement>({
     axis: X,
+  });
+
+  const actionsFactory = createProjectRowActions({
+    onView: () => {},
+    onEdit: () => {},
+    onDelete,
   });
 
   return (
@@ -36,7 +43,7 @@ export const ProjectsTable: FC<ProjectsTableProps> = ({
               key={project.id}
               project={project}
               isShowReason={isShowReason}
-              onTrashClick={() => onTrashClick(project.id)}
+              actionsFactory={actionsFactory}
             />
           ))}
         </tbody>

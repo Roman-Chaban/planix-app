@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard-analytics';
-import { dashboardHeaderTitles } from '@/widgets/dashboard-analytics/model/constants';
+import { dashboardHeaderTitles } from '@/widgets/dashboard-analytics/data/dashboard-header-titles';
 
 import { Box } from '@/shared/ui';
 

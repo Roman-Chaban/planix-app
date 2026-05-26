@@ -4,11 +4,10 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
+import { useProjectToolbar } from '@/widgets/projects-toolbar/lib/useProjectToolbar';
 import type { ProjectsToolbarProps } from '@/widgets/projects-toolbar/model/types';
 
 import { ICON_POSITION } from '@/shared/constants';
-import { useLocalizedRouter } from '@/shared/lib/hooks';
 import { Box, ProjectButton, Input, FormField } from '@/shared/ui';
 import { FormIcon, FormWrapper } from '@/shared/ui/form-field';
 import { SearchIconPrimary } from '@/shared/ui/icons';
@@ -18,16 +17,11 @@ import styles from './ProjectsToolbar.module.scss';
 
 const { START } = ICON_POSITION;
 const { SEARCH } = INPUT_TYPES;
-const { PROJECT_CREATE } = ROUTES;
 
 export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
-  const localizedRouter = useLocalizedRouter();
-
   const { t } = useTranslation('addProjectHeader');
 
-  const handleCreateProject = () => {
-    localizedRouter.push(PROJECT_CREATE);
-  };
+  const { handleCreateProject } = useProjectToolbar();
 
   return (
     <Box className={styles.toolbar}>

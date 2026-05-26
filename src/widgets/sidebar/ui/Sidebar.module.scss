@@ -2,6 +2,7 @@
 
 .sidebar {
   width: fit-content;
+  min-height: 100dvh;
   border-right: 0.094rem solid $neutral-100;
   box-shadow: $shadow-xs;
   background: $neutral-0;

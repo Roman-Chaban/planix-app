@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { getLogoSize } from '@/widgets/brand-banner/lib/getLogoSize';
+import { getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { PlanixLogoIcon } from '@/shared/ui/icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
@@ -14,7 +14,7 @@ export const BrandBanner = () => {
   const { t } = useTranslation('brand');
   const isMobileLargeScreen = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
 
-  const logoSize = getLogoSize(isMobileLargeScreen);
+  const logoSize = getLogoSized(isMobileLargeScreen, 60, 60);
 
   return (
     <Box className={styles.banner}>

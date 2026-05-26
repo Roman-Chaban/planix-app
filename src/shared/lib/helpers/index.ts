@@ -1,0 +1,1 @@
+export { getLogoSized } from './getLogoSized';

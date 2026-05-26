@@ -1,4 +1,5 @@
 import type { PROJECT_REASONS } from '@/widgets/project-table/model/constants';
+import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 import type { Status, StatusColor } from '@/shared/ui/status-badge/model/types';
 
 export type TableColumn = {
@@ -52,12 +53,12 @@ export type ProjectTableItem = {
 
 export type ProjectTableRowProps = {
   project: ProjectTableItem;
-  onTrashClick: (id: string) => void;
+  actionsFactory: (id: string) => ActionItem[];
   isShowReason?: boolean;
 };
 
 export type ProjectsTableProps = {
   projects: ProjectTableItem[];
-  onTrashClick: (id: string) => void;
+  onDelete: (id: string) => void;
   isShowReason?: boolean;
 };

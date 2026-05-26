@@ -3,9 +3,9 @@
 import { usePathname } from 'next/navigation';
 
 import { SidebarNavItem } from '@/widgets/sidebar';
-import { sidebarNavItems } from '@/widgets/sidebar/model/constants';
+import { sidebarNavItems } from '@/widgets/sidebar/data/sidebar-items';
+import { isActiveRoute } from '@/widgets/sidebar/lib/isActiveRoute';
 
-import { isActiveRoute } from '@/shared/lib';
 import { List } from '@/shared/ui';
 
 import styles from './Sidebar.module.scss';

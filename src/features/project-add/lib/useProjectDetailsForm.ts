@@ -1,3 +1,5 @@
+'use client';
+
 import { useForm } from 'react-hook-form';
 
 import type { ProjectDetailsFormData } from '@/features/project-add';

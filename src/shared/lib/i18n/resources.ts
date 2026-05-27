@@ -9,6 +9,7 @@ import { addProjectHeaderI18n } from '@/widgets/projects-header/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { loginI18n } from '@/features/auth-by-credentials/i18n';
 import { deleteProjectI18n } from '@/features/delete-project/i18n';
+import { projectDetailsI18n } from '@/features/project/i18n';
 
 export const resources = {
   en: {
@@ -23,6 +24,7 @@ export const resources = {
     projectsEmpty: ProjectsEmptyI18n.en,
     projectTableHeader: ProjectTableHeaderI18n.en,
     projectCreate: projectCreateI18n.en,
+    projectDetails: projectDetailsI18n.en,
   },
   uk: {
     brand: brandI18n.uk,
@@ -36,5 +38,6 @@ export const resources = {
     projectsEmpty: ProjectsEmptyI18n.uk,
     projectTableHeader: ProjectTableHeaderI18n.uk,
     projectCreate: projectCreateI18n.uk,
+    projectDetails: projectDetailsI18n.uk,
   },
 };

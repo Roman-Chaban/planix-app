@@ -8,10 +8,9 @@
 .inputWrapper {
   width: 100%;
   position: relative;
-  border-radius: 1rem;
-  border: 0.063rem solid $neutral-300;
   transition: all 0.35s ease-in-out 0s;
 
+  @include input-wrapper-border;
   @include input-border-active($primary-500);
   @include input-disabled($neutral-200, $neutral-100);
 }

@@ -16,4 +16,4 @@ export { StatusBadge } from './status-badge';
 export { Textarea } from './textarea';
 export { Typography } from './typography';
 export { Modal, ModalActions, ModalContent, ModalHeader, ModalOverlay } from './modal';
-export { FileUpload } from './file-upload/ui/FileUpload';
+export { FileUpload } from './file-upload';

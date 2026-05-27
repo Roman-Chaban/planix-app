@@ -15,5 +15,5 @@
   "descriptionLabel": "Project Description",
   "descriptionPlaceholder": "Enter Description",
   "label": "Reason",
-  "labelUpload": "Tap to upload document"
+  "uploadLabel": "Tap to upload document"
 }

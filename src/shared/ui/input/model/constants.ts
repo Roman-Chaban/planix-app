@@ -6,6 +6,7 @@ export const INPUT_TYPES = {
   PASSWORD: 'password',
   SEARCH: 'search',
   DATE: 'date',
+  FILE: 'file',
 } as const;
 
 export const INPUT_VARIANTS = {

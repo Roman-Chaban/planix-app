@@ -1,5 +1,7 @@
 export type { HookFormFieldProps, DateInputProps, DateFormFieldProps } from './model/types';
 
+export { DATE_FORMAT } from './lib/constants';
+
 export { applyDateMask, toDisplayDate, toIsoDateOrPreserve } from './lib/date';
 export { formatDate } from './lib/format-date';
 export { validateDateOrder } from './lib/validators';

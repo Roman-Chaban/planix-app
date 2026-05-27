@@ -1,12 +1,9 @@
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 
-dayjs.extend(customParseFormat);
+import { DATE_FORMAT } from './constants';
 
-export const DATE_FORMAT = {
-  DISPLAY: 'DD.MM.YYYY',
-  ISO: 'YYYY-MM-DD',
-} as const;
+dayjs.extend(customParseFormat);
 
 export const toDisplayDate = (value: string): string => {
   if (!value || value.length < 10) return value;

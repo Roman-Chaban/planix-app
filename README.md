@@ -1,4 +1,4 @@
-# Planix — Modern CRM Dashboard
+# Planix-App Modern CRM Dashboard
 
 ## 📖 Overview
 Planix is a modern, scalable CRM dashboard built with cutting-edge frontend technologies. It is designed as a foundation for SaaS platforms, admin panels, and internal business tools, providing a structured and maintainable architecture for real-world applications.

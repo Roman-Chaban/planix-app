@@ -3,30 +3,30 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsFormData } from '@/features/project/model/types';
+import type { ProjectDetailsFormData } from '@/features/project-add';
 
 import { FormInputField } from '@/shared/ui';
-import { ProjectNameIcon } from '@/shared/ui/icons';
+import { ClientIcon } from '@/shared/ui/icons';
 
-export const ProjectNameField = () => {
+export const ClientNameField = () => {
   const { t } = useTranslation('projectDetails');
 
   const { control } = useFormContext<ProjectDetailsFormData>();
 
   const { field, fieldState } = useController({
-    name: 'projectName',
+    name: 'clientName',
     control,
   });
 
   return (
     <FormInputField
-      id="projectName"
-      label={t('projectNameLabel')}
+      id="clientName"
+      label={t('clientNameLabel')}
       error={fieldState.error?.message}
-      startIcon={<ProjectNameIcon />}
+      startIcon={<ClientIcon width={20} height={20} />}
       inputProps={{
         ...field,
-        placeholder: t('projectNamePlaceholder'),
+        placeholder: t('clientNamePlaceholder'),
       }}
     />
   );

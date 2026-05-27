@@ -3,7 +3,7 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsFormData } from '@/features/project';
+import type { ProjectDetailsFormData } from '@/features/project-add';
 
 import { FormInputField } from '@/shared/ui';
 import { PlatformIcon } from '@/shared/ui/icons';

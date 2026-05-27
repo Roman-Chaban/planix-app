@@ -3,7 +3,7 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsFormData } from '@/features/project/model/types';
+import type { ProjectDetailsFormData } from '@/features/project-add/ui/add-project-details';
 
 import { FormInputField } from '@/shared/ui';
 import { PriceIcon } from '@/shared/ui/icons';

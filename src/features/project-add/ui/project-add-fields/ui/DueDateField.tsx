@@ -3,8 +3,8 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsFormData } from '@/features/project';
-import { validateDateOrder } from '@/features/project/lib/validators';
+import type { ProjectDetailsFormData } from '@/features/project-add';
+import { validateDateOrder } from '@/features/project-add/ui/project-add-fields';
 
 import { DateFormField } from './DateFormField';
 

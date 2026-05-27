@@ -2,8 +2,13 @@
 
 import type { FC, ChangeEvent } from 'react';
 
-import { toDisplayDate, applyDateMask, toIsoDateOrPreserve } from '@/features/project/lib/date';
-import type { DateFormFieldProps } from '@/features/project/ui/fields';
+import {
+  toDisplayDate,
+  applyDateMask,
+  toIsoDateOrPreserve,
+  type DateFormFieldProps,
+} from '@/features/project-add/ui/project-add-fields';
+
 import { FormInputField } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
 

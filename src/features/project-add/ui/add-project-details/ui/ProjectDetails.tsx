@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ProjectDetailsForm } from '@/features/project';
+import { ProjectDetailsForm } from '@/features/project-add';
 import { Box, Typography } from '@/shared/ui';
 
 import styles from './ProjectDetails.module.scss';

@@ -5,6 +5,7 @@ import { FormProvider } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
+import { useProjectDetailsForm, type ProjectDetailsFormProps } from '@/features/project-add';
 import {
   ProjectNameField,
   ClientNameField,
@@ -13,10 +14,8 @@ import {
   PriceField,
   PlatformField,
   DescriptionField,
-} from '@/features/project';
-import type { ProjectDetailsFormProps } from '@/features/project/model/types';
+} from '@/features/project-add/ui/project-add-fields';
 
-import { useProjectDetailsForm } from '@/features/project/model/useProjectDetailsForm';
 import { Box, FileUpload, ProjectButton } from '@/shared/ui';
 
 import styles from './ProjectDetails.module.scss';

@@ -1,6 +1,6 @@
 import { Header } from '@/widgets/header';
 import { ProjectHeader } from '@/widgets/project-header';
-import { ProjectDetails } from '@/features/project';
+import { ProjectDetails } from '@/features/project-add';
 import { PageWrapper } from '@/shared/ui';
 
 export const ProjectCreateLayout = () => {

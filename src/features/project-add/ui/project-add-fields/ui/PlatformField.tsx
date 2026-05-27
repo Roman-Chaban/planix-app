@@ -7,6 +7,9 @@ import type { ProjectDetailsFormData } from '@/features/project-add';
 
 import { FormInputField } from '@/shared/ui';
 import { PlatformIcon } from '@/shared/ui/icons';
+import { INPUT_TYPES } from '@/shared/ui/input/model/constants';
+
+const { TEXT } = INPUT_TYPES;
 
 export const PlatformField = () => {
   const { t } = useTranslation('projectDetails');
@@ -25,6 +28,7 @@ export const PlatformField = () => {
       startIcon={<PlatformIcon />}
       inputProps={{
         ...field,
+        type: TEXT,
         placeholder: t('platformPlaceholder'),
       }}
     />

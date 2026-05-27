@@ -7,6 +7,9 @@ import type { ProjectDetailsFormData } from '@/features/project-add/ui/add-proje
 
 import { FormInputField } from '@/shared/ui';
 import { ProjectNameIcon } from '@/shared/ui/icons';
+import { INPUT_TYPES } from '@/shared/ui/input';
+
+const { TEXT } = INPUT_TYPES;
 
 export const ProjectNameField = () => {
   const { t } = useTranslation('projectDetails');
@@ -26,6 +29,7 @@ export const ProjectNameField = () => {
       startIcon={<ProjectNameIcon />}
       inputProps={{
         ...field,
+        type: TEXT,
         placeholder: t('projectNamePlaceholder'),
       }}
     />

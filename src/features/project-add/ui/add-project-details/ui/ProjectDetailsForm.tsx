@@ -18,7 +18,11 @@ import {
 
 import { Box, FileUpload, ProjectButton } from '@/shared/ui';
 
+import { BUTTON_TYPES } from '@/shared/ui/button/model/constants';
+
 import styles from './ProjectDetails.module.scss';
+
+const { SUBMIT } = BUTTON_TYPES;
 
 export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ onSubmit, defaultValues }) => {
   const { t } = useTranslation('projectDetails');
@@ -46,7 +50,7 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ onSubmit, defa
         <FileUpload label={t('label')} uploadLabel={t('uploadLabel')} />
         <DescriptionField />
 
-        <ProjectButton />
+        <ProjectButton type={SUBMIT} />
       </form>
     </FormProvider>
   );

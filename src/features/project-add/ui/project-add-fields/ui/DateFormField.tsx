@@ -11,6 +11,9 @@ import {
 
 import { FormInputField } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
+import { INPUT_TYPES } from '@/shared/ui/input';
+
+const { TEXT } = INPUT_TYPES;
 
 export const DateFormField: FC<DateFormFieldProps> = ({
   id,
@@ -37,7 +40,7 @@ export const DateFormField: FC<DateFormFieldProps> = ({
       startIcon={<CalendarIcon width={20} height={20} />}
       inputProps={{
         ...rest,
-        type: 'text',
+        type: TEXT,
         inputMode: 'numeric',
         maxLength: 10,
         placeholder: placeholder,

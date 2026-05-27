@@ -7,6 +7,9 @@ import type { ProjectDetailsFormData } from '@/features/project-add/ui/add-proje
 
 import { FormInputField } from '@/shared/ui';
 import { PriceIcon } from '@/shared/ui/icons';
+import { INPUT_TYPES } from '@/shared/ui/input';
+
+const { TEXT } = INPUT_TYPES;
 
 export const PriceField = () => {
   const { t } = useTranslation('projectDetails');
@@ -25,10 +28,11 @@ export const PriceField = () => {
       startIcon={<PriceIcon />}
       inputProps={{
         ...field,
-        type: 'number',
+        type: TEXT,
+        inputMode: 'decimal',
         placeholder: t('pricePlaceholder'),
         onChange: (event) => {
-          const value = event.target.value;
+          const value = event.target.value.replace(/[^0-9.]/g, '');
           field.onChange(value === '' ? '' : Number(value));
         },
       }}

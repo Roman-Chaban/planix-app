@@ -2,17 +2,21 @@
 
 import type { FC } from 'react';
 
-import { Box, Typography, FormField, FormLabel } from '@/shared/ui';
+import { Box, Typography, FormField, FormLabel, Input } from '@/shared/ui';
 
-import type { FileUploadProps } from '@/shared/ui/file-upload';
-import { useFileUpload } from '@/shared/ui/file-upload/lib/useFileUpload';
+import { useFileUpload, type FileUploadProps } from '@/shared/ui/file-upload';
 import { UploadIcon } from '@/shared/ui/icons';
 
+import { INPUT_TYPES } from '@/shared/ui/input';
+
 import styles from './FileUpload.module.scss';
+
+const { FILE } = INPUT_TYPES;
 
 export const FileUpload: FC<FileUploadProps> = ({ label, uploadLabel, error }) => {
   const { inputId, handleFileChange, handleKeyDown } = useFileUpload({
     onFileSelect: (file) => {
+      // TODO: Implement file upload logic here
       console.log(file);
     },
   });
@@ -21,9 +25,9 @@ export const FileUpload: FC<FileUploadProps> = ({ label, uploadLabel, error }) =
     <FormField>
       {label && <FormLabel htmlFor={inputId}>{label}</FormLabel>}
 
-      <input
+      <Input
         id={inputId}
-        type="file"
+        type={FILE}
         className={styles.hiddenInput}
         onChange={handleFileChange}
         aria-invalid={!!error}

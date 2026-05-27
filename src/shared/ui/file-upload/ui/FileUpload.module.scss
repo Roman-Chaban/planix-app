@@ -10,6 +10,7 @@
   min-height: 8rem;
   @include flex-center;
   gap: 0.75rem;
+  @include input-wrapper-border;
 }
 
 .iconContainer {
@@ -18,4 +19,9 @@
   height: 2.5rem;
   border-radius: 100%;
   background: $upload-primary;
+}
+
+.text {
+  color: $neutral-950;
+  line-height: 150%;
 }

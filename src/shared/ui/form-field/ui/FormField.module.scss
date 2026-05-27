@@ -1,6 +1,7 @@
 @use '@/shared/styles' as *;
 
 .field {
+  width: 100%;
   @include flex-col(0.188rem);
 }
 

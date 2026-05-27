@@ -1,29 +1,36 @@
 import type { InputHTMLAttributes, LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
-import type { IconPosition, InputSize, InputVariant } from '@/shared/ui/input/model/types';
+import type { IconPosition } from '@/shared/ui/input/model/types';
+
+type FormFieldBaseProps = {
+  id: string;
+  error?: string;
+  label?: string;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  className?: string;
+  onStartIconClick?: () => void;
+  onEndIconClick?: () => void;
+  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+};
 
 export type FormFieldProps = PropsWithChildren<{
   className?: string;
 }>;
 
-export type FormLabelProps = {
-  className?: string;
-} & LabelHTMLAttributes<HTMLLabelElement>;
-
-export type FormWrapperProps = PropsWithChildren<{
-  className?: string;
-  variant?: InputVariant;
-  error?: string | null;
-}>;
+export type FormLabelProps = PropsWithChildren<
+  LabelHTMLAttributes<HTMLLabelElement> & {
+    className?: string;
+  }
+>;
 
 export type FormErrorProps = {
+  error?: string;
   className?: string;
-  error?: string | null;
 };
 
-export type FormInputProps = InputHTMLAttributes<HTMLInputElement> & {
+export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   className?: string;
-  inputSize?: InputSize;
 };
 
 export type FormIconProps = {
@@ -32,3 +39,6 @@ export type FormIconProps = {
   onClick?: () => void;
   className?: string;
 };
+
+export type InputFieldProps = FormFieldBaseProps;
+export type FormInputFieldProps = FormFieldBaseProps;

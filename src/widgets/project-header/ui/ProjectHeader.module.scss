@@ -10,7 +10,7 @@
 
 .heading {
   position: relative;
-  left: 1rem;
+  left: 1.3rem;
 
   @include title-bold($font-weight-semibold, $subtitle-font-size, $neutral-950);
 

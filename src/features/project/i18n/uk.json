@@ -1,0 +1,19 @@
+{
+  "projectDetailsTitle": "Деталі проекту",
+  "projectNameLabel": "Назва проекту",
+  "projectNamePlaceholder": "Введіть назву проекту",
+  "clientNameLabel": "Назва клієнта",
+  "clientNamePlaceholder": "Введіть назву клієнта",
+  "startDateLabel": "Дата початку",
+  "startDatePlaceholder": "Виберіть дату початку",
+  "dueDateLabel": "Дата завершення",
+  "dueDatePlaceholder": "Виберіть дату завершення",
+  "priceLabel": "Ціна",
+  "pricePlaceholder": "Введіть ціну",
+  "platformLabel": "Платформа",
+  "platformPlaceholder": "Виберіть платформу",
+  "descriptionLabel": "Опис проекту",
+  "descriptionPlaceholder": "Введіть опис",
+  "label": "Причина",
+  "labelUpload": "Натисніть, щоб завантажити документ"
+}

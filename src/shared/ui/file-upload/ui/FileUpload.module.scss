@@ -1,0 +1,21 @@
+@use '@/shared/styles' as *;
+
+.hiddenInput {
+  display: none;
+}
+
+.clickableWrapper {
+  cursor: pointer;
+  width: 100%;
+  min-height: 8rem;
+  @include flex-center;
+  gap: 0.75rem;
+}
+
+.iconContainer {
+  @include flex-center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background: $upload-primary;
+}

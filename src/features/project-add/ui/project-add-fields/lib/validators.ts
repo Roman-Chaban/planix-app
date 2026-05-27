@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { DATE_FORMAT } from './date';
+import { DATE_FORMAT } from './constants';
 
 export const validateDateOrder = (
   targetDate: string,

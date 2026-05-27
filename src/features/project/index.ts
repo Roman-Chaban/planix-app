@@ -1,8 +1,4 @@
-export type {
-  ProjectDetailsFormData,
-  ProjectDetailsFormProps,
-  DateFormFieldProps,
-} from './model/types';
+export type { ProjectDetailsFormData, ProjectDetailsFormProps } from './model/types';
 
 export { formatDate } from './lib/form-date';
 

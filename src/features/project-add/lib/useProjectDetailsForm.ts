@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-import type { ProjectDetailsFormData } from '@/features/project/model/types';
+import type { ProjectDetailsFormData } from '@/features/project-add';
 
 export const useProjectDetailsForm = (defaultValues?: Partial<ProjectDetailsFormData>) => {
   return useForm<ProjectDetailsFormData>({

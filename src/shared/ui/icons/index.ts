@@ -35,3 +35,7 @@ export { CompletedIcon } from './Icons';
 export { EditIcon } from './Icons';
 export { TrashIcon } from './Icons';
 export { CloseIcon } from './Icons';
+export { ProjectNameIcon } from './Icons';
+export { PriceIcon } from './Icons';
+export { PlatformIcon } from './Icons';
+export { UploadIcon } from './Icons';

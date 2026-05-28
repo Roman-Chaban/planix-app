@@ -1,34 +1,47 @@
 'use client';
 
-import type { FC } from 'react';
+import { useMemo, type FC } from 'react';
 
+import { ROUTES } from '@/app/routes';
 import { ProjectTableHeader, ProjectTableRow, ProjectTableColGroup } from '@/widgets/project-table';
 import { getProjectTableColumns } from '@/widgets/project-table/model/constants';
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
 
 import { createProjectRowActions } from '@/features/project-table/createProjectRowActions';
-import { AXIS, useDragScroll } from '@/shared/lib/hooks';
+import { slugify } from '@/shared/lib';
+import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 
 import styles from './ProjectTable.module.scss';
 
-const { X } = AXIS;
+const DRAG_SCROLL_AXIS = AXIS.X;
+const { PROJECT, PROJECT_DETAILS } = ROUTES;
 
 export const ProjectsTable: FC<ProjectsTableProps> = ({
   projects,
   onDelete,
   isShowReason = false,
 }) => {
-  const columns = getProjectTableColumns(isShowReason);
+  const localizedRouter = useLocalizedRouter();
+  const columns = useMemo(() => getProjectTableColumns(isShowReason), [isShowReason]);
 
   const dragRef = useDragScroll<HTMLDivElement>({
-    axis: X,
+    axis: DRAG_SCROLL_AXIS,
   });
 
-  const actionsFactory = createProjectRowActions({
-    onView: () => {},
-    onEdit: () => {},
-    onDelete,
-  });
+  const actionsFactory = useMemo(
+    () =>
+      createProjectRowActions({
+        onView: (name: string) => {
+          const projectDetailsUrl = `${PROJECT}${PROJECT_DETAILS}${slugify(name)}`;
+          localizedRouter.push(projectDetailsUrl);
+        },
+        onEdit: () => {
+          // TODO: Implement project edit functionality
+        },
+        onDelete,
+      }),
+    [localizedRouter, onDelete],
+  );
 
   return (
     <div ref={dragRef} className={styles.wrapper}>

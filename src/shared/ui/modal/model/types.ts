@@ -15,7 +15,7 @@ export type ModalHeaderProps = {
 
 export type ModalActionsProps = {
   onClose: () => void;
-  handleDelete: () => void;
+  handleDeleteProject: () => void;
 };
 
 export type UseModalBehaviorParams = {

@@ -26,7 +26,7 @@ export type Project = {
   client: Client;
   name: string;
   dueDate: string;
-  platform: Platform;
+  platform: Platform | null;
   progress: number;
   price: number;
   status: Status;
@@ -53,7 +53,7 @@ export type ProjectTableItem = {
 
 export type ProjectTableRowProps = {
   project: ProjectTableItem;
-  actionsFactory: (id: string) => ActionItem[];
+  actionsFactory: (name: string, id: string) => ActionItem[];
   isShowReason?: boolean;
 };
 

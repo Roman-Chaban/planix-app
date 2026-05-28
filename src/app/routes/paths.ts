@@ -5,6 +5,7 @@ export const ROUTES = {
   PROJECT: '/project-management',
   PROJECT_DETAILS: '/project-details/',
   PROJECT_CREATE: '/project-management/create',
+  PROJECT_EDIT: '/project-management/edit/',
   CLIENTS: '/clients',
   LEADS: '/leads',
   INBOX: '/inbox',

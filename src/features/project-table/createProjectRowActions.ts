@@ -1,31 +1,28 @@
+import type { ProjectRowActionsFactory, ProjectRowActionsConfig } from '@/features/project-table';
 import type { ActionItems } from '@/shared/ui/actions-bar/model/types';
 
-import { TrashIcon, EyeIcon, EditIcon } from '@/shared/ui/icons';
+import { DeleteIcon, EyeIcon, EditIcon } from '@/shared/ui/icons';
 
 export const createProjectRowActions = ({
   onView,
   onEdit,
   onDelete,
-}: {
-  onView: (id: string) => void;
-  onEdit: (id: string) => void;
-  onDelete: (id: string) => void;
-}) => {
-  return (id: string): ActionItems => [
+}: ProjectRowActionsConfig): ProjectRowActionsFactory => {
+  return (projectName: string, projectId: string): ActionItems => [
     {
-      id: 'eye',
+      id: 'view',
       icon: EyeIcon,
-      onClick: () => onView(id),
+      onClick: () => onView(projectName),
     },
     {
       id: 'edit',
       icon: EditIcon,
-      onClick: () => onEdit(id),
+      onClick: () => onEdit(projectId),
     },
     {
-      id: 'trash',
-      icon: TrashIcon,
-      onClick: () => onDelete(id),
+      id: 'delete',
+      icon: DeleteIcon,
+      onClick: () => onDelete(projectId),
     },
   ];
 };

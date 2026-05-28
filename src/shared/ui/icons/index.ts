@@ -33,7 +33,7 @@ export { InProgressIcon } from './Icons';
 export { CanceledIcon } from './Icons';
 export { CompletedIcon } from './Icons';
 export { EditIcon } from './Icons';
-export { TrashIcon } from './Icons';
+export { DeleteIcon } from './Icons';
 export { CloseIcon } from './Icons';
 export { ProjectNameIcon } from './Icons';
 export { PriceIcon } from './Icons';

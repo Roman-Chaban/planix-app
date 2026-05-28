@@ -39,3 +39,4 @@ export { ProjectNameIcon } from './Icons';
 export { PriceIcon } from './Icons';
 export { PlatformIcon } from './Icons';
 export { UploadIcon } from './Icons';
+export { PdfIcon } from './Icons';

@@ -6,7 +6,7 @@ export type ProjectDetailsFormData = {
   startDate: string;
   dueDate: string;
   price: number | '';
-  platform: Platform | null;
+  platform: Platform;
   description: string;
 };
 

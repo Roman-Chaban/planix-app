@@ -1,10 +1,10 @@
 export type ProjectDeleteModalProps = {
-  projectId: string;
+  projectId: string | null;
   isOpen: boolean;
   onClose: () => void;
 };
 
 export type UseDeleteProjectProps = {
-  projectId: string;
+  projectId: string | null;
   onClose: () => void;
 };

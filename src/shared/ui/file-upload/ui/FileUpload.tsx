@@ -50,8 +50,6 @@ export const FileUpload: FC<FileUploadProps> = ({
       <Box className={styles.mainWrapper}>
         {!hasFiles ? (
           <Box
-            role="button"
-            tabIndex={0}
             onClick={handleTrigger}
             onKeyDown={handleKeyDown}
             className={styles.emptyStateTrigger}

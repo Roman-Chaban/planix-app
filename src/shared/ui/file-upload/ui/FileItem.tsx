@@ -2,21 +2,20 @@ import type { FC } from 'react';
 
 import { Box, Button, Typography } from '@/shared/ui';
 
+import { BUTTON_TYPES } from '@/shared/ui/button/model/constants';
+import type { FileItemProps } from '@/shared/ui/file-upload';
 import { CloseIcon, PdfIcon, UploadIcon } from '@/shared/ui/icons';
 
 import styles from './FileUpload.module.scss';
 
-type FileItemProps = {
-  file: File;
-  onRemove: () => void;
-};
+const { BUTTON } = BUTTON_TYPES;
 
 export const FileItem: FC<FileItemProps> = ({ file, onRemove }) => {
   const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
 
   return (
     <Box className={styles.fileCard}>
-      <Button type="button" className={styles.removeButton} onClick={onRemove}>
+      <Button type={BUTTON} className={styles.removeButton} onClick={onRemove}>
         <CloseIcon width={12} height={12} />
       </Button>
 

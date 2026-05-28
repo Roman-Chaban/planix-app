@@ -14,7 +14,7 @@ import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 import styles from './ProjectTable.module.scss';
 
 const DRAG_SCROLL_AXIS = AXIS.X;
-const { PROJECT, PROJECT_DETAILS } = ROUTES;
+const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 
 export const ProjectsTable: FC<ProjectsTableProps> = ({
   projects,
@@ -35,8 +35,9 @@ export const ProjectsTable: FC<ProjectsTableProps> = ({
           const projectDetailsUrl = `${PROJECT}${PROJECT_DETAILS}${slugify(name)}`;
           localizedRouter.push(projectDetailsUrl);
         },
-        onEdit: () => {
-          // TODO: Implement project edit functionality
+        onEdit: (id: string) => {
+          const projectEditUrl = `${PROJECT_EDIT}${id}`;
+          localizedRouter.push(projectEditUrl);
         },
         onDelete,
       }),

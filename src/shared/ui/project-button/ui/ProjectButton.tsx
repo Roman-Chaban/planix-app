@@ -12,17 +12,18 @@ import styles from './ProjectButton.module.scss';
 const { BUTTON } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 
-export const ProjectButton: FC<ProjectButtonProps> = ({ onClick, type }) => {
+export const ProjectButton: FC<ProjectButtonProps> = ({ onClick, type, disabled, variant }) => {
   const { t } = useTranslation('addProjectHeader');
 
   return (
     <Button
       type={type || BUTTON}
-      variant={DEFAULT}
+      variant={variant || DEFAULT}
       size="md"
       className={styles.button}
       fullWidth
       onClick={onClick}
+      disabled={disabled}
     >
       {t('addProjectButton')}
     </Button>

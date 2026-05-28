@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { useProjectToolbar } from '@/widgets/projects-toolbar/lib/useProjectToolbar';
 import { Box, ProjectButton, Typography } from '@/shared/ui';
 import { NoProjectsIcon } from '@/shared/ui/icons';
 
@@ -9,6 +10,7 @@ import styles from './ProjectsEmpty.module.scss';
 
 export const ProjectsEmpty = () => {
   const { t } = useTranslation('projectsEmpty');
+  const { handleCreateProject } = useProjectToolbar();
 
   return (
     <Box className={styles.box}>
@@ -24,7 +26,7 @@ export const ProjectsEmpty = () => {
           {t('subtitle')}
         </Typography>
 
-        <ProjectButton />
+        <ProjectButton onClick={handleCreateProject} />
       </Box>
     </Box>
   );

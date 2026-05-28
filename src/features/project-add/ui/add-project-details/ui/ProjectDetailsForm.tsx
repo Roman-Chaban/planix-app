@@ -47,7 +47,11 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ onSubmit, defa
           <PlatformField />
         </Box>
 
-        <FileUpload label={t('label')} uploadLabel={t('uploadLabel')} />
+        <FileUpload
+          label={t('label')}
+          uploadLabel={t('uploadLabel')}
+          uploadPhotosLabel={t('uploadPhotosLabel')}
+        />
         <DescriptionField />
 
         <ProjectButton type={SUBMIT} />

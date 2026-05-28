@@ -1,7 +1,7 @@
 @use '@/shared/styles' as *;
 
 .wrapper {
-  @include widget-box(100%, 57.813rem, 57rem);
+  @include widget-box(100%, 57.813rem, 100%);
   @include flex-col(1.5rem, space-between, stretch);
 }
 

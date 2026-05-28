@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 
 import type { TabId } from '@/widgets/project-layout/model/types';
 import { headerItems } from '@/widgets/projects-header/model/constants';
-import { useProjectDeleteModal } from '@/features/delete-project/model/useProjectDeleteModal';
+import { useProjectDeleteModal } from '@/features/delete-project/lib/useProjectDeleteModal';
 import { filterProjects } from '@/features/filter-projects/model/filter';
 import { useProjectsFilters } from '@/features/filter-projects/model/useProjectsFilters';
 import { useProjects } from '@/entities/project/api/useProjects';

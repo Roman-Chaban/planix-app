@@ -15,5 +15,6 @@
   "descriptionLabel": "Опис проекту",
   "descriptionPlaceholder": "Введіть опис",
   "label": "Причина",
-  "uploadLabel": "Натисніть, щоб завантажити документ"
+  "uploadLabel": "Натисніть, щоб завантажити документ",
+  "uploadPhotosLabel": "Завантажити файли"
 }

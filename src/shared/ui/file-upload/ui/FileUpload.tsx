@@ -1,53 +1,83 @@
 'use client';
 
-import type { FC } from 'react';
+import { useState, useCallback, type FC } from 'react';
 
 import { Box, Typography, FormField, FormLabel, Input } from '@/shared/ui';
-
-import { useFileUpload, type FileUploadProps } from '@/shared/ui/file-upload';
+import {
+  FileItem,
+  FileUploadItem,
+  useFileUpload,
+  type FileUploadProps,
+} from '@/shared/ui/file-upload';
 import { UploadIcon } from '@/shared/ui/icons';
-
 import { INPUT_TYPES } from '@/shared/ui/input';
 
 import styles from './FileUpload.module.scss';
 
 const { FILE } = INPUT_TYPES;
 
-export const FileUpload: FC<FileUploadProps> = ({ label, uploadLabel, error }) => {
-  const { inputId, handleFileChange, handleKeyDown } = useFileUpload({
-    onFileSelect: (file) => {
-      // TODO: Implement file upload logic here
-      console.log(file);
-    },
+export const FileUpload: FC<FileUploadProps> = ({
+  label,
+  uploadLabel,
+  uploadPhotosLabel,
+  error,
+}) => {
+  const [files, setFiles] = useState<File[]>([]);
+
+  const { inputRef, handleTrigger, handleFileChange, handleKeyDown } = useFileUpload({
+    onFileSelect: (file) => setFiles((prev) => [...prev, file]),
   });
+
+  const handleRemoveFile = useCallback((index: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== index));
+  }, []);
+
+  const hasFiles = files.length > 0;
 
   return (
     <FormField>
-      {label && <FormLabel htmlFor={inputId}>{label}</FormLabel>}
+      {label && <FormLabel onClick={handleTrigger}>{label}</FormLabel>}
 
       <Input
-        id={inputId}
+        ref={inputRef}
         type={FILE}
         className={styles.hiddenInput}
         onChange={handleFileChange}
         aria-invalid={!!error}
+        multiple
       />
 
-      <Box
-        as="label"
-        htmlFor={inputId}
-        role="button"
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
-        className={styles.clickableWrapper}
-      >
-        <Box className={styles.iconContainer}>
-          <UploadIcon />
-        </Box>
+      <Box className={styles.mainWrapper}>
+        {!hasFiles ? (
+          <Box
+            role="button"
+            tabIndex={0}
+            onClick={handleTrigger}
+            onKeyDown={handleKeyDown}
+            className={styles.emptyStateTrigger}
+          >
+            <Box className={styles.iconContainer}>
+              <UploadIcon />
+            </Box>
+            <Typography className={styles.text}>{uploadLabel}</Typography>
+          </Box>
+        ) : (
+          <Box className={styles.filesGrid}>
+            <FileUploadItem
+              handleTrigger={handleTrigger}
+              handleKeyDown={handleKeyDown}
+              uploadPhotosLabel={uploadPhotosLabel}
+            />
 
-        <Typography as="span" className={styles.text}>
-          {uploadLabel}
-        </Typography>
+            {files.map((file, index) => (
+              <FileItem
+                key={`${file.name}-${index}`}
+                file={file}
+                onRemove={() => handleRemoveFile(index)}
+              />
+            ))}
+          </Box>
+        )}
       </Box>
     </FormField>
   );

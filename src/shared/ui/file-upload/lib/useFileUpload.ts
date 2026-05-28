@@ -1,38 +1,43 @@
-import { type ChangeEvent, type KeyboardEvent, useId } from 'react';
+'use client';
+
+import { type ChangeEvent, type KeyboardEvent, useRef, useCallback } from 'react';
 
 import type { UseFileUploadParams } from '@/shared/ui/file-upload';
 
 export const useFileUpload = ({ onFileSelect }: UseFileUploadParams = {}) => {
-  const uploadId = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const handleTrigger = useCallback(() => {
+    inputRef.current?.click();
+  }, []);
 
-    if (!file) {
-      return;
-    }
+  const handleFileChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const fileList = event.target.files;
+      if (!fileList || fileList.length === 0) return;
 
-    onFileSelect?.(file);
+      const newFiles = Array.from(fileList);
 
-    event.target.value = '';
-  };
+      newFiles.forEach((file) => onFileSelect?.(file));
 
-  const handleKeyDown = (event: KeyboardEvent<HTMLLabelElement>) => {
-    if (event.key !== 'Enter' && event.key !== ' ') {
-      return;
-    }
+      event.target.value = '';
+    },
+    [onFileSelect],
+  );
 
-    event.preventDefault();
-
-    const input = document.getElementById(uploadId);
-
-    if (input instanceof HTMLInputElement) {
-      input.click();
-    }
-  };
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent<HTMLElement>) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleTrigger();
+      }
+    },
+    [handleTrigger],
+  );
 
   return {
-    inputId: uploadId,
+    inputRef,
+    handleTrigger,
     handleFileChange,
     handleKeyDown,
   };

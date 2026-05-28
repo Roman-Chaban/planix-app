@@ -10,8 +10,12 @@ import { Box, Typography } from '@/shared/ui';
 
 import styles from './ProjectHeader.module.scss';
 
-export const ProjectHeader: FC<ProjectHeaderProps> = ({ title, metaInfo }) => {
-  const { t } = useTranslation('projectCreate');
+export const ProjectHeader: FC<ProjectHeaderProps> = ({
+  title,
+  metaInfo,
+  translationNamespace,
+}) => {
+  const { t } = useTranslation(translationNamespace);
 
   return (
     <Box className={styles.container}>

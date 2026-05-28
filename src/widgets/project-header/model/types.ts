@@ -4,4 +4,5 @@ export type ProjectHeaderProps = {
     label: string;
     value: string;
   };
+  translationNamespace?: string;
 };

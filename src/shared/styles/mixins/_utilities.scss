@@ -14,14 +14,39 @@
   border-radius: $radius;
 }
 
-@mixin widget-box($width: 100%, $maxWidth: none, $height) {
+@mixin widget-box($width: 100%, $maxWidth: none, $maxHeight) {
   border: 0.125rem solid $neutral-100;
   border-radius: 1rem;
   width: $width;
   max-width: $maxWidth;
-  height: $height;
+  max-height: $maxHeight;
   box-shadow: $shadow-sm;
   background: $neutral-0;
   padding-inline: 0.625rem;
   padding-block: 0.625rem 1.438rem;
+}
+
+@mixin upload-item-base {
+  width: 100%;
+  max-width: 7rem;
+  min-height: 6.625rem;
+  padding: 0.188rem;
+  background: $neutral-100;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin square-circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin card-bottom-badge {
+  width: 100%;
+  max-width: 6.625rem;
+  background: $neutral-100;
+  border-radius: 0.5rem;
+  padding: 0.188rem 0.313rem;
+  box-shadow: $shadow-upload;
 }

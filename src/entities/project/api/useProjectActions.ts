@@ -7,8 +7,10 @@ import {
   type UpdateProjectPayload,
   invalidateProjectsCache,
   simulateApiDelay,
+  createProject as createProjectRepository,
+  updateProject as updateProjectRepository,
+  deleteProject as deleteProjectRepository,
 } from '@/entities/project';
-import { mockProjects } from '@/entities/project/mocks/projects.mock';
 
 export const useProjectActions = () => {
   const queryClient = useQueryClient();
@@ -26,8 +28,7 @@ export const useProjectActions = () => {
         progress: 0,
         status: 'Pending',
       };
-      mockProjects.push(newProject);
-      return newProject;
+      return createProjectRepository(newProject);
     },
 
     onSuccess: () => invalidateProjectsCache(queryClient),
@@ -37,10 +38,7 @@ export const useProjectActions = () => {
     mutationFn: async ({ id }) => {
       await simulateApiDelay();
 
-      const projectsIndexes = mockProjects.findIndex((project) => project.id === id);
-      if (projectsIndexes !== -1) {
-        mockProjects.splice(projectsIndexes, 1);
-      }
+      return deleteProjectRepository(id);
     },
 
     onSuccess: () => invalidateProjectsCache(queryClient),
@@ -50,18 +48,18 @@ export const useProjectActions = () => {
     mutationFn: async ({ id, data }) => {
       await simulateApiDelay();
 
-      const projectsIndexes = mockProjects.findIndex((project) => project.id === id);
+      const updatedProject = updateProjectRepository(id, {
+        name: data.projectName,
+        dueDate: data.dueDate,
+        price: Number(data.price),
+        platform: data.platform,
+      });
 
-      if (projectsIndexes !== -1) {
-        mockProjects[projectsIndexes] = {
-          ...mockProjects[projectsIndexes],
-          name: data.projectName ?? mockProjects[projectsIndexes].name,
-        };
-
-        return mockProjects[projectsIndexes];
+      if (!updatedProject) {
+        throw new Error('Project not found');
       }
 
-      return mockProjects[projectsIndexes];
+      return updatedProject;
     },
 
     onSuccess: () => invalidateProjectsCache(queryClient),

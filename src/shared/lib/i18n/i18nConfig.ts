@@ -21,6 +21,7 @@ const configOptions = {
     'projectTableHeader',
     'projectCreate',
     'projectDetails',
+    'projectEdit',
   ],
   interpolation: {
     escapeValue: false,

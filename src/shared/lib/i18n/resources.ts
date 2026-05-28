@@ -3,6 +3,7 @@ import { dashboardAnalyticsI18n } from '@/widgets/dashboard-analytics/i18n';
 import { dashboardCardsI18n } from '@/widgets/dashboard-cards/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
 import { projectCreateI18n } from '@/widgets/project-create/i18n';
+import { projectEditI18n } from '@/widgets/project-edit/i18n';
 import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-header/i18n';
@@ -25,6 +26,7 @@ export const resources = {
     projectTableHeader: ProjectTableHeaderI18n.en,
     projectCreate: projectCreateI18n.en,
     projectDetails: projectDetailsI18n.en,
+    projectEdit: projectEditI18n.en,
   },
   uk: {
     brand: brandI18n.uk,
@@ -39,5 +41,6 @@ export const resources = {
     projectTableHeader: ProjectTableHeaderI18n.uk,
     projectCreate: projectCreateI18n.uk,
     projectDetails: projectDetailsI18n.uk,
+    projectEdit: projectEditI18n.uk,
   },
 };

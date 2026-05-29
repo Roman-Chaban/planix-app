@@ -140,7 +140,7 @@ export const LockIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const EyeOffIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const ViewOffIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   return (
     <svg
       width={width}
@@ -195,7 +195,7 @@ export const EyeOffIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const EyeIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const ViewIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   return (
     <svg
       width={width}

@@ -1,16 +1,12 @@
-/* Icons Types */
-
 export type { IconProps } from './model/types';
-
-/* Icons Exports */
 
 export { UserIcon } from './Icons';
 export { MessageIcon } from './Icons';
 export { PlanixLogoIcon } from './Icons';
 export { CheckIcon } from './Icons';
 export { LockIcon } from './Icons';
-export { EyeOffIcon } from './Icons';
-export { EyeIcon } from './Icons';
+export { ViewOffIcon } from './Icons';
+export { ViewIcon } from './Icons';
 export { SearchIcon } from './Icons';
 export { SearchIconPrimary } from './Icons';
 export { DashboardIcon } from './Icons';

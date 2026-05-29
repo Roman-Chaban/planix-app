@@ -6,10 +6,8 @@ import styles from './DashboardAnalytics.module.scss';
 
 export const DashboardAnalytics = () => {
   return (
-    <Box className={styles.analytics}>
-      <Box className={styles.analyticsWrapper}>
-        <DashboardAnalyticsHeaders />
-      </Box>
+    <Box className={styles.analyticsWrapper}>
+      <DashboardAnalyticsHeaders />
     </Box>
   );
 };

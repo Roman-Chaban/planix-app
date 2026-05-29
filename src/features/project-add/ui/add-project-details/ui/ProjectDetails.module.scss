@@ -25,3 +25,7 @@
   width: 100%;
   @include flex(flex, row, start, start, 1.5rem);
 }
+
+.buttonWrapper {
+  @include button-default-wrapper-size(11.438rem);
+}

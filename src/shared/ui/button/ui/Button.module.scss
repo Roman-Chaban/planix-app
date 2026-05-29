@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
+  line-height: 150%;
 
   font-family: inherit;
   border: none;
@@ -40,18 +41,32 @@
   @include button-link;
 }
 
+.transparent {
+  background: transparent;
+  &:hover {
+    background: none;
+  }
+}
+
 .circle {
+  border-radius: 50%;
+}
+
+.circle.sm {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
   background: none;
-  border-radius: 50%;
 }
 
 .compact {
   padding: 0;
   min-height: unset;
   font-size: inherit;
+}
+
+.none {
+  padding: 0;
 }
 
 .sm {
@@ -65,7 +80,8 @@
 }
 
 .lg {
-  padding: $space-4 $space-7;
+  padding-inline: $space-7;
+  padding-block: 0.875rem 0.813rem;
   font-size: $body-lg-font-size;
 }
 
@@ -73,16 +89,18 @@
   width: 100%;
 }
 
-.iconWrapper {
+.content {
   width: auto;
   height: auto;
   position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 }
 
 .startIcon,
 .endIcon {
   @include flex-center;
+}
+
+.rounded {
+  border-radius: 1.875rem;
 }

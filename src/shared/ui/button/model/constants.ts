@@ -5,7 +5,7 @@ export const BUTTON_TYPES = {
 } as const;
 
 export const BUTTON_SIZES = {
-  NONE: 'none',
+  COMPACT: 'compact',
   SMALL: 'sm',
   MEDIUM: 'md',
   LARGE: 'lg',
@@ -16,5 +16,12 @@ export const BUTTON_VARIANTS = {
   OUTLINE: 'outline',
   SOFT: 'soft',
   TERTIARY: 'tertiary',
+  TRANSPARENT: 'transparent',
+} as const;
+
+export const BUTTON_SHAPES = {
+  DEFAULT: 'default',
+  ROUNDED: 'rounded',
   CIRCLE: 'circle',
+  PILL: 'pill',
 } as const;

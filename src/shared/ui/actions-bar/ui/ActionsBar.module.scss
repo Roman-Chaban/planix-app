@@ -9,4 +9,12 @@
   height: 1.5rem;
   border-radius: 0.4rem;
   background: $neutral-100;
+
+  & svg {
+    color: $neutral-900;
+  }
+
+  &:hover {
+    background: $neutral-200;
+  }
 }

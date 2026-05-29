@@ -1,7 +1,7 @@
 import type { ProjectRowActionsFactory, ProjectRowActionsConfig } from '@/features/project-table';
 import type { ActionItems } from '@/shared/ui/actions-bar/model/types';
 
-import { DeleteIcon, EyeIcon, EditIcon } from '@/shared/ui/icons';
+import { DeleteIcon, ViewIcon, EditIcon } from '@/shared/ui/icons';
 
 export const createProjectRowActions = ({
   onView,
@@ -11,7 +11,7 @@ export const createProjectRowActions = ({
   return (projectName: string, projectId: string): ActionItems => [
     {
       id: 'view',
-      icon: EyeIcon,
+      icon: ViewIcon,
       onClick: () => onView(projectName),
     },
     {

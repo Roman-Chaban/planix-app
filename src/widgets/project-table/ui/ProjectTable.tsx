@@ -7,7 +7,7 @@ import { ProjectTableHeader, ProjectTableRow, ProjectTableColGroup } from '@/wid
 import { getProjectTableColumns } from '@/widgets/project-table/model/constants';
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
 
-import { createProjectRowActions } from '@/features/project-table/createProjectRowActions';
+import { createProjectRowActions } from '@/features/project-table/lib/createProjectRowActions';
 import { slugify } from '@/shared/lib';
 import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 

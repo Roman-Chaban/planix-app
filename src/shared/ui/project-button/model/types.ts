@@ -1,8 +1,8 @@
-import type { ButtonHTMLAttributes } from 'react';
+import type { ComponentProps } from 'react';
 
-import type { ButtonVariant } from '@/shared/ui/button/model/types';
+import type { Button } from '@/shared/ui';
 
-export type ProjectButtonProps = {
-  onClick?: () => void;
-  variant?: ButtonVariant;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+export type ProjectButtonProps = Pick<
+  ComponentProps<typeof Button>,
+  'onClick' | 'variant' | 'size' | 'fullWidth' | 'disabled' | 'type' | 'shape' | 'className'
+>;

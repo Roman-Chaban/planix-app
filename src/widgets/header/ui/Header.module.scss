@@ -27,10 +27,6 @@
   @include flex-row(0.813rem, start, center);
 
   @include respond(lg) {
-    max-width: fit-content;
-  }
-
-  @include respond(md) {
     display: none;
   }
 }
@@ -45,6 +41,7 @@
 }
 
 .headerRightSide {
+  @include container(header-rightSide);
   width: 100%;
   @include flex(flex, row, space-between, center, 0, nowrap);
   padding-inline: 0.875rem;
@@ -55,8 +52,8 @@
 }
 
 .title {
+  @include fluid-type(1.5rem, calc(1rem + 1.2cqw), $subtitle-line-height);
   font: {
-    size: $h6-font-size;
     weight: $font-weight-bold;
   }
   line-height: 150%;
@@ -74,8 +71,8 @@
   width: 0.75rem;
   height: 0.75rem;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2px;
+  right: 1.5px;
 
   transform: translate(25%, -40%);
 }

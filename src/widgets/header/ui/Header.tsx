@@ -8,14 +8,15 @@ import type { HeaderProps } from '@/widgets/header';
 
 import { LanguageSelect } from '@/features/change-language';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
-import { BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
+import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button/model/constants';
 
 import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
 import styles from './Header.module.scss';
 
-const { CIRCLE } = BUTTON_VARIANTS;
 const { BUTTON } = BUTTON_TYPES;
+const { CIRCLE } = BUTTON_SHAPES;
+const { SMALL } = BUTTON_SIZES;
 
 const FALLBACK_PROFILE_AVATAR = 'RC';
 
@@ -33,7 +34,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
         </Box>
 
         <Box className={styles.headerRightSide}>
-          <Typography as="h2" className={styles.title}>
+          <Typography as="h1" className={styles.title}>
             {t(title)}
           </Typography>
           <Box className={styles.headerAuth}>
@@ -41,7 +42,8 @@ export const Header: FC<HeaderProps> = ({ title }) => {
 
             <Button
               type={BUTTON}
-              variant={CIRCLE}
+              shape={CIRCLE}
+              size={SMALL}
               className={styles.button}
               endIcon={<NotificationErrorIcon />}
               endIconClassName={styles.endIcon}

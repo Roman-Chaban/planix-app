@@ -40,8 +40,6 @@
   }
 }
 
-.button {
-  width: 100%;
-  max-width: 8.188rem;
-  border-radius: 1.875rem;
+.buttonWrapper {
+  @include button-default-wrapper-size(8.188rem);
 }

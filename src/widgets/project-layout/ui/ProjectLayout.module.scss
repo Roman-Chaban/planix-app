@@ -21,3 +21,7 @@
   box-shadow: $shadow-sm;
   border-radius: 1rem;
 }
+
+.projects {
+  @include flex-col(1.875rem);
+}

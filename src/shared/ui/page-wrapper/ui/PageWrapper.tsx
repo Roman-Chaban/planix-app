@@ -6,7 +6,7 @@ import type { PageWrapperProps } from '@/shared/ui/page-wrapper';
 
 import styles from './PageWrapper.module.scss';
 
-export const PageWrapper: FC<PageWrapperProps> = ({ children, header }) => {
+export const PageWrapper: FC<PageWrapperProps> = ({ children, header, sectionClassName }) => {
   return (
     <Grid className={styles.grid}>
       <Sidebar />
@@ -14,7 +14,9 @@ export const PageWrapper: FC<PageWrapperProps> = ({ children, header }) => {
       {header}
 
       <Box as="main" className={styles.main}>
-        {children}
+        <Box as="section" className={sectionClassName}>
+          {children}
+        </Box>
       </Box>
     </Grid>
   );

@@ -5,10 +5,9 @@ import { useProjectsPageModel } from '@/widgets/project-layout/model/useProjects
 
 import { ProjectsTable } from '@/widgets/project-table';
 import { ProjectsEmpty } from '@/widgets/projects-empty';
-import { ProjectsHeader } from '@/widgets/projects-header';
 import { ProjectToolbar } from '@/widgets/projects-toolbar';
 import { ProjectDeleteModal } from '@/features/delete-project';
-import { Box, PageWrapper } from '@/shared/ui';
+import { PageWrapper } from '@/shared/ui';
 
 import styles from './ProjectLayout.module.scss';
 
@@ -28,11 +27,7 @@ export const ProjectLayout = () => {
 
   return (
     <PageWrapper header={<Header title={'projects'} />} sectionClassName={styles.projects}>
-      <Box className={styles.headerToolbar}>
-        <ProjectsHeader activeId={activeId} setActiveId={setActiveId} />
-
-        <ProjectToolbar control={control} />
-      </Box>
+      <ProjectToolbar control={control} activeId={activeId} setActiveId={setActiveId} />
 
       {showSkeleton && Skeleton && <Skeleton />}
 

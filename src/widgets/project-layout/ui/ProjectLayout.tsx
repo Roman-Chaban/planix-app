@@ -6,7 +6,7 @@ import { useProjectsPageModel } from '@/widgets/project-layout/model/useProjects
 import { ProjectsTable } from '@/widgets/project-table';
 import { ProjectsEmpty } from '@/widgets/projects-empty';
 import { ProjectToolbar } from '@/widgets/projects-toolbar';
-import { ProjectDeleteModal } from '@/features/delete-project';
+import { DeleteModal } from '@/features/project-delete';
 import { PageWrapper } from '@/shared/ui';
 
 import styles from './ProjectLayout.module.scss';
@@ -41,7 +41,7 @@ export const ProjectLayout = () => {
         />
       )}
 
-      <ProjectDeleteModal
+      <DeleteModal
         isOpen={deleteModal.isOpen}
         projectId={deleteModal.projectToDelete}
         onClose={deleteModal.closeDeleteModal}

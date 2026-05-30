@@ -6,7 +6,7 @@ import { projectCreateI18n } from '@/widgets/project-create/i18n';
 import { projectEditI18n } from '@/widgets/project-edit/i18n';
 import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
-import { addProjectHeaderI18n } from '@/widgets/projects-header/i18n';
+import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { loginI18n } from '@/features/auth-by-credentials/i18n';
 import { deleteProjectI18n } from '@/features/delete-project/i18n';

@@ -1,8 +1,7 @@
 @use '../tokens/' as *;
 
 @mixin container($name, $type: inline-size) {
-  container-type: $type;
-  container-name: $name;
+  container: $name / $type;
 }
 
 @mixin fluid-type($min, $fluid, $max) {

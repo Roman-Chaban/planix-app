@@ -30,6 +30,11 @@
 .actions {
   @include flex-center;
   gap: 1.25rem;
+
+  @include respond(sm) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .cancel,
@@ -38,4 +43,8 @@
   max-width: 8.813rem;
   min-height: 3.375rem;
   font-weight: $font-weight-semibold;
+
+  @include respond(sm) {
+    max-width: 100%;
+  }
 }

@@ -11,6 +11,7 @@
   width: 100vw;
   min-height: 100dvh;
   @include flex-center;
+  padding: 1rem;
 }
 
 .content {
@@ -25,6 +26,10 @@
   min-height: 24.813rem;
   background: $neutral-0;
   box-shadow: $shadow-not-found;
+
+  @include respond(sm) {
+    padding-inline: 1.5rem;
+  }
 }
 
 .header {

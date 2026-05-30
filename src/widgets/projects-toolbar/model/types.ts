@@ -1,9 +1,29 @@
 import type { Control } from 'react-hook-form';
 
-type ProjectsFilterForm = {
+import type { Dispatch, SetStateAction } from 'react';
+
+import type { TabId } from '@/widgets/project-layout/model/types';
+
+type ProjectFilterForm = {
   search: string;
 };
 
-export type ProjectsToolbarProps = {
-  control: Control<ProjectsFilterForm>;
+export type ProjectToolbarProps = {
+  activeId: TabId;
+  setActiveId: Dispatch<SetStateAction<TabId>>;
+  control: Control<ProjectFilterForm>;
 };
+
+export type ProjectHeaderItemProps = {
+  id: TabId;
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
+};
+
+export type ProjectHeaderProps = {
+  activeId: TabId;
+  setActiveId: Dispatch<SetStateAction<TabId>>;
+};
+
+export type ProjectHeaderItems = ProjectHeaderItemProps[];

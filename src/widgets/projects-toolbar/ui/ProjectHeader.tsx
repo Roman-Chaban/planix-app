@@ -2,24 +2,22 @@
 
 import type { FC } from 'react';
 
-import { ProjectsHeaderItem } from '@/widgets/projects-header';
-import { headerItems } from '@/widgets/projects-header/model/constants';
-
-import type { ProjectsHeaderProps } from '@/widgets/projects-header/model/types';
+import { ProjectHeaderItem, type ProjectHeaderProps } from '@/widgets/projects-toolbar';
+import { headerItems } from '@/widgets/projects-toolbar/model/constants';
 
 import { Box, List } from '@/shared/ui';
 
-import styles from './ProjectsHeader.module.scss';
+import styles from './ProjectsToolbar.module.scss';
 
-export const ProjectsHeader: FC<ProjectsHeaderProps> = ({ activeId, setActiveId }) => {
+export const ProjectHeader: FC<ProjectHeaderProps> = ({ activeId, setActiveId }) => {
   return (
     <Box className={styles.scrollContainer}>
       <List
         className={styles.list}
         renderList={headerItems}
-        getItemKey={(key) => key.id}
+        getItemKey={(item) => item.id}
         renderItem={(item) => (
-          <ProjectsHeaderItem
+          <ProjectHeaderItem
             id={item.id}
             label={item.label}
             isActive={item.id === activeId}

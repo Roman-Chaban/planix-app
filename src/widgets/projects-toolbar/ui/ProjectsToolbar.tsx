@@ -3,8 +3,9 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ProjectHeader } from '@/widgets/projects-toolbar';
 import { useProjectToolbar } from '@/widgets/projects-toolbar/lib/useProjectToolbar';
-import type { ProjectsToolbarProps } from '@/widgets/projects-toolbar/model/types';
+import type { ProjectToolbarProps } from '@/widgets/projects-toolbar/model/types';
 
 import { Box, ProjectButton } from '@/shared/ui';
 import {
@@ -25,32 +26,39 @@ const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 
-export const ProjectToolbar: FC<ProjectsToolbarProps> = () => {
+export const ProjectToolbar: FC<ProjectToolbarProps> = ({ activeId, setActiveId }) => {
   const { t } = useTranslation('addProjectHeader');
   const { handleCreateProject } = useProjectToolbar();
 
   return (
     <Box className={styles.toolbar}>
-      <Box className={styles.search}>
-        <InputField
-          id="project-search"
-          startIcon={<SearchIconPrimary />}
-          inputProps={{
-            type: SEARCH,
-            placeholder: t('searchPlaceholder'),
-          }}
-        />
-      </Box>
+      <ProjectHeader activeId={activeId} setActiveId={setActiveId} />
 
-      <Box className={styles.buttonWrapper}>
-        <ProjectButton
-          type={BUTTON}
-          shape={ROUNDED}
-          variant={DEFAULT}
-          size={LARGE}
-          onClick={handleCreateProject}
-          fullWidth
-        />
+      <Box className={styles.toolbarActions}>
+        <Box className={styles.search}>
+          <InputField
+            id="project-search"
+            startIcon={<SearchIconPrimary />}
+            inputProps={{
+              type: SEARCH,
+              placeholder: t('searchPlaceholder'),
+            }}
+          />
+        </Box>
+
+        {/* TODO: Select Platform will be added later */}
+        <Box className={styles.platform}>Select Platform</Box>
+
+        <Box className={styles.buttonWrapper}>
+          <ProjectButton
+            type={BUTTON}
+            shape={ROUNDED}
+            variant={DEFAULT}
+            size={LARGE}
+            onClick={handleCreateProject}
+            fullWidth
+          />
+        </Box>
       </Box>
     </Box>
   );

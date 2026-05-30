@@ -1,6 +1,6 @@
-import type { ProjectsHeaderItems } from '@/widgets/projects-header/model/types';
+import type { ProjectHeaderItems } from '@/widgets/projects-toolbar';
 
-export const headerItems: ProjectsHeaderItems = [
+export const headerItems: ProjectHeaderItems = [
   {
     id: 'AllProjects',
     label: 'allProjects',

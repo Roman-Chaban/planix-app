@@ -1,19 +1,5 @@
 @use '@/shared/styles' as *;
 
-.headerToolbar {
-  width: 100%;
-  min-width: 0;
-  @include flex(flex, row, space-between, center, 1rem, nowrap);
-
-  @include respond(xl) {
-    @include flex-col(1rem, stretch, start, column-reverse);
-  }
-}
-
-.button {
-  background: transparent;
-}
-
 .content {
   width: 100%;
   height: 100%;

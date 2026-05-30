@@ -20,10 +20,10 @@
   border-radius: 1.875rem;
 
   @include respond(lg) {
-    @include flex-col(3rem, center, center);
+    @include flex-col(3rem, center, center, column);
   }
 }
 
 .errorBlock {
-  @include flex-col(2rem, center, stretch);
+  @include flex-col(2rem, center, stretch, column);
 }

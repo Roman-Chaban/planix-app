@@ -2,7 +2,11 @@
 
 .wrapper {
   @include widget-box(100%, 57.813rem, 100%);
-  @include flex-col(1.5rem, space-between, stretch);
+  @include flex-col(1.5rem, space-between, stretch, column);
+
+  @include respond(lg) {
+    max-width: 100%;
+  }
 }
 
 .header {
@@ -17,13 +21,17 @@
 }
 
 .form {
-  @include flex-col(1.5rem, start, stretch);
+  @include flex-col(1.5rem, start, stretch, column);
   padding-inline: 1.375rem;
 }
 
 .row {
   width: 100%;
   @include flex(flex, row, start, start, 1.5rem);
+
+  @include respond(sm) {
+    @include flex-col(1.5rem, start, stretch, column);
+  }
 }
 
 .buttonWrapper {

@@ -14,7 +14,7 @@
 }
 
 .content {
-  @include flex-col(1.75rem);
+  @include flex-col(1.75rem, start, stretch, column);
   padding: 2.5rem;
   border: {
     top: 0.188rem solid $primary-700;

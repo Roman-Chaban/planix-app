@@ -1,5 +1,5 @@
 @use '@/shared/styles' as *;
 
 .dashboard {
-  @include flex-col(1.875rem);
+  @include flex-col(1.875rem, start, stretch, column);
 }

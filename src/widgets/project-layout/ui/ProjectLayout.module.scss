@@ -6,7 +6,7 @@
   @include flex(flex, row, space-between, center, 1rem, nowrap);
 
   @include respond(xl) {
-    @include flex-col(1rem, stretch);
+    @include flex-col(1rem, stretch, start, column-reverse);
   }
 }
 
@@ -23,5 +23,6 @@
 }
 
 .projects {
-  @include flex-col(1.875rem);
+  @include flex-col(1.875rem, start, stretch, column);
+  min-height: 100%;
 }

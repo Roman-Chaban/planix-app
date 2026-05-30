@@ -16,7 +16,7 @@
 .secondary,
 .tertiary {
   @include widget-box(100%, 100%, 24rem);
-  @include flex-col(0, start, stretch);
+  @include flex-col(0, start, stretch, column);
 }
 
 .primary {

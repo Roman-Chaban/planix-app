@@ -1,7 +1,9 @@
 @use '@/shared/styles' as *;
 
 .container {
+  @include container(header);
   @include flex(flex, row, space-between, center, 0);
+  padding-block-end: 0.875rem;
 }
 
 .meta {
@@ -10,15 +12,16 @@
 
 .heading {
   position: relative;
-  left: 1.3rem;
+  padding-inline-start: 1.3rem;
 
   @include title-bold($font-weight-semibold, $subtitle-font-size, $neutral-950);
+  @include fluid-type(1rem, calc(0.875rem + 0.5vw), $subtitle-font-size);
 
   &::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: -1rem;
+    left: 0.3rem;
     transform: translateY(-50%);
 
     @include circle(0.5rem, $gradient-brand);
@@ -27,8 +30,10 @@
 
 .metaLabel {
   @include title-bold($font-weight-semibold, $body-lg-font-size, $neutral-950);
+  @include fluid-type(1rem, calc(0.875rem + 0.5vw), $subtitle-font-size);
 }
 
 .metaValue {
   @include title-bold($font-weight-regular, $body-lg-font-size, $neutral-700, 0.62);
+  @include fluid-type(1rem, calc(0.875rem + 0.5vw), $subtitle-font-size);
 }

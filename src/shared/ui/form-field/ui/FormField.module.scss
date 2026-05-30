@@ -2,7 +2,7 @@
 
 .field {
   width: 100%;
-  @include flex-col(0.188rem);
+  @include flex-col(0.188rem, start, stretch, column);
 }
 
 .inputWrapper {

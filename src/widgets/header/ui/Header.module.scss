@@ -52,7 +52,7 @@
 }
 
 .title {
-  @include fluid-type(1.5rem, calc(1rem + 1.2cqw), $subtitle-line-height);
+  @include fluid-type(1rem, calc(1rem + 1.2cqw), $subtitle-line-height);
   font: {
     weight: $font-weight-bold;
   }
@@ -80,6 +80,10 @@
 .headerAuth {
   @include flex-center;
   gap: $space-5;
+
+  @include respond(sm) {
+    gap: $space-2;
+  }
 }
 
 /* Styles Mock: [Temporary mock these styles] */

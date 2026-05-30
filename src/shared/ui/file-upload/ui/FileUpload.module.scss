@@ -34,12 +34,12 @@
 
 .uploadCard {
   @include upload-item-base;
-  @include flex-col(0.938rem, center, center);
+  @include flex-col(0.938rem, center, center, column);
 }
 
 .fileCard {
   @include upload-item-base;
-  @include flex-col(0.938rem, space-between, center);
+  @include flex-col(0.938rem, space-between, center, column);
   position: relative;
 }
 

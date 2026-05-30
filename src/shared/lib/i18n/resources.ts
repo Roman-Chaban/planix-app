@@ -9,8 +9,8 @@ import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { loginI18n } from '@/features/auth-by-credentials/i18n';
-import { deleteProjectI18n } from '@/features/delete-project/i18n';
 import { projectDetailsI18n } from '@/features/project-add/i18n';
+import { deleteProjectI18n } from '@/features/project-delete/i18n';
 
 export const resources = {
   en: {

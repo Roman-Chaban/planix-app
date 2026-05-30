@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import type { UseDeleteProjectProps } from '@/features/delete-project';
+import type { UseDeleteProjectProps } from '@/features/project-delete';
 import { useProjectActions } from '@/entities/project';
 
 export const useDeleteProject = ({ projectId, onClose }: UseDeleteProjectProps) => {

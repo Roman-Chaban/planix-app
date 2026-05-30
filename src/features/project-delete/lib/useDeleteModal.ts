@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export const useProjectDeleteModal = () => {
+export const useDeleteModal = () => {
   const [projectToDelete, setProjectToDelete] = useState<string | null>(null);
 
   const isOpen = projectToDelete !== null;

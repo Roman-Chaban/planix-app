@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react';
 
 import type { TabId } from '@/widgets/project-layout/model/types';
 import { headerItems } from '@/widgets/projects-toolbar/model/constants';
-import { useProjectDeleteModal } from '@/features/delete-project/lib/useProjectDeleteModal';
 import { filterProjects } from '@/features/filter-projects/model/filter';
 import { useProjectsFilters } from '@/features/filter-projects/model/useProjectsFilters';
+import { useDeleteModal } from '@/features/project-delete';
 import { useProjects } from '@/entities/project/api/useProjects';
 
 import { toProjectTableItem } from '@/entities/project/model/adapters';
@@ -17,7 +17,7 @@ export const useProjectsPageModel = () => {
   const { control, watch } = useProjectsFilters();
   const search = watch('search');
 
-  const deleteModal = useProjectDeleteModal();
+  const deleteModal = useDeleteModal();
 
   const { data, isLoading, showSkeleton, Skeleton } = useProjects();
 

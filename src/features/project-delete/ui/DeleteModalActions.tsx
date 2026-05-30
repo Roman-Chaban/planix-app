@@ -3,13 +3,13 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import styles from '@/features/delete-project/ui/ProjectsDeleteModal.module.scss';
-
+import type { DeleteProjectActionsProps } from '@/features/project-delete';
 import { Button, Box } from '@/shared/ui';
 import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
-import type { ModalActionsProps } from '@/shared/ui/modal';
 
-export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDeleteProject }) => {
+import styles from './DeleteModal.module.scss';
+
+export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({ onClose, onDelete }) => {
   const { t } = useTranslation('modal');
 
   return (
@@ -29,7 +29,7 @@ export const ModalActions: FC<ModalActionsProps> = ({ onClose, handleDeleteProje
         type={BUTTON_TYPES.BUTTON}
         variant={BUTTON_VARIANTS.DEFAULT}
         size={BUTTON_SIZES.LARGE}
-        onClick={handleDeleteProject}
+        onClick={onDelete}
         className={styles.save}
       >
         {t('saveButton')}

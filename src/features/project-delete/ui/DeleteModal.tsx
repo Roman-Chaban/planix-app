@@ -4,13 +4,17 @@ import { type FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { useDeleteProject, type ProjectDeleteModalProps } from '@/features/delete-project';
-import { Modal, ModalHeader, ModalActions, Textarea } from '@/shared/ui';
+import {
+  useDeleteProject,
+  type DeleteProjectModalProps,
+  DeleteModalActions,
+} from '@/features/project-delete';
+import { Modal, ModalHeader, Textarea } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 
-import styles from './ProjectsDeleteModal.module.scss';
+import styles from './DeleteModal.module.scss';
 
-export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onClose, isOpen }) => {
+export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, isOpen }) => {
   const { t } = useTranslation('modal');
 
   const { handleClose, handleDeleteProject, isProjectActionPending, reason, setReason } =
@@ -31,7 +35,7 @@ export const ProjectDeleteModal: FC<ProjectDeleteModalProps> = ({ projectId, onC
         labelClassName={styles.reasonLabel}
         disabled={isProjectActionPending}
       />
-      <ModalActions onClose={handleClose} handleDeleteProject={handleDeleteProject} />
+      <DeleteModalActions onClose={handleClose} onDelete={handleDeleteProject} />
     </Modal>
   );
 };

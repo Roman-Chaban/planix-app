@@ -52,7 +52,7 @@ export type ProjectTableItem = {
 
 export type ProjectTableRowProps = {
   project: ProjectTableItem;
-  actionsFactory: (name: string, id: string) => ActionItem[];
+  actionsFactory: (name: string, id: string | number) => ActionItem[];
   isShowReason?: boolean;
 };
 

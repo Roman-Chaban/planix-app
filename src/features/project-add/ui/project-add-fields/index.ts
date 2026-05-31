@@ -14,3 +14,4 @@ export { ProjectNameField } from './ui/ProjectNameField';
 export { ClientNameField } from './ui/ClientNameField';
 export { DescriptionField } from './ui/DescriptionField';
 export { DateFormField } from './ui/DateFormField';
+export { FilesField } from './ui/FilesField';

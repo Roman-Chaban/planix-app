@@ -3,8 +3,6 @@
 import type { FC } from 'react';
 import { FormProvider } from 'react-hook-form';
 
-import { useTranslation } from 'react-i18next';
-
 import { ROUTES } from '@/app/routes';
 import {
   useProjectDetailsForm,
@@ -19,11 +17,12 @@ import {
   PriceField,
   PlatformField,
   DescriptionField,
+  FilesField,
 } from '@/features/project-add/ui/project-add-fields';
 
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
-import { Box, FileUpload, ProjectButton } from '@/shared/ui';
+import { Box, ProjectButton } from '@/shared/ui';
 
 import {
   BUTTON_SHAPES,
@@ -42,8 +41,6 @@ const { LARGE } = BUTTON_SIZES;
 const { PROJECT } = ROUTES;
 
 export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues }) => {
-  const { t } = useTranslation('projectDetails');
-
   const localizedRouter = useLocalizedRouter();
 
   const form = useProjectDetailsForm(defaultValues);
@@ -72,11 +69,7 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues 
           <PlatformField />
         </Box>
 
-        <FileUpload
-          label={t('label')}
-          uploadLabel={t('uploadLabel')}
-          uploadPhotosLabel={t('uploadPhotosLabel')}
-        />
+        <FilesField />
         <DescriptionField />
 
         <Box className={styles.buttonWrapper}>

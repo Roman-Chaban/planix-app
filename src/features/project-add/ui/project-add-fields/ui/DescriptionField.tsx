@@ -10,7 +10,7 @@ import { Textarea } from '@/shared/ui';
 import styles from './FormField.module.scss';
 
 export const DescriptionField = () => {
-  const { t } = useTranslation('projectDetails');
+  const { t } = useTranslation('projectAdd');
 
   const { control } = useFormContext<ProjectDetailsFormData>();
 

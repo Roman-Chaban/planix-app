@@ -12,7 +12,7 @@ import { INPUT_TYPES } from '@/shared/ui/input';
 const { TEXT } = INPUT_TYPES;
 
 export const ClientNameField = () => {
-  const { t } = useTranslation('projectDetails');
+  const { t } = useTranslation('projectAdd');
 
   const { control } = useFormContext<ProjectDetailsFormData>();
 

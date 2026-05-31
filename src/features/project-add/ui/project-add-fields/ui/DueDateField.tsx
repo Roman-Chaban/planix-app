@@ -9,7 +9,7 @@ import { validateDateOrder } from '@/features/project-add/ui/project-add-fields'
 import { DateFormField } from './DateFormField';
 
 export const DueDateField = () => {
-  const { t } = useTranslation('projectDetails');
+  const { t } = useTranslation('projectAdd');
   const { control, watch } = useFormContext<ProjectDetailsFormData>();
   const startDate = watch('startDate');
 

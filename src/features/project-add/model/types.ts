@@ -1,13 +1,12 @@
-import type { Platform } from '@/widgets/project-table/model/types';
-
 export type ProjectDetailsFormData = {
   projectName: string;
   clientName: string;
   startDate: string;
   dueDate: string;
   price: number | '';
-  platform: Platform;
+  platform: string;
   description: string;
+  files: File[];
 };
 
 export type ProjectDetailsFormProps = {

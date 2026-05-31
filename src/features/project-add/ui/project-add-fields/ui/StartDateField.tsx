@@ -7,7 +7,7 @@ import type { ProjectDetailsFormData } from '@/features/project-add';
 import { validateDateOrder, DateFormField } from '@/features/project-add/ui/project-add-fields';
 
 export const StartDateField = () => {
-  const { t } = useTranslation('projectDetails');
+  const { t } = useTranslation('projectAdd');
 
   const { control, watch } = useFormContext<ProjectDetailsFormData>();
 

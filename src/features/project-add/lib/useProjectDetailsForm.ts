@@ -12,8 +12,9 @@ export const useProjectDetailsForm = (defaultValues?: Partial<ProjectDetailsForm
       startDate: defaultValues?.startDate ?? '',
       dueDate: defaultValues?.dueDate ?? '',
       price: defaultValues?.price ?? '',
-      platform: defaultValues?.platform,
+      platform: defaultValues?.platform ?? '',
       description: defaultValues?.description ?? '',
+      files: defaultValues?.files ?? [],
     },
     mode: 'onBlur',
   });

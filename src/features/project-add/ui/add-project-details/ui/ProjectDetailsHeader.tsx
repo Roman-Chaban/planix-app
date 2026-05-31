@@ -5,7 +5,7 @@ import { Box, Typography } from '@/shared/ui';
 import styles from './ProjectDetails.module.scss';
 
 export const ProjectDetailsHeader = () => {
-  const { t } = useTranslation('projectDetails');
+  const { t } = useTranslation('projectAdd');
 
   return (
     <Box className={styles.header}>

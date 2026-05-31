@@ -1,33 +1,28 @@
 'use client';
 
-import { getProjects } from '@/entities/project';
 import { queryKeys } from '@/entities/project/api/queryKeys';
-
-import { delay } from '@/shared/lib/async/delay';
+import { getProjects } from '@/entities/project/lib/projects';
 import { useQueryWithSkeleton } from '@/shared/lib/hooks/useQueryWithSkeleton';
 import { ProjectsTableSkeleton } from '@/shared/ui/skeletons/project-table/ui/ProjectTableSkeleton';
 
 export const useProjects = () => {
-  const projects = getProjects();
-
   return useQueryWithSkeleton({
     queryKey: queryKeys.projects.all,
     Skeleton: ProjectsTableSkeleton,
 
     queryFn: async () => {
-      await delay(1500);
+      const data = await getProjects();
 
       return {
-        data: projects,
+        data: data,
         meta: {
-          total: projects.length,
+          total: data.length,
           page: 1,
-          limit: projects.length,
+          limit: data.length,
           totalPages: 1,
         },
       };
     },
-
     staleTime: 5 * 60 * 1000,
   });
 };

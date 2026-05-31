@@ -1,3 +1,5 @@
+'use client';
+
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import type { Project } from '@/widgets/project-table/model/types';
@@ -5,64 +7,52 @@ import {
   type CreateProjectPayload,
   type DeleteProjectPayload,
   type UpdateProjectPayload,
-  invalidateProjectsCache,
-  simulateApiDelay,
   createProject as createProjectRepository,
-  updateProject as updateProjectRepository,
   deleteProject as deleteProjectRepository,
+  updateProject as updateProjectRepository,
 } from '@/entities/project';
+import { queryKeys } from '@/entities/project/api/queryKeys';
 
 export const useProjectActions = () => {
   const queryClient = useQueryClient();
 
+  const invalidate = () => queryClient.invalidateQueries({ queryKey: queryKeys.projects.all });
+
   const createProject = useMutation<Project, Error, CreateProjectPayload>({
     mutationFn: async (formData) => {
-      await simulateApiDelay();
-      const newProject: Project = {
-        id: Math.random().toString(36).substring(7),
+      const newProjectPayload: Partial<Project> = {
         name: formData.projectName,
-        client: { id: Math.random().toString(), name: formData.clientName, avatar: '' },
+        client: { id: String(Date.now()), name: formData.clientName, avatar: '' },
         dueDate: formData.dueDate,
-        platform: formData.platform || null,
+        platform: formData.platform,
         price: Number(formData.price),
         progress: 0,
         status: 'Pending',
+        slug: formData.projectName.toLowerCase().replace(/ /g, '-'),
       };
-      return createProjectRepository(newProject);
-    },
 
-    onSuccess: () => invalidateProjectsCache(queryClient),
+      return createProjectRepository(newProjectPayload);
+    },
+    onSuccess: invalidate,
   });
 
   const deleteProject = useMutation<void, Error, DeleteProjectPayload>({
     mutationFn: async ({ id }) => {
-      await simulateApiDelay();
-
       return deleteProjectRepository(id);
     },
-
-    onSuccess: () => invalidateProjectsCache(queryClient),
+    onSuccess: invalidate,
   });
 
   const updateProject = useMutation<Project, Error, UpdateProjectPayload>({
     mutationFn: async ({ id, data }) => {
-      await simulateApiDelay();
-
-      const updatedProject = updateProjectRepository(id, {
+      return updateProjectRepository(id, {
         name: data.projectName,
         dueDate: data.dueDate,
         price: Number(data.price),
         platform: data.platform,
       });
-
-      if (!updatedProject) {
-        throw new Error('Project not found');
-      }
-
-      return updatedProject;
     },
-
-    onSuccess: () => invalidateProjectsCache(queryClient),
+    onSuccess: invalidate,
   });
 
   const isProjectActionPending =

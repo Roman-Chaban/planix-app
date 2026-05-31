@@ -4,7 +4,7 @@ import type { LoginHeaderProps } from '@/widgets/login';
 
 import { Avatar, Box, Typography } from '@/shared/ui';
 
-import styles from './Login.module.scss';
+import styles from './LoginForm.module.scss';
 
 export const LoginHeader: FC<LoginHeaderProps> = ({ title, subtitle, highlightedText, icon }) => {
   return (

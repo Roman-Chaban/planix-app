@@ -2,10 +2,10 @@
 
 import { useForm } from 'react-hook-form';
 
-import type { AuthFormValues } from '@/features/auth-by-credentials/model/types';
+import type { FormValues } from '@/features/auth-by-credentials/model/types';
 
-export const useAuthLogin = () => {
-  const form = useForm<AuthFormValues>({
+export const useLogin = () => {
+  const form = useForm<FormValues>({
     defaultValues: {
       email: '',
       password: '',

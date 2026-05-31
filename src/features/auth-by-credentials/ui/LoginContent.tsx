@@ -5,7 +5,7 @@ import { Controller } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import type { LoginFormMainProps } from '@/features/auth-by-credentials/model/types';
+import type { LoginContentProps } from '@/features/auth-by-credentials/model/types';
 
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { Box, Button, Checkbox, AppLink } from '@/shared/ui';
@@ -25,8 +25,9 @@ const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 
-export const LoginFormMain: FC<LoginFormMainProps> = ({ control }) => {
+export const LoginContent: FC<LoginContentProps> = ({ control }) => {
   const { t } = useTranslation('login');
+
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
@@ -35,7 +36,7 @@ export const LoginFormMain: FC<LoginFormMainProps> = ({ control }) => {
     <Box className={styles.loginFormMainWrapper}>
       <Box className={styles.loginFormMain}>
         <Controller
-          name="checked"
+          name="rememberMe"
           control={control}
           render={({ field }) => (
             <Checkbox checked={field.value} onChange={field.onChange} label={t('rememberMe')} />

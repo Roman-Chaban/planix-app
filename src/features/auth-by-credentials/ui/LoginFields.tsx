@@ -4,8 +4,8 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { LoginFormFieldsProps } from '@/features/auth-by-credentials/model/types';
-import { usePasswordToggle } from '@/features/auth-by-credentials/model/usePasswordToggle';
+import { usePasswordToggle } from '@/features/auth-by-credentials/lib/usePasswordToggle';
+import type { LoginFieldsProps } from '@/features/auth-by-credentials/model/types';
 
 import { FormInputField } from '@/shared/ui';
 import { ViewIcon, ViewOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
@@ -14,7 +14,7 @@ import { INPUT_TYPES } from '@/shared/ui/input/model/constants';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 
-export const LoginFormFields: FC<LoginFormFieldsProps> = ({
+export const LoginFields: FC<LoginFieldsProps> = ({
   emailField,
   passwordField,
   emailError,

@@ -4,7 +4,7 @@ import type { LoginFooterProps } from '@/widgets/login';
 
 import { Box, AppLink, Typography } from '@/shared/ui';
 
-import styles from './Login.module.scss';
+import styles from './LoginForm.module.scss';
 
 export const LoginFooter: FC<LoginFooterProps> = ({ title, link }) => {
   return (

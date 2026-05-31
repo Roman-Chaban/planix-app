@@ -1,20 +1,23 @@
 'use client';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LoginHeader, LoginFooter } from '@/widgets/login';
-import { LoginFormMain, LoginFormFields } from '@/features/auth-by-credentials';
-import { useAuthLogin } from '@/features/auth-by-credentials/model/useAuthLogin';
+import {
+  LoginHeader,
+  LoginFooter,
+  LoginContent,
+  LoginFields,
+} from '@/features/auth-by-credentials';
+import { useLogin } from '@/features/auth-by-credentials/lib/useLogin';
 
 import { Box } from '@/shared/ui';
 
 import styles from './LoginForm.module.scss';
 
-export const LoginForm: FC = () => {
+export const LoginForm = () => {
   const { t } = useTranslation('login');
 
-  const form = useAuthLogin();
+  const form = useLogin();
 
   return (
     <Box className={styles.loginWrapper}>
@@ -26,14 +29,14 @@ export const LoginForm: FC = () => {
         />
 
         <form className={styles.loginForm} onSubmit={form.onSubmit}>
-          <LoginFormFields
+          <LoginFields
             emailField={form.register('email')}
             passwordField={form.register('password')}
             emailError={form.errors.email?.message}
             passwordError={form.errors.password?.message}
           />
 
-          <LoginFormMain control={form.control} />
+          <LoginContent control={form.control} />
         </form>
       </Box>
 

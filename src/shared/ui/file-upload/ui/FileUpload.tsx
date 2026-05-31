@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, type FC } from 'react';
+import { useCallback, type FC } from 'react';
 
 import { Box, Typography, FormField, FormLabel, Input } from '@/shared/ui';
 import {
@@ -17,22 +17,27 @@ import styles from './FileUpload.module.scss';
 const { FILE } = INPUT_TYPES;
 
 export const FileUpload: FC<FileUploadProps> = ({
+  value = [],
+  onChange,
   label,
   uploadLabel,
   uploadPhotosLabel,
   error,
 }) => {
-  const [files, setFiles] = useState<File[]>([]);
-
   const { inputRef, handleTrigger, handleFileChange, handleKeyDown } = useFileUpload({
-    onFileSelect: (file) => setFiles((prev) => [...prev, file]),
+    onFileSelect: (file) => {
+      onChange?.([...value, file]);
+    },
   });
 
-  const handleRemoveFile = useCallback((index: number) => {
-    setFiles((prev) => prev.filter((_, i) => i !== index));
-  }, []);
+  const handleRemoveFile = useCallback(
+    (index: number) => {
+      onChange?.(value.filter((_, i) => i !== index));
+    },
+    [onChange, value],
+  );
 
-  const hasFiles = files.length > 0;
+  const hasFiles = value.length > 0;
 
   return (
     <FormField>
@@ -52,6 +57,7 @@ export const FileUpload: FC<FileUploadProps> = ({
           <Box
             onClick={handleTrigger}
             onKeyDown={handleKeyDown}
+            tabIndex={0}
             className={styles.emptyStateTrigger}
           >
             <Box className={styles.iconContainer}>
@@ -67,7 +73,7 @@ export const FileUpload: FC<FileUploadProps> = ({
               uploadPhotosLabel={uploadPhotosLabel}
             />
 
-            {files.map((file, index) => (
+            {value.map((file, index) => (
               <FileItem
                 key={`${file.name}-${index}`}
                 file={file}
@@ -77,6 +83,7 @@ export const FileUpload: FC<FileUploadProps> = ({
           </Box>
         )}
       </Box>
+      {error && <Typography color="error">{error}</Typography>}
     </FormField>
   );
 };

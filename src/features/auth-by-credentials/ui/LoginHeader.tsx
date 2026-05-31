@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { LoginHeaderProps } from '@/widgets/login';
+import type { LoginHeaderProps } from '@/features/auth-by-credentials';
 
 import { Avatar, Box, Typography } from '@/shared/ui';
 

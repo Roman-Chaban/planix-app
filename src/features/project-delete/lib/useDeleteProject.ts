@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import type { UseDeleteProjectProps } from '@/features/project-delete';
+import type { UseDeleteProjectOptions } from '@/features/project-delete';
 import { useProjectActions } from '@/entities/project';
 
-export const useDeleteProject = ({ projectId, onClose }: UseDeleteProjectProps) => {
+export const useDeleteProject = ({ projectId, onClose }: UseDeleteProjectOptions) => {
   const [reason, setReason] = useState('');
 
   const { deleteProject, isProjectActionPending } = useProjectActions();

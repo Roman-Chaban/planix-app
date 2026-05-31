@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 export type AuthFormValues = {
   email: string;
   password: string;
-  rememberMe: boolean; 
+  rememberMe: boolean;
 };
 
 type AuthFieldProps = {

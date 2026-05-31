@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { LoginFooterProps } from '@/widgets/login';
+import type { LoginFooterProps } from '@/features/auth-by-credentials';
 
 import { Box, AppLink, Typography } from '@/shared/ui';
 

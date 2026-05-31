@@ -1,6 +1,6 @@
 type ProjectContextProps = {
   projectId?: string | null;
-  onClose?: () => void;
+  onClose: () => void;
 };
 
 export type DeleteProjectModalProps = {

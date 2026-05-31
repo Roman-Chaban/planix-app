@@ -3,13 +3,14 @@ import { dashboardAnalyticsI18n } from '@/widgets/dashboard-analytics/i18n';
 import { dashboardCardsI18n } from '@/widgets/dashboard-cards/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
 import { projectCreateI18n } from '@/widgets/project-create/i18n';
+import { projectDetailsI18n } from '@/widgets/project-details/i18n';
 import { projectEditI18n } from '@/widgets/project-edit/i18n';
 import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { loginI18n } from '@/features/auth-by-credentials/i18n';
-import { projectDetailsI18n } from '@/features/project-add/i18n';
+import { projectAddI18n } from '@/features/project-add/i18n';
 import { deleteProjectI18n } from '@/features/project-delete/i18n';
 
 export const resources = {
@@ -25,8 +26,9 @@ export const resources = {
     projectsEmpty: ProjectsEmptyI18n.en,
     projectTableHeader: ProjectTableHeaderI18n.en,
     projectCreate: projectCreateI18n.en,
-    projectDetails: projectDetailsI18n.en,
+    projectAdd: projectAddI18n.en,
     projectEdit: projectEditI18n.en,
+    projectDetails: projectDetailsI18n.en,
   },
   uk: {
     brand: brandI18n.uk,
@@ -40,7 +42,8 @@ export const resources = {
     projectsEmpty: ProjectsEmptyI18n.uk,
     projectTableHeader: ProjectTableHeaderI18n.uk,
     projectCreate: projectCreateI18n.uk,
-    projectDetails: projectDetailsI18n.uk,
+    projectAdd: projectAddI18n.uk,
     projectEdit: projectEditI18n.uk,
+    projectDetails: projectDetailsI18n.uk,
   },
 };

@@ -20,8 +20,9 @@ const configOptions = {
     'projectsEmpty',
     'projectTableHeader',
     'projectCreate',
-    'projectDetails',
+    'projectAdd',
     'projectEdit',
+    'projectDetails',
   ],
   interpolation: {
     escapeValue: false,

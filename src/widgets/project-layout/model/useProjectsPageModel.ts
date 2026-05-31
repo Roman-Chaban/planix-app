@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react';
 
 import type { TabId } from '@/widgets/project-layout/model/types';
 import { headerItems } from '@/widgets/projects-toolbar/model/constants';
-import { filterProjects } from '@/features/filter-projects/model/filter';
-import { useProjectsFilters } from '@/features/filter-projects/model/useProjectsFilters';
 import { useDeleteModal } from '@/features/project-delete';
+import { filterProjects } from '@/features/project-filter/lib/filter';
+import { useProjectsFilters } from '@/features/project-filter/lib/useProjectsFilters';
 import { useProjects } from '@/entities/project/api/useProjects';
 
 import { toProjectTableItem } from '@/entities/project/model/adapters';

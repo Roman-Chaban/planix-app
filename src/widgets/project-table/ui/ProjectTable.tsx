@@ -8,7 +8,6 @@ import { getProjectTableColumns } from '@/widgets/project-table/model/constants'
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
 
 import { createProjectRowActions } from '@/features/project-table/lib/createProjectRowActions';
-import { slugify } from '@/shared/lib';
 import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 
 import styles from './ProjectTable.module.scss';
@@ -31,8 +30,8 @@ export const ProjectsTable: FC<ProjectsTableProps> = ({
   const actionsFactory = useMemo(
     () =>
       createProjectRowActions({
-        onView: (name: string) => {
-          const projectDetailsUrl = `${PROJECT}${PROJECT_DETAILS}${slugify(name)}`;
+        onView: (slug: string) => {
+          const projectDetailsUrl = `${PROJECT}${PROJECT_DETAILS}${slug}`;
           localizedRouter.push(projectDetailsUrl);
         },
         onEdit: (id: string) => {

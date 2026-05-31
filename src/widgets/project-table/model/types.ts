@@ -17,22 +17,21 @@ export type Client = {
   avatar: string;
 };
 
-export type Platform = 'Freelancer' | 'Upwork' | 'Fiverr';
-
 export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];
 
 export type Project = {
-  id: string;
+  id: string | number;
   client: Client;
   name: string;
   dueDate: string;
-  platform: Platform | null;
+  platform: string;
   progress: number;
   price: number;
   status: Status;
   createdAt?: string;
   updatedAt?: string;
   reason?: RejectReason;
+  slug: string;
 };
 
 export type ProjectsResponse = {

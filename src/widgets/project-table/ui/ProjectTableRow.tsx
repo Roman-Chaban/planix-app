@@ -14,10 +14,20 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
   actionsFactory,
   isShowReason,
 }) => {
-  const { status, client, name, dueDate, platform, progressText, formattedPrice, reason, id } =
-    project;
+  const {
+    status,
+    client,
+    name,
+    slug,
+    dueDate,
+    platform,
+    progressText,
+    formattedPrice,
+    reason,
+    id,
+  } = project;
 
-  const rowActions = useMemo(() => actionsFactory(name, id), [actionsFactory, name, id]);
+  const rowActions = useMemo(() => actionsFactory(slug, id), [actionsFactory, slug, id]);
 
   const shouldShowReason = isShowReason && status === STATUSES.CANCELED;
   const reasonContent = shouldShowReason ? reason : null;

@@ -15,16 +15,26 @@ export const projectDetailsSchema = zod
       .min(5, 'Client name must be at least 5 characters long')
       .max(25, 'Client name must be at most 25 characters long'),
 
-    startDate: zod.string(),
-    dueDate: zod.string(),
+    startDate: zod.string().min(1, 'Start date is required'),
+    dueDate: zod.string().min(1, 'Due date is required'),
     price: zod
       .string()
       .min(1, 'Price is required')
       .refine((price) => !isNaN(parseFloat(price)) && parseFloat(price) >= 0, 'Must be a number'),
     platform: zod.string().min(3, 'Platform must be at least 3 characters long'),
-    description: zod.string().max(500, 'Description must be at most 500 characters long'),
-    files: zod.array(zod.instanceof(File)),
+    description: zod
+      .string()
+      .min(1, 'Description is required')
+      .max(500, 'Description must be at most 500 characters long'),
+    files: zod
+      .array(zod.instanceof(File))
+      .min(1, 'At least one file is required')
+      .refine(
+        (files) => files.every((f) => f.size <= 5 * 1024 * 1024),
+        'Each file must be less than 5MB',
+      ),
   })
+
   .superRefine((data, ctx) => {
     const start = dayjs(data.startDate, [DATE_FORMAT.INPUT, DATE_FORMAT.ISO], true);
     const end = dayjs(data.dueDate, [DATE_FORMAT.INPUT, DATE_FORMAT.ISO], true);
@@ -32,6 +42,7 @@ export const projectDetailsSchema = zod
     if (data.startDate.length === 10 && !start.isValid()) {
       ctx.addIssue({ code: 'custom', message: 'Invalid start date', path: ['startDate'] });
     }
+
     if (data.dueDate.length === 10 && !end.isValid()) {
       ctx.addIssue({ code: 'custom', message: 'Invalid due date', path: ['dueDate'] });
     }

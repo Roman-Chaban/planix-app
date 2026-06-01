@@ -36,8 +36,16 @@
   }
 }
 
+@mixin input-wrapper-border($color) {
+  border-radius: 1rem;
+  border: 0.063rem solid $color;
+}
+
 @mixin input-border-active($color) {
-  &:hover,
+  &:hover {
+    border-color: $color;
+  }
+
   &:focus-within {
     border-color: $color;
   }
@@ -48,9 +56,4 @@
     border: 0.125rem solid $border;
     background: $bg;
   }
-}
-
-@mixin input-wrapper-border($color) {
-  border-radius: 1rem;
-  border: 0.063rem solid $color;
 }

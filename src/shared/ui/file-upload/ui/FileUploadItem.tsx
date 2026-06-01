@@ -1,15 +1,10 @@
-import type { FC, KeyboardEvent } from 'react';
+import type { FC } from 'react';
 
 import { Box, Typography } from '@/shared/ui';
+import type { FileUploadItemProps } from '@/shared/ui/file-upload';
 import { UploadIcon } from '@/shared/ui/icons';
 
 import styles from './FileUpload.module.scss';
-
-export type FileUploadItemProps = {
-  handleTrigger: () => void;
-  handleKeyDown: (event: KeyboardEvent<HTMLElement>) => void;
-  uploadPhotosLabel: string;
-};
 
 export const FileUploadItem: FC<FileUploadItemProps> = ({
   handleTrigger,

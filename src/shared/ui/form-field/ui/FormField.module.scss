@@ -34,7 +34,7 @@
 }
 
 .errorIcon {
-  color: $error-600;
+  @include error-color;
 }
 
 .slotEnd {
@@ -58,7 +58,5 @@
 }
 
 .errorText {
-  color: $error-600;
-  padding-block-start: 0.3rem;
-  font-weight: $font-weight-medium;
+  @include error-text($error-600, 0.3rem, $font-weight-medium);
 }

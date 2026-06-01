@@ -1,6 +1,5 @@
-export type { FileUploadProps } from './model/types';
-export type { UseFileUploadParams } from './lib/types';
-export type { FileItemProps } from './model/types';
+export type { FileUploadProps, FileItemProps } from './model/types';
+export type { UseFileUploadParams, FileUploadItemProps } from './lib/types';
 
 export { useFileUpload } from './lib/useFileUpload';
 

@@ -3,26 +3,34 @@
 .textarea {
   width: 100%;
   max-width: 100%;
-  border: 0.094rem solid $neutral-300;
-  border-radius: 1rem;
   min-height: 5.75rem;
   padding: 1rem 1.125rem;
   caret-color: $neutral-600;
   color: $neutral-600;
   resize: none;
+  border: none;
+  outline: none;
+  transition: all 0.35s ease-in-out 0s;
+
+  @include input-wrapper-border($neutral-300);
+  @include input-border-active($primary-500);
 
   &::placeholder {
     color: $neutral-600;
   }
+}
 
-  &:focus {
-    outline: none;
-    border-color: $neutral-300;
-  }
+.errorTextarea {
+  @include input-wrapper-border($error-600);
+  @include input-border-active($error-600);
 }
 
 .descriptionLabel {
   line-height: 150%;
   font-size: $body-sm-font-size;
   color: $neutral-700;
+}
+
+.errorLabel {
+  @include error-color;
 }

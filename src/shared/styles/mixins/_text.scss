@@ -59,3 +59,13 @@
   font-weight: $weight;
   text-decoration: $decoration;
 }
+
+@mixin error-color {
+  color: $error-600;
+}
+
+@mixin error-text($color, $paddingBlockStart, $fontWeight) {
+  color: $color;
+  padding-block-start: $paddingBlockStart;
+  font-weight: $fontWeight;
+}

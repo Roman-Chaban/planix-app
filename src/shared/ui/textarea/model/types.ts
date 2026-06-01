@@ -5,4 +5,5 @@ export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
   textareaClassName?: string;
   labelClassName?: string;
   placeholder: string;
+  error?: string;
 };

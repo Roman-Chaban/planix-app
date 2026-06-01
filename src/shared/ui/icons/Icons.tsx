@@ -1268,7 +1268,7 @@ export const PriceIcon = () => {
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M14.1667 17.0832H5.83332C3.33332 17.0832 1.66666 15.8332 1.66666 12.9165V7.08317C1.66666 4.1665 3.33332 2.9165 5.83332 2.9165H14.1667C16.6667 2.9165 18.3333 4.1665 18.3333 7.08317V12.9165C18.3333 15.8332 16.6667 17.0832 14.1667 17.0832Z"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -1276,7 +1276,7 @@ export const PriceIcon = () => {
       />
       <path
         d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -1284,7 +1284,7 @@ export const PriceIcon = () => {
       />
       <path
         d="M4.58334 7.9165V12.0832"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -1292,7 +1292,7 @@ export const PriceIcon = () => {
       />
       <path
         d="M15.4167 7.9165V12.0832"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -1307,28 +1307,28 @@ export const PlatformIcon = () => {
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M5.36669 1.6665H14.625C17.5917 1.6665 18.3334 2.40817 18.3334 5.3665V10.6415C18.3334 13.6082 17.5917 14.3415 14.6334 14.3415H5.36669C2.40835 14.3498 1.66669 13.6082 1.66669 10.6498V5.3665C1.66669 2.40817 2.40835 1.6665 5.36669 1.6665Z"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M10 14.3501V18.3334"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M1.66669 10.8335H18.3334"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M6.25 18.3335H13.75"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

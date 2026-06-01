@@ -1,8 +1,9 @@
 'use client';
 
-import { useCallback, type FC } from 'react';
+import { useCallback, useId, type FC } from 'react';
 
-import { Box, Typography, FormField, FormLabel, Input } from '@/shared/ui';
+import { buildClassName } from '@/shared/lib';
+import { Box, Typography, FormField, FormLabel, Input, FormError } from '@/shared/ui';
 import {
   FileItem,
   FileUploadItem,
@@ -24,6 +25,8 @@ export const FileUpload: FC<FileUploadProps> = ({
   uploadPhotosLabel,
   error,
 }) => {
+  const uploadId = useId();
+
   const { inputRef, handleTrigger, handleFileChange, handleKeyDown } = useFileUpload({
     onFileSelect: (file) => {
       onChange?.([...value, file]);
@@ -41,9 +44,14 @@ export const FileUpload: FC<FileUploadProps> = ({
 
   return (
     <FormField>
-      {label && <FormLabel onClick={handleTrigger}>{label}</FormLabel>}
+      {label && (
+        <FormLabel htmlFor={uploadId} onClick={handleTrigger} error={error}>
+          {label}
+        </FormLabel>
+      )}
 
       <Input
+        id={uploadId}
         ref={inputRef}
         type={FILE}
         className={styles.hiddenInput}
@@ -52,7 +60,7 @@ export const FileUpload: FC<FileUploadProps> = ({
         multiple
       />
 
-      <Box className={styles.mainWrapper}>
+      <Box tabIndex={0} className={buildClassName(styles.mainWrapper, { [styles.error]: !!error })}>
         {!hasFiles ? (
           <Box
             onClick={handleTrigger}
@@ -83,7 +91,7 @@ export const FileUpload: FC<FileUploadProps> = ({
           </Box>
         )}
       </Box>
-      {error && <Typography color="error">{error}</Typography>}
+      <FormError error={error} className={error ? styles.errorMessage : ''} />
     </FormField>
   );
 };

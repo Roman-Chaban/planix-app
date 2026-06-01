@@ -3,7 +3,7 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsFormData } from '@/features/project-add';
+import type { ProjectDetailsSchema } from '@/features/project-add';
 
 import { FormInputField } from '@/shared/ui';
 import { PlatformIcon } from '@/shared/ui/icons';
@@ -14,9 +14,9 @@ const { TEXT } = INPUT_TYPES;
 export const PlatformField = () => {
   const { t } = useTranslation('projectAdd');
 
-  const { control } = useFormContext<ProjectDetailsFormData>();
+  const { control } = useFormContext<ProjectDetailsSchema>();
 
-  const { field } = useController({
+  const { field, fieldState } = useController({
     name: 'platform',
     control,
   });
@@ -24,6 +24,7 @@ export const PlatformField = () => {
   return (
     <FormInputField
       id="platform"
+      error={fieldState.error?.message}
       label={t('platformLabel')}
       startIcon={<PlatformIcon />}
       inputProps={{

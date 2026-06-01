@@ -21,7 +21,9 @@ export const FormInputField: FC<FormInputFieldProps> = ({
 }) => {
   return (
     <FormField>
-      <FormLabel htmlFor={id}>{label}</FormLabel>
+      <FormLabel error={error} htmlFor={id}>
+        {label}
+      </FormLabel>
 
       <InputField
         className={className}

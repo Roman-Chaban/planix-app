@@ -6,9 +6,12 @@ import type { FormLabelProps } from '@/shared/ui/form-field';
 
 import styles from './FormField.module.scss';
 
-export const FormLabel: FC<FormLabelProps> = ({ children, className, ...props }) => {
+export const FormLabel: FC<FormLabelProps> = ({ children, className, error, ...props }) => {
   return (
-    <label className={buildClassName(styles.label, className)} {...props}>
+    <label
+      className={buildClassName(styles.label, className, { [styles.errorText]: !!error })}
+      {...props}
+    >
       {children}
     </label>
   );

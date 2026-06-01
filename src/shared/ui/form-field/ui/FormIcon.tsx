@@ -11,6 +11,7 @@ export const FormIcon: FC<FormIconProps> = ({
   children,
   position = 'start',
   onClick,
+  error,
   className,
 }) => {
   const positionClass = position === 'start' ? styles.slotStart : styles.slotEnd;
@@ -19,7 +20,12 @@ export const FormIcon: FC<FormIconProps> = ({
   return (
     <Typography
       as="span"
-      className={buildClassName(positionClass, { [styles.clickable]: isClickable }, className)}
+      className={buildClassName(
+        positionClass,
+        { [styles.clickable]: isClickable },
+        { [styles.errorIcon]: !!error },
+        className,
+      )}
       onClick={onClick}
     >
       {children}

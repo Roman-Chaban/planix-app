@@ -1,7 +1,8 @@
 import { type FC } from 'react';
 
 import { ICON_POSITION } from '@/shared/constants';
-import { Input } from '@/shared/ui';
+import { buildClassName } from '@/shared/lib';
+import { Box, Input } from '@/shared/ui';
 import type { InputFieldProps } from '@/shared/ui/form-field';
 
 import styles from './FormField.module.scss';
@@ -20,9 +21,9 @@ export const InputField: FC<InputFieldProps> = ({
   className,
 }) => {
   return (
-    <div className={styles.inputWrapper}>
+    <Box className={buildClassName(styles.inputWrapper, { [styles.error]: !!error })}>
       {startIcon && (
-        <FormIcon position={START} onClick={onStartIconClick}>
+        <FormIcon error={error} position={START} onClick={onStartIconClick}>
           {startIcon}
         </FormIcon>
       )}
@@ -30,10 +31,10 @@ export const InputField: FC<InputFieldProps> = ({
       <Input id={id} aria-invalid={!!error} {...inputProps} className={className} />
 
       {endIcon && (
-        <FormIcon position={END} onClick={onEndIconClick}>
+        <FormIcon error={error} position={END} onClick={onEndIconClick}>
           {endIcon}
         </FormIcon>
       )}
-    </div>
+    </Box>
   );
 };

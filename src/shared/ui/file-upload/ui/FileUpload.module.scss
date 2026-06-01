@@ -6,7 +6,7 @@
 
 .mainWrapper {
   @include flex-center;
-  @include input-wrapper-border;
+  @include input-wrapper-border($neutral-300);
   gap: 0.75rem;
   width: 100%;
   min-height: 8rem;

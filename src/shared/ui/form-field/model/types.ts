@@ -20,6 +20,7 @@ export type FormFieldProps = PropsWithChildren<{
 
 export type FormLabelProps = PropsWithChildren<
   LabelHTMLAttributes<HTMLLabelElement> & {
+    error?: string;
     className?: string;
   }
 >;
@@ -34,6 +35,7 @@ export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 };
 
 export type FormIconProps = {
+  error?: string;
   children: ReactNode;
   position?: IconPosition;
   onClick?: () => void;

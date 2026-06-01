@@ -10,9 +10,18 @@
   position: relative;
   transition: all 0.35s ease-in-out 0s;
 
-  @include input-wrapper-border;
+  @include input-wrapper-border($neutral-300);
   @include input-border-active($primary-500);
   @include input-disabled($neutral-200, $neutral-100);
+}
+
+.inputWrapper.error:focus-within + .label {
+  color: $error-600;
+}
+
+.error {
+  @include input-wrapper-border($error-600);
+  @include input-border-active($error-600);
 }
 
 .label {
@@ -22,6 +31,10 @@
 
 .slotStart {
   @include input-icon(left);
+}
+
+.errorIcon {
+  color: $error-600;
 }
 
 .slotEnd {
@@ -42,4 +55,10 @@
 .search {
   box-shadow: $shadow-input-search;
   border-color: $neutral-200;
+}
+
+.errorText {
+  color: $error-600;
+  padding-block-start: 0.3rem;
+  font-weight: $font-weight-medium;
 }

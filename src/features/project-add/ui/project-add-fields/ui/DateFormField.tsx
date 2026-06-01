@@ -3,9 +3,9 @@
 import type { FC, ChangeEvent } from 'react';
 
 import {
-  toDisplayDate,
+  toDisplay,
   applyDateMask,
-  toIsoDateOrPreserve,
+  toISO,
   type DateFormFieldProps,
 } from '@/features/project-add/ui/project-add-fields';
 
@@ -25,9 +25,8 @@ export const DateFormField: FC<DateFormFieldProps> = ({
   const { value, onChange, placeholder, ...rest } = inputProps;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const maskedValue = applyDateMask(event.target.value);
-    const finalValue = toIsoDateOrPreserve(maskedValue);
-
+    const masked = applyDateMask(event.target.value);
+    const finalValue = masked.length === 10 ? toISO(masked) : masked;
     onChange(finalValue);
   };
 
@@ -44,7 +43,7 @@ export const DateFormField: FC<DateFormFieldProps> = ({
         inputMode: 'numeric',
         maxLength: 10,
         placeholder: placeholder,
-        value: toDisplayDate(value),
+        value: toDisplay(value),
         onChange: handleChange,
       }}
     />

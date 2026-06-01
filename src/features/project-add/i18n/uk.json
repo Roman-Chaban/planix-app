@@ -16,5 +16,6 @@
   "descriptionPlaceholder": "Введіть опис",
   "label": "Причина",
   "uploadLabel": "Натисніть, щоб завантажити документ",
-  "uploadPhotosLabel": "Завантажити файли"
+  "uploadPhotosLabel": "Завантажити файли",
+  "isProjectPeding": "Створення проекту в процесі..."
 }

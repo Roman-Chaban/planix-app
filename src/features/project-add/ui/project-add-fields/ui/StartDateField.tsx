@@ -3,26 +3,17 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsFormData } from '@/features/project-add';
-import { validateDateOrder, DateFormField } from '@/features/project-add/ui/project-add-fields';
+import type { ProjectDetailsSchema } from '@/features/project-add';
+
+import { DateFormField } from './DateFormField';
 
 export const StartDateField = () => {
   const { t } = useTranslation('projectAdd');
-
-  const { control, watch } = useFormContext<ProjectDetailsFormData>();
-
-  const dueDate = watch('dueDate');
+  const { control } = useFormContext<ProjectDetailsSchema>();
 
   const { field, fieldState } = useController({
     name: 'startDate',
     control,
-    rules: {
-      validate: (value) =>
-        validateDateOrder(value, dueDate, 'start', {
-          invalid: 'Invalid date format',
-          outOfOrder: 'Start date cannot be after due date',
-        }),
-    },
   });
 
   return (

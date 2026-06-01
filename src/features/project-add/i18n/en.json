@@ -16,5 +16,6 @@
   "descriptionPlaceholder": "Enter Description",
   "label": "Reason",
   "uploadLabel": "Tap to upload document",
-  "uploadPhotosLabel": "Upload files"
+  "uploadPhotosLabel": "Upload files",
+  "isProjectPeding": "Project creation in progress..."
 }

@@ -42,10 +42,11 @@ const { PROJECT } = ROUTES;
 
 export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues }) => {
   const localizedRouter = useLocalizedRouter();
-
+  const { createProject, isProjectActionPending } = useProjectActions();
   const form = useProjectDetailsForm(defaultValues);
 
-  const { createProject } = useProjectActions();
+  const { isValid } = form.formState;
+  const isDisabled = !isValid || isProjectActionPending;
 
   const handleCreateProject = (data: ProjectDetailsFormData) => {
     createProject.mutate(data, {
@@ -73,7 +74,15 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues 
         <DescriptionField />
 
         <Box className={styles.buttonWrapper}>
-          <ProjectButton type={SUBMIT} shape={ROUNDED} variant={DEFAULT} size={LARGE} fullWidth />
+          <ProjectButton
+            type={SUBMIT}
+            shape={ROUNDED}
+            variant={DEFAULT}
+            size={LARGE}
+            fullWidth
+            isLoading={isProjectActionPending}
+            disabled={isDisabled}
+          />
         </Box>
       </form>
     </FormProvider>

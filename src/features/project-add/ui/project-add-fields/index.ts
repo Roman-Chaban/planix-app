@@ -2,9 +2,10 @@ export type { HookFormFieldProps, DateInputProps, DateFormFieldProps } from './m
 
 export { DATE_FORMAT } from './lib/constants';
 
-export { applyDateMask, toDisplayDate, toIsoDateOrPreserve } from './lib/date';
 export { formatDate } from './lib/format-date';
 export { validateDateOrder } from './lib/validators';
+
+export { applyDateMask, toDisplay, toISO } from './lib/date';
 
 export { DueDateField } from './ui/DueDateField';
 export { StartDateField } from './ui/StartDateField';

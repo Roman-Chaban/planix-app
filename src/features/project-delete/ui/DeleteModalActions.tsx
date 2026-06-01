@@ -9,7 +9,11 @@ import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/
 
 import styles from './DeleteModal.module.scss';
 
-export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({ onClose, onDelete }) => {
+export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({
+  onClose,
+  onDelete,
+  disabled,
+}) => {
   const { t } = useTranslation('modal');
 
   return (
@@ -30,6 +34,7 @@ export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({ onClose, onD
         variant={BUTTON_VARIANTS.DEFAULT}
         size={BUTTON_SIZES.LARGE}
         onClick={onDelete}
+        disabled={disabled}
         className={styles.save}
       >
         {t('saveButton')}

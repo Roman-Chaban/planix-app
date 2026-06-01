@@ -17,7 +17,7 @@ import styles from './DeleteModal.module.scss';
 export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, isOpen }) => {
   const { t } = useTranslation('modal');
 
-  const { handleClose, handleDeleteProject, isProjectActionPending, reason, setReason } =
+  const { handleClose, handleDeleteProject, isProjectActionPending, reason, setReason, isDeleted } =
     useDeleteProject({
       projectId,
       onClose,
@@ -35,7 +35,11 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, i
         labelClassName={styles.reasonLabel}
         disabled={isProjectActionPending}
       />
-      <DeleteModalActions onClose={handleClose} onDelete={handleDeleteProject} />
+      <DeleteModalActions
+        onClose={handleClose}
+        onDelete={handleDeleteProject}
+        disabled={!isDeleted}
+      />
     </Modal>
   );
 };

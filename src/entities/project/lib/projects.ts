@@ -19,7 +19,7 @@ export const createProject = async (project: Partial<Project>): Promise<Project>
 };
 
 export const updateProject = async (
-  id: string,
+  id: string | number,
   updatedData: Partial<Project>,
 ): Promise<Project> => {
   const { data, error } = await supabase
@@ -33,7 +33,7 @@ export const updateProject = async (
   return data;
 };
 
-export const deleteProject = async (id: string): Promise<void> => {
+export const deleteProject = async (id: string | number): Promise<void> => {
   const { error } = await supabase.from('Projects').delete().eq('id', id);
 
   if (error) throw error;

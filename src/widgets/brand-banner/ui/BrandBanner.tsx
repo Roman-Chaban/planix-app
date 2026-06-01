@@ -12,6 +12,7 @@ import styles from './BrandBanner.module.scss';
 
 export const BrandBanner = () => {
   const { t } = useTranslation('brand');
+
   const isMobileLargeScreen = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
 
   const logoSize = getLogoSized(isMobileLargeScreen, 60, 60);

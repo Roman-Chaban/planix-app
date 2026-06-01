@@ -4,7 +4,7 @@ import { type ChangeEvent, type KeyboardEvent, useRef, useCallback } from 'react
 
 import type { UseFileUploadParams } from '@/shared/ui/file-upload';
 
-export const useFileUpload = ({ onFileSelect,  }: UseFileUploadParams = {}) => {
+export const useFileUpload = ({ onFileSelect }: UseFileUploadParams = {}) => {
   const uploadRef = useRef<HTMLInputElement>(null);
 
   const handleTrigger = useCallback(() => {

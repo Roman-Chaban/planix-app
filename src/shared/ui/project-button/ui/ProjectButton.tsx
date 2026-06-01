@@ -11,6 +11,7 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
   type,
   disabled,
   variant,
+  isLoading,
   size,
   shape,
   className,
@@ -27,9 +28,10 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
       fullWidth={fullWidth}
       onClick={onClick}
       disabled={disabled}
+      isLoading={isLoading}
       className={className}
     >
-      {t('addProjectButton')}
+      {isLoading ? t('isProjectPeding') : t('addProjectButton')}
     </Button>
   );
 };

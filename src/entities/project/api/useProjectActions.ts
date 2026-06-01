@@ -5,6 +5,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { Project } from '@/widgets/project-table/model/types';
 import {
   type CreateProjectPayload,
+  type DeleteProjectPayload,
   type UpdateProjectPayload,
   createProject as createProjectRepository,
   deleteProject as deleteProjectRepository,
@@ -31,7 +32,7 @@ export const useProjectActions = () => {
     onSuccess: invalidateProjects,
   });
 
-  const deleteProject = useMutation<void, Error, { id: string }>({
+  const deleteProject = useMutation<void, Error, DeleteProjectPayload>({
     mutationFn: ({ id }) => deleteProjectRepository(id),
     onSuccess: invalidateProjects,
   });

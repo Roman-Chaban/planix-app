@@ -1226,35 +1226,35 @@ export const ProjectNameIcon = () => {
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.3083 7.3999H14.6833"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M5.31668 7.3999L5.94168 8.0249L7.81668 6.1499"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M10.3083 13.2334H14.6833"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M5.31668 13.2334L5.94168 13.8584L7.81668 11.9834"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M7.49999 18.3332H12.5C16.6667 18.3332 18.3333 16.6665 18.3333 12.4998V7.49984C18.3333 3.33317 16.6667 1.6665 12.5 1.6665H7.49999C3.33332 1.6665 1.66666 3.33317 1.66666 7.49984V12.4998C1.66666 16.6665 3.33332 18.3332 7.49999 18.3332Z"
-        stroke="#6A6A6A"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

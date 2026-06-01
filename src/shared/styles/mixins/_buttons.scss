@@ -12,13 +12,23 @@
   }
 }
 
-@mixin button-disabled($bg: $neutral-200, $text: $button-disabled-bg, $border: none) {
+@mixin button-disabled(
+  $bg: $neutral-200,
+  $text: $button-disabled-bg,
+  $border: none,
+  $bgHover: $neutral-100
+) {
   &:disabled {
     background: $bg;
     color: $text;
     border: $border;
     cursor: not-allowed;
-    pointer-events: none;
+  }
+
+  &:hover {
+    &:disabled {
+      background: $bgHover;
+    }
   }
 }
 

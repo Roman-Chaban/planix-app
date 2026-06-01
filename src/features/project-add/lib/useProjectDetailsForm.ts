@@ -1,21 +1,24 @@
 'use client';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 
-import type { ProjectDetailsFormData } from '@/features/project-add';
+import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
 
-export const useProjectDetailsForm = (defaultValues?: Partial<ProjectDetailsFormData>) => {
-  return useForm<ProjectDetailsFormData>({
+export const useProjectDetailsForm = (defaultValues?: Partial<ProjectDetailsSchema>) => {
+  return useForm<ProjectDetailsSchema>({
+    resolver: zodResolver(projectDetailsSchema),
+    mode: 'onChange',
     defaultValues: {
-      projectName: defaultValues?.projectName ?? '',
-      clientName: defaultValues?.clientName ?? '',
-      startDate: defaultValues?.startDate ?? '',
-      dueDate: defaultValues?.dueDate ?? '',
-      price: defaultValues?.price ?? '',
-      platform: defaultValues?.platform ?? '',
-      description: defaultValues?.description ?? '',
-      files: defaultValues?.files ?? [],
+      projectName: '',
+      clientName: '',
+      startDate: '',
+      dueDate: '',
+      price: '',
+      platform: '',
+      description: '',
+      files: [],
+      ...defaultValues,
     },
-    mode: 'onBlur',
   });
 };

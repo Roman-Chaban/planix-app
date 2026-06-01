@@ -3,7 +3,7 @@ export type ProjectDetailsFormData = {
   clientName: string;
   startDate: string;
   dueDate: string;
-  price: number | '';
+  price: string;
   platform: string;
   description: string;
   files: File[];

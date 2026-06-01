@@ -1,5 +1,5 @@
 type ProjectContextProps = {
-  projectId?: string | null;
+  projectId?: string | number | null;
   onClose: () => void;
 };
 

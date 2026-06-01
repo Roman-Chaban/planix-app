@@ -34,7 +34,7 @@ export const ProjectsTable: FC<ProjectsTableProps> = ({
           const projectDetailsUrl = `${PROJECT}${PROJECT_DETAILS}${slug}`;
           localizedRouter.push(projectDetailsUrl);
         },
-        onEdit: (id: string) => {
+        onEdit: (id: string | number) => {
           const projectEditUrl = `${PROJECT_EDIT}${id}`;
           localizedRouter.push(projectEditUrl);
         },

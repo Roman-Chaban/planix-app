@@ -8,7 +8,7 @@ export const createProjectRowActions = ({
   onEdit,
   onDelete,
 }: ProjectRowActionsConfig): ProjectRowActionsFactory => {
-  return (projectSlug: string, projectId: string): ActionItems => [
+  return (projectSlug: string, projectId: string | number): ActionItems => [
     {
       id: 'view',
       icon: ViewIcon,

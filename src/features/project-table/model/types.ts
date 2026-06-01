@@ -1,6 +1,6 @@
 import type { ActionItems } from '@/shared/ui/actions-bar/model/types';
 
-export type ProjectRowActionHandler = (projectId: string) => void;
+export type ProjectRowActionHandler = (projectId: string | number) => void;
 export type ProjectNameHandler = (projectName: string) => void;
 
 export type ProjectRowActionsConfig = {
@@ -9,4 +9,7 @@ export type ProjectRowActionsConfig = {
   onDelete: ProjectRowActionHandler;
 };
 
-export type ProjectRowActionsFactory = (projectName: string, projectId: string) => ActionItems;
+export type ProjectRowActionsFactory = (
+  projectName: string,
+  projectId: string | number,
+) => ActionItems;

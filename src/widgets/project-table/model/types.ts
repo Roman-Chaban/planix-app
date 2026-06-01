@@ -58,6 +58,6 @@ export type ProjectTableRowProps = {
 
 export type ProjectsTableProps = {
   projects: ProjectTableItem[];
-  onDelete: (id: string) => void;
+  onDelete: (id: string | number) => void;
   isShowReason?: boolean;
 };

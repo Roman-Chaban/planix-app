@@ -50,7 +50,7 @@
   }
 }
 
-@mixin input-wrapper-border {
+@mixin input-wrapper-border($color) {
   border-radius: 1rem;
-  border: 0.063rem solid $neutral-300;
+  border: 0.063rem solid $color;
 }

@@ -8,6 +8,8 @@ export const useDeleteProject = ({ projectId, onClose }: UseDeleteProjectOptions
 
   const { deleteProject, isProjectActionPending } = useProjectActions();
 
+  const isDeleted = reason.trim().length > 0 && !isProjectActionPending;
+
   const resetState = () => {
     setReason('');
   };
@@ -35,6 +37,7 @@ export const useDeleteProject = ({ projectId, onClose }: UseDeleteProjectOptions
 
   return {
     reason,
+    isDeleted,
     setReason,
     handleDeleteProject,
     handleClose,

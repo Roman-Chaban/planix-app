@@ -26,6 +26,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, i
   return (
     <Modal isOpen={isOpen} onClose={handleClose}>
       <ModalHeader onClose={handleClose} title={t('title')} icon={<CloseIcon />} />
+
       <Textarea
         value={reason}
         onChange={(event) => setReason(event.target.value)}
@@ -35,6 +36,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, i
         labelClassName={styles.reasonLabel}
         disabled={isProjectActionPending}
       />
+
       <DeleteModalActions
         onClose={handleClose}
         onDelete={handleDeleteProject}

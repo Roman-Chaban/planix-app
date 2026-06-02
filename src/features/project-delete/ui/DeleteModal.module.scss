@@ -9,15 +9,15 @@
   padding: 1rem 1.125rem;
   caret-color: $neutral-600;
   color: $neutral-600;
+  border: none;
+  outline: none;
   resize: none;
+
+  @include input-wrapper-border($neutral-300);
+  @include input-border-active($primary-500);
 
   &::placeholder {
     color: $neutral-600;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: $neutral-300;
   }
 }
 
@@ -43,6 +43,10 @@
   max-width: 8.813rem;
   min-height: 3.375rem;
   font-weight: $font-weight-semibold;
+
+  &:hover {
+    background: none;
+  }
 
   @include respond(sm) {
     max-width: 100%;

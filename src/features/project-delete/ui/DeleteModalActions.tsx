@@ -28,6 +28,7 @@ export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({
       >
         {t('cancelButton')}
       </Button>
+
       <Button
         fullWidth
         type={BUTTON_TYPES.BUTTON}

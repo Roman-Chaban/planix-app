@@ -49,6 +49,6 @@
 }
 
 @mixin button-default-wrapper-size($maxWidth) {
-  width: 100%;
-  max-width: $maxWidth;
+  width: fit-content;
+  min-width: $maxWidth;
 }

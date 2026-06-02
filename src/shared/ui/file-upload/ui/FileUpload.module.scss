@@ -22,13 +22,16 @@
   @include square-circle(2.5rem);
   @include flex-center;
   background: $upload-primary;
+  color: $upload-icon-primary;
 }
 
 .pdfType {
+  color: $pdf-icon-primary;
   background: $error-200;
 }
 .photoType {
   background: $upload-primary;
+  color: $upload-icon-primary;
 }
 
 .filesGrid {
@@ -54,13 +57,18 @@
 }
 
 .removeButton {
-  @include square-circle(1.125rem);
+  @include square-circle(1.25rem);
   position: absolute;
   top: -0.4rem;
   right: -0.25rem;
   background: $neutral-200;
   border: 0.094rem solid $neutral-0;
   z-index: 10;
+  color: $neutral-950;
+
+  &:hover {
+    background: $neutral-100;
+  }
 }
 
 .fileIconWrapper {
@@ -74,7 +82,6 @@
 .fileNameBadge {
   @include card-bottom-badge;
   @include text-ellipsis;
-  @include flex-center;
 }
 
 .fileNameText {

@@ -8,9 +8,9 @@ import type { HeaderProps } from '@/widgets/header';
 
 import { LanguageSelect } from '@/features/change-language';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
-import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button/model/constants';
+import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button';
 
-import { PlanixLogoIcon, NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
+import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
 import styles from './Header.module.scss';
 
@@ -26,13 +26,6 @@ export const Header: FC<HeaderProps> = ({ title }) => {
   return (
     <header className={styles.header}>
       <Box className={styles.wrapper}>
-        <Box className={styles.headerLeftSide}>
-          <PlanixLogoIcon width={44} height={44} />
-          <Typography as="span" className={styles.logoTitle}>
-            {t('title')}
-          </Typography>
-        </Box>
-
         <Box className={styles.headerRightSide}>
           <Typography as="h1" className={styles.title}>
             {t(title)}
@@ -51,7 +44,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
               <NotificationIcon />
             </Button>
 
-            {/* TODO: [Waiting for implementation AuthLogic] */}
+            {/* TODO: [Waiting for implementation AuthLogic, add alt for Avatar] */}
             <Avatar className={styles.avatar} fallback={FALLBACK_PROFILE_AVATAR} />
           </Box>
         </Box>

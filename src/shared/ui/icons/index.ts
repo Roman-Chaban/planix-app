@@ -36,3 +36,5 @@ export { PriceIcon } from './Icons';
 export { PlatformIcon } from './Icons';
 export { UploadIcon } from './Icons';
 export { PdfIcon } from './Icons';
+export { CollapsedIcon } from './Icons';
+export { ExpandedIcon } from './Icons';

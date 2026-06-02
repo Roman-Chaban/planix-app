@@ -87,7 +87,7 @@
 }
 
 .item {
-  @include flex-row($space-4);
+  @include flex-row($space-3);
 
   padding: 0.813rem 1.688rem 0.875rem 0.75rem;
   border: 0.125rem solid transparent;
@@ -112,14 +112,13 @@
 }
 
 .label {
-  display: inline-block;
+  display: block;
   font-size: $body-lg-font-size;
   font-weight: $font-weight-regular;
   color: inherit;
   opacity: 1;
   transform: translateX(0);
   white-space: nowrap;
-  flex-grow: 1;
   width: 100%;
 
   transition:

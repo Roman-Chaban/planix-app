@@ -13,3 +13,8 @@ export type ProjectDetailsFormProps = {
   onSubmit?: (data: ProjectDetailsFormData) => void;
   defaultValues?: Partial<ProjectDetailsFormData>;
 };
+
+export type ProjectDetailsFieldsProps = {
+  isProjectActionPending: boolean;
+  isDisabled: boolean;
+};

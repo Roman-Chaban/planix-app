@@ -27,3 +27,7 @@ export type ProjectHeaderProps = {
 };
 
 export type ProjectHeaderItems = ProjectHeaderItemProps[];
+
+export type ProjectsActionsProps = {
+  handleCreateProject?: () => void;
+};

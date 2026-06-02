@@ -6,18 +6,18 @@
 
 .toolbarActions {
   @include flex(flex, row, end, center, 1rem);
-  flex: 0 0 auto;
-
-  @include respond(sm) {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
 }
 
-.headerWrapper {
-  flex: 0 1 auto;
-  min-width: 0;
+.scrollContainer {
+  @include menu-horizontal-scroll;
+  box-shadow: $shadow-not-found;
+  background: $neutral-0;
+  border-radius: 1rem;
+}
+
+.list {
+  @include flex-row(1rem, start, center);
+  padding: 0.5rem;
 }
 
 .search {
@@ -85,31 +85,6 @@
   }
 }
 
-.scrollContainer {
-  @include menu-horizontal-scroll;
-  box-shadow: $shadow-not-found;
-  background: $neutral-0;
-  border-radius: 1rem;
-
-  @include respond(2xl) {
-    width: 100%;
-  }
-}
-
-.list {
-  @include flex-row(1rem, start, center);
-  padding: 0.5rem;
-
-  @include respond(2xl) {
-    justify-content: space-between;
-  }
-
-  @include respond(xl) {
-    max-width: 100%;
-    justify-content: space-between;
-  }
-}
-
 .box {
   width: 100%;
   @include flex-center;
@@ -118,7 +93,6 @@
   border: 0.125rem solid transparent;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  flex-shrink: 0;
   white-space: nowrap;
 }
 

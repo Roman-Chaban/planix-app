@@ -17,5 +17,32 @@
   "label": "Reason",
   "uploadLabel": "Tap to upload document",
   "uploadPhotosLabel": "Upload files",
-  "isProjectPeding": "Project creation in progress..."
+  "isProjectPeding": "Project creation in progress...",
+
+  "validation": {
+    "projectNameMin": "Project name must be at least 5 characters long",
+    "projectNameMax": "Project name must be at most 25 characters long",
+
+    "clientNameMin": "Client name must be at least 5 characters long",
+    "clientNameMax": "Client name must be at most 25 characters long",
+
+    "startDateRequired": "Start date is required",
+    "startDateInvalid": "Invalid start date",
+
+    "dueDateRequired": "Due date is required",
+    "dueDateInvalid": "Invalid due date",
+
+    "dateRangeInvalid": "Start date cannot be after due date",
+
+    "priceRequired": "Price is required",
+    "priceInvalid": "Must be a valid number",
+
+    "platformMin": "Platform must be at least 3 characters long",
+
+    "descriptionRequired": "Description is required",
+    "descriptionMax": "Description must be at most 500 characters long",
+
+    "filesRequired": "At least one file is required",
+    "fileSizeExceeded": "Each file must be less than 5MB"
+  }
 }

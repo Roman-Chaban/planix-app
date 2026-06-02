@@ -24,7 +24,9 @@ export const FileItem: FC<FileItemProps> = ({ file, onRemove }) => {
       </Box>
 
       <Box className={styles.fileNameBadge}>
-        <Typography className={styles.fileNameText}>{file.name}</Typography>
+        <Typography as="span" className={styles.fileNameText}>
+          {file.name}
+        </Typography>
       </Box>
     </Box>
   );

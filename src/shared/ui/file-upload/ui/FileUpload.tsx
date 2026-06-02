@@ -71,7 +71,9 @@ export const FileUpload: FC<FileUploadProps> = ({
             <Box className={styles.iconContainer}>
               <UploadIcon />
             </Box>
-            <Typography className={styles.text}>{uploadLabel}</Typography>
+            <Typography as="span" className={styles.text}>
+              {uploadLabel}
+            </Typography>
           </Box>
         ) : (
           <Box className={styles.filesGrid}>

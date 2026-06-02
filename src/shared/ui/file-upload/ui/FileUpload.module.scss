@@ -90,6 +90,11 @@
   color: $neutral-950;
 }
 
+.uploadCardText {
+  font-size: $body-sm-font-size;
+  text-align: center;
+}
+
 .errorMessage {
   @include error-text($error-600, 0.3rem, $font-weight-medium);
 }

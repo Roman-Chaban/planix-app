@@ -16,7 +16,9 @@ export const FileUploadItem: FC<FileUploadItemProps> = ({
       <Box className={styles.iconContainer}>
         <UploadIcon width={20} height={20} />
       </Box>
-      <Typography className={styles.uploadCardText}>{uploadPhotosLabel}</Typography>
+      <Typography as="span" className={styles.uploadCardText}>
+        {uploadPhotosLabel}
+      </Typography>
     </Box>
   );
 };

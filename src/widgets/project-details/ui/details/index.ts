@@ -2,6 +2,7 @@ export type {
   DetailsInfoListProps,
   DetailsDescriptionProps,
   DetailsCardProps,
+  ProjectDetailsMapOptions,
 } from './model/types';
 
 export { mapProjectDetails } from './model/details.mapper';

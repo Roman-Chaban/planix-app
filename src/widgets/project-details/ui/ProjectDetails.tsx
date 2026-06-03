@@ -16,9 +16,13 @@ import { Box } from '@/shared/ui';
 import styles from './ProjectDetails.module.scss';
 
 export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
-  const { t } = useTranslation('projectDetails');
+  const { t, i18n } = useTranslation('projectDetails');
 
-  const details = mapProjectDetails({ project, t });
+  const { details, description } = mapProjectDetails({
+    project,
+    t,
+    lng: i18n.language,
+  });
 
   return (
     <Box className={styles.wrapper}>
@@ -35,7 +39,7 @@ export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
         className={styles.description}
         titleClassName={styles.title}
       >
-        <DetailsDescription description={project.description} documentTitle={t('documentTitle')} />
+        <DetailsDescription description={description} documentTitle={t('documentTitle')} />
       </DetailsCard>
     </Box>
   );

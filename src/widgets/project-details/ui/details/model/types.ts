@@ -1,4 +1,14 @@
+import type { TFunction } from 'i18next';
+
 import type { ReactNode } from 'react';
+
+import type { Project } from '@/widgets/project-table/model/types';
+
+export type ProjectDetailsMapOptions = {
+  project: Project;
+  t: TFunction;
+  lng: string;
+};
 
 export type DetailsInfoListProps = {
   details: {

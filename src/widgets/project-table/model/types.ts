@@ -30,7 +30,7 @@ export type Project = {
   status: Status;
   created_at?: string;
   updatedAt?: string;
-  description?: string;
+  description: string;
   reason?: RejectReason;
   slug: string;
 };

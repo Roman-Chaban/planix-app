@@ -1,0 +1,68 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  @include responsive-grid-widgets(repeat(2, 1fr), 1.5rem);
+  @include widget-box(100%, 100%, 100%, 1.5rem);
+}
+
+.details,
+.description {
+  @include details-wrapper($padding: 1rem);
+  max-width: 100%;
+  @include flex-col(0, start, start, column);
+}
+
+.details {
+  gap: 1.125rem;
+}
+
+.description {
+  gap: 1rem;
+}
+
+.title {
+  @include card-title;
+
+  &::before {
+    @include text-before-decoration(
+      '',
+      absolute,
+      -1rem,
+      0.25rem,
+      1.125rem,
+      0 0.5rem 0.5rem 0,
+      $primary-700,
+      true
+    );
+  }
+}
+
+.list {
+  width: 100%;
+  max-width: 25rem;
+  @include grid(10rem 1fr, $rows: null, $areas: null, $gap: 0.5rem 0);
+}
+
+.item,
+.box {
+  display: contents;
+}
+
+.label {
+  line-height: 150%;
+  color: $neutral-950;
+  font-weight: $font-weight-semibold;
+}
+
+.value {
+  text-align: left;
+}
+
+.value,
+.text {
+  @include card-value;
+}
+
+.text {
+  padding-block-end: 0.625rem;
+}

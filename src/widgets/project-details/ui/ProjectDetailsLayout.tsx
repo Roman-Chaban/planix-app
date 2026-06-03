@@ -1,13 +1,9 @@
 import type { FC } from 'react';
 
 import { Header } from '@/widgets/header';
+import { ProjectDetails, type ProjectDetailsLayoutProps } from '@/widgets/project-details';
 import { ProjectHeader } from '@/widgets/project-header';
-import type { Project } from '@/widgets/project-table/model/types';
 import { PageWrapper } from '@/shared/ui';
-
-type ProjectDetailsLayoutProps = {
-  project: Project;
-};
 
 export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({ project }) => {
   return (
@@ -18,7 +14,7 @@ export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({ project })
         metaInfo={{ label: 'label', value: 'value' }}
       />
 
-      <h1>{project.name}</h1>
+      <ProjectDetails project={project} />
     </PageWrapper>
   );
 };

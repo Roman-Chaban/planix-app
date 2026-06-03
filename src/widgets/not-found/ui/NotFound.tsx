@@ -19,6 +19,7 @@ export const NotFoundLayout = () => {
     <Box className={styles.layout}>
       <Grid className={styles.container}>
         <GridItem span={6}>{<NotFoundBanner {...logoSize} />}</GridItem>
+
         <GridItem span={6}>
           <Box className={styles.errorBlock}>{<NotFoundTextDecartionIcon {...logoSize} />}</Box>
         </GridItem>

@@ -3,14 +3,17 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ROUTES } from '@/app/routes';
 import { SidebarNav, type SidebarProps } from '@/widgets/sidebar';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, Button, Typography } from '@/shared/ui';
+import { AppLink, Box, Button, Typography } from '@/shared/ui';
 
 import { CollapsedIcon, ExpandedIcon, PlanixLogoIcon } from '@/shared/ui/icons';
 
 import styles from './Sidebar.module.scss';
+
+const { DASHBOARD } = ROUTES;
 
 export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
   const { t } = useTranslation('sidebar');
@@ -25,7 +28,9 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
       })}
     >
       <Box className={styles.sidebarLogo}>
-        <PlanixLogoIcon width={44} height={44} />
+        <AppLink href={DASHBOARD}>
+          <PlanixLogoIcon width={44} height={44} />
+        </AppLink>
         <Typography as="span" className={styles.sidebarTitle}>
           {t('title')}
         </Typography>

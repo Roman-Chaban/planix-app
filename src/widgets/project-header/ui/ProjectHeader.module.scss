@@ -10,6 +10,10 @@
   @include flex-row(0.438rem, center, center);
 }
 
+.headingContainer {
+  @include flex(flex, row, start, center, 0.75rem);
+}
+
 .heading {
   position: relative;
   padding-inline-start: 1.3rem;

@@ -9,6 +9,8 @@ export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({ project })
   return (
     <PageWrapper header={<Header title="projects" />}>
       <ProjectHeader
+        isStatus
+        status={project.status}
         translationNamespace="projectDetails"
         title="title"
         metaInfo={{ label: 'label', value: 'value' }}

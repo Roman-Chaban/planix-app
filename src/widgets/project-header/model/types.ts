@@ -1,3 +1,5 @@
+import type { Status } from '@/shared/ui/status-badge/model/types';
+
 export type ProjectHeaderProps = {
   title: string;
   metaInfo: {
@@ -5,4 +7,6 @@ export type ProjectHeaderProps = {
     value: string;
   };
   translationNamespace?: string;
+  status: Status;
+  isStatus?: boolean;
 };

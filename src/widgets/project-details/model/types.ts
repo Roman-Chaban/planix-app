@@ -12,6 +12,6 @@ export type ProjectDetailsProps = BaseLayoutProps;
 export type ProjectDetailsCardProps = {
   className?: string;
   titleClassName?: string;
-  title?: string;
+  title: string;
   children: ReactNode;
 };

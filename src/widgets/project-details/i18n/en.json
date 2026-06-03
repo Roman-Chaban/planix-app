@@ -1,5 +1,8 @@
 {
   "title": "Project Details",
   "label": "Project Details  /",
-  "value": "Project List"
+  "value": "Project List",
+  "detailsTitle": "Project Details",
+  "descriptionTitle": "Project Description",
+  "documentTitle": "Project Document"
 }

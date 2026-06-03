@@ -1,4 +1,8 @@
+'use client';
+
 import { useMemo, type FC } from 'react';
+
+import { useTranslation } from 'react-i18next';
 
 import { ProjectDetailsCard, type ProjectDetailsProps } from '@/widgets/project-details';
 import { toDisplay } from '@/features/project-add/ui/project-add-fields';
@@ -7,6 +11,8 @@ import { Box, List, Typography } from '@/shared/ui';
 import styles from './ProjectDetails.module.scss';
 
 export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
+  const { t } = useTranslation('projectDetails');
+
   const { name, client, created_at, dueDate, price, platform, progress, description } = project;
 
   const formattedCreatedAt = toDisplay(created_at ?? '');
@@ -29,7 +35,7 @@ export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
     <Box className={styles.wrapper}>
       <ProjectDetailsCard
         className={styles.details}
-        title="Project Details"
+        title={t('detailsTitle')}
         titleClassName={styles.title}
       >
         <List
@@ -52,7 +58,7 @@ export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
 
       <ProjectDetailsCard
         className={styles.description}
-        title="Project Description"
+        title={t('descriptionTitle')}
         titleClassName={styles.title}
       >
         <Typography as="span" className={styles.text}>
@@ -61,7 +67,7 @@ export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
 
         <Box>
           <Typography as="h2" className={styles.title}>
-            Project Document
+            {t('documentTitle')}
           </Typography>
         </Box>
       </ProjectDetailsCard>

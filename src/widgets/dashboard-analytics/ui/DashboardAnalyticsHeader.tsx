@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import type { DashboardAnalyticsHeaderProps } from '@/widgets/dashboard-analytics/model/types';
+import type { DashboardAnalyticsHeaderProps } from '@/widgets/dashboard-analytics';
 
 import { Box, Typography } from '@/shared/ui';
 

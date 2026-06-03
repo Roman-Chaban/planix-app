@@ -69,3 +69,18 @@
   padding-block-start: $paddingBlockStart;
   font-weight: $fontWeight;
 }
+
+@mixin card-title {
+  position: relative;
+  line-height: 150%;
+  color: $neutral-700;
+  font: {
+    size: $body-lg-font-size;
+    weight: $font-weight-semibold;
+  }
+}
+
+@mixin card-value {
+  line-height: 150%;
+  color: $neutral-700;
+}

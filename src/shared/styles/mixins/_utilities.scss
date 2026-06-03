@@ -14,7 +14,7 @@
   border-radius: $radius;
 }
 
-@mixin widget-box($width: 100%, $maxWidth: none, $maxHeight) {
+@mixin widget-box($width: 100%, $maxWidth: none, $maxHeight, $padding) {
   border: 0.125rem solid $neutral-100;
   border-radius: 1rem;
   width: $width;
@@ -22,8 +22,7 @@
   max-height: $maxHeight;
   box-shadow: $shadow-sm;
   background: $neutral-0;
-  padding-inline: 0.625rem;
-  padding-block: 0.625rem 1.438rem;
+  padding: $padding;
 }
 
 @mixin upload-item-base {
@@ -49,4 +48,13 @@
   border-radius: 0.5rem;
   padding: 0.188rem 0.313rem;
   box-shadow: $shadow-upload;
+}
+
+@mixin details-wrapper($bg-color: $neutral-50, $padding) {
+  width: 100%;
+  max-width: 47.125rem;
+  min-height: 19.25rem;
+  border-radius: 1rem;
+  background: $bg-color;
+  padding: $padding;
 }

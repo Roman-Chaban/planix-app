@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectHeaderProps } from '@/widgets/project-header/model/types';
+import type { ProjectHeaderProps } from '@/widgets/project-header';
 
 import { Box, StatusBadge, Typography } from '@/shared/ui';
 
@@ -25,6 +25,7 @@ export const ProjectHeader: FC<ProjectHeaderProps> = ({
         <Typography as="h3" className={styles.heading}>
           {t(title)}
         </Typography>
+
         {showStatus && status && <StatusBadge status={status} />}
       </Box>
 
@@ -32,6 +33,7 @@ export const ProjectHeader: FC<ProjectHeaderProps> = ({
         <Typography as="p" className={styles.metaLabel}>
           {t(metaInfo.label)}
         </Typography>
+
         <Typography as="span" className={styles.metaValue}>
           {t(metaInfo.value)}
         </Typography>

@@ -33,6 +33,8 @@ export type Project = {
   description: string;
   reason?: RejectReason;
   slug: string;
+  name_uk?: string;
+  description_uk?: string;
 };
 
 export type ProjectsResponse = {

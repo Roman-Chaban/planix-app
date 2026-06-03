@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
-import type { ProjectDetailsCardProps } from '@/widgets/project-details';
+import type { DetailsCardProps } from '@/widgets/project-details/ui/details';
 import { Box, Typography } from '@/shared/ui';
 
-export const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
+export const DetailsCard: FC<DetailsCardProps> = ({
   className,
   title,
   titleClassName,

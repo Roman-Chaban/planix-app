@@ -4,5 +4,15 @@
   "value": "Список проектів",
   "detailsTitle": "Деталі проекту",
   "descriptionTitle": "Опис проекту",
-  "documentTitle": "Проектний документ"
+  "documentTitle": "Проектний документ",
+
+  "fields": {
+    "projectName": "Назва проекту",
+    "clientName": "Клієнт",
+    "startDate": "Дата початку",
+    "dueDate": "Дата дедлайну",
+    "price": "Вартість",
+    "platform": "Платформа",
+    "progress": "Прогрес"
+  }
 }

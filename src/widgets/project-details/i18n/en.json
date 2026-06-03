@@ -4,5 +4,15 @@
   "value": "Project List",
   "detailsTitle": "Project Details",
   "descriptionTitle": "Project Description",
-  "documentTitle": "Project Document"
+  "documentTitle": "Project Document",
+
+  "fields": {
+    "projectName": "Project Name",
+    "clientName": "Client Name",
+    "startDate": "Start Date",
+    "dueDate": "Due Date",
+    "price": "Price",
+    "platform": "Platform",
+    "progress": "Progress"
+  }
 }

@@ -36,33 +36,3 @@
     );
   }
 }
-
-.list {
-  width: 100%;
-  max-width: 25rem;
-  @include grid(10rem 1fr, $rows: null, $areas: null, $gap: 0.5rem 0);
-}
-
-.item,
-.box {
-  display: contents;
-}
-
-.label {
-  line-height: 150%;
-  color: $neutral-950;
-  font-weight: $font-weight-semibold;
-}
-
-.value {
-  text-align: left;
-}
-
-.value,
-.text {
-  @include card-value;
-}
-
-.text {
-  padding-block-end: 0.625rem;
-}

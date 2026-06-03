@@ -12,9 +12,10 @@ export const applyDateMask = (value: string): string => {
   return raw;
 };
 
-export const toDisplay = (date: string) => {
+export const toDisplay = (date?: string | null) => {
   if (!date) return '';
-  const parsed = dayjs(date, DATE_FORMAT.ISO, true);
+
+  const parsed = dayjs(date);
   return parsed.isValid() ? parsed.format(DATE_FORMAT.DISPLAY) : date;
 };
 

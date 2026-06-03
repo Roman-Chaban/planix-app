@@ -9,11 +9,13 @@ export const mapCreateProject = (formData: CreateProjectPayload): Partial<Projec
       name: formData.clientName,
       avatar: '',
     },
+    created_at: formData.created_at,
     dueDate: formData.dueDate,
     platform: formData.platform,
     price: Number(formData.price),
     progress: 0,
     status: 'Pending',
+    description: formData.description,
     slug: formData.projectName.toLowerCase().replace(/ /g, '-'),
   };
 };

@@ -2,7 +2,7 @@ import type { TFunction } from 'i18next';
 
 import type { ReactNode } from 'react';
 
-import type { Project } from '@/widgets/project-table/model/types';
+import type { Project } from '@/entities/project';
 
 export type ProjectDetailsMapOptions = {
   project: Project;

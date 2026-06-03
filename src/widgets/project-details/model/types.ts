@@ -1,4 +1,4 @@
-import type { Project } from '@/widgets/project-table/model/types';
+import type { Project } from '@/entities/project';
 
 export type BaseLayoutProps = {
   project: Project;

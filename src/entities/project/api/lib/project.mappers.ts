@@ -1,5 +1,4 @@
-import type { Project } from '@/widgets/project-table/model/types';
-import type { CreateProjectPayload, UpdateProjectPayload } from '@/entities/project';
+import type { CreateProjectPayload, UpdateProjectPayload, Project } from '@/entities/project';
 
 export const mapCreateProject = (formData: CreateProjectPayload): Partial<Project> => {
   return {

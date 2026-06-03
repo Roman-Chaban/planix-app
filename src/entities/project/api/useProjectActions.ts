@@ -2,11 +2,11 @@
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import type { Project } from '@/widgets/project-table/model/types';
 import {
   type CreateProjectPayload,
   type DeleteProjectPayload,
   type UpdateProjectPayload,
+  type Project,
   createProject as createProjectRepository,
   deleteProject as deleteProjectRepository,
   updateProject as updateProjectRepository,

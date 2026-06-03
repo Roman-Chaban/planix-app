@@ -1,4 +1,4 @@
-import type { Project } from '@/widgets/project-table/model/types';
+import type { Project } from '@/entities/project';
 import { supabase } from '@/shared/api/supabase';
 
 export const getProjects = async (): Promise<Project[]> => {

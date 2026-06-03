@@ -28,8 +28,9 @@ export type Project = {
   progress: number;
   price: number;
   status: Status;
-  createdAt?: string;
+  created_at?: string;
   updatedAt?: string;
+  description?: string;
   reason?: RejectReason;
   slug: string;
 };

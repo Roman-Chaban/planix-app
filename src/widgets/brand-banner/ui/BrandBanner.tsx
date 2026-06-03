@@ -10,10 +10,12 @@ import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 import styles from './BrandBanner.module.scss';
 
+const { MOBILE_LARGE } = BREAKPOINTS;
+
 export const BrandBanner = () => {
   const { t } = useTranslation('brand');
 
-  const isMobileLargeScreen = useMediaQuery(BREAKPOINTS.MOBILE_LARGE);
+  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const logoSize = getLogoSized(isMobileLargeScreen, 60, 60);
 

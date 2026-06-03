@@ -1,6 +1,7 @@
 import type { PROJECT_REASONS } from '@/widgets/project-table/model/constants';
+import type { Project } from '@/entities/project/model/types';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
-import type { Status, StatusColor } from '@/shared/ui/status-badge/model/types';
+import type { StatusColor } from '@/shared/ui/status-badge/model/types';
 
 export type TableColumn = {
   key: keyof ProjectTableItem | 'actions';
@@ -18,24 +19,6 @@ export type Client = {
 };
 
 export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];
-
-export type Project = {
-  id: string | number;
-  client: Client;
-  name: string;
-  dueDate: string;
-  platform: string;
-  progress: number;
-  price: number;
-  status: Status;
-  created_at?: string;
-  updatedAt?: string;
-  description: string;
-  reason?: RejectReason;
-  slug: string;
-  name_uk?: string;
-  description_uk?: string;
-};
 
 export type ProjectsResponse = {
   data: Project[];

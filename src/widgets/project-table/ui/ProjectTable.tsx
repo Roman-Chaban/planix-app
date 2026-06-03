@@ -13,6 +13,7 @@ import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 import styles from './ProjectTable.module.scss';
 
 const DRAG_SCROLL_AXIS = AXIS.X;
+
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 
 export const ProjectsTable: FC<ProjectsTableProps> = ({

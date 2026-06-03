@@ -7,6 +7,6 @@ export type ProjectHeaderProps = {
     value: string;
   };
   translationNamespace?: string;
-  status: Status;
-  isStatus?: boolean;
+  status?: Status;
+  showStatus?: boolean;
 };

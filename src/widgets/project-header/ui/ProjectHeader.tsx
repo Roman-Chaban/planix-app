@@ -15,7 +15,7 @@ export const ProjectHeader: FC<ProjectHeaderProps> = ({
   metaInfo,
   translationNamespace,
   status,
-  isStatus,
+  showStatus = false,
 }) => {
   const { t } = useTranslation(translationNamespace);
 
@@ -25,7 +25,7 @@ export const ProjectHeader: FC<ProjectHeaderProps> = ({
         <Typography as="h3" className={styles.heading}>
           {t(title)}
         </Typography>
-        {isStatus && <StatusBadge status={status} />}
+        {showStatus && status && <StatusBadge status={status} />}
       </Box>
 
       <Box className={styles.meta}>

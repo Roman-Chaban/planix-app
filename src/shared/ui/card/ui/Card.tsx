@@ -18,9 +18,9 @@ export const Card: FC<CardProps> = ({
   value,
   trend,
   trendType,
-  translationKey,
+  translationNamescape,
 }) => {
-  const { t } = useTranslation(translationKey);
+  const { t } = useTranslation(translationNamescape);
 
   return (
     <Box key={id} className={styles.card}>

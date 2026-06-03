@@ -1,4 +1,4 @@
-import { dashboardCards } from '@/widgets/dashboard-cards/data/dashboard-cards';
+import { dashboardCards } from '@/widgets/dashboard-cards';
 
 import { Box, List, Card } from '@/shared/ui';
 
@@ -22,7 +22,7 @@ export const DashboardCards = () => {
               name={card.name}
               trend={card.trend}
               trendType={card.trendType}
-              translationKey="dashboardCards"
+              translationNamescape="dashboardCards"
             />
           );
         }}

@@ -22,7 +22,7 @@ export const DashboardCards = () => {
               name={card.name}
               trend={card.trend}
               trendType={card.trendType}
-              translationNamescape="dashboardCards"
+              translationNamespace="dashboardCards"
             />
           );
         }}

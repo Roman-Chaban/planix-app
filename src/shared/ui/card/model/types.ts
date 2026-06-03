@@ -8,5 +8,5 @@ export type CardProps = {
   trend: string;
   trendType: TrendType;
   className?: string;
-  translationNamescape?: string;
+  translationNamespace?: string;
 };

@@ -3,13 +3,24 @@
 .wrapper {
   @include responsive-grid-widgets(repeat(2, 1fr), 1.5rem);
   @include widget-box(100%, 100%, 100%, 1.5rem);
+
+  @include respond(xl) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(sm) {
+    padding: 1rem;
+  }
 }
 
 .details,
 .description {
-  @include details-wrapper($padding: 1rem);
   max-width: 100%;
+  @include details-wrapper($padding: 1rem);
   @include flex-col(0, start, start, column);
+}
+
+@container details (max-width: 90rem) {
 }
 
 .details {

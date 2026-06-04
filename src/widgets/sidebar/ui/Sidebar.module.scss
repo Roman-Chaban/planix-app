@@ -7,6 +7,7 @@
   box-shadow: $shadow-xs;
   background: $neutral-0;
   grid-area: sidebar;
+  position: fixed;
 
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -74,10 +75,12 @@
 }
 
 .button.iconCollapsed {
-  right: -1.8rem;
+  top: 5rem;
+  right: 1.7rem;
 }
 
 .content {
+  min-height: 100dvh;
   @include flex-col(3.063rem, start, stretch, column);
   padding: 1.938rem 1rem 0 1rem;
 

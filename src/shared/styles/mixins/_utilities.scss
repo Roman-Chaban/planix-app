@@ -52,7 +52,7 @@
 
 @mixin details-wrapper($bg-color: $neutral-50, $padding) {
   width: 100%;
-  max-width: 47.125rem;
+  max-width: 100%;
   min-height: 19.25rem;
   border-radius: 1rem;
   background: $bg-color;

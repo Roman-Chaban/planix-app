@@ -1,9 +1,13 @@
 @use '@/shared/styles' as *;
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
   width: 100%;
   border-bottom: 0.094rem solid $neutral-100;
   box-shadow: $shadow-xs;
+  background: $neutral-0;
   grid-area: header;
 }
 

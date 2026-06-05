@@ -15,6 +15,8 @@ export const applyDateMask = (value: string): string => {
 export const toDisplay = (date?: string | null) => {
   if (!date) return '';
 
+  if (date.length < 10) return date;
+
   const parsed = dayjs(date);
   return parsed.isValid() ? parsed.format(DATE_FORMAT.DISPLAY) : date;
 };

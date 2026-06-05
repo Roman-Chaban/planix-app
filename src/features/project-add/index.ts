@@ -1,8 +1,9 @@
 export type { ProjectDetailsFormData, ProjectDetailsFormProps } from './model/types';
+export { type ProjectDetailsSchema, projectDetailsSchema } from './ui//add-project-details';
+
+export { DATE_FORMAT } from './ui/project-add-fields';
 
 export { useProjectDetailsForm } from './lib/useProjectDetailsForm';
-
-export { type ProjectDetailsSchema, projectDetailsSchema } from './ui//add-project-details';
 
 export { ProjectDetails } from './ui/add-project-details/ui/ProjectDetails';
 export { DateFormField } from './ui/project-add-fields/ui/DateFormField';

@@ -21,6 +21,7 @@ export const useProjectDetailsForm = (defaultValues?: Partial<ProjectDetailsSche
       price: '',
       platform: '',
       description: '',
+      status: 'Pending',
       files: [],
       ...defaultValues,
     },

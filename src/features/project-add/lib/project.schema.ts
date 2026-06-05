@@ -3,7 +3,7 @@ import type { TFunction } from 'i18next';
 import dayjs from 'dayjs';
 import * as zod from 'zod';
 
-import { DATE_FORMAT } from '../ui/project-add-fields';
+import { DATE_FORMAT } from '@/features/project-add';
 
 export const projectDetailsSchema = (t: TFunction) => {
   return zod
@@ -18,8 +18,16 @@ export const projectDetailsSchema = (t: TFunction) => {
         .min(5, t('validation.clientNameMin'))
         .max(25, t('validation.clientNameMax')),
 
-      startDate: zod.string().min(1, t('validation.startDateRequired')),
-      dueDate: zod.string().min(1, t('validation.dueDateRequired')),
+      status: zod.enum(['Pending', 'In Progress', 'Completed', 'Canceled']),
+
+      startDate: zod
+        .string()
+        .min(1, t('validation.startDateRequired'))
+        .length(10, t('validation.startDateInvalid')),
+      dueDate: zod
+        .string()
+        .min(1, t('validation.dueDateRequired'))
+        .length(10, t('validation.dueDateInvalid')),
       price: zod
         .string()
         .min(1, t('validation.priceRequired'))

@@ -39,7 +39,11 @@ export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
         className={styles.description}
         titleClassName={styles.title}
       >
-        <DetailsDescription description={description} documentTitle={t('documentTitle')} />
+        <DetailsDescription
+          files={project?.files}
+          description={description}
+          documentTitle={t('documentTitle')}
+        />
       </DetailsCard>
     </Box>
   );

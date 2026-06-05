@@ -26,6 +26,7 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues 
   const form = useProjectDetailsForm(defaultValues);
 
   const { isValid } = form.formState;
+
   const isDisabled = !isValid || isProjectActionPending;
 
   const handleCreateProject = (data: ProjectDetailsFormData) => {

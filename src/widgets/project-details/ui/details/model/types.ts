@@ -2,7 +2,7 @@ import type { TFunction } from 'i18next';
 
 import type { ReactNode } from 'react';
 
-import type { Project } from '@/entities/project';
+import type { Project, ProjectFile } from '@/entities/project';
 
 export type ProjectDetailsMapOptions = {
   project: Project;
@@ -21,6 +21,7 @@ export type DetailsInfoListProps = {
 export type DetailsDescriptionProps = {
   description: string;
   documentTitle: string;
+  files: ProjectFile[];
 };
 
 export type DetailsCardProps = {

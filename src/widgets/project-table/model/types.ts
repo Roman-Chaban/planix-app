@@ -1,4 +1,3 @@
-import type { PROJECT_REASONS } from '@/widgets/project-table/model/constants';
 import type { Project } from '@/entities/project/model/types';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 import type { StatusColor } from '@/shared/ui/status-badge/model/types';
@@ -11,14 +10,6 @@ export type TableColumn = {
 export type ProjectTableHeaderProps = {
   columns: TableColumn[];
 };
-
-export type Client = {
-  id: string;
-  name: string;
-  avatar: string;
-};
-
-export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];
 
 export type ProjectsResponse = {
   data: Project[];

@@ -10,7 +10,7 @@ export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({ project })
     <PageWrapper header={<Header title="projects" />}>
       <ProjectHeader
         showStatus
-        status={project?.status}
+        status={project.status}
         translationNamespace="projectDetails"
         title="title"
         metaInfo={{ label: 'label', value: 'value' }}

@@ -11,7 +11,9 @@ import {
   ProjectDetailsFields,
 } from '@/features/project-add';
 
+import type { ProjectFormData } from '@/features/project-add/model/types';
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
+import { uploadFileToSupabase } from '@/entities/project/lib/projects';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 
 import styles from './ProjectDetails.module.scss';
@@ -29,8 +31,23 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues 
 
   const isDisabled = !isValid || isProjectActionPending;
 
-  const handleCreateProject = (data: ProjectDetailsFormData) => {
-    createProject.mutate(data, {
+  const handleCreateProject = async (formData: ProjectDetailsFormData) => {
+    const processedFiles = await Promise.all(
+      formData.files.map(async (file) => {
+        if (file instanceof File) {
+          return await uploadFileToSupabase(file);
+        }
+
+        return file;
+      }),
+    );
+
+    const payloadForServer: ProjectFormData = {
+      ...formData,
+      files: processedFiles,
+    };
+
+    createProject.mutate(payloadForServer, {
       onSuccess: () => localizedRouter.push(PROJECT),
     });
   };

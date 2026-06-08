@@ -24,8 +24,8 @@ export const DetailsDescription: FC<DetailsDescriptionProps> = ({
       </Box>
 
       <Box className={styles.files}>
-        {files.map((file) => (
-          <FileItem file={file} key={file.name} />
+        {files.map((file, index) => (
+          <FileItem file={file} key={`${file.name}-${index}`} />
         ))}
       </Box>
     </>

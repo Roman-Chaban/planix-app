@@ -15,13 +15,13 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
 }) => {
   const {
     status,
-    client,
-    projectName,
+    client_name,
+    project_name,
     slug,
-    formattedDueDate,
+    due_date,
     platform,
-    progressText,
-    formattedPrice,
+    progress,
+    price,
     reason,
     id,
   } = project;
@@ -33,20 +33,17 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
 
   return (
     <tr className={styles.bodyRow}>
-      <td className={styles.cell}>{client.name}</td>
-
-      <td className={styles.cell}>{projectName}</td>
+      <td className={styles.cell}>{client_name}</td>
+      <td className={styles.cell}>{project_name}</td>
 
       <td className={buildClassName(styles.cell, styles.calendarCell)}>
         <CalendarIcon />
-        {formattedDueDate}
+        {due_date}
       </td>
 
       <td className={styles.cell}>{platform}</td>
-
-      <td className={styles.cell}>{progressText}</td>
-
-      <td className={styles.cell}>{formattedPrice}</td>
+      <td className={styles.cell}>{progress}</td>
+      <td className={styles.cell}>{price}</td>
 
       {isShowReason && (
         <td className={buildClassName(styles.cell, styles.reason)}>{reasonContent}</td>

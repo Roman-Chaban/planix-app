@@ -3,7 +3,7 @@ import type { TableColumn } from '@/widgets/project-table/model/types';
 export const getProjectTableColumns = (isShowReason: boolean): TableColumn[] => {
   return [
     { key: 'client', label: 'clientName' },
-    { key: 'name', label: 'projectName' },
+    { key: 'projectName', label: 'projectName' },
     { key: 'dueDate', label: 'dueDate' },
     { key: 'platform', label: 'platform' },
     { key: 'progressText', label: 'progress' },

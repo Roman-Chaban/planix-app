@@ -2,13 +2,13 @@ import type { CreateProjectPayload, UpdateProjectPayload, Project } from '@/enti
 
 export const mapCreateProject = (formData: CreateProjectPayload): Partial<Project> => {
   return {
-    name: formData.projectName,
+    projectName: formData.projectName,
     client: {
       id: String(Date.now()),
       name: formData.clientName,
       avatar: '',
     },
-    created_at: formData.created_at,
+    startDate: formData.startDate,
     dueDate: formData.dueDate,
     platform: formData.platform,
     price: Number(formData.price),

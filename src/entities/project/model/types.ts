@@ -1,11 +1,8 @@
 import type { PROJECT_REASONS } from '@/widgets/project-table';
 import { type ProjectDetailsFormData } from '@/features/project-add';
-import type { Status } from '@/shared/ui/status-badge/model/types';
 
-export type CreateProjectPayload = ProjectDetailsFormData;
-export type UpdateProjectPayload = { id: string | number; data: Partial<ProjectDetailsFormData> };
-export type DeleteProjectPayload = { id: string | number };
-export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];
+export type ProjectId = string | number;
+export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 
 export type Client = {
   id: string;
@@ -19,20 +16,27 @@ export type ProjectFile = {
 };
 
 export type Project = {
-  id: string | number;
-  client: Client;
-  name: string;
-  dueDate: string;
+  id: ProjectId;
+  client: {
+    id: string;
+    name: string;
+    avatar: string;
+  };
+  projectName: string;
+  startDate: Date | null;
+  dueDate: Date | null;
   platform: string;
   progress: number;
   price: number;
   status: Status;
-  created_at?: string;
-  updatedAt?: string;
-  description: string;
-  reason?: RejectReason;
   slug: string;
+  description: string;
   name_uk?: string;
   description_uk?: string;
-  files: ProjectFile[];
+  created_at?: string;
 };
+
+export type CreateProjectPayload = ProjectDetailsFormData;
+export type UpdateProjectPayload = { id: ProjectId; data: Partial<ProjectDetailsFormData> };
+export type DeleteProjectPayload = { id: ProjectId };
+export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];

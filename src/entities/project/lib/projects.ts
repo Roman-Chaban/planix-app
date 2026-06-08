@@ -1,7 +1,8 @@
+import type { ProjectDBRow } from '@/widgets/project-table/model/types';
 import type { Project } from '@/entities/project';
 import { supabase } from '@/shared/api/supabase';
 
-export const getProjects = async (): Promise<Project[]> => {
+export const getProjects = async (): Promise<ProjectDBRow[]> => {
   const { data, error } = await supabase
     .from('Projects')
     .select('*')

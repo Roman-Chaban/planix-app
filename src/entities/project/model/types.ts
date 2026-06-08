@@ -16,24 +16,23 @@ export type ProjectFile = {
 };
 
 export type Project = {
-  id: ProjectId;
-  client: {
-    id: string;
-    name: string;
-    avatar: string;
-  };
-  projectName: string;
-  startDate: string;
-  dueDate: string;
+  id: string | number;
+  project_name: string;
+  client_id: string;
+  client_name: string;
+  client_avatar: string;
+  start_date: string;
+  due_date: string;
   platform: string;
   progress: number;
   price: number;
   status: Status;
+  reason: RejectReason;
   slug: string;
   description: string;
-  name_uk?: string;
-  description_uk?: string;
-  created_at?: string;
+  description_uk: string;
+  name_uk: string;
+  files: ProjectFile[];
 };
 
 export type CreateProjectPayload = ProjectDetailsFormData;

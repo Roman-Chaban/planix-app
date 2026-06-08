@@ -1,32 +1,25 @@
-import type { ProjectDBRow, ProjectTableItem } from '@/widgets/project-table/model/types';
 import { toDisplay } from '@/features/project-add/ui/project-add-fields';
+import type { Project } from '@/entities/project';
 
-export const toProjectTableItem = (project: ProjectDBRow): ProjectTableItem => {
+export const toProjectTableItem = (project: Project) => {
   const formattedDueDate = toDisplay(project.due_date);
 
   return {
     id: project.id,
-    projectName: project.project_name,
+    project_name: project.project_name,
     slug: project.slug,
     platform: project.platform,
-    progress: project.progress,
-    price: project.price,
+    progress: `${project.progress}%`,
+    price: `$${project.price.toLocaleString()}`,
     status: project.status,
     description: project.description,
     reason: project.reason,
-
-    client: {
-      id: project.client_id,
-      name: project.client_name,
-      avatar: project.client_avatar,
-    },
-
-    startDate: project.start_date,
-    dueDate: project.due_date,
-
-    formattedDueDate,
-    progressText: `${project.progress}%`,
-    formattedPrice: `$${project.price.toLocaleString()}`,
+    client_id: project.client_id,
+    client_name: project.client_name,
+    client_avatar: project.client_avatar,
+    start_date: project.start_date,
+    due_date: formattedDueDate,
     statusColor: 'Pending',
+    files: project.files || [],
   };
 };

@@ -22,8 +22,9 @@ export const useProjectsPageModel = () => {
   const { data, isLoading, showSkeleton, Skeleton } = useProjects();
 
   const projects = useMemo(() => {
-    const items = data?.data?.map(toProjectTableItem) ?? [];
-    return filterProjects(items, activeId, search);
+    const filtered = filterProjects(data?.data ?? [], activeId, search);
+
+    return filtered.map(toProjectTableItem);
   }, [data, activeId, search]);
 
   const isLoadingState = isLoading || showSkeleton;

@@ -1,6 +1,6 @@
 import type { TFunction } from 'i18next';
 
-import type { ReactNode } from 'react';
+import type { JSX, ReactNode } from 'react';
 
 import type { ProjectDBRow } from '@/widgets/project-table/model/types';
 import type { ProjectFile } from '@/entities/project';
@@ -31,3 +31,13 @@ export type DetailsCardProps = {
   title: string;
   children: ReactNode;
 };
+
+export type FileItemProps = {
+  file: {
+    name: string;
+    url: string;
+  };
+};
+
+export type FileConfiguration = Record<string, { icon: JSX.Element; type: FileType }>;
+export type FileType = 'pdf' | 'image' | 'default';

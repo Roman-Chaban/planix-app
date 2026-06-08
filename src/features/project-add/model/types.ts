@@ -3,9 +3,9 @@ import type { Status } from '@/entities/project';
 export type ProjectDetailsFormData = {
   projectName: string;
   clientName: string;
-  startDate: Date | null;
-  dueDate: Date | null;
-  price: number;
+  startDate: string;
+  dueDate: string;
+  price: string;
   platform: string;
   description: string;
   status: Status;

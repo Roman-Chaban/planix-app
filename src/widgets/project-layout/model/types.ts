@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react';
 
-import type { Status } from '@/shared/ui/status-badge/model/types';
+import type { Status } from '@/entities/project';
 
 export type ProjectsLayoutFormValues = {
   search: string;

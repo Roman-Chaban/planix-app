@@ -1,4 +1,7 @@
-export type { ProjectDetailsFormData, ProjectDetailsFormProps } from './model/types';
+export type {
+  ProjectFormData as ProjectDetailsFormData,
+  ProjectDetailsFormProps,
+} from './model/types';
 export { type ProjectDetailsSchema, projectDetailsSchema } from './ui//add-project-details';
 
 export { DATE_FORMAT } from './ui/project-add-fields';

@@ -41,10 +41,18 @@ export const projectDetailsSchema = (t: TFunction) => {
         .min(1, t('validation.descriptionRequired'))
         .max(500, t('validation.descriptionMax')),
       files: zod
-        .array(zod.instanceof(File))
+        .array(
+          zod.union([zod.instanceof(File), zod.object({ name: zod.string(), url: zod.string() })]),
+        )
         .min(1, t('validation.filesRequired'))
         .refine(
-          (files) => files.every((f) => f.size <= 5 * 1024 * 1024),
+          (files) =>
+            files.every((f) => {
+              if (f instanceof File) {
+                return f.size <= 5 * 1024 * 1024;
+              }
+              return true;
+            }),
           t('validation.fileSizeExceeded'),
         ),
     })

@@ -1,5 +1,5 @@
 export type {
-  ProjectDetailsFormData,
+  ProjectFormData as ProjectDetailsFormData,
   ProjectDetailsFormProps,
   ProjectDetailsFieldsProps,
 } from '../../model/types';

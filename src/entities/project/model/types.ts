@@ -32,7 +32,7 @@ export type Project = {
   description: string;
   description_uk: string;
   name_uk: string;
-  files: ProjectFile[];
+  files: ProjectFile[] | File[];
 };
 
 export type CreateProjectPayload = ProjectDetailsFormData;

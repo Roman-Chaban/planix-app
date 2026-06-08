@@ -1,6 +1,8 @@
+import type { ProjectFile } from '@/entities/project';
+
 export type FileUploadProps = {
-  value?: File[];
-  onChange?: (files: File[]) => void;
+  value: (File | ProjectFile)[];
+  onChange?: (files: (File | ProjectFile)[]) => void;
   label?: string;
   uploadLabel?: string;
   uploadPhotosLabel: string;
@@ -8,6 +10,6 @@ export type FileUploadProps = {
 };
 
 export type FileItemProps = {
-  file: File;
+  file: File | ProjectFile;
   onRemove: () => void;
 };

@@ -2,12 +2,12 @@ import type { TableColumn } from '@/widgets/project-table/model/types';
 
 export const getProjectTableColumns = (isShowReason: boolean): TableColumn[] => {
   return [
-    { key: 'client', label: 'clientName' },
-    { key: 'projectName', label: 'projectName' },
-    { key: 'dueDate', label: 'dueDate' },
+    { key: 'client_name', label: 'clientName' },
+    { key: 'project_name', label: 'projectName' },
+    { key: 'due_date', label: 'dueDate' },
     { key: 'platform', label: 'platform' },
-    { key: 'progressText', label: 'progress' },
-    { key: 'formattedPrice', label: 'price' },
+    { key: 'progress', label: 'progress' },
+    { key: 'progress', label: 'price' },
 
     ...(isShowReason
       ? [

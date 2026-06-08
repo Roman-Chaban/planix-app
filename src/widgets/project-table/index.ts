@@ -1,6 +1,5 @@
 export type {
   ProjectTableHeaderProps,
-  ProjectTableItem,
   ProjectTableRowProps,
   ProjectsResponse,
   ProjectsTableProps,

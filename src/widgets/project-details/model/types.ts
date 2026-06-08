@@ -1,7 +1,7 @@
-import type { ProjectDBRow } from '@/widgets/project-table/model/types';
+import type { Project } from '@/entities/project';
 
 export type BaseLayoutProps = {
-  project: ProjectDBRow;
+  project: Project;
 };
 
 export type ProjectDetailsLayoutProps = BaseLayoutProps;

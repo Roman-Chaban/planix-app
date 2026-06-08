@@ -1,13 +1,9 @@
 import type { TabId } from '@/widgets/project-layout/model/types';
-import type { ProjectTableItem } from '@/widgets/project-table/model/types';
 
+import type { Project } from '@/entities/project';
 import { statusMap } from '@/shared/ui/status-badge/model/constants';
 
-export const filterProjects = (
-  projects: ProjectTableItem[],
-  tab: TabId,
-  search: string,
-): ProjectTableItem[] => {
+export const filterProjects = (projects: Project[], tab: TabId, search: string): Project[] => {
   const normalizedSearch = search.trim().toLowerCase();
   const statusFilter = statusMap[tab];
 
@@ -15,8 +11,8 @@ export const filterProjects = (
     const matchesStatus = statusFilter ? project.status === statusFilter : true;
 
     const matchesSearch = normalizedSearch
-      ? project.projectName.toLowerCase().includes(normalizedSearch) ||
-        project.client.name.toLowerCase().includes(normalizedSearch)
+      ? project.project_name.toLowerCase().includes(normalizedSearch) ||
+        project.client_name.toLowerCase().includes(normalizedSearch)
       : true;
 
     return matchesStatus && matchesSearch;

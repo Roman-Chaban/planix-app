@@ -1,7 +1,10 @@
-import type { ProjectApiPayload } from '@/features/project-add/model/types';
-import type { UpdateProjectPayload, Project } from '@/entities/project';
+import type { ProjectFormData } from '@/features/project-add/model/types';
+import type { UpdateProjectPayload, Project, ProjectFile } from '@/entities/project';
 
-export const mapCreateProject = (formData: ProjectApiPayload): Partial<Project> => {
+export const mapCreateProject = (
+  formData: ProjectFormData,
+  processedFiles: ProjectFile[],
+): Partial<Project> => {
   return {
     project_name: formData.projectName,
     name_uk: formData.projectName,
@@ -17,7 +20,7 @@ export const mapCreateProject = (formData: ProjectApiPayload): Partial<Project> 
     description: formData.description,
     description_uk: formData.description,
     slug: formData.projectName.toLowerCase().replace(/ /g, '-'),
-    files: formData.files,
+    files: processedFiles,
   };
 };
 

@@ -11,7 +11,11 @@ import styles from './FileUpload.module.scss';
 const { BUTTON } = BUTTON_TYPES;
 
 export const FileItem: FC<FileItemProps> = ({ file, onRemove }) => {
-  const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
+  const isNativeFile = file instanceof File;
+
+  const isPdf = isNativeFile
+    ? file.type === 'application/pdf'
+    : file.name.toLowerCase().endsWith('.pdf');
 
   return (
     <Box className={styles.fileCard}>

@@ -1,4 +1,4 @@
-import type { Project } from '@/entities/project/model/types';
+import type { Project, RejectReason, Status } from '@/entities/project/model/types';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 import type { StatusColor } from '@/shared/ui/status-badge/model/types';
 
@@ -21,10 +21,31 @@ export type ProjectsResponse = {
   };
 };
 
+export type ProjectDBRow = {
+  id: string | number;
+  project_name: string;
+  client_id: string;
+  client_name: string;
+  client_avatar: string;
+  start_date: string | null;
+  due_date: string | null;
+  platform: string;
+  progress: number;
+  price: number;
+  status: Status;
+  reason: RejectReason;
+  slug: string;
+  description: string;
+  description_uk: string;
+  name_uk: string;
+};
+
 export type ProjectTableItem = {
   progressText: string;
   statusColor: StatusColor;
   formattedPrice: string;
+  formattedDueDate: string;
+  reason: RejectReason;
 } & Project;
 
 export type ProjectTableRowProps = {

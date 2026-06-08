@@ -2,10 +2,11 @@ import type { TFunction } from 'i18next';
 
 import type { ReactNode } from 'react';
 
-import type { Project, ProjectFile } from '@/entities/project';
+import type { ProjectDBRow } from '@/widgets/project-table/model/types';
+import type { ProjectFile } from '@/entities/project';
 
 export type ProjectDetailsMapOptions = {
-  project: Project;
+  project: ProjectDBRow;
   t: TFunction;
   lng: string;
 };

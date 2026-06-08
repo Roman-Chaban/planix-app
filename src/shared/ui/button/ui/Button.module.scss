@@ -28,6 +28,10 @@
   background: none;
 
   @include button-outline($primary-700, none, null);
+
+  &:hover {
+    background: $neutral-100;
+  }
 }
 
 .soft {

@@ -1,11 +1,11 @@
-import type { Status } from '@/shared/ui/status-badge/model/types';
+import type { Status } from '@/entities/project';
 
 export type ProjectDetailsFormData = {
   projectName: string;
   clientName: string;
-  startDate: string;
-  dueDate: string;
-  price: string;
+  startDate: Date | null;
+  dueDate: Date | null;
+  price: number;
   platform: string;
   description: string;
   status: Status;

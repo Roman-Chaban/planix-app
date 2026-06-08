@@ -15,7 +15,7 @@ export const filterProjects = (
     const matchesStatus = statusFilter ? project.status === statusFilter : true;
 
     const matchesSearch = normalizedSearch
-      ? project.name.toLowerCase().includes(normalizedSearch) ||
+      ? project.projectName.toLowerCase().includes(normalizedSearch) ||
         project.client.name.toLowerCase().includes(normalizedSearch)
       : true;
 

@@ -13,9 +13,13 @@ export const mapProjectDetails = ({ project, t, lng }: ProjectDetailsMapOptions)
     { id: 'client', label: t('fields.clientName'), value: project.client_name },
     { id: 'createdAt', label: t('fields.startDate'), value: toDisplay(project.start_date ?? '') },
     { id: 'dueDate', label: t('fields.dueDate'), value: toDisplay(project.due_date ?? '') },
-    { id: 'price', label: t('fields.price'), value: `$${project.price}` },
+    { id: 'price', label: t('fields.price'), value: `$${project.price.toLocaleString()}` },
     { id: 'platform', label: t('fields.platform'), value: project.platform },
-    { id: 'progress', label: t('fields.progress'), value: `${project.progress}%` },
+    {
+      id: 'progress',
+      label: t('fields.progress'),
+      value: `${project.progress}% ${t('fields.complete')}`,
+    },
   ];
 
   return { details, description };

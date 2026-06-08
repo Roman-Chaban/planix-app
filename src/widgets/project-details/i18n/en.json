@@ -13,6 +13,7 @@
     "dueDate": "Due Date",
     "price": "Price",
     "platform": "Platform",
-    "progress": "Progress"
+    "progress": "Progress",
+    "complete": "Complete"
   }
 }

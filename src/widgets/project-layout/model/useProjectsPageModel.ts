@@ -7,7 +7,7 @@ import { filterProjects } from '@/features/project-filter/lib/filter';
 import { useProjectsFilters } from '@/features/project-filter/lib/useProjectsFilters';
 import { useProjects } from '@/entities/project/api/useProjects';
 
-import { toProjectTableItem } from '@/entities/project/model/adapters';
+import { toProjectTableItem } from '@/entities/project/model/project-table-item';
 
 import { STATUSES } from '@/entities/project/model/statuses';
 

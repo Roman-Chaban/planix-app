@@ -23,8 +23,8 @@ export type Project = {
     avatar: string;
   };
   projectName: string;
-  startDate: Date | null;
-  dueDate: Date | null;
+  startDate: string;
+  dueDate: string;
   platform: string;
   progress: number;
   price: number;

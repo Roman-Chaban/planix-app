@@ -21,8 +21,8 @@ export const toProjectTableItem = (row: ProjectDBRow): ProjectTableItem => {
       avatar: row.client_avatar,
     },
 
-    startDate: row.start_date ? new Date(row.start_date) : null,
-    dueDate: row.due_date ? new Date(row.due_date) : null,
+    startDate: row.start_date,
+    dueDate: row.due_date,
 
     formattedDueDate,
     progressText: `${row.progress}%`,

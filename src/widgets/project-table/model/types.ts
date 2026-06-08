@@ -1,4 +1,4 @@
-import type { Project, RejectReason, Status } from '@/entities/project/model/types';
+import type { Project, ProjectFile, RejectReason, Status } from '@/entities/project/model/types';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 import type { StatusColor } from '@/shared/ui/status-badge/model/types';
 
@@ -27,8 +27,8 @@ export type ProjectDBRow = {
   client_id: string;
   client_name: string;
   client_avatar: string;
-  start_date: string | null;
-  due_date: string | null;
+  start_date: string;
+  due_date: string;
   platform: string;
   progress: number;
   price: number;
@@ -38,6 +38,7 @@ export type ProjectDBRow = {
   description: string;
   description_uk: string;
   name_uk: string;
+  files: ProjectFile[];
 };
 
 export type ProjectTableItem = {

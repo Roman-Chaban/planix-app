@@ -1,7 +1,6 @@
 import { useMemo, type FC } from 'react';
 
 import type { ProjectTableRowProps } from '@/widgets/project-table/model/types';
-
 import { STATUSES } from '@/entities/project/model/statuses';
 import { buildClassName } from '@/shared/lib';
 import { StatusBadge, ActionsBar } from '@/shared/ui';
@@ -17,9 +16,9 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
   const {
     status,
     client,
-    name,
+    projectName,
     slug,
-    dueDate,
+    formattedDueDate,
     platform,
     progressText,
     formattedPrice,
@@ -36,11 +35,11 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
     <tr className={styles.bodyRow}>
       <td className={styles.cell}>{client.name}</td>
 
-      <td className={styles.cell}>{name}</td>
+      <td className={styles.cell}>{projectName}</td>
 
-      <td className={`${styles.cell} ${styles.calendarCell}`}>
+      <td className={buildClassName(styles.cell, styles.calendarCell)}>
         <CalendarIcon />
-        {dueDate}
+        {formattedDueDate}
       </td>
 
       <td className={styles.cell}>{platform}</td>

@@ -46,3 +46,49 @@
     );
   }
 }
+
+.files {
+  @include flex(flex, row, start, center, 1rem);
+}
+
+.file {
+  @include flex(flex, row, start, center, 0.3rem);
+  border-radius: 1rem;
+  background: $neutral-0;
+  border: 0.094rem solid $neutral-300;
+  padding: 0.688rem;
+
+  &.file-pdf svg {
+    color: $pdf-icon-primary;
+  }
+
+  &.file-png svg,
+  &.file-jpg svg,
+  &.file-jpeg svg {
+    color: $upload-icon-primary;
+  }
+}
+
+.iconBox {
+  @include flex-center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.iconBoxImage {
+  background: $neutral-200;
+  border-radius: 50%;
+}
+
+.link {
+  color: $neutral-950;
+  line-height: 150%;
+  text-decoration: none;
+}

@@ -1,12 +1,16 @@
 import type { FC } from 'react';
 
-import type { DetailsDescriptionProps } from '@/widgets/project-details/ui/details';
+import { type DetailsDescriptionProps, FileItem } from '@/widgets/project-details/ui/details';
 
 import { Box, Typography } from '@/shared/ui';
 
 import styles from './Details.module.scss';
 
-export const DetailsDescription: FC<DetailsDescriptionProps> = ({ description, documentTitle }) => {
+export const DetailsDescription: FC<DetailsDescriptionProps> = ({
+  description,
+  documentTitle,
+  files,
+}) => {
   return (
     <>
       <Typography as="span" className={styles.text}>
@@ -17,6 +21,12 @@ export const DetailsDescription: FC<DetailsDescriptionProps> = ({ description, d
         <Typography as="h2" className={styles.title}>
           {documentTitle}
         </Typography>
+      </Box>
+
+      <Box className={styles.files}>
+        {files.map((file) => (
+          <FileItem file={file} key={file.name} />
+        ))}
       </Box>
     </>
   );

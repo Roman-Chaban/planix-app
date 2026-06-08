@@ -44,10 +44,6 @@
   min-height: 3.375rem;
   font-weight: $font-weight-semibold;
 
-  &:hover {
-    background: none;
-  }
-
   @include respond(sm) {
     max-width: 100%;
   }

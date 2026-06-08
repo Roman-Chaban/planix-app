@@ -23,8 +23,8 @@ export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({
         type={BUTTON_TYPES.BUTTON}
         variant={BUTTON_VARIANTS.OUTLINE}
         size={BUTTON_SIZES.LARGE}
-        onClick={onClose}
         className={styles.cancel}
+        onClick={onClose}
       >
         {t('cancelButton')}
       </Button>
@@ -34,9 +34,9 @@ export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({
         type={BUTTON_TYPES.BUTTON}
         variant={BUTTON_VARIANTS.DEFAULT}
         size={BUTTON_SIZES.LARGE}
-        onClick={onDelete}
         disabled={disabled}
         className={styles.save}
+        onClick={onDelete}
       >
         {t('saveButton')}
       </Button>

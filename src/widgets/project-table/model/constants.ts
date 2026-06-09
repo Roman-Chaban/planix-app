@@ -7,7 +7,7 @@ export const getProjectTableColumns = (isShowReason: boolean): TableColumn[] => 
     { key: 'due_date', label: 'dueDate' },
     { key: 'platform', label: 'platform' },
     { key: 'progress', label: 'progress' },
-    { key: 'progress', label: 'price' },
+    { key: 'price', label: 'price' },
 
     ...(isShowReason
       ? [

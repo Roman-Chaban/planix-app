@@ -6,6 +6,7 @@ export const toProjectTableItem = (project: Project) => {
 
   return {
     id: project.id,
+    project_name_uk: project.project_name_uk,
     project_name: project.project_name,
     slug: project.slug,
     platform: project.platform,
@@ -13,6 +14,7 @@ export const toProjectTableItem = (project: Project) => {
     price: `$${project.price.toLocaleString()}`,
     status: project.status,
     description: project.description,
+    description_uk: project.description_uk,
     reason: project.reason,
     client_id: project.client_id,
     client_name: project.client_name,

@@ -1,3 +1,4 @@
+import type { toProjectTableItem } from '@/entities/project/model/project-table-item';
 import type { Project } from '@/entities/project/model/types';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 
@@ -27,7 +28,9 @@ export type ProjectTableRowProps = {
 };
 
 export type ProjectsTableProps = {
-  projects: Project[];
+  projects: ProjectTableItem[];
   onDelete: (id: string | number) => void;
   isShowReason?: boolean;
 };
+
+export type ProjectTableItem = ReturnType<typeof toProjectTableItem>;

@@ -21,7 +21,7 @@ export type DetailsInfoListProps = {
 export type DetailsDescriptionProps = {
   description: string;
   documentTitle: string;
-  files: ProjectFile[];
+  files: (ProjectFile | File)[];
 };
 
 export type DetailsCardProps = {
@@ -32,10 +32,7 @@ export type DetailsCardProps = {
 };
 
 export type FileItemProps = {
-  file: {
-    name: string;
-    url: string;
-  };
+  file: ProjectFile | File;
 };
 
 export type FileConfiguration = Record<string, { icon: JSX.Element; type: FileType }>;

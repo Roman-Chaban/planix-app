@@ -24,8 +24,6 @@ export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
     lng: i18n.language,
   });
 
-  console.log(project);
-
   return (
     <Box className={styles.wrapper}>
       <DetailsCard

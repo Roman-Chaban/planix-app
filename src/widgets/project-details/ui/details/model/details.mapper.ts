@@ -5,7 +5,7 @@ import { APP_LOCALES } from '@/shared/lib/i18n/locales';
 export const mapProjectDetails = ({ project, t, lng }: ProjectDetailsMapOptions) => {
   const isUk = lng === APP_LOCALES.UK;
 
-  const name = isUk ? project.name_uk || project.project_name : project.project_name;
+  const name = isUk ? project.project_name_uk || project.project_name : project.project_name;
   const description = isUk ? project.description_uk || project.description : project.description;
 
   const details = [

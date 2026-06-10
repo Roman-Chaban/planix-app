@@ -59,4 +59,8 @@
 
 .errorText {
   @include error-text($error-600, 0.3rem, $font-weight-medium);
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
 }

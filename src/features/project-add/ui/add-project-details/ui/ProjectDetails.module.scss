@@ -23,6 +23,10 @@
 .form {
   @include flex-col(1.5rem, start, stretch, column);
   padding-inline: 1.375rem;
+
+  @include respond(sm) {
+    padding-inline: 1rem;
+  }
 }
 
 .row {
@@ -35,5 +39,10 @@
 }
 
 .buttonWrapper {
-  @include button-default-wrapper-size(11.438rem);
+  width: 100%;
+  max-width: 11.438rem;
+
+  @include respond(sm) {
+    max-width: 100%;
+  }
 }

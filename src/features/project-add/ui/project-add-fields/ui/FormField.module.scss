@@ -11,6 +11,11 @@
   border: none;
   outline: none;
   transition: all 0.35s ease-in-out 0s;
+  font-size: $body-md-font-size;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
 
   @include input-wrapper-border($neutral-300);
   @include input-border-active($primary-500);

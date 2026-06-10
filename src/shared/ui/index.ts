@@ -24,3 +24,4 @@ export { Textarea } from './textarea';
 export { Typography } from './typography';
 export { Modal, ModalContent, ModalHeader, ModalOverlay } from './modal';
 export { FileUpload } from './file-upload';
+export { AuthLayout } from './auth-layout';

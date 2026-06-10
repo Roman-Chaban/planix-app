@@ -24,6 +24,8 @@
   @include flex-col(1.5rem, start, stretch, column);
   padding-inline: 1.375rem;
 
+  padding-block-end: 1.875rem;
+
   @include respond(sm) {
     padding-inline: 1rem;
   }

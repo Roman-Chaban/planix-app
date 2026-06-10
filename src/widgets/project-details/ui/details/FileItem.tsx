@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import { type FileItemProps, getFileIcon } from '@/widgets/project-details/ui/details';
+import type { ProjectFile } from '@/entities/project';
 import { LINK_TARGETS } from '@/shared/constants';
 import { Box } from '@/shared/ui';
 
@@ -15,7 +16,12 @@ export const FileItem: FC<FileItemProps> = ({ file }) => {
   return (
     <Box className={`${styles.file} ${styles[`file-${ext}`]}`}>
       <Box className={`${styles.iconBox} ${isImage ? styles.iconBoxImage : ''}`}>{icon}</Box>
-      <a href={file.url} target={BLANK} rel="noopener noreferrer" className={styles.link}>
+      <a
+        href={(file as ProjectFile).url}
+        target={BLANK}
+        rel="noopener noreferrer"
+        className={styles.link}
+      >
         {file.name}
       </a>
     </Box>

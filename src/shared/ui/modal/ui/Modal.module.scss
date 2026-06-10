@@ -5,6 +5,7 @@
   inset: 0;
   z-index: $z-modal;
   background: $overlay-primary;
+  backdrop-filter: blur(0.3rem);
 }
 
 .modal {

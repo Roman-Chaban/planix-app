@@ -5,13 +5,14 @@ import type { FC } from 'react';
 import { ProjectHeaderItem, type ProjectHeaderProps } from '@/widgets/projects-toolbar';
 import { headerItems } from '@/widgets/projects-toolbar/model/constants';
 
+import { buildClassName } from '@/shared/lib';
 import { Box, List } from '@/shared/ui';
 
 import styles from './ProjectsToolbar.module.scss';
 
-export const ProjectHeader: FC<ProjectHeaderProps> = ({ activeId, setActiveId }) => {
+export const ProjectHeader: FC<ProjectHeaderProps> = ({ activeId, setActiveId, isSidebarOpen }) => {
   return (
-    <Box className={styles.scrollContainer}>
+    <Box className={buildClassName(styles.scrollContainer, { [styles.collapsed]: !isSidebarOpen })}>
       <List
         className={styles.list}
         renderList={headerItems}

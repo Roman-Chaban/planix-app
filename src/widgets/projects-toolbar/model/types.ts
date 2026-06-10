@@ -24,6 +24,7 @@ export type ProjectHeaderItemProps = {
 export type ProjectHeaderProps = {
   activeId: TabId;
   setActiveId: Dispatch<SetStateAction<TabId>>;
+  isSidebarOpen?: boolean;
 };
 
 export type ProjectHeaderItems = ProjectHeaderItemProps[];

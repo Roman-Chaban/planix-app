@@ -1,10 +1,13 @@
 import type { FC } from 'react';
 
+import { ROUTES } from '@/app/routes';
 import type { LoginFooterProps } from '@/features/auth-by-credentials';
 
 import { Box, AppLink, Typography } from '@/shared/ui';
 
 import styles from './LoginForm.module.scss';
+
+const { SIGN_UP } = ROUTES;
 
 export const LoginFooter: FC<LoginFooterProps> = ({ title, link }) => {
   return (
@@ -13,8 +16,7 @@ export const LoginFooter: FC<LoginFooterProps> = ({ title, link }) => {
         {title}
       </Typography>
 
-      {/* TODO: [Add the correct link when it will need] */}
-      <AppLink href="/#" className={styles.link}>
+      <AppLink href={SIGN_UP} className={styles.link}>
         {link}
       </AppLink>
     </Box>

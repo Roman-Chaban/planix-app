@@ -13,6 +13,7 @@ import styles from './Textarea.module.scss';
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ label, id, textareaClassName, labelClassName, placeholder, error, ...props }, ref) => {
     const { t } = useTranslation();
+
     const generatedId = useId();
     const textareaId = id || generatedId;
 
@@ -25,7 +26,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           ref={ref}
           id={textareaId}
-          placeholder={placeholder ? t(placeholder) : undefined}
+          placeholder={placeholder}
           className={buildClassName(styles.textarea, textareaClassName)}
           {...props}
         />

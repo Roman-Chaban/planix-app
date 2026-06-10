@@ -30,7 +30,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, i
       <Textarea
         value={reason}
         onChange={(event) => setReason(event.target.value)}
-        placeholder={t('label')}
+        placeholder={t('placeholder')}
         label={t('label')}
         textareaClassName={styles.textarea}
         labelClassName={styles.reasonLabel}

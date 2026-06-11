@@ -1,7 +1,5 @@
 import type { Control, UseFormRegisterReturn } from 'react-hook-form';
 
-import type { ReactNode } from 'react';
-
 export type AuthFormValues = {
   email: string;
   password: string;
@@ -23,12 +21,6 @@ export type LoginFieldsProps = AuthFieldProps;
 
 type BaseHeaderFooterProps = {
   title: string;
-};
-
-export type LoginHeaderProps = BaseHeaderFooterProps & {
-  highlightedText?: string;
-  subtitle?: string;
-  icon?: ReactNode;
 };
 
 export type LoginFooterProps = BaseHeaderFooterProps & {

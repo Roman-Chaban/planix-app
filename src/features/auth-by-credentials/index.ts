@@ -3,14 +3,12 @@ export type {
   LoginContentProps,
   LoginFieldsProps,
   LoginFooterProps,
-  LoginHeaderProps,
 } from './model/types';
 
 export { useLogin } from './lib/useLogin';
 export { usePasswordToggle } from './lib/usePasswordToggle';
 
-export { LoginForm } from './ui/LoginForm';
-export { LoginFields } from './ui/LoginFields';
-export { LoginContent } from './ui/LoginContent';
-export { LoginHeader } from './ui/LoginHeader';
-export { LoginFooter } from './ui/LoginFooter';
+export { LoginForm } from './ui/login/LoginForm';
+export { LoginFields } from './ui/login/LoginFields';
+export { LoginContent } from './ui/login/LoginContent';
+export { LoginFooter } from './ui/login/LoginFooter';

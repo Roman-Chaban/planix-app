@@ -3,5 +3,23 @@
   "subtitle": "Log In to Your CRM Dashboard",
 
   "noAccount": "Don't have an account yet?",
-  "registration": "Registration"
+  "registration": "Registration",
+
+  "fullName": "Full Name",
+  "fullNamePlaceholder": "Enter Full Name",
+
+  "email": "Email",
+  "emailPlaceholder": "Enter Email",
+
+  "password": "Password",
+  "passwordPlaceholder": "Enter Password",
+
+  "confirmPassword": "Confirm Password",
+  "confirmPasswordPlaceholder": "Confirm Password",
+
+  "contact": "Contact No",
+  "contactPlaceholder": "Enter Contact No",
+
+  "birthDate": "Date of Birth",
+  "birthDatePlaceholder": "Select Date of Birth"
 }

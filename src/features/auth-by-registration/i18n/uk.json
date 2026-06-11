@@ -3,5 +3,23 @@
   "subtitle": "Створіть обліковий запис для доступу до CRM",
 
   "noAccount": "Ще не маєте акаунта?",
-  "registration": "Реєстрація"
+  "registration": "Реєстрація",
+
+  "fullName": "Повне ім'я",
+  "fullNamePlaceholder": "Введіть повне ім'я",
+
+  "email": "Електронна пошта",
+  "emailPlaceholder": "Введіть електронну пошту",
+
+  "password": "Пароль",
+  "passwordPlaceholder": "Введіть пароль",
+
+  "confirmPassword": "Підтвердження пароля",
+  "confirmPasswordPlaceholder": "Підтвердіть пароль",
+
+  "contact": "Номер телефону",
+  "contactPlaceholder": "Введіть номер телефону",
+
+  "birthDate": "Дата народження",
+  "birthDatePlaceholder": "Оберіть дату народження"
 }

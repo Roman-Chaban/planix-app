@@ -38,3 +38,4 @@ export { UploadIcon } from './Icons';
 export { PdfIcon } from './Icons';
 export { CollapsedIcon } from './Icons';
 export { ExpandedIcon } from './Icons';
+export { ContactIcon } from './Icons';

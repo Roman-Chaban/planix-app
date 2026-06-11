@@ -9,8 +9,8 @@ import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
-import { signUpI18n } from '@/widgets/sign-up-form';
 import { loginI18n } from '@/features/auth-by-credentials/i18n';
+import { signUpI18n } from '@/features/auth-by-registration';
 import { projectAddI18n } from '@/features/project-add/i18n';
 import { deleteProjectI18n } from '@/features/project-delete/i18n';
 

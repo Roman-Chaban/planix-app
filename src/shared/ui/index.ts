@@ -28,3 +28,4 @@ export { AuthLayout } from './auth-layout';
 export { AuthHeader } from './auth-header';
 export { AuthFooter } from './auth-footer';
 export { AuthWrapper } from './auth-wrapper';
+export { AuthButton } from './auth-button';

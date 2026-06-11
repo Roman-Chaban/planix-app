@@ -1,4 +1,4 @@
-import { LoginForm } from '@/features/auth-by-credentials/ui/LoginForm';
+import { LoginForm } from '@/features/auth-by-credentials/ui/login/LoginForm';
 
 import { AuthLayout } from '@/shared/ui';
 

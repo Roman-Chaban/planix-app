@@ -18,11 +18,3 @@ export type LoginContentProps = {
 };
 
 export type LoginFieldsProps = AuthFieldProps;
-
-type BaseHeaderFooterProps = {
-  title: string;
-};
-
-export type LoginFooterProps = BaseHeaderFooterProps & {
-  link: string;
-};

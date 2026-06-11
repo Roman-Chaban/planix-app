@@ -1,0 +1,20 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  @include flex-col(0, space-between, stretch, column);
+  height: 100%;
+}
+
+.content {
+  @include flex-col(2.813rem, start, stretch, column);
+  padding-block-start: 2.625rem;
+
+  @include respond(md) {
+    padding-block-start: 0;
+    gap: 2rem;
+  }
+}
+
+.form {
+  @include flex-col(1.5rem, start, stretch, column);
+}

@@ -7,30 +7,12 @@ import { useTranslation } from 'react-i18next';
 
 import type { LoginContentProps } from '@/features/auth-by-credentials/model/types';
 
-import { useMediaQuery } from '@/shared/lib/hooks';
-import { Box, Button, Checkbox, AppLink } from '@/shared/ui';
-import {
-  BUTTON_SHAPES,
-  BUTTON_SIZES,
-  BUTTON_TYPES,
-  BUTTON_VARIANTS,
-} from '@/shared/ui/button/model/constants';
-import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
+import { Box, Checkbox, AppLink, AuthButton } from '@/shared/ui';
 
 import styles from './LoginForm.module.scss';
 
-const { SUBMIT } = BUTTON_TYPES;
-const { DEFAULT } = BUTTON_VARIANTS;
-const { MOBILE_LARGE } = BREAKPOINTS;
-const { SMALL, MEDIUM } = BUTTON_SIZES;
-const { ROUNDED } = BUTTON_SHAPES;
-
 export const LoginContent: FC<LoginContentProps> = ({ control }) => {
   const { t } = useTranslation('login');
-
-  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
-
-  const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
 
   return (
     <Box className={styles.loginFormMainWrapper}>
@@ -49,11 +31,7 @@ export const LoginContent: FC<LoginContentProps> = ({ control }) => {
         </AppLink>
       </Box>
 
-      <Box className={styles.buttonWrapper}>
-        <Button type={SUBMIT} variant={DEFAULT} size={buttonSizes} shape={ROUNDED} fullWidth>
-          {t('submitButton')}
-        </Button>
-      </Box>
+      <AuthButton label={t('submitButton')} className={styles.button} />
     </Box>
   );
 };

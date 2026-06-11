@@ -12,7 +12,7 @@ export const AuthHeader: FC<AuthHeaderProps> = ({ title, highlightedText, subtit
       <Typography as="h1" className={styles.title}>
         {title}{' '}
         <Typography as="span" className={styles.highlightedText}>
-          {highlightedText}
+          {highlightedText} 👋
         </Typography>
       </Typography>
 

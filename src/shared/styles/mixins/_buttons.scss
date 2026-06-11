@@ -48,6 +48,7 @@
   text-decoration: underline;
 }
 
-@mixin button-default-wrapper-size($minWidth) {
-  min-width: $minWidth;
+@mixin button-default-wrapper-size($maxWidth) {
+  width: 100%;
+  max-width: $maxWidth;
 }

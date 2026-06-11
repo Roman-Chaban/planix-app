@@ -25,3 +25,5 @@ export { Typography } from './typography';
 export { Modal, ModalContent, ModalHeader, ModalOverlay } from './modal';
 export { FileUpload } from './file-upload';
 export { AuthLayout } from './auth-layout';
+export { AuthHeader } from './auth-header';
+export { AuthWrapper } from './auth-wrapper';

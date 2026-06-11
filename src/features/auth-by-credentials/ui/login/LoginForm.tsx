@@ -2,12 +2,12 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { LoginFooter, LoginContent, LoginFields } from '@/features/auth-by-credentials';
+import { LoginContent, LoginFields } from '@/features/auth-by-credentials';
 import { useLogin } from '@/features/auth-by-credentials/lib/useLogin';
 
-import { AuthHeader } from '@/shared/ui';
+import { AuthFooter, AuthHeader } from '@/shared/ui';
 
-import { FormWrapper } from '@/shared/ui/auth-wrapper';
+import { AuthWrapper } from '@/shared/ui/auth-wrapper';
 
 export const LoginForm = () => {
   const { t } = useTranslation('login');
@@ -15,7 +15,7 @@ export const LoginForm = () => {
   const form = useLogin();
 
   return (
-    <FormWrapper
+    <AuthWrapper
       onSubmit={form.onSubmit}
       header={
         <AuthHeader
@@ -24,7 +24,7 @@ export const LoginForm = () => {
           highlightedText={t('highlightedText')}
         />
       }
-      footer={<LoginFooter title={t('noAccount')} link={t('registration')} />}
+      footer={<AuthFooter title={t('noAccount')} link={t('registration')} />}
     >
       <LoginFields
         emailField={form.register('email')}
@@ -34,6 +34,6 @@ export const LoginForm = () => {
       />
 
       <LoginContent control={form.control} />
-    </FormWrapper>
+    </AuthWrapper>
   );
 };

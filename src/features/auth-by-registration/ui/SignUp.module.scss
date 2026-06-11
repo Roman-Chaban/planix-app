@@ -1,0 +1,13 @@
+@use '@/shared/styles' as *;
+
+.box {
+  @include flex-row($space-6);
+
+  @include respond(xl) {
+    flex-direction: column;
+  }
+}
+
+.button {
+  @include button-default-wrapper-size(11.438rem);
+}

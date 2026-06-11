@@ -9,6 +9,10 @@
   @include flex-col(2.813rem, start, stretch, column);
   padding-block-start: 2.625rem;
 
+  @include respond(lg) {
+    padding: 0;
+  }
+
   @include respond(md) {
     padding-block-start: 0;
     gap: 2rem;

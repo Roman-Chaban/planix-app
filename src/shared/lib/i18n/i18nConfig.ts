@@ -23,6 +23,7 @@ const configOptions = {
     'projectAdd',
     'projectEdit',
     'projectDetails',
+    'signUpForm',
   ],
   interpolation: {
     escapeValue: false,

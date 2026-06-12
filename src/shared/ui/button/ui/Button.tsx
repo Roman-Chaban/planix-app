@@ -22,6 +22,7 @@ export const Button: FC<ButtonProps> = ({
   type,
   isLoading,
   onClick,
+  ...buttonProps
 }) => {
   const buttonClasses = buildClassName(
     styles.button,
@@ -34,6 +35,7 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <button
+      {...buttonProps}
       className={buttonClasses}
       disabled={disabled || isLoading}
       type={type}

@@ -18,13 +18,18 @@ const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 
-export const AuthButton: FC<AuthButtonProps> = ({ label, disabled }) => {
+export const AuthButton: FC<AuthButtonProps> = ({
+  label,
+  disabled,
+  maxWidth,
+}) => {
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
 
   return (
     <Button
+      style={{ maxWidth: `${maxWidth}rem` }}
       type={SUBMIT}
       variant={DEFAULT}
       size={buttonSizes}

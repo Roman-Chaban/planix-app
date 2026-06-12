@@ -42,16 +42,14 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
       {/* TODO: Select Platform will be added later */}
       <Box className={styles.platform}>Select Platform</Box>
 
-      <Box className={styles.buttonWrapper}>
-        <ProjectButton
-          type={BUTTON}
-          shape={ROUNDED}
-          variant={DEFAULT}
-          size={LARGE}
-          onClick={handleCreateProject}
-          fullWidth
-        />
-      </Box>
+      <ProjectButton
+        type={BUTTON}
+        shape={ROUNDED}
+        variant={DEFAULT}
+        size={LARGE}
+        onClick={handleCreateProject}
+        fullWidth
+      />
     </Box>
   );
 };

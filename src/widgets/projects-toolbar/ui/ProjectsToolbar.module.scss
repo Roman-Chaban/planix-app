@@ -98,16 +98,6 @@
   }
 }
 
-.buttonWrapper {
-  flex: 1 1 11.438rem;
-  max-width: 11.438rem;
-
-  @include respond(2xl) {
-    flex: 0 0 auto;
-    width: 11.438rem;
-  }
-}
-
 .box {
   width: 100%;
   @include flex-center;

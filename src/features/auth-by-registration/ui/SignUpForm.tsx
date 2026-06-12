@@ -11,7 +11,7 @@ export const SignUpForm = () => {
 
   return (
     <AuthWrapper
-      header={<AuthHeader title={t('title')} subtitle={t('subtitle')} />}
+      header={<AuthHeader title={t('title')} subtitle={t('subtitle')} isHighlightedIcon />}
       footer={<AuthFooter title={t('noAccount')} link={t('registration')} />}
     >
       <SignUpFields />

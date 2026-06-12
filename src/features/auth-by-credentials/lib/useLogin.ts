@@ -1,11 +1,17 @@
 'use client';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
-import type { AuthFormValues } from '@/features/auth-by-credentials';
+import { loginSchema, type LoginSchema } from '@/features/auth-by-credentials';
 
 export const useLogin = () => {
-  const form = useForm<AuthFormValues>({
+  const { t } = useTranslation('login');
+
+  const form = useForm<LoginSchema>({
+    mode: 'onBlur',
+    resolver: zodResolver(loginSchema(t)),
     defaultValues: {
       email: '',
       password: '',
@@ -18,10 +24,10 @@ export const useLogin = () => {
   });
 
   return {
-    ...form,
     register: form.register,
     control: form.control,
-    onSubmit,
     errors: form.formState.errors,
+    isValid: form.formState.isValid,
+    onSubmit,
   };
 };

@@ -5,6 +5,7 @@ import { Controller } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
+import { useLogin } from '@/features/auth-by-credentials';
 import type { LoginContentProps } from '@/features/auth-by-credentials/model/types';
 
 import { Box, Checkbox, AppLink, AuthButton } from '@/shared/ui';
@@ -13,6 +14,8 @@ import styles from './LoginForm.module.scss';
 
 export const LoginContent: FC<LoginContentProps> = ({ control }) => {
   const { t } = useTranslation('login');
+
+  const { isValid } = useLogin();
 
   return (
     <Box className={styles.loginFormMainWrapper}>
@@ -31,7 +34,7 @@ export const LoginContent: FC<LoginContentProps> = ({ control }) => {
         </AppLink>
       </Box>
 
-      <AuthButton label={t('submitButton')} className={styles.button} />
+      <AuthButton label={t('submitButton')} disabled={!isValid} className={styles.button} />
     </Box>
   );
 };

@@ -14,5 +14,15 @@
   "submitButton": "Увійти",
 
   "noAccount": "Ще не маєте акаунта?",
-  "registration": "Реєстрація"
+  "registration": "Реєстрація",
+
+  "validation": {
+    "email": {
+      "required": "Email є обов'язковим",
+      "invalid": "Будь ласка, введіть коректну адресу"
+    },
+    "password": {
+      "min": "Пароль має містити мінімум 8 символів"
+    }
+  }
 }

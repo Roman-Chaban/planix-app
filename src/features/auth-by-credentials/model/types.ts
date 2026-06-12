@@ -1,20 +1,6 @@
-import type { Control, UseFormRegisterReturn } from 'react-hook-form';
-
-export type AuthFormValues = {
-  email: string;
-  password: string;
-  rememberMe: boolean;
-};
-
-type AuthFieldProps = {
-  emailField: UseFormRegisterReturn;
-  passwordField: UseFormRegisterReturn;
-  emailError?: string;
-  passwordError?: string;
-};
+import type { LoginSchema } from './login.schema';
+import type { Control } from 'react-hook-form';
 
 export type LoginContentProps = {
-  control: Control<AuthFormValues>;
+  control: Control<LoginSchema>;
 };
-
-export type LoginFieldsProps = AuthFieldProps;

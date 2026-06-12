@@ -15,5 +15,15 @@
   "submitButton": "Log In",
 
   "noAccount": "Don't have an account yet?",
-  "registration": "Registration"
+  "registration": "Registration",
+
+  "validation": {
+    "email": {
+      "required": "Email is required",
+      "invalid": "Please enter a valid email address"
+    },
+    "password": {
+      "min": "Password must be at least 8 characters"
+    }
+  }
 }

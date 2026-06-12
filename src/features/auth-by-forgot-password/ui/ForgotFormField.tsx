@@ -4,10 +4,12 @@ import { useTranslation } from 'react-i18next';
 
 import { useForgotPassword } from '@/features/auth-by-forgot-password';
 import { AuthButton, FormInputField } from '@/shared/ui';
+import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 import { MessageIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
 const { EMAIL } = INPUT_TYPES;
+const { MD } = BUTTON_MAX_WIDTH;
 
 export const ForgotFormField = () => {
   const { t } = useTranslation('forgotPasswordForm');
@@ -27,7 +29,7 @@ export const ForgotFormField = () => {
         startIcon={<MessageIcon />}
       />
 
-      <AuthButton label={t('button')} disabled={!isValid} maxWidth={7.75} />
+      <AuthButton label={t('button')} disabled={!isValid} maxWidth={MD} />
     </>
   );
 };

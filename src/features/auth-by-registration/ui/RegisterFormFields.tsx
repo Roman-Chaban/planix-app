@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useSignUp } from '@/features/auth-by-registration';
 import { AuthButton, Box, FormInputField } from '@/shared/ui';
 
+import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 import {
   ClientIcon,
   MessageIcon,
@@ -19,6 +20,7 @@ import { INPUT_TYPES } from '@/shared/ui/input';
 import styles from './RegisterForm.module.scss';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
+const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterFormFields = () => {
   const { t } = useTranslation('signUpForm');
@@ -111,11 +113,7 @@ export const RegisterFormFields = () => {
         />
       </Box>
 
-      <AuthButton
-        label={t('registration')}
-        disabled={!isValid}
-        maxWidth={11.563}
-      />
+      <AuthButton label={t('registration')} disabled={!isValid} maxWidth={LG} />
     </>
   );
 };

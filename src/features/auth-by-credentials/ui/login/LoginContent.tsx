@@ -11,9 +11,12 @@ import type { LoginContentProps } from '@/features/auth-by-credentials/model/typ
 
 import { Box, Checkbox, AppLink, AuthButton } from '@/shared/ui';
 
+import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
+
 import styles from './LoginForm.module.scss';
 
 const { FORGOT_PASSWORD } = ROUTES;
+const { SM } = BUTTON_MAX_WIDTH;
 
 export const LoginContent: FC<LoginContentProps> = ({ control }) => {
   const { t } = useTranslation('login');
@@ -40,11 +43,7 @@ export const LoginContent: FC<LoginContentProps> = ({ control }) => {
         </AppLink>
       </Box>
 
-      <AuthButton
-        label={t('submitButton')}
-        disabled={!isValid}
-        maxWidth={8.188}
-      />
+      <AuthButton label={t('submitButton')} disabled={!isValid} maxWidth={SM} />
     </Box>
   );
 };

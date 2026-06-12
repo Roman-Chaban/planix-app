@@ -16,6 +16,7 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
   shape,
   className,
   fullWidth,
+  maxWidth,
 }) => {
   const { t } = useTranslation('addProjectHeader');
 
@@ -30,6 +31,7 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
       disabled={disabled}
       isLoading={isLoading}
       className={className}
+      maxWidth={maxWidth}
     >
       {isLoading ? t('isProjectPeding') : t('addProjectButton')}
     </Button>

@@ -24,6 +24,7 @@ const configOptions = {
     'projectEdit',
     'projectDetails',
     'signUpForm',
+    'forgotPasswordForm',
   ],
   interpolation: {
     escapeValue: false,

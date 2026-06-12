@@ -2,7 +2,9 @@ import type { FC } from 'react';
 
 import styles from './ProjectTable.module.scss';
 
-export const ProjectTableColGroup: FC<{ isShowReason: boolean }> = ({ isShowReason }) => {
+export const ProjectTableColGroup: FC<{ isShowReason: boolean }> = ({
+  isShowReason,
+}) => {
   return (
     <colgroup>
       <col className={styles.colClient} />

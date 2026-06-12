@@ -4,7 +4,12 @@ import { useTranslation } from 'react-i18next';
 import type { ProjectsActionsProps } from '@/widgets/projects-toolbar';
 import { Box, ProjectButton, InputField } from '@/shared/ui';
 
-import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button';
+import {
+  BUTTON_SHAPES,
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  BUTTON_VARIANTS,
+} from '@/shared/ui/button';
 import { SearchIconPrimary } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
@@ -16,7 +21,9 @@ const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 
-export const ProjectActions: FC<ProjectsActionsProps> = ({ handleCreateProject }) => {
+export const ProjectActions: FC<ProjectsActionsProps> = ({
+  handleCreateProject,
+}) => {
   const { t } = useTranslation('addProjectHeader');
 
   return (

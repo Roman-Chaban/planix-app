@@ -45,7 +45,10 @@ export const Header: FC<HeaderProps> = ({ title }) => {
             </Button>
 
             {/* TODO: [Waiting for implementation AuthLogic, add alt for Avatar] */}
-            <Avatar className={styles.avatar} fallback={FALLBACK_PROFILE_AVATAR} />
+            <Avatar
+              className={styles.avatar}
+              fallback={FALLBACK_PROFILE_AVATAR}
+            />
           </Box>
         </Box>
       </Box>

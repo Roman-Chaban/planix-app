@@ -12,7 +12,12 @@ import {
   FilesField,
 } from '@/features/project-add/ui/project-add-fields';
 import { Box, ProjectButton } from '@/shared/ui';
-import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button';
+import {
+  BUTTON_SHAPES,
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  BUTTON_VARIANTS,
+} from '@/shared/ui/button';
 
 const { SUBMIT } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;

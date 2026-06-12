@@ -1,6 +1,8 @@
 import type { TableColumn } from '@/widgets/project-table/model/types';
 
-export const getProjectTableColumns = (isShowReason: boolean): TableColumn[] => {
+export const getProjectTableColumns = (
+  isShowReason: boolean,
+): TableColumn[] => {
   return [
     { key: 'client_name', label: 'clientName' },
     { key: 'project_name', label: 'projectName' },

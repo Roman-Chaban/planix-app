@@ -9,7 +9,11 @@ import {
   USER_SELECT_NONE,
 } from '@/shared/lib/hooks/model/constants';
 
-import type { Point, ScrollPosition, UseDragScrollOptions } from '@/shared/lib/hooks/model/types';
+import type {
+  Point,
+  ScrollPosition,
+  UseDragScrollOptions,
+} from '@/shared/lib/hooks/model/types';
 
 const { X, Y, BOTH } = AXIS;
 
@@ -19,7 +23,12 @@ export function useDragScroll<T extends HTMLElement>(
     dragThreshold: 5,
   },
 ) {
-  const { axis = X, disabled = false, scrollSpeed = 1, dragThreshold = 5 } = options;
+  const {
+    axis = X,
+    disabled = false,
+    scrollSpeed = 1,
+    dragThreshold = 5,
+  } = options;
 
   const containerRef = useRef<T | null>(null);
 
@@ -56,8 +65,10 @@ export function useDragScroll<T extends HTMLElement>(
       if (!isPointerDownRef.current) return;
 
       const currentPointerPosition = getPointerPosition(event);
-      const deltaX = currentPointerPosition.x - pointerStartPositionRef.current.x;
-      const deltaY = currentPointerPosition.y - pointerStartPositionRef.current.y;
+      const deltaX =
+        currentPointerPosition.x - pointerStartPositionRef.current.x;
+      const deltaY =
+        currentPointerPosition.y - pointerStartPositionRef.current.y;
       const dragDistance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
       if (!isDraggingRef.current) {
@@ -70,11 +81,13 @@ export function useDragScroll<T extends HTMLElement>(
       event.preventDefault();
 
       if (axis === X || axis === BOTH) {
-        container.scrollLeft = scrollStartPositionRef.current.left - deltaX * scrollSpeed;
+        container.scrollLeft =
+          scrollStartPositionRef.current.left - deltaX * scrollSpeed;
       }
 
       if (axis === Y || axis === BOTH) {
-        container.scrollTop = scrollStartPositionRef.current.top - deltaY * scrollSpeed;
+        container.scrollTop =
+          scrollStartPositionRef.current.top - deltaY * scrollSpeed;
       }
     };
 
@@ -87,7 +100,8 @@ export function useDragScroll<T extends HTMLElement>(
 
     container.style.cursor = CURSOR_GRAB;
     container.style.userSelect = USER_SELECT_NONE;
-    container.style.touchAction = axis === X ? 'pan-y' : axis === Y ? 'pan-x' : 'none';
+    container.style.touchAction =
+      axis === X ? 'pan-y' : axis === Y ? 'pan-x' : 'none';
 
     container.addEventListener('pointerdown', handlePointerDown);
     container.addEventListener('pointermove', handlePointerMove);

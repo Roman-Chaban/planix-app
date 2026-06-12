@@ -6,7 +6,12 @@ import type { AuthWrapperProps } from '@/shared/ui/auth-wrapper';
 
 import styles from './AuthWrapper.module.scss';
 
-export const AuthWrapper: FC<AuthWrapperProps> = ({ children, onSubmit, header, footer }) => {
+export const AuthWrapper: FC<AuthWrapperProps> = ({
+  children,
+  onSubmit,
+  header,
+  footer,
+}) => {
   return (
     <Box className={styles.wrapper}>
       <Box className={styles.content}>

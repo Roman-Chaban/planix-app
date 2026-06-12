@@ -7,6 +7,11 @@ export type {
   Status,
 } from './model/types';
 
-export { getProjects, updateProject, createProject, deleteProject } from './lib/projects';
+export {
+  getProjects,
+  updateProject,
+  createProject,
+  deleteProject,
+} from './lib/projects';
 
 export { useProjectActions } from './api/useProjectActions';

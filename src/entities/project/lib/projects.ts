@@ -11,8 +11,14 @@ export const getProjects = async (): Promise<Project[]> => {
   return data || [];
 };
 
-export const createProject = async (project: Partial<Project>): Promise<Project> => {
-  const { data, error } = await supabase.from('Projects').insert([project]).select().single();
+export const createProject = async (
+  project: Partial<Project>,
+): Promise<Project> => {
+  const { data, error } = await supabase
+    .from('Projects')
+    .insert([project])
+    .select()
+    .single();
 
   if (error) throw error;
   return data;
@@ -43,11 +49,15 @@ export const uploadFileToSupabase = async (file: File) => {
   const fileExt = file.name.split('.').pop();
   const fileName = `${Date.now()}_${Math.random()}.${fileExt}`;
 
-  const { data, error } = await supabase.storage.from('project-files').upload(fileName, file);
+  const { data, error } = await supabase.storage
+    .from('project-files')
+    .upload(fileName, file);
 
   if (error) throw error;
 
-  const { data: publicUrlData } = supabase.storage.from('project-files').getPublicUrl(data.path);
+  const { data: publicUrlData } = supabase.storage
+    .from('project-files')
+    .getPublicUrl(data.path);
 
   return { name: file.name, url: publicUrlData.publicUrl };
 };

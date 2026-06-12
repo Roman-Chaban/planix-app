@@ -36,7 +36,10 @@ export const Card: FC<CardProps> = ({
           <Typography as="span" className={styles.name}>
             {t(name)}
           </Typography>
-          <Typography as="span" className={buildClassName(styles.trend, styles[trendType])}>
+          <Typography
+            as="span"
+            className={buildClassName(styles.trend, styles[trendType])}
+          >
             {t(trend)}
           </Typography>
         </Box>

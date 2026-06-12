@@ -40,7 +40,10 @@ export const Button: FC<ButtonProps> = ({
       onClick={onClick}
     >
       {startIcon && (
-        <Typography as="span" className={buildClassName(styles.icon, startIconClassName)}>
+        <Typography
+          as="span"
+          className={buildClassName(styles.icon, startIconClassName)}
+        >
           {startIcon}
         </Typography>
       )}
@@ -49,7 +52,10 @@ export const Button: FC<ButtonProps> = ({
         {children}
 
         {endIcon && (
-          <Typography as="span" className={buildClassName(styles.icon, endIconClassName)}>
+          <Typography
+            as="span"
+            className={buildClassName(styles.icon, endIconClassName)}
+          >
             {endIcon}
           </Typography>
         )}

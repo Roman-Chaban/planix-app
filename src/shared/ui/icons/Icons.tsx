@@ -92,8 +92,15 @@ export const PlanixLogoIcon: FC<IconProps> = ({ width = 78, height = 88 }) => {
           <feOffset dy="9" />
           <feGaussianBlur stdDeviation="9" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_12137_21218" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_12137_21218"
+          />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -222,7 +229,11 @@ export const ViewIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const SearchIcon: FC<IconProps> = ({ width = 20, height = 20, stroke = 'currentColor' }) => {
+export const SearchIcon: FC<IconProps> = ({
+  width = 20,
+  height = 20,
+  stroke = 'currentColor',
+}) => {
   return (
     <svg
       width={width}
@@ -249,7 +260,10 @@ export const SearchIcon: FC<IconProps> = ({ width = 20, height = 20, stroke = 'c
   );
 };
 
-export const SearchIconPrimary: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const SearchIconPrimary: FC<IconProps> = ({
+  width = 20,
+  height = 20,
+}) => {
   return (
     <svg
       width={width}
@@ -276,7 +290,11 @@ export const SearchIconPrimary: FC<IconProps> = ({ width = 20, height = 20 }) =>
   );
 };
 
-export const CheckIcon: FC<IconProps> = ({ width = 16, height = 16, className }) => {
+export const CheckIcon: FC<IconProps> = ({
+  width = 16,
+  height = 16,
+  className,
+}) => {
   return (
     <svg
       className={className}
@@ -493,7 +511,10 @@ export const SettingsIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const NotificationIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const NotificationIcon: FC<IconProps> = ({
+  width = 24,
+  height = 24,
+}) => {
   return (
     <svg
       width={width}
@@ -521,7 +542,10 @@ export const NotificationIcon: FC<IconProps> = ({ width = 24, height = 24 }) => 
   );
 };
 
-export const NotificationErrorIcon: FC<IconProps> = ({ width = 12, height = 12 }) => {
+export const NotificationErrorIcon: FC<IconProps> = ({
+  width = 12,
+  height = 12,
+}) => {
   return (
     <svg
       width={width}
@@ -538,7 +562,12 @@ export const NotificationErrorIcon: FC<IconProps> = ({ width = 12, height = 12 }
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path fillRule="evenodd" clipRule="evenodd" d="M6 9.11108H6.00898H6Z" fill="#D92D20" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6 9.11108H6.00898H6Z"
+        fill="#D92D20"
+      />
       <path
         d="M6 9.11108H6.00898"
         stroke="white"
@@ -550,7 +579,10 @@ export const NotificationErrorIcon: FC<IconProps> = ({ width = 12, height = 12 }
   );
 };
 
-export const UnitedStatesIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const UnitedStatesIcon: FC<IconProps> = ({
+  width = 20,
+  height = 20,
+}) => {
   return (
     <svg
       width={width}
@@ -602,7 +634,10 @@ export const UkraineIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const NotFoundBanner: FC<IconProps> = ({ width = 490, height = 457 }) => {
+export const NotFoundBanner: FC<IconProps> = ({
+  width = 490,
+  height = 457,
+}) => {
   return (
     <svg
       width={width}
@@ -683,7 +718,10 @@ export const NotFoundBanner: FC<IconProps> = ({ width = 490, height = 457 }) => 
   );
 };
 
-export const NotFoundTextDecartionIcon: FC<IconProps> = ({ width = 392, height = 255 }) => {
+export const NotFoundTextDecartionIcon: FC<IconProps> = ({
+  width = 392,
+  height = 255,
+}) => {
   return (
     <svg
       width={width}
@@ -902,7 +940,13 @@ export const CalendarIcon: FC<IconProps> = ({ width = 18, height = 18 }) => {
 
 export const PendingIcon = () => {
   return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#clip0_14304_10194)">
         <path
           d="M6.97998 0.916992C10.3395 0.916992 13.0629 3.6404 13.0629 6.99993C13.0629 10.3594 10.3395 13.0829 6.97998 13.0829"
@@ -1004,7 +1048,13 @@ export const PendingIcon = () => {
 
 export const InProgressIcon = () => {
   return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M6.99995 2.98796C6.72626 2.98796 6.50439 2.76612 6.50439 2.49241V0.495551C6.50439 0.22184 6.72626 0 6.99995 0C7.27363 0 7.4955 0.22184 7.4955 0.495551V2.49244C7.4955 2.76612 7.27363 2.98796 6.99995 2.98796Z"
         fill="currentColor"
@@ -1085,7 +1135,13 @@ export const InProgressIcon = () => {
 
 export const CanceledIcon = () => {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M7.98672 14.8841C7.08115 14.8858 6.18422 14.7085 5.3474 14.3624C4.51059 14.0164 3.75044 13.5083 3.11058 12.8676C0.421474 10.1785 0.421474 5.80328 3.11058 3.11419C3.74947 2.4717 4.50947 1.96231 5.34656 1.61551C6.18362 1.26871 7.08119 1.09137 7.98728 1.09377C9.82947 1.09377 11.5613 1.81101 12.8634 3.11419C14.166 4.41681 14.8838 6.14866 14.8838 7.99087C14.8838 9.83309 14.1666 11.5649 12.8634 12.8676C12.2234 13.5083 11.4632 14.0164 10.6263 14.3624C9.78937 14.7085 8.89234 14.8858 7.98672 14.8841ZM7.98728 2.19722C7.22612 2.19506 6.47212 2.34395 5.76894 2.63526C5.06575 2.92658 4.42734 3.35453 3.89072 3.89431C2.79665 4.98841 2.19416 6.44328 2.19416 7.99087C2.19416 9.53847 2.79665 10.9928 3.89072 12.0874C6.14947 14.3462 9.82506 14.3468 12.0833 12.0874C13.1773 10.9934 13.7804 9.53847 13.7804 7.99087C13.7804 6.44328 13.1779 4.98894 12.0833 3.89431C11.5466 3.35469 10.9083 2.92685 10.2052 2.63554C9.50215 2.34424 8.74831 2.19526 7.98728 2.19722Z"
         fill="currentColor"
@@ -1104,7 +1160,13 @@ export const CanceledIcon = () => {
 
 export const CompletedIcon = () => {
   return (
-    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M9.70832 5.16565L6.0395 8.83447L4.29297 7.08797"
         stroke="currentColor"
@@ -1145,7 +1207,13 @@ export const CompletedIcon = () => {
 
 export const EditIcon = () => {
   return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M11.7168 2.75098C12.3355 2.73364 13.0212 3.01918 13.7773 3.7334C14.5336 4.44783 14.8584 5.11663 14.876 5.73535C14.8934 6.3542 14.6072 7.04043 13.8926 7.79688L7.73535 14.3145L7.7334 14.3164C7.49319 14.5738 7.00759 14.8346 6.66016 14.8916L6.65723 14.8926L4.26367 15.3008C4.11144 15.3107 4.0642 15.3203 3.96582 15.3203C3.62089 15.3203 3.32183 15.2015 3.11816 15.0078L3.11621 15.0068L3.02441 14.9072C2.82221 14.6612 2.71515 14.3106 2.76074 13.9043L3.03809 11.4746C3.05679 11.312 3.11985 11.0979 3.21973 10.8828C3.31994 10.6671 3.44044 10.485 3.55078 10.3721L3.55664 10.3662L9.71484 3.84863C10.4293 3.09239 11.098 2.76845 11.7168 2.75098ZM11.7588 2.86328C10.9613 2.86328 10.3315 3.3621 9.80469 3.91992L3.64746 10.4443C3.51849 10.5803 3.41141 10.7691 3.33691 10.9287C3.28021 11.0502 3.22496 11.193 3.19043 11.332L3.16309 11.4697L3.16211 11.4814L2.88379 13.9111C2.84193 14.2632 2.92033 14.6421 3.20312 14.9092C3.48882 15.1787 3.86875 15.2259 4.20605 15.1748L4.21484 15.1729L6.62988 14.7607H6.63086C6.81592 14.7288 7.0151 14.6429 7.17188 14.5586C7.32898 14.4741 7.5087 14.3561 7.63574 14.2227L7.63672 14.2217L13.7949 7.7041L13.7959 7.70312C14.2758 7.19222 14.701 6.60431 14.7432 5.90723C14.7869 5.18267 14.4115 4.50006 13.6826 3.81543C13.0388 3.19722 12.405 2.86337 11.7588 2.86328Z"
         fill="currentColor"
@@ -1162,7 +1230,13 @@ export const EditIcon = () => {
 
 export const DeleteIcon = () => {
   return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M15.7502 5.0476C15.7352 5.0476 15.7127 5.0476 15.6902 5.0476C11.7227 4.6501 7.76274 4.5001 3.84024 4.8976L2.31024 5.0476C1.99524 5.0776 1.71774 4.8526 1.68774 4.5376C1.65774 4.2226 1.88274 3.9526 2.19024 3.9226L3.72024 3.7726C7.71024 3.3676 11.7527 3.5251 15.8027 3.9226C16.1102 3.9526 16.3352 4.2301 16.3052 4.5376C16.2827 4.8301 16.0352 5.0476 15.7502 5.0476Z"
         fill="currentColor"
@@ -1223,7 +1297,13 @@ export const CloseIcon: FC<IconProps> = ({ width = 26, height = 26 }) => {
 
 export const ProjectNameIcon = () => {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M10.3083 7.3999H14.6833"
         stroke="currentColor"
@@ -1265,7 +1345,13 @@ export const ProjectNameIcon = () => {
 
 export const PriceIcon = () => {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M14.1667 17.0832H5.83332C3.33332 17.0832 1.66666 15.8332 1.66666 12.9165V7.08317C1.66666 4.1665 3.33332 2.9165 5.83332 2.9165H14.1667C16.6667 2.9165 18.3333 4.1665 18.3333 7.08317V12.9165C18.3333 15.8332 16.6667 17.0832 14.1667 17.0832Z"
         stroke="currentColor"
@@ -1304,7 +1390,13 @@ export const PriceIcon = () => {
 
 export const PlatformIcon = () => {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M5.36669 1.6665H14.625C17.5917 1.6665 18.3334 2.40817 18.3334 5.3665V10.6415C18.3334 13.6082 17.5917 14.3415 14.6334 14.3415H5.36669C2.40835 14.3498 1.66669 13.6082 1.66669 10.6498V5.3665C1.66669 2.40817 2.40835 1.6665 5.36669 1.6665Z"
         stroke="currentColor"
@@ -1431,7 +1523,13 @@ export const ExpandedIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
 
 export const ContactIcon = () => {
   return (
-    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="19"
+      height="19"
+      viewBox="0 0 19 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M17.3917 14.3583C17.3917 14.6583 17.325 14.9667 17.1833 15.2667C17.0417 15.5667 16.8583 15.85 16.6167 16.1167C16.2083 16.5667 15.7583 16.8917 15.25 17.1C14.75 17.3083 14.2083 17.4167 13.625 17.4167C12.775 17.4167 11.8667 17.2167 10.9083 16.8083C9.95 16.4 8.99167 15.85 8.04167 15.1583C7.08333 14.4583 6.175 13.6833 5.30833 12.825C4.45 11.9583 3.675 11.05 2.98333 10.1C2.3 9.15 1.75 8.2 1.35 7.25833C0.95 6.30833 0.75 5.4 0.75 4.53333C0.75 3.96667 0.85 3.425 1.05 2.925C1.25 2.41667 1.56667 1.95 2.00833 1.53333C2.54167 1.00833 3.125 0.75 3.74167 0.75C3.975 0.75 4.20833 0.8 4.41667 0.9C4.63333 1 4.825 1.15 4.975 1.36667L6.90833 4.09167C7.05833 4.3 7.16667 4.49167 7.24167 4.675C7.31667 4.85 7.35833 5.025 7.35833 5.18333C7.35833 5.38333 7.3 5.58333 7.18333 5.775C7.075 5.96667 6.91667 6.16667 6.71667 6.36667L6.08333 7.025C5.99167 7.11667 5.95 7.225 5.95 7.35833C5.95 7.425 5.95833 7.48333 5.975 7.55C6 7.61667 6.025 7.66667 6.04167 7.71667C6.19167 7.99167 6.45 8.35 6.81667 8.78333C7.19167 9.21667 7.59167 9.65833 8.025 10.1C8.475 10.5417 8.90833 10.95 9.35 11.325C9.78333 11.6917 10.1417 11.9417 10.425 12.0917C10.4667 12.1083 10.5167 12.1333 10.575 12.1583C10.6417 12.1833 10.7083 12.1917 10.7833 12.1917C10.925 12.1917 11.0333 12.1417 11.125 12.05L11.7583 11.425C11.9667 11.2167 12.1667 11.0583 12.3583 10.9583C12.55 10.8417 12.7417 10.7833 12.95 10.7833C13.1083 10.7833 13.275 10.8167 13.4583 10.8917C13.6417 10.9667 13.8333 11.075 14.0417 11.2167L16.8 13.175C17.0167 13.325 17.1667 13.5 17.2583 13.7083C17.3417 13.9167 17.3917 14.125 17.3917 14.3583Z"
         stroke="currentColor"

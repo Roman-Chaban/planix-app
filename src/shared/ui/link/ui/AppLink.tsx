@@ -25,7 +25,11 @@ export const AppLink: FC<AppLinkProps> = ({
   const locale = (params?.locale as string) || DEFAULT_LOCALE;
   const localizedHref = buildHref(href, locale);
 
-  const linkClasses = buildClassName(styles.link, isUnderline && styles.underline, className);
+  const linkClasses = buildClassName(
+    styles.link,
+    isUnderline && styles.underline,
+    className,
+  );
 
   if (external) {
     return (

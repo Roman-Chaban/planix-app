@@ -14,18 +14,32 @@ import { CloseIcon } from '@/shared/ui/icons';
 
 import styles from './DeleteModal.module.scss';
 
-export const DeleteModal: FC<DeleteProjectModalProps> = ({ projectId, onClose, isOpen }) => {
+export const DeleteModal: FC<DeleteProjectModalProps> = ({
+  projectId,
+  onClose,
+  isOpen,
+}) => {
   const { t } = useTranslation('modal');
 
-  const { handleClose, handleDeleteProject, isProjectActionPending, reason, setReason, isDeleted } =
-    useDeleteProject({
-      projectId,
-      onClose,
-    });
+  const {
+    handleClose,
+    handleDeleteProject,
+    isProjectActionPending,
+    reason,
+    setReason,
+    isDeleted,
+  } = useDeleteProject({
+    projectId,
+    onClose,
+  });
 
   return (
     <Modal isOpen={isOpen} onClose={handleClose}>
-      <ModalHeader onClose={handleClose} title={t('title')} icon={<CloseIcon />} />
+      <ModalHeader
+        onClose={handleClose}
+        title={t('title')}
+        icon={<CloseIcon />}
+      />
 
       <Textarea
         value={reason}

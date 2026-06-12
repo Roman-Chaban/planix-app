@@ -7,7 +7,10 @@ import styles from './DashboardLayout.module.scss';
 
 export const DashboardLayout = () => {
   return (
-    <PageWrapper header={<Header title={'dashboard'} />} sectionClassName={styles.dashboard}>
+    <PageWrapper
+      header={<Header title={'dashboard'} />}
+      sectionClassName={styles.dashboard}
+    >
       <DashboardCards />
       <DashboardAnalytics />
     </PageWrapper>

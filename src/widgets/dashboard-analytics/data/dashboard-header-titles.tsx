@@ -1,4 +1,7 @@
-import { DashboardAnalyticsRevenue, VARIANTS } from '@/widgets/dashboard-analytics';
+import {
+  DashboardAnalyticsRevenue,
+  VARIANTS,
+} from '@/widgets/dashboard-analytics';
 import type { DashboardAnalyticsHeaderList } from '@/widgets/dashboard-analytics/model/types';
 
 const { PRIMARY, SECONDARY, TERTIARY } = VARIANTS;

@@ -1,6 +1,9 @@
 import type { FC } from 'react';
 
-import { type DetailsDescriptionProps, FileItem } from '@/widgets/project-details/ui/details';
+import {
+  type DetailsDescriptionProps,
+  FileItem,
+} from '@/widgets/project-details/ui/details';
 
 import { Box, Typography } from '@/shared/ui';
 

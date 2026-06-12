@@ -10,7 +10,8 @@ import {
   SettingsIcon,
 } from '@/shared/ui/icons';
 
-const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } = ROUTES;
+const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } =
+  ROUTES;
 
 export const sidebarNavItems: SidebarNavItems = [
   {

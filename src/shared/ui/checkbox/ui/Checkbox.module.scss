@@ -27,7 +27,12 @@
     border-color 0.35s ease-in-out;
 }
 
-@include checkbox-checked($primary-600, $primary-600, $primary-700, $primary-700);
+@include checkbox-checked(
+  $primary-600,
+  $primary-600,
+  $primary-700,
+  $primary-700
+);
 
 .checkIcon {
   color: $neutral-0;

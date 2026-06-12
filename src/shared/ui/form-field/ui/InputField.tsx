@@ -21,14 +21,23 @@ export const InputField: FC<InputFieldProps> = ({
   className,
 }) => {
   return (
-    <Box className={buildClassName(styles.inputWrapper, { [styles.error]: !!error })}>
+    <Box
+      className={buildClassName(styles.inputWrapper, {
+        [styles.error]: !!error,
+      })}
+    >
       {startIcon && (
         <FormIcon error={error} position={START} onClick={onStartIconClick}>
           {startIcon}
         </FormIcon>
       )}
 
-      <Input id={id} aria-invalid={!!error} {...inputProps} className={className} />
+      <Input
+        id={id}
+        aria-invalid={!!error}
+        {...inputProps}
+        className={className}
+      />
 
       {endIcon && (
         <FormIcon error={error} position={END} onClick={onEndIconClick}>

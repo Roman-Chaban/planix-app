@@ -26,7 +26,10 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
     id,
   } = project;
 
-  const rowActions = useMemo(() => actionsFactory(slug, id), [actionsFactory, slug, id]);
+  const rowActions = useMemo(
+    () => actionsFactory(slug, id),
+    [actionsFactory, slug, id],
+  );
 
   const shouldShowReason = isShowReason && status === STATUSES.CANCELED;
   const reasonContent = shouldShowReason ? reason : null;
@@ -46,7 +49,9 @@ export const ProjectTableRow: FC<ProjectTableRowProps> = ({
       <td className={styles.cell}>{price}</td>
 
       {isShowReason && (
-        <td className={buildClassName(styles.cell, styles.reason)}>{reasonContent}</td>
+        <td className={buildClassName(styles.cell, styles.reason)}>
+          {reasonContent}
+        </td>
       )}
 
       <td className={styles.cell}>

@@ -23,7 +23,9 @@ export const FileItem: FC<FileItemProps> = ({ file, onRemove }) => {
         <CloseIcon width={12} height={12} />
       </Button>
 
-      <Box className={`${styles.fileIconWrapper} ${isPdf ? styles.pdfType : styles.photoType}`}>
+      <Box
+        className={`${styles.fileIconWrapper} ${isPdf ? styles.pdfType : styles.photoType}`}
+      >
         {isPdf ? <PdfIcon /> : <UploadIcon />}
       </Box>
 

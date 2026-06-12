@@ -3,7 +3,11 @@
 import { useMemo, type FC } from 'react';
 
 import { ROUTES } from '@/app/routes';
-import { ProjectTableHeader, ProjectTableRow, ProjectTableColGroup } from '@/widgets/project-table';
+import {
+  ProjectTableHeader,
+  ProjectTableRow,
+  ProjectTableColGroup,
+} from '@/widgets/project-table';
 import { getProjectTableColumns } from '@/widgets/project-table/model/constants';
 import type { ProjectsTableProps } from '@/widgets/project-table/model/types';
 
@@ -22,7 +26,10 @@ export const ProjectsTable: FC<ProjectsTableProps> = ({
   isShowReason = false,
 }) => {
   const localizedRouter = useLocalizedRouter();
-  const columns = useMemo(() => getProjectTableColumns(isShowReason), [isShowReason]);
+  const columns = useMemo(
+    () => getProjectTableColumns(isShowReason),
+    [isShowReason],
+  );
 
   const dragRef = useDragScroll<HTMLDivElement>({
     axis: DRAG_SCROLL_AXIS,

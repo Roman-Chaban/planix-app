@@ -38,7 +38,9 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
         <Button
           onClick={toggleSidebar}
           variant="transparent"
-          className={buildClassName(styles.button, { [styles.iconCollapsed]: !isSidebarOpen })}
+          className={buildClassName(styles.button, {
+            [styles.iconCollapsed]: !isSidebarOpen,
+          })}
         >
           {renderToggleIcon}
         </Button>

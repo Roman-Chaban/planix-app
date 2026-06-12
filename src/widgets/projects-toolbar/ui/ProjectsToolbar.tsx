@@ -12,7 +12,10 @@ import { Box } from '@/shared/ui';
 
 import styles from './ProjectsToolbar.module.scss';
 
-export const ProjectToolbar: FC<ProjectToolbarProps> = ({ activeId, setActiveId }) => {
+export const ProjectToolbar: FC<ProjectToolbarProps> = ({
+  activeId,
+  setActiveId,
+}) => {
   const { handleCreateProject } = useProjectToolbar();
   const { isSidebarOpen } = useSidebar();
 
@@ -24,7 +27,11 @@ export const ProjectToolbar: FC<ProjectToolbarProps> = ({ activeId, setActiveId 
         { [styles.toolbarExpanded]: isSidebarOpen },
       )}
     >
-      <ProjectHeader activeId={activeId} setActiveId={setActiveId} isSidebarOpen={isSidebarOpen} />
+      <ProjectHeader
+        activeId={activeId}
+        setActiveId={setActiveId}
+        isSidebarOpen={isSidebarOpen}
+      />
       <ProjectActions handleCreateProject={handleCreateProject} />
     </Box>
   );

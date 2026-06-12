@@ -41,5 +41,7 @@ export const SidebarProvider = ({ children }: SidebarProviderProps) => {
     hydrated,
   };
 
-  return <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>;
+  return (
+    <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>
+  );
 };

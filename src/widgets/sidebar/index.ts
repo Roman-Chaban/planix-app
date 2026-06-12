@@ -1,4 +1,8 @@
-export type { SidebarNavItems, SidebarProps, SidebarNavProps } from './model/types';
+export type {
+  SidebarNavItems,
+  SidebarProps,
+  SidebarNavProps,
+} from './model/types';
 
 export { Sidebar } from './ui/Sidebar';
 export { SidebarNav } from './ui/SidebarNav';

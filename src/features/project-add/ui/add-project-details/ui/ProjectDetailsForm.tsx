@@ -20,7 +20,9 @@ import styles from './ProjectDetails.module.scss';
 
 const { PROJECT } = ROUTES;
 
-export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues }) => {
+export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({
+  defaultValues,
+}) => {
   const localizedRouter = useLocalizedRouter();
 
   const { createProject, isProjectActionPending } = useProjectActions();
@@ -54,7 +56,10 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({ defaultValues 
 
   return (
     <FormProvider {...form}>
-      <form className={styles.form} onSubmit={form.handleSubmit(handleCreateProject)}>
+      <form
+        className={styles.form}
+        onSubmit={form.handleSubmit(handleCreateProject)}
+      >
         <ProjectDetailsFields
           isProjectActionPending={isProjectActionPending}
           isDisabled={isDisabled}

@@ -1,11 +1,16 @@
 import type { FC } from 'react';
 
 import { Header } from '@/widgets/header';
-import { ProjectDetails, type ProjectDetailsLayoutProps } from '@/widgets/project-details';
+import {
+  ProjectDetails,
+  type ProjectDetailsLayoutProps,
+} from '@/widgets/project-details';
 import { ProjectHeader } from '@/widgets/project-header';
 import { PageWrapper } from '@/shared/ui';
 
-export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({ project }) => {
+export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({
+  project,
+}) => {
   return (
     <PageWrapper header={<Header title="projects" />}>
       <ProjectHeader

@@ -12,7 +12,11 @@ export const FileUploadItem: FC<FileUploadItemProps> = ({
   uploadPhotosLabel,
 }) => {
   return (
-    <Box onClick={handleTrigger} onKeyDown={handleKeyDown} className={styles.uploadCard}>
+    <Box
+      onClick={handleTrigger}
+      onKeyDown={handleKeyDown}
+      className={styles.uploadCard}
+    >
       <Box className={styles.iconContainer}>
         <UploadIcon width={20} height={20} />
       </Box>

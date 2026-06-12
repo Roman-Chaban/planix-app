@@ -3,7 +3,14 @@
 import { useCallback, useId, type FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, Typography, FormField, FormLabel, Input, FormError } from '@/shared/ui';
+import {
+  Box,
+  Typography,
+  FormField,
+  FormLabel,
+  Input,
+  FormError,
+} from '@/shared/ui';
 import {
   FileItem,
   FileUploadItem,
@@ -27,11 +34,12 @@ export const FileUpload: FC<FileUploadProps> = ({
 }) => {
   const uploadId = useId();
 
-  const { inputRef, handleTrigger, handleFileChange, handleKeyDown } = useFileUpload({
-    onFileSelect: (file) => {
-      onChange?.([...value, file]);
-    },
-  });
+  const { inputRef, handleTrigger, handleFileChange, handleKeyDown } =
+    useFileUpload({
+      onFileSelect: (file) => {
+        onChange?.([...value, file]);
+      },
+    });
 
   const handleRemoveFile = useCallback(
     (index: number) => {
@@ -60,7 +68,12 @@ export const FileUpload: FC<FileUploadProps> = ({
         multiple
       />
 
-      <Box tabIndex={0} className={buildClassName(styles.mainWrapper, { [styles.error]: !!error })}>
+      <Box
+        tabIndex={0}
+        className={buildClassName(styles.mainWrapper, {
+          [styles.error]: !!error,
+        })}
+      >
         {!hasFiles ? (
           <Box
             onClick={handleTrigger}

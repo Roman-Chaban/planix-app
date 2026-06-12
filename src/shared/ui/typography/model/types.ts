@@ -9,5 +9,5 @@ type TypographyOwnProps<T extends TypographyTag> = {
   testId?: string;
 };
 
-export type TypographyProps<T extends TypographyTag = 'span'> = TypographyOwnProps<T> &
-  ComponentPropsWithoutRef<T>;
+export type TypographyProps<T extends TypographyTag = 'span'> =
+  TypographyOwnProps<T> & ComponentPropsWithoutRef<T>;

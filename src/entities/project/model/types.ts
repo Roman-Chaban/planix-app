@@ -36,6 +36,10 @@ export type Project = {
 };
 
 export type CreateProjectPayload = ProjectDetailsFormData;
-export type UpdateProjectPayload = { id: ProjectId; data: Partial<ProjectDetailsFormData> };
+export type UpdateProjectPayload = {
+  id: ProjectId;
+  data: Partial<ProjectDetailsFormData>;
+};
 export type DeleteProjectPayload = { id: ProjectId };
-export type RejectReason = (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];
+export type RejectReason =
+  (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];

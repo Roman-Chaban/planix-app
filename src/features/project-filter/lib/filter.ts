@@ -3,7 +3,11 @@ import type { TabId } from '@/widgets/project-layout/model/types';
 import type { Project } from '@/entities/project';
 import { statusMap } from '@/shared/ui/status-badge/model/constants';
 
-export const filterProjects = (projects: Project[], tab: TabId, search: string): Project[] => {
+export const filterProjects = (
+  projects: Project[],
+  tab: TabId,
+  search: string,
+): Project[] => {
   const normalizedSearch = search.trim().toLowerCase();
   const statusFilter = statusMap[tab];
 

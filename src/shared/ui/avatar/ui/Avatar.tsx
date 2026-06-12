@@ -22,7 +22,14 @@ export const Avatar: FC<AvatarProps> = ({
   ...avatarProps
 }) => {
   return (
-    <Box className={buildClassName(styles.avatar, styles[size], styles[variant], className)}>
+    <Box
+      className={buildClassName(
+        styles.avatar,
+        styles[size],
+        styles[variant],
+        className,
+      )}
+    >
       {icon && <Box className={styles.icon}>{icon}</Box>}
 
       {!icon && src && (
@@ -36,7 +43,9 @@ export const Avatar: FC<AvatarProps> = ({
         />
       )}
 
-      {!icon && !src && <Box className={styles.fallback}>{fallback ?? 'Fallback'}</Box>}
+      {!icon && !src && (
+        <Box className={styles.fallback}>{fallback ?? 'Fallback'}</Box>
+      )}
     </Box>
   );
 };

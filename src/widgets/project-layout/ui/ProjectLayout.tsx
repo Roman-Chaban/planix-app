@@ -26,8 +26,15 @@ export const ProjectLayout = () => {
   } = useProjectsPageModel();
 
   return (
-    <PageWrapper header={<Header title={'projects'} />} sectionClassName={styles.projects}>
-      <ProjectToolbar control={control} activeId={activeId} setActiveId={setActiveId} />
+    <PageWrapper
+      header={<Header title={'projects'} />}
+      sectionClassName={styles.projects}
+    >
+      <ProjectToolbar
+        control={control}
+        activeId={activeId}
+        setActiveId={setActiveId}
+      />
 
       {showSkeleton && Skeleton && <Skeleton />}
 

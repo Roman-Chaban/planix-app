@@ -27,7 +27,11 @@ export const LoginContent: FC<LoginContentProps> = ({ control }) => {
           name="rememberMe"
           control={control}
           render={({ field }) => (
-            <Checkbox checked={field.value} onChange={field.onChange} label={t('rememberMe')} />
+            <Checkbox
+              checked={field.value}
+              onChange={field.onChange}
+              label={t('rememberMe')}
+            />
           )}
         />
 
@@ -36,7 +40,11 @@ export const LoginContent: FC<LoginContentProps> = ({ control }) => {
         </AppLink>
       </Box>
 
-      <AuthButton label={t('submitButton')} disabled={!isValid} className={styles.button} />
+      <AuthButton
+        label={t('submitButton')}
+        disabled={!isValid}
+        className={styles.button}
+      />
     </Box>
   );
 };

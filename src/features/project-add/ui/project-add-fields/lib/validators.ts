@@ -15,7 +15,8 @@ export const validateDateOrder = (
 
   if (compareDate) {
     const compare = dayjs(compareDate, [DATE_FORMAT.ISO, DATE_FORMAT.DISPLAY]);
-    const isOutOfOrder = type === 'start' ? target.isAfter(compare) : target.isBefore(compare);
+    const isOutOfOrder =
+      type === 'start' ? target.isAfter(compare) : target.isBefore(compare);
 
     if (isOutOfOrder) return errorMessages.outOfOrder;
   }

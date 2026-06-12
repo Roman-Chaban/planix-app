@@ -11,7 +11,18 @@ import type { TextareaProps } from '@/shared/ui/textarea';
 import styles from './Textarea.module.scss';
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ label, id, textareaClassName, labelClassName, placeholder, error, ...props }, ref) => {
+  (
+    {
+      label,
+      id,
+      textareaClassName,
+      labelClassName,
+      placeholder,
+      error,
+      ...props
+    },
+    ref,
+  ) => {
     const { t } = useTranslation();
 
     const generatedId = useId();
@@ -19,7 +30,10 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
 
     return (
       <Box className={styles.wrapper}>
-        <FormLabel htmlFor={textareaId} className={buildClassName(labelClassName)}>
+        <FormLabel
+          htmlFor={textareaId}
+          className={buildClassName(labelClassName)}
+        >
           {t(label)}
         </FormLabel>
 

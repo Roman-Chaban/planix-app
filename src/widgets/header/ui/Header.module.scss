@@ -67,7 +67,15 @@
   position: relative;
 
   &::after {
-    @include button-background-overlay('', absolute, 0, $primary-700, 0.05, inherit, none);
+    @include button-background-overlay(
+      '',
+      absolute,
+      0,
+      $primary-700,
+      0.05,
+      inherit,
+      none
+    );
   }
 }
 

@@ -8,5 +8,7 @@ import type { GridProps } from '@/shared/ui/grid';
 import styles from './Grid.module.scss';
 
 export const Grid: FC<GridProps> = ({ children, className }) => {
-  return <Box className={buildClassName(styles.grid, className)}>{children}</Box>;
+  return (
+    <Box className={buildClassName(styles.grid, className)}>{children}</Box>
+  );
 };

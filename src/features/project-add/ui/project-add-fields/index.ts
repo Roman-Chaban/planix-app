@@ -1,4 +1,8 @@
-export type { HookFormFieldProps, DateInputProps, DateFormFieldProps } from './model/types';
+export type {
+  HookFormFieldProps,
+  DateInputProps,
+  DateFormFieldProps,
+} from './model/types';
 
 export { DATE_FORMAT } from './lib/constants';
 

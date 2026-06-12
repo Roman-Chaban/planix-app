@@ -5,7 +5,11 @@ import { useTranslation } from 'react-i18next';
 
 import type { DeleteProjectActionsProps } from '@/features/project-delete';
 import { Button, Box } from '@/shared/ui';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
+import {
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  BUTTON_VARIANTS,
+} from '@/shared/ui/button/model/constants';
 
 import styles from './DeleteModal.module.scss';
 

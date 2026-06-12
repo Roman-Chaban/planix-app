@@ -42,7 +42,10 @@ export const projectDetailsSchema = (t: TFunction) => {
         .max(500, t('validation.descriptionMax')),
       files: zod
         .array(
-          zod.union([zod.instanceof(File), zod.object({ name: zod.string(), url: zod.string() })]),
+          zod.union([
+            zod.instanceof(File),
+            zod.object({ name: zod.string(), url: zod.string() }),
+          ]),
         )
         .min(1, t('validation.filesRequired'))
         .refine(
@@ -58,8 +61,16 @@ export const projectDetailsSchema = (t: TFunction) => {
     })
 
     .superRefine((data, ctx) => {
-      const start = dayjs(data.startDate, [DATE_FORMAT.INPUT, DATE_FORMAT.ISO], true);
-      const end = dayjs(data.dueDate, [DATE_FORMAT.INPUT, DATE_FORMAT.ISO], true);
+      const start = dayjs(
+        data.startDate,
+        [DATE_FORMAT.INPUT, DATE_FORMAT.ISO],
+        true,
+      );
+      const end = dayjs(
+        data.dueDate,
+        [DATE_FORMAT.INPUT, DATE_FORMAT.ISO],
+        true,
+      );
 
       if (data.startDate.length === 10 && !start.isValid()) {
         ctx.addIssue({
@@ -87,4 +98,6 @@ export const projectDetailsSchema = (t: TFunction) => {
     });
 };
 
-export type ProjectDetailsSchema = zod.infer<ReturnType<typeof projectDetailsSchema>>;
+export type ProjectDetailsSchema = zod.infer<
+  ReturnType<typeof projectDetailsSchema>
+>;

@@ -23,7 +23,15 @@ export default defineConfig([
       'import/order': [
         'error',
         {
-          groups: ['type', 'builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          groups: [
+            'type',
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
           pathGroups: [
             { pattern: 'react', group: 'external', position: 'before' },
 
@@ -44,7 +52,10 @@ export default defineConfig([
         },
       ],
 
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/consistent-type-imports': 'error',
 

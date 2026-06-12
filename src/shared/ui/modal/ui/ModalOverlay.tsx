@@ -10,9 +10,16 @@ type ModalOverlayProps = {
   closeOnOverlayClick: boolean;
 };
 
-export const ModalOverlay: FC<ModalOverlayProps> = ({ children, onClose, closeOnOverlayClick }) => {
+export const ModalOverlay: FC<ModalOverlayProps> = ({
+  children,
+  onClose,
+  closeOnOverlayClick,
+}) => {
   return (
-    <Box className={styles.overlay} onClick={closeOnOverlayClick ? onClose : undefined}>
+    <Box
+      className={styles.overlay}
+      onClick={closeOnOverlayClick ? onClose : undefined}
+    >
       {children}
     </Box>
   );

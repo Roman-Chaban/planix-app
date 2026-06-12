@@ -35,5 +35,8 @@ export type FileItemProps = {
   file: ProjectFile | File;
 };
 
-export type FileConfiguration = Record<string, { icon: JSX.Element; type: FileType }>;
+export type FileConfiguration = Record<
+  string,
+  { icon: JSX.Element; type: FileType }
+>;
 export type FileType = 'pdf' | 'image' | 'default';

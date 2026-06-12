@@ -1,4 +1,9 @@
-import type { InputHTMLAttributes, LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import type {
+  InputHTMLAttributes,
+  LabelHTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+} from 'react';
 
 import type { IconPosition } from '@/shared/ui/input/model/types';
 

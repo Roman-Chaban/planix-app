@@ -4,7 +4,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { signUpFormSchema, type SignUpFormSchema } from '@/features/auth-by-registration';
+import {
+  signUpFormSchema,
+  type SignUpFormSchema,
+} from '@/features/auth-by-registration';
 
 export const useSignUp = () => {
   const { t } = useTranslation('signUpForm');

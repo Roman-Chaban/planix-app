@@ -10,7 +10,10 @@ export const useLanguageSelect = () => {
   const router = useRouter();
   const pathname = usePathname() ?? '/';
 
-  const segments = useMemo(() => pathname.split('/').filter(Boolean), [pathname]);
+  const segments = useMemo(
+    () => pathname.split('/').filter(Boolean),
+    [pathname],
+  );
 
   const currentLocale = useMemo(() => {
     const possibleLocale = segments[0];
@@ -21,7 +24,9 @@ export const useLanguageSelect = () => {
   }, [segments]);
 
   const selectValue = useMemo(
-    () => languageOptions.find((option) => option.value === currentLocale) ?? languageOptions[0],
+    () =>
+      languageOptions.find((option) => option.value === currentLocale) ??
+      languageOptions[0],
     [currentLocale],
   );
 
@@ -34,7 +39,8 @@ export const useLanguageSelect = () => {
       newSegments[0] = newLocale;
 
       const newPath = '/' + newSegments.join('/');
-      const search = typeof window !== 'undefined' ? window.location.search : '';
+      const search =
+        typeof window !== 'undefined' ? window.location.search : '';
 
       router.push(newPath + search);
     },

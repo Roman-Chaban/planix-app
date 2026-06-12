@@ -3,7 +3,11 @@
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { LoginContent, LoginFields, useLogin } from '@/features/auth-by-credentials';
+import {
+  LoginContent,
+  LoginFields,
+  useLogin,
+} from '@/features/auth-by-credentials';
 
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 
@@ -29,7 +33,11 @@ export const LoginForm = () => {
       }
       footer={
         <AuthFooter>
-          <AuthRedirect title={t('noAccount')} linkText={t('registration')} href={LOGIN} />
+          <AuthRedirect
+            title={t('noAccount')}
+            linkText={t('registration')}
+            href={LOGIN}
+          />
         </AuthFooter>
       }
     >

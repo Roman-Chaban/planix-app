@@ -10,16 +10,21 @@ export const signUpFormSchema = (t: TFunction) => {
         .trim()
         .min(5, { message: t('validation.fullName.min') })
         .max(25, { message: t('validation.fullName.max') })
-        .regex(/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s'-]+$/, { message: t('validation.fullName.invalid') }),
+        .regex(/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s'-]+$/, {
+          message: t('validation.fullName.invalid'),
+        }),
 
       email: zod.string().email({ message: t('validation.email.invalid') }),
 
       password: zod
         .string()
         .min(8, { message: t('validation.password.min') })
-        .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, {
-          message: t('validation.password.weak'),
-        }),
+        .regex(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+          {
+            message: t('validation.password.weak'),
+          },
+        ),
 
       confirmPassword: zod.string(),
 
@@ -27,7 +32,9 @@ export const signUpFormSchema = (t: TFunction) => {
         .string()
         .min(10, { message: t('validation.contact.invalid') })
         .max(15, { message: t('validation.contact.invalid') })
-        .regex(/^\+?[1-9]\d{1,14}$/, { message: t('validation.contact.invalid') }),
+        .regex(/^\+?[1-9]\d{1,14}$/, {
+          message: t('validation.contact.invalid'),
+        }),
 
       birthDate: zod.string().refine(
         (val) => {

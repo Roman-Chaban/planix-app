@@ -6,7 +6,12 @@ import { useLogin } from '@/features/auth-by-credentials';
 import { usePasswordToggle } from '@/features/auth-by-credentials/lib/usePasswordToggle';
 
 import { FormInputField } from '@/shared/ui';
-import { ViewIcon, ViewOffIcon, LockIcon, MessageIcon } from '@/shared/ui/icons';
+import {
+  ViewIcon,
+  ViewOffIcon,
+  LockIcon,
+  MessageIcon,
+} from '@/shared/ui/icons';
 
 import { INPUT_TYPES } from '@/shared/ui/input/model/constants';
 

@@ -10,5 +10,9 @@ import styles from './FormField.module.scss';
 export const FormError: FC<FormErrorProps> = ({ className, error }) => {
   if (!error) return null;
 
-  return <Typography className={buildClassName(styles.errorText, className)}>{error}</Typography>;
+  return (
+    <Typography className={buildClassName(styles.errorText, className)}>
+      {error}
+    </Typography>
+  );
 };

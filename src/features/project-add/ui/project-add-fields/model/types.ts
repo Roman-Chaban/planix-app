@@ -8,7 +8,10 @@ export type HookFormFieldProps = {
   ref?: Ref<HTMLInputElement>;
 };
 
-export type DateInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, keyof HookFormFieldProps> &
+export type DateInputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  keyof HookFormFieldProps
+> &
   HookFormFieldProps;
 
 export type DateFormFieldProps = {

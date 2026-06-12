@@ -5,9 +5,14 @@ import { useForm } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
+import {
+  projectDetailsSchema,
+  type ProjectDetailsSchema,
+} from '@/features/project-add';
 
-export const useProjectDetailsForm = (defaultValues?: Partial<ProjectDetailsSchema>) => {
+export const useProjectDetailsForm = (
+  defaultValues?: Partial<ProjectDetailsSchema>,
+) => {
   const { t } = useTranslation('projectAdd');
 
   return useForm<ProjectDetailsSchema>({

@@ -18,7 +18,11 @@ const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 
-export const AuthButton: FC<AuthButtonProps> = ({ label, className, disabled }) => {
+export const AuthButton: FC<AuthButtonProps> = ({
+  label,
+  className,
+  disabled,
+}) => {
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;

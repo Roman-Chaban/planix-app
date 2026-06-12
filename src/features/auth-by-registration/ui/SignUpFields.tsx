@@ -111,7 +111,11 @@ export const SignUpFields = () => {
         />
       </Box>
 
-      <AuthButton label={t('registration')} disabled={!isValid} className={styles.button} />
+      <AuthButton
+        label={t('registration')}
+        disabled={!isValid}
+        className={styles.button}
+      />
     </>
   );
 };

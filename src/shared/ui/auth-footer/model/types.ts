@@ -1,4 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type AuthFooterProps = {
-  title: string;
-  link: string;
+  children: ReactNode;
 };

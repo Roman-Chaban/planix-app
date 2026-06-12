@@ -39,3 +39,4 @@ export { PdfIcon } from './Icons';
 export { CollapsedIcon } from './Icons';
 export { ExpandedIcon } from './Icons';
 export { ContactIcon } from './Icons';
+export { BackIcon } from './Icons';

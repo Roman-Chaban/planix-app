@@ -19,6 +19,8 @@ export const useLogin = () => {
 
   return {
     ...form,
+    register: form.register,
+    control: form.control,
     onSubmit,
     errors: form.formState.errors,
   };

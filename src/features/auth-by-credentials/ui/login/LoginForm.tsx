@@ -12,11 +12,11 @@ import { AuthWrapper } from '@/shared/ui/auth-wrapper';
 export const LoginForm = () => {
   const { t } = useTranslation('login');
 
-  const form = useLogin();
+  const { register, errors, control, onSubmit } = useLogin();
 
   return (
     <AuthWrapper
-      onSubmit={form.onSubmit}
+      onSubmit={onSubmit}
       header={
         <AuthHeader
           title={t('title')}
@@ -27,13 +27,13 @@ export const LoginForm = () => {
       footer={<AuthFooter title={t('noAccount')} link={t('registration')} />}
     >
       <LoginFields
-        emailField={form.register('email')}
-        passwordField={form.register('password')}
-        emailError={form.errors.email?.message}
-        passwordError={form.errors.password?.message}
+        emailField={register('email')}
+        passwordField={register('password')}
+        emailError={errors.email?.message}
+        passwordError={errors.password?.message}
       />
 
-      <LoginContent control={form.control} />
+      <LoginContent control={control} />
     </AuthWrapper>
   );
 };

@@ -40,7 +40,11 @@ export const LoginContent: FC<LoginContentProps> = ({ control }) => {
         </AppLink>
       </Box>
 
-      <AuthButton label={t('submitButton')} disabled={!isValid} />
+      <AuthButton
+        label={t('submitButton')}
+        disabled={!isValid}
+        maxWidth={8.188}
+      />
     </Box>
   );
 };

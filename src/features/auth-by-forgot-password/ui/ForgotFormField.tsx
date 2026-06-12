@@ -27,7 +27,7 @@ export const ForgotFormField = () => {
         startIcon={<MessageIcon />}
       />
 
-      <AuthButton label={t('button')} disabled={!isValid} />
+      <AuthButton label={t('button')} disabled={!isValid} maxWidth={7.75} />
     </>
   );
 };

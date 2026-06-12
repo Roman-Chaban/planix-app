@@ -111,7 +111,11 @@ export const RegisterFormFields = () => {
         />
       </Box>
 
-      <AuthButton label={t('registration')} disabled={!isValid} />
+      <AuthButton
+        label={t('registration')}
+        disabled={!isValid}
+        maxWidth={11.563}
+      />
     </>
   );
 };

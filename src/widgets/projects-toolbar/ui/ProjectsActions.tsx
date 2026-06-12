@@ -5,6 +5,7 @@ import type { ProjectsActionsProps } from '@/widgets/projects-toolbar';
 import { Box, ProjectButton, InputField } from '@/shared/ui';
 
 import {
+  BUTTON_MAX_WIDTH,
   BUTTON_SHAPES,
   BUTTON_SIZES,
   BUTTON_TYPES,
@@ -20,6 +21,7 @@ const { BUTTON } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
+const { LG } = BUTTON_MAX_WIDTH;
 
 export const ProjectActions: FC<ProjectsActionsProps> = ({
   handleCreateProject,
@@ -48,7 +50,7 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
         variant={DEFAULT}
         size={LARGE}
         onClick={handleCreateProject}
-        fullWidth
+        maxWidth={LG}
       />
     </Box>
   );

@@ -13,6 +13,7 @@ import {
 } from '@/features/project-add/ui/project-add-fields';
 import { Box, ProjectButton } from '@/shared/ui';
 import {
+  BUTTON_MAX_WIDTH,
   BUTTON_SHAPES,
   BUTTON_SIZES,
   BUTTON_TYPES,
@@ -23,6 +24,7 @@ const { SUBMIT } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { ROUNDED } = BUTTON_SHAPES;
 const { LARGE } = BUTTON_SIZES;
+const { LG } = BUTTON_MAX_WIDTH;
 
 import styles from './ProjectDetails.module.scss';
 
@@ -48,17 +50,15 @@ export const ProjectDetailsFields: FC<ProjectDetailsFieldsProps> = ({
       <FilesField />
       <DescriptionField />
 
-      <Box className={styles.buttonWrapper}>
-        <ProjectButton
-          type={SUBMIT}
-          shape={ROUNDED}
-          variant={DEFAULT}
-          size={LARGE}
-          fullWidth
-          isLoading={isProjectActionPending}
-          disabled={isDisabled}
-        />
-      </Box>
+      <ProjectButton
+        type={SUBMIT}
+        shape={ROUNDED}
+        variant={DEFAULT}
+        size={LARGE}
+        isLoading={isProjectActionPending}
+        disabled={isDisabled}
+        maxWidth={LG}
+      />
     </>
   );
 };

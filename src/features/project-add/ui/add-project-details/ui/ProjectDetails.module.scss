@@ -39,12 +39,3 @@
     @include flex-col(1.5rem, start, stretch, column);
   }
 }
-
-.buttonWrapper {
-  width: 100%;
-  max-width: 11.438rem;
-
-  @include respond(sm) {
-    max-width: 100%;
-  }
-}

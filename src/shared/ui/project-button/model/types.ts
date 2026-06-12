@@ -13,4 +13,5 @@ export type ProjectButtonProps = Pick<
   | 'shape'
   | 'className'
   | 'isLoading'
+  | 'maxWidth'
 >;

@@ -11,7 +11,7 @@ import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { loginI18n } from '@/features/auth-by-credentials/i18n';
 import { forgotPasswordFormI18n } from '@/features/auth/recover-password';
-import { signUpI18n } from '@/features/auth-by-registration';
+import { signUpI18n } from '@/features/auth/registration';
 import { projectAddI18n } from '@/features/project-add/i18n';
 import { deleteProjectI18n } from '@/features/project-delete/i18n';
 

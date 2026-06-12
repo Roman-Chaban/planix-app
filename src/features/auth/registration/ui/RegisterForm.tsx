@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { RegisterFormFields } from '@/features/auth-by-registration';
+import { RegisterFormFields } from '@/features/auth/registration';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { AuthWrapper } from '@/shared/ui/auth-wrapper';
 

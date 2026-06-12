@@ -1,4 +1,4 @@
-import { RegisterForm } from '@/features/auth-by-registration';
+import { RegisterForm } from '@/features/auth/registration';
 import { AuthLayout } from '@/shared/ui';
 
 export default function RegisterPage() {

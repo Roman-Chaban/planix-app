@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { useSignUp } from '@/features/auth-by-registration';
+import { useSignUp } from '@/features/auth/registration';
 import { AuthButton, Box, FormInputField } from '@/shared/ui';
 
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';

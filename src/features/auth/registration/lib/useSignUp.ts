@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import {
   signUpFormSchema,
   type SignUpFormSchema,
-} from '@/features/auth-by-registration';
+} from '@/features/auth/registration';
 
 export const useSignUp = () => {
   const { t } = useTranslation('signUpForm');

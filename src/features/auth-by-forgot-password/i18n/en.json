@@ -3,5 +3,16 @@
   "subtitle": "Enter your email and we will send password reset link",
 
   "backTitle": "Go Back To ",
-  "backLink": "Log In"
+  "backLink": "Log In",
+
+  "emailLabel": "Email Address",
+  "emailPlaceholder": "Enter your email address",
+
+  "button": "Send",
+
+  "validation": {
+    "email": {
+      "invalid": "Please enter a valid email address"
+    }
+  }
 }

@@ -4,7 +4,7 @@ import { AuthLayout } from '@/shared/ui';
 export default function ForgotPasswordPage() {
   return (
     <AuthLayout>
-      <ForgotForm  />
+      <ForgotForm />
     </AuthLayout>
   );
 }

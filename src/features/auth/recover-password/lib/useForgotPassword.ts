@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import {
   type ForgotPasswordSchema,
   forgotPasswordSchema,
-} from '@/features/auth-by-forgot-password';
+} from '@/features/auth/recover-password';
 
 export const useForgotPassword = () => {
   const { t } = useTranslation('forgotPasswordForm');

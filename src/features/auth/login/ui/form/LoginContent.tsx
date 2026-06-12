@@ -6,8 +6,7 @@ import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { useLogin } from '@/features/auth-by-credentials';
-import type { LoginContentProps } from '@/features/auth-by-credentials/model/types';
+import { useLogin, type LoginContentProps } from '@/features/auth/login';
 
 import { Box, Checkbox, AppLink, AuthButton } from '@/shared/ui';
 

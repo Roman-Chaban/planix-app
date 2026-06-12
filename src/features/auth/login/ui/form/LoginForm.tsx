@@ -3,15 +3,9 @@
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import {
-  LoginContent,
-  LoginFields,
-  useLogin,
-} from '@/features/auth-by-credentials';
+import { LoginContent, LoginFields, useLogin } from '@/features/auth/login';
 
-import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
-
-import { AuthWrapper } from '@/shared/ui/auth-wrapper';
+import { AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from '@/shared/ui';
 
 const { LOGIN } = ROUTES;
 

@@ -6,7 +6,7 @@ import { ROUTES } from '@/app/routes';
 import {
   useForgotPassword,
   ForgotFormField,
-} from '@/features/auth-by-forgot-password';
+} from '@/features/auth/recover-password';
 import { AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 

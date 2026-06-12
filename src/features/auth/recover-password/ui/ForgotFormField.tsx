@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { useForgotPassword } from '@/features/auth-by-forgot-password';
+import { useForgotPassword } from '@/features/auth/recover-password';
 import { AuthButton, FormInputField } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 import { MessageIcon } from '@/shared/ui/icons';

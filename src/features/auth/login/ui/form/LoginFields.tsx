@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { useLogin } from '@/features/auth-by-credentials';
-import { usePasswordToggle } from '@/features/auth-by-credentials/lib/usePasswordToggle';
+import { useLogin, usePasswordToggle } from '@/features/auth/login';
 
 import { FormInputField } from '@/shared/ui';
 import {

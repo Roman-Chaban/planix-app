@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { loginSchema, type LoginSchema } from '@/features/auth-by-credentials';
+import { loginSchema, type LoginSchema } from '@/features/auth/login';
 
 export const useLogin = () => {
   const { t } = useTranslation('login');

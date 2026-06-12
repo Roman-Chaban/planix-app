@@ -1,7 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { useSignUp } from '@/features/auth-by-registration';
@@ -22,10 +20,10 @@ import styles from './SignUp.module.scss';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 
-export const SignUpFields: FC = () => {
+export const SignUpFields = () => {
   const { t } = useTranslation('signUpForm');
 
-  const { register, errors } = useSignUp();
+  const { register, errors, isValid } = useSignUp();
 
   return (
     <>
@@ -35,7 +33,7 @@ export const SignUpFields: FC = () => {
         startIcon={<ClientIcon width={20} height={20} />}
         error={errors.fullName?.message}
         inputProps={{
-          ...register('fullName', {}),
+          ...register('fullName'),
           type: TEXT,
           placeholder: t('fullNamePlaceholder'),
           autoComplete: 'name',
@@ -48,7 +46,7 @@ export const SignUpFields: FC = () => {
         startIcon={<MessageIcon />}
         error={errors.email?.message}
         inputProps={{
-          ...register('email', {}),
+          ...register('email'),
           type: EMAIL,
           placeholder: t('emailPlaceholder'),
           autoComplete: 'email',
@@ -63,7 +61,7 @@ export const SignUpFields: FC = () => {
           endIcon={<ViewOffIcon />}
           error={errors.password?.message}
           inputProps={{
-            ...register('password', {}),
+            ...register('password'),
             type: PASSWORD,
             placeholder: t('passwordPlaceholder'),
             autoComplete: 'new-password',
@@ -77,7 +75,7 @@ export const SignUpFields: FC = () => {
           endIcon={<ViewOffIcon />}
           error={errors.confirmPassword?.message}
           inputProps={{
-            ...register('confirmPassword', {}),
+            ...register('confirmPassword'),
             type: PASSWORD,
             placeholder: t('confirmPasswordPlaceholder'),
             autoComplete: 'new-password',
@@ -113,7 +111,7 @@ export const SignUpFields: FC = () => {
         />
       </Box>
 
-      <AuthButton label={t('registration')} className={styles.button} />
+      <AuthButton label={t('registration')} disabled={!isValid} className={styles.button} />
     </>
   );
 };

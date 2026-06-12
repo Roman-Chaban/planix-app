@@ -1,7 +1,7 @@
 @use '@/shared/styles' as *;
 
 .box {
-  @include flex-row($space-6);
+  @include flex-row($space-6, start, start);
 
   @include respond(xl) {
     flex-direction: column;
@@ -10,4 +10,5 @@
 
 .button {
   @include button-default-wrapper-size(11.438rem);
+  margin-block-start: 2.125rem;
 }

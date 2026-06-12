@@ -9,7 +9,7 @@ import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
-import { loginI18n } from '@/features/auth-by-credentials/i18n';
+import { loginI18n } from '@/features/auth/login/i18n';
 import { forgotPasswordFormI18n } from '@/features/auth/recover-password';
 import { signUpI18n } from '@/features/auth/registration';
 import { projectAddI18n } from '@/features/project-add/i18n';

@@ -29,13 +29,13 @@ export const AuthButton: FC<AuthButtonProps> = ({
 
   return (
     <Button
-      style={{ maxWidth: `${maxWidth}rem` }}
       type={SUBMIT}
       variant={DEFAULT}
       size={buttonSizes}
       shape={ROUNDED}
       disabled={disabled}
       fullWidth
+      maxWidth={maxWidth}
     >
       {label}
     </Button>

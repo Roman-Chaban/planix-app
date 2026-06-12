@@ -21,5 +21,30 @@
   "contactPlaceholder": "Enter Contact No",
 
   "birthDate": "Date of Birth",
-  "birthDatePlaceholder": "Select Date of Birth"
+  "birthDatePlaceholder": "Select Date of Birth",
+
+  "validation": {
+    "fullName": {
+      "min": "Full name must be at least 5 characters",
+      "max": "Full name cannot exceed 25 characters",
+      "invalid": "Full name can only contain letters, spaces, and hyphens"
+    },
+    "email": {
+      "invalid": "Please enter a valid email address"
+    },
+    "password": {
+      "min": "Password must be at least 8 characters",
+      "weak": "Password must include at least one uppercase letter, one number, and one special character",
+      "required": "Password is required"
+    },
+    "confirmPassword": {
+      "mismatch": "Passwords do not match"
+    },
+    "contact": {
+      "invalid": "Please enter a valid phone number (10-15 digits)"
+    },
+    "birthDate": {
+      "invalid": "Please select a valid date in the past"
+    }
+  }
 }

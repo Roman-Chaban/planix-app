@@ -6,7 +6,7 @@ import type { AuthFooterProps } from '@/shared/ui/auth-footer';
 
 import styles from './AuthFooter.module.scss';
 
-const { SIGN_UP } = ROUTES;
+const { REGISTER: SIGN_UP } = ROUTES;
 
 export const AuthFooter: FC<AuthFooterProps> = ({ title, link }) => {
   return (

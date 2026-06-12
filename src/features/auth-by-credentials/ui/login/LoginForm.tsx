@@ -21,6 +21,7 @@ export const LoginForm = () => {
           title={t('title')}
           subtitle={t('subtitle')}
           highlightedText={t('highlightedText')}
+          isHighlightedIcon
         />
       }
       footer={<AuthFooter title={t('noAccount')} link={t('registration')} />}

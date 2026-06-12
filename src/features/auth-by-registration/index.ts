@@ -1,4 +1,4 @@
-export { signUpFormSchema, type SignUpFormSchema } from './lib/form.schema';
+export { signUpFormSchema, type SignUpFormSchema } from './model/form.schema';
 
 export { signUpI18n } from './i18n';
 

@@ -3,6 +3,7 @@
 .field {
   width: 100%;
   @include flex-col(0.188rem, start, stretch, column);
+  flex: 1;
 }
 
 .inputWrapper {
@@ -63,4 +64,9 @@
   @include respond(sm) {
     font-size: $body-sm-font-size;
   }
+}
+
+.errorLabel {
+  color: $error-600;
+  font-weight: $font-weight-medium;
 }

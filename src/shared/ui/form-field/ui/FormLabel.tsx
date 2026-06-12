@@ -9,7 +9,7 @@ import styles from './FormField.module.scss';
 export const FormLabel: FC<FormLabelProps> = ({ children, className, error, ...props }) => {
   return (
     <label
-      className={buildClassName(styles.label, className, { [styles.errorText]: !!error })}
+      className={buildClassName(styles.label, className, { [styles.errorLabel]: !!error })}
       {...props}
     >
       {children}

@@ -1,0 +1,15 @@
+@use '@/shared/styles' as *;
+
+.box {
+  @include flex-row(0.5rem, start, center);
+
+  & svg {
+    color: $back-icon-primary;
+  }
+}
+
+.text,
+.link {
+  line-height: 150%;
+  font-size: $body-lg-font-size;
+}

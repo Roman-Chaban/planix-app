@@ -16,11 +16,11 @@ import {
 
 import { INPUT_TYPES } from '@/shared/ui/input';
 
-import styles from './SignUp.module.scss';
+import styles from './RegisterForm.module.scss';
 
 const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 
-export const SignUpFields = () => {
+export const RegisterFormFields = () => {
   const { t } = useTranslation('signUpForm');
 
   const { register, errors, isValid } = useSignUp();

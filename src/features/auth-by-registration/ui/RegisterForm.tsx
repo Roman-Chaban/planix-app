@@ -3,13 +3,13 @@
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { SignUpFields } from '@/features/auth-by-registration';
+import { RegisterFormFields } from '@/features/auth-by-registration';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { AuthWrapper } from '@/shared/ui/auth-wrapper';
 
 const { REGISTER } = ROUTES;
 
-export const SignUpForm = () => {
+export const RegisterForm = () => {
   const { t } = useTranslation('signUpForm');
 
   return (
@@ -31,7 +31,7 @@ export const SignUpForm = () => {
         </AuthFooter>
       }
     >
-      <SignUpFields />
+      <RegisterFormFields />
     </AuthWrapper>
   );
 };

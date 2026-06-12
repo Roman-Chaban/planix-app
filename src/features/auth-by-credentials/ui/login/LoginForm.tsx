@@ -2,11 +2,14 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { ROUTES } from '@/app/routes';
 import { LoginContent, LoginFields, useLogin } from '@/features/auth-by-credentials';
 
-import { AuthFooter, AuthHeader } from '@/shared/ui';
+import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 
 import { AuthWrapper } from '@/shared/ui/auth-wrapper';
+
+const { LOGIN } = ROUTES;
 
 export const LoginForm = () => {
   const { t } = useTranslation('login');
@@ -24,7 +27,11 @@ export const LoginForm = () => {
           isHighlightedIcon
         />
       }
-      footer={<AuthFooter title={t('noAccount')} link={t('registration')} />}
+      footer={
+        <AuthFooter>
+          <AuthRedirect title={t('noAccount')} linkText={t('registration')} href={LOGIN} />
+        </AuthFooter>
+      }
     >
       <LoginFields />
 

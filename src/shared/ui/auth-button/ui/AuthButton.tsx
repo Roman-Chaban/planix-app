@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { Box, Button } from '@/shared/ui';
 
+import type { AuthButtonProps } from '@/shared/ui/auth-button';
 import {
   BUTTON_SHAPES,
   BUTTON_SIZES,
@@ -17,18 +18,21 @@ const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 
-type AuthButtonProps = {
-  label: string;
-  className?: string;
-};
-
-export const AuthButton: FC<AuthButtonProps> = ({ label, className }) => {
+export const AuthButton: FC<AuthButtonProps> = ({ label, className, disabled }) => {
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
+
   return (
     <Box className={className}>
-      <Button type={SUBMIT} variant={DEFAULT} size={buttonSizes} shape={ROUNDED} fullWidth>
+      <Button
+        type={SUBMIT}
+        variant={DEFAULT}
+        size={buttonSizes}
+        shape={ROUNDED}
+        disabled={disabled}
+        fullWidth
+      >
         {label}
       </Button>
     </Box>

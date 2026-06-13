@@ -5,17 +5,33 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 import {
   useForgotPassword,
-  ForgotFormField,
+  registerFormFields,
 } from '@/features/auth/recover-password';
-import { AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from '@/shared/ui';
+import {
+  AuthButton,
+  AuthFooter,
+  AuthHeader,
+  AuthRedirect,
+  AuthWrapper,
+  FormFields,
+} from '@/shared/ui';
+import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 import { BackIcon } from '@/shared/ui/icons';
 
 const { LOGIN } = ROUTES;
+const { MD } = BUTTON_MAX_WIDTH;
 
 export const ForgotForm = () => {
   const { t } = useTranslation('forgotPasswordForm');
 
-  const { onSubmit } = useForgotPassword();
+  const { onSubmit, register, errors, isValid } = useForgotPassword();
+
+  const formFieldsProps = {
+    translationNamespace: 'forgotPasswordForm',
+    register,
+    errors,
+    isValid,
+  };
 
   return (
     <AuthWrapper
@@ -32,7 +48,9 @@ export const ForgotForm = () => {
         </AuthFooter>
       }
     >
-      <ForgotFormField />
+      <FormFields fields={registerFormFields} {...formFieldsProps} />
+
+      <AuthButton label={t('button')} disabled={!isValid} maxWidth={MD} />
     </AuthWrapper>
   );
 };

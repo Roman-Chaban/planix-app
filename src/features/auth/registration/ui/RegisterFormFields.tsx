@@ -2,24 +2,16 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { useSignUp } from '@/features/auth/registration';
-import { AuthButton, Box, FormInputField } from '@/shared/ui';
-
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 import {
-  ClientIcon,
-  MessageIcon,
-  LockIcon,
-  ViewOffIcon,
-  CalendarIcon,
-  ContactIcon,
-} from '@/shared/ui/icons';
-
-import { INPUT_TYPES } from '@/shared/ui/input';
+  registerFormFields,
+  type RegisterFormValues,
+  useSignUp,
+} from '@/features/auth/registration';
+import { AuthButton, Box, FormFields } from '@/shared/ui';
+import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
 import styles from './RegisterForm.module.scss';
 
-const { EMAIL, PASSWORD, TEXT } = INPUT_TYPES;
 const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterFormFields = () => {
@@ -27,89 +19,35 @@ export const RegisterFormFields = () => {
 
   const { register, errors, isValid } = useSignUp();
 
+  const personalFields = registerFormFields.slice(0, 2);
+  const securityFields = registerFormFields.slice(2, 4);
+  const additionalFields = registerFormFields.slice(4, 6);
+
+  const formFieldsProps = {
+    translationNamespace: 'signUpForm',
+    register,
+    errors,
+    isValid,
+  };
+
   return (
     <>
-      <FormInputField
-        id="fullName"
-        label={t('fullName')}
-        startIcon={<ClientIcon width={20} height={20} />}
-        error={errors.fullName?.message}
-        inputProps={{
-          ...register('fullName'),
-          type: TEXT,
-          placeholder: t('fullNamePlaceholder'),
-          autoComplete: 'name',
-        }}
-      />
-
-      <FormInputField
-        id="email"
-        label={t('email')}
-        startIcon={<MessageIcon />}
-        error={errors.email?.message}
-        inputProps={{
-          ...register('email'),
-          type: EMAIL,
-          placeholder: t('emailPlaceholder'),
-          autoComplete: 'email',
-        }}
+      <FormFields<RegisterFormValues>
+        fields={personalFields}
+        {...formFieldsProps}
       />
 
       <Box className={styles.box}>
-        <FormInputField
-          id="password"
-          label={t('password')}
-          startIcon={<LockIcon />}
-          endIcon={<ViewOffIcon />}
-          error={errors.password?.message}
-          inputProps={{
-            ...register('password'),
-            type: PASSWORD,
-            placeholder: t('passwordPlaceholder'),
-            autoComplete: 'new-password',
-          }}
-        />
-
-        <FormInputField
-          id="confirmPassword"
-          label={t('confirmPassword')}
-          startIcon={<LockIcon />}
-          endIcon={<ViewOffIcon />}
-          error={errors.confirmPassword?.message}
-          inputProps={{
-            ...register('confirmPassword'),
-            type: PASSWORD,
-            placeholder: t('confirmPasswordPlaceholder'),
-            autoComplete: 'new-password',
-          }}
+        <FormFields<RegisterFormValues>
+          fields={securityFields}
+          {...formFieldsProps}
         />
       </Box>
 
       <Box className={styles.box}>
-        <FormInputField
-          id="contact"
-          label={t('contact')}
-          startIcon={<ContactIcon />}
-          error={errors.contact?.message}
-          inputProps={{
-            ...register('contact'),
-            type: TEXT,
-            placeholder: t('contactPlaceholder'),
-            autoComplete: 'tel',
-          }}
-        />
-
-        <FormInputField
-          id="birthDate"
-          label={t('birthDate')}
-          startIcon={<CalendarIcon />}
-          error={errors.birthDate?.message}
-          inputProps={{
-            ...register('birthDate'),
-            type: TEXT,
-            placeholder: t('birthDatePlaceholder'),
-            autoComplete: 'bday',
-          }}
+        <FormFields<RegisterFormValues>
+          fields={additionalFields}
+          {...formFieldsProps}
         />
       </Box>
 

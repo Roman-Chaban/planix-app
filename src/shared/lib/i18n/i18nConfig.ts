@@ -25,6 +25,7 @@ const configOptions = {
     'projectDetails',
     'signUpForm',
     'forgotPasswordForm',
+    'resetPasswordForm',
   ],
   interpolation: {
     escapeValue: false,

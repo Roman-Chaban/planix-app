@@ -12,6 +12,7 @@ import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { loginI18n } from '@/features/auth/login/i18n';
 import { forgotPasswordFormI18n } from '@/features/auth/recover-password';
 import { signUpI18n } from '@/features/auth/registration';
+import { resetPasswordFormI18n } from '@/features/auth/reset-password';
 import { projectAddI18n } from '@/features/project-add/i18n';
 import { deleteProjectI18n } from '@/features/project-delete/i18n';
 
@@ -33,6 +34,7 @@ export const resources = {
     projectDetails: projectDetailsI18n.en,
     signUpForm: signUpI18n.en,
     forgotPasswordForm: forgotPasswordFormI18n.en,
+    resetPasswordForm: resetPasswordFormI18n.en,
   },
   uk: {
     brand: brandI18n.uk,
@@ -51,5 +53,6 @@ export const resources = {
     projectDetails: projectDetailsI18n.uk,
     signUpForm: signUpI18n.uk,
     forgotPasswordForm: forgotPasswordFormI18n.uk,
+    resetPasswordForm: resetPasswordFormI18n.uk,
   },
 };

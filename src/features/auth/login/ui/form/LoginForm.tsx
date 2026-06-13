@@ -50,7 +50,7 @@ export const LoginForm = () => {
     >
       <FormFields fields={loginFormFields} {...formFieldsProps} />
 
-      <LoginContent control={control} />
+      <LoginContent control={control} isValid={isValid} />
     </AuthWrapper>
   );
 };

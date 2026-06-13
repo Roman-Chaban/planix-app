@@ -13,7 +13,7 @@ export const useLogin = () => {
   const schema = useMemo(() => loginSchema(t), [t]);
 
   const form = useForm({
-    mode: 'onBlur',
+    mode: 'onChange',
     resolver: zodResolver(schema),
     defaultValues: {
       email: '',

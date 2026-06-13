@@ -6,7 +6,7 @@ import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { useLogin, type LoginContentProps } from '@/features/auth/login';
+import { type LoginContentProps } from '@/features/auth/login';
 
 import { Box, Checkbox, AppLink, AuthButton } from '@/shared/ui';
 
@@ -17,10 +17,8 @@ import styles from './LoginForm.module.scss';
 const { FORGOT_PASSWORD } = ROUTES;
 const { SM } = BUTTON_MAX_WIDTH;
 
-export const LoginContent: FC<LoginContentProps> = ({ control }) => {
+export const LoginContent: FC<LoginContentProps> = ({ control, isValid }) => {
   const { t } = useTranslation('login');
-
-  const { isValid } = useLogin();
 
   return (
     <Box className={styles.loginFormMainWrapper}>

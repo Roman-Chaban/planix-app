@@ -28,7 +28,11 @@ const { LG } = BUTTON_MAX_WIDTH;
 export const RegisterForm = () => {
   const { t } = useTranslation('signUpForm');
 
-  const { register, errors, isValid } = useSignUp();
+  const {
+    register,
+    formState: { errors, isValid },
+    onSubmit,
+  } = useSignUp();
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -43,6 +47,7 @@ export const RegisterForm = () => {
 
   return (
     <AuthWrapper
+      onSubmit={onSubmit}
       header={
         <AuthHeader
           title={t('title')}

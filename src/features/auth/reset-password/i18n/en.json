@@ -1,0 +1,13 @@
+{
+  "title": "Reset Password",
+  "subtitle": "Your New Password Must Be Different From Previously Used Password",
+
+  "backTitle": "Go Back To ",
+  "backLink": "Log In",
+
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Enter Password",
+  "newPasswordLabel": "New Password",
+  "newPasswordPlaceholder": "Enter New Password",
+  "resetPasswordButton": "Reset Password"
+}

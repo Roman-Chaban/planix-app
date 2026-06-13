@@ -1,0 +1,13 @@
+{
+  "title": "Змінити пароль",
+  "subtitle": "Новий пароль не повинен збігатися з паролями, які ви використовували раніше",
+
+  "backTitle": "Повернутися до ",
+  "backLink": "Увійти",
+
+  "passwordLabel": "Пароль",
+  "passwordPlaceholder": "Введіть пароль",
+  "newPasswordLabel": "Новий пароль",
+  "newPasswordPlaceholder": "Введіть новий пароль",
+  "resetPasswordButton": "Reset Password"
+}

@@ -7,4 +7,3 @@ export { useSignUp } from './lib/useSignUp';
 export { registerFormFields } from './lib/config';
 
 export { RegisterForm } from './ui/RegisterForm';
-export { RegisterFormFields } from './ui/RegisterFormFields';

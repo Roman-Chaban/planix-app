@@ -1,17 +1,20 @@
 'use client';
 
+import { useMemo } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { loginSchema, type LoginSchema } from '@/features/auth/login';
+import { loginSchema } from '@/features/auth/login';
 
 export const useLogin = () => {
   const { t } = useTranslation('login');
 
-  const form = useForm<LoginSchema>({
-    mode: 'onChange',
-    resolver: zodResolver(loginSchema(t)),
+  const schema = useMemo(() => loginSchema(t), [t]);
+
+  const form = useForm({
+    mode: 'onBlur',
+    resolver: zodResolver(schema),
     defaultValues: {
       email: '',
       password: '',

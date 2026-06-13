@@ -6,10 +6,18 @@ export const loginSchema = (t: TFunction) => {
   return zod.object({
     email: zod
       .string()
-      .min(1, { message: t('validation.email.required') })
-      .email({ message: t('validation.email.invalid') }),
-    password: zod.string().min(8, { message: t('validation.password.min') }),
-    rememberMe: zod.boolean().optional(),
+      .min(1, t('validation.email.required'))
+      .email(t('validation.email.invalid')),
+
+    password: zod
+      .string()
+      .min(8, t('validation.password.min'))
+      .max(72)
+      .refine((value) => value.trim() === value, {
+        message: t('validation.password.noSpaces'),
+      }),
+
+    rememberMe: zod.boolean(),
   });
 };
 

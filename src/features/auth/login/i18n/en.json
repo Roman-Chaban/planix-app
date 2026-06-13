@@ -23,7 +23,8 @@
       "invalid": "Please enter a valid email address"
     },
     "password": {
-      "min": "Password must be at least 8 characters"
+      "min": "Password must be at least 8 characters",
+      "noSpaces": "Password must not contain leading or trailing spaces"
     }
   }
 }

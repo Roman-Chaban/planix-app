@@ -8,6 +8,9 @@ import { usePasswordToggle } from '@/shared/lib/hooks';
 import { FormInputField } from '@/shared/ui';
 import type { FormFieldsProps } from '@/shared/ui/form-fields';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
+import { INPUT_TYPES } from '@/shared/ui/input';
+
+const { TEXT, PASSWORD } = INPUT_TYPES;
 
 export function FormFields<T extends FieldValues>({
   fields,
@@ -16,16 +19,32 @@ export function FormFields<T extends FieldValues>({
   translationNamespace,
 }: FormFieldsProps<T>) {
   const { t } = useTranslation(translationNamespace);
-
   const { getVisibility, toggle } = usePasswordToggle();
 
   return (
     <>
       {fields.map((field) => {
-        const errorMessage = errors[field.name]?.message;
+        const isPassword = field.feature === 'password-toggle';
 
-        const isPasswordField = field.feature === 'password-toggle';
-        const visible = isPasswordField ? getVisibility(field.name) : false;
+        const visible = isPassword && getVisibility(field.name);
+        const fieldError = errors?.[field.name];
+
+        const error =
+          typeof fieldError?.message === 'string'
+            ? t(fieldError.message)
+            : undefined;
+
+        const type = isPassword ? (visible ? TEXT : PASSWORD) : field.type;
+
+        const endIcon = isPassword ? (
+          visible ? (
+            <ViewIcon />
+          ) : (
+            <ViewOffIcon />
+          )
+        ) : (
+          field.endIcon
+        );
 
         return (
           <FormInputField
@@ -33,30 +52,12 @@ export function FormFields<T extends FieldValues>({
             id={field.name}
             label={t(field.label)}
             startIcon={field.startIcon}
-            endIcon={
-              isPasswordField ? (
-                visible ? (
-                  <ViewIcon />
-                ) : (
-                  <ViewOffIcon />
-                )
-              ) : (
-                field.endIcon
-              )
-            }
-            onEndIconClick={
-              isPasswordField ? () => toggle(field.name) : undefined
-            }
-            error={
-              typeof errorMessage === 'string' ? t(errorMessage) : undefined
-            }
+            endIcon={endIcon}
+            onEndIconClick={isPassword ? () => toggle(field.name) : undefined}
+            error={error}
             inputProps={{
               ...register(field.name),
-              type: isPasswordField
-                ? visible
-                  ? 'text'
-                  : 'password'
-                : field.type,
+              type,
               placeholder: field.placeholder ? t(field.placeholder) : undefined,
               autoComplete: field.autoComplete,
             }}

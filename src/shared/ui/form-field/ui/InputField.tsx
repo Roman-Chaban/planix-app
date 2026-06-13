@@ -20,6 +20,8 @@ export const InputField: FC<InputFieldProps> = ({
   inputProps,
   className,
 }) => {
+  const { ref: inputRef, ...restInputProps } = inputProps || {};
+
   return (
     <Box
       className={buildClassName(styles.inputWrapper, {
@@ -34,8 +36,9 @@ export const InputField: FC<InputFieldProps> = ({
 
       <Input
         id={id}
+        ref={inputRef}
         aria-invalid={!!error}
-        {...inputProps}
+        {...restInputProps}
         className={className}
       />
 

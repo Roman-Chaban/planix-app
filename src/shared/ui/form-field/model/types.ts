@@ -1,9 +1,4 @@
-import type {
-  InputHTMLAttributes,
-  LabelHTMLAttributes,
-  PropsWithChildren,
-  ReactNode,
-} from 'react';
+import type { LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 import type { IconPosition } from '@/shared/ui/input/model/types';
 
@@ -16,7 +11,7 @@ type FormFieldBaseProps = {
   className?: string;
   onStartIconClick?: () => void;
   onEndIconClick?: () => void;
-  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+  inputProps?: React.ComponentPropsWithRef<'input'>;
 };
 
 export type FormFieldProps = PropsWithChildren<{

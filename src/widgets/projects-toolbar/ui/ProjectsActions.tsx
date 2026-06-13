@@ -49,8 +49,9 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
         shape={ROUNDED}
         variant={DEFAULT}
         size={LARGE}
-        onClick={handleCreateProject}
         maxWidth={LG}
+        onClick={handleCreateProject}
+        fullWidth
       />
     </Box>
   );

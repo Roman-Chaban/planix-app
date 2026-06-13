@@ -3,16 +3,29 @@
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { LoginContent, LoginFields, useLogin } from '@/features/auth/login';
+import { LoginContent, useLogin, loginFormFields } from '@/features/auth/login';
 
-import { AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from '@/shared/ui';
+import {
+  AuthFooter,
+  AuthHeader,
+  AuthRedirect,
+  AuthWrapper,
+  FormFields,
+} from '@/shared/ui';
 
 const { LOGIN } = ROUTES;
 
 export const LoginForm = () => {
   const { t } = useTranslation('login');
 
-  const { onSubmit, control } = useLogin();
+  const { onSubmit, control, register, errors, isValid } = useLogin();
+
+  const formFieldsProps = {
+    translationNamespace: 'login',
+    register,
+    errors,
+    isValid,
+  };
 
   return (
     <AuthWrapper
@@ -35,7 +48,7 @@ export const LoginForm = () => {
         </AuthFooter>
       }
     >
-      <LoginFields />
+      <FormFields fields={loginFormFields} {...formFieldsProps} />
 
       <LoginContent control={control} />
     </AuthWrapper>

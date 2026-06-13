@@ -10,7 +10,7 @@ export const useLogin = () => {
   const { t } = useTranslation('login');
 
   const form = useForm<LoginSchema>({
-    mode: 'onBlur',
+    mode: 'onChange',
     resolver: zodResolver(loginSchema(t)),
     defaultValues: {
       email: '',

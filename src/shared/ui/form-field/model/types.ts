@@ -16,7 +16,8 @@ type FormFieldBaseProps = {
 
 export type FormFieldProps = PropsWithChildren<{
   className?: string;
-}>;
+}> &
+  FormFieldBaseProps;
 
 export type FormLabelProps = PropsWithChildren<
   LabelHTMLAttributes<HTMLLabelElement> & {
@@ -41,5 +42,3 @@ export type FormIconProps = {
   onClick?: () => void;
   className?: string;
 };
-
-export type FormInputFieldProps = FormFieldBaseProps;

@@ -5,7 +5,7 @@ import type { FieldValues } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { usePasswordToggle } from '@/shared/lib/hooks';
-import { FormInputField } from '@/shared/ui';
+import { FormField } from '@/shared/ui';
 import type { FormFieldsProps } from '@/shared/ui/form-fields';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
@@ -47,7 +47,7 @@ export function FormFields<T extends FieldValues>({
         );
 
         return (
-          <FormInputField
+          <FormField
             key={field.name}
             id={field.name}
             label={t(field.label)}

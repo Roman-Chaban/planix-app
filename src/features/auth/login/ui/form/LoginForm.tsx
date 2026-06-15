@@ -1,19 +1,28 @@
 'use client';
 
+import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { LoginContent, useLogin, loginFormFields } from '@/features/auth/login';
+import { useLogin, loginFormFields } from '@/features/auth/login';
 
 import {
+  AppLink,
+  AuthButton,
   AuthFooter,
   AuthHeader,
   AuthRedirect,
   AuthWrapper,
+  Box,
+  Checkbox,
   FormFields,
 } from '@/shared/ui';
+import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
-const { LOGIN } = ROUTES;
+import styles from './LoginForm.module.scss';
+
+const { LOGIN, FORGOT_PASSWORD } = ROUTES;
+const { SM } = BUTTON_MAX_WIDTH;
 
 export const LoginForm = () => {
   const { t } = useTranslation('login');
@@ -50,7 +59,31 @@ export const LoginForm = () => {
     >
       <FormFields fields={loginFormFields} {...formFieldsProps} />
 
-      <LoginContent control={control} isValid={isValid} />
+      <Box className={styles.loginFormMainWrapper}>
+        <Box className={styles.loginFormMain}>
+          <Controller
+            name="rememberMe"
+            control={control}
+            render={({ field }) => (
+              <Checkbox
+                checked={field.value}
+                onChange={field.onChange}
+                label={t('rememberMe')}
+              />
+            )}
+          />
+
+          <AppLink href={FORGOT_PASSWORD} className={styles.loginFormLink}>
+            {t('forgotPassword')}
+          </AppLink>
+        </Box>
+
+        <AuthButton
+          label={t('submitButton')}
+          disabled={!isValid}
+          maxWidth={SM}
+        />
+      </Box>
     </AuthWrapper>
   );
 };

@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 import {
   sidebarNavItems,
   SidebarNavItem,
+  isActiveRoute,
   type SidebarNavProps,
 } from '@/widgets/sidebar';
-import { isActiveRoute } from '@/widgets/sidebar/lib/isActiveRoute';
 
 import { List } from '@/shared/ui';
 

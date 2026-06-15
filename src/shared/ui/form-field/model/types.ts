@@ -2,7 +2,7 @@ import type { LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 import type { IconPosition } from '@/shared/ui/input/model/types';
 
-type FormFieldBaseProps = {
+export type FormFieldProps = {
   id: string;
   error?: string;
   label?: string;
@@ -13,11 +13,6 @@ type FormFieldBaseProps = {
   onEndIconClick?: () => void;
   inputProps?: React.ComponentPropsWithRef<'input'>;
 };
-
-export type FormFieldProps = PropsWithChildren<{
-  className?: string;
-}> &
-  FormFieldBaseProps;
 
 export type FormLabelProps = PropsWithChildren<
   LabelHTMLAttributes<HTMLLabelElement> & {

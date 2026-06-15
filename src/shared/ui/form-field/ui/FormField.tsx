@@ -19,12 +19,11 @@ export const FormField: FC<FormFieldProps> = ({
   onStartIconClick,
   onEndIconClick,
   inputProps,
-  className,
 }) => {
   const { ref: inputRef, ...restInputProps } = inputProps || {};
 
   return (
-    <Box className={buildClassName(styles.field, className)}>
+    <Box className={buildClassName(styles.field)}>
       <FormLabel error={error} htmlFor={id}>
         {label}
       </FormLabel>
@@ -45,7 +44,6 @@ export const FormField: FC<FormFieldProps> = ({
           ref={inputRef}
           aria-invalid={!!error}
           {...restInputProps}
-          className={className}
         />
 
         {endIcon && (

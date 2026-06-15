@@ -42,5 +42,4 @@ export type FormIconProps = {
   className?: string;
 };
 
-export type InputFieldProps = FormFieldBaseProps;
 export type FormInputFieldProps = FormFieldBaseProps;

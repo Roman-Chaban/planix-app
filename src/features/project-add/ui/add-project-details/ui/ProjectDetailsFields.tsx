@@ -1,17 +1,21 @@
+'use client';
+
 import type { FC } from 'react';
 
+import { useFormContext } from 'react-hook-form';
+
+import { projectAddFields, type ProjectFormData } from '@/features/project-add';
 import type { ProjectDetailsFieldsProps } from '@/features/project-add/model/types';
+
 import {
-  ProjectNameField,
-  ClientNameField,
+  DescriptionField,
   StartDateField,
   DueDateField,
-  PriceField,
-  PlatformField,
-  DescriptionField,
   FilesField,
 } from '@/features/project-add/ui/project-add-fields';
-import { Box, ProjectButton } from '@/shared/ui';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { FormFields, Box, ProjectButton } from '@/shared/ui';
+
 import {
   BUTTON_MAX_WIDTH,
   BUTTON_SHAPES,
@@ -20,22 +24,32 @@ import {
   BUTTON_VARIANTS,
 } from '@/shared/ui/button';
 
+import styles from './ProjectDetails.module.scss';
+
 const { SUBMIT } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { ROUNDED } = BUTTON_SHAPES;
 const { LARGE } = BUTTON_SIZES;
 const { LG } = BUTTON_MAX_WIDTH;
 
-import styles from './ProjectDetails.module.scss';
-
 export const ProjectDetailsFields: FC<ProjectDetailsFieldsProps> = ({
   isProjectActionPending,
   isDisabled,
 }) => {
+  const {
+    register,
+    formState: { errors, isValid },
+  } = useFormContext<ProjectFormData>();
+
   return (
     <>
-      <ProjectNameField />
-      <ClientNameField />
+      <FormFields
+        fields={projectAddFields}
+        register={register}
+        errors={errors}
+        translationNamespace={NS.PROJECT_ADD}
+        isValid={isValid}
+      />
 
       <Box className={styles.row}>
         <StartDateField />
@@ -43,11 +57,9 @@ export const ProjectDetailsFields: FC<ProjectDetailsFieldsProps> = ({
       </Box>
 
       <Box className={styles.row}>
-        <PriceField />
-        <PlatformField />
+        <FilesField />
       </Box>
 
-      <FilesField />
       <DescriptionField />
 
       <ProjectButton
@@ -57,6 +69,7 @@ export const ProjectDetailsFields: FC<ProjectDetailsFieldsProps> = ({
         size={LARGE}
         isLoading={isProjectActionPending}
         disabled={isDisabled}
+        translationNamespace={NS.PROJECT_ADD}
         maxWidth={LG}
       />
     </>

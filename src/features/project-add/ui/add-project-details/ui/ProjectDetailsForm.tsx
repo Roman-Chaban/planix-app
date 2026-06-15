@@ -7,7 +7,6 @@ import { ROUTES } from '@/app/routes';
 import {
   useProjectDetailsForm,
   type ProjectDetailsFormProps,
-  type ProjectDetailsFormData,
   ProjectDetailsFields,
 } from '@/features/project-add';
 
@@ -33,7 +32,7 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({
 
   const isDisabled = !isValid || isProjectActionPending;
 
-  const handleCreateProject = async (formData: ProjectDetailsFormData) => {
+  const handleCreateProject = async (formData: ProjectFormData) => {
     const processedFiles = await Promise.all(
       formData.files.map(async (file) => {
         if (file instanceof File) {

@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 import {
   loginFormFields,
+  type LoginFormSchema,
   loginSchema,
-  type LoginFormValues,
 } from '@/features/auth/login';
 
 import { useAppForm } from '@/shared/lib/hooks';
@@ -38,7 +38,7 @@ export const LoginForm = () => {
     control,
     handleSubmit,
     formState: { errors, isValid },
-  } = useAppForm<LoginFormValues>({
+  } = useAppForm<LoginFormSchema>({
     schema: loginSchema,
     mode: 'onChange',
     defaultValues: {

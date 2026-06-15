@@ -17,4 +17,4 @@ export const loginSchema = zod.object({
   rememberMe: zod.boolean(),
 });
 
-export type LoginFormValues = zod.infer<typeof loginSchema>;
+export type LoginFormSchema = zod.infer<typeof loginSchema>;

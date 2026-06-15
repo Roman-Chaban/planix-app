@@ -1,20 +1,20 @@
-import { brandI18n } from '@/widgets/brand-banner/i18n';
-import { dashboardAnalyticsI18n } from '@/widgets/dashboard-analytics/i18n';
-import { dashboardCardsI18n } from '@/widgets/dashboard-cards/i18n';
-import { headerI18n } from '@/widgets/header/i18n';
-import { projectCreateI18n } from '@/widgets/project-create/i18n';
-import { projectDetailsI18n } from '@/widgets/project-details/i18n';
-import { projectEditI18n } from '@/widgets/project-edit/i18n';
-import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
-import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
-import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
-import { sidebarI18n } from '@/widgets/sidebar/i18n';
-import { loginI18n } from '@/features/auth/login/i18n';
+import { brandI18n } from '@/widgets/brand-banner';
+import { dashboardAnalyticsI18n } from '@/widgets/dashboard-analytics';
+import { dashboardCardsI18n } from '@/widgets/dashboard-cards';
+import { headerI18n } from '@/widgets/header';
+import { projectCreateI18n } from '@/widgets/project-create';
+import { projectDetailsI18n } from '@/widgets/project-details';
+import { projectEditI18n } from '@/widgets/project-edit';
+import { ProjectTableHeaderI18n } from '@/widgets/project-table';
+import { ProjectsEmptyI18n } from '@/widgets/projects-empty';
+import { addProjectHeaderI18n } from '@/widgets/projects-toolbar';
+import { sidebarI18n } from '@/widgets/sidebar';
+import { loginI18n } from '@/features/auth/login';
 import { forgotPasswordFormI18n } from '@/features/auth/recover-password';
 import { signUpI18n } from '@/features/auth/registration';
 import { resetPasswordFormI18n } from '@/features/auth/reset-password';
-import { projectAddI18n } from '@/features/project-add/i18n';
-import { deleteProjectI18n } from '@/features/project-delete/i18n';
+import { projectAddI18n } from '@/features/project-add';
+import { deleteProjectI18n } from '@/features/project-delete';
 
 export const resources = {
   en: {

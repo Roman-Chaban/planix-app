@@ -16,6 +16,7 @@ export const FormIcon: FC<FormIconProps> = ({
 }) => {
   const positionClass =
     position === 'start' ? styles.slotStart : styles.slotEnd;
+
   const isClickable = Boolean(onClick);
 
   return (

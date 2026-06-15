@@ -55,7 +55,7 @@ export function FormFields<T extends FieldValues>({
             endIcon={endIcon}
             onEndIconClick={isPassword ? () => toggle(field.name) : undefined}
             error={error}
-            inputProps={{
+            filedProps={{
               ...register(field.name),
               type,
               placeholder: field.placeholder ? t(field.placeholder) : undefined,

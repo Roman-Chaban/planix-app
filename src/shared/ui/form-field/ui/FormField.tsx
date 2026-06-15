@@ -18,9 +18,9 @@ export const FormField: FC<FormFieldProps> = ({
   endIcon,
   onStartIconClick,
   onEndIconClick,
-  inputProps,
+  filedProps,
 }) => {
-  const { ref: inputRef, ...restInputProps } = inputProps || {};
+  const { ref: inputRef, ...restInputProps } = filedProps || {};
 
   return (
     <Box className={buildClassName(styles.field)}>

@@ -11,7 +11,7 @@ import { List } from '@/shared/ui';
 
 import styles from './Sidebar.module.scss';
 
-export const SidebarNav: FC<SidebarNavProps> = ({ isCollapsed }) => {
+export const SidebarNav: FC<SidebarNavProps> = ({ isCollapsed, t }) => {
   const pathname = usePathname();
 
   return (
@@ -19,20 +19,14 @@ export const SidebarNav: FC<SidebarNavProps> = ({ isCollapsed }) => {
       className={styles.list}
       getItemKey={(item) => item.id}
       renderList={sidebarNavItems}
-      renderItem={(item) => {
-        const isActive = isActiveRoute(pathname, item.href);
-
-        return (
-          <SidebarNavItem
-            id={item.id}
-            label={item.label}
-            icon={item.icon}
-            href={item.href}
-            isActive={isActive}
-            isCollapsed={isCollapsed}
-          />
-        );
-      }}
+      renderItem={(item) => (
+        <SidebarNavItem
+          {...item}
+          isActive={isActiveRoute(pathname, item.href)}
+          isCollapsed={isCollapsed}
+          t={t}
+        />
+      )}
     />
   );
 };

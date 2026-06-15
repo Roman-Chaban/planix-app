@@ -1,6 +1,7 @@
 export type {
-  SidebarNavItems,
   SidebarProps,
+  SidebarNavItemData,
+  SidebarNavItemProps,
   SidebarNavProps,
 } from './model/types';
 

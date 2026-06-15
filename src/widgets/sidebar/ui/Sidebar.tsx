@@ -5,8 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 import { SidebarNav, type SidebarProps } from '@/widgets/sidebar';
-
 import { buildClassName } from '@/shared/lib';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+
 import { AppLink, Box, Button, Typography } from '@/shared/ui';
 
 import { CollapsedIcon, ExpandedIcon, PlanixLogoIcon } from '@/shared/ui/icons';
@@ -16,7 +17,7 @@ import styles from './Sidebar.module.scss';
 const { DASHBOARD } = ROUTES;
 
 export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
-  const { t } = useTranslation('sidebar');
+  const { t } = useTranslation(NS.SIDEBAR);
 
   const renderToggleIcon = isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />;
 
@@ -47,7 +48,7 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
       </Box>
 
       <Box as="nav" className={styles.content}>
-        <SidebarNav isCollapsed={!isSidebarOpen} />
+        <SidebarNav isCollapsed={!isSidebarOpen} t={t} />
       </Box>
     </Box>
   );

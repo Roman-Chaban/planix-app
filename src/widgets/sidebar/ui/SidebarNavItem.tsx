@@ -2,9 +2,7 @@
 
 import type { FC } from 'react';
 
-import { useTranslation } from 'react-i18next';
-
-import type { SidebarNavItem as SidebarNavItemProps } from '@/widgets/sidebar/model/types';
+import type { SidebarNavItemProps } from '@/widgets/sidebar/model/types';
 
 import { buildClassName } from '@/shared/lib';
 import { AppLink, Box, Typography } from '@/shared/ui';
@@ -18,9 +16,8 @@ export const SidebarNavItem: FC<SidebarNavItemProps> = ({
   href,
   isActive,
   isCollapsed,
+  t,
 }) => {
-  const { t } = useTranslation('sidebar');
-
   return (
     <AppLink href={href} key={key}>
       <Box

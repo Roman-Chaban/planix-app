@@ -1,22 +1,26 @@
+import type { TFunction } from 'i18next';
+
 import type { ComponentType, SVGProps } from 'react';
-
-export type SidebarBaseProps = {
-  isCollapsed?: boolean;
-};
-
-export type SidebarNavProps = SidebarBaseProps;
 
 export type SidebarProps = {
   isSidebarOpen?: boolean;
   toggleSidebar: () => void;
 };
 
-export type SidebarNavItem = {
+export type SidebarNavItemData = {
   id: string;
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   label: string;
   href: string;
-  isActive?: boolean;
-} & SidebarBaseProps;
+};
 
-export type SidebarNavItems = SidebarNavItem[];
+export type SidebarNavItemProps = SidebarNavItemData & {
+  isActive?: boolean;
+  isCollapsed?: boolean;
+  t: TFunction;
+};
+
+export type SidebarNavProps = {
+  isCollapsed?: boolean;
+  t: TFunction;
+};

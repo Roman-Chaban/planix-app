@@ -1,3 +1,5 @@
+export { projectDetailsI18n } from './i18n';
+
 export type {
   ProjectDetailsLayoutProps,
   ProjectDetailsProps,

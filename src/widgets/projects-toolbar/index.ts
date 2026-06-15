@@ -1,3 +1,5 @@
+export { addProjectHeaderI18n } from './i18n';
+
 export type {
   ProjectHeaderItemProps,
   ProjectHeaderItems,

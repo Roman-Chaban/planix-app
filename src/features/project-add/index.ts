@@ -1,3 +1,5 @@
+export { projectAddI18n } from './i18n';
+
 export {
   type ProjectDetailsSchema,
   projectDetailsSchema,

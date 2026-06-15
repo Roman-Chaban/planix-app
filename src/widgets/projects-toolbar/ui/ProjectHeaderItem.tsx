@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import type { ProjectHeaderItemProps } from '@/widgets/projects-toolbar';
 
 import { buildClassName } from '@/shared/lib';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Box, Button, Typography } from '@/shared/ui';
 import {
   BUTTON_SIZES,
@@ -25,7 +26,7 @@ export const ProjectHeaderItem: FC<ProjectHeaderItemProps> = ({
   isActive,
   onClick,
 }) => {
-  const { t } = useTranslation('addProjectHeader');
+  const { t } = useTranslation(NS.ADD_PROJECT_HEADER);
 
   return (
     <Box

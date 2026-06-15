@@ -8,6 +8,7 @@ import {
   type RegisterFormValues,
   useSignUp,
 } from '@/features/auth/registration';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AuthButton,
   AuthFooter,
@@ -26,7 +27,7 @@ const { REGISTER } = ROUTES;
 const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterForm = () => {
-  const { t } = useTranslation('signUpForm');
+  const { t } = useTranslation(NS.SIGN_UP_FORM);
 
   const {
     register,
@@ -39,7 +40,7 @@ export const RegisterForm = () => {
   const additionalFields = registerFormFields.slice(4, 6);
 
   const formFieldsProps = {
-    translationNamespace: 'signUpForm',
+    translationNamespace: NS.SIGN_UP_FORM,
     register,
     errors,
     isValid,

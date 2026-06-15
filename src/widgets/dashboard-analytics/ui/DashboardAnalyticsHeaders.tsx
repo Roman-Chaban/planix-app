@@ -6,13 +6,14 @@ import {
   dashboardHeaderTitles,
   DashboardAnalyticsHeader,
 } from '@/widgets/dashboard-analytics';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 
 import { Box } from '@/shared/ui';
 
 import styles from './DashboardAnalytics.module.scss';
 
 export const DashboardAnalyticsHeaders = () => {
-  const { t } = useTranslation('dashboardAnalytics');
+  const { t } = useTranslation(NS.DASHBOARD_ANALYTICS);
 
   return (
     <>

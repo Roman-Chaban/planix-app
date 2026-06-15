@@ -9,6 +9,7 @@ import {
   type DeleteProjectModalProps,
   DeleteModalActions,
 } from '@/features/project-delete';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Modal, ModalHeader, Textarea } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 
@@ -19,7 +20,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({
   onClose,
   isOpen,
 }) => {
-  const { t } = useTranslation('modal');
+  const { t } = useTranslation(NS.MODAL);
 
   const {
     handleClose,

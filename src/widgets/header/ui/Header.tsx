@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import type { HeaderProps } from '@/widgets/header';
 
 import { LanguageSelect } from '@/features/change-language';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Avatar, Box, Button, Typography } from '@/shared/ui';
 import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button';
 
@@ -21,7 +22,7 @@ const { SMALL } = BUTTON_SIZES;
 const FALLBACK_PROFILE_AVATAR = 'RC';
 
 export const Header: FC<HeaderProps> = ({ title }) => {
-  const { t } = useTranslation('header');
+  const { t } = useTranslation(NS.HEADER);
 
   return (
     <header className={styles.header}>

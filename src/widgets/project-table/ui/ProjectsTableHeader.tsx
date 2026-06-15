@@ -4,13 +4,14 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectTableHeaderProps } from '@/widgets/project-table/model/types';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 
 import styles from './ProjectTable.module.scss';
 
 export const ProjectTableHeader: FC<ProjectTableHeaderProps> = ({
   columns,
 }) => {
-  const { t } = useTranslation('projectTableHeader');
+  const { t } = useTranslation(NS.PROJECT_TABLE_HEADER);
 
   return (
     <thead className={styles.head}>

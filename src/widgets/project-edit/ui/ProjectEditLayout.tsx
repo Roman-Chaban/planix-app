@@ -1,5 +1,6 @@
 import { Header } from '@/widgets/header';
 import { ProjectHeader } from '@/widgets/project-header/ui/ProjectHeader';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { PageWrapper } from '@/shared/ui';
 
 export const ProjectEditLayout = () => {
@@ -8,7 +9,7 @@ export const ProjectEditLayout = () => {
       <ProjectHeader
         title="title"
         metaInfo={{ value: 'value', label: 'label' }}
-        translationNamespace="projectEdit"
+        translationNamespace={NS.PROJECT_EDIT}
       />
     </PageWrapper>
   );

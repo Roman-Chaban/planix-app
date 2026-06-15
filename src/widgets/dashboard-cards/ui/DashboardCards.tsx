@@ -1,4 +1,5 @@
 import { dashboardCards } from '@/widgets/dashboard-cards';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 
 import { Box, List, Card } from '@/shared/ui';
 
@@ -22,7 +23,7 @@ export const DashboardCards = () => {
               name={card.name}
               trend={card.trend}
               trendType={card.trendType}
-              translationNamespace="dashboardCards"
+              translationNamespace={NS.DASHBOARD_CARDS}
             />
           );
         }}

@@ -11,12 +11,13 @@ import {
   DetailsCard,
   mapProjectDetails,
 } from '@/widgets/project-details/ui/details';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Box } from '@/shared/ui';
 
 import styles from './ProjectDetails.module.scss';
 
 export const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
-  const { t, i18n } = useTranslation('projectDetails');
+  const { t, i18n } = useTranslation(NS.PROJECT_DETAILS);
 
   const { details, description } = mapProjectDetails({
     project,

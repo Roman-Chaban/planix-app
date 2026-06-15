@@ -3,13 +3,14 @@
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
 const { LOGIN } = ROUTES;
 
 export const ResetForm = () => {
-  const { t } = useTranslation('resetPasswordForm');
+  const { t } = useTranslation(NS.RESET_PASSWORD_FORM);
 
   return (
     <AuthWrapper

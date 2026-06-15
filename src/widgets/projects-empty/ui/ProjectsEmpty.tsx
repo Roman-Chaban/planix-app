@@ -3,6 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { useProjectToolbar } from '@/widgets/projects-toolbar/lib/useProjectToolbar';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Box, ProjectButton, Typography } from '@/shared/ui';
 import {
   BUTTON_SHAPES,
@@ -20,7 +21,7 @@ const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 
 export const ProjectsEmpty = () => {
-  const { t } = useTranslation('projectsEmpty');
+  const { t } = useTranslation(NS.PROJECTS_EMPTY);
 
   const { handleCreateProject } = useProjectToolbar();
 

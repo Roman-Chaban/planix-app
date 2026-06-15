@@ -4,6 +4,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { DeleteProjectActionsProps } from '@/features/project-delete';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Button, Box } from '@/shared/ui';
 import {
   BUTTON_SIZES,
@@ -18,7 +19,7 @@ export const DeleteModalActions: FC<DeleteProjectActionsProps> = ({
   onDelete,
   disabled,
 }) => {
-  const { t } = useTranslation('modal');
+  const { t } = useTranslation(NS.MODAL);
 
   return (
     <Box className={styles.actions}>

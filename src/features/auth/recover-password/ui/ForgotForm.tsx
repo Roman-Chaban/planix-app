@@ -7,6 +7,7 @@ import {
   useForgotPassword,
   registerFormFields,
 } from '@/features/auth/recover-password';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AuthButton,
   AuthFooter,
@@ -22,12 +23,12 @@ const { LOGIN } = ROUTES;
 const { MD } = BUTTON_MAX_WIDTH;
 
 export const ForgotForm = () => {
-  const { t } = useTranslation('forgotPasswordForm');
+  const { t } = useTranslation(NS.FORGOT_PASSWORD_FORM);
 
   const { onSubmit, register, errors, isValid } = useForgotPassword();
 
   const formFieldsProps = {
-    translationNamespace: 'forgotPasswordForm',
+    translationNamespace: NS.FORGOT_PASSWORD_FORM,
     register,
     errors,
     isValid,

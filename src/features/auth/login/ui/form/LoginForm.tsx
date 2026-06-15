@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 import { useLogin, loginFormFields } from '@/features/auth/login';
 
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AppLink,
   AuthButton,
@@ -25,12 +26,12 @@ const { LOGIN, FORGOT_PASSWORD } = ROUTES;
 const { SM } = BUTTON_MAX_WIDTH;
 
 export const LoginForm = () => {
-  const { t } = useTranslation('login');
+  const { t } = useTranslation(NS.LOGIN);
 
   const { onSubmit, control, register, errors, isValid } = useLogin();
 
   const formFieldsProps = {
-    translationNamespace: 'login',
+    translationNamespace: NS.LOGIN,
     register,
     errors,
     isValid,

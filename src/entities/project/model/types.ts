@@ -1,5 +1,5 @@
 import type { PROJECT_REASONS } from '@/widgets/project-table';
-import { type ProjectDetailsFormData } from '@/features/project-add';
+import { type ProjectFormData } from '@/features/project-add';
 
 export type ProjectId = string | number;
 export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
@@ -35,10 +35,10 @@ export type Project = {
   files: (ProjectFile | File)[];
 };
 
-export type CreateProjectPayload = ProjectDetailsFormData;
+export type CreateProjectPayload = ProjectFormData;
 export type UpdateProjectPayload = {
   id: ProjectId;
-  data: Partial<ProjectDetailsFormData>;
+  data: Partial<ProjectFormData>;
 };
 export type DeleteProjectPayload = { id: ProjectId };
 export type RejectReason =

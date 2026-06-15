@@ -1,6 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import { NAMESPACES } from '@/shared/lib/i18n/namespaces';
+
 import { resources } from './resources';
 
 const configOptions = {
@@ -8,25 +10,7 @@ const configOptions = {
   fallbackLng: 'en',
   supportedLngs: ['en', 'uk'],
   lng: 'en',
-  ns: [
-    'brand',
-    'login',
-    'sidebar',
-    'modal',
-    'dashboardCards',
-    'header',
-    'dashboardAnalytics',
-    'addProjectHeader',
-    'projectsEmpty',
-    'projectTableHeader',
-    'projectCreate',
-    'projectAdd',
-    'projectEdit',
-    'projectDetails',
-    'signUpForm',
-    'forgotPasswordForm',
-    'resetPasswordForm',
-  ],
+  ns: NAMESPACES,
   interpolation: {
     escapeValue: false,
   },

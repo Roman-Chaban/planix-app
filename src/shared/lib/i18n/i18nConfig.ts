@@ -1,9 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import { resources } from '@/shared/lib/i18n';
 import { NAMESPACES } from '@/shared/lib/i18n/namespaces';
-
-import { resources } from './resources';
 
 const configOptions = {
   resources: resources,

@@ -77,7 +77,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({
           type={BUTTON}
           variant={DEFAULT}
           size={LARGE}
-          disabled={isDeleted}
+          disabled={!isDeleted}
           className={styles.save}
           onClick={onClose}
         >

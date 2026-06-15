@@ -8,8 +8,3 @@ export type DeleteProjectModalProps = {
 } & ProjectContextProps;
 
 export type UseDeleteProjectOptions = ProjectContextProps;
-
-export type DeleteProjectActionsProps = {
-  onDelete?: () => void;
-  disabled?: boolean;
-} & ProjectContextProps;

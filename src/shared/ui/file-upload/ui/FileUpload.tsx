@@ -3,14 +3,7 @@
 import { useCallback, useId, type FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import {
-  Box,
-  Typography,
-  FormField,
-  FormLabel,
-  Input,
-  FormError,
-} from '@/shared/ui';
+import { Box, Typography, FormField } from '@/shared/ui';
 import {
   FileItem,
   FileUploadItem,
@@ -51,23 +44,19 @@ export const FileUpload: FC<FileUploadProps> = ({
   const hasFiles = value.length > 0;
 
   return (
-    <FormField>
-      {label && (
-        <FormLabel htmlFor={uploadId} onClick={handleTrigger} error={error}>
-          {label}
-        </FormLabel>
-      )}
-
-      <Input
-        id={uploadId}
-        ref={inputRef}
-        type={FILE}
-        className={styles.hiddenInput}
-        onChange={handleFileChange}
-        aria-invalid={!!error}
-        multiple
-      />
-
+    <FormField
+      id={uploadId}
+      label={label}
+      error={error}
+      filedProps={{
+        ref: inputRef,
+        type: FILE,
+        multiple: true,
+        onChange: handleFileChange,
+        'aria-invalid': !!error,
+        className: styles.hiddenInput,
+      }}
+    >
       <Box
         tabIndex={0}
         className={buildClassName(styles.mainWrapper, {
@@ -84,6 +73,7 @@ export const FileUpload: FC<FileUploadProps> = ({
             <Box className={styles.iconContainer}>
               <UploadIcon />
             </Box>
+
             <Typography as="span" className={styles.text}>
               {uploadLabel}
             </Typography>
@@ -106,7 +96,6 @@ export const FileUpload: FC<FileUploadProps> = ({
           </Box>
         )}
       </Box>
-      <FormError error={error} className={error ? styles.errorMessage : ''} />
     </FormField>
   );
 };

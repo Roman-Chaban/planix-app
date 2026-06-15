@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import type { ProjectDetailsSchema } from '@/features/project-add/ui/add-project-details';
 
-import { FormInputField } from '@/shared/ui';
+import { FormField } from '@/shared/ui';
 import { PriceIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
@@ -22,12 +22,12 @@ export const PriceField = () => {
   });
 
   return (
-    <FormInputField
+    <FormField
       id="price"
       label={t('priceLabel')}
       startIcon={<PriceIcon />}
       error={fieldState.error?.message}
-      inputProps={{
+      filedProps={{
         ...field,
         type: TEXT,
         inputMode: 'decimal',

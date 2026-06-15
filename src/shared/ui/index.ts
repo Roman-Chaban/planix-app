@@ -4,14 +4,7 @@ export { Box } from './box';
 export { Button } from './button';
 export { Card } from './card';
 export { Checkbox } from './checkbox';
-export {
-  FormField,
-  FormError,
-  FormIcon,
-  FormLabel,
-  FormInputField,
-  InputField,
-} from './form-field';
+export { FormField, FormError, FormIcon, FormLabel } from './form-field';
 export { Grid, GridItem } from './grid';
 export { Input } from './input';
 export { AppLink } from './link';

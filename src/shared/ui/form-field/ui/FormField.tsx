@@ -19,6 +19,7 @@ export const FormField: FC<FormFieldProps> = ({
   onStartIconClick,
   onEndIconClick,
   filedProps,
+  children,
 }) => {
   const { ref: inputRef, ...restInputProps } = filedProps || {};
 
@@ -54,6 +55,8 @@ export const FormField: FC<FormFieldProps> = ({
       </Box>
 
       <FormError error={error} />
+
+      {children}
     </Box>
   );
 };

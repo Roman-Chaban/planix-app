@@ -2,8 +2,6 @@ export { dashboardAnalyticsI18n } from './i18n';
 
 export { VARIANTS } from './lib/variants';
 
-export { dashboardHeaderTitles } from './data/dashboard-header-titles';
-
 export type {
   DashboardAnalyticsHeaderList,
   DashboardAnalyticsHeaderListItem,

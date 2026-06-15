@@ -4,8 +4,13 @@ import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { useLogin, loginFormFields } from '@/features/auth/login';
+import {
+  loginFormFields,
+  type FormValues,
+  loginSchema,
+} from '@/features/auth/login';
 
+import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AppLink,
@@ -28,7 +33,24 @@ const { SM } = BUTTON_MAX_WIDTH;
 export const LoginForm = () => {
   const { t } = useTranslation(NS.LOGIN);
 
-  const { onSubmit, control, register, errors, isValid } = useLogin();
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useAppForm<FormValues>({
+    schema: loginSchema,
+    mode: 'onChange',
+    defaultValues: {
+      email: '',
+      password: '',
+      rememberMe: false,
+    },
+  });
+
+  const onSubmit = handleSubmit((data) => {
+    console.log('Login Form Data:', data);
+  });
 
   const formFieldsProps = {
     translationNamespace: NS.LOGIN,

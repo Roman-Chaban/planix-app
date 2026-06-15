@@ -1,6 +1,9 @@
-export type { RegisterFormValues } from './model/types';
+export type { FormValues } from './model/types';
 
-export { loginSchema, type LoginSchema } from './model/login.schema';
+export {
+  loginSchema,
+  type LoginFormValues as LoginSchema,
+} from './model/login.schema';
 
 export { useLogin } from './lib/useLogin';
 export { loginFormFields } from './lib/config';

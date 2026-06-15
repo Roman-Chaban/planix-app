@@ -1,4 +1,4 @@
-import type { ProjectFormData } from '@/features/project-add';
+import type { FormValues } from '@/features/project-add';
 import type { FormFieldConfig } from '@/shared/ui/form-fields';
 
 import {
@@ -11,7 +11,7 @@ import { INPUT_TYPES } from '@/shared/ui/input';
 
 const { TEXT } = INPUT_TYPES;
 
-export const projectAddFields: readonly FormFieldConfig<ProjectFormData>[] = [
+export const projectAddFields: readonly FormFieldConfig<FormValues>[] = [
   {
     name: 'clientName',
     label: 'clientNameLabel',

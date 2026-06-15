@@ -1,4 +1,4 @@
-import type { RegisterFormValues } from '@/features/auth/login';
+import type { FormValues } from '@/features/auth/login';
 import type { FormFieldConfig } from '@/shared/ui/form-fields';
 
 import { MessageIcon, LockIcon } from '@/shared/ui/icons';
@@ -7,7 +7,7 @@ import { INPUT_TYPES } from '@/shared/ui/input';
 
 const { EMAIL, PASSWORD } = INPUT_TYPES;
 
-export const loginFormFields: readonly FormFieldConfig<RegisterFormValues>[] = [
+export const loginFormFields: readonly FormFieldConfig<FormValues>[] = [
   {
     name: 'email',
     label: 'emailLabel',

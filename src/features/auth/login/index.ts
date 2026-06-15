@@ -5,7 +5,6 @@ export {
   type LoginFormValues as LoginSchema,
 } from './model/login.schema';
 
-export { useLogin } from './lib/useLogin';
 export { loginFormFields } from './lib/config';
 
 export { LoginForm } from './ui/form/LoginForm';

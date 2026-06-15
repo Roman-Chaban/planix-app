@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { useFormContext } from 'react-hook-form';
 
-import { projectAddFields, type ProjectFormData } from '@/features/project-add';
+import { projectAddFields, type FormValues } from '@/features/project-add';
 import type { ProjectDetailsFieldsProps } from '@/features/project-add/model/types';
 
 import {
@@ -39,7 +39,7 @@ export const ProjectDetailsFields: FC<ProjectDetailsFieldsProps> = ({
   const {
     register,
     formState: { errors, isValid },
-  } = useFormContext<ProjectFormData>();
+  } = useFormContext<FormValues>();
 
   return (
     <>

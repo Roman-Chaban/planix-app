@@ -1,4 +1,4 @@
-export type { LoginContentProps, RegisterFormValues } from './model/types';
+export type { RegisterFormValues } from './model/types';
 
 export { loginSchema, type LoginSchema } from './model/login.schema';
 

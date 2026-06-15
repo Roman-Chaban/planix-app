@@ -17,8 +17,9 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
   className,
   fullWidth,
   maxWidth,
+  translationNamespace,
 }) => {
-  const { t } = useTranslation('addProjectHeader');
+  const { t } = useTranslation(translationNamespace);
 
   return (
     <Button

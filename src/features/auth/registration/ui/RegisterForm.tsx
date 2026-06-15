@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 import {
   registerFormFields,
+  type RegisterFormSchema,
   signUpFormSchema,
-  type FormValues,
 } from '@/features/auth/registration';
 import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
@@ -34,7 +34,7 @@ export const RegisterForm = () => {
     register,
     formState: { errors, isValid },
     handleSubmit,
-  } = useAppForm<FormValues>({
+  } = useAppForm<RegisterFormSchema>({
     schema: signUpFormSchema,
     mode: 'onChange',
     defaultValues: {
@@ -47,6 +47,7 @@ export const RegisterForm = () => {
     },
   });
 
+  // TODO: [Waitign for form implementation]
   const onSubmit = handleSubmit((data) => {
     console.log('Login Form Data:', data);
   });
@@ -82,17 +83,14 @@ export const RegisterForm = () => {
         </AuthFooter>
       }
     >
-      <FormFields<FormValues> fields={personalFields} {...formFieldsProps} />
+      <FormFields fields={personalFields} {...formFieldsProps} />
 
       <Box className={styles.box}>
-        <FormFields<FormValues> fields={securityFields} {...formFieldsProps} />
+        <FormFields fields={securityFields} {...formFieldsProps} />
       </Box>
 
       <Box className={styles.box}>
-        <FormFields<FormValues>
-          fields={additionalFields}
-          {...formFieldsProps}
-        />
+        <FormFields fields={additionalFields} {...formFieldsProps} />
       </Box>
 
       <AuthButton label={t('registration')} disabled={!isValid} maxWidth={LG} />

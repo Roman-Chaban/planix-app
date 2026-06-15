@@ -47,4 +47,4 @@ export const signUpFormSchema = zod
     path: ['confirmPassword'],
   });
 
-export type SignUpFormSchema = zod.infer<typeof signUpFormSchema>;
+export type RegisterFormSchema = zod.infer<typeof signUpFormSchema>;

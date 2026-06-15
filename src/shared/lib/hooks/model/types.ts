@@ -1,3 +1,7 @@
+import type { zodResolver } from '@hookform/resolvers/zod';
+
+import type { FieldValues, UseFormProps } from 'react-hook-form';
+
 import {
   type UseQueryResult,
   type UseQueryOptions,
@@ -27,4 +31,11 @@ export type UseDragScrollOptions = {
   momentum?: boolean;
   scrollSpeed?: number;
   dragThreshold?: number;
+};
+
+export type UseAppFormProps<T extends FieldValues> = Omit<
+  UseFormProps<T>,
+  'resolver'
+> & {
+  schema: Parameters<typeof zodResolver>[0];
 };

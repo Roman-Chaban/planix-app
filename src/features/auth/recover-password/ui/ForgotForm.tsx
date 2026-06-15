@@ -4,9 +4,11 @@ import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 import {
-  useForgotPassword,
+  type ForgotPasswordSchema,
+  forgotPasswordSchema,
   registerFormFields,
 } from '@/features/auth/recover-password';
+import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AuthButton,
@@ -25,7 +27,21 @@ const { MD } = BUTTON_MAX_WIDTH;
 export const ForgotForm = () => {
   const { t } = useTranslation(NS.FORGOT_PASSWORD_FORM);
 
-  const { onSubmit, register, errors, isValid } = useForgotPassword();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useAppForm<ForgotPasswordSchema>({
+    schema: forgotPasswordSchema(t),
+    mode: 'onBlur',
+    defaultValues: {
+      email: '',
+    },
+  });
+
+  const onSubmit = handleSubmit((data) => {
+    console.log('Login Form Data:', data);
+  });
 
   const formFieldsProps = {
     translationNamespace: NS.FORGOT_PASSWORD_FORM,

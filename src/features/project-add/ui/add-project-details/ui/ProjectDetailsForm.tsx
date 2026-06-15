@@ -6,9 +6,9 @@ import { ROUTES } from '@/app/routes';
 import {
   ProjectDetailsFields,
   projectDetailsSchema,
+  type ProjectDetailsSchema,
 } from '@/features/project-add';
 
-import type { FormValues } from '@/features/project-add/model/types';
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
 import { uploadFileToSupabase } from '@/entities/project/lib/projects';
 import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
@@ -21,7 +21,7 @@ export const ProjectDetailsForm = () => {
   const localizedRouter = useLocalizedRouter();
   const { createProject, isProjectActionPending } = useProjectActions();
 
-  const form = useAppForm<FormValues>({
+  const form = useAppForm<ProjectDetailsSchema>({
     schema: projectDetailsSchema,
     mode: 'onChange',
     defaultValues: {
@@ -54,7 +54,7 @@ export const ProjectDetailsForm = () => {
       }),
     );
 
-    const payloadForServer: FormValues = {
+    const payloadForServer: ProjectDetailsSchema = {
       ...formData,
       files: processedFiles,
     };

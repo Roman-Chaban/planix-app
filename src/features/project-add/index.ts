@@ -1,4 +1,3 @@
-export type { FormValues } from './model/types';
 export {
   type ProjectDetailsSchema,
   projectDetailsSchema,

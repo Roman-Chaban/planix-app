@@ -4,10 +4,11 @@ import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectDetailsSchema } from '@/features/project-add';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { FileUpload } from '@/shared/ui';
 
 export const FilesField = () => {
-  const { t } = useTranslation('projectAdd');
+  const { t } = useTranslation(NS.PROJECT_ADD);
   const { control } = useFormContext<ProjectDetailsSchema>();
 
   const { field, fieldState } = useController({

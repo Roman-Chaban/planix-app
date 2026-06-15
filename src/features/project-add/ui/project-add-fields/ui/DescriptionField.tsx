@@ -6,12 +6,13 @@ import { useTranslation } from 'react-i18next';
 import type { ProjectDetailsSchema } from '@/features/project-add';
 
 import { buildClassName } from '@/shared/lib';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Textarea } from '@/shared/ui';
 
 import styles from './FormField.module.scss';
 
 export const DescriptionField = () => {
-  const { t } = useTranslation('projectAdd');
+  const { t } = useTranslation(NS.PROJECT_ADD);
 
   const { control } = useFormContext<ProjectDetailsSchema>();
 

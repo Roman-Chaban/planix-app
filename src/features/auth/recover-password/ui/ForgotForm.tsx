@@ -32,13 +32,14 @@ export const ForgotForm = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useAppForm<ForgotPasswordSchema>({
-    schema: forgotPasswordSchema(t),
+    schema: forgotPasswordSchema,
     mode: 'onBlur',
     defaultValues: {
       email: '',
     },
   });
 
+  // TODO: [Waiting for form implementation]
   const onSubmit = handleSubmit((data) => {
     console.log('Login Form Data:', data);
   });

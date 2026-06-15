@@ -3,8 +3,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 
-import { useTranslation } from 'react-i18next';
-
 import {
   projectDetailsSchema,
   type ProjectDetailsSchema,
@@ -13,10 +11,8 @@ import {
 export const useProjectDetailsForm = (
   defaultValues?: Partial<ProjectDetailsSchema>,
 ) => {
-  const { t } = useTranslation('projectAdd');
-
   return useForm<ProjectDetailsSchema>({
-    resolver: zodResolver(projectDetailsSchema(t)),
+    resolver: zodResolver(projectDetailsSchema),
     mode: 'onChange',
     defaultValues: {
       projectName: '',

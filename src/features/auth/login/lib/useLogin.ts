@@ -6,9 +6,10 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { loginSchema } from '@/features/auth/login';
+import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 
 export const useLogin = () => {
-  const { t } = useTranslation('login');
+  const { t } = useTranslation(NS.LOGIN);
 
   const schema = useMemo(() => loginSchema(t), [t]);
 

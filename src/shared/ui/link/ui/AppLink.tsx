@@ -6,10 +6,9 @@ import Link from 'next/link';
 
 import { useParams } from 'next/navigation';
 
-import { LINK_TARGETS } from '@/shared/constants';
 import { buildHref, buildClassName } from '@/shared/lib';
 import { DEFAULT_LOCALE } from '@/shared/lib/i18n/locales';
-import type { AppLinkProps } from '@/shared/ui/link';
+import { type AppLinkProps, LINK_TARGETS } from '@/shared/ui/link';
 
 import styles from './AppLink.module.scss';
 

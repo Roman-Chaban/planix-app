@@ -5,8 +5,8 @@ import {
   getFileIcon,
 } from '@/widgets/project-details/ui/details';
 import type { ProjectFile } from '@/entities/project';
-import { LINK_TARGETS } from '@/shared/constants';
 import { Box } from '@/shared/ui';
+import { LINK_TARGETS } from '@/shared/ui/link';
 
 import styles from './Details.module.scss';
 

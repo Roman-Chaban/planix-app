@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
-import { ICON_POSITION } from '@/shared/constants';
 import { buildClassName } from '@/shared/lib';
 
 import { FormError, FormLabel, Box, FormIcon, Input } from '@/shared/ui';
 import type { FormFieldProps } from '@/shared/ui/form-field';
+import { ICON_POSITION } from '@/shared/ui/input';
 
 import styles from './FormField.module.scss';
 

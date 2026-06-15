@@ -27,6 +27,7 @@ export const useLanguageSelect = () => {
     () =>
       languageOptions.find((option) => option.value === currentLocale) ??
       languageOptions[0],
+
     [currentLocale],
   );
 
@@ -39,11 +40,13 @@ export const useLanguageSelect = () => {
       newSegments[0] = newLocale;
 
       const newPath = '/' + newSegments.join('/');
+
       const search =
         typeof window !== 'undefined' ? window.location.search : '';
 
       router.push(newPath + search);
     },
+
     [router, segments, currentLocale],
   );
 

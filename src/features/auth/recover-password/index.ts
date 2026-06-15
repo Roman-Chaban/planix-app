@@ -1,7 +1,5 @@
 export { forgotPasswordFormI18n } from './i18n';
 
-export type { RegisterFormValues } from './model/types';
-
 export { registerFormFields } from './lib/config';
 
 export {

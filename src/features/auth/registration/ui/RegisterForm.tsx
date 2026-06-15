@@ -5,9 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 import {
   registerFormFields,
-  type RegisterFormValues,
-  useSignUp,
+  signUpFormSchema,
+  type FormValues,
 } from '@/features/auth/registration';
+import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AuthButton,
@@ -32,8 +33,23 @@ export const RegisterForm = () => {
   const {
     register,
     formState: { errors, isValid },
-    onSubmit,
-  } = useSignUp();
+    handleSubmit,
+  } = useAppForm<FormValues>({
+    schema: signUpFormSchema,
+    mode: 'onChange',
+    defaultValues: {
+      fullName: '',
+      birthDate: '',
+      confirmPassword: '',
+      contact: '',
+      email: '',
+      password: '',
+    },
+  });
+
+  const onSubmit = handleSubmit((data) => {
+    console.log('Login Form Data:', data);
+  });
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -66,20 +82,14 @@ export const RegisterForm = () => {
         </AuthFooter>
       }
     >
-      <FormFields<RegisterFormValues>
-        fields={personalFields}
-        {...formFieldsProps}
-      />
+      <FormFields<FormValues> fields={personalFields} {...formFieldsProps} />
 
       <Box className={styles.box}>
-        <FormFields<RegisterFormValues>
-          fields={securityFields}
-          {...formFieldsProps}
-        />
+        <FormFields<FormValues> fields={securityFields} {...formFieldsProps} />
       </Box>
 
       <Box className={styles.box}>
-        <FormFields<RegisterFormValues>
+        <FormFields<FormValues>
           fields={additionalFields}
           {...formFieldsProps}
         />

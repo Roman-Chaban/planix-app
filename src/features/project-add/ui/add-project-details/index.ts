@@ -1,8 +1,4 @@
-export type {
-  ProjectFormData as ProjectDetailsFormData,
-  ProjectDetailsFormProps,
-  ProjectDetailsFieldsProps,
-} from '../../model/types';
+export type { FormValues, ProjectDetailsFieldsProps } from '../../model/types';
 
 export {
   projectDetailsSchema,

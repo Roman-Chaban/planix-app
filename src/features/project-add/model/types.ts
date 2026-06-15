@@ -1,6 +1,6 @@
 import type { ProjectFile, Status } from '@/entities/project';
 
-export type ProjectFormData = {
+export type FormValues = {
   projectName: string;
   clientName: string;
   startDate: string;
@@ -10,11 +10,6 @@ export type ProjectFormData = {
   description: string;
   status: Status;
   files: (ProjectFile | File)[];
-};
-
-export type ProjectDetailsFormProps = {
-  onSubmit?: (data: ProjectFormData) => void;
-  defaultValues?: Partial<ProjectFormData>;
 };
 
 export type ProjectDetailsFieldsProps = {

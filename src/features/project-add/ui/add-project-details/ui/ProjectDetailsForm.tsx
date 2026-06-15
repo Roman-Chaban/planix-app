@@ -1,49 +1,60 @@
 'use client';
 
-import type { FC } from 'react';
 import { FormProvider } from 'react-hook-form';
 
 import { ROUTES } from '@/app/routes';
 import {
-  useProjectDetailsForm,
-  type ProjectDetailsFormProps,
   ProjectDetailsFields,
+  projectDetailsSchema,
 } from '@/features/project-add';
 
-import type { ProjectFormData } from '@/features/project-add/model/types';
+import type { FormValues } from '@/features/project-add/model/types';
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
 import { uploadFileToSupabase } from '@/entities/project/lib/projects';
-import { useLocalizedRouter } from '@/shared/lib/hooks';
+import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
 
 import styles from './ProjectDetails.module.scss';
 
 const { PROJECT } = ROUTES;
 
-export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({
-  defaultValues,
-}) => {
+export const ProjectDetailsForm = () => {
   const localizedRouter = useLocalizedRouter();
-
   const { createProject, isProjectActionPending } = useProjectActions();
 
-  const form = useProjectDetailsForm(defaultValues);
+  const form = useAppForm<FormValues>({
+    schema: projectDetailsSchema,
+    mode: 'onChange',
+    defaultValues: {
+      projectName: '',
+      clientName: '',
+      startDate: '',
+      dueDate: '',
+      price: '',
+      platform: '',
+      description: '',
+      status: 'Pending',
+      files: [],
+    },
+  });
 
-  const { isValid } = form.formState;
+  const {
+    handleSubmit,
+    formState: { isValid },
+  } = form;
 
   const isDisabled = !isValid || isProjectActionPending;
 
-  const handleCreateProject = async (formData: ProjectFormData) => {
+  const onSubmit = handleSubmit(async (formData) => {
     const processedFiles = await Promise.all(
       formData.files.map(async (file) => {
         if (file instanceof File) {
           return await uploadFileToSupabase(file);
         }
-
         return file;
       }),
     );
 
-    const payloadForServer: ProjectFormData = {
+    const payloadForServer: FormValues = {
       ...formData,
       files: processedFiles,
     };
@@ -51,14 +62,11 @@ export const ProjectDetailsForm: FC<ProjectDetailsFormProps> = ({
     createProject.mutate(payloadForServer, {
       onSuccess: () => localizedRouter.push(PROJECT),
     });
-  };
+  });
 
   return (
     <FormProvider {...form}>
-      <form
-        className={styles.form}
-        onSubmit={form.handleSubmit(handleCreateProject)}
-      >
+      <form className={styles.form} onSubmit={onSubmit}>
         <ProjectDetailsFields
           isProjectActionPending={isProjectActionPending}
           isDisabled={isDisabled}

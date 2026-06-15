@@ -12,9 +12,15 @@ export const useLogin = () => {
 
   const schema = useMemo(() => loginSchema(t), [t]);
 
-  const form = useForm({
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
     mode: 'onChange',
     resolver: zodResolver(schema),
+
     defaultValues: {
       email: '',
       password: '',
@@ -22,15 +28,15 @@ export const useLogin = () => {
     },
   });
 
-  const onSubmit = form.handleSubmit((data) => {
+  const onSubmit = handleSubmit((data) => {
     console.log('Login Submit:', data);
   });
 
   return {
-    register: form.register,
-    control: form.control,
-    errors: form.formState.errors,
-    isValid: form.formState.isValid,
+    register,
+    control,
+    errors,
+    isValid,
     onSubmit,
   };
 };

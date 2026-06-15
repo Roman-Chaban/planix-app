@@ -42,7 +42,7 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
         />
       </Box>
 
-      {/* TODO: Select Platform will be added later */}
+      {/* TODO: [Select Platform will be added later] */}
       <Box className={styles.platform}>Select Platform</Box>
 
       <ProjectButton
@@ -53,6 +53,7 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
         maxWidth={LG}
         onClick={handleCreateProject}
         fullWidth
+        translationNamespace={NS.ADD_PROJECT_HEADER}
       />
     </Box>
   );

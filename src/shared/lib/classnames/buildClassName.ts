@@ -1,12 +1,8 @@
-import type { ClassObject, ClassValue } from './buildClassName.types';
-
-const isStringValue = (input: ClassValue): input is string => {
-  return typeof input === 'string';
-};
-
-const isClassObject = (input: ClassValue): input is ClassObject => {
-  return typeof input === 'object' && input !== null;
-};
+import {
+  isClassObject,
+  isStringValue,
+  type ClassValue,
+} from '@/shared/lib/classnames';
 
 export const buildClassName = (...classValues: ClassValue[]): string => {
   const classList: string[] = [];

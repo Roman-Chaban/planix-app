@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import type { ProjectDetailsFormData } from '@/features/project-add';
 
-import { FormInputField } from '@/shared/ui';
+import { FormField } from '@/shared/ui';
 import { ClientIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
@@ -22,12 +22,12 @@ export const ClientNameField = () => {
   });
 
   return (
-    <FormInputField
+    <FormField
       id="clientName"
       label={t('clientNameLabel')}
       error={fieldState.error?.message}
       startIcon={<ClientIcon width={20} height={20} />}
-      inputProps={{
+      filedProps={{
         ...field,
         type: TEXT,
         placeholder: t('clientNamePlaceholder'),

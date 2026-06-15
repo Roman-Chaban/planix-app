@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectsActionsProps } from '@/widgets/projects-toolbar';
-import { Box, ProjectButton, InputField } from '@/shared/ui';
+import { Box, FormField, ProjectButton } from '@/shared/ui';
 
 import {
   BUTTON_MAX_WIDTH,
@@ -31,10 +31,10 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
   return (
     <Box className={styles.toolbarActions}>
       <Box className={styles.search}>
-        <InputField
+        <FormField
           id="project-search"
           startIcon={<SearchIconPrimary />}
-          inputProps={{
+          filedProps={{
             type: SEARCH,
             placeholder: t('searchPlaceholder'),
           }}

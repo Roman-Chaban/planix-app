@@ -9,7 +9,7 @@ import {
   type DateFormFieldProps,
 } from '@/features/project-add/ui/project-add-fields';
 
-import { FormInputField } from '@/shared/ui';
+import { FormField } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
@@ -31,13 +31,13 @@ export const DateFormField: FC<DateFormFieldProps> = ({
   };
 
   return (
-    <FormInputField
+    <FormField
       id={id}
       label={label}
       error={error}
       className={className}
       startIcon={<CalendarIcon width={20} height={20} />}
-      inputProps={{
+      filedProps={{
         ...rest,
         type: TEXT,
         inputMode: 'numeric',

@@ -12,7 +12,7 @@ export type FormFieldProps = {
   onStartIconClick?: () => void;
   onEndIconClick?: () => void;
   filedProps?: React.ComponentPropsWithRef<'input'>;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export type FormLabelProps = PropsWithChildren<

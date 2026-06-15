@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import type { ProjectDetailsSchema } from '@/features/project-add';
 
-import { FormInputField } from '@/shared/ui';
+import { FormField } from '@/shared/ui';
 import { PlatformIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input/model/constants';
 
@@ -22,12 +22,12 @@ export const PlatformField = () => {
   });
 
   return (
-    <FormInputField
+    <FormField
       id="platform"
       error={fieldState.error?.message}
       label={t('platformLabel')}
       startIcon={<PlatformIcon />}
-      inputProps={{
+      filedProps={{
         ...field,
         type: TEXT,
         placeholder: t('platformPlaceholder'),

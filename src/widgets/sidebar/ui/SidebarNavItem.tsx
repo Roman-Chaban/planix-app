@@ -2,7 +2,7 @@
 
 import type { FC } from 'react';
 
-import type { SidebarNavItemProps } from '@/widgets/sidebar/model/types';
+import type { SidebarNavItemProps } from '@/widgets/sidebar';
 
 import { buildClassName } from '@/shared/lib';
 import { AppLink, Box, Typography } from '@/shared/ui';

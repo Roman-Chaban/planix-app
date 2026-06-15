@@ -10,11 +10,13 @@ import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 
 import { AppLink, Box, Button, Typography } from '@/shared/ui';
 
+import { BUTTON_VARIANTS } from '@/shared/ui/button';
 import { CollapsedIcon, ExpandedIcon, PlanixLogoIcon } from '@/shared/ui/icons';
 
 import styles from './Sidebar.module.scss';
 
 const { DASHBOARD } = ROUTES;
+const { TRANSPARENT } = BUTTON_VARIANTS;
 
 export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
   const { t } = useTranslation(NS.SIDEBAR);
@@ -38,7 +40,7 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
 
         <Button
           onClick={toggleSidebar}
-          variant="transparent"
+          variant={TRANSPARENT}
           className={buildClassName(styles.button, {
             [styles.iconCollapsed]: !isSidebarOpen,
           })}

@@ -3,8 +3,11 @@
 import type { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
-import { SidebarNavItem, type SidebarNavProps } from '@/widgets/sidebar';
-import { sidebarNavItems } from '@/widgets/sidebar/data/sidebar-items';
+import {
+  sidebarNavItems,
+  SidebarNavItem,
+  type SidebarNavProps,
+} from '@/widgets/sidebar';
 import { isActiveRoute } from '@/widgets/sidebar/lib/isActiveRoute';
 
 import { List } from '@/shared/ui';

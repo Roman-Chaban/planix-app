@@ -17,7 +17,7 @@ export type DateInputProps = Omit<
 export type DateFormFieldProps = {
   id: string;
   label: string;
-  error?: string;
+  error: string;
   className?: string;
   inputProps: DateInputProps;
 };

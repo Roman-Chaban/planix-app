@@ -2,6 +2,8 @@
 
 import type { FC, ChangeEvent } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import {
   toDisplay,
   applyDateMask,
@@ -9,6 +11,7 @@ import {
   type DateFormFieldProps,
 } from '@/features/project-add/ui/project-add-fields';
 
+import { NAMESPACE } from '@/shared/lib/i18n';
 import { FormField } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
@@ -21,6 +24,7 @@ export const DateFormField: FC<DateFormFieldProps> = ({
   error,
   inputProps,
 }) => {
+  const { t } = useTranslation(NAMESPACE.PROJECT_ADD);
   const { value, onChange, placeholder, ...rest } = inputProps;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -32,8 +36,8 @@ export const DateFormField: FC<DateFormFieldProps> = ({
   return (
     <FormField
       id={id}
-      label={label}
-      error={error}
+      label={t(label)}
+      error={t(error)}
       variant="default"
       startIcon={<CalendarIcon width={20} height={20} />}
       inputProps={{

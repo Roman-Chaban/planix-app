@@ -1,17 +1,28 @@
 import type { LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
-import type { IconPosition } from '@/shared/ui/input/model/types';
+export type FormFieldVariant =
+  | 'default'
+  | 'search'
+  | 'hover'
+  | 'typing'
+  | 'filed'
+  | 'disabled'
+  | 'error'
+  | 'noBorder';
+
+export type IconPosition = 'start' | 'end';
 
 export type FormFieldProps = {
   id: string;
-  error?: string;
   label?: string;
+  error?: string;
+  variant: FormFieldVariant;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-  className?: string;
   onStartIconClick?: () => void;
   onEndIconClick?: () => void;
-  filedProps?: React.ComponentPropsWithRef<'input'>;
+  inputProps?: React.ComponentPropsWithoutRef<'input'>;
+  inputRef?: React.Ref<HTMLInputElement>;
   children?: ReactNode;
 };
 

@@ -58,6 +58,11 @@
   border-color: $neutral-200;
 }
 
+.noBorder {
+  border: none;
+  box-shadow: none;
+}
+
 .errorText {
   @include error-text($error-600, 0.3rem, $font-weight-medium);
 

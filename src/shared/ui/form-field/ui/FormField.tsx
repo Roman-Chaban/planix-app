@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { buildClassName } from '@/shared/lib';
 
 import { FormError, FormLabel, Box, FormIcon, Input } from '@/shared/ui';
+
 import type { FormFieldProps } from '@/shared/ui/form-field';
 import { ICON_POSITION } from '@/shared/ui/input';
 
@@ -11,31 +12,32 @@ import styles from './FormField.module.scss';
 const { START, END } = ICON_POSITION;
 
 export const FormField: FC<FormFieldProps> = ({
-  error,
   id,
   label,
+  error,
+  variant,
   startIcon,
   endIcon,
   onStartIconClick,
   onEndIconClick,
-  filedProps,
+  inputProps,
+  inputRef,
   children,
 }) => {
-  const { ref: inputRef, ...restInputProps } = filedProps || {};
+  const { ...restInputProps } = inputProps || {};
+
+  const wrapperClassName = buildClassName(styles.inputWrapper, {
+    [styles.error]: !!error,
+    [styles[variant]]: !!variant,
+  });
 
   return (
-    <Box className={buildClassName(styles.field)}>
-      <FormLabel error={error} htmlFor={id}>
-        {label}
-      </FormLabel>
+    <Box className={styles.field}>
+      {label && <FormLabel htmlFor={id}>{label}</FormLabel>}
 
-      <Box
-        className={buildClassName(styles.inputWrapper, {
-          [styles.error]: !!error,
-        })}
-      >
+      <Box className={wrapperClassName}>
         {startIcon && (
-          <FormIcon error={error} position={START} onClick={onStartIconClick}>
+          <FormIcon position={START} onClick={onStartIconClick}>
             {startIcon}
           </FormIcon>
         )}
@@ -48,14 +50,13 @@ export const FormField: FC<FormFieldProps> = ({
         />
 
         {endIcon && (
-          <FormIcon error={error} position={END} onClick={onEndIconClick}>
+          <FormIcon position={END} onClick={onEndIconClick}>
             {endIcon}
           </FormIcon>
         )}
       </Box>
 
-      <FormError error={error} />
-
+      {error && <FormError error={error} />}
       {children}
     </Box>
   );

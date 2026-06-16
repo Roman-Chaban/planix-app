@@ -1,7 +1,7 @@
 export {
   type ProjectDetailsSchema,
   projectDetailsSchema,
-} from './ui//add-project-details';
+} from './ui/add-project-details';
 
 export { DATE_FORMAT } from './ui/project-add-fields';
 

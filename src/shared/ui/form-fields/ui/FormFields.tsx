@@ -8,9 +8,10 @@ import { usePasswordToggle } from '@/shared/lib/hooks';
 import { FormField } from '@/shared/ui';
 import type { FormFieldsProps } from '@/shared/ui/form-fields';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
 const { TEXT, PASSWORD } = INPUT_TYPES;
+const { DEFAULT } = INPUT_VARIANTS;
 
 export function FormFields<T extends FieldValues>({
   fields,
@@ -46,6 +47,9 @@ export function FormFields<T extends FieldValues>({
           field.endIcon
         );
 
+        const registerResult = register(field.name);
+        const { ref, ...registerInputProps } = registerResult;
+
         return (
           <FormField
             key={field.name}
@@ -55,8 +59,10 @@ export function FormFields<T extends FieldValues>({
             endIcon={endIcon}
             onEndIconClick={isPassword ? () => toggle(field.name) : undefined}
             error={error}
-            filedProps={{
-              ...register(field.name),
+            inputRef={ref}
+            variant={DEFAULT}
+            inputProps={{
+              ...registerInputProps,
               type,
               placeholder: field.placeholder ? t(field.placeholder) : undefined,
               autoComplete: field.autoComplete,

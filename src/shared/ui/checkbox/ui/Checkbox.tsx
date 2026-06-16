@@ -5,7 +5,7 @@ import { buildClassName } from '@/shared/lib';
 import { Typography } from '@/shared/ui';
 import type { CheckboxProps } from '@/shared/ui/checkbox';
 import { CheckIcon } from '@/shared/ui/icons/Icons';
-import { INPUT_TYPES } from '@/shared/ui/input/model/constants';
+import { INPUT_TYPES } from '@/shared/ui/input';
 
 import styles from './Checkbox.module.scss';
 

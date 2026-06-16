@@ -7,20 +7,20 @@ export type SidebarProps = {
   toggleSidebar: () => void;
 };
 
-export type SidebarNavItemData = {
+export type NavItemData = {
   id: string;
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   label: string;
   href: string;
 };
 
-export type SidebarNavItemProps = SidebarNavItemData & {
+export type NavItemProps = NavItemData & {
   isActive?: boolean;
   isCollapsed?: boolean;
   t: TFunction;
 };
 
-export type SidebarNavProps = {
+export type NavProps = {
   isCollapsed?: boolean;
   t: TFunction;
 };

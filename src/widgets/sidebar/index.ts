@@ -1,14 +1,14 @@
 export type {
   SidebarProps,
-  SidebarNavItemData,
-  SidebarNavItemProps,
-  SidebarNavProps,
+  NavItemData,
+  NavItemProps,
+  NavProps,
 } from './model/types';
 
-export { sidebarNavItems } from './data/sidebar-items';
+export { navItems } from './lib/items';
 
 export { isActiveRoute } from './lib/is-active-route';
 
 export { Sidebar } from './ui/Sidebar';
-export { SidebarNav } from './ui/SidebarNav';
-export { SidebarNavItem } from './ui/SidebarNavItem';
+export { Nav } from './ui/Nav';
+export { NavItem } from './ui/NavItem';

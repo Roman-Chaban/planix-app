@@ -2,14 +2,14 @@
 
 import type { FC } from 'react';
 
-import type { SidebarNavItemProps } from '@/widgets/sidebar';
+import type { NavItemProps } from '@/widgets/sidebar';
 
 import { buildClassName } from '@/shared/lib';
 import { AppLink, Box, Typography } from '@/shared/ui';
 
 import styles from './Sidebar.module.scss';
 
-export const SidebarNavItem: FC<SidebarNavItemProps> = ({
+export const NavItem: FC<NavItemProps> = ({
   id: key,
   icon: Icon,
   label,

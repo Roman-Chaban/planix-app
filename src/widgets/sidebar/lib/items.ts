@@ -1,5 +1,5 @@
 import { ROUTES } from '@/app/routes';
-import type { SidebarNavItemData } from '@/widgets/sidebar/model/types';
+import type { NavItemData } from '@/widgets/sidebar/model/types';
 import {
   AnalyticsIcon,
   ClientIcon,
@@ -13,7 +13,7 @@ import {
 const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } =
   ROUTES;
 
-export const sidebarNavItems: SidebarNavItemData[] = [
+export const navItems: NavItemData[] = [
   {
     id: 'dashboard',
     icon: DashboardIcon,

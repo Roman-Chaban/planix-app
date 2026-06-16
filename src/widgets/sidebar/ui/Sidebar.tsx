@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import { SidebarNav, type SidebarProps } from '@/widgets/sidebar';
+import { Nav, type SidebarProps } from '@/widgets/sidebar';
 import { buildClassName } from '@/shared/lib';
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 
@@ -50,7 +50,7 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
       </Box>
 
       <Box as="nav" className={styles.content}>
-        <SidebarNav isCollapsed={!isSidebarOpen} t={t} />
+        <Nav isCollapsed={!isSidebarOpen} t={t} />
       </Box>
     </Box>
   );

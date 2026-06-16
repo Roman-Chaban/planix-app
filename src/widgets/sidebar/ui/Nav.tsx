@@ -4,26 +4,26 @@ import type { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
 import {
-  sidebarNavItems,
-  SidebarNavItem,
+  navItems,
+  NavItem,
   isActiveRoute,
-  type SidebarNavProps,
+  type NavProps,
 } from '@/widgets/sidebar';
 
 import { List } from '@/shared/ui';
 
 import styles from './Sidebar.module.scss';
 
-export const SidebarNav: FC<SidebarNavProps> = ({ isCollapsed, t }) => {
+export const Nav: FC<NavProps> = ({ isCollapsed, t }) => {
   const pathname = usePathname();
 
   return (
     <List
       className={styles.list}
       getItemKey={(item) => item.id}
-      renderList={sidebarNavItems}
+      renderList={navItems}
       renderItem={(item) => (
-        <SidebarNavItem
+        <NavItem
           {...item}
           isActive={isActiveRoute(pathname, item.href)}
           isCollapsed={isCollapsed}

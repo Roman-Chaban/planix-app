@@ -67,7 +67,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({
           variant={OUTLINE}
           size={LARGE}
           className={styles.cancel}
-          onClick={handleDeleteProject}
+          onClick={onClose}
         >
           {t('cancelButton')}
         </Button>
@@ -79,7 +79,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({
           size={LARGE}
           disabled={!isDeleted}
           className={styles.save}
-          onClick={onClose}
+          onClick={handleDeleteProject}
         >
           {t('saveButton')}
         </Button>

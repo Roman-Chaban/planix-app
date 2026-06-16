@@ -1,7 +1,4 @@
-import {
-  DashboardAnalyticsRevenue,
-  VARIANTS,
-} from '@/widgets/dashboard-analytics';
+import { VARIANTS } from '@/widgets/dashboard-analytics';
 import type { DashboardAnalyticsHeaderList } from '@/widgets/dashboard-analytics/model/types';
 
 const { PRIMARY, SECONDARY, TERTIARY } = VARIANTS;
@@ -11,7 +8,7 @@ export const dashboardHeaderTitles: DashboardAnalyticsHeaderList = [
     id: '1',
     title: 'revenueTitle',
     variant: PRIMARY,
-    content: <DashboardAnalyticsRevenue />,
+    content: null,
   },
   {
     id: '2',

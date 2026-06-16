@@ -1,6 +1,6 @@
 export { dashboardAnalyticsI18n } from './i18n';
 
-export { VARIANTS } from './lib/variants';
+export { VARIANTS } from './lib/constants';
 
 export type {
   DashboardAnalyticsHeaderList,
@@ -11,4 +11,3 @@ export type {
 export { DashboardAnalytics } from './ui/DashboardAnalytics';
 export { DashboardAnalyticsHeader } from './ui/DashboardAnalyticsHeader';
 export { DashboardAnalyticsHeaders } from './ui/DashboardAnalyticsHeaders';
-export { DashboardAnalyticsRevenue } from './ui/DashboardAnalyticsRevenue';

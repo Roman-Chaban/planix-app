@@ -11,11 +11,12 @@ import {
   type FileUploadProps,
 } from '@/shared/ui/file-upload';
 import { UploadIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
 import styles from './FileUpload.module.scss';
 
 const { FILE } = INPUT_TYPES;
+const { NO_BORDER } = INPUT_VARIANTS;
 
 export const FileUpload: FC<FileUploadProps> = ({
   value = [],
@@ -27,7 +28,7 @@ export const FileUpload: FC<FileUploadProps> = ({
 }) => {
   const uploadId = useId();
 
-  const { inputRef, handleTrigger, handleFileChange, handleKeyDown } =
+  const { handleTrigger, handleFileChange, handleKeyDown, inputRef } =
     useFileUpload({
       onFileSelect: (file) => {
         onChange?.([...value, file]);
@@ -48,8 +49,9 @@ export const FileUpload: FC<FileUploadProps> = ({
       id={uploadId}
       label={label}
       error={error}
-      filedProps={{
-        ref: inputRef,
+      variant={NO_BORDER}
+      inputRef={inputRef}
+      inputProps={{
         type: FILE,
         multiple: true,
         onChange: handleFileChange,

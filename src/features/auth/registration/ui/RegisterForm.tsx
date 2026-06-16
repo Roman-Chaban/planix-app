@@ -36,7 +36,6 @@ export const RegisterForm = () => {
     handleSubmit,
   } = useAppForm<RegisterFormSchema>({
     schema: signUpFormSchema,
-    mode: 'onChange',
     defaultValues: {
       fullName: '',
       birthDate: '',

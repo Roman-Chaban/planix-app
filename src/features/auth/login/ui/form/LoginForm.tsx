@@ -40,7 +40,6 @@ export const LoginForm = () => {
     formState: { errors, isValid },
   } = useAppForm<LoginFormSchema>({
     schema: loginSchema,
-    mode: 'onChange',
     defaultValues: {
       email: '',
       password: '',

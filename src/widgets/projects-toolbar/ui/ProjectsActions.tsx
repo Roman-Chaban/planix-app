@@ -13,7 +13,7 @@ import {
   BUTTON_VARIANTS,
 } from '@/shared/ui/button';
 import { SearchIconPrimary } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
 import styles from './ProjectsToolbar.module.scss';
 
@@ -34,8 +34,9 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
       <Box className={styles.search}>
         <FormField
           id="project-search"
+          variant={INPUT_VARIANTS.DEFAULT}
           startIcon={<SearchIconPrimary />}
-          filedProps={{
+          inputProps={{
             type: SEARCH,
             placeholder: t('searchPlaceholder'),
           }}

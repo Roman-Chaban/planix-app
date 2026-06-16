@@ -19,7 +19,6 @@ export const DateFormField: FC<DateFormFieldProps> = ({
   id,
   label,
   error,
-  className,
   inputProps,
 }) => {
   const { value, onChange, placeholder, ...rest } = inputProps;
@@ -35,9 +34,9 @@ export const DateFormField: FC<DateFormFieldProps> = ({
       id={id}
       label={label}
       error={error}
-      className={className}
+      variant="default"
       startIcon={<CalendarIcon width={20} height={20} />}
-      filedProps={{
+      inputProps={{
         ...rest,
         type: TEXT,
         inputMode: 'numeric',

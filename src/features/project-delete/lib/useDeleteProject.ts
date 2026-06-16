@@ -1,49 +1,24 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
-import type { UseDeleteProjectOptions } from '@/features/project-delete';
-import { useProjectActions } from '@/entities/project';
+export const useDeleteProject = () => {
+  const [projectToDelete, setProjectToDelete] = useState<
+    string | number | null
+  >(null);
 
-export const useDeleteProject = ({
-  projectId,
-  onClose,
-}: UseDeleteProjectOptions) => {
-  const [reason, setReason] = useState('');
+  const isOpen = projectToDelete !== null;
 
-  const { deleteProject, isProjectActionPending } = useProjectActions();
+  const openDeleteModal = useCallback((id: string | number) => {
+    setProjectToDelete(id);
+  }, []);
 
-  const isDeleted = reason.trim().length > 0 && !isProjectActionPending;
-
-  const resetState = () => {
-    setReason('');
-  };
-
-  const handleDeleteProject = () => {
-    if (!projectId) return;
-
-    deleteProject.mutate(
-      {
-        id: projectId,
-      },
-      {
-        onSuccess: () => {
-          resetState();
-          onClose();
-        },
-      },
-    );
-  };
-
-  const handleClose = () => {
-    resetState();
-    onClose();
-  };
+  const closeDeleteModal = useCallback(() => {
+    setProjectToDelete(null);
+  }, []);
 
   return {
-    reason,
-    isDeleted,
-    setReason,
-    handleDeleteProject,
-    handleClose,
-    isProjectActionPending,
+    projectToDelete,
+    isOpen,
+    openDeleteModal,
+    closeDeleteModal,
   };
 };

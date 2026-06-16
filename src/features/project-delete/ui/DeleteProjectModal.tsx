@@ -5,7 +5,7 @@ import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
-  useDeleteProject,
+  useDeleteProjectModal,
   type DeleteProjectModalProps,
 } from '@/features/project-delete';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
@@ -17,13 +17,13 @@ import {
 } from '@/shared/ui/button/model/constants';
 import { CloseIcon } from '@/shared/ui/icons';
 
-import styles from './DeleteModal.module.scss';
+import styles from './DeleteProjectModal.module.scss';
 
 const { BUTTON } = BUTTON_TYPES;
 const { OUTLINE, DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 
-export const DeleteModal: FC<DeleteProjectModalProps> = ({
+export const DeleteProjectModal: FC<DeleteProjectModalProps> = ({
   projectId,
   onClose,
   isOpen,
@@ -37,7 +37,7 @@ export const DeleteModal: FC<DeleteProjectModalProps> = ({
     reason,
     setReason,
     isDeleted,
-  } = useDeleteProject({
+  } = useDeleteProjectModal({
     projectId,
     onClose,
   });

@@ -3,7 +3,7 @@ export type {
   UseDeleteProjectOptions,
 } from './model/types';
 
-export { useDeleteModal } from './lib/useDeleteModal';
 export { useDeleteProject } from './lib/useDeleteProject';
+export { useDeleteProjectModal } from './lib/useDeleteProjectModal';
 
-export { DeleteModal } from './ui/DeleteModal';
+export { DeleteProjectModal } from './ui/DeleteProjectModal';

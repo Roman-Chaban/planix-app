@@ -1,5 +1,3 @@
-export { dashboardAnalyticsI18n } from './i18n';
-
 export { VARIANTS } from './lib/constants';
 
 export type {

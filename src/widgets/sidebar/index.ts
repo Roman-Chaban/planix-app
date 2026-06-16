@@ -1,5 +1,3 @@
-export { sidebarI18n } from './i18n';
-
 export type {
   SidebarProps,
   SidebarNavItemData,

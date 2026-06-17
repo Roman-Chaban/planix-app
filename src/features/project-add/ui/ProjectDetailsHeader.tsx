@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';

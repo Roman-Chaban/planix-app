@@ -25,5 +25,4 @@ export type FormFieldsProps<T extends FieldValues> = {
   translationNamespace: string;
   register: UseFormRegister<T>;
   errors: FieldErrors<T>;
-  isValid: boolean;
 };

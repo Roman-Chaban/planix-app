@@ -5,6 +5,8 @@ export {
 
 export type { DateFormFieldProps } from './model/types';
 
+export { useProjectForm } from './model/useProjectForm';
+
 export {
   DATE_FORMAT,
   applyDateMask,
@@ -21,6 +23,5 @@ export { DueDateField } from './ui/DueDateField';
 export { FilesField } from './ui/FilesField';
 export { StartDateField } from './ui/StartDateField';
 
-export { ProjectDetails } from './ui/ProjectDetails';
 export { ProjectDetailsForm } from './ui/ProjectDetailsForm';
 export { ProjectDetailsHeader } from './ui/ProjectDetailsHeader';

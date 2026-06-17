@@ -1,5 +1,6 @@
 'use client';
 
+import { FormProvider } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
@@ -27,48 +28,46 @@ const { MD } = BUTTON_MAX_WIDTH;
 export const ForgotForm = () => {
   const { t } = useTranslation(NS.FORGOT_PASSWORD_FORM);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-  } = useAppForm<ForgotPasswordSchema>({
+  const form = useAppForm<ForgotPasswordSchema>({
     schema: forgotPasswordSchema,
-    mode: 'onBlur',
     defaultValues: {
       email: '',
     },
   });
+
+  const {
+    handleSubmit,
+    formState: { isValid },
+  } = form;
 
   // TODO: [Waiting for form implementation]
   const onSubmit = handleSubmit((data) => {
     console.log('Login Form Data:', data);
   });
 
-  const formFieldsProps = {
-    translationNamespace: NS.FORGOT_PASSWORD_FORM,
-    register,
-    errors,
-    isValid,
-  };
-
   return (
-    <AuthWrapper
-      onSubmit={onSubmit}
-      header={<AuthHeader title={t('title')} subtitle={t('subtitle')} />}
-      footer={
-        <AuthFooter>
-          <AuthRedirect
-            title={t('backTitle')}
-            linkText={t('backLink')}
-            href={LOGIN}
-            icon={<BackIcon />}
-          />
-        </AuthFooter>
-      }
-    >
-      <FormFields fields={registerFormFields} {...formFieldsProps} />
+    <FormProvider {...form}>
+      <AuthWrapper
+        onSubmit={onSubmit}
+        header={<AuthHeader title={t('title')} subtitle={t('subtitle')} />}
+        footer={
+          <AuthFooter>
+            <AuthRedirect
+              title={t('backTitle')}
+              linkText={t('backLink')}
+              href={LOGIN}
+              icon={<BackIcon />}
+            />
+          </AuthFooter>
+        }
+      >
+        <FormFields
+          fields={registerFormFields}
+          translationNamespace={NS.FORGOT_PASSWORD_FORM}
+        />
 
-      <AuthButton label={t('button')} disabled={!isValid} maxWidth={MD} />
-    </AuthWrapper>
+        <AuthButton label={t('button')} disabled={!isValid} maxWidth={MD} />
+      </AuthWrapper>
+    </FormProvider>
   );
 };

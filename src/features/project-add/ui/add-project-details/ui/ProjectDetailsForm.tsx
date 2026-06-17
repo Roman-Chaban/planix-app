@@ -58,7 +58,8 @@ export const ProjectDetailsForm = () => {
 
   const {
     handleSubmit,
-    formState: { isValid },
+    register,
+    formState: { isValid, errors },
   } = form;
 
   const isDisabled = !isValid || isProjectActionPending;
@@ -91,6 +92,8 @@ export const ProjectDetailsForm = () => {
     <FormProvider {...form}>
       <form className={styles.form} onSubmit={onSubmit}>
         <FormFields
+          errors={errors}
+          register={register}
           isValid={isValid}
           fields={projectAddFields}
           translationNamespace={NS.PROJECT_ADD}

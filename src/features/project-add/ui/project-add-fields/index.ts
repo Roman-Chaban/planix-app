@@ -4,12 +4,13 @@ export type {
   DateFormFieldProps,
 } from './model/types';
 
-export { DATE_FORMAT } from './lib/constants';
-
-export { formatDate } from './lib/format-date';
-export { validateDateOrder } from './lib/validators';
-
-export { applyDateMask, toDisplay, toISO } from './lib/date';
+export {
+  applyDateMask,
+  toDisplay,
+  toISO,
+  DATE_FORMAT,
+  toInputFormat,
+} from './lib/date';
 
 export { DueDateField } from './ui/DueDateField';
 export { StartDateField } from './ui/StartDateField';

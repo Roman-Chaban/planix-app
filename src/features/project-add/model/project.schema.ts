@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import * as zod from 'zod';
 
-import { DATE_FORMAT } from '@/features/project-add';
+import { DATE_FORMAT } from '@/features/project-add/ui/project-add-fields/lib/date';
 
 export const projectDetailsSchema = zod
   .object({
@@ -9,22 +9,15 @@ export const projectDetailsSchema = zod
       .string()
       .min(5, 'validation.projectNameMin')
       .max(25, 'validation.projectNameMax'),
-
     clientName: zod
       .string()
       .min(5, 'validation.clientNameMin')
       .max(25, 'validation.clientNameMax'),
-
     status: zod.enum(['Pending', 'In Progress', 'Completed', 'Canceled']),
 
-    startDate: zod
-      .string()
-      .min(1, 'validation.startDateRequired')
-      .length(10, 'validation.startDateInvalid'),
-    dueDate: zod
-      .string()
-      .min(1, 'validation.dueDateRequired')
-      .length(10, 'validation.dueDateInvalid'),
+    startDate: zod.string().min(1, 'validation.startDateRequired'),
+    dueDate: zod.string().min(1, 'validation.dueDateRequired'),
+
     price: zod
       .string()
       .min(1, 'validation.priceRequired')
@@ -32,11 +25,13 @@ export const projectDetailsSchema = zod
         const value = Number(price);
         return !Number.isNaN(value) && Number.isFinite(value) && value >= 0;
       }, 'validation.priceInvalid'),
+
     platform: zod.string().min(3, 'validation.platformMin'),
     description: zod
       .string()
       .min(1, 'validation.descriptionRequired')
       .max(500, 'validation.descriptionMax'),
+
     files: zod
       .array(
         zod.union([
@@ -47,25 +42,21 @@ export const projectDetailsSchema = zod
       .min(1, 'validation.filesRequired')
       .refine(
         (files) =>
-          files.every((f) => {
-            if (f instanceof File) {
-              return f.size <= 5 * 1024 * 1024;
-            }
-            return true;
-          }),
+          files.every((f) =>
+            f instanceof File ? f.size <= 5 * 1024 * 1024 : true,
+          ),
         'validation.fileSizeExceeded',
       ),
   })
-
   .superRefine((data, ctx) => {
     const start = dayjs(
       data.startDate,
-      [DATE_FORMAT.INPUT, DATE_FORMAT.ISO],
+      [DATE_FORMAT.ISO, DATE_FORMAT.INPUT],
       true,
     );
-    const end = dayjs(data.dueDate, [DATE_FORMAT.INPUT, DATE_FORMAT.ISO], true);
+    const end = dayjs(data.dueDate, [DATE_FORMAT.ISO, DATE_FORMAT.INPUT], true);
 
-    if (data.startDate.length === 10 && !start.isValid()) {
+    if (data.startDate && !start.isValid()) {
       ctx.addIssue({
         code: 'custom',
         message: 'validation.startDateInvalid',
@@ -73,7 +64,7 @@ export const projectDetailsSchema = zod
       });
     }
 
-    if (data.dueDate.length === 10 && !end.isValid()) {
+    if (data.dueDate && !end.isValid()) {
       ctx.addIssue({
         code: 'custom',
         message: 'validation.dueDateInvalid',

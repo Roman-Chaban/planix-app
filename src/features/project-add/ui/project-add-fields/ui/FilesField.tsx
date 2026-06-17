@@ -21,7 +21,7 @@ export const FilesField = () => {
     <FileUpload
       value={field.value}
       onChange={field.onChange}
-      error={fieldState.error?.message}
+      error={t(fieldState.error?.message ?? '')}
       label={t('label')}
       uploadLabel={t('uploadLabel')}
       uploadPhotosLabel={t('uploadPhotosLabel')}

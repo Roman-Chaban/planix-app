@@ -25,7 +25,7 @@ export const DescriptionField = () => {
     <Textarea
       tabIndex={0}
       {...field}
-      error={fieldState.error?.message}
+      error={t(fieldState.error?.message ?? '')}
       label={t('descriptionLabel')}
       placeholder={t('descriptionPlaceholder')}
       textareaClassName={buildClassName(styles.textarea, {

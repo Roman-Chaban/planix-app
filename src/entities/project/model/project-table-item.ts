@@ -1,4 +1,4 @@
-import { toDisplay } from '@/features/project-add/ui/project-add-fields';
+import { toDisplay } from '@/features/project-add';
 import type { Project } from '@/entities/project';
 
 export const toProjectTableItem = (project: Project) => {

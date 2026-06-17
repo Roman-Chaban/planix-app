@@ -2,8 +2,6 @@
 
 import { forwardRef, useId } from 'react';
 
-import { useTranslation } from 'react-i18next';
-
 import { buildClassName } from '@/shared/lib';
 import { Box, FormError, FormLabel } from '@/shared/ui';
 import type { TextareaProps } from '@/shared/ui/textarea';
@@ -23,8 +21,6 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     },
     ref,
   ) => {
-    const { t } = useTranslation();
-
     const generatedId = useId();
     const textareaId = id || generatedId;
 
@@ -34,7 +30,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           htmlFor={textareaId}
           className={buildClassName(labelClassName)}
         >
-          {t(label)}
+          {label}
         </FormLabel>
 
         <textarea
@@ -45,7 +41,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           {...props}
         />
 
-        <FormError error={error} />
+        <FormError error={error ?? ''} />
       </Box>
     );
   },

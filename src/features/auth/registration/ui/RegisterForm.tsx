@@ -1,5 +1,6 @@
 'use client';
 
+import { FormProvider } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
@@ -30,21 +31,22 @@ const { LG } = BUTTON_MAX_WIDTH;
 export const RegisterForm = () => {
   const { t } = useTranslation(NS.SIGN_UP_FORM);
 
-  const {
-    register,
-    formState: { errors, isValid },
-    handleSubmit,
-  } = useAppForm<RegisterFormSchema>({
+  const form = useAppForm<RegisterFormSchema>({
     schema: signUpFormSchema,
     defaultValues: {
+      email: '',
       fullName: '',
-      birthDate: '',
+      password: '',
       confirmPassword: '',
       contact: '',
-      email: '',
-      password: '',
+      birthDate: '',
     },
   });
+
+  const {
+    handleSubmit,
+    formState: { isValid },
+  } = form;
 
   // TODO: [Waitign for form implementation]
   const onSubmit = handleSubmit((data) => {
@@ -57,42 +59,46 @@ export const RegisterForm = () => {
 
   const formFieldsProps = {
     translationNamespace: NS.SIGN_UP_FORM,
-    register,
-    errors,
     isValid,
   };
 
   return (
-    <AuthWrapper
-      onSubmit={onSubmit}
-      header={
-        <AuthHeader
-          title={t('title')}
-          subtitle={t('subtitle')}
-          isHighlightedIcon
-        />
-      }
-      footer={
-        <AuthFooter>
-          <AuthRedirect
-            title={t('noAccount')}
-            linkText={t('registration')}
-            href={REGISTER}
+    <FormProvider {...form}>
+      <AuthWrapper
+        onSubmit={onSubmit}
+        header={
+          <AuthHeader
+            title={t('title')}
+            subtitle={t('subtitle')}
+            isHighlightedIcon
           />
-        </AuthFooter>
-      }
-    >
-      <FormFields fields={personalFields} {...formFieldsProps} />
+        }
+        footer={
+          <AuthFooter>
+            <AuthRedirect
+              title={t('noAccount')}
+              linkText={t('registration')}
+              href={REGISTER}
+            />
+          </AuthFooter>
+        }
+      >
+        <FormFields fields={personalFields} {...formFieldsProps} />
 
-      <Box className={styles.box}>
-        <FormFields fields={securityFields} {...formFieldsProps} />
-      </Box>
+        <Box className={styles.box}>
+          <FormFields fields={securityFields} {...formFieldsProps} />
+        </Box>
 
-      <Box className={styles.box}>
-        <FormFields fields={additionalFields} {...formFieldsProps} />
-      </Box>
+        <Box className={styles.box}>
+          <FormFields fields={additionalFields} {...formFieldsProps} />
+        </Box>
 
-      <AuthButton label={t('registration')} disabled={!isValid} maxWidth={LG} />
-    </AuthWrapper>
+        <AuthButton
+          label={t('registration')}
+          disabled={!isValid}
+          maxWidth={LG}
+        />
+      </AuthWrapper>
+    </FormProvider>
   );
 };

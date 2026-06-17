@@ -1,18 +1,25 @@
 export {
   type ProjectDetailsSchema,
   projectDetailsSchema,
-} from './ui/add-project-details';
+} from './model/project.schema';
 
-export { DATE_FORMAT } from './ui/project-add-fields';
+export type { DateFormFieldProps } from './model/types';
+
+export {
+  DATE_FORMAT,
+  applyDateMask,
+  toDisplay,
+  toISO,
+  toInputFormat,
+} from './lib/date';
 
 export { projectAddFields } from './lib/config';
 
-export {
-  DueDateField,
-  StartDateField,
-  DescriptionField,
-  FilesField,
-} from './ui/project-add-fields';
+export { DateFormField } from './ui/DateFormField';
+export { DescriptionField } from './ui/DescriptionField';
+export { DueDateField } from './ui/DueDateField';
+export { FilesField } from './ui/FilesField';
+export { StartDateField } from './ui/StartDateField';
 
-export { ProjectDetails } from './ui/add-project-details/ui/ProjectDetails';
-export { ProjectDetailsForm } from './ui/add-project-details/ui/ProjectDetailsForm';
+export { ProjectDetails } from './ui/ProjectDetails';
+export { ProjectDetailsForm } from './ui/ProjectDetailsForm';

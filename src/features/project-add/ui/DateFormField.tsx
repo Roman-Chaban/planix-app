@@ -7,9 +7,9 @@ import {
   applyDateMask,
   toISO,
   toInputFormat,
-} from '@/features/project-add/ui/project-add-fields/lib/date';
+  type DateFormFieldProps,
+} from '@/features/project-add';
 
-import type { DateFormFieldProps } from '@/features/project-add/ui/project-add-fields/model/types';
 import { NAMESPACE } from '@/shared/lib/i18n';
 import { FormField } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';

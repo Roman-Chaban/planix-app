@@ -1,6 +1,6 @@
 import type { ChangeEvent, InputHTMLAttributes, Ref } from 'react';
 
-export type HookFormFieldProps = {
+export type FormFieldProps = {
   name: string;
   value: string;
   onChange: (value: string | ChangeEvent<HTMLInputElement>) => void;
@@ -10,9 +10,9 @@ export type HookFormFieldProps = {
 
 export type DateInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  keyof HookFormFieldProps
+  keyof FormFieldProps
 > &
-  HookFormFieldProps;
+  FormFieldProps;
 
 export type DateFormFieldProps = {
   id: string;

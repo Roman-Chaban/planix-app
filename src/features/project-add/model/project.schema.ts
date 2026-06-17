@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import * as zod from 'zod';
 
-import { DATE_FORMAT } from '@/features/project-add/ui/project-add-fields/lib/date';
+import { DATE_FORMAT } from '@/features/project-add/lib/date';
 
 export const projectDetailsSchema = zod
   .object({

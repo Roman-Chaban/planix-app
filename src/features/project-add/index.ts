@@ -23,5 +23,5 @@ export { DueDateField } from './ui/DueDateField';
 export { FilesField } from './ui/FilesField';
 export { StartDateField } from './ui/StartDateField';
 
-export { ProjectDetailsForm } from './ui/ProjectDetailsForm';
-export { ProjectDetailsHeader } from './ui/ProjectDetailsHeader';
+export { DetailsForm } from './ui/DetailsForm';
+export { DetailsHeader } from './ui/DetailsHeader';

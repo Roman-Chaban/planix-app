@@ -8,7 +8,7 @@ import {
   FilesField,
   DueDateField,
   StartDateField,
-  ProjectDetailsHeader,
+  DetailsHeader,
   useProjectForm,
 } from '@/features/project-add';
 
@@ -22,7 +22,7 @@ import {
   BUTTON_VARIANTS,
 } from '@/shared/ui/button';
 
-import styles from './ProjectDetails.module.scss';
+import styles from './Details.module.scss';
 
 const { SUBMIT } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
@@ -30,12 +30,12 @@ const { ROUNDED } = BUTTON_SHAPES;
 const { LARGE } = BUTTON_SIZES;
 const { LG } = BUTTON_MAX_WIDTH;
 
-export const ProjectDetailsForm = () => {
+export const DetailsForm = () => {
   const { form, onSubmit, isLoading } = useProjectForm();
 
   return (
     <Box className={styles.wrapper}>
-      <ProjectDetailsHeader />
+      <DetailsHeader />
 
       <FormProvider {...form}>
         <form className={styles.form} onSubmit={onSubmit}>

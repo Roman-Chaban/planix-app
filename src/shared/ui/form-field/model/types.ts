@@ -34,7 +34,7 @@ export type FormLabelProps = PropsWithChildren<
 >;
 
 export type FormErrorProps = {
-  error?: string;
+  error: string;
   className?: string;
 };
 

@@ -33,7 +33,11 @@ export const FormField: FC<FormFieldProps> = ({
 
   return (
     <Box className={styles.field}>
-      {label && <FormLabel htmlFor={id}>{label}</FormLabel>}
+      {label && (
+        <FormLabel error={error} htmlFor={id}>
+          {label}
+        </FormLabel>
+      )}
 
       <Box className={wrapperClassName}>
         {startIcon && (

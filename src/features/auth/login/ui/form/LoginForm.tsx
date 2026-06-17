@@ -1,10 +1,11 @@
 'use client';
 
-import { Controller } from 'react-hook-form';
+import { FormProvider } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 import {
+  LoginActions,
   loginFormFields,
   type LoginFormSchema,
   loginSchema,
@@ -13,32 +14,19 @@ import {
 import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
-  AppLink,
-  AuthButton,
   AuthFooter,
   AuthHeader,
   AuthRedirect,
   AuthWrapper,
-  Box,
-  Checkbox,
   FormFields,
 } from '@/shared/ui';
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
-import styles from './LoginForm.module.scss';
-
-const { LOGIN, FORGOT_PASSWORD } = ROUTES;
-const { SM } = BUTTON_MAX_WIDTH;
+const { REGISTER } = ROUTES;
 
 export const LoginForm = () => {
   const { t } = useTranslation(NS.LOGIN);
 
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState: { errors, isValid },
-  } = useAppForm<LoginFormSchema>({
+  const form = useAppForm<LoginFormSchema>({
     schema: loginSchema,
     defaultValues: {
       email: '',
@@ -47,65 +35,48 @@ export const LoginForm = () => {
     },
   });
 
+  const {
+    handleSubmit,
+    control,
+    formState: { isValid },
+  } = form;
+
   const onSubmit = handleSubmit((data) => {
     console.log('Login Form Data:', data);
   });
 
-  const formFieldsProps = {
-    translationNamespace: NS.LOGIN,
-    register,
-    errors,
-    isValid,
-  };
-
   return (
-    <AuthWrapper
-      onSubmit={onSubmit}
-      header={
-        <AuthHeader
-          title={t('title')}
-          subtitle={t('subtitle')}
-          highlightedText={t('highlightedText')}
-          isHighlightedIcon
-        />
-      }
-      footer={
-        <AuthFooter>
-          <AuthRedirect
-            title={t('noAccount')}
-            linkText={t('registration')}
-            href={LOGIN}
+    <FormProvider {...form}>
+      <AuthWrapper
+        onSubmit={onSubmit}
+        header={
+          <AuthHeader
+            title={t('title')}
+            subtitle={t('subtitle')}
+            highlightedText={t('highlightedText')}
+            isHighlightedIcon
           />
-        </AuthFooter>
-      }
-    >
-      <FormFields fields={loginFormFields} {...formFieldsProps} />
+        }
+        footer={
+          <AuthFooter>
+            <AuthRedirect
+              title={t('noAccount')}
+              linkText={t('registration')}
+              href={REGISTER}
+            />
+          </AuthFooter>
+        }
+      >
+        <FormFields fields={loginFormFields} translationNamespace={NS.LOGIN} />
 
-      <Box className={styles.loginFormMainWrapper}>
-        <Box className={styles.loginFormMain}>
-          <Controller
-            name="rememberMe"
-            control={control}
-            render={({ field }) => (
-              <Checkbox
-                checked={field.value}
-                onChange={field.onChange}
-                label={t('rememberMe')}
-              />
-            )}
-          />
-
-          <AppLink href={FORGOT_PASSWORD} className={styles.loginFormLink}>
-            {t('forgotPassword')}
-          </AppLink>
-        </Box>
-
-        <AuthButton
-          label={t('submitButton')}
-          disabled={!isValid}
-          maxWidth={SM}
+        <LoginActions
+          control={control}
+          rememberMeLabel={t('rememberMe')}
+          forgotPasswordLabel={t('forgotPassword')}
+          submitLabel={t('submitButton')}
+          isValid={isValid}
         />
-      </Box>
-    </AuthWrapper>
+      </AuthWrapper>
+    </FormProvider>
   );
 };

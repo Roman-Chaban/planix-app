@@ -20,11 +20,13 @@ const { TEXT } = INPUT_TYPES;
 export const DateFormField: FC<DateFormFieldProps> = ({
   id,
   label,
+  placeholder,
   error,
   inputProps,
 }) => {
   const { t } = useTranslation(NAMESPACE.PROJECT_ADD);
-  const { value, onChange, placeholder, ...rest } = inputProps;
+
+  const { value, onChange, ref, ...rest } = inputProps;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const masked = applyDateMask(event.target.value);
@@ -39,12 +41,13 @@ export const DateFormField: FC<DateFormFieldProps> = ({
       error={error ? t(error) : ''}
       variant="default"
       startIcon={<CalendarIcon width={20} height={20} />}
+      inputRef={ref}
       inputProps={{
         ...rest,
         type: TEXT,
         inputMode: 'numeric',
         maxLength: 10,
-        placeholder,
+        placeholder: t(placeholder),
         value: toInputFormat(value),
         onChange: handleChange,
       }}

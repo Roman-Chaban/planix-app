@@ -1,7 +1,9 @@
 'use client';
 
-import { ProjectDetailsForm } from '@/features/project-add';
-import { ProjectDetailsHeader } from '@/features/project-add/ui/add-project-details';
+import {
+  ProjectDetailsForm,
+  ProjectDetailsHeader,
+} from '@/features/project-add';
 import { Box } from '@/shared/ui';
 
 import styles from './ProjectDetails.module.scss';

@@ -1,9 +1,9 @@
-import type { ChangeEvent, InputHTMLAttributes, Ref } from 'react';
+import type { InputHTMLAttributes, Ref } from 'react';
 
 export type FormFieldProps = {
   name: string;
   value: string;
-  onChange: (value: string | ChangeEvent<HTMLInputElement>) => void;
+  onChange: (value: string) => void;
   onBlur: () => void;
   ref?: Ref<HTMLInputElement>;
 };
@@ -17,6 +17,7 @@ export type DateInputProps = Omit<
 export type DateFormFieldProps = {
   id: string;
   label: string;
+  placeholder: string;
   error?: string;
   className?: string;
   inputProps: DateInputProps;

@@ -23,3 +23,4 @@ export { StartDateField } from './ui/StartDateField';
 
 export { ProjectDetails } from './ui/ProjectDetails';
 export { ProjectDetailsForm } from './ui/ProjectDetailsForm';
+export { ProjectDetailsHeader } from './ui/ProjectDetailsHeader';

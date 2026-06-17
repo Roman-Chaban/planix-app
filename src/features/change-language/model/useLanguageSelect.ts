@@ -3,8 +3,10 @@
 import { useMemo, useCallback } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-import { languageOptions } from '@/features/change-language/model/options';
-import type { LanguageOption } from '@/features/change-language/model/types';
+import {
+  languageOptions,
+  type LanguageOption,
+} from '@/features/change-language';
 
 export const useLanguageSelect = () => {
   const router = useRouter();

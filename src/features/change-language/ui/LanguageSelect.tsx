@@ -3,11 +3,14 @@
 import { useMemo } from 'react';
 import Select from 'react-select';
 
-import { SingleValue, Option } from '@/features/change-language';
-import { INSTANCE_ID } from '@/features/change-language/model/config';
-import type { LanguageOption } from '@/features/change-language/model/types';
-import { useLanguageSelect } from '@/features/change-language/model/useLanguageSelect';
-import { createSelectStyles } from '@/features/change-language/ui/styles';
+import {
+  SingleValue,
+  Option,
+  INSTANCE_ID,
+  type LanguageOption,
+  useLanguageSelect,
+  createSelectStyles,
+} from '@/features/change-language';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 

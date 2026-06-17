@@ -1,6 +1,6 @@
 import { type SingleValueProps, components } from 'react-select';
 
-import type { LanguageOption } from '@/features/change-language/model/types';
+import type { LanguageOption } from '@/features/change-language';
 import { Box, Typography } from '@/shared/ui';
 import {
   OPTION_STYLES,

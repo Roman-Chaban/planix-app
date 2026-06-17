@@ -19,9 +19,12 @@ const { TABLET } = BREAKPOINTS;
 export const LanguageSelect = () => {
   const { selectValue, languageOptions, handleChange } = useLanguageSelect();
 
-  const isTablet = useMediaQuery(TABLET);
+  const isTabletScreen = useMediaQuery(TABLET);
 
-  const styles = useMemo(() => createSelectStyles(isTablet), [isTablet]);
+  const styles = useMemo(
+    () => createSelectStyles(isTabletScreen),
+    [isTabletScreen],
+  );
 
   return (
     <Select<LanguageOption, false>

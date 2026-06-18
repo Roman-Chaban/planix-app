@@ -4,6 +4,7 @@ export {
   FormError,
   FormField,
   FormIcon,
+  FormDateField,
   FormLabel,
 } from './form-filed';
 export { FormFields } from './form-fields';

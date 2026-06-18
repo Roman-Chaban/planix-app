@@ -1,5 +1,6 @@
 export type {
-  FormFieldProps,
+  DateFieldProps,
+  FormDateFieldProps,
   FormLabelProps,
   FormIconProps,
   FormErrorProps,
@@ -10,3 +11,4 @@ export { FormLabel } from './ui/FormLabel';
 export { FormIcon } from './ui/FormIcon';
 export { FormError } from './ui/FormError';
 export { FormDivider } from './ui/FormDivider';
+export { FormDateField } from './ui/FromDateField';

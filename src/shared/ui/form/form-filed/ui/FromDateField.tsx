@@ -3,21 +3,17 @@
 import type { FC, ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  applyDateMask,
-  toISO,
-  toInputFormat,
-  type DateFormFieldProps,
-} from '@/features/project-add';
+import { applyDateMask, toISO, toInputFormat } from '@/shared/lib';
 
 import { NAMESPACE } from '@/shared/lib/i18n';
 import { FormField } from '@/shared/ui';
+import type { FormDateFieldProps } from '@/shared/ui/form/form-filed';
 import { CalendarIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
 const { TEXT } = INPUT_TYPES;
 
-export const DateFormField: FC<DateFormFieldProps> = ({
+export const FormDateField: FC<FormDateFieldProps> = ({
   id,
   label,
   placeholder,

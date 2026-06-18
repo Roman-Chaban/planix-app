@@ -12,6 +12,7 @@ export {
   FormFields,
   AppForm,
   FormDivider,
+  FormDateField,
 } from './form';
 export { Grid, GridItem } from './grid';
 export { Input } from './input';

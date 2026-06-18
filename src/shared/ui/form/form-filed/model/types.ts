@@ -1,4 +1,10 @@
-import type { LabelHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import type {
+  InputHTMLAttributes,
+  LabelHTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+  Ref,
+} from 'react';
 
 export type FormFieldVariant =
   | 'default'
@@ -48,4 +54,21 @@ export type FormIconProps = {
   position?: IconPosition;
   onClick?: () => void;
   className?: string;
+};
+
+export type DateFieldProps = {
+  value: string;
+  onChange: (value: string) => void;
+  onBlur?: () => void;
+  ref?: Ref<HTMLInputElement>;
+};
+
+export type FormDateFieldProps = {
+  id: string;
+  label: string;
+  placeholder: string;
+  error?: string;
+  className?: string;
+  inputProps: DateFieldProps &
+    Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
 };

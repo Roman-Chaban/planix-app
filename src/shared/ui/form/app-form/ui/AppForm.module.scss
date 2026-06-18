@@ -1,6 +1,6 @@
 @use '@/shared/styles' as *;
 
 .appForm {
-  @include flex(flex, row, start, stretch);
+  width: 100%;
   height: 100%;
 }

@@ -1,5 +1,5 @@
 import type { ProjectDetailsMapOptions } from '@/widgets/project-details/ui/details';
-import { toDisplay } from '@/features/project-add';
+import { toDisplay } from '@/shared/lib';
 import { APP_LOCALES } from '@/shared/lib/i18n/locales';
 
 export const mapProjectDetails = ({

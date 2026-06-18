@@ -4,7 +4,7 @@ import { buildClassName } from '@/shared/lib';
 
 import { FormError, FormLabel, Box, FormIcon, Input } from '@/shared/ui';
 
-import type { FormFieldProps } from '@/shared/ui/form/form-filed';
+import type { FormFieldProps } from '@/shared/ui/form/form-filed/model/types';
 import { ICON_POSITION } from '@/shared/ui/input';
 
 import styles from './FormField.module.scss';

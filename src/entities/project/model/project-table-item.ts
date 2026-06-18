@@ -1,5 +1,7 @@
-import { toDisplay } from '@/features/project-add';
 import type { Project } from '@/entities/project';
+import { toDisplay } from '@/shared/lib';
+
+import { STATUSES } from './statuses';
 
 export const toProjectTableItem = (project: Project) => {
   const formattedDueDate = toDisplay(project.due_date);
@@ -21,7 +23,7 @@ export const toProjectTableItem = (project: Project) => {
     client_avatar: project.client_avatar,
     start_date: project.start_date,
     due_date: formattedDueDate,
-    statusColor: 'Pending',
+    statusColor: STATUSES.PENDING,
     files: project.files || [],
   };
 };

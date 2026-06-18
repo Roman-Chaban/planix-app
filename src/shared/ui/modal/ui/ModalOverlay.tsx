@@ -1,14 +1,10 @@
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 
 import { Box } from '@/shared/ui';
 
-import styles from './Modal.module.scss';
+import type { ModalOverlayProps } from '@/shared/ui/modal';
 
-type ModalOverlayProps = {
-  children: ReactNode;
-  onClose: () => void;
-  closeOnOverlayClick: boolean;
-};
+import styles from './Modal.module.scss';
 
 export const ModalOverlay: FC<ModalOverlayProps> = ({
   children,

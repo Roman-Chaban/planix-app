@@ -33,3 +33,4 @@ export {
   AuthRedirect,
   AuthWrapper,
 } from './auth';
+export { Loader } from './loader';

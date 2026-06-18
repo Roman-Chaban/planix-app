@@ -19,7 +19,9 @@ const { REGISTER } = ROUTES;
 
 export const LoginForm = () => {
   const { t } = useTranslation(NS.LOGIN);
-  const { isValid, isSubmitting, form, onSubmit, control } = useLogin();
+  const { isValid, isSubmitting, form, onSubmit, control } = useLogin(t);
+
+  const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
     <AppForm form={form} onSubmit={onSubmit}>
@@ -49,7 +51,7 @@ export const LoginForm = () => {
           rememberMeLabel={t('rememberMe')}
           forgotPasswordLabel={t('forgotPassword')}
           submitLabel={t('submitButton')}
-          isValid={isValid && !isSubmitting}
+          isValid={isSubmitDisabled}
           isLoading={isSubmitting}
         />
       </AuthWrapper>

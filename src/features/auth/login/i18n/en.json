@@ -25,6 +25,7 @@
     "password": {
       "min": "Password must be at least 8 characters",
       "noSpaces": "Password must not contain leading or trailing spaces"
-    }
+    },
+    "invalidCredentials": "Invalid email or password"
   }
 }

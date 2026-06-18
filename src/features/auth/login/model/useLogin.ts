@@ -1,13 +1,15 @@
+import type { TFunction } from 'i18next';
 import type { SubmitHandler } from 'react-hook-form';
 
 import { ROUTES } from '@/app/routes';
 import { loginSchema, type LoginFormSchema } from '@/features/auth/login';
 import { supabase } from '@/shared/api/supabase';
+import { setFormErrors } from '@/shared/lib';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
 const { DASHBOARD } = ROUTES;
 
-export const useLogin = () => {
+export const useLogin = (t: TFunction) => {
   const localizedRouter = useLocalizedRouter();
 
   const form = useAppForm<LoginFormSchema>({
@@ -24,7 +26,7 @@ export const useLogin = () => {
     formState: { isValid, isSubmitting },
   } = form;
 
-  const login = async (data: LoginFormSchema) => {
+  const handleLogin = async (data: LoginFormSchema) => {
     const { email, password } = data;
 
     const { error } = await supabase.auth.signInWithPassword({
@@ -39,11 +41,13 @@ export const useLogin = () => {
 
   const onSubmit: SubmitHandler<LoginFormSchema> = async (data) => {
     try {
-      await login(data);
+      await handleLogin(data);
     } catch {
-      // TODO: [Waiting for toast and translation implementation]
-      // form.setError('email', { message: '' });
-      // form.setError('password', { message: '' });
+      setFormErrors<LoginFormSchema>({
+        form,
+        fields: ['email', 'password'],
+        message: t('validation.invalidCredentials'),
+      });
     }
   };
 

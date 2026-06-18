@@ -23,27 +23,28 @@ export const LoginForm = () => {
 
   const isSubmitDisabled = !isValid || isSubmitting;
 
+  const header = (
+    <AuthHeader
+      title={t('title')}
+      subtitle={t('subtitle')}
+      highlightedText={t('highlightedText')}
+      isHighlightedIcon
+    />
+  );
+
+  const footer = (
+    <AuthFooter>
+      <AuthRedirect
+        title={t('noAccount')}
+        linkText={t('registration')}
+        href={REGISTER}
+      />
+    </AuthFooter>
+  );
+
   return (
     <AppForm form={form} onSubmit={onSubmit}>
-      <AuthWrapper
-        header={
-          <AuthHeader
-            title={t('title')}
-            subtitle={t('subtitle')}
-            highlightedText={t('highlightedText')}
-            isHighlightedIcon
-          />
-        }
-        footer={
-          <AuthFooter>
-            <AuthRedirect
-              title={t('noAccount')}
-              linkText={t('registration')}
-              href={REGISTER}
-            />
-          </AuthFooter>
-        }
-      >
+      <AuthWrapper header={header} footer={footer}>
         <FormFields fields={loginFormFields} translationNamespace={NS.LOGIN} />
 
         <LoginActions

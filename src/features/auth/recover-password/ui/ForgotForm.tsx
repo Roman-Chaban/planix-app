@@ -46,21 +46,22 @@ export const ForgotForm = () => {
     console.log('Login Form Data:', data);
   };
 
+  const header = <AuthHeader title={t('title')} subtitle={t('subtitle')} />;
+
+  const footer = (
+    <AuthFooter>
+      <AuthRedirect
+        title={t('backTitle')}
+        linkText={t('backLink')}
+        href={LOGIN}
+        icon={<BackIcon />}
+      />
+    </AuthFooter>
+  );
+
   return (
     <AppForm form={form} onSubmit={onSubmit}>
-      <AuthWrapper
-        header={<AuthHeader title={t('title')} subtitle={t('subtitle')} />}
-        footer={
-          <AuthFooter>
-            <AuthRedirect
-              title={t('backTitle')}
-              linkText={t('backLink')}
-              href={LOGIN}
-              icon={<BackIcon />}
-            />
-          </AuthFooter>
-        }
-      >
+      <AuthWrapper header={header} footer={footer}>
         <FormFields
           fields={registerFormFields}
           translationNamespace={NS.FORGOT_PASSWORD_FORM}

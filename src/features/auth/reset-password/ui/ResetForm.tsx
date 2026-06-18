@@ -12,19 +12,18 @@ const { LOGIN } = ROUTES;
 export const ResetForm = () => {
   const { t } = useTranslation(NS.RESET_PASSWORD_FORM);
 
-  return (
-    <AuthWrapper
-      header={<AuthHeader title={t('title')} subtitle={t('subtitle')} />}
-      footer={
-        <AuthFooter>
-          <AuthRedirect
-            title={t('backTitle')}
-            linkText={t('backLink')}
-            href={LOGIN}
-            icon={<BackIcon />}
-          />
-        </AuthFooter>
-      }
-    />
+  const header = <AuthHeader title={t('title')} subtitle={t('subtitle')} />;
+
+  const footer = (
+    <AuthFooter>
+      <AuthRedirect
+        title={t('backTitle')}
+        linkText={t('backLink')}
+        href={LOGIN}
+        icon={<BackIcon />}
+      />
+    </AuthFooter>
   );
+
+  return <AuthWrapper header={header} footer={footer} />;
 };

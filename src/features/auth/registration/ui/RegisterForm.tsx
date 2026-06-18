@@ -23,7 +23,6 @@ import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 import styles from './RegisterForm.module.scss';
 
 const { REGISTER } = ROUTES;
-
 const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterForm = () => {
@@ -39,26 +38,23 @@ export const RegisterForm = () => {
     isValid,
   };
 
+  const header = (
+    <AuthHeader title={t('title')} subtitle={t('subtitle')} isHighlightedIcon />
+  );
+
+  const footer = (
+    <AuthFooter>
+      <AuthRedirect
+        title={t('noAccount')}
+        linkText={t('registration')}
+        href={REGISTER}
+      />
+    </AuthFooter>
+  );
+
   return (
     <AppForm form={form} onSubmit={onSubmit}>
-      <AuthWrapper
-        header={
-          <AuthHeader
-            title={t('title')}
-            subtitle={t('subtitle')}
-            isHighlightedIcon
-          />
-        }
-        footer={
-          <AuthFooter>
-            <AuthRedirect
-              title={t('noAccount')}
-              linkText={t('registration')}
-              href={REGISTER}
-            />
-          </AuthFooter>
-        }
-      >
+      <AuthWrapper header={header} footer={footer}>
         <FormFields fields={personalFields} {...formFieldsProps} />
 
         <Box className={styles.box}>

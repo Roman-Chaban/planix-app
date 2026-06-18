@@ -49,7 +49,8 @@ export const LoginForm = () => {
           rememberMeLabel={t('rememberMe')}
           forgotPasswordLabel={t('forgotPassword')}
           submitLabel={t('submitButton')}
-          isValid={isValid || isSubmitting}
+          isValid={isValid && !isSubmitting}
+          isLoading={isSubmitting}
         />
       </AuthWrapper>
     </AppForm>

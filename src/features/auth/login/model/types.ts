@@ -8,4 +8,5 @@ export type LoginActionsProps = {
   forgotPasswordLabel: string;
   submitLabel: string;
   isValid: boolean;
+  isLoading?: boolean;
 };

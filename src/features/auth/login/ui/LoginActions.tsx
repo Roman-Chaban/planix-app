@@ -19,6 +19,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
   forgotPasswordLabel,
   submitLabel,
   isValid,
+  isLoading,
 }) => {
   return (
     <Box className={styles.loginFormMainWrapper}>
@@ -40,7 +41,12 @@ export const LoginActions: FC<LoginActionsProps> = ({
         </AppLink>
       </Box>
 
-      <AuthButton label={submitLabel} disabled={!isValid} maxWidth={SM} />
+      <AuthButton
+        label={submitLabel}
+        disabled={!isValid}
+        maxWidth={SM}
+        isLoading={isLoading}
+      />
     </Box>
   );
 };

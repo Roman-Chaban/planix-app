@@ -71,8 +71,9 @@ export const RegisterForm = () => {
 
         <AuthButton
           label={t('registration')}
-          disabled={!isValid || isSubmitting}
+          disabled={!isValid}
           maxWidth={LG}
+          isLoading={isSubmitting}
         />
       </AuthWrapper>
     </AppForm>

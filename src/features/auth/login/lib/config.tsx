@@ -1,6 +1,6 @@
 import type { LoginFormSchema } from '../model/login.schema';
 
-import type { FormFieldConfig } from '@/shared/ui/form-fields';
+import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 import { MessageIcon, LockIcon } from '@/shared/ui/icons';
 

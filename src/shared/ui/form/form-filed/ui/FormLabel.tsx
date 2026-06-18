@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 
-import type { FormLabelProps } from '@/shared/ui/form-field';
+import type { FormLabelProps } from '@/shared/ui/form/form-filed';
 
 import styles from './FormField.module.scss';
 

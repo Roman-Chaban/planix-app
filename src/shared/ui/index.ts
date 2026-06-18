@@ -4,7 +4,15 @@ export { Box } from './box';
 export { Button } from './button';
 export { Card } from './card';
 export { Checkbox } from './checkbox';
-export { FormField, FormError, FormIcon, FormLabel } from './form-field';
+export {
+  FormField,
+  FormError,
+  FormIcon,
+  FormLabel,
+  FormFields,
+  AppForm,
+  FormDivider,
+} from './form';
 export { Grid, GridItem } from './grid';
 export { Input } from './input';
 export { AppLink } from './link';
@@ -25,5 +33,3 @@ export {
   AuthRedirect,
   AuthWrapper,
 } from './auth';
-export { FormFields } from './form-fields';
-export { AppForm } from './form/ui/app-form/AppForm';

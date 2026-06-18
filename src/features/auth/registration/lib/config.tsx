@@ -1,5 +1,5 @@
 import type { RegisterFormSchema } from '@/features/auth/registration';
-import type { FormFieldConfig } from '@/shared/ui/form-fields';
+import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import {
   CalendarIcon,
   ClientIcon,

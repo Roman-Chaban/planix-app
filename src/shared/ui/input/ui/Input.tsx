@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import type { FormInputProps } from '@/shared/ui/form-field/model/types';
+import type { FormInputProps } from '@/shared/ui/form/form-filed/model/types';
 
 import styles from './Input.module.scss';
 

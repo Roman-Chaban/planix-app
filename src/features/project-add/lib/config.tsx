@@ -1,5 +1,5 @@
 import type { ProjectDetailsSchema } from '@/features/project-add';
-import type { FormFieldConfig } from '@/shared/ui/form-fields';
+import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 import {
   ClientIcon,

@@ -8,7 +8,6 @@ import styles from './AuthWrapper.module.scss';
 
 export const AuthWrapper: FC<AuthWrapperProps> = ({
   children,
-  onSubmit,
   header,
   footer,
 }) => {
@@ -16,9 +15,8 @@ export const AuthWrapper: FC<AuthWrapperProps> = ({
     <Box className={styles.wrapper}>
       <Box className={styles.content}>
         {header}
-        <form className={styles.form} onSubmit={onSubmit}>
-          {children}
-        </form>
+
+        <Box className={styles.form}>{children}</Box>
       </Box>
 
       {footer}

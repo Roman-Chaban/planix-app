@@ -1,16 +1,12 @@
 'use client';
 
-import type { SubmitHandler } from 'react-hook-form';
-
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 import {
-  type ForgotPasswordSchema,
-  forgotPasswordSchema,
   registerFormFields,
+  useForgotPassword,
 } from '@/features/auth/recover-password';
-import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AppForm,
@@ -29,22 +25,7 @@ const { MD } = BUTTON_MAX_WIDTH;
 
 export const ForgotForm = () => {
   const { t } = useTranslation(NS.FORGOT_PASSWORD_FORM);
-
-  const form = useAppForm<ForgotPasswordSchema>({
-    schema: forgotPasswordSchema,
-    defaultValues: {
-      email: '',
-    },
-  });
-
-  const {
-    formState: { isValid },
-  } = form;
-
-  // TODO: [Waiting for form implementation]
-  const onSubmit: SubmitHandler<ForgotPasswordSchema> = (data) => {
-    console.log('Login Form Data:', data);
-  };
+  const { isValid, form, onSubmit } = useForgotPassword();
 
   const header = <AuthHeader title={t('title')} subtitle={t('subtitle')} />;
 

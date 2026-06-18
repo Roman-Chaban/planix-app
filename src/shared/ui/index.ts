@@ -24,3 +24,4 @@ export { AuthWrapper } from './auth-wrapper';
 export { AuthButton } from './auth-button';
 export { AuthRedirect } from './auth-redirect';
 export { FormFields } from './form-fields';
+export { AppForm } from './form/ui/app-form/AppForm';

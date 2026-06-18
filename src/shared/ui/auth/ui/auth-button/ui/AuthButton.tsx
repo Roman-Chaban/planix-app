@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import { useMediaQuery } from '@/shared/lib/hooks';
-import { Button } from '@/shared/ui';
+import { Button, Loader } from '@/shared/ui';
 
 import type { AuthButtonProps } from '@/shared/ui/auth/ui/auth-button';
 import {
@@ -22,10 +22,11 @@ export const AuthButton: FC<AuthButtonProps> = ({
   label,
   disabled,
   maxWidth,
+  isLoading,
 }) => {
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
-
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
+  const isButtonDisabled = disabled || isLoading;
 
   return (
     <Button
@@ -33,11 +34,11 @@ export const AuthButton: FC<AuthButtonProps> = ({
       variant={DEFAULT}
       size={buttonSizes}
       shape={ROUNDED}
-      disabled={disabled}
-      fullWidth
+      disabled={isButtonDisabled}
       maxWidth={maxWidth}
+      fullWidth
     >
-      {label}
+      {isLoading ? <Loader /> : label}
     </Button>
   );
 };

@@ -5,4 +5,5 @@ import type { MaxWidth } from '@/shared/ui/button';
 export type AuthButtonProps = {
   label: string;
   maxWidth: MaxWidth;
+  isLoading?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;

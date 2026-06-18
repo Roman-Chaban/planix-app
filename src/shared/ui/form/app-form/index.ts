@@ -1,1 +1,3 @@
-export { AppForm } from './AppForm';
+export type { AppFormProps } from './model/types';
+
+export { AppForm } from './ui/AppForm';

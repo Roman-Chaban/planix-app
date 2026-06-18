@@ -41,8 +41,9 @@ export const useLogin = () => {
     try {
       await login(data);
     } catch {
-      form.setError('email', { message: '' });
-      form.setError('password', { message: '' });
+      // TODO: [Waiting for toast and translation implementation]
+      // form.setError('email', { message: '' });
+      // form.setError('password', { message: '' });
     }
   };
 

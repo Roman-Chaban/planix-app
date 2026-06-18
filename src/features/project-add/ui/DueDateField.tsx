@@ -4,7 +4,7 @@ import { useController, useFormContext } from 'react-hook-form';
 
 import type { ProjectDetailsSchema } from '@/features/project-add';
 
-import { DateFormField } from './DateFormField';
+import { FormDateField } from '@/shared/ui';
 
 export const DueDateField = () => {
   const { control } = useFormContext<ProjectDetailsSchema>();
@@ -15,7 +15,7 @@ export const DueDateField = () => {
   });
 
   return (
-    <DateFormField
+    <FormDateField
       id="dueDate"
       label="dueDateLabel"
       placeholder="dueDatePlaceholder"

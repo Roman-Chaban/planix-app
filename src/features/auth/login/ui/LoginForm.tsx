@@ -1,18 +1,10 @@
 'use client';
 
-import type { SubmitHandler } from 'react-hook-form';
-
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import {
-  LoginActions,
-  loginFormFields,
-  type LoginFormSchema,
-  loginSchema,
-} from '@/features/auth/login';
+import { LoginActions, loginFormFields, useLogin } from '@/features/auth/login';
 
-import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AppForm,
@@ -27,24 +19,7 @@ const { REGISTER } = ROUTES;
 
 export const LoginForm = () => {
   const { t } = useTranslation(NS.LOGIN);
-
-  const form = useAppForm<LoginFormSchema>({
-    schema: loginSchema,
-    defaultValues: {
-      email: '',
-      password: '',
-      rememberMe: false,
-    },
-  });
-
-  const {
-    control,
-    formState: { isValid },
-  } = form;
-
-  const onSubmit: SubmitHandler<LoginFormSchema> = (data) => {
-    console.log('Login Form Data:', data);
-  };
+  const { isValid, isSubmitting, form, onSubmit, control } = useLogin();
 
   return (
     <AppForm form={form} onSubmit={onSubmit}>
@@ -74,7 +49,7 @@ export const LoginForm = () => {
           rememberMeLabel={t('rememberMe')}
           forgotPasswordLabel={t('forgotPassword')}
           submitLabel={t('submitButton')}
-          isValid={isValid}
+          isValid={isValid || isSubmitting}
         />
       </AuthWrapper>
     </AppForm>

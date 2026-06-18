@@ -10,7 +10,7 @@ import {
 } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
-export const { TEXT, EMAIL, PASSWORD } = INPUT_TYPES;
+export const { TEXT, EMAIL, PASSWORD, DATE } = INPUT_TYPES;
 
 export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] =
   [
@@ -61,7 +61,7 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
     {
       name: 'birthDate',
       label: 'birthDate',
-      type: TEXT,
+      type: DATE,
       placeholder: 'birthDatePlaceholder',
       autoComplete: 'bday',
       startIcon: <CalendarIcon />,

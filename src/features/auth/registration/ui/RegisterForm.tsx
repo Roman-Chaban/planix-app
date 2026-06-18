@@ -1,16 +1,12 @@
 'use client';
 
-import type { SubmitHandler } from 'react-hook-form';
-
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 import {
   registerFormFields,
-  type RegisterFormSchema,
-  signUpFormSchema,
+  useRegistration,
 } from '@/features/auth/registration';
-import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
   AppForm,
@@ -32,27 +28,7 @@ const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterForm = () => {
   const { t } = useTranslation(NS.SIGN_UP_FORM);
-
-  const form = useAppForm<RegisterFormSchema>({
-    schema: signUpFormSchema,
-    defaultValues: {
-      email: '',
-      fullName: '',
-      password: '',
-      confirmPassword: '',
-      contact: '',
-      birthDate: '',
-    },
-  });
-
-  const {
-    formState: { isValid },
-  } = form;
-
-  // TODO: [Waitign for form implementation]
-  const onSubmit: SubmitHandler<RegisterFormSchema> = (data) => {
-    console.log('Login Form Data:', data);
-  };
+  const { isValid, isSubmitting, onSubmit, form } = useRegistration();
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -95,7 +71,7 @@ export const RegisterForm = () => {
 
         <AuthButton
           label={t('registration')}
-          disabled={!isValid}
+          disabled={!isValid || isSubmitting}
           maxWidth={LG}
         />
       </AuthWrapper>

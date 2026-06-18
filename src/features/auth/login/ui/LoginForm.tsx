@@ -1,6 +1,7 @@
 'use client';
 
-import { FormProvider } from 'react-hook-form';
+import type { SubmitHandler } from 'react-hook-form';
+
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
@@ -14,6 +15,7 @@ import {
 import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
+  AppForm,
   AuthFooter,
   AuthHeader,
   AuthRedirect,
@@ -36,19 +38,17 @@ export const LoginForm = () => {
   });
 
   const {
-    handleSubmit,
     control,
     formState: { isValid },
   } = form;
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit: SubmitHandler<LoginFormSchema> = (data) => {
     console.log('Login Form Data:', data);
-  });
+  };
 
   return (
-    <FormProvider {...form}>
+    <AppForm form={form} onSubmit={onSubmit}>
       <AuthWrapper
-        onSubmit={onSubmit}
         header={
           <AuthHeader
             title={t('title')}
@@ -77,6 +77,6 @@ export const LoginForm = () => {
           isValid={isValid}
         />
       </AuthWrapper>
-    </FormProvider>
+    </AppForm>
   );
 };

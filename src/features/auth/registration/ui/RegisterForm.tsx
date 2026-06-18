@@ -1,6 +1,7 @@
 'use client';
 
-import { FormProvider } from 'react-hook-form';
+import type { SubmitHandler } from 'react-hook-form';
+
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
@@ -12,6 +13,7 @@ import {
 import { useAppForm } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import {
+  AppForm,
   AuthButton,
   AuthFooter,
   AuthHeader,
@@ -44,14 +46,13 @@ export const RegisterForm = () => {
   });
 
   const {
-    handleSubmit,
     formState: { isValid },
   } = form;
 
   // TODO: [Waitign for form implementation]
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit: SubmitHandler<RegisterFormSchema> = (data) => {
     console.log('Login Form Data:', data);
-  });
+  };
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -63,9 +64,8 @@ export const RegisterForm = () => {
   };
 
   return (
-    <FormProvider {...form}>
+    <AppForm form={form} onSubmit={onSubmit}>
       <AuthWrapper
-        onSubmit={onSubmit}
         header={
           <AuthHeader
             title={t('title')}
@@ -99,6 +99,6 @@ export const RegisterForm = () => {
           maxWidth={LG}
         />
       </AuthWrapper>
-    </FormProvider>
+    </AppForm>
   );
 };

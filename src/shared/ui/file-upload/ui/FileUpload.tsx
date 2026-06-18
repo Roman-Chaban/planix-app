@@ -3,7 +3,7 @@
 import { useCallback, useId, type FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, Typography, FormField } from '@/shared/ui';
+import { Box, Typography, FormField, FormError } from '@/shared/ui';
 import {
   FileItem,
   FileUploadItem,
@@ -48,7 +48,6 @@ export const FileUpload: FC<FileUploadProps> = ({
     <FormField
       id={uploadId}
       label={label}
-      error={error}
       variant={NO_BORDER}
       inputRef={inputRef}
       inputProps={{
@@ -98,6 +97,7 @@ export const FileUpload: FC<FileUploadProps> = ({
           </Box>
         )}
       </Box>
+      <FormError error={error ?? ''} />
     </FormField>
   );
 };

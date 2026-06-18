@@ -1,7 +1,5 @@
 'use client';
 
-import { FormProvider } from 'react-hook-form';
-
 import {
   projectAddFields,
   DescriptionField,
@@ -13,7 +11,7 @@ import {
 } from '@/features/project-add';
 
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
-import { Box, FormFields, ProjectButton } from '@/shared/ui';
+import { AppForm, Box, FormFields, ProjectButton } from '@/shared/ui';
 import {
   BUTTON_MAX_WIDTH,
   BUTTON_SHAPES,
@@ -37,36 +35,34 @@ export const DetailsForm = () => {
     <Box className={styles.wrapper}>
       <DetailsHeader />
 
-      <FormProvider {...form}>
-        <form className={styles.form} onSubmit={onSubmit}>
-          <FormFields
-            fields={projectAddFields}
-            translationNamespace={NS.PROJECT_ADD}
-          />
+      <AppForm form={form} onSubmit={onSubmit} className={styles.form}>
+        <FormFields
+          fields={projectAddFields}
+          translationNamespace={NS.PROJECT_ADD}
+        />
 
-          <Box className={styles.row}>
-            <StartDateField />
-            <DueDateField />
-          </Box>
+        <Box className={styles.row}>
+          <StartDateField />
+          <DueDateField />
+        </Box>
 
-          <Box className={styles.row}>
-            <FilesField />
-          </Box>
+        <Box className={styles.row}>
+          <FilesField />
+        </Box>
 
-          <DescriptionField />
+        <DescriptionField />
 
-          <ProjectButton
-            type={SUBMIT}
-            shape={ROUNDED}
-            variant={DEFAULT}
-            size={LARGE}
-            isLoading={isLoading}
-            disabled={isLoading}
-            translationNamespace={NS.PROJECT_ADD}
-            maxWidth={LG}
-          />
-        </form>
-      </FormProvider>
+        <ProjectButton
+          type={SUBMIT}
+          shape={ROUNDED}
+          variant={DEFAULT}
+          size={LARGE}
+          isLoading={isLoading}
+          disabled={isLoading}
+          translationNamespace={NS.PROJECT_ADD}
+          maxWidth={LG}
+        />
+      </AppForm>
     </Box>
   );
 };

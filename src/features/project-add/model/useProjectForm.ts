@@ -1,5 +1,7 @@
 'use client';
 
+import type { SubmitHandler } from 'react-hook-form';
+
 import { ROUTES } from '@/app/routes';
 import {
   projectDetailsSchema,
@@ -44,7 +46,9 @@ export const useProjectForm = () => {
     );
   };
 
-  const handleFormSubmit = form.handleSubmit(async (formData) => {
+  const handleFormSubmit: SubmitHandler<ProjectDetailsSchema> = async (
+    formData,
+  ) => {
     try {
       const processedFiles = await processFiles(formData.files);
 
@@ -59,7 +63,7 @@ export const useProjectForm = () => {
     } catch (error) {
       console.error('Failed to process project submission:', error);
     }
-  });
+  };
 
   return {
     form,

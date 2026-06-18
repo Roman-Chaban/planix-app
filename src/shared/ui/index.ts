@@ -17,11 +17,13 @@ export { Textarea } from './textarea';
 export { Typography } from './typography';
 export { Modal, ModalContent, ModalHeader, ModalOverlay } from './modal';
 export { FileUpload } from './file-upload';
-export { AuthLayout } from './auth-layout';
-export { AuthHeader } from './auth-header';
-export { AuthFooter } from './auth-footer';
-export { AuthWrapper } from './auth-wrapper';
-export { AuthButton } from './auth-button';
-export { AuthRedirect } from './auth-redirect';
+export {
+  AuthLayout,
+  AuthButton,
+  AuthFooter,
+  AuthHeader,
+  AuthRedirect,
+  AuthWrapper,
+} from './auth';
 export { FormFields } from './form-fields';
 export { AppForm } from './form/ui/app-form/AppForm';

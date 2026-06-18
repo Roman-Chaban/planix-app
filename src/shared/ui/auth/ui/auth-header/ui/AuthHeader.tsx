@@ -2,7 +2,7 @@ import { type FC } from 'react';
 
 import { Box, Typography } from '@/shared/ui';
 
-import type { AuthHeaderProps } from '@/shared/ui/auth-header';
+import type { AuthHeaderProps } from '@/shared/ui/auth/ui/auth-header';
 
 import styles from './AuthHeader.module.scss';
 

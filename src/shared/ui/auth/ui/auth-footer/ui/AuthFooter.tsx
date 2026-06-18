@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import { Box } from '@/shared/ui';
-import type { AuthFooterProps } from '@/shared/ui/auth-footer';
+import type { AuthFooterProps } from '@/shared/ui/auth/ui/auth-footer';
 
 import styles from './AuthFooter.module.scss';
 

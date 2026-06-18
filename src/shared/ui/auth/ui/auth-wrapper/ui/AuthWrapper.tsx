@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Box } from '@/shared/ui';
 
-import type { AuthWrapperProps } from '@/shared/ui/auth-wrapper';
+import type { AuthWrapperProps } from '@/shared/ui/auth/ui/auth-wrapper';
 
 import styles from './AuthWrapper.module.scss';
 

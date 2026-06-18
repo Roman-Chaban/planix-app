@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import { AppLink, Box, Typography } from '@/shared/ui';
-import type { AuthRedirectProps } from '@/shared/ui/auth-redirect';
+import type { AuthRedirectProps } from '@/shared/ui/auth/ui/auth-redirect';
 
 import styles from './AuthRedirect.module.scss';
 

@@ -20,8 +20,8 @@ import {
   AuthRedirect,
   Box,
   FormFields,
+  AuthWrapper,
 } from '@/shared/ui';
-import { AuthWrapper } from '@/shared/ui/auth-wrapper';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
 import styles from './RegisterForm.module.scss';

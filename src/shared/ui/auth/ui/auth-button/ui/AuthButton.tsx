@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { Button } from '@/shared/ui';
 
-import type { AuthButtonProps } from '@/shared/ui/auth-button';
+import type { AuthButtonProps } from '@/shared/ui/auth/ui/auth-button';
 import {
   BUTTON_SHAPES,
   BUTTON_SIZES,

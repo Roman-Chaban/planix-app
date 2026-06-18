@@ -35,7 +35,7 @@ export const DetailsForm = () => {
     <Box className={styles.wrapper}>
       <DetailsHeader />
 
-      <AppForm form={form} onSubmit={onSubmit} className={styles.form}>
+      <AppForm form={form} onSubmit={onSubmit}>
         <FormFields
           fields={projectAddFields}
           translationNamespace={NS.PROJECT_ADD}

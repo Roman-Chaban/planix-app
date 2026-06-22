@@ -4,4 +4,5 @@
   width: 100%;
   height: 100%;
   @include flex(flex, column, start, stretch, 1.5rem);
+  padding: 0 1.375rem 1.375rem 1.375rem;
 }

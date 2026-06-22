@@ -1,6 +1,6 @@
 export const NAMESPACE = {
   BRAND: 'brand',
-  LOGIN: 'login',
+  AUTH: 'auth',
   SIDEBAR: 'sidebar',
   MODAL: 'modal',
   DASHBOARD_CARDS: 'dashboardCards',

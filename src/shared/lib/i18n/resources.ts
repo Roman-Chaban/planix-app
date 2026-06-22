@@ -9,17 +9,17 @@ import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
-import { loginI18n } from '@/features/auth/login/i18n';
 import { forgotPasswordFormI18n } from '@/features/auth/recover-password/i18n';
 import { signUpI18n } from '@/features/auth/registration/i18n';
 import { resetPasswordFormI18n } from '@/features/auth/reset-password/i18n';
+import { authI18n } from '@/features/auth/stepper/i18n';
 import { projectAddI18n } from '@/features/project-add/i18n';
 import { deleteProjectI18n } from '@/features/project-delete/i18n';
 
 export const resources = {
   en: {
+    auth: authI18n.en,
     brand: brandI18n.en,
-    login: loginI18n.en,
     sidebar: sidebarI18n.en,
     modal: deleteProjectI18n.en,
     dashboardCards: dashboardCardsI18n.en,
@@ -37,8 +37,8 @@ export const resources = {
     resetPasswordForm: resetPasswordFormI18n.en,
   },
   uk: {
+    auth: authI18n.uk,
     brand: brandI18n.uk,
-    login: loginI18n.uk,
     sidebar: sidebarI18n.uk,
     modal: deleteProjectI18n.uk,
     dashboardCards: dashboardCardsI18n.uk,

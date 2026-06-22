@@ -22,7 +22,11 @@ export const AuthRedirect: FC<AuthRedirectProps> = ({
       {title}
     </Typography>
 
-    <Button variant={TRANSPARENT} onClick={() => onNavigate(step)} className={styles.button} >
+    <Button
+      variant={TRANSPARENT}
+      onClick={() => onNavigate(step)}
+      className={styles.button}
+    >
       {label}
     </Button>
   </Box>

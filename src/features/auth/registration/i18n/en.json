@@ -21,7 +21,7 @@
   "contactPlaceholder": "Enter Contact No",
 
   "birthDate": "Date of Birth",
-  "birthDatePlaceholder": "Select Date of Birth",
+  "birthDatePlaceholder": "Date of Birth",
 
   "validation": {
     "fullName": {

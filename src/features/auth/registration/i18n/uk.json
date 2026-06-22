@@ -21,7 +21,7 @@
   "contactPlaceholder": "Введіть номер телефону",
 
   "birthDate": "Дата народження",
-  "birthDatePlaceholder": "Оберіть дату народження",
+  "birthDatePlaceholder": "Дата народження",
 
   "validation": {
     "fullName": {

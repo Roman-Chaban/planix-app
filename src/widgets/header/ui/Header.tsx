@@ -4,11 +4,12 @@ import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
+import { ROUTES } from '@/app/routes';
 import type { HeaderProps } from '@/widgets/header';
 
 import { LanguageSelect } from '@/features/change-language';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
-import { Avatar, Box, Button, Typography } from '@/shared/ui';
+import { AppLink, Box, Button, Typography } from '@/shared/ui';
 import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button';
 
 import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
@@ -16,10 +17,10 @@ import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 import styles from './Header.module.scss';
 
 const { BUTTON } = BUTTON_TYPES;
-const { CIRCLE } = BUTTON_SHAPES;
-const { SMALL } = BUTTON_SIZES;
+const { CIRCLE, ROUNDED } = BUTTON_SHAPES;
+const { SMALL, MEDIUM } = BUTTON_SIZES;
 
-const FALLBACK_PROFILE_AVATAR = 'RC';
+const { LOGIN } = ROUTES;
 
 export const Header: FC<HeaderProps> = ({ title }) => {
   const { t } = useTranslation(NS.HEADER);
@@ -45,11 +46,11 @@ export const Header: FC<HeaderProps> = ({ title }) => {
               <NotificationIcon />
             </Button>
 
-            {/* TODO: [Waiting for implementation AuthLogic, add alt for Avatar] */}
-            <Avatar
-              className={styles.avatar}
-              fallback={FALLBACK_PROFILE_AVATAR}
-            />
+            <Button type={BUTTON} size={MEDIUM} shape={ROUNDED}>
+              <AppLink href={LOGIN} className={styles.link}>
+                {t('login')}
+              </AppLink>
+            </Button>
           </Box>
         </Box>
       </Box>

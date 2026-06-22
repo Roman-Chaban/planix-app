@@ -5,9 +5,11 @@ import { useTranslation } from 'react-i18next';
 
 import { LoginActions, loginFormFields, useLogin } from '@/features/auth/login';
 
-import type { AuthStep } from '@/features/auth/stepper';
+import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { AppForm, FormFields } from '@/shared/ui';
+
+const { FORGOT } = AUTH_STEPS;
 
 type LoginFormProps = {
   onNavigate: (step: AuthStep) => void;
@@ -30,7 +32,7 @@ export const LoginForm: FC<LoginFormProps> = ({ onNavigate }) => {
         submitLabel={t('login.submitButton')}
         isValid={isSubmitDisabled}
         isLoading={isSubmitting}
-        onForgotPassword={() => onNavigate('forgot')}
+        onForgotPassword={() => onNavigate(FORGOT)}
       />
     </AppForm>
   );

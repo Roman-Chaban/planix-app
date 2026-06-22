@@ -5,14 +5,14 @@ import {
   forgotPasswordSchema,
   type ForgotPasswordSchema,
 } from '@/features/auth/recover-password';
+import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
-import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
+import { useAppForm } from '@/shared/lib/hooks';
 
-const { RESET_PASSWORD } = ROUTES;
+const { AUTH } = ROUTES;
+const { RESET } = AUTH_STEPS;
 
-export const useForgotPassword = () => {
-  const localizedRouter = useLocalizedRouter();
-
+export const useForgotPassword = (onNavigate: (step: AuthStep) => void) => {
   const form = useAppForm<ForgotPasswordSchema>({
     schema: forgotPasswordSchema,
     defaultValues: {
@@ -26,7 +26,7 @@ export const useForgotPassword = () => {
 
   const onSubmit: SubmitHandler<ForgotPasswordSchema> = async (data) => {
     const { error } = await supabase.auth.resetPasswordForEmail(data.email, {
-      redirectTo: `${window.location.origin}${RESET_PASSWORD}`,
+      redirectTo: `${window.location.origin}${AUTH}`,
     });
 
     if (error) {
@@ -34,7 +34,7 @@ export const useForgotPassword = () => {
       return;
     }
 
-    localizedRouter.push(RESET_PASSWORD);
+    onNavigate(RESET);
   };
 
   return { form, isValid, isSubmitting, onSubmit };

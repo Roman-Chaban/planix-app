@@ -1,20 +1,26 @@
 'use client';
 
+import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
   registerFormFields,
   useForgotPassword,
 } from '@/features/auth/recover-password';
+import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
 const { MD } = BUTTON_MAX_WIDTH;
 
-export const ForgotForm = () => {
+type ForgotFormProps = {
+  onNavigate: (step: AuthStep) => void;
+};
+
+export const ForgotForm: FC<ForgotFormProps> = ({ onNavigate }) => {
   const { t } = useTranslation(NS.AUTH);
-  const { isValid, form, onSubmit } = useForgotPassword();
+  const { isValid, form, onSubmit } = useForgotPassword(onNavigate);
 
   return (
     <AppForm form={form} onSubmit={onSubmit}>

@@ -80,7 +80,6 @@
       }
     }
   },
-
   "forgot": {
     "title": "Forgot Password ?",
     "subtitle": "Enter your email and we will send password reset link",
@@ -99,7 +98,6 @@
       }
     }
   },
-
   "reset": {
     "title": "Reset Password",
     "subtitle": "Your New Password Must Be Different From Previously Used Password",

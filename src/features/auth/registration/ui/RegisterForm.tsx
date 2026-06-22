@@ -57,8 +57,8 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
           render={({ field, fieldState }) => (
             <FormDateField
               id="birthDate"
-              label={t('birthDate')}
-              placeholder={t('birthDatePlaceholder')}
+              label={t('register.birthDate')}
+              placeholder={t('register.birthDatePlaceholder')}
               inputProps={{
                 value: field.value ?? '',
                 onChange: field.onChange,
@@ -71,7 +71,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
       </Box>
 
       <AuthButton
-        label={t('registration')}
+        label={t('register.registration')}
         disabled={!isValid}
         maxWidth={LG}
         isLoading={isSubmitting}

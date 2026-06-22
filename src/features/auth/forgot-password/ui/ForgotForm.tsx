@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import {
   registerFormFields,
   useForgotPassword,
-} from '@/features/auth/recover-password';
+} from '@/features/auth/forgot-password';
 import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';

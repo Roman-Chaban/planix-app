@@ -9,9 +9,9 @@ export const registerFormFields: readonly FormFieldConfig<ForgotPasswordSchema>[
   [
     {
       name: 'email',
-      label: 'emailLabel',
+      label: 'forgot.emailLabel',
       type: EMAIL,
-      placeholder: 'emailPlaceholder',
+      placeholder: 'forgot.emailPlaceholder',
       autoComplete: 'email',
       startIcon: <MessageIcon width={20} height={20} />,
     },

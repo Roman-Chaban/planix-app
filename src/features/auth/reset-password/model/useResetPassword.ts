@@ -4,10 +4,13 @@ import {
   resetSchema,
   type ResetFormSchema,
 } from '@/features/auth/reset-password';
+import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
 
-export const useResetPassword = () => {
+const { VERIFY } = AUTH_STEPS;
+
+export const useResetPassword = (onNavigate: (step: AuthStep) => void) => {
   const form = useAppForm<ResetFormSchema>({
     schema: resetSchema,
     defaultValues: {
@@ -29,6 +32,8 @@ export const useResetPassword = () => {
       console.error(error.message);
       return;
     }
+
+    onNavigate(VERIFY);
   };
 
   return { form, isValid, isSubmitting, onSubmit };

@@ -43,7 +43,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
 
       <AuthButton
         label={submitLabel}
-        disabled={!isValid}
+        disabled={isValid}
         maxWidth={SM}
         isLoading={isLoading}
       />

@@ -26,6 +26,7 @@ export const useRegistration = () => {
   });
 
   const {
+    control,
     formState: { isValid, isSubmitting },
   } = form;
 
@@ -51,5 +52,5 @@ export const useRegistration = () => {
     }
   };
 
-  return { isValid, isSubmitting, onSubmit, form };
+  return { isValid, isSubmitting, onSubmit, form, control };
 };

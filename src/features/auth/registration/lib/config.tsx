@@ -1,7 +1,6 @@
 import type { RegisterFormSchema } from '@/features/auth/registration';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import {
-  CalendarIcon,
   ClientIcon,
   ContactIcon,
   LockIcon,
@@ -57,13 +56,5 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
       placeholder: 'contactPlaceholder',
       autoComplete: 'tel',
       startIcon: <ContactIcon />,
-    },
-    {
-      name: 'birthDate',
-      label: 'birthDate',
-      type: DATE,
-      placeholder: 'birthDatePlaceholder',
-      autoComplete: 'bday',
-      startIcon: <CalendarIcon />,
     },
   ] as const;

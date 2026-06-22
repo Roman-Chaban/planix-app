@@ -1,5 +1,6 @@
 'use client';
 
+import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
@@ -17,6 +18,7 @@ import {
   Box,
   FormFields,
   AuthWrapper,
+  FormDateField,
 } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
@@ -27,7 +29,7 @@ const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterForm = () => {
   const { t } = useTranslation(NS.SIGN_UP_FORM);
-  const { isValid, isSubmitting, onSubmit, form } = useRegistration();
+  const { isValid, isSubmitting, onSubmit, form, control } = useRegistration();
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -63,6 +65,24 @@ export const RegisterForm = () => {
 
         <Box className={styles.box}>
           <FormFields fields={additionalFields} {...formFieldsProps} />
+
+          <Controller
+            control={control}
+            name="birthDate"
+            render={({ field, fieldState }) => (
+              <FormDateField
+                id="birthDate"
+                label={t('birthDate')}
+                placeholder={t('birthDatePlaceholder')}
+                inputProps={{
+                  value: field.value ?? '',
+                  onChange: field.onChange,
+                  ref: field.ref,
+                }}
+                error={fieldState.error?.message}
+              />
+            )}
+          />
         </Box>
 
         <AuthButton

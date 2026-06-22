@@ -16,12 +16,9 @@ export const signUpFormSchema = zod
     password: zod
       .string()
       .min(8, { message: 'validation.password.min' })
-      .regex(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        {
-          message: 'validation.password.weak',
-        },
-      ),
+      .regex(/^(?=.*[a-zA-Z])(?=.*\d)/, {
+        message: 'validation.password.weak',
+      }),
 
     confirmPassword: zod.string(),
 

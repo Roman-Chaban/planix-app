@@ -9,9 +9,10 @@ import { NAMESPACE } from '@/shared/lib/i18n';
 import { FormField } from '@/shared/ui';
 import type { FormDateFieldProps } from '@/shared/ui/form/form-filed';
 import { CalendarIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
 const { TEXT } = INPUT_TYPES;
+const { DEFAULT } = INPUT_VARIANTS;
 
 export const FormDateField: FC<FormDateFieldProps> = ({
   id,
@@ -35,7 +36,7 @@ export const FormDateField: FC<FormDateFieldProps> = ({
       id={id}
       label={t(label)}
       error={error ? t(error) : ''}
-      variant="default"
+      variant={DEFAULT}
       startIcon={<CalendarIcon width={20} height={20} />}
       inputRef={ref}
       inputProps={{

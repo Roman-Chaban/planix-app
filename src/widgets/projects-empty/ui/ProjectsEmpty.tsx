@@ -6,6 +6,7 @@ import { useProjectToolbar } from '@/widgets/projects-toolbar/lib/useProjectTool
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { Box, ProjectButton, Typography } from '@/shared/ui';
 import {
+  BUTTON_MAX_WIDTH,
   BUTTON_SHAPES,
   BUTTON_SIZES,
   BUTTON_TYPES,
@@ -19,6 +20,8 @@ const { BUTTON } = BUTTON_TYPES;
 const { ROUNDED } = BUTTON_SHAPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
+
+const { LG } = BUTTON_MAX_WIDTH;
 
 export const ProjectsEmpty = () => {
   const { t } = useTranslation(NS.PROJECTS_EMPTY);
@@ -44,7 +47,9 @@ export const ProjectsEmpty = () => {
           shape={ROUNDED}
           variant={DEFAULT}
           size={LARGE}
+          maxWidth={LG}
           onClick={handleCreateProject}
+          translationNamespace={NS.PROJECTS_EMPTY}
         />
       </Box>
     </Box>

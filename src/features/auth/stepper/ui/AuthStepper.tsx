@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -10,6 +10,7 @@ import {
   getAuthSteps,
 } from '@/features/auth/stepper';
 
+import { useLocalStorage } from '@/shared/lib/hooks';
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 
 import { AuthWrapper } from '@/shared/ui';
@@ -17,7 +18,7 @@ import { AuthWrapper } from '@/shared/ui';
 const { LOGIN } = AUTH_STEPS;
 
 export const AuthStepper = () => {
-  const [step, setStep] = useState<AuthStep>(LOGIN);
+  const [step, setStep] = useLocalStorage<AuthStep>('auth-step', LOGIN);
   const { t } = useTranslation(NS.AUTH);
 
   const allSteps = getAuthSteps(t, setStep);
@@ -29,11 +30,10 @@ export const AuthStepper = () => {
   useEffect(() => {
     const hash = window.location.hash;
 
-    /* eslint-disable react-hooks/set-state-in-effect */
     if (hash.includes('type=recovery')) {
       setStep(AUTH_STEPS.RESET);
     }
-  }, []);
+  }, [setStep]);
 
   if (!currentStep) return null;
 

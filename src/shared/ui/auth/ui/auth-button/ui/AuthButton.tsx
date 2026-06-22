@@ -36,7 +36,6 @@ export const AuthButton: FC<AuthButtonProps> = ({
       shape={ROUNDED}
       disabled={isButtonDisabled}
       maxWidth={maxWidth}
-      fullWidth
     >
       {isLoading ? <Loader /> : label}
     </Button>

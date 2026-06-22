@@ -12,7 +12,7 @@ import {
 
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 
-import { AuthLayout, AuthWrapper } from '@/shared/ui';
+import { AuthWrapper } from '@/shared/ui';
 
 const { LOGIN } = AUTH_STEPS;
 
@@ -38,10 +38,8 @@ export const AuthStepper = () => {
   if (!currentStep) return null;
 
   return (
-    <AuthLayout>
-      <AuthWrapper header={header} footer={footer}>
-        <Component />
-      </AuthWrapper>
-    </AuthLayout>
+    <AuthWrapper header={header} footer={footer}>
+      <Component />
+    </AuthWrapper>
   );
 };

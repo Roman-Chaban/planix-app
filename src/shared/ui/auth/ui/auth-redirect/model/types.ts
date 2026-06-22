@@ -1,8 +1,11 @@
 import type { ReactNode } from 'react';
 
+import type { AuthStep } from '@/features/auth/stepper';
+
 export type AuthRedirectProps = {
   title: string;
-  linkText: string;
-  href: string;
+  label: string;
   icon?: ReactNode;
+  step: AuthStep;
+  onNavigate: (step: AuthStep) => void;
 };

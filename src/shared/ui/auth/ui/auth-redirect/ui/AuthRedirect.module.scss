@@ -8,8 +8,13 @@
   }
 }
 
-.text,
-.link {
+.text {
   line-height: 150%;
   font-size: $body-lg-font-size;
+}
+
+.button {
+  line-height: 150%;
+  font-size: $body-lg-font-size;
+  color: $primary-700;
 }

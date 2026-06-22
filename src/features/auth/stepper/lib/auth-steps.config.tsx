@@ -8,7 +8,7 @@ import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
-const { REGISTER, FORGOT, RESET } = AUTH_STEPS;
+const { REGISTER, LOGIN } = AUTH_STEPS;
 
 export const getAuthSteps = (
   t: TFunction,
@@ -56,7 +56,7 @@ export const getAuthSteps = (
     ),
   },
   [AUTH_STEPS.FORGOT]: {
-    component: () => <ForgotForm />,
+    component: () => <ForgotForm onNavigate={onNavigate} />,
     header: (
       <AuthHeader title={t('forgot.title')} subtitle={t('forgot.subtitle')} />
     ),
@@ -65,7 +65,7 @@ export const getAuthSteps = (
         <AuthRedirect
           title={t('forgot.backTitle')}
           label={t('forgot.backLink')}
-          step={FORGOT}
+          step={LOGIN}
           onNavigate={onNavigate}
           icon={<BackIcon />}
         />
@@ -82,7 +82,7 @@ export const getAuthSteps = (
         <AuthRedirect
           title={t('reset.backTitle')}
           label={t('reset.backLink')}
-          step={RESET}
+          step={LOGIN}
           onNavigate={onNavigate}
           icon={<BackIcon />}
         />

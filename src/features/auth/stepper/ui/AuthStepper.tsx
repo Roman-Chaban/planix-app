@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -25,6 +25,17 @@ export const AuthStepper = () => {
   const currentStep = allSteps[step];
 
   const { component: Component, header, footer } = currentStep;
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    /* eslint-disable react-hooks/set-state-in-effect */
+    if (hash.includes('type=recovery')) {
+      setStep(AUTH_STEPS.RESET);
+    }
+  }, []);
+
+  if (!currentStep) return null;
 
   return (
     <AuthLayout>

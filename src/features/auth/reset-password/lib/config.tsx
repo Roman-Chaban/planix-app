@@ -8,8 +8,8 @@ const { PASSWORD } = INPUT_TYPES;
 export const resetFormFields: readonly FormFieldConfig<ResetFormSchema>[] = [
   {
     name: 'newPassword',
-    label: 'passwordLabel',
-    placeholder: 'passwordPlaceholder',
+    label: 'reset.passwordLabel',
+    placeholder: 'reset.passwordPlaceholder',
     type: PASSWORD,
     startIcon: <LockIcon />,
     endIcon: <ViewOffIcon />,
@@ -17,8 +17,8 @@ export const resetFormFields: readonly FormFieldConfig<ResetFormSchema>[] = [
   },
   {
     name: 'confirmPassword',
-    label: 'newPasswordLabel',
-    placeholder: 'newPasswordPlaceholder',
+    label: 'reset.newPasswordLabel',
+    placeholder: 'reset.newPasswordPlaceholder',
     type: PASSWORD,
     startIcon: <LockIcon />,
     endIcon: <ViewOffIcon />,

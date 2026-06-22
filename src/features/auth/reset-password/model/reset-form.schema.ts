@@ -4,12 +4,12 @@ export const resetSchema = zod
   .object({
     newPassword: zod
       .string()
-      .min(1, 'validation.required')
-      .min(8, 'validation.minPassword'),
-    confirmPassword: zod.string().min(1, 'validation.required'),
+      .min(1, 'reset.validation.required')
+      .min(8, 'reset.validation.minPassword'),
+    confirmPassword: zod.string().min(1, 'reset.validation.required'),
   })
   .refine((data) => data.newPassword === data.confirmPassword, {
-    message: 'validation.mismatch',
+    message: 'reset.validation.mismatch',
     path: ['confirmPassword'],
   });
 

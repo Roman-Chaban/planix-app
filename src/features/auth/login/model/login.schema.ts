@@ -3,15 +3,15 @@ import * as zod from 'zod';
 export const loginSchema = zod.object({
   email: zod
     .string()
-    .min(1, 'validation.email.required')
-    .email('validation.email.invalid'),
+    .min(1, 'login.validation.email.required')
+    .email('login.validation.email.invalid'),
 
   password: zod
     .string()
-    .min(8, 'validation.password.min')
+    .min(8, 'login.validation.password.min')
     .max(72)
     .refine((value) => value.trim() === value, {
-      message: 'validation.password.noSpaces',
+      message: 'login.validation.password.noSpaces',
     }),
 
   rememberMe: zod.boolean(),

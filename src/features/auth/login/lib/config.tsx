@@ -11,17 +11,17 @@ const { EMAIL, PASSWORD } = INPUT_TYPES;
 export const loginFormFields: readonly FormFieldConfig<LoginFormSchema>[] = [
   {
     name: 'email',
-    label: 'emailLabel',
+    label: 'login.emailLabel',
     type: EMAIL,
-    placeholder: 'emailPlaceholder',
+    placeholder: 'login.emailPlaceholder',
     autoComplete: 'email',
     startIcon: <MessageIcon />,
   },
   {
     name: 'password',
-    label: 'passwordLabel',
+    label: 'login.passwordLabel',
     type: PASSWORD,
-    placeholder: 'passwordPlaceholder',
+    placeholder: 'login.passwordPlaceholder',
     autoComplete: 'current-password',
     startIcon: <LockIcon />,
     feature: 'password-toggle',

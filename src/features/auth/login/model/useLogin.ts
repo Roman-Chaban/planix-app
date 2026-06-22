@@ -46,7 +46,7 @@ export const useLogin = (t: TFunction) => {
       setFormErrors<LoginFormSchema>({
         form,
         fields: ['email', 'password'],
-        message: t('validation.invalidCredentials'),
+        message: t('login.validation.invalidCredentials'),
       });
     }
   };

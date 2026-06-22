@@ -1,61 +1,37 @@
 'use client';
 
+import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
 import { LoginActions, loginFormFields, useLogin } from '@/features/auth/login';
 
+import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
-import {
-  AppForm,
-  AuthFooter,
-  AuthHeader,
-  AuthRedirect,
-  AuthWrapper,
-  FormFields,
-} from '@/shared/ui';
+import { AppForm, FormFields } from '@/shared/ui';
 
-const { REGISTER } = ROUTES;
+type LoginFormProps = {
+  onNavigate: (step: AuthStep) => void;
+};
 
-export const LoginForm = () => {
-  const { t } = useTranslation(NS.LOGIN);
+export const LoginForm: FC<LoginFormProps> = ({ onNavigate }) => {
+  const { t } = useTranslation(NS.AUTH);
   const { isValid, isSubmitting, form, onSubmit, control } = useLogin(t);
 
   const isSubmitDisabled = !isValid || isSubmitting;
 
-  const header = (
-    <AuthHeader
-      title={t('title')}
-      subtitle={t('subtitle')}
-      highlightedText={t('highlightedText')}
-      isHighlightedIcon
-    />
-  );
-
-  const footer = (
-    <AuthFooter>
-      <AuthRedirect
-        title={t('noAccount')}
-        linkText={t('registration')}
-        href={REGISTER}
-      />
-    </AuthFooter>
-  );
-
   return (
     <AppForm form={form} onSubmit={onSubmit}>
-      <AuthWrapper header={header} footer={footer}>
-        <FormFields fields={loginFormFields} translationNamespace={NS.LOGIN} />
+      <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
 
-        <LoginActions
-          control={control}
-          rememberMeLabel={t('rememberMe')}
-          forgotPasswordLabel={t('forgotPassword')}
-          submitLabel={t('submitButton')}
-          isValid={isSubmitDisabled}
-          isLoading={isSubmitting}
-        />
-      </AuthWrapper>
+      <LoginActions
+        control={control}
+        rememberMeLabel={t('login.rememberMe')}
+        forgotPasswordLabel={t('login.forgotPassword')}
+        submitLabel={t('login.submitButton')}
+        isValid={isSubmitDisabled}
+        isLoading={isSubmitting}
+        onForgotPassword={() => onNavigate('forgot')}
+      />
     </AppForm>
   );
 };

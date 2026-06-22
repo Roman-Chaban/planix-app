@@ -1,17 +1,15 @@
 import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 
-import { ROUTES } from '@/app/routes';
-
 import type { LoginActionsProps } from '@/features/auth/login';
-import { AppLink, AuthButton, Box, Checkbox } from '@/shared/ui';
+import { AuthButton, Box, Checkbox } from '@/shared/ui';
 
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
+import { Button, BUTTON_MAX_WIDTH, BUTTON_VARIANTS } from '@/shared/ui/button';
 
 import styles from './LoginForm.module.scss';
 
-const { FORGOT_PASSWORD } = ROUTES;
-const { SM } = BUTTON_MAX_WIDTH;
+const { SM, LG } = BUTTON_MAX_WIDTH;
+const { TRANSPARENT } = BUTTON_VARIANTS;
 
 export const LoginActions: FC<LoginActionsProps> = ({
   control,
@@ -20,6 +18,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
   submitLabel,
   isValid,
   isLoading,
+  onForgotPassword,
 }) => {
   return (
     <Box className={styles.loginFormMainWrapper}>
@@ -36,9 +35,14 @@ export const LoginActions: FC<LoginActionsProps> = ({
           )}
         />
 
-        <AppLink href={FORGOT_PASSWORD} className={styles.loginFormLink}>
+        <Button
+          variant={TRANSPARENT}
+          maxWidth={LG}
+          className={styles.loginButton}
+          onClick={onForgotPassword}
+        >
           {forgotPasswordLabel}
-        </AppLink>
+        </Button>
       </Box>
 
       <AuthButton

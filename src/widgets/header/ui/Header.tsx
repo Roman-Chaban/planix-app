@@ -20,7 +20,7 @@ const { BUTTON } = BUTTON_TYPES;
 const { CIRCLE, ROUNDED } = BUTTON_SHAPES;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 
-const { LOGIN } = ROUTES;
+const { AUTH } = ROUTES;
 
 export const Header: FC<HeaderProps> = ({ title }) => {
   const { t } = useTranslation(NS.HEADER);
@@ -47,7 +47,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
             </Button>
 
             <Button type={BUTTON} size={MEDIUM} shape={ROUNDED}>
-              <AppLink href={LOGIN} className={styles.link}>
+              <AppLink href={AUTH} className={styles.link}>
                 {t('login')}
               </AppLink>
             </Button>

@@ -1,20 +1,22 @@
 import type { TFunction } from 'i18next';
 
-import { LoginForm } from '@/features/auth/login';
-import { ForgotForm } from '@/features/auth/recover-password';
-import { RegisterForm } from '@/features/auth/registration';
-import { ResetForm } from '@/features/auth/reset-password';
+import {
+  LoginForm,
+  ForgotForm,
+  RegisterForm,
+  ResetForm,
+} from '@/features/auth';
 import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
-const { REGISTER, LOGIN } = AUTH_STEPS;
+const { REGISTER, LOGIN, FORGOT, RESET } = AUTH_STEPS;
 
 export const getAuthSteps = (
   t: TFunction,
   onNavigate: (step: AuthStep) => void,
 ) => ({
-  [AUTH_STEPS.LOGIN]: {
+  [LOGIN]: {
     component: () => <LoginForm onNavigate={onNavigate} />,
     header: (
       <AuthHeader
@@ -35,7 +37,7 @@ export const getAuthSteps = (
       </AuthFooter>
     ),
   },
-  [AUTH_STEPS.REGISTER]: {
+  [REGISTER]: {
     component: () => <RegisterForm onNavigate={onNavigate} />,
     header: (
       <AuthHeader
@@ -55,7 +57,7 @@ export const getAuthSteps = (
       </AuthFooter>
     ),
   },
-  [AUTH_STEPS.FORGOT]: {
+  [FORGOT]: {
     component: () => <ForgotForm onNavigate={onNavigate} />,
     header: (
       <AuthHeader title={t('forgot.title')} subtitle={t('forgot.subtitle')} />
@@ -72,7 +74,7 @@ export const getAuthSteps = (
       </AuthFooter>
     ),
   },
-  [AUTH_STEPS.RESET]: {
+  [RESET]: {
     component: () => <ResetForm />,
     header: (
       <AuthHeader title={t('reset.title')} subtitle={t('reset.subtitle')} />

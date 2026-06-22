@@ -5,29 +5,29 @@ export const signUpFormSchema = zod
     fullName: zod
       .string()
       .trim()
-      .min(5, { message: 'validation.fullName.min' })
-      .max(25, { message: 'validation.fullName.max' })
+      .min(5, { message: 'register.validation.fullName.min' })
+      .max(25, { message: 'register.validation.fullName.max' })
       .regex(/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s'-]+$/, {
-        message: 'validation.fullName.invalid',
+        message: 'register.validation.fullName.invalid',
       }),
 
-    email: zod.string().email({ message: 'validation.email.invalid' }),
+    email: zod.string().email({ message: 'register.validation.email.invalid' }),
 
     password: zod
       .string()
-      .min(8, { message: 'validation.password.min' })
+      .min(8, { message: 'register.validation.password.min' })
       .regex(/^(?=.*[a-zA-Z])(?=.*\d)/, {
-        message: 'validation.password.weak',
+        message: 'register.validation.password.weak',
       }),
 
     confirmPassword: zod.string(),
 
     contact: zod
       .string()
-      .min(10, { message: 'validation.contact.invalid' })
-      .max(15, { message: 'validation.contact.invalid' })
+      .min(10, { message: 'register.validation.contact.invalid' })
+      .max(15, { message: 'register.validation.contact.invalid' })
       .regex(/^\+?[1-9]\d{1,14}$/, {
-        message: 'validation.contact.invalid',
+        message: 'register.validation.contact.invalid',
       }),
 
     birthDate: zod.string().refine(
@@ -36,11 +36,11 @@ export const signUpFormSchema = zod
         const now = new Date();
         return !isNaN(date.getTime()) && date < now;
       },
-      { message: 'validation.birthDate.invalid' },
+      { message: 'register.validation.birthDate.invalid' },
     ),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: 'validation.confirmPassword.mismatch',
+    message: 'register.validation.confirmPassword.mismatch',
     path: ['confirmPassword'],
   });
 

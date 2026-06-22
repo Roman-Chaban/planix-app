@@ -9,5 +9,11 @@
   "passwordPlaceholder": "Enter Password",
   "newPasswordLabel": "New Password",
   "newPasswordPlaceholder": "Enter New Password",
-  "resetPasswordButton": "Reset Password"
+  "resetPasswordButton": "Reset Password",
+
+  "validation": {
+    "required": "This field is required",
+    "minPassword": "Password must be at least 8 characters",
+    "mismatch": "Passwords do not match"
+  }
 }

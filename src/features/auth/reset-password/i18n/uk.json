@@ -9,5 +9,11 @@
   "passwordPlaceholder": "Введіть пароль",
   "newPasswordLabel": "Новий пароль",
   "newPasswordPlaceholder": "Введіть новий пароль",
-  "resetPasswordButton": "Reset Password"
+  "resetPasswordButton": "Reset Password",
+
+  "validation": {
+    "required": "Це поле є обов'язковим",
+    "minPassword": "Пароль повинен містити не менше 8 символів",
+    "mismatch": "Паролі не збігаються"
+  }
 }

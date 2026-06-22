@@ -23,7 +23,7 @@ export const ResetForm = () => {
       <FormFields fields={resetFormFields} translationNamespace={NS.AUTH} />
 
       <AuthButton
-        label={t('resetPasswordButton')}
+        label={t('reset.resetPasswordButton')}
         maxWidth={XL}
         disabled={isSubmitDisabled}
       />

@@ -1,0 +1,10 @@
+{
+  "settings": "Загальні налаштування",
+  "profileMenu": {
+    "myProfile": "Мій профіль",
+    "notificationSettings": "Налаштування сповіщень",
+    "subscription": "Підписка та білінг",
+    "systemSettings": "Системні налаштування",
+    "logOut": "Вийти"
+  }
+}

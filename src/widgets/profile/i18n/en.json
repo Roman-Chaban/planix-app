@@ -1,0 +1,10 @@
+{
+  "settings": "General Settings",
+  "profileMenu": {
+    "myProfile": "My Profile",
+    "notificationSettings": "Notification Setting",
+    "subscription": "Subscription & Billing",
+    "systemSettings": "System Setting",
+    "logOut": "Log Out"
+  }
+}

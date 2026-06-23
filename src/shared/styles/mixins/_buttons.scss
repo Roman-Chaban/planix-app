@@ -13,10 +13,10 @@
 }
 
 @mixin button-disabled(
-  $bg: $neutral-200,
-  $text: $button-disabled-bg,
+  $bg: $surface-tertiary,
+  $text: $text-disabled,
   $border: none,
-  $bgHover: $neutral-100
+  $bgHover: $surface-secondary
 ) {
   &:disabled {
     background: $bg;
@@ -44,7 +44,7 @@
 }
 
 @mixin button-link {
-  color: $primary-700;
+  color: $icon-brand;
   text-decoration: underline;
 }
 

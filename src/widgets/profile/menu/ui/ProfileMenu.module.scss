@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 16rem;
   min-height: 100vh;
-  border-right: 0.125rem solid $menu-border-primary;
+  border-right: 0.125rem solid $border-subtle;
 }
 
 .container {
@@ -13,7 +13,7 @@
 
 .title {
   padding: 1.25rem 1.25rem 0 1.25rem;
-  color: $neutral-400;
+  color: $text-muted;
   line-height: 143%;
   font: {
     weight: $font-weight-bold;
@@ -33,14 +33,14 @@
 }
 
 .boxActive {
-  @include active-left-bar($primary-700, 3.188rem);
+  @include active-left-bar($icon-brand, 3.188rem);
 }
 
 .item {
   width: 100%;
   max-width: 14.5rem;
   justify-content: flex-start;
-  color: $neutral-800;
+  color: $icon-primary;
 }
 
 .label {
@@ -51,6 +51,6 @@
 }
 
 .isActive {
-  color: $primary-700;
+  color: $icon-brand;
   font-weight: $font-weight-medium;
 }

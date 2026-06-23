@@ -18,7 +18,11 @@ import { AuthWrapper } from '@/shared/ui';
 const { LOGIN } = AUTH_STEPS;
 
 export const AuthStepper = () => {
-  const [step, setStep] = useLocalStorage<AuthStep>('auth-step', LOGIN);
+  const [step, setStep, hydrated] = useLocalStorage<AuthStep>(
+    'auth-step',
+    LOGIN,
+  );
+
   const { t } = useTranslation(NS.AUTH);
 
   const allSteps = getAuthSteps(t, setStep);
@@ -36,6 +40,7 @@ export const AuthStepper = () => {
   }, [setStep]);
 
   if (!currentStep) return null;
+  if (!hydrated) return null;
 
   return (
     <AuthWrapper header={header} footer={footer}>

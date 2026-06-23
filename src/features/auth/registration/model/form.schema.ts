@@ -31,8 +31,8 @@ export const signUpFormSchema = zod
       }),
 
     birthDate: zod.string().refine(
-      (val) => {
-        const date = new Date(val);
+      (value) => {
+        const date = new Date(value);
         const now = new Date();
         return !isNaN(date.getTime()) && date < now;
       },

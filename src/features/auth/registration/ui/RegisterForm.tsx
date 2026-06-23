@@ -64,7 +64,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
                 onChange: field.onChange,
                 ref: field.ref,
               }}
-              error={fieldState.error?.message}
+              error={t(fieldState.error?.message ?? '')}
             />
           )}
         />

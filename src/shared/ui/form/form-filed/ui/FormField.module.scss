@@ -11,23 +11,23 @@
   position: relative;
   transition: all 0.35s ease-in-out 0s;
 
-  @include input-wrapper-border($neutral-300);
-  @include input-border-active($primary-500);
-  @include input-disabled($neutral-200, $neutral-100);
+  @include input-wrapper-border($border-default);
+  @include input-border-active($border-focus);
+  @include input-disabled($surface-tertiary, $surface-secondary);
 }
 
 .inputWrapper.error:focus-within + .label {
-  color: $error-600;
+  color: $icon-danger;
 }
 
 .error {
-  @include input-wrapper-border($error-600);
-  @include input-border-active($error-600);
+  @include input-wrapper-border($icon-danger);
+  @include input-border-active($icon-danger);
 }
 
 .label {
   @include text-body-sm;
-  color: $neutral-700;
+  color: $text-secondary;
 }
 
 .slotStart {
@@ -49,13 +49,13 @@
   transform: translateY(-50%);
   width: 0.113rem;
   height: 1.313rem;
-  background: $border-line;
+  background: $border-subtle;
   z-index: 2;
 }
 
 .search {
   box-shadow: $shadow-input-search;
-  border-color: $neutral-200;
+  border-color: $border-subtle;
 }
 
 .noBorder {
@@ -64,7 +64,7 @@
 }
 
 .errorText {
-  @include error-text($error-600, 0.3rem, $font-weight-medium);
+  @include error-text($icon-danger, 0.3rem, $font-weight-medium);
 
   @include respond(sm) {
     font-size: $body-sm-font-size;
@@ -72,6 +72,6 @@
 }
 
 .errorLabel {
-  color: $error-600;
+  color: $icon-danger;
   font-weight: $font-weight-medium;
 }

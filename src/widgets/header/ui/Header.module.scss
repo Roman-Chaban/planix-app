@@ -37,7 +37,7 @@
 
 .logoTitle {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -60,7 +60,7 @@
   font: {
     weight: $font-weight-bold;
   }
-  line-height: 150%;
+  line-height: $line-height-base;
 }
 
 .button {
@@ -83,9 +83,8 @@
   width: 0.75rem;
   height: 0.75rem;
   position: absolute;
-  top: 2px;
-  right: 1.5px;
-
+  top: 0.125rem;
+  right: 0.094rem;
   transform: translate(25%, -40%);
 }
 

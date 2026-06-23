@@ -24,7 +24,7 @@
 
 .title {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -36,6 +36,6 @@
   width: 100%;
   max-width: 36.375rem;
   text-align: center;
-  line-height: 150%;
+  line-height: $line-height-base;
   padding-block-end: 1.125rem;
 }

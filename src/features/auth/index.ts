@@ -1,4 +1,3 @@
 export { LoginForm } from './login';
-export { ForgotForm } from './forgot-password';
+export { ForgotForm, ResetForm, VerifyForm } from './recover-password';
 export { RegisterForm } from './registration';
-export { ResetForm } from './reset-password';

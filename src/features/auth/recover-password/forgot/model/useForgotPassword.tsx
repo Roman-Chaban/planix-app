@@ -4,7 +4,7 @@ import { ROUTES } from '@/app/routes';
 import {
   forgotPasswordSchema,
   type ForgotPasswordSchema,
-} from '@/features/auth/forgot-password';
+} from '@/features/auth/recover-password/forgot';
 import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';

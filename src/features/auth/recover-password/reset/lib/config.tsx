@@ -1,4 +1,4 @@
-import type { ResetFormSchema } from '@/features/auth/reset-password';
+import type { ResetFormSchema } from '@/features/auth/recover-password/reset';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { LockIcon, ViewOffIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';

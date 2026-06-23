@@ -3,7 +3,7 @@ import type { SubmitHandler } from 'react-hook-form';
 import {
   resetSchema,
   type ResetFormSchema,
-} from '@/features/auth/reset-password';
+} from '@/features/auth/recover-password/reset';
 import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';

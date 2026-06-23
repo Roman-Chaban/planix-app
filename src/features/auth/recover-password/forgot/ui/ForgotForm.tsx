@@ -4,35 +4,32 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
-  resetFormFields,
-  useResetPassword,
-} from '@/features/auth/reset-password';
+  registerFormFields,
+  useForgotPassword,
+} from '@/features/auth/recover-password/forgot';
 import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
-const { XL } = BUTTON_MAX_WIDTH;
+const { MD } = BUTTON_MAX_WIDTH;
 
-type ResetFormProps = {
+type ForgotFormProps = {
   onNavigate: (step: AuthStep) => void;
 };
 
-export const ResetForm: FC<ResetFormProps> = ({ onNavigate }) => {
+export const ForgotForm: FC<ForgotFormProps> = ({ onNavigate }) => {
   const { t } = useTranslation(NS.AUTH);
-  const { form, onSubmit, isValid, isSubmitting } =
-    useResetPassword(onNavigate);
-
-  const isSubmitDisabled = !isValid || isSubmitting;
+  const { isValid, form, onSubmit } = useForgotPassword(onNavigate);
 
   return (
     <AppForm form={form} onSubmit={onSubmit}>
-      <FormFields fields={resetFormFields} translationNamespace={NS.AUTH} />
+      <FormFields fields={registerFormFields} translationNamespace={NS.AUTH} />
 
       <AuthButton
-        label={t('reset.resetPasswordButton')}
-        maxWidth={XL}
-        disabled={isSubmitDisabled}
+        label={t('forgot.button')}
+        disabled={!isValid}
+        maxWidth={MD}
       />
     </AppForm>
   );

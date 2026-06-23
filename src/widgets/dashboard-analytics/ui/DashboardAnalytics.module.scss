@@ -32,7 +32,7 @@
 }
 
 .analyticsTitle {
-  line-height: 150%;
+  line-height: $line-height-base;
   color: $neutral-700;
   font: {
     size: $body-lg-font-size;

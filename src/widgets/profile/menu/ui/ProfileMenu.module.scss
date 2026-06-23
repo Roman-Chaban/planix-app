@@ -14,7 +14,7 @@
 .title {
   padding: 1.25rem 1.25rem 0 1.25rem;
   color: $text-muted;
-  line-height: 143%;
+  line-height: $line-height-tight;
   font: {
     weight: $font-weight-bold;
     size: $body-sm-font-size;
@@ -46,7 +46,7 @@
 .label {
   display: block;
   width: 100%;
-  line-height: 150%;
+  line-height: $line-height-base;
   font-size: $body-lg-font-size;
 }
 

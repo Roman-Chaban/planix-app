@@ -12,7 +12,7 @@
 }
 
 .label {
-  line-height: 150%;
+  line-height: $line-height-base;
   color: $neutral-950;
   font-weight: $font-weight-semibold;
 }
@@ -95,6 +95,6 @@
 
 .link {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   text-decoration: none;
 }

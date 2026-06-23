@@ -4,7 +4,7 @@
   @include flex-row(0.5rem, start, center);
 
   & svg {
-    color: $back-icon-primary;
+    color: $icon-muted;
   }
 }
 
@@ -16,5 +16,5 @@
 .button {
   line-height: 150%;
   font-size: $body-lg-font-size;
-  color: $primary-700;
+  color: $icon-brand;
 }

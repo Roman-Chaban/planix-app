@@ -58,3 +58,17 @@
   background: $bg-color;
   padding: $padding;
 }
+
+@mixin active-left-bar($color, $height) {
+  position: relative;
+  background: $header-primary;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 0.219rem;
+    height: $height;
+    left: 0;
+    background: $color;
+  }
+}

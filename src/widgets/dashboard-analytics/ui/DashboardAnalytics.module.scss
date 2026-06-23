@@ -27,7 +27,7 @@
   position: relative;
   @include flex(flex, row, start, center, 0, none);
   padding: 0.688rem 0.5rem 0.688rem 1.25rem;
-  border-radius: 0.75rem;
+  border-radius: $radius-md;
   background: $neutral-100;
 }
 

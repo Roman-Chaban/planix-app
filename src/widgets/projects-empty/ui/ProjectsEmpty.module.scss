@@ -7,14 +7,14 @@
   padding: 2rem;
   background: $neutral-0;
   box-shadow: $shadow-primary;
-  border-radius: 1rem;
+  border-radius: $radius-lg;
 }
 
 .iconWrapper {
   @include flex-center;
   width: 8.75rem;
   height: 8.75rem;
-  border-radius: 100%;
+  border-radius: $radius-full;
   background: $neutral-100;
 }
 

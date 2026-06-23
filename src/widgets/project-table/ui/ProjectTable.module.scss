@@ -5,7 +5,7 @@
   padding: 0 0.5rem;
   background: $neutral-0;
   box-shadow: $shadow-sm;
-  border-radius: 1rem;
+  border-radius: $radius-lg;
   @include table-scroll;
   @include hide-scrollbar;
 }
@@ -28,11 +28,11 @@
     @include table-cell(0.563rem 1rem);
 
     &:first-child {
-      border-radius: 0.75rem 0 0 0.75rem;
+      border-radius: $radius-md 0 0 $radius-md;
     }
 
     &:last-child {
-      border-radius: 0 0.75rem 0.75rem 0;
+      border-radius: 0 $radius-md $radius-md 0;
     }
   }
 }

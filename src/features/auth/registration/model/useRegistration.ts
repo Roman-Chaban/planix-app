@@ -33,22 +33,30 @@ export const useRegistration = () => {
   const onSubmit: SubmitHandler<RegisterFormSchema> = async (data) => {
     const { email, password, fullName, contact, birthDate } = data;
 
-    const { data: authData, error } = await supabase.auth.signUp({
+    const { data: authData, error: authError } = await supabase.auth.signUp({
       email,
       password,
-      options: {
-        data: {
-          full_name: fullName,
-          contact: contact,
-          birth_date: birthDate || null,
-        },
-      },
     });
 
-    if (error) return;
+    if (authError) {
+      console.error(`Authentication error ${authError}`);
+      return;
+    }
 
     if (authData.user) {
-      localizedRouter.push(DASHBOARD);
+      const { error: profileError } = await supabase.from('profiles').insert({
+        id: authData.user.id,
+        email: email,
+        full_name: fullName,
+        contact: contact,
+        birth_date: birthDate || null,
+      });
+
+      if (profileError) {
+        console.error(`Creating error profile: '${profileError}`);
+      } else {
+        localizedRouter.push(DASHBOARD);
+      }
     }
   };
 

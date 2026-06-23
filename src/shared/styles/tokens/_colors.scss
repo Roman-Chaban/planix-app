@@ -8,7 +8,6 @@ $primary-600: #4c75d3;
 $primary-700: #4165b7;
 $primary-800: #3b5da9;
 $primary-900: #335195;
-$primary-925: #3f1d71;
 $primary-950: #1e305a;
 
 $secondary-50: #b1dde2;
@@ -21,11 +20,9 @@ $secondary-600: #5eaab2;
 $secondary-700: #559ca4;
 $secondary-800: #4d8e95;
 $secondary-900: #458187;
-$secondary-925: #2e595e;
 $secondary-950: #1a3538;
 
 $neutral-0: #ffffff;
-
 $neutral-50: #fafafa;
 $neutral-100: #f5f5f5;
 $neutral-200: #e3e3e3;
@@ -36,7 +33,6 @@ $neutral-600: #6a6a6a;
 $neutral-700: #525252;
 $neutral-800: #474747;
 $neutral-900: #303030;
-$neutral-925: #262626;
 $neutral-950: #000000;
 
 $warning-50: #fffbf2;
@@ -49,7 +45,6 @@ $warning-600: #dea50b;
 $warning-700: #bb8900;
 $warning-800: #997001;
 $warning-900: #765700;
-$warning-925: #694d00;
 $warning-950: #553e00;
 
 $success-50: #f6fef9;
@@ -62,7 +57,6 @@ $success-600: #12b76a;
 $success-700: #039855;
 $success-800: #027a48;
 $success-900: #05603a;
-$success-925: #054f31;
 $success-950: #053321;
 
 $error-50: #fffbfa;
@@ -75,32 +69,36 @@ $error-600: #f04438;
 $error-700: #d92d20;
 $error-800: #b42318;
 $error-900: #912018;
-$error-925: #7a271a;
 $error-950: #55160c;
 
 $text-primary: $neutral-900;
 $text-secondary: $neutral-600;
 $text-muted: $neutral-400;
+$text-disabled: $neutral-500;
 $text-inverse: $neutral-0;
-
-$border-primary: $neutral-200;
-$border-secondary: $neutral-300;
-$border-focus: $primary-700;
 
 $surface-primary: $neutral-0;
 $surface-secondary: $neutral-50;
+$surface-tertiary: $neutral-100;
 $surface-disabled: $neutral-100;
 
-$header-primary: rgba($primary-700, 0.07);
-$upload-primary: rgba($primary-700, 0.1);
+$bg-brand-subtle: rgba($primary-700, 0.07);
+$bg-brand-soft: rgba($primary-700, 0.1);
+
+$border-subtle: $neutral-200;
+$border-default: $neutral-300;
+$border-strong: $neutral-400;
+$border-focus: $primary-700;
+
+$icon-primary: $neutral-800;
+$icon-secondary: $neutral-600;
+$icon-muted: $neutral-500;
+
+$icon-brand: $primary-700;
+$icon-danger: $error-600;
 
 $overlay-primary: rgba($neutral-950, 0.22);
-
-$button-disabled-bg: #aaa;
-$button-disabled-text: $neutral-500;
-
-$decoration-text: #565dbf;
-$border-line: #bbb;
+$gradient-brand: linear-gradient(114deg, #4165b7 0%, #67bac3 56.17%);
 
 $gradient-overlay-primary: linear-gradient(
   360deg,
@@ -115,12 +113,6 @@ $gradient-overlay-secondary: linear-gradient(
   rgba(65, 101, 183, 0.11) 100%
 );
 
-$gradient-brand: linear-gradient(114deg, #4165b7 0%, #67bac3 56.17%);
 $gradient-skeleton: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
-$button-icon-primary: #292d32;
 
-$pdf-icon-primary: #e5252a;
-$upload-icon-primary: #4165b7;
-$back-icon-primary: #6a6a6a;
-
-$menu-border-primary: rgba(174, 174, 174, 0.27);
+$pdf-icon: #e5252a;

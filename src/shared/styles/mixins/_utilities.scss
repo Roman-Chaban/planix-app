@@ -15,13 +15,13 @@
 }
 
 @mixin widget-box($width: 100%, $maxWidth: none, $minHeight, $padding) {
-  border: 0.125rem solid $neutral-100;
+  border: 0.125rem solid $border-subtle;
   border-radius: 1rem;
   width: $width;
   max-width: $maxWidth;
   min-height: $minHeight;
   box-shadow: $shadow-sm;
-  background: $neutral-0;
+  background: $surface-primary;
   padding: $padding;
 }
 
@@ -30,7 +30,7 @@
   max-width: 7rem;
   min-height: 6.625rem;
   padding: 0.188rem;
-  background: $neutral-100;
+  background: $surface-tertiary;
   border-radius: 0.75rem;
   transition: all 0.2s ease-in-out;
 }
@@ -44,13 +44,13 @@
 @mixin card-bottom-badge {
   width: 100%;
   max-width: 6.625rem;
-  background: $neutral-100;
+  background: $surface-tertiary;
   border-radius: 0.5rem;
   padding: 0.188rem 0.313rem;
   box-shadow: $shadow-upload;
 }
 
-@mixin details-wrapper($bg-color: $neutral-50, $padding) {
+@mixin details-wrapper($bg-color: $surface-secondary, $padding) {
   width: 100%;
   max-width: 100%;
   min-height: 19.25rem;
@@ -61,7 +61,7 @@
 
 @mixin active-left-bar($color, $height) {
   position: relative;
-  background: $header-primary;
+  background: $bg-brand-subtle;
 
   &::before {
     position: absolute;

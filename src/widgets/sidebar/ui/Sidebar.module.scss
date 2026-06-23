@@ -34,7 +34,7 @@
 
 .sidebarTitle {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -141,7 +141,7 @@
   position: relative;
   border: 0.125rem solid $primary-700;
   color: $primary-700;
-  border-radius: 0.5rem;
+  border-radius: $radius-sm;
 
   transition:
     border-color 250ms ease,

@@ -42,7 +42,7 @@
 
 .card {
   position: relative;
-  border-radius: 1rem;
+  border-radius: $radius-lg;
   box-shadow: $shadow-sm;
   background: $neutral-0;
   border: 0.125rem solid $neutral-200;

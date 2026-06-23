@@ -52,7 +52,7 @@
   @include menu-horizontal-scroll;
   box-shadow: $shadow-not-found;
   background: $neutral-0;
-  border-radius: 1rem;
+  border-radius: $radius-lg;
 
   @include respond(2xl) {
     max-width: 100%;
@@ -88,7 +88,7 @@
   text-align: center;
   box-shadow: $shadow-not-found;
   background: $neutral-0;
-  border-radius: 1rem;
+  border-radius: $radius-lg;
   min-height: 3.375rem;
   padding: 1rem;
 
@@ -102,7 +102,7 @@
   width: 100%;
   @include flex-center;
   padding: 0.406rem 1.625rem;
-  border-radius: 0.75rem;
+  border-radius: $radius-md;
   border: 0.125rem solid transparent;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -111,7 +111,7 @@
 
 .label {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
 
   font: {
     weight: $font-weight-regular;

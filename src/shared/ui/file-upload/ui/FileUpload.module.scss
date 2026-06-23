@@ -6,8 +6,8 @@
 
 .mainWrapper {
   @include flex-center;
-  @include input-wrapper-border($neutral-300);
-  @include input-border-active($primary-500);
+  @include input-wrapper-border($border-default);
+  @include input-border-active($border-focus);
   gap: 0.75rem;
   width: 100%;
   min-height: 8rem;
@@ -15,23 +15,24 @@
 }
 
 .mainWrapper.error {
-  @include input-wrapper-border($error-600);
+  @include input-wrapper-border($icon-danger);
 }
 
 .iconContainer {
   @include square-circle(2.5rem);
   @include flex-center;
-  background: $upload-primary;
-  color: $upload-icon-primary;
+  background: $bg-brand-soft;
+  color: $icon-brand;
 }
 
 .pdfType {
-  color: $pdf-icon-primary;
+  color: $pdf-icon;
   background: $error-200;
 }
+
 .photoType {
-  background: $upload-primary;
-  color: $upload-icon-primary;
+  background: $bg-brand-soft;
+  color: $icon-brand;
 }
 
 .filesGrid {
@@ -61,13 +62,13 @@
   position: absolute;
   top: -0.4rem;
   right: -0.25rem;
-  background: $neutral-200;
-  border: 0.094rem solid $neutral-0;
+  background: $surface-secondary;
+  border: 0.094rem solid $surface-primary;
   z-index: 10;
-  color: $neutral-950;
+  color: $text-primary;
 
   &:hover {
-    background: $neutral-100;
+    background: $surface-tertiary;
   }
 }
 
@@ -87,7 +88,7 @@
 .fileNameText {
   font-size: $caption-sm-font-size;
   line-height: 154%;
-  color: $neutral-950;
+  color: $text-primary;
 }
 
 .uploadCardText {
@@ -96,7 +97,7 @@
 }
 
 .errorMessage {
-  @include error-text($error-600, 0.3rem, $font-weight-medium);
+  @include error-text($icon-danger, 0.3rem, $font-weight-medium);
 }
 
 .errorText {

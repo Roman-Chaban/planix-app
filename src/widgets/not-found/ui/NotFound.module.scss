@@ -15,9 +15,9 @@
   place-items: center;
   min-height: 90dvh;
   background: $neutral-0;
-  border-top: 3px solid $primary-700;
+  border-top: 0.188rem solid $primary-700;
   box-shadow: $shadow-not-found;
-  border-radius: 1.875rem;
+  border-radius: $radius-2xl;
 
   @include respond(lg) {
     @include flex-col(3rem, center, center, column);

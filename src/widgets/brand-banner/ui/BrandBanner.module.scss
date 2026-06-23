@@ -12,7 +12,7 @@
     repeat: no-repeat;
   }
 
-  border-radius: 1.875rem;
+  border-radius: $radius-2xl;
   padding: 1.875rem;
 
   &::after {
@@ -51,7 +51,7 @@
 
 .title {
   font-weight: $font-weight-semibold;
-  line-height: 150%;
+  line-height: $line-height-base;
   font-size: $h4-font-size;
 
   @include respond(sm) {
@@ -63,7 +63,7 @@
   @include bottom-overlay(1.875rem);
   width: 100%;
   max-width: 33rem;
-  line-height: 150%;
+  line-height: $line-height-base;
   font-weight: $font-weight-bold;
   color: $neutral-0;
   font-size: $h5-font-size;

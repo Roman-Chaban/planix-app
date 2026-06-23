@@ -12,7 +12,7 @@
 }
 
 .label {
-  line-height: 150%;
+  line-height: $line-height-base;
   color: $neutral-950;
   font-weight: $font-weight-semibold;
 }
@@ -59,19 +59,19 @@
 
 .file {
   @include flex(flex, row, start, center, 0.3rem);
-  border-radius: 1rem;
+  border-radius: $radius-lg;
   background: $neutral-0;
   border: 0.094rem solid $neutral-300;
   padding: 0.688rem;
 
   &.file-pdf svg {
-    color: $pdf-icon-primary;
+    color: $pdf-icon;
   }
 
   &.file-png svg,
   &.file-jpg svg,
   &.file-jpeg svg {
-    color: $upload-icon-primary;
+    color: $primary-700;
   }
 }
 
@@ -95,6 +95,6 @@
 
 .link {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   text-decoration: none;
 }

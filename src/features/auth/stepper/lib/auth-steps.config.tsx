@@ -5,12 +5,13 @@ import {
   ForgotForm,
   RegisterForm,
   ResetForm,
+  VerifyForm,
 } from '@/features/auth';
 import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
-const { REGISTER, LOGIN, FORGOT, RESET } = AUTH_STEPS;
+const { REGISTER, LOGIN, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 
 export const getAuthSteps = (
   t: TFunction,
@@ -75,7 +76,7 @@ export const getAuthSteps = (
     ),
   },
   [RESET]: {
-    component: () => <ResetForm />,
+    component: () => <ResetForm onNavigate={onNavigate} />,
     header: (
       <AuthHeader title={t('reset.title')} subtitle={t('reset.subtitle')} />
     ),
@@ -84,6 +85,23 @@ export const getAuthSteps = (
         <AuthRedirect
           title={t('reset.backTitle')}
           label={t('reset.backLink')}
+          step={LOGIN}
+          onNavigate={onNavigate}
+          icon={<BackIcon />}
+        />
+      </AuthFooter>
+    ),
+  },
+  [VERIFY]: {
+    component: () => <VerifyForm onNavigate={onNavigate} />,
+    header: (
+      <AuthHeader title={t('verify.title')} subtitle={t('verify.subtitle')} />
+    ),
+    footer: (
+      <AuthFooter>
+        <AuthRedirect
+          title={t('verify.backTitle')}
+          label={t('verify.backLink')}
           step={LOGIN}
           onNavigate={onNavigate}
           icon={<BackIcon />}

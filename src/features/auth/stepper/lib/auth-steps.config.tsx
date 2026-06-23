@@ -50,8 +50,8 @@ export const getAuthSteps = (
       <AuthFooter>
         <AuthRedirect
           title={t('register.noAccount')}
-          label={t('register.registration')}
-          step={REGISTER}
+          label={t('register.logIn')}
+          step={LOGIN}
           onNavigate={onNavigate}
         />
       </AuthFooter>

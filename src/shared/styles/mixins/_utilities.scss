@@ -14,12 +14,12 @@
   border-radius: $radius;
 }
 
-@mixin widget-box($width: 100%, $maxWidth: none, $maxHeight, $padding) {
+@mixin widget-box($width: 100%, $maxWidth: none, $minHeight, $padding) {
   border: 0.125rem solid $neutral-100;
   border-radius: 1rem;
   width: $width;
   max-width: $maxWidth;
-  max-height: $maxHeight;
+  min-height: $minHeight;
   box-shadow: $shadow-sm;
   background: $neutral-0;
   padding: $padding;

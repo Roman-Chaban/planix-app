@@ -16,6 +16,7 @@ export const NAMESPACE = {
   SIGN_UP_FORM: 'signUpForm',
   FORGOT_PASSWORD_FORM: 'forgotPasswordForm',
   RESET_PASSWORD_FORM: 'resetPasswordForm',
+  PROFILE: 'profile',
 } as const;
 
 export type Namespace = (typeof NAMESPACE)[keyof typeof NAMESPACE];

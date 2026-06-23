@@ -2,6 +2,7 @@ import { brandI18n } from '@/widgets/brand-banner/i18n';
 import { dashboardAnalyticsI18n } from '@/widgets/dashboard-analytics/i18n';
 import { dashboardCardsI18n } from '@/widgets/dashboard-cards/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
+import { profileI18n } from '@/widgets/profile/i18n';
 import { projectCreateI18n } from '@/widgets/project-create/i18n';
 import { projectDetailsI18n } from '@/widgets/project-details/i18n';
 import { projectEditI18n } from '@/widgets/project-edit/i18n';
@@ -29,6 +30,7 @@ export const resources = {
     projectAdd: projectAddI18n.en,
     projectEdit: projectEditI18n.en,
     projectDetails: projectDetailsI18n.en,
+    profile: profileI18n.en,
   },
   uk: {
     auth: authI18n.uk,
@@ -45,5 +47,6 @@ export const resources = {
     projectAdd: projectAddI18n.uk,
     projectEdit: projectEditI18n.uk,
     projectDetails: projectDetailsI18n.uk,
+    profile: profileI18n.uk,
   },
 };

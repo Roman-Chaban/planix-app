@@ -118,5 +118,12 @@
       "minPassword": "Password must be at least 8 characters",
       "mismatch": "Passwords do not match"
     }
+  },
+  "verify": {
+    "title": "OTP Verification",
+    "subtitle": "Please verify your account using the OTP code.",
+
+    "backTitle": "Go Back To ",
+    "backLink": "Log In"
   }
 }

@@ -35,3 +35,23 @@
     transform: scale(1);
   }
 }
+
+@mixin tooltip-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+@mixin tooltip-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin tooltip-hover($container: '.container', $tooltip: '.tooltip') {
+  #{$container}:hover #{$tooltip} {
+    @include tooltip-visible;
+  }
+}

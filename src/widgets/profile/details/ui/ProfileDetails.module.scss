@@ -1,5 +1,6 @@
 @use '@/shared/styles' as *;
 
 .details {
-  @include widget-box(100%, 70.313rem, 100vh, 0);
+  @include widget-box(100%, 70.313rem, 100dvh, 0);
+  border: none;
 }

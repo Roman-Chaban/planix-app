@@ -1,7 +1,10 @@
 import type { ElementType, ComponentPropsWithoutRef } from 'react';
 
-export type BoxProps<T extends ElementType> = {
+type BoxOwnProps<T extends ElementType> = {
   as?: T;
   className?: string;
   children?: React.ReactNode;
-} & ComponentPropsWithoutRef<T>;
+};
+
+export type BoxProps<T extends ElementType = 'div'> = BoxOwnProps<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof BoxOwnProps<T>>;

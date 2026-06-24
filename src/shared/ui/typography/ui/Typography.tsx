@@ -1,19 +1,15 @@
 import type { TypographyProps } from '../model/types';
 
-import { forwardRef } from 'react';
+import { forwardRef, type ElementType } from 'react';
 
-export const Typography = forwardRef<HTMLElement, TypographyProps>(
-  ({ as: Component = 'span', children, className, testId, ...props }, ref) => {
-    return (
-      <Component
-        ref={ref}
-        className={className}
-        data-testid={testId}
-        {...props}
-      >
-        {children}
-      </Component>
-    );
+export const Typography = forwardRef(
+  <T extends ElementType = 'span'>(
+    { as, testId, ...props }: TypographyProps<T>,
+    ref: React.Ref<Element>,
+  ) => {
+    const Component = as ?? 'span';
+
+    return <Component ref={ref} data-testid={testId} {...props} />;
   },
 );
 

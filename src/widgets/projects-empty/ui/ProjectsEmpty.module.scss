@@ -3,7 +3,7 @@
 .box {
   @include flex-col(1.5rem, center, center, column);
   width: 100%;
-  height: 60vh;
+  min-height: 100dvh;
   padding: 2rem;
   background: $neutral-0;
   box-shadow: $shadow-primary;

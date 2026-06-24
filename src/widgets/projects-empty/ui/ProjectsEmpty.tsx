@@ -21,7 +21,7 @@ const { ROUNDED } = BUTTON_SHAPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 
-const { LG } = BUTTON_MAX_WIDTH;
+const { XL } = BUTTON_MAX_WIDTH;
 
 export const ProjectsEmpty = () => {
   const { t } = useTranslation(NS.PROJECTS_EMPTY);
@@ -47,7 +47,7 @@ export const ProjectsEmpty = () => {
           shape={ROUNDED}
           variant={DEFAULT}
           size={LARGE}
-          maxWidth={LG}
+          maxWidth={XL}
           onClick={handleCreateProject}
           translationNamespace={NS.PROJECTS_EMPTY}
         />

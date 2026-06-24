@@ -40,18 +40,42 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  will-change: opacity, transform;
+
   transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+    opacity 180ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 180ms;
 }
 
 @mixin tooltip-visible {
   opacity: 1;
   visibility: visible;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s;
 }
 
 @mixin tooltip-hover($container: '.container', $tooltip: '.tooltip') {
   #{$container}:hover #{$tooltip} {
     @include tooltip-visible;
+  }
+
+  #{$container}:hover #{$tooltip}[data-position='top'] {
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  #{$container}:hover #{$tooltip}[data-position='bottom'] {
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  #{$container}:hover #{$tooltip}[data-position='left'] {
+    transform: translate(0, -50%) scale(1);
+  }
+
+  #{$container}:hover #{$tooltip}[data-position='right'] {
+    transform: translate(0, -50%) scale(1);
   }
 }

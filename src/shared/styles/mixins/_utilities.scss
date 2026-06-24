@@ -80,24 +80,24 @@
   @if $position == top {
     bottom: calc(100% + 0.5rem);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 6px) scale(0.95);
   }
 
   @if $position == bottom {
     top: calc(100% + 0.5rem);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -6px) scale(0.95);
   }
 
   @if $position == left {
     right: calc(100% + 0.5rem);
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(6px, -50%) scale(0.95);
   }
 
   @if $position == right {
     left: calc(100% + 0.5rem);
     top: 50%;
-    transform: translateY(-50%) translateX(6px) scale(0.95);
+    transform: translate(-6px, -50%) scale(0.95);
   }
 }

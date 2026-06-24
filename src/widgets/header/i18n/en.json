@@ -3,5 +3,6 @@
   "dashboard": "Dashboard",
   "projects": "Project Management",
   "login": "Login",
-  "profile": "Setting"
+  "profile": "Setting",
+  "logIn": "Log in"
 }

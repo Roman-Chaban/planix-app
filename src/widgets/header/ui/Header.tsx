@@ -11,10 +11,12 @@ import { useHeaderAnimation, type HeaderProps } from '@/widgets/header';
 
 import { LanguageSelect } from '@/features/change-language';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
-import { AppLink, Box, Button, Typography } from '@/shared/ui';
+import { AppLink, Box, Button, Tooltip, Typography } from '@/shared/ui';
 import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button';
 
 import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
+
+import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './Header.module.scss';
 
@@ -25,6 +27,7 @@ const { CIRCLE, ROUNDED } = BUTTON_SHAPES;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 
 const { AUTH } = ROUTES;
+const { BOTTOM } = TOOLTIP_POSITION;
 
 export const Header: FC<HeaderProps> = ({ title }) => {
   const { t } = useTranslation(NS.HEADER);
@@ -56,11 +59,13 @@ export const Header: FC<HeaderProps> = ({ title }) => {
               <NotificationIcon />
             </Button>
 
-            <Button type={BUTTON} size={MEDIUM} shape={ROUNDED}>
-              <AppLink href={AUTH} className={styles.link}>
-                {t('login')}
-              </AppLink>
-            </Button>
+            <Tooltip position={BOTTOM} message={t('logIn')}>
+              <Button type={BUTTON} size={MEDIUM} shape={ROUNDED}>
+                <AppLink href={AUTH} className={styles.link}>
+                  {t('login')}
+                </AppLink>
+              </Button>
+            </Tooltip>
           </Box>
         </Box>
       </Box>

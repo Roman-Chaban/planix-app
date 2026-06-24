@@ -22,7 +22,7 @@ const { BUTTON } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
-const { LG } = BUTTON_MAX_WIDTH;
+const { XL } = BUTTON_MAX_WIDTH;
 
 export const ProjectActions: FC<ProjectsActionsProps> = ({
   handleCreateProject,
@@ -51,7 +51,7 @@ export const ProjectActions: FC<ProjectsActionsProps> = ({
         shape={ROUNDED}
         variant={DEFAULT}
         size={LARGE}
-        maxWidth={LG}
+        maxWidth={XL}
         onClick={handleCreateProject}
         fullWidth
         translationNamespace={NS.ADD_PROJECT_HEADER}

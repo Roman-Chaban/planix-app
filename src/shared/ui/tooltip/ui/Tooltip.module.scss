@@ -1,0 +1,52 @@
+@use '@/shared/styles' as *;
+
+.container {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+}
+
+.trigger {
+  display: inline-flex;
+}
+
+.tooltip {
+  width: max-content;
+  position: absolute;
+  z-index: $z-tooltip;
+  padding: 1rem;
+
+  border-radius: $radius-lg;
+  background: $neutral-100;
+  box-shadow: $shadow-sharp;
+
+  @include tooltip-hidden;
+}
+
+.arrow {
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: $neutral-100;
+  top: -0.35rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+@include tooltip-hover('.container', '.tooltip');
+
+.tooltip[data-position='top'] {
+  @include tooltip-position(top);
+}
+
+.tooltip[data-position='bottom'] {
+  @include tooltip-position(bottom);
+}
+
+.tooltip[data-position='left'] {
+  @include tooltip-position(left);
+}
+
+.tooltip[data-position='right'] {
+  @include tooltip-position(right);
+}

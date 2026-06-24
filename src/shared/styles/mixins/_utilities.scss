@@ -72,3 +72,32 @@
     background: $color;
   }
 }
+
+@mixin tooltip-position($position) {
+  position: absolute;
+  width: max-content;
+
+  @if $position == top {
+    bottom: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $position == bottom {
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $position == left {
+    right: calc(100% + 0.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @if $position == right {
+    left: calc(100% + 0.5rem);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px) scale(0.95);
+  }
+}

@@ -35,3 +35,5 @@ export {
   AuthWrapper,
 } from './auth';
 export { Loader } from './loader';
+export { Tooltip } from './tooltip';
+export { Portal } from './portal';

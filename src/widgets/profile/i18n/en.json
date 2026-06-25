@@ -13,6 +13,7 @@
     "lastName": "Last Name",
     "birthDate": "Date of Birth",
     "email": "Email",
-    "contact": "Contact No"
+    "contact": "Contact No",
+    "edit": "Click to edit"
   }
 }

@@ -4,5 +4,6 @@
   "projects": "Project Management",
   "login": "Login",
   "profile": "Setting",
-  "logIn": "Log in"
+  "logIn": "Log in",
+  "settingsTooltip": "Go to settings"
 }

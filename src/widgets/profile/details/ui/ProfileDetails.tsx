@@ -12,8 +12,9 @@ import { Box } from '@/shared/ui';
 import styles from './ProfileDetails.module.scss';
 
 export const ProfileDetails = () => {
-  const { data: profile } = useProfile();
   const { t } = useTranslation(NS.PROFILE);
+
+  const { data: profile } = useProfile();
 
   if (!profile) return null;
 

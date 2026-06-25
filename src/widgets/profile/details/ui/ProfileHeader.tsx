@@ -21,7 +21,7 @@ const { BUTTON } = BUTTON_TYPES;
 const { ROUNDED } = BUTTON_SHAPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { SMALL } = BUTTON_SIZES;
-const { LG } = BUTTON_MAX_WIDTH;
+const { XS } = BUTTON_MAX_WIDTH;
 
 export const ProfileHeader: FC<ProfileDetailsProps> = ({ profile, t }) => {
   if (!profile) return null;
@@ -43,9 +43,10 @@ export const ProfileHeader: FC<ProfileDetailsProps> = ({ profile, t }) => {
         </Box>
 
         <Button
+          fullWidth
           type={BUTTON}
           size={SMALL}
-          maxWidth={LG}
+          maxWidth={XS}
           shape={ROUNDED}
           variant={DEFAULT}
         >

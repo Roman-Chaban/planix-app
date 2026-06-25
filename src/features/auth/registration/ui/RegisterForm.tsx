@@ -16,6 +16,7 @@ import {
   Box,
   FormFields,
   FormDateField,
+  Tooltip,
 } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
@@ -63,6 +64,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
                 value: field.value ?? '',
                 onChange: field.onChange,
                 ref: field.ref,
+                required: true,
               }}
               error={t(fieldState.error?.message ?? '')}
             />
@@ -70,12 +72,14 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
         />
       </Box>
 
-      <AuthButton
-        label={t('register.registration')}
-        disabled={!isValid}
-        maxWidth={LG}
-        isLoading={isSubmitting}
-      />
+      <Tooltip position="bottom" message={t('register.tooltipMessage')}>
+        <AuthButton
+          label={t('register.registration')}
+          disabled={!isValid}
+          maxWidth={LG}
+          isLoading={isSubmitting}
+        />
+      </Tooltip>
     </AppForm>
   );
 };

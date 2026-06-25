@@ -29,9 +29,6 @@
   width: 0.625rem;
   height: 0.625rem;
   background: $neutral-100;
-  top: -0.35rem;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
 }
 
 @include tooltip-hover('.container', '.tooltip');
@@ -50,4 +47,20 @@
 
 .tooltip[data-position='right'] {
   @include tooltip-position(right);
+}
+
+.tooltip[data-position='top'] .arrow {
+  @include arrow-position(top);
+}
+
+.tooltip[data-position='bottom'] .arrow {
+  @include arrow-position(bottom);
+}
+
+.tooltip[data-position='left'] .arrow {
+  @include arrow-position(left);
+}
+
+.tooltip[data-position='right'] .arrow {
+  @include arrow-position(right);
 }

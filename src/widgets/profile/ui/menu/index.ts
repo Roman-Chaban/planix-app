@@ -1,6 +1,6 @@
 export { profileMenu } from './lib/config';
 
-export type { MenuItemProps, MenuProps } from './model/types';
+export type { MenuItemProps, MenuProps, MenuItems } from './model/types';
 
 export { ProfileMenu } from './ui/ProfileMenu';
 export { Menu } from './ui/Menu';

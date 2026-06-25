@@ -1,7 +1,10 @@
 import { type FC } from 'react';
 
-import { MenuItem, profileMenu } from '@/widgets/profile/ui/menu';
-import type { MenuProps } from '@/widgets/profile/ui/menu';
+import {
+  MenuItem,
+  profileMenu,
+  type MenuProps,
+} from '@/widgets/profile/ui/menu';
 import { List } from '@/shared/ui';
 
 import styles from './ProfileMenu.module.scss';

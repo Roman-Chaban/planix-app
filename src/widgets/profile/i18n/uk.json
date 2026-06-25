@@ -6,5 +6,13 @@
     "subscription": "Підписка та білінг",
     "systemSettings": "Системні налаштування",
     "logOut": "Вийти"
+  },
+  "profileDetails": {
+    "editLabel": "Редагувати",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище",
+    "birthDate": "Дата народження",
+    "email": "Електронна пошта",
+    "contact": "Контактний номер"
   }
 }

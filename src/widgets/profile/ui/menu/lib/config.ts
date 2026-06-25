@@ -1,4 +1,6 @@
-export const profileMenu = [
+import type { MenuItems } from '@/widgets/profile/ui/menu';
+
+export const profileMenu: MenuItems = [
   {
     id: 'personal',
     label: 'profileMenu.myProfile',

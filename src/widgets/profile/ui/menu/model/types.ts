@@ -1,5 +1,9 @@
-import type { TabId } from '../../../lib/tabs-content';
 import type { TFunction } from 'i18next';
+
+export type MenuItem = {
+  id: string;
+  label: string;
+};
 
 export type MenuItemProps = {
   id: string;
@@ -14,3 +18,5 @@ export type MenuProps = {
   setActiveId: (id: string) => void;
   t: TFunction;
 };
+
+export type MenuItems = MenuItem[];

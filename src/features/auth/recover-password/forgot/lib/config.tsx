@@ -13,6 +13,7 @@ export const registerFormFields: readonly FormFieldConfig<ForgotPasswordSchema>[
       type: EMAIL,
       placeholder: 'forgot.emailPlaceholder',
       autoComplete: 'email',
+      required: true,
       startIcon: <MessageIcon width={20} height={20} />,
     },
   ] as const;

@@ -15,6 +15,7 @@ export const loginFormFields: readonly FormFieldConfig<LoginFormSchema>[] = [
     type: EMAIL,
     placeholder: 'login.emailPlaceholder',
     autoComplete: 'email',
+    required: true,
     startIcon: <MessageIcon />,
   },
   {
@@ -24,6 +25,7 @@ export const loginFormFields: readonly FormFieldConfig<LoginFormSchema>[] = [
     placeholder: 'login.passwordPlaceholder',
     autoComplete: 'current-password',
     startIcon: <LockIcon />,
+    required: true,
     feature: 'password-toggle',
     endIcon: null,
   },

@@ -13,6 +13,7 @@ export const resetFormFields: readonly FormFieldConfig<ResetFormSchema>[] = [
     type: PASSWORD,
     startIcon: <LockIcon />,
     endIcon: <ViewOffIcon />,
+    required: true,
     feature: 'password-toggle',
   },
   {
@@ -20,6 +21,7 @@ export const resetFormFields: readonly FormFieldConfig<ResetFormSchema>[] = [
     label: 'reset.newPasswordLabel',
     placeholder: 'reset.newPasswordPlaceholder',
     type: PASSWORD,
+    required: true,
     startIcon: <LockIcon />,
     endIcon: <ViewOffIcon />,
     feature: 'password-toggle',

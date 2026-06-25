@@ -19,6 +19,7 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
       type: TEXT,
       placeholder: 'register.fullNamePlaceholder',
       autoComplete: 'name',
+      required: true,
       startIcon: <ClientIcon width={20} height={20} />,
     },
     {
@@ -27,6 +28,7 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
       type: EMAIL,
       placeholder: 'register.emailPlaceholder',
       autoComplete: 'email',
+      required: true,
       startIcon: <MessageIcon />,
     },
     {
@@ -36,6 +38,7 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
       placeholder: 'register.passwordPlaceholder',
       autoComplete: 'new-password',
       feature: 'password-toggle',
+      required: true,
       startIcon: <LockIcon />,
       endIcon: <ViewOffIcon />,
     },
@@ -45,6 +48,7 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
       type: PASSWORD,
       placeholder: 'register.confirmPasswordPlaceholder',
       feature: 'password-toggle',
+      required: true,
       autoComplete: 'new-password',
       startIcon: <LockIcon />,
       endIcon: <ViewOffIcon />,
@@ -55,6 +59,7 @@ export const registerFormFields: readonly FormFieldConfig<RegisterFormSchema>[] 
       type: TEXT,
       placeholder: 'register.contactPlaceholder',
       autoComplete: 'tel',
+      required: true,
       startIcon: <ContactIcon />,
     },
   ] as const;

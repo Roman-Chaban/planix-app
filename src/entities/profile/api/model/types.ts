@@ -11,6 +11,10 @@ export type Profile = {
   id: string;
   email: string;
   fullName: string;
+  firstName: string;
+  lastName: string;
+  birthDateFormatted: string;
+  createdAtFormatted: string;
   contact: string;
   birthDate: Date | null;
   createdAt: Date;

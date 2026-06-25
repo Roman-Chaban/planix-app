@@ -17,8 +17,3 @@ export const INPUT_VARIANTS = {
   ERROR: 'error',
   NO_BORDER: 'noBorder',
 } as const;
-
-export const ICON_POSITION = {
-  START: 'start',
-  END: 'end',
-} as const;

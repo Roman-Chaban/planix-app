@@ -8,7 +8,7 @@ export type ButtonVariant =
   | 'transparent';
 export type ButtonSize = 'sm' | 'md' | 'lg' | 'compact';
 export type ButtonShape = 'default' | 'rounded' | 'circle' | 'pill';
-export type MaxWidth = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type MaxWidth = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 export type ButtonProps = {
   variant?: ButtonVariant;

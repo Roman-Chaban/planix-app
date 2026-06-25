@@ -27,6 +27,7 @@ export const BUTTON_SHAPES = {
 } as const;
 
 export const BUTTON_MAX_WIDTH = {
+  XS: 'xs',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',

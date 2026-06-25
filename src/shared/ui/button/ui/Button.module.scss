@@ -100,12 +100,16 @@
   @include flex-center;
 }
 
+.maxWidth_xs {
+  max-width: 6.688rem;
+}
+
 .maxWidth_sm {
-  max-width: 8.188rem;
+  max-width: 7.75rem;
 }
 
 .maxWidth_md {
-  max-width: 7.75rem;
+  max-width: 8.188rem;
 }
 
 .maxWidth_lg {

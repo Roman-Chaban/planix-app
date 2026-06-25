@@ -3,7 +3,12 @@ export { buildClassName } from './classnames/buildClassName';
 export { buildHref } from './routing/buildHref';
 export { getCleanPathname } from './routing/getCleanPathname';
 export { isLocale } from './routing/isLocale';
-export { getLogoSized, setFormErrors } from './helpers';
+export {
+  getLogoSized,
+  setFormErrors,
+  getInitials,
+  splitFullName,
+} from './helpers';
 export { slugify } from './routing/slugify';
 export {
   DATE_FORMAT,

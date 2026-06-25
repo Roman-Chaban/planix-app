@@ -17,7 +17,9 @@ export function FormFields<T extends FieldValues>({
   translationNamespace,
 }: Omit<FormFieldsProps<T>, 'register' | 'errors'>) {
   const { t } = useTranslation(translationNamespace);
-  const { getVisibility, toggle } = usePasswordToggle();
+
+  const { getVisibility, toggleVisibility } = usePasswordToggle();
+
   const { control } = useFormContext<T>();
 
   return (
@@ -56,9 +58,6 @@ export function FormFields<T extends FieldValues>({
                   label={t(field.label)}
                   startIcon={field.startIcon}
                   endIcon={endIcon}
-                  onEndIconClick={
-                    isPassword ? () => toggle(field.name) : undefined
-                  }
                   error={errorText}
                   inputRef={ref}
                   variant={DEFAULT}
@@ -78,7 +77,23 @@ export function FormFields<T extends FieldValues>({
                       ? t(field.placeholder)
                       : undefined,
                     autoComplete: field.autoComplete,
+                    required: field.required,
                   }}
+                  onEndIconMouseDown={
+                    isPassword
+                      ? () => toggleVisibility(field.name, true)
+                      : undefined
+                  }
+                  onEndIconMouseUp={
+                    isPassword
+                      ? () => toggleVisibility(field.name, false)
+                      : undefined
+                  }
+                  onEndIconMouseLeave={
+                    isPassword
+                      ? () => toggleVisibility(field.name, false)
+                      : undefined
+                  }
                 />
               );
             }}

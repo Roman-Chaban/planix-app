@@ -1,6 +1,8 @@
 import type {
+  HTMLAttributes,
   InputHTMLAttributes,
   LabelHTMLAttributes,
+  MouseEventHandler,
   PropsWithChildren,
   ReactNode,
   Ref,
@@ -26,7 +28,9 @@ export type FormFieldProps = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   onStartIconClick?: () => void;
-  onEndIconClick?: () => void;
+  onEndIconMouseDown?: MouseEventHandler<HTMLDivElement>;
+  onEndIconMouseUp?: MouseEventHandler<HTMLDivElement>;
+  onEndIconMouseLeave?: MouseEventHandler<HTMLDivElement>;
   inputProps?: React.ComponentPropsWithoutRef<'input'>;
   inputRef?: React.Ref<HTMLInputElement>;
   children?: ReactNode;
@@ -54,7 +58,7 @@ export type FormIconProps = {
   position?: IconPosition;
   onClick?: () => void;
   className?: string;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 export type DateFieldProps = {
   value: string;

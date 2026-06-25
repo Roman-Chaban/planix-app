@@ -18,6 +18,7 @@ export type FormFieldConfig<T extends FieldValues> = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   feature?: FormFieldFeature;
+  required?: boolean;
 };
 
 export type FormFieldsProps<T extends FieldValues> = {

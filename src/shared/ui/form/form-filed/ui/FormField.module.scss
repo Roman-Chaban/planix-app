@@ -16,8 +16,35 @@
   @include input-disabled($surface-tertiary, $surface-secondary);
 }
 
+.floatingLabel {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: $line-height-base;
+  color: $neutral-600;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.inputWrapper:focus-within .floatingLabel,
+.inputWrapper.filled .floatingLabel {
+  top: 0rem;
+  transform: translateY(0);
+  font-size: $caption-md-font-size;
+}
+
+.inputWrapper.error .floatingLabel {
+  color: $icon-danger;
+}
+
 .inputWrapper.error:focus-within + .label {
   color: $icon-danger;
+}
+
+.required {
+  color: $icon-danger;
+  margin-inline-start: 0.2rem;
 }
 
 .error {
@@ -64,7 +91,12 @@
 }
 
 .errorText {
-  @include error-text($icon-danger, 0.3rem, $font-weight-medium);
+  @include error-text(
+    $body-md-font-size,
+    $icon-danger,
+    0.3rem,
+    $font-weight-medium
+  );
 
   @include respond(sm) {
     font-size: $body-sm-font-size;

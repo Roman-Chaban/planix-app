@@ -2,10 +2,19 @@ import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 
-import { FormError, FormLabel, Box, FormIcon, Input } from '@/shared/ui';
+import {
+  FormError,
+  FormLabel,
+  Box,
+  FormIcon,
+  Input,
+  Typography,
+} from '@/shared/ui';
 
-import type { FormFieldProps } from '@/shared/ui/form/form-filed/model/types';
-import { ICON_POSITION } from '@/shared/ui/input';
+import {
+  type FormFieldProps,
+  ICON_POSITION,
+} from '@/shared/ui/form/form-filed';
 
 import styles from './FormField.module.scss';
 
@@ -19,16 +28,22 @@ export const FormField: FC<FormFieldProps> = ({
   startIcon,
   endIcon,
   onStartIconClick,
-  onEndIconClick,
+  onEndIconMouseDown,
+  onEndIconMouseLeave,
+  onEndIconMouseUp,
   inputProps,
   inputRef,
   children,
 }) => {
-  const { ...restInputProps } = inputProps || {};
+  const { placeholder, required, value, ...restInputProps } = inputProps || {};
+
+  const isFilled =
+    value !== undefined && value !== null && String(value).length > 0;
 
   const wrapperClassName = buildClassName(styles.inputWrapper, {
     [styles.error]: !!error,
     [styles[variant]]: !!variant,
+    [styles.filled]: isFilled,
   });
 
   return (
@@ -51,10 +66,27 @@ export const FormField: FC<FormFieldProps> = ({
           ref={inputRef}
           aria-invalid={!!error}
           {...restInputProps}
+          placeholder=""
         />
 
+        {placeholder && (
+          <Typography as="span" className={styles.floatingLabel}>
+            {placeholder}
+            {required && (
+              <Typography as="span" className={styles.required}>
+                *
+              </Typography>
+            )}
+          </Typography>
+        )}
+
         {endIcon && (
-          <FormIcon position={END} onClick={onEndIconClick}>
+          <FormIcon
+            position={END}
+            onMouseDown={onEndIconMouseDown}
+            onMouseUp={onEndIconMouseUp}
+            onMouseLeave={onEndIconMouseLeave}
+          >
             {endIcon}
           </FormIcon>
         )}

@@ -4,7 +4,10 @@ export type {
   FormLabelProps,
   FormIconProps,
   FormErrorProps,
+  FormFieldProps,
 } from './model/types';
+
+export { ICON_POSITION } from './lib/constants';
 
 export { FormField } from './ui/FormField';
 export { FormLabel } from './ui/FormLabel';

@@ -23,7 +23,7 @@ export const FormDateField: FC<FormDateFieldProps> = ({
 }) => {
   const { t } = useTranslation(NAMESPACE.PROJECT_ADD);
 
-  const { value, onChange, ref, ...rest } = inputProps;
+  const { value, onChange, ref, required, ...rest } = inputProps;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const masked = applyDateMask(event.target.value);
@@ -47,6 +47,7 @@ export const FormDateField: FC<FormDateFieldProps> = ({
         placeholder: t(placeholder),
         value: toInputFormat(value),
         onChange: handleChange,
+        required: required,
       }}
     />
   );

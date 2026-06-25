@@ -31,6 +31,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
   const { t } = useTranslation(NS.HEADER);
 
   if (isLoading) return null;
+  if (!profile) return null;
 
   return (
     <header className={styles.header}>
@@ -53,9 +54,13 @@ export const Header: FC<HeaderProps> = ({ title }) => {
               <NotificationIcon />
             </Button>
 
-            {profile?.id ? (
+            {profile.id ? (
               <AppLink href={SETTINGS}>
-                <Avatar alt={profile.fullName} fallback={'User'} />
+                <Avatar
+                  alt={profile.fullName}
+                  fallback={profile.initials}
+                  className={styles.avatar}
+                />
               </AppLink>
             ) : (
               <Tooltip position={BOTTOM} message={t('logIn')}>

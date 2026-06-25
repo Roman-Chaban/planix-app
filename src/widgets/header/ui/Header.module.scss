@@ -88,6 +88,16 @@
   transform: translate(25%, -40%);
 }
 
+.avatar {
+  @include flex-center;
+  color: $primary-400;
+  width: 3.125rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  background: $neutral-100;
+  border-radius: $radius-full;
+}
+
 .headerAuth {
   @include flex-center;
   gap: $space-5;

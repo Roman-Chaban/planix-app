@@ -1,15 +1,12 @@
-'use client';
+import { type FC } from 'react';
 
-import { useState, type FC } from 'react';
-
-import { MenuItem, profileMenu, type MenuProps } from '@/widgets/profile/menu';
+import { MenuItem, profileMenu } from '@/widgets/profile/ui/menu';
+import type { MenuProps } from '@/widgets/profile/ui/menu';
 import { List } from '@/shared/ui';
 
 import styles from './ProfileMenu.module.scss';
 
-export const Menu: FC<MenuProps> = ({ t }) => {
-  const [activeId, setActiveId] = useState<string>(profileMenu[0]?.id ?? '');
-
+export const Menu: FC<MenuProps> = ({ t, activeId, setActiveId }) => {
   return (
     <List
       className={styles.list}

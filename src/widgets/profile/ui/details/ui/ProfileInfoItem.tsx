@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { ProfileInfoItemProps } from '@/widgets/profile/details';
+import type { ProfileInfoItemProps } from '@/widgets/profile/ui/details';
 import { toDisplay } from '@/shared/lib';
 import { Box, Typography } from '@/shared/ui';
 

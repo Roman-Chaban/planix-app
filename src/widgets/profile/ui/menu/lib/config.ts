@@ -1,10 +1,10 @@
 export const profileMenu = [
   {
-    id: 'myProfile',
+    id: 'personal',
     label: 'profileMenu.myProfile',
   },
   {
-    id: 'notificationSettings',
+    id: 'notifications',
     label: 'profileMenu.notificationSettings',
   },
   {
@@ -19,4 +19,4 @@ export const profileMenu = [
     id: 'logOut',
     label: 'profileMenu.logOut',
   },
-];
+] as const;

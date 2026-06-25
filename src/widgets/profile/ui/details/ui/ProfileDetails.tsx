@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ProfileMenu } from '@/widgets/profile';
-import { ProfileHeader, ProfileInfoList } from '@/widgets/profile/details';
+import { ProfileHeader, ProfileInfoList } from '@/widgets/profile/ui/details';
 import { useProfile } from '@/entities/profile/api';
 
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
@@ -20,7 +19,6 @@ export const ProfileDetails = () => {
 
   return (
     <Box className={styles.details}>
-      <ProfileMenu />
       <Box className={styles.profileDetails}>
         <ProfileHeader profile={profile} t={t} />
         <ProfileInfoList profile={profile} t={t} />

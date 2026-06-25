@@ -2,9 +2,9 @@
 
 import { type FC } from 'react';
 
-import type { ProfileDetailsProps } from '@/widgets/profile/details';
+import type { ProfileDetailsProps } from '@/widgets/profile/ui/details';
 
-import { Box, Typography } from '@/shared/ui';
+import { Box, Tooltip, Typography } from '@/shared/ui';
 
 import {
   Button,
@@ -15,6 +15,8 @@ import {
   BUTTON_VARIANTS,
 } from '@/shared/ui/button';
 
+import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
+
 import styles from './ProfileDetails.module.scss';
 
 const { BUTTON } = BUTTON_TYPES;
@@ -22,6 +24,8 @@ const { ROUNDED } = BUTTON_SHAPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { SMALL } = BUTTON_SIZES;
 const { XS } = BUTTON_MAX_WIDTH;
+
+const { BOTTOM } = TOOLTIP_POSITION;
 
 export const ProfileHeader: FC<ProfileDetailsProps> = ({ profile, t }) => {
   if (!profile) return null;
@@ -42,16 +46,18 @@ export const ProfileHeader: FC<ProfileDetailsProps> = ({ profile, t }) => {
           </Box>
         </Box>
 
-        <Button
-          fullWidth
-          type={BUTTON}
-          size={SMALL}
-          maxWidth={XS}
-          shape={ROUNDED}
-          variant={DEFAULT}
-        >
-          {t('profileDetails.editLabel')}
-        </Button>
+        <Tooltip position={BOTTOM} message={t('profileDetails.edit')}>
+          <Button
+            fullWidth
+            type={BUTTON}
+            size={SMALL}
+            maxWidth={XS}
+            shape={ROUNDED}
+            variant={DEFAULT}
+          >
+            {t('profileDetails.editLabel')}
+          </Button>
+        </Tooltip>
       </Box>
     </Box>
   );

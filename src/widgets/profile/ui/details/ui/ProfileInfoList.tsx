@@ -1,8 +1,10 @@
 import type { FC } from 'react';
 
-import { ProfileInfoItem } from '@/widgets/profile';
-import type { ProfileInfoListProps } from '@/widgets/profile/details';
-import { getProfileInfoFields } from '@/widgets/profile/details/lib/profileFields';
+import {
+  ProfileInfoItem,
+  type ProfileInfoListProps,
+} from '@/widgets/profile/ui/details';
+import { getProfileInfoFields } from '@/widgets/profile/ui/details/lib/profileFields';
 import { Box } from '@/shared/ui';
 
 import styles from './ProfileDetails.module.scss';

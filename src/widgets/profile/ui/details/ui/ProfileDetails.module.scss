@@ -2,8 +2,6 @@
 
 .details {
   width: 100%;
-  @include widget-box(100%, 70.313rem, 100dvh, 0);
-  border: none;
   @include flex(flex, row, start, stretch);
 }
 

@@ -1,4 +1,4 @@
-export type ProfileDto = {
+export type ProfileData = {
   id: string;
   email: string;
   full_name: string;
@@ -15,6 +15,7 @@ export type Profile = {
   lastName: string;
   birthDateFormatted: string;
   createdAtFormatted: string;
+  initials: string;
   contact: string;
   birthDate: Date | null;
   createdAt: Date;

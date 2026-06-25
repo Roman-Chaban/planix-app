@@ -1,10 +1,11 @@
 import dayjs from 'dayjs';
 
 import type { Profile, ProfileDto } from '@/entities/profile';
+import { DATE_FORMAT, getInitials, splitFullName } from '@/shared/lib';
 
 export const mapProfile = (data: ProfileDto): Profile => {
-  const [firstName, ...rest] = (data.full_name ?? '').trim().split(' ');
-  const lastName = rest.join(' ') || '';
+  const { firstName, lastName } = splitFullName(data.full_name);
+  const initials = getInitials(firstName, lastName);
 
   const birthDate = data.birth_date ? new Date(data.birth_date) : null;
   const createdAt = new Date(data.created_at);
@@ -14,15 +15,14 @@ export const mapProfile = (data: ProfileDto): Profile => {
     email: data.email,
     fullName: data.full_name,
     contact: data.contact,
-
     birthDate,
     createdAt,
-
     firstName,
     lastName,
-
-    birthDateFormatted: birthDate ? dayjs(birthDate).format('DD MMM YYYY') : '',
-
-    createdAtFormatted: dayjs(createdAt).format('DD MMM YYYY'),
+    initials,
+    birthDateFormatted: birthDate
+      ? dayjs(birthDate).format(DATE_FORMAT.DISPLAY)
+      : '',
+    createdAtFormatted: dayjs(createdAt).format(DATE_FORMAT.DISPLAY),
   };
 };

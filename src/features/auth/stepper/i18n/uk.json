@@ -56,6 +56,8 @@
     "birthDate": "Дата народження",
     "birthDatePlaceholder": "Дата народження",
 
+    "tooltipMessage": "Спробуйте зареєструватися",
+
     "validation": {
       "fullName": {
         "min": "Повне ім'я має містити мінімум 5 символів",

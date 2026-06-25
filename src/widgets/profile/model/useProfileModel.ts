@@ -4,10 +4,8 @@ import { useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 import { ROUTES } from '@/app/routes';
-import {
-  PROFILE_TABS,
-  resolveProfileTab,
-} from '@/widgets/profile/lib/tabs-content';
+import { resolveProfileTab } from '@/widgets/profile';
+import { PROFILE_TABS } from '@/widgets/profile/lib/tabs-content';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 
 const { SETTINGS } = ROUTES;

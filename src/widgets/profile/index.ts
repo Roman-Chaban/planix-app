@@ -6,8 +6,8 @@ export type {
 } from './model/types';
 
 export { DEFAULT_PROFILE_TAB } from './lib/constants';
-
 export { PROFILE_TABS } from './lib/tabs-content';
+export { resolveProfileTab } from './lib/resolve-profile-tab';
 
 export { ProfileLayout } from './ui/layout';
 export { ProfileDetails, ProfileInfoItem } from './ui/details';

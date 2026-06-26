@@ -5,4 +5,4 @@ export {
   mapProfile,
   queryKeys,
   useProfile,
-} from './api';
+} from '../settings/api';

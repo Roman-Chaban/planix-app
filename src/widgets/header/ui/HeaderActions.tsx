@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 
 import { LanguageSelect } from '@/features/change-language';
-import { useProfile } from '@/entities/profile/api';
+import { useProfile } from '@/entities/settings/api';
 import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
 import { AppLink, Avatar, Box, Button, Tooltip } from '@/shared/ui';
 import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_TYPES } from '@/shared/ui/button';

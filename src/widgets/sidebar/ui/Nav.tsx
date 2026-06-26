@@ -9,7 +9,6 @@ import { List } from '@/shared/ui';
 
 import { getNavItems } from '../lib/items';
 
-
 import styles from './Sidebar.module.scss';
 
 export const Nav: FC<NavProps> = ({ isCollapsed, t }) => {

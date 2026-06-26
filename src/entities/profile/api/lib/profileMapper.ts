@@ -1,9 +1,9 @@
 import dayjs from 'dayjs';
 
-import type { Profile, ProfileDto } from '@/entities/profile';
+import type { Profile, ProfileData } from '@/entities/profile';
 import { DATE_FORMAT, getInitials, splitFullName } from '@/shared/lib';
 
-export const mapProfile = (data: ProfileDto): Profile => {
+export const mapProfile = (data: ProfileData): Profile => {
   const { firstName, lastName } = splitFullName(data.full_name);
   const initials = getInitials(firstName, lastName);
 

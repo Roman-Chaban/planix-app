@@ -1,6 +1,6 @@
 export {
   type Profile,
-  type ProfileDto,
+  type ProfileData,
   getProfile,
   mapProfile,
   queryKeys,

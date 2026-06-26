@@ -4,7 +4,7 @@ import { type FC } from 'react';
 
 import { List } from '@/shared/ui';
 
-import { profileMenu } from '../lib/config';
+import { profileMenu } from '../lib/profile-menu';
 
 import { MenuItem } from './MenuItem';
 import styles from './ProfileMenu.module.scss';

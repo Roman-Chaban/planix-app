@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { Box } from '@/shared/ui';
 
-import { getProfileInfoFields } from '../lib/profileFields';
+import { getInfoFields } from '../lib/details';
 
 import styles from './ProfileDetails.module.scss';
 
@@ -13,7 +13,7 @@ import { ProfileInfoItem } from './ProfileInfoItem';
 export const ProfileInfoList: FC<ProfileInfoListProps> = ({ profile, t }) => {
   if (!profile) return null;
 
-  const fields = getProfileInfoFields(profile, t);
+  const fields = getInfoFields(profile, t);
 
   return (
     <Box className={styles.information}>

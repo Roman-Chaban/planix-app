@@ -3,7 +3,7 @@
 import { Header } from '@/widgets/header';
 import { PageWrapper } from '@/shared/ui';
 
-import { useProfileModel } from '../../../model/useProfileModel';
+import { useProfileModel } from '../../../../settings/model/useProfileModel';
 import { ProfileMenu } from '../../menu';
 
 import styles from './ProfileLayout.module.scss';

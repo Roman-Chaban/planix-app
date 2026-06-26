@@ -2,13 +2,13 @@ import type { FC } from 'react';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './ProfileHeader.module.scss';
+import styles from './Header.module.scss';
 
-export type ProfileHeaderProps = {
+export type SettingsHeaderProps = {
   title: string;
 };
 
-export const ProfileHeader: FC<ProfileHeaderProps> = ({ title }) => {
+export const SettingsHeader: FC<SettingsHeaderProps> = ({ title }) => {
   return (
     <Box className={styles.box}>
       <Typography as="h2" className={styles.title}>

@@ -1,8 +1,7 @@
 import type { TabId } from '../model/types';
 
-import { PROFILE_TABS } from '../lib/tabs-content';
-
 import { DEFAULT_PROFILE_TAB } from './constants';
+import { PROFILE_TABS } from './tabs-content';
 
 export const resolveProfileTab = (tab: string | null | undefined): TabId => {
   if (!tab) return DEFAULT_PROFILE_TAB;

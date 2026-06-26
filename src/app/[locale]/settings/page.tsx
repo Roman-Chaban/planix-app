@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { ProfileLayout } from '@/widgets/profile';
+import { ProfileLayout } from '@/widgets/settings';
 import { Loader } from '@/shared/ui';
 
 export default function ProfilePage() {

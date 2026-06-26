@@ -2,10 +2,10 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ProfileHeader } from '@/widgets/profile/ui/ui';
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 import { Box, List } from '@/shared/ui';
 
+import { SettingsHeader } from '../../header';
 import { getNotificationsList } from '../lib/notifications-list';
 
 import { NotificationItem } from './NotificationItem';
@@ -19,7 +19,7 @@ export const Notifications = () => {
   return (
     <Box className={styles.notifications}>
       <Box className={styles.container}>
-        <ProfileHeader title={t('notifications.title')} />
+        <SettingsHeader title={t('notifications.title')} />
 
         <List
           className={styles.notificationsList}

@@ -40,3 +40,8 @@ export { CollapsedIcon } from './Icons';
 export { ExpandedIcon } from './Icons';
 export { ContactIcon } from './Icons';
 export { BackIcon } from './Icons';
+export { NotificationEmail } from './Icons';
+export { NotificationProject } from './Icons';
+export { NotificationMessage } from './Icons';
+export { NotificationTask } from './Icons';
+export { NotificationSecurity } from './Icons';

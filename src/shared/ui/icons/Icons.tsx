@@ -1568,3 +1568,246 @@ export const BackIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
     </svg>
   );
 };
+
+export const NotificationEmail = () => {
+  return (
+    <svg
+      id="e5cb9f87-7b25-4ce4-8df5-8cd66afecc6d"
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 18 18"
+    >
+      <defs>
+        <linearGradient
+          id="bd9b1662-9bee-4ea8-9cee-787e4ccd4f18"
+          x1="9"
+          y1="0.81"
+          x2="9"
+          y2="21.28"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#ffd70f" />
+          <stop offset="0.34" stopColor="#eeb309" />
+          <stop offset="0.77" stopColor="#dc8c03" />
+          <stop offset="1" stopColor="#d57d01" />
+        </linearGradient>
+      </defs>
+      <g>
+        <g>
+          <path
+            d="M17.5,2.5V13.33a.58.58,0,0,1-.59.58H12.39a.14.14,0,0,0-.14.14V15.8a.28.28,0,0,1-.45.22L9.08,13.94l-.09,0H1.09a.58.58,0,0,1-.59-.58V2.5a.58.58,0,0,1,.59-.58H16.91A.58.58,0,0,1,17.5,2.5Z"
+            fill="url(#bd9b1662-9bee-4ea8-9cee-787e4ccd4f18)"
+          />
+          <path
+            d="M2.05,9l3,2.52a.29.29,0,0,0,.47-.22v-1.1H17.48V8.5H2.23A.29.29,0,0,0,2.05,9Z"
+            fill="#ffe452"
+          />
+          <path
+            d="M16.24,6.46,13.13,3.94a.29.29,0,0,0-.47.22v1.1H.5V7H16.06A.29.29,0,0,0,16.24,6.46Z"
+            fill="#fff"
+          />
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+export const NotificationProject = () => {
+  return (
+    <svg
+      id="abd0f203-bb3f-40b1-aa70-d3c4523b69e9"
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 18 18"
+    >
+      <defs>
+        <linearGradient
+          id="bf34fd15-2ab2-49bf-80d2-731c19b20dc3"
+          x1="9"
+          y1="1.36"
+          x2="9"
+          y2="17.87"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.18" stopColor="#5ea0ef" />
+          <stop offset="1" stopColor="#0078d4" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M16.36,8.4c0,4.84-5.85,8.74-7.12,9.53a.46.46,0,0,1-.48,0c-1.27-.79-7.12-4.69-7.12-9.53V2.58a.46.46,0,0,1,.45-.46C6.64,2,5.59,0,9,0s2.36,2,6.91,2.12a.46.46,0,0,1,.45.46Z"
+        fill="#0078d4"
+      />
+      <path
+        d="M15.75,8.45c0,4.44-5.36,8-6.53,8.74a.43.43,0,0,1-.44,0c-1.17-.72-6.53-4.3-6.53-8.74V3.11a.42.42,0,0,1,.41-.42C6.83,2.58,5.87.75,9,.75s2.17,1.83,6.34,1.94a.42.42,0,0,1,.41.42Z"
+        fill="url(#bf34fd15-2ab2-49bf-80d2-731c19b20dc3)"
+      />
+      <path
+        d="M11.8,12.52a.48.48,0,0,1-.48.48H6.68a.48.48,0,0,1-.48-.48V3.94a.48.48,0,0,1,.48-.49h4.64a.48.48,0,0,1,.48.49Z"
+        fill="#e6e6e6"
+      />
+      <path
+        d="M7,5a.6.6,0,0,1,.6-.6h2.8A.6.6,0,0,1,11,5h0a.6.6,0,0,1-.6.61H7.6A.6.6,0,0,1,7,5Z"
+        fill="#003067"
+      />
+      <circle cx="7.63" cy="4.99" r="0.41" fill="#50e6ff" />
+      <path
+        d="M7,6.9a.61.61,0,0,1,.6-.61h2.8a.61.61,0,0,1,.6.61h0a.6.6,0,0,1-.6.61H7.6A.6.6,0,0,1,7,6.9Z"
+        fill="#003067"
+      />
+      <circle cx="7.63" cy="6.9" r="0.41" fill="#50e6ff" />
+    </svg>
+  );
+};
+
+export const NotificationMessage = () => {
+  return (
+    <svg
+      fill="#1A73E8"
+      role="img"
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zM4.911 7.089h11.456a2.197 2.197 0 0 1 2.165 2.19v5.863a2.213 2.213 0 0 1-2.177 2.178H8.04c-1.174 0-2.04-.99-2.04-2.178v-4.639L4.503 7.905c-.31-.42-.05-.816.408-.816zm3.415 2.19c-.347 0-.68.21-.68.544 0 .334.333.544.68.544h7.905c.346 0 .68-.21.68-.544 0-.334-.334-.545-.68-.545zm0 2.177c-.347 0-.68.21-.68.544 0 .334.333.544.68.544h7.905c.346 0 .68-.21.68-.544 0-.334-.334-.544-.68-.544zm-.013 2.19c-.346 0-.68.21-.68.544 0 .334.334.544.68.544h5.728c.347 0 .68-.21.68-.544 0-.334-.333-.545-.68-.545z" />
+    </svg>
+  );
+};
+
+export const NotificationTask = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      fill="none"
+      viewBox="0 0 190 190"
+    >
+      <g clipPath="url(#a)">
+        <rect width="152" height="130" x="20" y="52" fill="#bbe2ff" rx="65" />
+        <rect width="172" height="152" x="10" y="14" fill="#3186ff" rx="74" />
+        <mask
+          id="d"
+          width="172"
+          height="152"
+          x="10"
+          y="14"
+          maskUnits="userSpaceOnUse"
+        >
+          <rect width="172" height="152" x="10" y="14" fill="#3c90ff" rx="74" />
+        </mask>
+        <g filter="url(#b)" mask="url(#d)">
+          <rect width="152" height="130" x="20" y="52" fill="url(#e)" rx="65" />
+        </g>
+        <g clipPath="url(#f)">
+          <path
+            stroke="#fff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="12"
+            d="m61 90 22.172 22.172a4 4 0 0 0 5.656 0L138 63"
+          />
+        </g>
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h192v192H0z" />
+        </clipPath>
+        <clipPath id="f">
+          <path fill="#fff" d="M44 38h104v104H44z" />
+        </clipPath>
+        <linearGradient
+          id="e"
+          x1="96"
+          x2="100.64"
+          y1="166.9"
+          y2="67.25"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".01" stopColor="#a9a8ff" />
+          <stop offset=".79" stopColor="#a9a8ff" stopOpacity="0" />
+        </linearGradient>
+        <filter
+          id="b"
+          width="176"
+          height="154"
+          x="8"
+          y="40"
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+          <feGaussianBlur
+            result="effect1_foregroundBlur_37601_9976"
+            stdDeviation="6"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};
+
+export const NotificationSecurity = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 18 18"
+    >
+      <defs>
+        <linearGradient
+          id="e1bc122a-5193-4b91-8d10-c94c8a3caf04"
+          x1="11.202"
+          y1="13.906"
+          x2="2.831"
+          y2="-0.576"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#5e9624" />
+          <stop offset="1" stopColor="#b4ec36" />
+        </linearGradient>
+      </defs>
+      <g id="f0ccebc5-934d-463a-9e07-8c81671ecf94">
+        <path
+          d="M12.574,7.01c0,4.036-4.969,7.286-6.049,7.945a.4.4,0,0,1-.412,0C5.032,14.3.064,11.046.064,7.01V2.153a.39.39,0,0,1,.384-.385C4.312,1.666,3.423,0,6.319,0S8.325,1.666,12.19,1.768a.39.39,0,0,1,.384.385Z"
+          fill="#86d633"
+        />
+        <path
+          d="M12.055,7.051c0,3.7-4.556,6.682-5.547,7.286a.366.366,0,0,1-.378,0c-.991-.6-5.547-3.584-5.547-7.286V2.6a.357.357,0,0,1,.352-.353C4.479,2.15,3.663.623,6.319.623S8.159,2.15,11.7,2.244a.357.357,0,0,1,.352.353Z"
+          fill="url(#e1bc122a-5193-4b91-8d10-c94c8a3caf04)"
+        />
+        <path
+          d="M6.13,8.631H17.548a.369.369,0,0,1,.388.347v8.675a.369.369,0,0,1-.388.347H6.13a.369.369,0,0,1-.388-.347V8.978A.37.37,0,0,1,6.13,8.631Z"
+          fill="#b4ec36"
+        />
+        <path
+          d="M6.108,8.631H17.571a.348.348,0,0,1,.365.327h0v1.307H5.742V8.958a.349.349,0,0,1,.366-.327Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <path
+          d="M16.275,13.673H8.749c-.167,0-.3.076-.3.17v.42c0,.094.136.17.3.17h7.526c.168,0,.3-.076.3-.17v-.42C16.578,13.749,16.443,13.673,16.275,13.673Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <path
+          d="M16.275,11.759H8.749c-.167,0-.3.076-.3.17v.42c0,.094.136.17.3.17h7.526c.168,0,.3-.076.3-.17v-.42C16.578,11.835,16.443,11.759,16.275,11.759Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <path
+          d="M16.76,16.272H8.733c-.179,0-.324.082-.324.182V16.9c0,.1.145.181.324.181H16.76c.179,0,.324-.081.324-.181v-.448C17.084,16.354,16.939,16.272,16.76,16.272Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <circle cx="7.198" cy="12.139" r="0.498" fill="#fff" opacity="0.7" />
+        <circle cx="7.198" cy="14.053" r="0.498" fill="#fff" opacity="0.7" />
+        <circle cx="7.078" cy="16.678" r="0.531" fill="#fff" opacity="0.7" />
+      </g>
+    </svg>
+  );
+};

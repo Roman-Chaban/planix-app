@@ -1,0 +1,46 @@
+@use '@/shared/styles' as *;
+
+.notifications {
+  width: 100%;
+}
+
+.container {
+  @include flex-col(0, start, stretch, column);
+  position: relative;
+}
+
+.notificationsList {
+  @include flex-col(1.25rem, start, stretch, column);
+  padding: 0 1.625rem 1.25rem 1.25rem;
+}
+
+.notificationItem {
+  @include flex(flex, row, space-between, center, 0);
+  padding: 1rem 1.25rem;
+  border-radius: $radius-lg;
+  border: 0.125rem solid $neutral-200;
+}
+
+.notificationContainer {
+  @include flex(flex, row, space-between, center, $space-3);
+}
+
+.icon {
+  @include flex-center;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: $neutral-200;
+  border-radius: $radius-full;
+}
+
+.titlesBox {
+  @include flex(flex, column, flex-start, start, 0);
+}
+
+.title {
+  @include title-bold($font-weight-semibold, $body-md-font-size, $neutral-950);
+}
+
+.subtitle {
+  @include text-body-sm($neutral-700);
+}

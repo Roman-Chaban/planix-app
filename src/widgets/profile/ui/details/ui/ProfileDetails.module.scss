@@ -12,7 +12,7 @@
 .profileDetails {
   width: 100%;
   @include flex-col(1.75rem, start, center, column);
-  padding: 1.25rem;
+  padding: 1.25rem 1.625rem;
 }
 
 .profileBox {

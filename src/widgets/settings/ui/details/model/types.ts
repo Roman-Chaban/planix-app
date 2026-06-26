@@ -2,7 +2,6 @@ import type { TFunction } from 'i18next';
 
 import type { Profile } from '@/entities/settings';
 
-
 type ProfileProps = { profile: Profile; t: TFunction };
 
 export type ProfileInfoItemProps = {

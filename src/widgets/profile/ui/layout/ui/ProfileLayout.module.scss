@@ -2,6 +2,6 @@
 
 .profile {
   @include widget-box(100%, 70.313rem, 100dvh, 0);
-  @include flex(flex, row, start, stretch, 1.5rem);
+  @include flex(flex, row, start, stretch, 0);
   border: none;
 }

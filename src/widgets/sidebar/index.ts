@@ -5,7 +5,7 @@ export type {
   NavProps,
 } from './model/types';
 
-export { navItems } from './lib/items';
+export { getNavItems } from './lib/items';
 
 export { isActiveRoute } from './lib/is-active-route';
 

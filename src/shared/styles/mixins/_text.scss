@@ -1,6 +1,7 @@
 @use '../tokens' as *;
 
-@mixin text-body-sm {
+@mixin text-body-sm($color) {
+  color: $color;
   font: {
     size: $body-sm-font-size;
   }
@@ -14,7 +15,7 @@
   }
   color: $color;
   opacity: $opacity;
-  line-height: 150%;
+  line-height: $line-height-base;
 }
 
 @mixin text-before-decoration(

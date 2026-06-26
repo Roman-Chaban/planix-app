@@ -1,13 +1,14 @@
+import type { ProfileInfoListProps } from '../model/types';
+
 import type { FC } from 'react';
 
-import {
-  ProfileInfoItem,
-  type ProfileInfoListProps,
-} from '@/widgets/profile/ui/details';
-import { getProfileInfoFields } from '@/widgets/profile/ui/details/lib/profileFields';
 import { Box } from '@/shared/ui';
 
+import { getProfileInfoFields } from '../lib/profileFields';
+
 import styles from './ProfileDetails.module.scss';
+
+import { ProfileInfoItem } from './ProfileInfoItem';
 
 export const ProfileInfoList: FC<ProfileInfoListProps> = ({ profile, t }) => {
   if (!profile) return null;

@@ -1,4 +1,4 @@
-import type { MenuItems } from '@/widgets/profile/ui/menu';
+import type { MenuItems } from '../model/types';
 
 export const profileMenu: MenuItems = [
   {

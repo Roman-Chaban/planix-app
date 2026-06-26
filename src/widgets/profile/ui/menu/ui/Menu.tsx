@@ -1,12 +1,12 @@
+import type { MenuProps } from '../model/types';
+
 import { type FC } from 'react';
 
-import {
-  MenuItem,
-  profileMenu,
-  type MenuProps,
-} from '@/widgets/profile/ui/menu';
 import { List } from '@/shared/ui';
 
+import { profileMenu } from '../lib/config';
+
+import { MenuItem } from './MenuItem';
 import styles from './ProfileMenu.module.scss';
 
 export const Menu: FC<MenuProps> = ({ t, activeId, setActiveId }) => {

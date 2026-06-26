@@ -1,3 +1,3 @@
-import type { ProfileTabId } from '@/widgets/profile/model/types';
+import type { ProfileTabId } from '../model/types';
 
 export const DEFAULT_PROFILE_TAB: ProfileTabId = 'personal';

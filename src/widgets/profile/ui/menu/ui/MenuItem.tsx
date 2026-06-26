@@ -1,6 +1,7 @@
+import type { MenuItemProps } from '../model/types';
+
 import type { FC } from 'react';
 
-import type { MenuItemProps } from '@/widgets/profile/ui/menu';
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Typography } from '@/shared/ui';
 

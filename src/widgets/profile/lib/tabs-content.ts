@@ -1,6 +1,7 @@
-import type { ProfileTabMap } from '@/widgets/profile/model/types';
-import { ProfileDetails } from '@/widgets/profile/ui/details';
-import { Notifications } from '@/widgets/profile/ui/notifications';
+import type { ProfileTabMap } from '../model/types';
+
+import { ProfileDetails } from '../ui/details';
+import { Notifications } from '../ui/notifications';
 
 export const PROFILE_TABS: ProfileTabMap = {
   personal: ProfileDetails,

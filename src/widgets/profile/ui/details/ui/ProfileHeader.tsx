@@ -1,8 +1,8 @@
 'use client';
 
-import { type FC } from 'react';
+import type { ProfileDetailsProps } from '../model/types';
 
-import type { ProfileDetailsProps } from '@/widgets/profile/ui/details';
+import { type FC } from 'react';
 
 import { Box, Tooltip, Typography } from '@/shared/ui';
 

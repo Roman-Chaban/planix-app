@@ -2,13 +2,13 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ProfileHeader, ProfileInfoList } from '@/widgets/profile/ui/details';
-import { useProfile } from '@/entities/profile/api';
-
+import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 import { Box } from '@/shared/ui';
 
 import styles from './ProfileDetails.module.scss';
+import { ProfileHeader } from './ProfileHeader';
+import { ProfileInfoList } from './ProfileInfoList';
 
 export const ProfileDetails = () => {
   const { t } = useTranslation(NS.PROFILE);

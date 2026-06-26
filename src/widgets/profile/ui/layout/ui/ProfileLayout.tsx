@@ -1,9 +1,10 @@
 'use client';
 
 import { Header } from '@/widgets/header';
-import { useProfileModel } from '@/widgets/profile';
-import { ProfileMenu } from '@/widgets/profile/ui/menu';
 import { PageWrapper } from '@/shared/ui';
+
+import { useProfileModel } from '../../../model/useProfileModel';
+import { ProfileMenu } from '../../menu';
 
 import styles from './ProfileLayout.module.scss';
 

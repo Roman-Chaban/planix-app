@@ -23,9 +23,12 @@ export const MenuItem: FC<MenuItemProps> = ({
         fullWidth
         variant={TRANSPARENT}
         onClick={() => setActiveId(id)}
-        className={buildClassName(styles.item, isActive && styles.isActive)}
+        className={styles.item}
       >
-        <Typography as="span" className={styles.label}>
+        <Typography
+          as="span"
+          className={buildClassName(styles.label, isActive && styles.isActive)}
+        >
           {t(label)}
         </Typography>
       </Button>

@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import type { Profile, ProfileData } from '@/entities/profile';
+import type { Profile, ProfileData } from '@/entities/settings';
 import { DATE_FORMAT, getInitials, splitFullName } from '@/shared/lib';
 
 export const mapProfile = (data: ProfileData): Profile => {

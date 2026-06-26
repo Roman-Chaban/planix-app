@@ -1,7 +1,7 @@
 import type { ProfileFieldConfig } from '../model/types';
 import type { TFunction } from 'i18next';
 
-import type { Profile } from '@/entities/profile';
+import type { Profile } from '@/entities/settings';
 
 export const getInfoFields = (
   profile: Profile,

@@ -15,5 +15,30 @@
     "email": "Email",
     "contact": "Contact No",
     "edit": "Click to edit"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "items": {
+      "emailNotifications": {
+        "title": "Email Notifications",
+        "subtitle": "Protect your account from unauthorized access."
+      },
+      "projectNotifications": {
+        "title": "Project Notifications",
+        "subtitle": "Notifications related to project progress and updates."
+      },
+      "messageNotifications": {
+        "title": "Message Notifications",
+        "subtitle": "Stay updated with real-time alerts for new messages."
+      },
+      "taskNotifications": {
+        "title": "Task Notifications",
+        "subtitle": "Get alerts for new tasks, updates, and approaching deadlines."
+      },
+      "securityNotifications": {
+        "title": "Security Notifications",
+        "subtitle": "Get alerts for login activity and security-related actions."
+      }
+    }
   }
 }

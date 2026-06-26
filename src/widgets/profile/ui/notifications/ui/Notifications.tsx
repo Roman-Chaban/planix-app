@@ -1,23 +1,29 @@
-import type { FC } from 'react';
+'use client';
+
+import { useTranslation } from 'react-i18next';
 
 import { ProfileHeader } from '@/widgets/profile/ui/ui';
+import { NAMESPACE as NS } from '@/shared/lib/i18n';
 import { Box, List } from '@/shared/ui';
 
-import { notificationsList } from '../lib/notifications-list';
+import { getNotificationsList } from '../lib/notifications-list';
 
 import { NotificationItem } from './NotificationItem';
 
 import styles from './Notifications.module.scss';
 
-export const Notifications: FC = () => {
+export const Notifications = () => {
+  const { t } = useTranslation(NS.PROFILE);
+  const notifications = getNotificationsList(t);
+
   return (
     <Box className={styles.notifications}>
       <Box className={styles.container}>
-        <ProfileHeader title="Notifications" />
+        <ProfileHeader title={t('notifications.title')} />
 
         <List
           className={styles.notificationsList}
-          renderList={notificationsList}
+          renderList={notifications}
           getItemKey={({ id }) => id}
           renderItem={(item) => <NotificationItem {...item} />}
         />

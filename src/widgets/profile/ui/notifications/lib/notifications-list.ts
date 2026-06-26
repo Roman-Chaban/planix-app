@@ -1,4 +1,5 @@
 import type { NotificationItemList } from '../model/types';
+import type { TFunction } from 'i18next';
 
 import {
   NotificationEmail,
@@ -8,35 +9,35 @@ import {
   NotificationTask,
 } from '@/shared/ui/icons';
 
-export const notificationsList: NotificationItemList = [
+export const getNotificationsList = (t: TFunction): NotificationItemList => [
   {
     id: 'emailNotifications',
     icon: NotificationEmail,
-    title: 'Email Notifications',
-    subtitle: 'Protect your account from unauthorized access.',
+    title: t('notifications.items.emailNotifications.title'),
+    subtitle: t('notifications.items.emailNotifications.subtitle'),
   },
   {
     id: 'projectNotifications',
     icon: NotificationProject,
-    title: 'Project Notifications',
-    subtitle: 'Notifications related to project progress and updates.',
+    title: t('notifications.items.projectNotifications.title'),
+    subtitle: t('notifications.items.projectNotifications.subtitle'),
   },
   {
     id: 'messageNotifications',
     icon: NotificationMessage,
-    title: 'Message Notifications',
-    subtitle: 'Stay updated with real-time alerts for new messages.',
+    title: t('notifications.items.messageNotifications.title'),
+    subtitle: t('notifications.items.messageNotifications.subtitle'),
   },
   {
     id: 'taskNotifications',
     icon: NotificationTask,
-    title: 'Task Notifications',
-    subtitle: 'Get alerts for new tasks, updates, and approaching deadlines.',
+    title: t('notifications.items.taskNotifications.title'),
+    subtitle: t('notifications.items.taskNotifications.subtitle'),
   },
   {
     id: 'securityNotifications',
     icon: NotificationSecurity,
-    title: 'Security Notifications',
-    subtitle: 'Get alerts for login activity and security-related actions.',
+    title: t('notifications.items.securityNotifications.title'),
+    subtitle: t('notifications.items.securityNotifications.subtitle'),
   },
 ];

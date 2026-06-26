@@ -2,8 +2,10 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import { queryKeys, getProfile } from '@/entities/profile';
 import { supabase } from '@/shared/api/supabase';
+
+import { getProfile } from '../lib/profile';
+import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useProfile = () => {
   return useQuery({

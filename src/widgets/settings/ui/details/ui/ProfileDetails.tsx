@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { useProfile } from '@/entities/profile';
+import { useProfile } from '@/entities/settings';
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 import { Box } from '@/shared/ui';
 

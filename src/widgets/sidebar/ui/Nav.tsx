@@ -18,7 +18,7 @@ export const Nav: FC<NavProps> = ({ isCollapsed, t }) => {
   return (
     <List
       className={styles.list}
-      getItemKey={(item) => item.id}
+      getItemKey={({ id }) => id}
       renderList={navItems}
       renderItem={(item) => (
         <NavItem

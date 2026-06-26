@@ -37,3 +37,4 @@ export {
 export { Loader } from './loader';
 export { Tooltip } from './tooltip';
 export { Portal } from './portal';
+export { Switch } from './switch';

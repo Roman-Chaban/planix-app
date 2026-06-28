@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { applyDateMask, toISO, toInputFormat } from '@/shared/lib';
 
-import { NAMESPACE } from '@/shared/lib/i18n';
+import { NAMESPACE } from '@/shared/i18n';
 import { FormField } from '@/shared/ui';
 import type { FormDateFieldProps } from '@/shared/ui/form/form-filed';
 import { CalendarIcon } from '@/shared/ui/icons';

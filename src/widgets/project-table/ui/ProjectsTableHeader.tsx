@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectTableHeaderProps } from '@/widgets/project-table/model/types';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
 import styles from './ProjectTable.module.scss';
 

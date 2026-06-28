@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ProfileHeader, ProfileInfoList } from '@/widgets/settings/ui/details';
 import { ProfileEditForm } from '@/features/profile/edit-profile';
 import { useProfile } from '@/entities/settings';
-import { NAMESPACE as NS } from '@/shared/lib/i18n';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
 
 import { useChangeMode } from '../model/useChangeMode';

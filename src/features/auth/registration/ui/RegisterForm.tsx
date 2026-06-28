@@ -9,7 +9,7 @@ import {
   useRegistration,
 } from '@/features/auth/registration';
 import type { AuthStep } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import {
   AppForm,
   AuthButton,

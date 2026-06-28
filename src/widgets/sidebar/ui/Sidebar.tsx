@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { ROUTES } from '@/app/routes';
 import { Nav, type SidebarProps } from '@/widgets/sidebar';
 import { buildClassName } from '@/shared/lib';
-import { NAMESPACE as NS } from '@/shared/lib/i18n';
+import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { AppLink, Box, Button, Typography } from '@/shared/ui';
 

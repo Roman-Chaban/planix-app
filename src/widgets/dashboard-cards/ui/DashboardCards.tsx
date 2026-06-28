@@ -1,5 +1,5 @@
 import { dashboardCards } from '@/widgets/dashboard-cards';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
 import { Box, List, Card } from '@/shared/ui';
 

@@ -3,7 +3,7 @@ import type { TFunction } from 'i18next';
 import type { ReactNode } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
-import type { Locale } from '@/shared/lib/i18n/locales';
+import type { Locale } from '@/shared/i18n/locales/locales';
 
 export type TranslateFn = TFunction;
 export type AppLocale = Locale;

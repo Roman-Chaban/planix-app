@@ -1,6 +1,6 @@
 import type { ProjectDetailsMapOptions } from '@/widgets/project-details/ui/details';
 import { toDisplay } from '@/shared/lib';
-import { APP_LOCALES } from '@/shared/lib/i18n/locales';
+import { APP_LOCALES } from '@/shared/i18n/locales/locales';
 
 export const mapProjectDetails = ({
   project,

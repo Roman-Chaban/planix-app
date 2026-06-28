@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ProjectsActionsProps } from '@/widgets/projects-toolbar';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, FormField, ProjectButton } from '@/shared/ui';
 
 import {

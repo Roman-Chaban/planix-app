@@ -5,7 +5,7 @@ import type { ProfileMenuProps } from '../model/types';
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { NAMESPACE as NS } from '@/shared/lib/i18n';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, Typography } from '@/shared/ui';
 
 import { Menu } from './Menu';

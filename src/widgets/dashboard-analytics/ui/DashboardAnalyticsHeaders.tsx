@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { DashboardAnalyticsHeader } from '@/widgets/dashboard-analytics';
 import { dashboardHeaderTitles } from '@/widgets/dashboard-analytics/data/dashboard-header-titles';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
 import { Box } from '@/shared/ui';
 

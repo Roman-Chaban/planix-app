@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { HeaderActions, type HeaderProps } from '@/widgets/header';
 
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, Typography } from '@/shared/ui';
 
 import styles from './Header.module.scss';

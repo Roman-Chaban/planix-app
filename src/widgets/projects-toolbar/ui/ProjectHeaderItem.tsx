@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import type { ProjectHeaderItemProps } from '@/widgets/projects-toolbar';
 
 import { buildClassName } from '@/shared/lib';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, Button, Typography } from '@/shared/ui';
 import {
   BUTTON_SIZES,

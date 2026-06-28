@@ -11,7 +11,7 @@ import {
 } from '@/features/auth/stepper';
 
 import { useLocalStorage } from '@/shared/lib/hooks';
-import { NAMESPACE as NS } from '@/shared/lib/i18n';
+import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { AuthWrapper } from '@/shared/ui';
 

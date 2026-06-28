@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { LoginActions, loginFormFields, useLogin } from '@/features/auth/login';
 
 import { AUTH_STEPS } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, FormFields } from '@/shared/ui';
 
 const { FORGOT } = AUTH_STEPS;

@@ -11,7 +11,7 @@ import {
   DetailsCard,
   mapProjectDetails,
 } from '@/widgets/project-details/ui/details';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box } from '@/shared/ui';
 
 import styles from './ProjectDetails.module.scss';

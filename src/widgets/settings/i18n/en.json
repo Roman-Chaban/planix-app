@@ -14,7 +14,8 @@
     "birthDate": "Date of Birth",
     "email": "Email",
     "contact": "Contact No",
-    "edit": "Click to edit"
+    "edit": "Click to edit",
+    "save": "Save Profile"
   },
   "notifications": {
     "title": "Notifications",

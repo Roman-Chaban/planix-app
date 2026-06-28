@@ -58,13 +58,10 @@
 }
 
 .information {
-  width: 100%;
-  @include grid(
-    $columns: repeat(3, 1fr),
-    $rows: auto auto auto,
-    $areas: 'firstName lastName birthDate' 'email contact gender'
-      'address address address',
-    $gap: 1.625rem
+  @include grid-fields(
+    3,
+    'firstName lastName birthDate' 'email contact gender'
+      'address address address'
   );
 }
 

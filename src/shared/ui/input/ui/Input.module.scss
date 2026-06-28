@@ -2,8 +2,6 @@
 
 .input {
   width: 100%;
-  padding-block: $space-4;
-  padding-inline: $space-9 $space-4;
   border: none;
   outline: none;
   background: transparent;
@@ -16,8 +14,4 @@
   @include respond(sm) {
     font-size: $body-sm-font-size;
   }
-}
-
-.withIcon {
-  padding-inline-start: 3.5rem;
 }

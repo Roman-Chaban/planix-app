@@ -1,17 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useLocalStorage } from '@/shared/lib/hooks';
 
 import { MODE, type Mode } from '../lib/constants';
 
 const { VIEW, EDIT } = MODE;
 
 export const useChangeMode = () => {
-  const [mode, setMode] = useState<Mode>(VIEW);
+  const [mode, setMode, hydrated] = useLocalStorage<Mode>(`edit-mode`, VIEW);
 
   const toggleMode = () => {
     return setMode((prev) => (prev === VIEW ? EDIT : VIEW));
   };
 
-  return { mode, toggleMode, isView: mode === VIEW, isEdit: mode === EDIT };
+  return {
+    mode,
+    toggleMode,
+    isView: mode === VIEW,
+    isEdit: mode === EDIT,
+    hydrated,
+  };
 };

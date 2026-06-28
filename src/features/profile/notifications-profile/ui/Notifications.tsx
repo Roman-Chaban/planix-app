@@ -2,10 +2,10 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { SettingsHeader } from '@/widgets/settings';
 import { NAMESPACE as NS } from '@/shared/lib/i18n';
 import { Box, List } from '@/shared/ui';
 
-import { SettingsHeader } from '../../header';
 import { getNotificationsList } from '../lib/notifications-list';
 
 import { NotificationItem } from './NotificationItem';

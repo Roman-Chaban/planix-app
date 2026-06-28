@@ -9,4 +9,5 @@ export type AppFormProps<T extends FieldValues> = {
   form: UseFormReturn<T>;
   onSubmit: SubmitHandler<T>;
   children: ReactNode;
+  className?: string;
 };

@@ -44,6 +44,8 @@ export const FormField: FC<FormFieldProps> = ({
     [styles.error]: !!error,
     [styles[variant]]: !!variant,
     [styles.filled]: isFilled,
+    [styles.withStartIcon]: !!startIcon,
+    [styles.withEndIcon]: !!endIcon,
   });
 
   return (
@@ -65,6 +67,7 @@ export const FormField: FC<FormFieldProps> = ({
           id={id}
           ref={inputRef}
           aria-invalid={!!error}
+          value={value ?? ''}
           {...restInputProps}
           placeholder=""
         />

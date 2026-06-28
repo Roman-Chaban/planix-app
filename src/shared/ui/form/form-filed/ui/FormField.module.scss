@@ -3,7 +3,6 @@
 .field {
   width: 100%;
   @include flex-col(0.188rem, start, stretch, column);
-  flex: 1;
 }
 
 .inputWrapper {
@@ -11,9 +10,15 @@
   position: relative;
   transition: all 0.35s ease-in-out 0s;
 
+  padding: $space-4;
   @include input-wrapper-border($border-default);
   @include input-border-active($border-focus);
   @include input-disabled($surface-tertiary, $surface-secondary);
+}
+
+.withStartIcon .input,
+.withEndIcon .input {
+  padding-inline-start: $space-9;
 }
 
 .floatingLabel {

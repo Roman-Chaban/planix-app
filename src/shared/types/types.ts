@@ -10,7 +10,7 @@ export type AppLocale = Locale;
 export type NavigateFn = (step: AuthStep) => void;
 
 export type WithChildren = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export type WithClassName = {

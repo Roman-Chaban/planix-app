@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 
 import { BrandBanner } from '@/widgets/brand-banner';
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@/shared/types/types';
 import { Box, Grid, GridItem } from '@/shared/ui';
 
 import styles from './AuthLayout.module.scss';
 
-type AuthLayoutProps = WithChildren;
+type AuthLayoutProps = WithChildren & WithClassName;
 
 export const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
   return (

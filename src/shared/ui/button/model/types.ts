@@ -1,5 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
+import type { ButtonPresetKey } from '@/shared/ui/button';
+
 export type ButtonVariant =
   | 'default'
   | 'outline'
@@ -23,6 +25,6 @@ export type ButtonProps = {
   endIconClassName?: string;
 
   isLoading?: boolean;
-
   fullWidth?: boolean;
+  preset?: ButtonPresetKey;
 } & ButtonHTMLAttributes<HTMLButtonElement>;

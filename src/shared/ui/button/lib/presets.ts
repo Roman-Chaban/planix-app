@@ -1,0 +1,26 @@
+import {
+  BUTTON_MAX_WIDTH,
+  BUTTON_SHAPES,
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  BUTTON_VARIANTS,
+} from './constants';
+
+const { SUBMIT } = BUTTON_TYPES;
+const { LG } = BUTTON_MAX_WIDTH;
+const { ROUNDED } = BUTTON_SHAPES;
+const { MEDIUM } = BUTTON_SIZES;
+const { DEFAULT } = BUTTON_VARIANTS;
+
+export const BUTTON_PRESETS = {
+  SUBMIT: {
+    fullWidth: true,
+    type: SUBMIT,
+    maxWidth: LG,
+    shape: ROUNDED,
+    size: MEDIUM,
+    variant: DEFAULT,
+  },
+} as const;
+
+export type ButtonPresetKey = keyof typeof BUTTON_PRESETS;

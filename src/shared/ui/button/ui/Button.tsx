@@ -5,26 +5,31 @@ import { buildClassName } from '@/shared/lib';
 import { Box, Typography } from '@/shared/ui';
 import type { ButtonProps } from '@/shared/ui/button';
 
+import { getButtonProps } from '../lib/get-button-props';
+
 import styles from './Button.module.scss';
 
-export const Button: FC<ButtonProps> = ({
-  variant = 'default',
-  size = 'compact',
-  shape = 'default',
-  fullWidth = false,
-  maxWidth = 'md',
-  className,
-  startIcon,
-  endIcon,
-  startIconClassName,
-  endIconClassName,
-  disabled,
-  children,
-  type,
-  isLoading,
-  onClick,
-  ...buttonProps
-}) => {
+export const Button: FC<ButtonProps> = (props) => {
+  const { allProps, htmlProps } = getButtonProps(props);
+
+  const {
+    variant = 'default',
+    size = 'compact',
+    shape = 'default',
+    fullWidth = false,
+    maxWidth = 'md',
+    className,
+    startIcon,
+    endIcon,
+    startIconClassName,
+    endIconClassName,
+    children,
+    disabled,
+    isLoading,
+    onClick,
+    type,
+  } = allProps;
+
   const buttonClasses = buildClassName(
     styles.button,
     styles[variant],
@@ -37,7 +42,7 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <button
-      {...buttonProps}
+      {...htmlProps}
       className={buttonClasses}
       disabled={disabled || isLoading}
       type={type}

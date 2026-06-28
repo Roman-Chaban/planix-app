@@ -14,15 +14,15 @@ export const mapProfile = (data: ProfileData): Profile => {
     id: data.id,
     email: data.email,
     fullName: data.full_name,
+    firstName,
+    lastName,
     contact: data.contact,
     birthDate,
     createdAt,
-    firstName,
-    lastName,
     initials,
+    createdAtFormatted: dayjs(createdAt).format(DATE_FORMAT.DISPLAY),
     birthDateFormatted: birthDate
       ? dayjs(birthDate).format(DATE_FORMAT.DISPLAY)
       : '',
-    createdAtFormatted: dayjs(createdAt).format(DATE_FORMAT.DISPLAY),
   };
 };

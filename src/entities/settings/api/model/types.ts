@@ -13,10 +13,10 @@ export type Profile = {
   fullName: string;
   firstName: string;
   lastName: string;
-  birthDateFormatted: string;
-  createdAtFormatted: string;
-  initials: string;
   contact: string;
   birthDate: Date | null;
   createdAt: Date;
+  initials: string;
+  birthDateFormatted: string;
+  createdAtFormatted: string;
 };

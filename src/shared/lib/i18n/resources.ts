@@ -8,7 +8,7 @@ import { projectEditI18n } from '@/widgets/project-edit/i18n';
 import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
 import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
 import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
-import { profileI18n } from '@/widgets/settings/i18n';
+import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
 import { projectAddI18n } from '@/features/project-add/i18n';
@@ -30,7 +30,7 @@ export const resources = {
     projectAdd: projectAddI18n.en,
     projectEdit: projectEditI18n.en,
     projectDetails: projectDetailsI18n.en,
-    profile: profileI18n.en,
+    settings: settingsI18n.en,
   },
   uk: {
     auth: authI18n.uk,
@@ -47,6 +47,6 @@ export const resources = {
     projectAdd: projectAddI18n.uk,
     projectEdit: projectEditI18n.uk,
     projectDetails: projectDetailsI18n.uk,
-    profile: profileI18n.uk,
+    settings: settingsI18n.uk,
   },
 };

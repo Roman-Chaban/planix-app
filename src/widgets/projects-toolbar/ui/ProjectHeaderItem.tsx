@@ -12,7 +12,7 @@ import {
   BUTTON_SIZES,
   BUTTON_TYPES,
   BUTTON_VARIANTS,
-} from '@/shared/ui/button/model/constants';
+} from '@/shared/ui/button/lib/constants';
 
 import styles from './ProjectsToolbar.module.scss';
 

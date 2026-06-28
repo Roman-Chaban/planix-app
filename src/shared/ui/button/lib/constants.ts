@@ -34,3 +34,17 @@ export const BUTTON_MAX_WIDTH = {
   XL: 'xl',
   '2XL': '2xl',
 } as const;
+
+export const BUTTON_UI_PROPS = [
+  'variant',
+  'size',
+  'shape',
+  'fullWidth',
+  'maxWidth',
+  'preset',
+  'isLoading',
+  'startIcon',
+  'endIcon',
+  'startIconClassName',
+  'endIconClassName',
+] as const;

@@ -11,7 +11,7 @@ import {
   BUTTON_SIZES,
   BUTTON_TYPES,
   BUTTON_VARIANTS,
-} from '@/shared/ui/button/model/constants';
+} from '@/shared/ui/button/lib/constants';
 import { NoProjectsIcon } from '@/shared/ui/icons';
 
 import styles from './ProjectsEmpty.module.scss';

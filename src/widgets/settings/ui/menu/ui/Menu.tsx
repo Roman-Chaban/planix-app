@@ -4,17 +4,19 @@ import { type FC } from 'react';
 
 import { List } from '@/shared/ui';
 
-import { profileMenu } from '../lib/profile-menu';
+import { getProfileMenuItems } from '../lib/profile-menu';
 
 import { MenuItem } from './MenuItem';
 import styles from './ProfileMenu.module.scss';
 
 export const Menu: FC<MenuProps> = ({ t, activeId, setActiveId }) => {
+  const menuItems = getProfileMenuItems(t);
+
   return (
     <List
       className={styles.list}
       getItemKey={(key) => key.id}
-      renderList={profileMenu}
+      renderList={menuItems}
       renderItem={(item) => {
         const isActive = item.id === activeId;
 

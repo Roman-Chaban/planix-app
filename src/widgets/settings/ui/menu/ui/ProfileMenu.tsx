@@ -1,5 +1,7 @@
 'use client';
 
+import type { ProfileMenuProps } from '../model/types';
+
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -9,16 +11,11 @@ import { Box, Typography } from '@/shared/ui';
 import { Menu } from './Menu';
 import styles from './ProfileMenu.module.scss';
 
-type ProfileMenuProps = {
-  activeId: string;
-  setActiveId: (id: string) => void;
-};
-
 export const ProfileMenu: FC<ProfileMenuProps> = ({
   activeId,
   setActiveId,
 }) => {
-  const { t } = useTranslation(NS.PROFILE);
+  const { t } = useTranslation(NS.SETTINGS);
 
   return (
     <Box className={styles.menu}>

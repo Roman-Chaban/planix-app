@@ -1,24 +1,28 @@
 import type { MenuItems } from '../model/types';
 
-export const profileMenu: MenuItems = [
-  {
-    id: 'personal',
-    label: 'profileMenu.myProfile',
-  },
-  {
-    id: 'notifications',
-    label: 'profileMenu.notificationSettings',
-  },
-  {
-    id: 'subscriptionAndBilling',
-    label: 'profileMenu.subscription',
-  },
-  {
-    id: 'systemSetting',
-    label: 'profileMenu.systemSettings',
-  },
-  {
-    id: 'logOut',
-    label: 'profileMenu.logOut',
-  },
-] as const;
+import type { TFunction } from 'i18next';
+
+export const getProfileMenuItems = (t: TFunction): MenuItems => {
+  return [
+    {
+      id: 'personal',
+      label: t('profileMenu.myProfile'),
+    },
+    {
+      id: 'notifications',
+      label: t('profileMenu.notificationSettings'),
+    },
+    {
+      id: 'subscriptionAndBilling',
+      label: t('profileMenu.subscription'),
+    },
+    {
+      id: 'systemSetting',
+      label: t('profileMenu.systemSettings'),
+    },
+    {
+      id: 'logOut',
+      label: t('profileMenu.logOut'),
+    },
+  ];
+};

@@ -20,7 +20,7 @@ export const getInfoFields = (
   {
     key: 'birthDate',
     label: t('profileDetails.birthDate'),
-    value: profile.birthDate,
+    value: profile.birthDateFormatted,
   },
   {
     key: 'email',

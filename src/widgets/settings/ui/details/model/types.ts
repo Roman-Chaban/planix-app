@@ -17,3 +17,7 @@ export type ProfileFieldConfig = {
 
 export type ProfileDetailsProps = ProfileProps;
 export type ProfileInfoListProps = ProfileProps;
+
+export type ProfileHeaderProps = {
+  onMode: () => void;
+} & ProfileProps;

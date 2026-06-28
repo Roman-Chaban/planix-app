@@ -6,10 +6,10 @@ import {
   BUTTON_VARIANTS,
 } from './constants';
 
-const { SUBMIT } = BUTTON_TYPES;
-const { LG } = BUTTON_MAX_WIDTH;
+const { SUBMIT, BUTTON } = BUTTON_TYPES;
+const { LG, XS } = BUTTON_MAX_WIDTH;
 const { ROUNDED } = BUTTON_SHAPES;
-const { MEDIUM } = BUTTON_SIZES;
+const { SMALL, MEDIUM } = BUTTON_SIZES;
 const { DEFAULT } = BUTTON_VARIANTS;
 
 export const BUTTON_PRESETS = {
@@ -19,6 +19,14 @@ export const BUTTON_PRESETS = {
     maxWidth: LG,
     shape: ROUNDED,
     size: MEDIUM,
+    variant: DEFAULT,
+  },
+  EDIT: {
+    fullWidth: true,
+    type: BUTTON,
+    size: SMALL,
+    maxWidth: XS,
+    shape: ROUNDED,
     variant: DEFAULT,
   },
 } as const;

@@ -1,39 +1,31 @@
 'use client';
 
-import type { ProfileDetailsProps } from '../model/types';
+import type { ProfileHeaderProps } from '../model/types';
 
 import { type FC } from 'react';
 
 import { Box, Tooltip, Typography } from '@/shared/ui';
 
-import {
-  Button,
-  BUTTON_MAX_WIDTH,
-  BUTTON_SHAPES,
-  BUTTON_SIZES,
-  BUTTON_TYPES,
-  BUTTON_VARIANTS,
-} from '@/shared/ui/button';
+import { Button } from '@/shared/ui/button';
 
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './ProfileDetails.module.scss';
 
-const { BUTTON } = BUTTON_TYPES;
-const { ROUNDED } = BUTTON_SHAPES;
-const { DEFAULT } = BUTTON_VARIANTS;
-const { SMALL } = BUTTON_SIZES;
-const { XS } = BUTTON_MAX_WIDTH;
-
 const { BOTTOM } = TOOLTIP_POSITION;
 
-export const ProfileHeader: FC<ProfileDetailsProps> = ({ profile, t }) => {
+export const ProfileHeader: FC<ProfileHeaderProps> = ({
+  profile,
+  t,
+  onMode,
+}) => {
   if (!profile) return null;
 
   return (
     <Box className={styles.profile}>
       <Box className={styles.profileInfo}>
         <Box className={styles.profileBox}>
+          {/* TODO: [Temporary mock Avatar, the image will be added soon] */}
           <Box className={styles.avatar}>Avatar</Box>
 
           <Box className={styles.info}>
@@ -47,14 +39,7 @@ export const ProfileHeader: FC<ProfileDetailsProps> = ({ profile, t }) => {
         </Box>
 
         <Tooltip position={BOTTOM} message={t('profileDetails.edit')}>
-          <Button
-            fullWidth
-            type={BUTTON}
-            size={SMALL}
-            maxWidth={XS}
-            shape={ROUNDED}
-            variant={DEFAULT}
-          >
+          <Button preset="EDIT" onClick={onMode}>
             {t('profileDetails.editLabel')}
           </Button>
         </Tooltip>

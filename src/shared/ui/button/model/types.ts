@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
+import type { WithChildren } from '@/shared/types/types';
 import type { ButtonPresetKey } from '@/shared/ui/button';
 
 export type ButtonVariant =
@@ -17,7 +18,6 @@ export type ButtonProps = {
   size?: ButtonSize;
   shape?: ButtonShape;
   maxWidth?: MaxWidth;
-  children: ReactNode;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
 
@@ -27,4 +27,5 @@ export type ButtonProps = {
   isLoading?: boolean;
   fullWidth?: boolean;
   preset?: ButtonPresetKey;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+} & WithChildren &
+  ButtonHTMLAttributes<HTMLButtonElement>;

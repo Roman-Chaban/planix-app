@@ -3,10 +3,11 @@ import type {
   InputHTMLAttributes,
   LabelHTMLAttributes,
   MouseEventHandler,
-  PropsWithChildren,
   ReactNode,
   Ref,
 } from 'react';
+
+import type { WithChildren, WithClassName } from '@/shared/types/types';
 
 export type FormFieldVariant =
   | 'default'
@@ -36,29 +37,24 @@ export type FormFieldProps = {
   children?: ReactNode;
 };
 
-export type FormLabelProps = PropsWithChildren<
-  LabelHTMLAttributes<HTMLLabelElement> & {
+export type FormLabelProps = WithChildren &
+  WithClassName & {
     error?: string;
-    className?: string;
-  }
->;
+  } & LabelHTMLAttributes<HTMLLabelElement>;
 
-export type FormErrorProps = {
+export type FormErrorProps = WithClassName & {
   error: string;
-  className?: string;
 };
 
-export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  className?: string;
-};
+export type FormInputProps = InputHTMLAttributes<HTMLInputElement> &
+  WithClassName;
 
-export type FormIconProps = {
-  error?: string;
-  children: ReactNode;
-  position?: IconPosition;
-  onClick?: () => void;
-  className?: string;
-} & HTMLAttributes<HTMLDivElement>;
+export type FormIconProps = WithChildren &
+  WithClassName & {
+    error?: string;
+    position?: IconPosition;
+    onClick?: () => void;
+  } & HTMLAttributes<HTMLDivElement>;
 
 export type DateFieldProps = {
   value: string;
@@ -67,12 +63,11 @@ export type DateFieldProps = {
   ref?: Ref<HTMLInputElement>;
 };
 
-export type FormDateFieldProps = {
+export type FormDateFieldProps = WithClassName & {
   id: string;
   label: string;
   placeholder: string;
   error?: string;
-  className?: string;
   inputProps: DateFieldProps &
     Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
 };

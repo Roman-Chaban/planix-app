@@ -1,16 +1,13 @@
-import type { FC, ReactNode } from 'react';
-
 import { I18nProvider } from '@/app/providers/i18n';
 import { QueryProvider } from '@/app/providers/query';
 import { SidebarProvider } from '@/features/sidebar';
-import type { Locale } from '@/shared/lib/i18n/locales';
+import type { AppLocale, WithChildren } from '@/shared/types/types';
 
-type AppProvidersProps = {
-  children: ReactNode;
-  locale: Locale;
+type AppProvidersProps = WithChildren & {
+  locale: AppLocale;
 };
 
-export const AppProviders: FC<AppProvidersProps> = ({ children, locale }) => {
+export const AppProviders = ({ children, locale }: AppProvidersProps) => {
   return (
     <QueryProvider>
       <SidebarProvider>

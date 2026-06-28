@@ -1,25 +1,23 @@
-import type { TFunction } from 'i18next';
+import { type TranslateFn } from '@/shared/types/types';
 
-type BaseProps = {
+type WithActiveMenu = {
+  activeId: string;
+  setActiveId: (id: string) => void;
+};
+
+type MenuItemBase = {
+  id: string;
+  label: string;
+};
+
+export type MenuItem = MenuItemBase;
+
+export type MenuItemProps = MenuItemBase & {
+  t: TranslateFn;
   isActive: boolean;
   setActiveId: (id: string) => void;
 };
 
-export type MenuItem = {
-  id: string;
-  label: string;
-};
-
-export type MenuItemProps = {
-  id: string;
-  label: string;
-  t: TFunction;
-} & BaseProps;
-
-export type MenuProps = {
-  t: TFunction;
-} & BaseProps;
-
-export type ProfileMenuProps = BaseProps;
-
+export type MenuProps = WithActiveMenu & { t: TranslateFn };
+export type ProfileMenuProps = WithActiveMenu;
 export type MenuItems = MenuItem[];

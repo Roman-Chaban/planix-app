@@ -1,8 +1,7 @@
-import type { TFunction } from 'i18next';
-
 import type { Profile } from '@/entities/settings';
+import type { TranslateFn } from '@/shared/types/types';
 
-type ProfileProps = { profile: Profile; t: TFunction };
+type ProfileProps = { profile: Profile; t: TranslateFn };
 
 export type ProfileInfoItemProps = {
   label: string;

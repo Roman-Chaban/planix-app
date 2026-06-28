@@ -1,5 +1,3 @@
-import type { TFunction } from 'i18next';
-
 import {
   LoginForm,
   ForgotForm,
@@ -7,16 +5,14 @@ import {
   ResetForm,
   VerifyForm,
 } from '@/features/auth';
-import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
+import { AUTH_STEPS } from '@/features/auth/stepper';
+import type { NavigateFn, TranslateFn } from '@/shared/types/types';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
 const { REGISTER, LOGIN, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 
-export const getAuthSteps = (
-  t: TFunction,
-  onNavigate: (step: AuthStep) => void,
-) => ({
+export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
   [LOGIN]: {
     component: () => <LoginForm onNavigate={onNavigate} />,
     header: (

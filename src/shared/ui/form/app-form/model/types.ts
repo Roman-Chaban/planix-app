@@ -1,13 +1,13 @@
-import type { ReactNode } from 'react';
 import {
   type FieldValues,
   type SubmitHandler,
   type UseFormReturn,
 } from 'react-hook-form';
 
-export type AppFormProps<T extends FieldValues> = {
+import type { WithChildren } from '@/shared/types/types';
+
+export type AppFormProps<T extends FieldValues> = WithChildren & {
   form: UseFormReturn<T>;
   onSubmit: SubmitHandler<T>;
-  children: ReactNode;
   className?: string;
 };

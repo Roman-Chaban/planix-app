@@ -1,9 +1,10 @@
-import type { AnchorHTMLAttributes, ReactNode } from 'react';
+import type { AnchorHTMLAttributes } from 'react';
 
-export type AppLinkProps = {
-  children: ReactNode;
-  href: string;
-  isUnderline?: boolean;
-  external?: boolean;
-  className?: string;
-} & AnchorHTMLAttributes<HTMLAnchorElement>;
+import type { WithChildren, WithClassName } from '@/shared/types/types';
+
+export type AppLinkProps = WithChildren &
+  WithClassName & {
+    href: string;
+    isUnderline?: boolean;
+    external?: boolean;
+  } & AnchorHTMLAttributes<HTMLAnchorElement>;

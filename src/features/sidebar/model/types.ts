@@ -1,8 +1,6 @@
-import type { ReactNode } from 'react';
+import type { WithChildren } from '@/shared/types/types';
 
-export type SidebarProviderProps = {
-  children: ReactNode;
-};
+export type SidebarProviderProps = WithChildren;
 
 export type SidebarContextValue = {
   isSidebarOpen: boolean;

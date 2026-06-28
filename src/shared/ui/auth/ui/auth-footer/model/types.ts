@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
+import type { WithChildren } from '@/shared/types/types';
 
-export type AuthFooterProps = {
-  children: ReactNode;
-};
+export type AuthFooterProps = WithChildren;

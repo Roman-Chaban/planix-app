@@ -1,11 +1,9 @@
-import { type ReactNode } from 'react';
-
+import type { WithChildren } from '@/shared/types/types';
 import type { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
-export type TooltipProps = {
+export type TooltipProps = WithChildren & {
   message: string;
   position?: TooltipPosition;
-  children: ReactNode;
 };
 
 export type TooltipPosition =

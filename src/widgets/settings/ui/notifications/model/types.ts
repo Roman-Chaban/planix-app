@@ -13,5 +13,4 @@ export type NotificationItemWithIcon = NotificationItemModel & {
 };
 
 export type NotificationItemList = NotificationItemModel[];
-
 export type NotificationItemProps = NotificationItemModel;

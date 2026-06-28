@@ -1,8 +1,11 @@
 import type { BaseSyntheticEvent, ReactNode } from 'react';
 
-export type AuthWrapperProps = Partial<{
-  children: ReactNode;
-  onSubmit: (event?: BaseSyntheticEvent) => Promise<void>;
-  header: ReactNode;
-  footer: ReactNode;
-}>;
+import type { WithChildren } from '@/shared/types/types';
+
+export type AuthWrapperProps = Partial<
+  WithChildren & {
+    onSubmit: (event?: BaseSyntheticEvent) => Promise<void>;
+    header: ReactNode;
+    footer: ReactNode;
+  }
+>;

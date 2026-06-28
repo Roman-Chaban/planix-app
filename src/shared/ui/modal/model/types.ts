@@ -1,11 +1,9 @@
 import type { ReactNode } from 'react';
 
+import type { WithChildren } from '@/shared/types/types';
+
 type WithOnClose = {
   onClose: () => void;
-};
-
-type WithChildren = {
-  children: ReactNode;
 };
 
 type WithIsOpen = {

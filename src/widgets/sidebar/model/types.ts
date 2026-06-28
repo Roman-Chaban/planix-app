@@ -1,6 +1,6 @@
-import type { TFunction } from 'i18next';
-
 import type { ComponentType, SVGProps } from 'react';
+
+import type { TranslateFn } from '@/shared/types/types';
 
 export type SidebarProps = {
   isSidebarOpen?: boolean;
@@ -17,10 +17,10 @@ export type NavItemData = {
 export type NavItemProps = NavItemData & {
   isActive?: boolean;
   isCollapsed?: boolean;
-  t: TFunction;
+  t: TranslateFn;
 };
 
 export type NavProps = {
   isCollapsed?: boolean;
-  t: TFunction;
+  t: TranslateFn;
 };

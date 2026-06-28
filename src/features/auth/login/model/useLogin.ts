@@ -1,4 +1,3 @@
-import type { TFunction } from 'i18next';
 import type { SubmitHandler } from 'react-hook-form';
 
 import { ROUTES } from '@/app/routes';
@@ -6,10 +5,11 @@ import { loginSchema, type LoginFormSchema } from '@/features/auth/login';
 import { supabase } from '@/shared/api/supabase';
 import { setFormErrors } from '@/shared/lib';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
+import type { TranslateFn } from '@/shared/types/types';
 
 const { DASHBOARD } = ROUTES;
 
-export const useLogin = (t: TFunction) => {
+export const useLogin = (t: TranslateFn) => {
   const localizedRouter = useLocalizedRouter();
 
   const form = useAppForm<LoginFormSchema>({

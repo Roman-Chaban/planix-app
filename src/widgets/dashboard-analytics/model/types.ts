@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 
+import type { WithChildren } from '@/shared/types/types';
+
 type WidgetVariant = 'primary' | 'secondary' | 'tertiary';
 
-export type DashboardAnalyticsHeaderProps = {
+export type DashboardAnalyticsHeaderProps = WithChildren & {
   title: string;
-  children?: ReactNode;
 };
 
 export type DashboardAnalyticsHeaderListItem = {

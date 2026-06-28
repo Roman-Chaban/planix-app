@@ -4,13 +4,14 @@ import {
   resetSchema,
   type ResetFormSchema,
 } from '@/features/auth/recover-password/reset';
-import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
+import { AUTH_STEPS } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
+import type { NavigateFn } from '@/shared/types/types';
 
 const { VERIFY } = AUTH_STEPS;
 
-export const useResetPassword = (onNavigate: (step: AuthStep) => void) => {
+export const useResetPassword = (onNavigate: NavigateFn) => {
   const form = useAppForm<ResetFormSchema>({
     schema: resetSchema,
     defaultValues: {

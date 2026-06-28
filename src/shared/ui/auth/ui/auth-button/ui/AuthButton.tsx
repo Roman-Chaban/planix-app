@@ -9,7 +9,7 @@ import {
   BUTTON_SIZES,
   BUTTON_TYPES,
   BUTTON_VARIANTS,
-} from '@/shared/ui/button/model/constants';
+} from '@/shared/ui/button/lib/constants';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
 const { SUBMIT } = BUTTON_TYPES;

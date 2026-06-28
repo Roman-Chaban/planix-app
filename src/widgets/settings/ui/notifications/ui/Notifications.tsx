@@ -13,7 +13,7 @@ import { NotificationItem } from './NotificationItem';
 import styles from './Notifications.module.scss';
 
 export const Notifications = () => {
-  const { t } = useTranslation(NS.PROFILE);
+  const { t } = useTranslation(NS.SETTINGS);
   const notifications = getNotificationsList(t);
 
   return (

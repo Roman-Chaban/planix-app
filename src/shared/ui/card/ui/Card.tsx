@@ -2,8 +2,6 @@
 
 import type { FC } from 'react';
 
-import { useTranslation } from 'react-i18next';
-
 import { buildClassName } from '@/shared/lib';
 
 import { Box, Typography } from '@/shared/ui';
@@ -18,29 +16,26 @@ export const Card: FC<CardProps> = ({
   value,
   trend,
   trendType,
-  translationNamespace,
 }) => {
-  const { t } = useTranslation(translationNamespace);
-
   return (
     <Box key={id} className={styles.card}>
       <Typography as="h3" className={styles.label}>
-        {t(label)}
+        {label}
       </Typography>
 
       <Box className={styles.cardMain}>
         <Typography as="span" className={styles.value}>
-          {t(value)}
+          {value}
         </Typography>
         <Box className={styles.cardFooter}>
           <Typography as="span" className={styles.name}>
-            {t(name)}
+            {name}
           </Typography>
           <Typography
             as="span"
             className={buildClassName(styles.trend, styles[trendType])}
           >
-            {t(trend)}
+            {trend}
           </Typography>
         </Box>
       </Box>

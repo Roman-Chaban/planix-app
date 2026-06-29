@@ -1,4 +1,8 @@
-import { dashboardCards } from '@/widgets/dashboard-cards';
+'use client';
+
+import { useTranslation } from 'react-i18next';
+
+import { getDashboardCards } from '@/widgets/dashboard-cards';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
 import { Box, List, Card } from '@/shared/ui';
@@ -6,27 +10,18 @@ import { Box, List, Card } from '@/shared/ui';
 import styles from './DashboardCards.module.scss';
 
 export const DashboardCards = () => {
+  const { t } = useTranslation(NS.DASHBOARD_CARDS);
+
+  const cards = getDashboardCards(t);
+
   return (
     <Box className={styles.cardsWrapper}>
       <List
         className={styles.cards}
         itemClassName={styles.card}
         getItemKey={(key) => key.id}
-        renderList={dashboardCards}
-        renderItem={(card) => {
-          return (
-            <Card
-              key={card.id}
-              id={card.id}
-              label={card.label}
-              value={card.value}
-              name={card.name}
-              trend={card.trend}
-              trendType={card.trendType}
-              translationNamespace={NS.DASHBOARD_CARDS}
-            />
-          );
-        }}
+        renderList={cards}
+        renderItem={(card) => <Card {...card} />}
       />
     </Box>
   );

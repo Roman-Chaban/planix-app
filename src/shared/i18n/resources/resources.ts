@@ -1,6 +1,5 @@
 import { brandI18n } from '@/widgets/brand-banner/i18n';
-import { dashboardAnalyticsI18n } from '@/widgets/dashboard-analytics/i18n';
-import { dashboardCardsI18n } from '@/widgets/dashboard-cards/i18n';
+import { dashboardI18n } from '@/widgets/dashboard/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
 import { projectCreateI18n } from '@/widgets/project-create/i18n';
 import { projectDetailsI18n } from '@/widgets/project-details/i18n';
@@ -17,12 +16,11 @@ import { deleteProjectI18n } from '@/features/project-delete/i18n';
 export const resources = {
   en: {
     auth: authI18n.en,
+    dashboard: dashboardI18n.en,
     brand: brandI18n.en,
     sidebar: sidebarI18n.en,
     modal: deleteProjectI18n.en,
-    dashboardCards: dashboardCardsI18n.en,
     header: headerI18n.en,
-    dashboardAnalytics: dashboardAnalyticsI18n.en,
     addProjectHeader: addProjectHeaderI18n.en,
     projectsEmpty: ProjectsEmptyI18n.en,
     projectTableHeader: ProjectTableHeaderI18n.en,
@@ -34,12 +32,11 @@ export const resources = {
   },
   uk: {
     auth: authI18n.uk,
+    dashboard: dashboardI18n.uk,
     brand: brandI18n.uk,
     sidebar: sidebarI18n.uk,
     modal: deleteProjectI18n.uk,
-    dashboardCards: dashboardCardsI18n.uk,
     header: headerI18n.uk,
-    dashboardAnalytics: dashboardAnalyticsI18n.uk,
     addProjectHeader: addProjectHeaderI18n.uk,
     projectsEmpty: ProjectsEmptyI18n.uk,
     projectTableHeader: ProjectTableHeaderI18n.uk,

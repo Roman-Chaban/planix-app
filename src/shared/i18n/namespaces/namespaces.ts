@@ -1,11 +1,10 @@
 export const NAMESPACE = {
   BRAND: 'brand',
   AUTH: 'auth',
+  DASHBOARD: 'dashboard',
   SIDEBAR: 'sidebar',
   MODAL: 'modal',
-  DASHBOARD_CARDS: 'dashboardCards',
   HEADER: 'header',
-  DASHBOARD_ANALYTICS: 'dashboardAnalytics',
   ADD_PROJECT_HEADER: 'addProjectHeader',
   PROJECTS_EMPTY: 'projectsEmpty',
   PROJECT_TABLE_HEADER: 'projectTableHeader',

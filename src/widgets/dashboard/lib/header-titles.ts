@@ -1,4 +1,4 @@
-import { VARIANTS } from '@/widgets/dashboard-analytics';
+import { VARIANTS } from '@/widgets/dashboard';
 import type { TranslateFn } from '@/shared/types/types';
 
 const { PRIMARY, SECONDARY, TERTIARY } = VARIANTS;
@@ -6,19 +6,19 @@ const { PRIMARY, SECONDARY, TERTIARY } = VARIANTS;
 export const getHeaderTitles = (t: TranslateFn) => [
   {
     id: 'revenue',
-    title: t('revenueTitle'),
+    title: t('analytics.revenue'),
     variant: PRIMARY,
     content: null,
   },
   {
     id: 'projects',
-    title: t('projectsTitle'),
+    title: t('analytics.projects'),
     variant: SECONDARY,
     content: null,
   },
   {
     id: 'tasks',
-    title: t('taskOverview'),
+    title: t('analytics.taskOverview'),
     variant: TERTIARY,
     content: null,
   },

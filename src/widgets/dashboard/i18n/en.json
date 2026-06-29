@@ -1,0 +1,15 @@
+{
+  "analytics": {
+    "revenue": "Revenue Analytics",
+    "projects": "Projects Summary",
+    "taskOverview": "Task Overview"
+  },
+  "cards": {
+    "totalProjects": "Total Projects",
+    "clients": "Clients",
+    "revenue": "Revenue",
+    "newLeads": "New Leads",
+    "totalTasks": "Total Tasks",
+    "vsLastMonth": "vs last month"
+  }
+}

@@ -1,5 +1,4 @@
-import { DashboardAnalytics } from '@/widgets/dashboard-analytics';
-import { DashboardCards } from '@/widgets/dashboard-cards';
+import { DashboardAnalytics, DashboardCards } from '@/widgets/dashboard';
 import { Header } from '@/widgets/header';
 import { PageWrapper } from '@/shared/ui';
 

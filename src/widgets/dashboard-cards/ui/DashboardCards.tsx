@@ -19,7 +19,7 @@ export const DashboardCards = () => {
       <List
         className={styles.cards}
         itemClassName={styles.card}
-        getItemKey={(key) => key.id}
+        getItemKey={({ id }) => id}
         renderList={cards}
         renderItem={(card) => <Card {...card} />}
       />

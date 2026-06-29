@@ -4,15 +4,13 @@ import type { WithChildren } from '@/shared/types/types';
 
 type WidgetVariant = 'primary' | 'secondary' | 'tertiary';
 
-export type DashboardAnalyticsHeaderProps = WithChildren & {
-  title: string;
-};
+export type DashboardAnalyticsHeaderProps = WithChildren & HeaderListItem;
 
-export type DashboardAnalyticsHeaderListItem = {
+export type HeaderListItem = {
   id: string;
   title: string;
   variant: WidgetVariant;
   content?: ReactNode | null;
 };
 
-export type DashboardAnalyticsHeaderList = DashboardAnalyticsHeaderListItem[];
+export type HeaderListItems = HeaderListItem[];

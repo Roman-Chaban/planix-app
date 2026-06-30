@@ -1,4 +1,4 @@
-import type { TabId } from '@/widgets/project-layout/model/types';
+import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 
 import type { Project } from '@/entities/project';
 import { statusMap } from '@/shared/ui/status-badge/model/constants';

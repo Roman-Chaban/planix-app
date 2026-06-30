@@ -1,5 +1,5 @@
 import { Header } from '@/widgets/header';
-import { ProjectHeader } from '@/widgets/project-header';
+import { Header as ProjectHeader } from '@/widgets/project-management/ui/header';
 import { DetailsForm } from '@/features/project-add';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { PageWrapper } from '@/shared/ui';

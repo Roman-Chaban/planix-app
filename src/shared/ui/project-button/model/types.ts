@@ -12,8 +12,8 @@ export type ProjectButtonProps = Pick<
   | 'type'
   | 'shape'
   | 'className'
-  | 'isLoading'
   | 'maxWidth'
 > & {
+  label: string;
   translationNamespace?: string;
 };

@@ -1,0 +1,4 @@
+import en from './en.json';
+import uk from './uk.json';
+
+export const projectManagementI18n = { en, uk };

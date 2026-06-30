@@ -4,9 +4,7 @@ import { headerI18n } from '@/widgets/header/i18n';
 import { projectCreateI18n } from '@/widgets/project-create/i18n';
 import { projectDetailsI18n } from '@/widgets/project-details/i18n';
 import { projectEditI18n } from '@/widgets/project-edit/i18n';
-import { ProjectTableHeaderI18n } from '@/widgets/project-table/i18n';
-import { ProjectsEmptyI18n } from '@/widgets/projects-empty/i18n';
-import { addProjectHeaderI18n } from '@/widgets/projects-toolbar/i18n';
+import { projectManagementI18n } from '@/widgets/project-management/i18n';
 import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
@@ -21,9 +19,7 @@ export const resources = {
     sidebar: sidebarI18n.en,
     modal: deleteProjectI18n.en,
     header: headerI18n.en,
-    addProjectHeader: addProjectHeaderI18n.en,
-    projectsEmpty: ProjectsEmptyI18n.en,
-    projectTableHeader: ProjectTableHeaderI18n.en,
+    projectManagement: projectManagementI18n.en,
     projectCreate: projectCreateI18n.en,
     projectAdd: projectAddI18n.en,
     projectEdit: projectEditI18n.en,
@@ -37,9 +33,7 @@ export const resources = {
     sidebar: sidebarI18n.uk,
     modal: deleteProjectI18n.uk,
     header: headerI18n.uk,
-    addProjectHeader: addProjectHeaderI18n.uk,
-    projectsEmpty: ProjectsEmptyI18n.uk,
-    projectTableHeader: ProjectTableHeaderI18n.uk,
+    projectManagement: projectManagementI18n.uk,
     projectCreate: projectCreateI18n.uk,
     projectAdd: projectAddI18n.uk,
     projectEdit: projectEditI18n.uk,

@@ -34,11 +34,9 @@
 
 .inputWrapper:focus-within .floatingLabel,
 .inputWrapper.filled .floatingLabel {
-  top: -0.6rem;
+  top: 0rem;
   transform: translateY(0);
   font-size: $caption-md-font-size;
-  background: $neutral-0;
-  padding-inline: 0.2rem;
 }
 
 .inputWrapper.error .floatingLabel {

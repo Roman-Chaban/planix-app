@@ -19,7 +19,6 @@ export const Layout = () => {
     Skeleton,
     isEmpty,
     hasData,
-    isCanceled,
     deleteModal,
     projects,
   } = useProjectsPageModel();
@@ -36,11 +35,7 @@ export const Layout = () => {
       {isEmpty && <Empty />}
 
       {hasData && (
-        <Table
-          isShowReason={isCanceled}
-          onDelete={deleteModal.openDeleteModal}
-          projects={projects}
-        />
+        <Table onDelete={deleteModal.openDeleteModal} projects={projects} />
       )}
 
       <DeleteProjectModal

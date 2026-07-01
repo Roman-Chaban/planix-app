@@ -23,17 +23,10 @@ const DRAG_SCROLL_AXIS = AXIS.X;
 
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 
-export const Table: FC<TableProps> = ({
-  projects,
-  onDelete,
-  isShowReason = false,
-}) => {
+export const Table: FC<TableProps> = ({ projects, onDelete }) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
   const localizedRouter = useLocalizedRouter();
-  const columns = useMemo(
-    () => getTableColumns(isShowReason, t),
-    [isShowReason, t],
-  );
+  const columns = useMemo(() => getTableColumns(t), [t]);
 
   const dragRef = useDragScroll<HTMLDivElement>({
     axis: DRAG_SCROLL_AXIS,
@@ -58,7 +51,7 @@ export const Table: FC<TableProps> = ({
   return (
     <div ref={dragRef} className={styles.wrapper}>
       <table className={styles.table}>
-        <TableColGroup isShowReason={isShowReason} />
+        <TableColGroup />
         <TableHeader columns={columns} />
 
         <tbody className={styles.body}>
@@ -66,7 +59,6 @@ export const Table: FC<TableProps> = ({
             <TableRow
               key={project.id}
               project={project}
-              isShowReason={isShowReason}
               actionsFactory={actionsFactory}
             />
           ))}

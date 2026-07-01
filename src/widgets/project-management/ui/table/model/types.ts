@@ -24,13 +24,11 @@ export type ProjectsResponse = {
 export type TableRowProps = {
   project: Project;
   actionsFactory: (name: string, id: string | number) => ActionItem[];
-  isShowReason?: boolean;
 };
 
 export type TableProps = {
   projects: TableItem[];
   onDelete: (id: string | number) => void;
-  isShowReason?: boolean;
 };
 
 export type TableItem = ReturnType<typeof toProjectTableItem>;

@@ -1,18 +1,13 @@
 import { useMemo, type FC } from 'react';
 
 import type { TableRowProps } from '@/widgets/project-management/ui/table';
-import { STATUSES } from '@/entities/project/model/statuses';
 import { buildClassName } from '@/shared/lib';
 import { StatusBadge, ActionsBar } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
 
 import styles from './Table.module.scss';
 
-export const TableRow: FC<TableRowProps> = ({
-  project,
-  actionsFactory,
-  isShowReason,
-}) => {
+export const TableRow: FC<TableRowProps> = ({ project, actionsFactory }) => {
   const {
     status,
     client_name,
@@ -22,7 +17,6 @@ export const TableRow: FC<TableRowProps> = ({
     platform,
     progress,
     price,
-    reason,
     id,
   } = project;
 
@@ -30,9 +24,6 @@ export const TableRow: FC<TableRowProps> = ({
     () => actionsFactory(slug, id),
     [actionsFactory, slug, id],
   );
-
-  const shouldShowReason = isShowReason && status === STATUSES.CANCELED;
-  const reasonContent = shouldShowReason ? reason : null;
 
   return (
     <tr className={styles.bodyRow}>
@@ -47,12 +38,6 @@ export const TableRow: FC<TableRowProps> = ({
       <td className={styles.cell}>{platform}</td>
       <td className={styles.cell}>{progress}</td>
       <td className={styles.cell}>{price}</td>
-
-      {isShowReason && (
-        <td className={buildClassName(styles.cell, styles.reason)}>
-          {reasonContent}
-        </td>
-      )}
 
       <td className={styles.cell}>
         <StatusBadge status={status} />

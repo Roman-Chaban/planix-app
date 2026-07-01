@@ -1,10 +1,6 @@
-import type { FC } from 'react';
-
 import styles from './Table.module.scss';
 
-export const TableColGroup: FC<{ isShowReason: boolean }> = ({
-  isShowReason,
-}) => {
+export const TableColGroup = ({}) => {
   return (
     <colgroup>
       <col className={styles.colClient} />
@@ -13,7 +9,6 @@ export const TableColGroup: FC<{ isShowReason: boolean }> = ({
       <col className={styles.colPlatform} />
       <col className={styles.colProgress} />
       <col className={styles.colPrice} />
-      {isShowReason && <col className={styles.colReason} />}
       <col className={styles.colStatus} />
       <col className={styles.colActions} />
     </colgroup>

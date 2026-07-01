@@ -1,18 +1,16 @@
 import type { SubmitHandler } from 'react-hook-form';
 
-import {
-  resetSchema,
-  type ResetFormSchema,
-} from '@/features/auth/recover-password/reset';
 import { AUTH_STEPS } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
 import type { NavigateFn } from '@/shared/types/types';
 
+import { resetSchema, type ResetFormSchema } from './reset-form.schema';
+
 const { VERIFY } = AUTH_STEPS;
 
 export const useResetPassword = (onNavigate: NavigateFn) => {
-  const form = useAppForm<ResetFormSchema>({
+  const resetForm = useAppForm<ResetFormSchema>({
     schema: resetSchema,
     defaultValues: {
       newPassword: '',
@@ -22,9 +20,9 @@ export const useResetPassword = (onNavigate: NavigateFn) => {
 
   const {
     formState: { isValid, isSubmitting },
-  } = form;
+  } = resetForm;
 
-  const onSubmit: SubmitHandler<ResetFormSchema> = async (data) => {
+  const handleSubmit: SubmitHandler<ResetFormSchema> = async (data) => {
     const { error } = await supabase.auth.updateUser({
       password: data.newPassword,
     });
@@ -37,5 +35,5 @@ export const useResetPassword = (onNavigate: NavigateFn) => {
     onNavigate(VERIFY);
   };
 
-  return { form, isValid, isSubmitting, onSubmit };
+  return { resetForm, isValid, isSubmitting, handleSubmit };
 };

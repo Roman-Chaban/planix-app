@@ -3,7 +3,7 @@ export { registerFormFields } from './lib/form-config';
 export {
   forgotPasswordSchema,
   type ForgotPasswordSchema,
-} from './model/forgot-password.schema';
+} from './model/schema';
 
 export { useForgotPassword } from './model/useForgotPassword';
 

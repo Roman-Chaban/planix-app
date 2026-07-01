@@ -6,10 +6,7 @@ import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
 
-import {
-  forgotPasswordSchema,
-  type ForgotPasswordSchema,
-} from './forgot-password.schema';
+import { forgotPasswordSchema, type ForgotPasswordSchema } from './schema';
 
 const { AUTH } = ROUTES;
 const { RESET } = AUTH_STEPS;

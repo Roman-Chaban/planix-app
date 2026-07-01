@@ -5,7 +5,7 @@ import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
 import type { NavigateFn } from '@/shared/types/types';
 
-import { resetSchema, type ResetFormSchema } from './reset-form.schema';
+import { resetSchema, type ResetFormSchema } from './schema';
 
 const { VERIFY } = AUTH_STEPS;
 

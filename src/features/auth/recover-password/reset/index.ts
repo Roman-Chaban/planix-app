@@ -1,4 +1,4 @@
-export { type ResetFormSchema, resetSchema } from './model/reset-form.schema';
+export { type ResetFormSchema, resetSchema } from './model/schema';
 
 export { resetFormFields } from './lib/form-config';
 

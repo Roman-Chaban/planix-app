@@ -1,4 +1,4 @@
-import type { ResetFormSchema } from '../model/reset-form.schema';
+import type { ResetFormSchema } from '../model/schema';
 
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { LockIcon, ViewOffIcon } from '@/shared/ui/icons';

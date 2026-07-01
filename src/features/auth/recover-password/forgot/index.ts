@@ -1,4 +1,4 @@
-export { registerFormFields } from './lib/config';
+export { registerFormFields } from './lib/form-config';
 
 export {
   forgotPasswordSchema,

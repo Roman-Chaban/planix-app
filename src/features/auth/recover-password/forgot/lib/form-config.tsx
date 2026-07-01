@@ -1,4 +1,5 @@
-import type { ForgotPasswordSchema } from '@/features/auth/recover-password/forgot';
+import type { ForgotPasswordSchema } from '../model/forgot-password.schema';
+
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { MessageIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES } from '@/shared/ui/input';

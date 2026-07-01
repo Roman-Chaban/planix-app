@@ -1,7 +1,8 @@
+import type { LoginActionsProps } from '../model/types';
+
 import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 
-import type { LoginActionsProps } from '@/features/auth/login';
 import { AuthButton, Box, Checkbox } from '@/shared/ui';
 
 import { Button, BUTTON_MAX_WIDTH, BUTTON_VARIANTS } from '@/shared/ui/button';

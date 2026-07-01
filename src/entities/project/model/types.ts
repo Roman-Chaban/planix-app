@@ -1,4 +1,3 @@
-import type { PROJECT_REASONS } from '@/widgets/project-table';
 import type { ProjectDetailsSchema } from '@/features/project-add';
 
 export type ProjectId = string | number;
@@ -28,7 +27,6 @@ export type Project = {
   progress: string;
   price: string;
   status: Status;
-  reason: RejectReason;
   slug: string;
   description: string;
   description_uk: string;
@@ -41,5 +39,3 @@ export type UpdateProjectPayload = {
   data: Partial<ProjectDetailsSchema>;
 };
 export type DeleteProjectPayload = { id: ProjectId };
-export type RejectReason =
-  (typeof PROJECT_REASONS)[keyof typeof PROJECT_REASONS];

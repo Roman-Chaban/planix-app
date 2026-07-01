@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
+
 import {
   projectAddFields,
   DescriptionField,
@@ -29,6 +31,7 @@ const { LARGE } = BUTTON_SIZES;
 const { LG } = BUTTON_MAX_WIDTH;
 
 export const DetailsForm = () => {
+  const { t } = useTranslation(NS.PROJECT_ADD);
   const { form, onSubmit, isLoading } = useProjectForm();
 
   return (
@@ -57,8 +60,8 @@ export const DetailsForm = () => {
           shape={ROUNDED}
           variant={DEFAULT}
           size={LARGE}
-          isLoading={isLoading}
           disabled={isLoading}
+          label={t('addProjectButton')}
           translationNamespace={NS.PROJECT_ADD}
           maxWidth={LG}
         />

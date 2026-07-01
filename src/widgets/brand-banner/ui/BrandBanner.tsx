@@ -2,9 +2,9 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
-import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { PlanixLogoIcon } from '@/shared/ui/icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';

@@ -17,7 +17,6 @@ export const toProjectTableItem = (project: Project) => {
     status: project.status,
     description: project.description,
     description_uk: project.description_uk,
-    reason: project.reason,
     client_id: project.client_id,
     client_name: project.client_name,
     client_avatar: project.client_avatar,

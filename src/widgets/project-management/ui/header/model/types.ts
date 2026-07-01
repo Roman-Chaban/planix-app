@@ -1,4 +1,5 @@
-import type { ToolbarHeaderItemProps } from '@/widgets/project-management';
+import type { ToolbarHeaderItemProps } from '../../toolbar';
+
 import type { Status } from '@/entities/project';
 
 export type HeaderProps = {

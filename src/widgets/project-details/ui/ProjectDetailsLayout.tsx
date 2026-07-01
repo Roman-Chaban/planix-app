@@ -5,7 +5,7 @@ import {
   ProjectDetails,
   type ProjectDetailsLayoutProps,
 } from '@/widgets/project-details';
-import { ProjectHeader } from '@/widgets/project-header';
+import { Header as ProjectHeader } from '@/widgets/project-management';
 import { PageWrapper } from '@/shared/ui';
 
 export const ProjectDetailsLayout: FC<ProjectDetailsLayoutProps> = ({

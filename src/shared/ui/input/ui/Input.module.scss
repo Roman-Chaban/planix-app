@@ -10,6 +10,7 @@
   font-size: $body-md-font-size;
   caret-color: $text-secondary;
   color: $text-secondary;
+  padding-inline-start: $space-7;
 
   @include respond(sm) {
     font-size: $body-sm-font-size;

@@ -1,4 +1,5 @@
-import type { RegisterFormSchema } from '@/features/auth/registration';
+import type { RegisterFormSchema } from '../model/schema';
+
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import {
   ClientIcon,

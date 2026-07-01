@@ -4,10 +4,6 @@ import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import {
-  registerFormFields,
-  useRegistration,
-} from '@/features/auth/registration';
 import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import {
@@ -20,6 +16,9 @@ import {
 } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
+import { registerFormFields } from '../lib/form-config';
+import { useRegistration } from '../model/useRegistration';
+
 import styles from './RegisterForm.module.scss';
 
 const { LG } = BUTTON_MAX_WIDTH;
@@ -30,7 +29,8 @@ type RegisterFormProps = {
 
 export const RegisterForm: FC<RegisterFormProps> = () => {
   const { t } = useTranslation(NS.AUTH);
-  const { isValid, isSubmitting, onSubmit, form, control } = useRegistration();
+  const { isValid, isSubmitting, handleSubmit, registrationForm, control } =
+    useRegistration();
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -42,7 +42,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
   };
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
+    <AppForm form={registrationForm} onSubmit={handleSubmit}>
       <FormFields fields={personalFields} {...formFieldsProps} />
 
       <Box className={styles.box}>

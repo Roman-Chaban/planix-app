@@ -1,3 +1,5 @@
+import type { ComponentType } from 'react';
+
 import { type TranslateFn } from '@/shared/types/types';
 
 type WithActiveMenu = {
@@ -21,3 +23,10 @@ export type MenuItemProps = MenuItemBase & {
 export type MenuProps = WithActiveMenu & { t: TranslateFn };
 export type ProfileMenuProps = WithActiveMenu;
 export type MenuItems = MenuItem[];
+
+export type ProfileTabId = 'personal' | 'notifications';
+
+export type ProfileTabComponent = ComponentType;
+
+export type ProfileTabMap = Record<ProfileTabId, ProfileTabComponent>;
+export type TabId = ProfileTabId;

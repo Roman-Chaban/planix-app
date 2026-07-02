@@ -8,7 +8,6 @@ export const NAMESPACE = {
   HEADER: 'header',
   PROJECT: 'project',
   PROJECT_ADD: 'projectAdd',
-  PROJECT_EDIT: 'projectEdit',
   SIGN_UP_FORM: 'signUpForm',
   FORGOT_PASSWORD_FORM: 'forgotPasswordForm',
   RESET_PASSWORD_FORM: 'resetPasswordForm',

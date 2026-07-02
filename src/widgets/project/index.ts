@@ -10,5 +10,5 @@ export type {
 export { ProjectCreateLayout } from './create';
 export { Description } from './description';
 export { Details } from './ui/Details';
-export {FileItem} from './files';
-export {InfoCard, InfoList} from './info';
+export { FileItem } from './files';
+export { InfoCard, InfoList } from './info';

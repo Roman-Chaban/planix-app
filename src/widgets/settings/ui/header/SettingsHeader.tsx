@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './Header.module.scss';
+import styles from './SettingsHeader.module.scss';
 
 export type SettingsHeaderProps = {
   title: string;

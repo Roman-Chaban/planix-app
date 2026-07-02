@@ -28,36 +28,6 @@
   gap: 1rem;
 }
 
-.list {
-  width: 100%;
-  max-width: 25rem;
-  @include grid(10rem 1fr, $rows: null, $areas: null, $gap: 0.5rem 0);
-}
-
-.item,
-.box {
-  display: contents;
-}
-
-.label {
-  line-height: $line-height-base;
-  color: $neutral-950;
-  font-weight: $font-weight-semibold;
-}
-
-.value {
-  text-align: left;
-}
-
-.value,
-.text {
-  @include card-value;
-}
-
-.text {
-  padding-block-end: 0.625rem;
-}
-
 .title {
   @include card-title;
 
@@ -73,46 +43,4 @@
       true
     );
   }
-}
-
-.file {
-  @include flex(flex, row, start, center, 0.3rem);
-  border-radius: $radius-lg;
-  background: $neutral-0;
-  border: 0.094rem solid $neutral-300;
-  padding: 0.688rem;
-
-  &.file-pdf svg {
-    color: $pdf-icon;
-  }
-
-  &.file-png svg,
-  &.file-jpg svg,
-  &.file-jpeg svg {
-    color: $primary-700;
-  }
-}
-
-.iconBox {
-  @include flex-center;
-  flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.4rem;
-
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-.iconBoxImage {
-  background: $neutral-200;
-  border-radius: 50%;
-}
-
-.link {
-  color: $neutral-950;
-  line-height: $line-height-base;
-  text-decoration: none;
 }

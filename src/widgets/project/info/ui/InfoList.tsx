@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { Box, List, Typography } from '@/shared/ui';
 
-import styles from '../../Details.module.scss';
+import styles from './Info.module.scss';
 
 export const InfoList: FC<InfoListProps> = ({ details }) => {
   return (

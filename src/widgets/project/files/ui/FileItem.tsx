@@ -6,8 +6,9 @@ import type { ProjectFile } from '@/entities/project';
 import { Box } from '@/shared/ui';
 import { LINK_TARGETS } from '@/shared/ui/link';
 
-import styles from '../../Details.module.scss';
 import { getFileIcon } from '../lib/get-file-icon';
+
+import styles from './FileItem.module.scss';
 
 const { BLANK } = LINK_TARGETS;
 

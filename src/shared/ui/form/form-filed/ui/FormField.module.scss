@@ -5,6 +5,22 @@
   @include flex-col(0.188rem, start, stretch, column);
 }
 
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  line-height: 150%;
+  border-radius: 1rem;
+  font-size: $body-md-font-size;
+  caret-color: $text-secondary;
+  color: $text-secondary;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
+}
+
 .inputWrapper {
   width: 100%;
   position: relative;
@@ -18,7 +34,7 @@
 
 .withStartIcon .input,
 .withEndIcon .input {
-  padding-inline-start: $space-9;
+  padding-inline-start: $space-7;
 }
 
 .floatingLabel {

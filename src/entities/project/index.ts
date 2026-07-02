@@ -12,6 +12,6 @@ export {
   updateProject,
   createProject,
   deleteProject,
-} from './lib/projects';
+} from './model/projects';
 
 export { useProjectActions } from './api/useProjectActions';

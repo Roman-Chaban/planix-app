@@ -6,9 +6,9 @@ import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 import { useDeleteProject } from '@/features/project-delete';
 import { useProjects } from '@/entities/project/api/useProjects';
 
-import { toProjectTableItem } from '@/entities/project/model/project-table-item';
+import { toProjectTableItem } from '@/entities/project/lib/project-table-item';
 
-import { STATUSES } from '@/entities/project/model/statuses';
+import { STATUSES } from '@/entities/project/lib/statuses';
 import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { getHeaderItems } from '../../../header/lib/get-header-items';

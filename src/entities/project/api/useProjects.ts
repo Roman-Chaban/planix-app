@@ -1,7 +1,7 @@
 'use client';
 
 import { queryKeys } from '@/entities/project/api/queryKeys';
-import { getProjects } from '@/entities/project/lib/projects';
+import { getProjects } from '@/entities/project/model/projects';
 import { useQueryWithSkeleton } from '@/shared/lib/hooks/useQueryWithSkeleton';
 import { ProjectsTableSkeleton } from '@/shared/ui/skeletons/project-table/ui/ProjectTableSkeleton';
 

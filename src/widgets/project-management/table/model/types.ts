@@ -1,4 +1,4 @@
-import type { toProjectTableItem } from '@/entities/project/model/project-table-item';
+import type { toProjectTableItem } from '@/entities/project/lib/project-table-item';
 import type { Project } from '@/entities/project/model/types';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 

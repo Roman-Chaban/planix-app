@@ -2,14 +2,15 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { getDashboardCards } from '@/widgets/dashboard';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
 import { Box, List, Card } from '@/shared/ui';
 
-import styles from './DashboardCards.module.scss';
+import { getDashboardCards } from '../lib/get-dashboard-cards';
 
-export const DashboardCards = () => {
+import styles from './Cards.module.scss';
+
+export const Cards = () => {
   const { t } = useTranslation(NS.DASHBOARD);
 
   const cards = getDashboardCards(t);

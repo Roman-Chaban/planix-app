@@ -1,12 +1,12 @@
-import { type FC } from 'react';
+import type { AnalyticsHeaderProps } from '../model/types';
 
-import type { DashboardAnalyticsHeaderProps } from '@/widgets/dashboard';
+import { type FC } from 'react';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './DashboardAnalytics.module.scss';
+import styles from './Analytics.module.scss';
 
-export const DashboardAnalyticsHeader: FC<DashboardAnalyticsHeaderProps> = ({
+export const AnalyticsHeader: FC<AnalyticsHeaderProps> = ({
   id,
   variant,
   title,

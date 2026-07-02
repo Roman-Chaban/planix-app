@@ -1,5 +1,6 @@
-import { VARIANTS } from '@/widgets/dashboard';
 import type { TranslateFn } from '@/shared/types/types';
+
+import { VARIANTS } from './analytics.constants';
 
 const { PRIMARY, SECONDARY, TERTIARY } = VARIANTS;
 

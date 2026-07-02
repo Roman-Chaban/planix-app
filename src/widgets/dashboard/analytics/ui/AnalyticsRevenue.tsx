@@ -1,6 +1,6 @@
 import { Box } from '@/shared/ui';
 
 // TODO: [Waiting for graphs implementation]
-export const DashboardAnalyticsRevenue = () => {
+export const AnalyticsRevenue = () => {
   return <Box>AnalyticsRevenue</Box>;
 };

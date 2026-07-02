@@ -2,10 +2,13 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { DashboardAnalyticsHeader, getHeaderTitles } from '@/widgets/dashboard';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
-export const DashboardAnalyticsHeaders = () => {
+import { getHeaderTitles } from '../lib/get-header-titles';
+
+import { AnalyticsHeader } from './AnalyticsHeader';
+
+export const AnalyticsHeaders = () => {
   const { t } = useTranslation(NS.DASHBOARD);
 
   const titles = getHeaderTitles(t);
@@ -13,7 +16,7 @@ export const DashboardAnalyticsHeaders = () => {
   return (
     <>
       {titles.map((title) => (
-        <DashboardAnalyticsHeader {...title} key={title.id} />
+        <AnalyticsHeader {...title} key={title.id} />
       ))}
     </>
   );

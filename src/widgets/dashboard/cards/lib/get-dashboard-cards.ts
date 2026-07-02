@@ -1,7 +1,8 @@
-import type { Cards } from '@/widgets/dashboard';
+import type { DashboardCards } from '../model/types';
+
 import type { TranslateFn } from '@/shared/types/types';
 
-export const getDashboardCards = (t: TranslateFn): Cards =>
+export const getDashboardCards = (t: TranslateFn): DashboardCards =>
   [
     {
       id: 'totalProjects',

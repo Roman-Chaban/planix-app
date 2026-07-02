@@ -19,7 +19,7 @@ import { InfoCard } from './info/ui/InfoCard';
 import { InfoList } from './info/ui/InfoList';
 
 export const Details: FC<DetailsProps> = ({ project }) => {
-  const { t, i18n } = useTranslation(NS.PROJECT_DETAILS);
+  const { t, i18n } = useTranslation(NS.PROJECT);
 
   const { details, description } = mapProjectDetails({
     project,
@@ -32,7 +32,7 @@ export const Details: FC<DetailsProps> = ({ project }) => {
       <ProjectHeader
         showStatus
         status={project.status}
-        translationNamespace="projectDetails"
+        translationNamespace="project"
         title="title"
         metaInfo={{ label: 'label', value: 'value' }}
       />

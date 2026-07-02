@@ -15,5 +15,11 @@
     "platform": "Platform",
     "progress": "Progress",
     "complete": "Complete"
+  },
+  "create": {
+    "title": "Add Project",
+    "label": "Add Project  /",
+    "value": "Project List",
+    "projects": "Project Management"
   }
 }

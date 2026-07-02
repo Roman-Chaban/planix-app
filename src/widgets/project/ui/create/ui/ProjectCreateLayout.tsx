@@ -10,7 +10,7 @@ export const ProjectCreateLayout = () => {
       <ProjectHeader
         title="title"
         metaInfo={{ label: 'label', value: 'value' }}
-        translationNamespace={NS.PROJECT_CREATE}
+        translationNamespace={NS.PROJECT}
       />
 
       <DetailsForm />

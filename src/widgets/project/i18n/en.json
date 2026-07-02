@@ -21,5 +21,10 @@
     "label": "Add Project  /",
     "value": "Project List",
     "projects": "Project Management"
+  },
+  "edit": {
+    "title": "Edit Project",
+    "label": "Edit Project  /",
+    "value": "Project List"
   }
 }

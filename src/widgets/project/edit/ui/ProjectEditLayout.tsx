@@ -9,7 +9,7 @@ export const ProjectEditLayout = () => {
       <ProjectHeader
         title="title"
         metaInfo={{ value: 'value', label: 'label' }}
-        translationNamespace={NS.PROJECT_EDIT}
+        translationNamespace={NS.PROJECT}
       />
     </PageWrapper>
   );

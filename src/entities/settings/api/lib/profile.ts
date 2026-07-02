@@ -1,6 +1,6 @@
 import { supabase } from '@/shared/api/supabase';
 
-import { mapProfile } from './profileMapper';
+import { mapProfile } from './profile.mapper';
 
 export const getProfile = async (userId: string) => {
   const { data, error } = await supabase

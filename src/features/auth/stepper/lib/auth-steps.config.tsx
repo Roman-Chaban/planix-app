@@ -5,10 +5,11 @@ import {
   ResetForm,
   VerifyForm,
 } from '@/features/auth';
-import { AUTH_STEPS } from '@/features/auth/stepper';
 import type { NavigateFn, TranslateFn } from '@/shared/types/types';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
+
+import { AUTH_STEPS } from './constants';
 
 const { REGISTER, LOGIN, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 

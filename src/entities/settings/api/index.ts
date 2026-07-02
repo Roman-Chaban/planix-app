@@ -1,5 +1,5 @@
 export { getProfile } from './lib/profile';
-export { mapProfile } from './lib/profileMapper';
+export { mapProfile } from './lib/profile.mapper';
 
 export { queryKeys } from './queryKeys/queryKeys';
 

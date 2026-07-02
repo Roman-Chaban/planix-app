@@ -1,4 +1,4 @@
-import { ProjectDetailsLayout } from '@/widgets/project-details';
+import { Details } from '@/widgets/project/ui/Details';
 import { supabase } from '@/shared/api/supabase';
 
 export default async function ProjectPage({
@@ -14,5 +14,5 @@ export default async function ProjectPage({
     .eq('slug', slug)
     .single();
 
-  return <ProjectDetailsLayout project={project} />;
+  return <Details project={project} />;
 }

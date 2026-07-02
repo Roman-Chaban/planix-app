@@ -8,7 +8,7 @@ import {
   type ProjectDetailsSchema,
 } from '@/features/project-add';
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
-import { uploadFileToSupabase } from '@/entities/project/lib/projects';
+import { uploadFileToSupabase } from '@/entities/project/model/projects';
 import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
 
 const { PROJECT } = ROUTES;

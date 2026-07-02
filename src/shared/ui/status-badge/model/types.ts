@@ -1,6 +1,6 @@
 import type { FC, SVGProps } from 'react';
 
-import type { TabId } from '@/widgets/project-layout/model/types';
+import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 import type { Status } from '@/entities/project';
 
 export type StatusMap = Record<TabId, Status | null>;

@@ -1,7 +1,6 @@
 'use client';
 
 import type { FC } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/shared/ui';
 import type { ProjectButtonProps } from '@/shared/ui/project-button';
@@ -11,16 +10,13 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
   type,
   disabled,
   variant,
-  isLoading,
   size,
   shape,
   className,
   fullWidth,
   maxWidth,
-  translationNamespace,
+  label,
 }) => {
-  const { t } = useTranslation(translationNamespace);
-
   return (
     <Button
       type={type}
@@ -30,11 +26,10 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
       fullWidth={fullWidth}
       onClick={onClick}
       disabled={disabled}
-      isLoading={isLoading}
       className={className}
       maxWidth={maxWidth}
     >
-      {isLoading ? t('isProjectPeding') : t('addProjectButton')}
+      {label}
     </Button>
   );
 };

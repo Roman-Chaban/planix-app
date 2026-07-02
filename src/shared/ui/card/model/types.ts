@@ -9,5 +9,4 @@ export type CardProps = WithClassName & {
   name: string;
   trend: string;
   trendType: TrendType;
-  translationNamespace?: string;
 };

@@ -1,6 +1,6 @@
+import type { LoginFormSchema } from './schema';
 import type { Control } from 'react-hook-form';
 
-import type { LoginFormSchema } from '@/features/auth/login';
 import type { NavigateFn } from '@/shared/types/types';
 
 export type LoginActionsProps = {

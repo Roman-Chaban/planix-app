@@ -5,22 +5,27 @@ import type { LoginFormProps } from '../model/types';
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LoginActions, loginFormFields, useLogin } from '@/features/auth/login';
-
 import { AUTH_STEPS } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, FormFields } from '@/shared/ui';
+
+import { loginFormFields } from '../lib/form-config';
+import { useLogin } from '../model/useLogin';
+
+import { LoginActions } from './LoginActions';
 
 const { FORGOT } = AUTH_STEPS;
 
 export const LoginForm: FC<LoginFormProps> = ({ onNavigate }) => {
   const { t } = useTranslation(NS.AUTH);
-  const { isValid, isSubmitting, form, onSubmit, control } = useLogin(t);
+
+  const { isValid, isSubmitting, loginForm, handleSubmit, control } =
+    useLogin(t);
 
   const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
+    <AppForm form={loginForm} onSubmit={handleSubmit}>
       <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
 
       <LoginActions

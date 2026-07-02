@@ -3,14 +3,13 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  resetFormFields,
-  useResetPassword,
-} from '@/features/auth/recover-password/reset';
 import type { AuthStep } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
+
+import { resetFormFields } from '../lib/form-config';
+import { useResetPassword } from '../model/useResetPassword';
 
 const { XL } = BUTTON_MAX_WIDTH;
 
@@ -20,13 +19,13 @@ type ResetFormProps = {
 
 export const ResetForm: FC<ResetFormProps> = ({ onNavigate }) => {
   const { t } = useTranslation(NS.AUTH);
-  const { form, onSubmit, isValid, isSubmitting } =
+  const { resetForm, isValid, isSubmitting, handleSubmit } =
     useResetPassword(onNavigate);
 
   const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
+    <AppForm form={resetForm} onSubmit={handleSubmit}>
       <FormFields fields={resetFormFields} translationNamespace={NS.AUTH} />
 
       <AuthButton

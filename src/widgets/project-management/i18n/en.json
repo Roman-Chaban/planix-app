@@ -1,0 +1,27 @@
+{
+  "toolbar": {
+    "allProjects": "All Projects",
+    "inProgress": "In Progress",
+    "pending": "Pending",
+    "completed": "Completed",
+    "canceled": "Canceled",
+    "addProjectButton": "Add Project",
+    "searchPlaceholder": "Search here..."
+  },
+  "tableHeader": {
+    "clientName": "Client Name",
+    "projectName": "Project Name",
+    "dueDate": "Due Date",
+    "platform": "Platform",
+    "progress": "Progress",
+    "reason": "Reason",
+    "price": "Price",
+    "status": "Status",
+    "action": "Action"
+  },
+  "projectEmpty": {
+    "title": "No Projects Yet",
+    "subtitle": "You haven’t created any projects yet. Start by adding your first project to track progress, deadlines, and pricing in one place.",
+    "addProjectButton": "Add Project"
+  }
+}

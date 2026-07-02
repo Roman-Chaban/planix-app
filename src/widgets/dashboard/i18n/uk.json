@@ -1,0 +1,15 @@
+{
+  "analytics": {
+    "revenue": "Аналітика доходів",
+    "projects": "Зведення проєктів",
+    "taskOverview": "Огляд завдань"
+  },
+  "cards": {
+    "totalProjects": "Усього проєктів",
+    "clients": "Клієнти",
+    "revenue": "Дохід",
+    "newLeads": "Нові ліди",
+    "totalTasks": "Усього завдань",
+    "vsLastMonth": "у порівнянні з минулим місяцем"
+  }
+}

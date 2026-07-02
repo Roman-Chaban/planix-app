@@ -8,7 +8,7 @@ import {
   useDeleteProjectModal,
   type DeleteProjectModalProps,
 } from '@/features/project-delete';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Modal, ModalHeader, Textarea, Box, Button } from '@/shared/ui';
 import {
   BUTTON_SIZES,

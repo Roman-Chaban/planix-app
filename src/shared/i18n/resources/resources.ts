@@ -1,8 +1,8 @@
 import { brandI18n } from '@/widgets/brand-banner/i18n';
 import { dashboardI18n } from '@/widgets/dashboard/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
+import { projectDetailsI18n } from '@/widgets/project/i18n';
 import { projectCreateI18n } from '@/widgets/project-create/i18n';
-import { projectDetailsI18n } from '@/widgets/project-details/i18n';
 import { projectEditI18n } from '@/widgets/project-edit/i18n';
 import { projectManagementI18n } from '@/widgets/project-management/i18n';
 import { settingsI18n } from '@/widgets/settings/i18n';

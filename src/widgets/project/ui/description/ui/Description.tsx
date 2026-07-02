@@ -1,15 +1,14 @@
-import type { FC } from 'react';
+import type { DescriptionProps } from '../model/types';
 
-import {
-  type DetailsDescriptionProps,
-  FileItem,
-} from '@/widgets/project-details/ui/details';
+import type { FC } from 'react';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './Details.module.scss';
+import { FileItem } from '../../files';
 
-export const DetailsDescription: FC<DetailsDescriptionProps> = ({
+import styles from './Description.module.scss';
+
+export const Description: FC<DescriptionProps> = ({
   description,
   documentTitle,
   files,

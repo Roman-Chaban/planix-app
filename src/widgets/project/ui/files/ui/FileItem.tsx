@@ -1,19 +1,18 @@
+import type { FileItemProps } from '../model/types';
+
 import type { FC } from 'react';
 
-import {
-  type FileItemProps,
-  getFileIcon,
-} from '@/widgets/project-details/ui/details';
 import type { ProjectFile } from '@/entities/project';
 import { Box } from '@/shared/ui';
 import { LINK_TARGETS } from '@/shared/ui/link';
 
-import styles from './Details.module.scss';
+import styles from '../../Details.module.scss';
+import { getFileIcon } from '../lib/get-file-icon';
 
 const { BLANK } = LINK_TARGETS;
 
 export const FileItem: FC<FileItemProps> = ({ file }) => {
-  const { icon, type, ext } = getFileIcon(file.name);
+  const { icon: Icon, type, ext } = getFileIcon(file.name);
   const isImage = type === 'image';
 
   return (
@@ -21,7 +20,7 @@ export const FileItem: FC<FileItemProps> = ({ file }) => {
       <Box
         className={`${styles.iconBox} ${isImage ? styles.iconBoxImage : ''}`}
       >
-        {icon}
+        {<Icon />}
       </Box>
       <a
         href={(file as ProjectFile).url}

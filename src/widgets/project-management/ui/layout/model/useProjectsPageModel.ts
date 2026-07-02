@@ -21,11 +21,10 @@ export const useProjectsPageModel = () => {
   const { data, isLoading, showSkeleton, Skeleton } = useProjects();
 
   const projects = useMemo(() => {
-    const filtered =
-      data?.data?.filter((project) => project.status === activeId) ?? [];
+    const allProjects = data?.data ?? [];
 
-    return filtered.map(toProjectTableItem);
-  }, [data, activeId]);
+    return allProjects.map(toProjectTableItem);
+  }, [data]);
 
   const isLoadingState = isLoading || showSkeleton;
 

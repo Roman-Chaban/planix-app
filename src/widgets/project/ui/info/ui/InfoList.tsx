@@ -1,11 +1,12 @@
+import type { InfoListProps } from '../model/types';
+
 import type { FC } from 'react';
 
-import type { DetailsInfoListProps } from '@/widgets/project-details/ui/details';
 import { Box, List, Typography } from '@/shared/ui';
 
-import styles from './Details.module.scss';
+import styles from '../../Details.module.scss';
 
-export const DetailsInfoList: FC<DetailsInfoListProps> = ({ details }) => {
+export const InfoList: FC<InfoListProps> = ({ details }) => {
   return (
     <List
       className={styles.list}

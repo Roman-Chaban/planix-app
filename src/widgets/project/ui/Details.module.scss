@@ -1,5 +1,33 @@
 @use '@/shared/styles' as *;
 
+.wrapper {
+  @include responsive-grid-widgets(repeat(2, 1fr), 1.5rem);
+  @include widget-box(100%, 100%, 100%, 1.5rem);
+
+  @include respond(xl) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(sm) {
+    padding: 1rem;
+  }
+}
+
+.details,
+.description {
+  max-width: 100%;
+  @include details-wrapper($padding: 1rem);
+  @include flex-col(0, start, start, column);
+}
+
+.details {
+  gap: 1.125rem;
+}
+
+.description {
+  gap: 1rem;
+}
+
 .list {
   width: 100%;
   max-width: 25rem;
@@ -44,16 +72,6 @@
       $primary-700,
       true
     );
-  }
-}
-
-.files {
-  @include flex(flex, row, start, center, 1rem);
-
-  @include respond(sm) {
-    flex-direction: column;
-    align-items: start;
-    gap: 0.5rem;
   }
 }
 

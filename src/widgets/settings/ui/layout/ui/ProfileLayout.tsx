@@ -4,7 +4,7 @@ import { Header } from '@/widgets/header';
 import { PageWrapper } from '@/shared/ui';
 
 import { useProfileModel } from '../../../../settings/model/useProfileModel';
-import { ProfileMenu } from '../../menu';
+import { ProfileMenu } from '../../../menu';
 
 import styles from './ProfileLayout.module.scss';
 

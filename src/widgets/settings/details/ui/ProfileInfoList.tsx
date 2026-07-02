@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { Box } from '@/shared/ui';
 
-import { getInfoFields } from '../lib/details';
+import { getInfoFields } from '../lib/get-info-fields';
 
 import styles from './ProfileDetails.module.scss';
 

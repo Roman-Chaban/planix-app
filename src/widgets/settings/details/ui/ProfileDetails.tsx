@@ -2,7 +2,6 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ProfileHeader, ProfileInfoList } from '@/widgets/settings/ui/details';
 import { ProfileEditForm } from '@/features/profile/edit-profile';
 import { useProfile } from '@/entities/settings';
 import { NAMESPACE as NS } from '@/shared/i18n';
@@ -11,6 +10,8 @@ import { Box } from '@/shared/ui';
 import { useChangeMode } from '../model/useChangeMode';
 
 import styles from './ProfileDetails.module.scss';
+import { ProfileHeader } from './ProfileHeader';
+import { ProfileInfoList } from './ProfileInfoList';
 
 export const ProfileDetails = () => {
   const { t } = useTranslation(NS.SETTINGS);

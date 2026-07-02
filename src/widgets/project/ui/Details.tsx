@@ -7,7 +7,7 @@ import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Header } from '@/widgets/header';
-import { Header as ProjectHeader } from '@/widgets/project-management';
+import { ProjectHeader } from '@/widgets/project-management';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, PageWrapper } from '@/shared/ui';
 

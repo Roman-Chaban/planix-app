@@ -1,6 +1,6 @@
 'use client';
 
-import type { DetailsProps } from '../model/types';
+import type { DetailsProps } from './model/types';
 
 import { type FC } from 'react';
 
@@ -11,12 +11,12 @@ import { Header as ProjectHeader } from '@/widgets/project-management';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, PageWrapper } from '@/shared/ui';
 
-import { mapProjectDetails } from '../lib/project.mapper';
+import { Description } from '../description';
 
-import { Description } from './description';
+import { InfoCard, InfoList } from '../info';
+
 import styles from './Details.module.scss';
-import { InfoCard } from './info/ui/InfoCard';
-import { InfoList } from './info/ui/InfoList';
+import { mapProjectDetails } from './lib/project.mapper';
 
 export const Details: FC<DetailsProps> = ({ project }) => {
   const { t, i18n } = useTranslation(NS.PROJECT);

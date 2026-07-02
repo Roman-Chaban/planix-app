@@ -1,6 +1,6 @@
 import { UploadIcon } from '@/shared/ui/icons';
 
-import { FILE_CONFIGURATIONS } from './constants';
+import { FILE_CONFIGURATIONS } from './files.constants';
 
 export const getFileIcon = (fileName: string) => {
   if (!fileName) {

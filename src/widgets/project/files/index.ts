@@ -1,4 +1,4 @@
-export { FILE_CONFIGURATIONS } from './lib/constants';
+export { FILE_CONFIGURATIONS } from './lib/files.constants';
 export { getFileIcon } from './lib/get-file-icon';
 
 export type { FileConfiguration, FileItemProps, FileType } from './model/types';

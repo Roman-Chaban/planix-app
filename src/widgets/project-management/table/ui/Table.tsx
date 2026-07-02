@@ -1,23 +1,24 @@
 'use client';
 
+import type { TableProps } from '../model/types';
+
 import { useMemo, type FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
-import {
-  type TableProps,
-  TableHeader,
-  TableRow,
-  TableColGroup,
-  getTableColumns,
-} from '@/widgets/project-management/ui/table';
 
 import { createProjectRowActions } from '@/features/project-table/lib/createProjectRowActions';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 
+import { getTableColumns } from '../lib/get-table-columns';
+
 import styles from './Table.module.scss';
+
+import { TableColGroup } from './TableGroup';
+import { TableHeader } from './TableHeader';
+import { TableRow } from './TableRow';
 
 const DRAG_SCROLL_AXIS = AXIS.X;
 

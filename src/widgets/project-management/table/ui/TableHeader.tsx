@@ -1,8 +1,8 @@
 'use client';
 
-import type { FC } from 'react';
+import type { TableHeaderProps } from '../model/types';
 
-import type { TableHeaderProps } from '@/widgets/project-management/ui/table';
+import type { FC } from 'react';
 
 import styles from './Table.module.scss';
 

@@ -8,5 +8,6 @@ export type TabId =
   | 'Pending'
   | 'Completed'
   | 'Canceled';
+
 export type TabsContent = Record<TabId, ComponentType>;
 export type StatusMap = Record<TabId, Status | null>;

@@ -1,16 +1,16 @@
 'use client';
 
+import type { ProjectHeaderProps } from '../model/types';
+
 import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
-
-import type { HeaderProps } from '@/widgets/project-management/ui/header';
 
 import { Box, StatusBadge, Typography } from '@/shared/ui';
 
 import styles from './Header.module.scss';
 
-export const Header: FC<HeaderProps> = ({
+export const ProjectHeader: FC<ProjectHeaderProps> = ({
   title,
   metaInfo,
   translationNamespace,

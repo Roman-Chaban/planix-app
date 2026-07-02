@@ -1,14 +1,16 @@
 'use client';
 
+import type { ToolbarProps } from '../model/types';
+
 import type { FC } from 'react';
 
 import { ToolbarHeader, ToolbarActions } from '@/widgets/project-management';
-import type { ToolbarProps } from '@/widgets/project-management/ui/toolbar';
-import { useToolbar } from '@/widgets/project-management/ui/toolbar/model/useToolbar';
 
 import { useSidebar } from '@/features/sidebar';
 import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
+
+import { useToolbar } from '../model/useToolbar';
 
 import styles from './Toolbar.module.scss';
 

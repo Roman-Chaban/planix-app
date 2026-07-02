@@ -1,4 +1,4 @@
-import type { HeaderItems } from '@/widgets/project-management/ui/header';
+import type { HeaderItems } from '../model/types';
 
 import type { TranslateFn } from '@/shared/types/types';
 

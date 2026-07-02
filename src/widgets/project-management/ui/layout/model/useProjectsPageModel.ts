@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { getHeaderItems } from '@/widgets/project-management/ui/header';
 import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 import { useDeleteProject } from '@/features/project-delete';
 import { useProjects } from '@/entities/project/api/useProjects';
@@ -11,6 +10,8 @@ import { toProjectTableItem } from '@/entities/project/model/project-table-item'
 
 import { STATUSES } from '@/entities/project/model/statuses';
 import { NAMESPACE as NS } from '@/shared/i18n';
+
+import { getHeaderItems } from '../../../header/lib/get-header-items';
 
 export const useProjectsPageModel = () => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);

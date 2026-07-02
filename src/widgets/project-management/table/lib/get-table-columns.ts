@@ -1,4 +1,5 @@
-import type { TableColumn } from '@/widgets/project-management/ui/table';
+import type { TableColumn } from '../model/types';
+
 import type { TranslateFn } from '@/shared/types/types';
 
 export const getTableColumns = (t: TranslateFn): TableColumn[] => {

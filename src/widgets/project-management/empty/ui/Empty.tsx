@@ -2,7 +2,6 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { useToolbar } from '@/widgets/project-management/ui/toolbar/model/useToolbar';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, ProjectButton, Typography } from '@/shared/ui';
 import {
@@ -13,6 +12,8 @@ import {
   BUTTON_VARIANTS,
 } from '@/shared/ui/button/lib/constants';
 import { NoProjectsIcon } from '@/shared/ui/icons';
+
+import { useToolbar } from '../../toolbar';
 
 import styles from './Empty.module.scss';
 

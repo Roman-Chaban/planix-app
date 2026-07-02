@@ -1,20 +1,20 @@
 'use client';
 
+import type { ToolbarHeaderProps } from '../model/types';
+
 import type { FC } from 'react';
 
 import { useTranslation } from 'react-i18next';
-
-import { getHeaderItems } from '@/widgets/project-management/ui/header';
-import {
-  ToolbarHeaderItem,
-  type ToolbarHeaderProps,
-} from '@/widgets/project-management/ui/toolbar';
 
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { buildClassName } from '@/shared/lib';
 import { Box, List } from '@/shared/ui';
 
+import { getHeaderItems } from '../../header/lib/get-header-items';
+
 import styles from './Toolbar.module.scss';
+
+import { ToolbarHeaderItem } from './ToolbarHeaderItem';
 
 export const ToolbarHeader: FC<ToolbarHeaderProps> = ({
   activeId,

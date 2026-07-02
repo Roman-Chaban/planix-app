@@ -1,6 +1,7 @@
+import type { TableRowProps } from '../model/types';
+
 import { useMemo, type FC } from 'react';
 
-import type { TableRowProps } from '@/widgets/project-management/ui/table';
 import { buildClassName } from '@/shared/lib';
 import { StatusBadge, ActionsBar } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';

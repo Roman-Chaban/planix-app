@@ -1,7 +1,9 @@
+'use client';
+
+import type { ToolbarActionsProps } from '../model/types';
+
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import type { ToolbarActionsProps } from '@/widgets/project-management/ui/toolbar';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, FormField, ProjectButton } from '@/shared/ui';

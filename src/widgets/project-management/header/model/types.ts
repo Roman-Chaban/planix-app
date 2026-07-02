@@ -2,7 +2,7 @@ import type { ToolbarHeaderItemProps } from '../../toolbar';
 
 import type { Status } from '@/entities/project';
 
-export type HeaderProps = {
+export type ProjectHeaderProps = {
   title: string;
   metaInfo: {
     label: string;

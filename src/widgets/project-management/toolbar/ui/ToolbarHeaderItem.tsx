@@ -1,8 +1,8 @@
 'use client';
 
-import type { FC } from 'react';
+import type { ToolbarHeaderItemProps } from '../model/types';
 
-import type { ToolbarHeaderItemProps } from '@/widgets/project-management/ui/toolbar';
+import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Typography } from '@/shared/ui';

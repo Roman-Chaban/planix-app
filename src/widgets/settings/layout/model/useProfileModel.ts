@@ -7,7 +7,7 @@ import { ROUTES } from '@/app/routes';
 import { PROFILE_TABS } from '@/widgets/settings/menu/lib/tabs-content';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { resolveProfileTab } from '../../../menu';
+import { resolveProfileTab } from '../../menu';
 
 const { SETTINGS } = ROUTES;
 
@@ -16,7 +16,7 @@ export const useProfileModel = () => {
   const localizedRouter = useLocalizedRouter();
 
   const activeId = resolveProfileTab(searchParams.get('tab'));
-  const ActiveComponent = PROFILE_TABS[activeId] ?? PROFILE_TABS.personal;
+  const ActiveComponent = PROFILE_TABS[activeId] ?? PROFILE_TABS.profile;
 
   const handleTabChange = useCallback(
     (id: string) => {

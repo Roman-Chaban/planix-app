@@ -35,6 +35,14 @@ export const BUTTON_MAX_WIDTH = {
   '2XL': '2xl',
 } as const;
 
+export const BUTTON_FONT_WEIGHTS = {
+  REGULAR: 'regular',
+  MEDIUM: 'medium',
+  SEMIBOLD: 'semibold',
+  BOLD: 'bold',
+  EXTRABOLD: 'extrabold',
+};
+
 export const BUTTON_UI_PROPS = [
   'variant',
   'size',

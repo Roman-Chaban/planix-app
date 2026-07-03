@@ -12,12 +12,19 @@ export type ButtonVariant =
 export type ButtonSize = 'sm' | 'md' | 'lg' | 'compact';
 export type ButtonShape = 'default' | 'rounded' | 'circle' | 'pill';
 export type MaxWidth = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type FontWeight =
+  | 'regular'
+  | 'medium'
+  | 'semibold'
+  | 'bold'
+  | 'extrabold';
 
 export type ButtonProps = {
   variant?: ButtonVariant;
   size?: ButtonSize;
   shape?: ButtonShape;
   maxWidth?: MaxWidth;
+  fontWeight?: FontWeight;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
 

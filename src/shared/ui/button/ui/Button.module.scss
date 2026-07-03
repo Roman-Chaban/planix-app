@@ -19,7 +19,6 @@
 .default {
   background: $primary-700;
   color: $text-inverse;
-
   @include button-interaction($primary-800);
 }
 
@@ -118,4 +117,24 @@
 
 .maxWidth_xl {
   max-width: 13.5rem;
+}
+
+.fontWeight_regular {
+  font-weight: $font-weight-regular;
+}
+
+.fontWeight_medium {
+  font-weight: $font-weight-medium;
+}
+
+.fontWeight_bold {
+  font-weight: $font-weight-bold;
+}
+
+.fontWeight_semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.fontWeight_extrabold {
+  font-weight: $font-weight-extrabold;
 }

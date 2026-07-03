@@ -17,6 +17,7 @@ export const Button: FC<ButtonProps> = (props) => {
     size = 'compact',
     shape = 'default',
     fullWidth = false,
+    fontWeight = 400,
     maxWidth = 'md',
     className,
     startIcon,
@@ -36,6 +37,7 @@ export const Button: FC<ButtonProps> = (props) => {
     styles[size],
     styles[shape],
     maxWidth && styles[`maxWidth_${maxWidth}`],
+    fontWeight && styles[`fontWeight_${fontWeight}`],
     fullWidth && styles.fullWidth,
     className,
   );

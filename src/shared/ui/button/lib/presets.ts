@@ -1,4 +1,5 @@
 import {
+  BUTTON_FONT_WEIGHTS,
   BUTTON_MAX_WIDTH,
   BUTTON_SHAPES,
   BUTTON_SIZES,
@@ -11,6 +12,7 @@ const { LG, XS } = BUTTON_MAX_WIDTH;
 const { ROUNDED } = BUTTON_SHAPES;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 const { DEFAULT, OUTLINE } = BUTTON_VARIANTS;
+const { SEMIBOLD } = BUTTON_FONT_WEIGHTS;
 
 export const BUTTON_PRESETS = {
   SUBMIT: {
@@ -36,6 +38,7 @@ export const BUTTON_PRESETS = {
     shape: ROUNDED,
     size: MEDIUM,
     variant: OUTLINE,
+    fontWeight: SEMIBOLD,
   },
   UPDATE_PLAN: {
     fullWidth: true,
@@ -44,6 +47,7 @@ export const BUTTON_PRESETS = {
     shape: ROUNDED,
     size: MEDIUM,
     variant: DEFAULT,
+    fontWeight: SEMIBOLD,
   },
 } as const;
 

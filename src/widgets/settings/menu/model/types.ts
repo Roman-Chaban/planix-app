@@ -24,7 +24,7 @@ export type MenuProps = WithActiveMenu & { t: TranslateFn };
 export type ProfileMenuProps = WithActiveMenu;
 export type MenuItems = MenuItem[];
 
-export type ProfileTabId = 'personal' | 'notifications';
+export type ProfileTabId = 'profile' | 'notifications' | 'subscription';
 
 export type ProfileTabComponent = ComponentType;
 

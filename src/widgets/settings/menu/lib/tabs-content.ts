@@ -2,9 +2,11 @@ import type { ProfileTabMap } from '../model/types';
 
 import { Notifications } from '@/features/profile/notifications-profile';
 
-import { ProfileDetails } from '../../details';
+import { ProfileDetails } from '../../profile-details';
+import { Subscription } from '../../subscription-billing';
 
 export const PROFILE_TABS: ProfileTabMap = {
-  personal: ProfileDetails,
+  profile: ProfileDetails,
   notifications: Notifications,
+  subscription: Subscription,
 };

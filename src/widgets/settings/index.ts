@@ -1,4 +1,3 @@
-export { ProfileLayout } from './ui/layout';
-export { ProfileDetails, ProfileInfoItem } from './details';
+export { ProfileLayout } from './layout';
+export { ProfileDetails, ProfileInfoItem } from './profile-details';
 export { ProfileMenu } from './menu';
-export { SettingsHeader } from './header';

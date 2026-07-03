@@ -2,9 +2,8 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { SettingsHeader } from '@/widgets/settings';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { Box, List } from '@/shared/ui';
+import { Box, List, SettingsHeader } from '@/shared/ui';
 
 import { getNotificationsList } from '../lib/notifications-list';
 

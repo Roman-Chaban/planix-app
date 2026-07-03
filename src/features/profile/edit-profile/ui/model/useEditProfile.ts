@@ -1,3 +1,5 @@
+'use client';
+
 import type { ProfileEditFormProps, ProfileFormValues } from './types';
 
 import { useEffect } from 'react';

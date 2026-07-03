@@ -1,3 +1,5 @@
+'use client';
+
 import type { ProfileEditFormProps } from '../model/types';
 
 import type { FC } from 'react';

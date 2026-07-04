@@ -39,3 +39,13 @@ export { Tooltip } from './tooltip';
 export { Portal } from './portal';
 export { Switch } from './switch';
 export { SettingsHeader } from './setting-header';
+export {
+  TableContainer,
+  DataTable,
+  Table,
+  TableHead,
+  TableBody,
+  TableCell,
+  TableHeadCell,
+  TableRow,
+} from './table';

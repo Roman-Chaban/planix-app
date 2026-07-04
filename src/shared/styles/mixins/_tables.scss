@@ -1,8 +1,8 @@
+@use '../tokens/' as *;
+
 @mixin table-cell($padding: 1rem 1rem) {
   padding: $padding;
-  text-align: left;
-  vertical-align: middle;
-  line-height: 150%;
+  line-height: $line-height-base;
 }
 
 @mixin table-scroll {

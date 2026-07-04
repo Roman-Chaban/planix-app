@@ -17,4 +17,4 @@ export {
   toISO,
   toInputFormat,
 } from './date/format';
-export { formatCurrency, formatDate  } from './formatters'
+export { formatCurrency, formatDate } from './formatters';

@@ -22,9 +22,9 @@ export const formatDate = (
       typeof dateInput === 'string' ? new Date(dateInput) : dateInput;
 
     return new Intl.DateTimeFormat(locale, {
-      month: 'short', 
-      day: 'numeric', 
-      year: 'numeric', 
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
     }).format(date);
   } catch {
     return String(dateInput);

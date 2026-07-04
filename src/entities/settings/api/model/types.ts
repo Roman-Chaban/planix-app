@@ -5,6 +5,9 @@ export type ProfileData = {
   contact: string;
   birth_date: string;
   created_at: string;
+  plan_name: string;
+  plan_price?: number;
+  next_billing_date?: string | null;
 };
 
 export type Profile = {
@@ -19,4 +22,8 @@ export type Profile = {
   initials: string;
   birthDateFormatted: string;
   createdAtFormatted: string;
+  planName: string;
+  planPrice: number;
+  nextBillingDate: Date | null;
+  nextBillingDateFormatted: string;
 };

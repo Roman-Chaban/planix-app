@@ -6,7 +6,11 @@ import { Box, Typography } from '@/shared/ui';
 
 import styles from './ProfileDetails.module.scss';
 
-export const ProfileInfoItem: FC<ProfileInfoItemProps> = ({ label, value }) => {
+export const ProfileInfoItem: FC<ProfileInfoItemProps> = ({
+  label,
+  value,
+  children,
+}) => {
   return (
     <Box className={styles.field}>
       <Typography as="span" className={styles.label}>
@@ -15,6 +19,8 @@ export const ProfileInfoItem: FC<ProfileInfoItemProps> = ({ label, value }) => {
       <Typography as="span" className={styles.value}>
         {value}
       </Typography>
+
+      {children}
     </Box>
   );
 };

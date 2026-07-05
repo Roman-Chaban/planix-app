@@ -45,5 +45,28 @@
         "subtitle": "Отримуйте сповіщення про активність входу та дії, пов’язані з безпекою."
       }
     }
+  },
+  "subscriptionAndBilling": {
+    "title": "Підписка та білінг",
+    "professionalPlan": {
+      "title": "Професійний план",
+      "subtitle": "Найпопулярніший для бізнесів, що зростають",
+      "perMonth": "/місяць",
+      "nextBilling": "Наступне списання: {{date}}"
+    },
+    "professionalActions": {
+      "cancelPlan": "Скасувати план",
+      "updatePlan": "Оновити план"
+    },
+    "billingTable": {
+      "title": "Історія платежів",
+      "columns": {
+        "date": "Дата",
+        "duration": "Тривалість",
+        "amount": "Сума",
+        "paymentMethod": "Метод оплати",
+        "status": "Статус"
+      }
+    }
   }
 }

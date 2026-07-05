@@ -45,5 +45,28 @@
         "subtitle": "Get alerts for login activity and security-related actions."
       }
     }
+  },
+  "subscriptionAndBilling": {
+    "title": "Subscription & Billing",
+    "professionalPlan": {
+      "title": "Professional Plan",
+      "subtitle": "Most Popular for Growing businesses",
+      "perMonth": "/per month",
+      "nextBilling": "Next billing: {{date}}"
+    },
+    "professionalActions": {
+      "cancelPlan": "Cancel Plan",
+      "updatePlan": "Update Plan"
+    },
+    "billingTable": {
+      "title": "Billing History",
+      "columns": {
+        "date": "Date",
+        "duration": "Duration",
+        "amount": "Amount",
+        "paymentMethod": "Payment Method",
+        "status": "Status"
+      }
+    }
   }
 }

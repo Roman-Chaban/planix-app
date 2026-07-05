@@ -1,11 +1,11 @@
 import type { Profile } from '@/entities/settings';
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn, WithChildren } from '@/shared/types/types';
 
 type ProfileProps = { profile: Profile; t: TranslateFn };
 
-export type ProfileInfoItemProps = {
-  label: string;
-  value: string | number | Date | null | undefined;
+export type ProfileInfoItemProps = WithChildren & {
+  label?: string;
+  value?: string | number | Date | null | undefined;
 };
 
 export type ProfileFieldConfig = {

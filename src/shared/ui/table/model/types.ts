@@ -1,6 +1,10 @@
-import type { ComponentType, Key, ReactNode, SVGProps } from 'react';
+import type { Key, ReactNode } from 'react';
 
-import type { WithChildren, WithClassName } from '@/shared/types/types';
+import type {
+  SVGComponent,
+  WithChildren,
+  WithClassName,
+} from '@/shared/types/types';
 
 type BaseTableComponentProps = WithChildren & WithClassName;
 type BaseTableAppearanceProps = BaseTableComponentProps & TableStylesProps;
@@ -21,7 +25,7 @@ export type TableStylesProps = {
 export type TableColumn<T> = {
   key: Extract<keyof T, string>;
   title: string;
-  icon?: ComponentType<SVGProps<SVGSVGElement>>;
+  icon?: SVGComponent;
   render?: (row: T) => ReactNode;
 };
 

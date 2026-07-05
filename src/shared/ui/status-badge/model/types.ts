@@ -1,11 +1,10 @@
-import type { FC, SVGProps } from 'react';
-
 import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 import type { Status } from '@/entities/project';
+import type { SVGComponent } from '@/shared/types/types';
 
 export type StatusMap = Record<TabId, Status | null>;
 export type StatusClasses = Record<Status, string>;
-export type StatusIcons = Record<Status, FC<SVGProps<SVGSVGElement>>>;
+export type StatusIcons = Record<Status, SVGComponent>;
 export type StatusColor = Status;
 
 export type StatusBadgeProps = { status: Status };

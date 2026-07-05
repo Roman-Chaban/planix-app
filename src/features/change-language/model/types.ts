@@ -1,13 +1,12 @@
 import type { GroupBase, StylesConfig } from 'react-select';
 
-import type { ComponentType, SVGProps } from 'react';
-
 import type { Locale } from '@/shared/i18n/locales/locales';
+import type { SVGComponent } from '@/shared/types/types';
 
 export type LanguageOption = {
   value: Locale;
   label: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  icon: SVGComponent;
 };
 
 export type LanguageSelectStyles = StylesConfig<

@@ -1,6 +1,4 @@
-import type { ComponentType, SVGProps } from 'react';
-
-import type { TranslateFn } from '@/shared/types/types';
+import type { SVGComponent, TranslateFn } from '@/shared/types/types';
 
 export type SidebarProps = {
   isSidebarOpen?: boolean;
@@ -9,7 +7,7 @@ export type SidebarProps = {
 
 export type NavItemData = {
   id: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  icon: SVGComponent;
   label: string;
   href: string;
 };

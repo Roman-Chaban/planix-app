@@ -1,8 +1,8 @@
-import type { FC, SVGProps } from 'react';
+import type { SVGComponent } from '@/shared/types/types';
 
 export type ActionItem = {
   id: string;
-  icon: FC<SVGProps<SVGSVGElement>>;
+  icon: SVGComponent;
   onClick: () => void;
 };
 

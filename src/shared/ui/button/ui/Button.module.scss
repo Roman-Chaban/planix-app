@@ -3,11 +3,9 @@
 .button {
   gap: 0.625rem;
   line-height: 150%;
-
   font-family: inherit;
   border: none;
   cursor: pointer;
-
   transition: all 0.2s ease;
 
   @include button-disabled;
@@ -82,13 +80,6 @@
 
 .fullWidth {
   width: 100%;
-}
-
-.content {
-  width: auto;
-  height: auto;
-  position: relative;
-  @include flex-center;
 }
 
 .startIcon,

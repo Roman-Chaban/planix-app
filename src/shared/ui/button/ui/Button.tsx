@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 
-import { Box, Typography } from '@/shared/ui';
+import { Typography } from '@/shared/ui';
 import type { ButtonProps } from '@/shared/ui/button';
 
 import { getButtonProps } from '../lib/get-button-props';
@@ -59,7 +59,7 @@ export const Button: FC<ButtonProps> = (props) => {
         </Typography>
       )}
 
-      <Box className={styles.content}>
+      <>
         {children}
 
         {endIcon && (
@@ -70,7 +70,7 @@ export const Button: FC<ButtonProps> = (props) => {
             {endIcon}
           </Typography>
         )}
-      </Box>
+      </>
     </button>
   );
 };

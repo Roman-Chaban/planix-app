@@ -6,7 +6,7 @@ import {
   SidebarContext,
   type SidebarContextValue,
   type SidebarProviderProps,
-} from '@/features/sidebar';
+} from '@/app/providers/sidebar';
 
 const STORAGE_KEY = 'sidebar-collapsed';
 

@@ -19,7 +19,7 @@ import styles from './Subscription.module.scss';
 export const Subscription = () => {
   const { t } = useTranslation(NS.SETTINGS);
 
-  const { data: profile, isLoading } = useProfile();
+  const { profile, isLoading } = useProfile();
 
   if (!profile) return null;
 

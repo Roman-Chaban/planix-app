@@ -17,7 +17,7 @@ import { ProfileDetailsSkeleton } from './skeleton/ProfileDetailsSkeleton';
 export const ProfileDetails = () => {
   const { t } = useTranslation(NS.SETTINGS);
 
-  const { data: profile, isLoading } = useProfile();
+  const { profile, isLoading } = useProfile();
   const { toggleMode, isView, hydrated } = useChangeMode();
 
   if (!profile && !hydrated) return null;

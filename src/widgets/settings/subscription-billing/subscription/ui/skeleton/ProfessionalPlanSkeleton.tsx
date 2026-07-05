@@ -1,6 +1,7 @@
-import styles from '@/widgets/settings/subscription-billing/subscription/ui/Subscription.module.scss';
 import { Box } from '@/shared/ui';
 import { Skeleton } from '@/shared/ui/skeleton/ui/Skeleton';
+
+import styles from '../Subscription.module.scss';
 
 export const ProfessionalPlanSkeleton = () => {
   return (

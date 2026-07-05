@@ -1,8 +1,10 @@
 import { ProfileInfoItem } from '@/widgets/settings';
-import styles from '@/widgets/settings/profile-details/ui/ProfileDetails.module.scss';
+
 import { Box } from '@/shared/ui';
 
 import { Skeleton } from '@/shared/ui/skeleton/ui/Skeleton';
+
+import styles from '../ProfileDetails.module.scss';
 
 const ROWS_COUNT = 5;
 

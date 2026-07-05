@@ -4,18 +4,16 @@ import { useTranslation } from 'react-i18next';
 
 import { useProfile } from '@/entities/settings';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import {
-  BillingTableSkeleton,
-  Box,
-  ProfessionalPlanSkeleton,
-  SettingsHeader,
-} from '@/shared/ui';
+import { Box, SettingsHeader } from '@/shared/ui';
 
 import { Billing } from '../../billing/ui/Billing';
+
+import { BillingTableSkeleton } from '../../billing/ui/skeleton/BillingSkeleton';
 
 import { ProfessionalPlan } from './ProfessionalPlan';
 
 import { ProfessionalPlanActions } from './ProfessionalPlanActions';
+import { ProfessionalPlanSkeleton } from './skeleton/ProfessionalPlanSkeleton';
 import styles from './Subscription.module.scss';
 
 export const Subscription = () => {

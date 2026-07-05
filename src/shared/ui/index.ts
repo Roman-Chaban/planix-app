@@ -50,8 +50,3 @@ export {
 } from './table';
 
 export { Skeleton } from './skeleton';
-export {
-  BillingTableSkeleton,
-  ProfileDetailsSkeleton,
-  ProfessionalPlanSkeleton,
-} from './skeletons';

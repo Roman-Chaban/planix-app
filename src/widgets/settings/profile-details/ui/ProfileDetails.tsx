@@ -12,23 +12,25 @@ import { useChangeMode } from '../model/useChangeMode';
 import styles from './ProfileDetails.module.scss';
 import { ProfileHeader } from './ProfileHeader';
 import { ProfileInfoList } from './ProfileInfoList';
+import { ProfileDetailsSkeleton } from './skeleton/ProfileDetailsSkeleton';
 
 export const ProfileDetails = () => {
   const { t } = useTranslation(NS.SETTINGS);
 
-  const { data: profile } = useProfile();
+  const { data: profile, isLoading } = useProfile();
   const { toggleMode, isView, hydrated } = useChangeMode();
 
-  if (!profile) return null;
-  if (!hydrated) return null;
+  if (!profile && !hydrated) return null;
+
+  if (isLoading) return <ProfileDetailsSkeleton />;
 
   return (
     <Box className={styles.details}>
       <Box className={styles.profileDetails}>
-        <ProfileHeader profile={profile} t={t} onMode={toggleMode} />
+        <ProfileHeader profile={profile!} t={t} onMode={toggleMode} />
 
         {isView ? (
-          <ProfileInfoList profile={profile} t={t} />
+          <ProfileInfoList profile={profile!} t={t} />
         ) : (
           <ProfileEditForm onSuccess={toggleMode} />
         )}

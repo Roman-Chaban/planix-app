@@ -64,6 +64,7 @@
 }
 
 .button {
+  @include flex-center;
   position: relative;
 
   &::after {
@@ -83,9 +84,8 @@
   width: 0.75rem;
   height: 0.75rem;
   position: absolute;
-  top: 0.125rem;
-  right: 0.094rem;
-  transform: translate(25%, -40%);
+  top: 0.225rem;
+  right: 0.5rem;
 }
 
 .avatar {

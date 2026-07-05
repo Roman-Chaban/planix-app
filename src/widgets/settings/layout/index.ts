@@ -1,1 +1,1 @@
-export { ProfileLayout } from './ui/ProfileLayout';
+export { SettingsLayout } from './ui/SettingsLayout';

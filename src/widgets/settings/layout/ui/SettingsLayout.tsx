@@ -6,9 +6,9 @@ import { PageWrapper } from '@/shared/ui';
 import { ProfileMenu } from '../../menu';
 import { useProfileModel } from '../model/useProfileModel';
 
-import styles from './ProfileLayout.module.scss';
+import styles from './SettingsLayout.module.scss';
 
-export const ProfileLayout = () => {
+export const SettingsLayout = () => {
   const { activeId, ActiveComponent, handleTabChange } = useProfileModel();
 
   return (

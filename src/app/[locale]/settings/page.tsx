@@ -1,12 +1,12 @@
 import { Suspense } from 'react';
 
-import { ProfileLayout } from '@/widgets/settings';
+import { SettingsLayout } from '@/widgets/settings';
 import { Loader } from '@/shared/ui';
 
-export default function ProfilePage() {
+export default function SettingsPage() {
   return (
     <Suspense fallback={<Loader />}>
-      <ProfileLayout />
+      <SettingsLayout />
     </Suspense>
   );
 }

@@ -8,7 +8,7 @@ import { getProfile } from '../lib/profile';
 import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useProfile = () => {
-  return useQuery({
+  const query = useQuery({
     queryKey: queryKeys.profile.all,
 
     queryFn: async () => {
@@ -24,4 +24,9 @@ export const useProfile = () => {
 
     retry: false,
   });
+
+  return {
+    ...query,
+    profile: query.data,
+  };
 };

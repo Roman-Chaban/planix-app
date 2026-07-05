@@ -4,9 +4,9 @@ import type { ToolbarProps } from '../model/types';
 
 import type { FC } from 'react';
 
+import { useSidebar } from '@/app/providers/sidebar';
 import { ToolbarHeader, ToolbarActions } from '@/widgets/project-management';
 
-import { useSidebar } from '@/features/sidebar';
 import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
 

@@ -20,7 +20,6 @@ export { AppLink } from './link';
 export { List } from './list';
 export { PageWrapper } from './page-wrapper';
 export { ProjectButton } from './project-button';
-export { ProjectsTableSkeleton } from './skeletons';
 export { StatusBadge } from './status-badge';
 export { Textarea } from './textarea';
 export { Typography } from './typography';
@@ -49,3 +48,10 @@ export {
   TableHeadCell,
   TableRow,
 } from './table';
+
+export { Skeleton } from './skeleton';
+export {
+  BillingTableSkeleton,
+  ProfileDetailsSkeleton,
+  ProfessionalPlanSkeleton,
+} from './skeletons';

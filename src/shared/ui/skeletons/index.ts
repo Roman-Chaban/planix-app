@@ -1,1 +1,5 @@
-export { ProjectsTableSkeleton } from './project-table/ui/ProjectTableSkeleton';
+export {
+  BillingTableSkeleton,
+  ProfileDetailsSkeleton,
+  ProfessionalPlanSkeleton,
+} from './ui';

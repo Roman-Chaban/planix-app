@@ -20,9 +20,11 @@ export const ProfileDetails = () => {
   const { profile, isLoading } = useProfile();
   const { toggleMode, isView, hydrated } = useChangeMode();
 
-  if (!profile && !hydrated) return null;
+  if (!hydrated) return null;
 
   if (isLoading) return <ProfileDetailsSkeleton />;
+
+  if (!profile) return null;
 
   return (
     <Box className={styles.details}>
@@ -30,7 +32,7 @@ export const ProfileDetails = () => {
         <ProfileHeader profile={profile!} t={t} onMode={toggleMode} />
 
         {isView ? (
-          <ProfileInfoList profile={profile!} t={t} />
+          <ProfileInfoList profile={profile} t={t} />
         ) : (
           <ProfileEditForm onSuccess={toggleMode} />
         )}

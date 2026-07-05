@@ -4,8 +4,12 @@ import { Box } from '../../box';
 
 import styles from './Skeleton.module.scss';
 
-export const Skeleton = ({ width = '100%', height = 20 }: SkeletonProps) => {
-  const geometry = { width, height };
+export const Skeleton = ({
+  width = '100%',
+  height = 20,
+  borderRadius = '50%',
+}: SkeletonProps) => {
+  const geometry = { width, height, borderRadius };
 
   return <Box className={styles.skeleton} style={geometry} />;
 };

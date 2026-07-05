@@ -10,7 +10,7 @@ import { useProfile } from '@/entities/settings';
 import { supabase } from '@/shared/api/supabase';
 
 export const useEditProfile = ({ onSuccess }: ProfileEditFormProps) => {
-  const { data: profile, refetch } = useProfile();
+  const { profile, refetch } = useProfile();
 
   const form = useForm<ProfileFormValues>({
     defaultValues: {

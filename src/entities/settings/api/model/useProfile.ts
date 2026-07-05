@@ -17,6 +17,7 @@ export const useProfile = () => {
   });
 
   return {
+    ...query,
     profile: query.data ?? null,
     isLoading: isSessionLoading || query.isLoading,
   };

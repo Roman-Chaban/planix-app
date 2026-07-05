@@ -1,13 +1,18 @@
 import type { SubmitHandler } from 'react-hook-form';
 
+import { ROUTES } from '@/app/routes';
 import { supabase } from '@/shared/api/supabase';
 import { setFormErrors } from '@/shared/lib';
-import { useAppForm } from '@/shared/lib/hooks';
+import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 import type { TranslateFn } from '@/shared/types/types';
 
 import { loginSchema, type LoginFormSchema } from './schema';
 
+const { DASHBOARD } = ROUTES;
+
 export const useLogin = (t: TranslateFn) => {
+  const localizedRouter = useLocalizedRouter();
+
   const loginForm = useAppForm<LoginFormSchema>({
     schema: loginSchema,
     defaultValues: {
@@ -31,6 +36,8 @@ export const useLogin = (t: TranslateFn) => {
     });
 
     if (error) throw error;
+
+    localizedRouter.push(DASHBOARD);
   };
 
   const handleSubmit: SubmitHandler<LoginFormSchema> = async (data) => {

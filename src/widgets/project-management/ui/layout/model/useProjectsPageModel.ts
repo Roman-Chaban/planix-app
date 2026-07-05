@@ -19,7 +19,7 @@ export const useProjectsPageModel = () => {
 
   const deleteModal = useDeleteProject();
 
-  const { data, isLoading, showSkeleton, Skeleton } = useProjects();
+  const { data, isLoading } = useProjects();
 
   const projects = useMemo(() => {
     const allProjects = data?.data ?? [];
@@ -27,7 +27,7 @@ export const useProjectsPageModel = () => {
     return allProjects.map(toProjectTableItem);
   }, [data]);
 
-  const isLoadingState = isLoading || showSkeleton;
+  const isLoadingState = isLoading;
 
   const isEmpty = !isLoadingState && projects.length === 0;
   const hasData = !isLoadingState && projects.length > 0;
@@ -38,8 +38,6 @@ export const useProjectsPageModel = () => {
     activeId,
     setActiveId,
     projects,
-    showSkeleton,
-    Skeleton,
     isEmpty,
     hasData,
     isCanceled,

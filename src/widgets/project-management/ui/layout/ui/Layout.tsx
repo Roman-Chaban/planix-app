@@ -12,16 +12,8 @@ import { PageWrapper } from '@/shared/ui';
 import styles from './Layout.module.scss';
 
 export const Layout = () => {
-  const {
-    activeId,
-    setActiveId,
-    showSkeleton,
-    Skeleton,
-    isEmpty,
-    hasData,
-    deleteModal,
-    projects,
-  } = useProjectsPageModel();
+  const { activeId, setActiveId, isEmpty, hasData, deleteModal, projects } =
+    useProjectsPageModel();
 
   return (
     <PageWrapper
@@ -29,8 +21,6 @@ export const Layout = () => {
       sectionClassName={styles.projects}
     >
       <Toolbar activeId={activeId} setActiveId={setActiveId} />
-
-      {showSkeleton && Skeleton && <Skeleton />}
 
       {isEmpty && <Empty />}
 

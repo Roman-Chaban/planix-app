@@ -15,6 +15,7 @@ import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './Header.module.scss';
+import { HeaderActionsSkeleton } from './skeleton/HeaderActionsSkeleton';
 
 const { BUTTON } = BUTTON_TYPES;
 const { CIRCLE, ROUNDED } = BUTTON_SHAPES;
@@ -25,9 +26,7 @@ const { BOTTOM, LEFT } = TOOLTIP_POSITION;
 
 export const HeaderActions = () => {
   const { t } = useTranslation(NS.HEADER);
-  const { data: profile, isLoading } = useProfile();
-
-  if (isLoading) return null;
+  const { profile, isLoading } = useProfile();
 
   return (
     <Box className={styles.headerAuth}>
@@ -44,7 +43,9 @@ export const HeaderActions = () => {
         <NotificationIcon />
       </Button>
 
-      {!profile ? (
+      {isLoading ? (
+        <HeaderActionsSkeleton />
+      ) : !profile ? (
         <Tooltip position={BOTTOM} message={t('logIn')}>
           <Button type={BUTTON} size={MEDIUM} shape={ROUNDED}>
             <AppLink href={AUTH} className={styles.link}>

@@ -16,3 +16,7 @@ export type WithChildren = {
 export type WithClassName = {
   className?: string;
 };
+
+export type WithSkeleton = {
+  skeleton: ReactNode;
+};

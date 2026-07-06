@@ -4,12 +4,9 @@ import { Controller } from 'react-hook-form';
 
 import { AuthButton, Box, Checkbox } from '@/shared/ui';
 
-import { Button, BUTTON_MAX_WIDTH, BUTTON_VARIANTS } from '@/shared/ui/button';
+import { Button } from '@/shared/ui/button';
 
 import styles from './LoginForm.module.scss';
-
-const { SM, LG } = BUTTON_MAX_WIDTH;
-const { TRANSPARENT } = BUTTON_VARIANTS;
 
 export const LoginActions = ({
   control,
@@ -31,17 +28,17 @@ export const LoginActions = ({
           )}
         />
 
-        <Button
-          variant={TRANSPARENT}
-          maxWidth={LG}
-          className={styles.loginButton}
-          onClick={onForgotPassword}
-        >
+        <Button preset="AUTH_FORGOT" className={styles.loginButton} onClick={onForgotPassword}>
           {forgotPasswordLabel}
         </Button>
       </Box>
 
-      <AuthButton label={submitLabel} disabled={isValid} maxWidth={SM} isLoading={isLoading} />
+      <AuthButton
+        preset="AUTH_LOGIN"
+        label={submitLabel}
+        disabled={isValid}
+        isLoading={isLoading}
+      />
     </Box>
   );
 };

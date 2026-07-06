@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import type { NavigateFn } from '@/shared/types/types';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
+import { BUTTON_MIN_WIDTH } from '@/shared/ui/button';
 
 import { resetFormFields } from '../lib/form-config';
 import { useResetPassword } from '../model/useResetPassword';
 
-const { XL } = BUTTON_MAX_WIDTH;
+const { LG } = BUTTON_MIN_WIDTH;
 
 type ResetFormProps = {
   onNavigate: NavigateFn;
@@ -28,7 +28,7 @@ export const ResetForm = ({ onNavigate }: ResetFormProps) => {
 
       <AuthButton
         label={t('reset.resetPasswordButton')}
-        maxWidth={XL}
+        maxWidth={LG}
         disabled={isSubmitDisabled}
       />
     </AppForm>

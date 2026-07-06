@@ -1,7 +1,8 @@
 @use '@/shared/styles' as *;
 
 .loginFormMainWrapper {
-  @include flex-col(3.625rem, start, stretch, column);
+  width: 100%;
+  @include flex-col(3.625rem, start, start, column);
 
   @include respond(md) {
     gap: 1.5rem;
@@ -9,7 +10,8 @@
 }
 
 .loginFormMain {
-  @include flex-row(0, space-between, center);
+  width: 100%;
+  @include flex-between;
 }
 
 .loginButton {

@@ -5,14 +5,11 @@ import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, AuthButton, Box, FormFields, FormDateField, Tooltip } from '@/shared/ui';
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
 import { registerFormFields } from '../lib/form-config';
 import { useRegistration } from '../model/useRegistration';
 
 import styles from './RegisterForm.module.scss';
-
-const { LG } = BUTTON_MAX_WIDTH;
 
 export const RegisterForm = () => {
   const { t } = useTranslation(NS.AUTH);
@@ -60,9 +57,9 @@ export const RegisterForm = () => {
 
       <Tooltip position="bottom" message={t('register.tooltipMessage')}>
         <AuthButton
+          preset="AUTH_REGISTER"
           label={t('register.registration')}
           disabled={!isValid}
-          maxWidth={LG}
           isLoading={isSubmitting}
         />
       </Tooltip>

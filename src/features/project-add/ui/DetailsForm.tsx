@@ -15,7 +15,7 @@ import {
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, Box, FormFields, ProjectButton } from '@/shared/ui';
 import {
-  BUTTON_MAX_WIDTH,
+  BUTTON_MIN_WIDTH,
   BUTTON_SHAPES,
   BUTTON_SIZES,
   BUTTON_TYPES,
@@ -28,7 +28,7 @@ const { SUBMIT } = BUTTON_TYPES;
 const { DEFAULT } = BUTTON_VARIANTS;
 const { ROUNDED } = BUTTON_SHAPES;
 const { LARGE } = BUTTON_SIZES;
-const { LG } = BUTTON_MAX_WIDTH;
+const { LG } = BUTTON_MIN_WIDTH;
 
 export const DetailsForm = () => {
   const { t } = useTranslation(NS.PROJECT_ADD);
@@ -60,7 +60,7 @@ export const DetailsForm = () => {
           disabled={isLoading}
           label={t('addProjectButton')}
           translationNamespace={NS.PROJECT_ADD}
-          maxWidth={LG}
+          minWidth={LG}
         />
       </AppForm>
     </Box>

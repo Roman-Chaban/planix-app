@@ -6,8 +6,10 @@ import { variantClass } from '../lib/styles';
 
 import styles from './Table.module.scss';
 
-export const TableContainer = ({ children, variant = 'default' }: TableContainerProps) => {
+export const TableContainer = ({ children, variant = 'default', ref }: TableContainerProps) => {
   return (
-    <div className={buildClassName(styles.tableContainer, variantClass[variant])}>{children}</div>
+    <div ref={ref} className={buildClassName(styles.tableContainer, variantClass[variant])}>
+      {children}
+    </div>
   );
 };

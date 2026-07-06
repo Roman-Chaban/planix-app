@@ -1,16 +1,17 @@
 import type { Key, ReactNode } from 'react';
 
-import type { SVGComponent, WithChildren, WithClassName } from '@/shared/types/types';
+import type { Axis } from '@/shared/lib/hooks/model/types';
+import type { SVGComponent, WithChildren, WithClassName, WithRef } from '@/shared/types/types';
 
 type BaseTableComponentProps = WithChildren & WithClassName;
 type BaseTableAppearanceProps = BaseTableComponentProps & TableStylesProps;
+export type TableContainerProps = WithRef<BaseTableAppearanceProps, HTMLDivElement>;
 export type TableProps = BaseTableAppearanceProps;
 export type TableHeadProps = BaseTableComponentProps;
 export type TableRowProps = BaseTableComponentProps;
 export type TableCellProps = BaseTableAppearanceProps;
 export type TableHeadCellProps = BaseTableAppearanceProps;
 export type TableBodyProps = BaseTableComponentProps;
-export type TableContainerProps = BaseTableAppearanceProps;
 
 export type TableStylesProps = {
   size?: TableSize;
@@ -29,6 +30,7 @@ export type DataTableProps<T extends Record<string, ReactNode>> = TableStylesPro
   data: T[];
   columns: TableColumn<T>[];
   getRowKey: (row: T) => Key;
+  dragAxis?: Axis;
 };
 
 /* Design System Types */

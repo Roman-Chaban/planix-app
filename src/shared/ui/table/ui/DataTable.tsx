@@ -2,6 +2,8 @@ import type { DataTableProps } from '../model/types';
 
 import { type ReactNode } from 'react';
 
+import { useDragScroll } from '@/shared/lib/hooks';
+
 import { Table } from './Table';
 import { TableBody } from './TableBody';
 import { TableCell } from './TableCell';
@@ -16,9 +18,14 @@ export const DataTable = <T extends Record<string, ReactNode>>({
   getRowKey,
   size = 'md',
   variant = 'default',
+  dragAxis,
 }: DataTableProps<T>) => {
+  const drafRef = useDragScroll<HTMLDivElement>({
+    axis: dragAxis,
+  });
+
   return (
-    <TableContainer variant={variant}>
+    <TableContainer ref={drafRef} variant={variant}>
       <Table>
         <TableHead>
           <TableRow>

@@ -61,7 +61,6 @@ export const BUTTON_PRESETS: ButtonPresets = {
   },
 
   SUBMIT: {
-    fullWidth: true,
     type: SUBMIT,
     minWidth: LG,
     shape: ROUNDED,

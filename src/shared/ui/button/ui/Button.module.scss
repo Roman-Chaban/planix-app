@@ -1,6 +1,8 @@
 @use '@/shared/styles' as *;
 
 .button {
+  min-width: auto;
+  font-weight: $font-weight-medium;
   gap: 0.625rem;
   line-height: 150%;
   font-family: inherit;
@@ -15,6 +17,7 @@
 .default {
   background: $primary-700;
   color: $text-inverse;
+  font-weight: $font-weight-semibold;
   @include button-interaction($primary-800);
 }
 
@@ -88,42 +91,18 @@
   @include flex-center;
 }
 
-.maxWidth_xs {
-  max-width: 6.688rem;
+.minWidth_content {
+  min-width: auto;
 }
 
-.maxWidth_sm {
-  max-width: 7.75rem;
+.minWidth_sm {
+  min-width: $button-min-width-sm;
 }
 
-.maxWidth_md {
-  max-width: 8.188rem;
+.minWidth_md {
+  min-width: $button-min-width-md;
 }
 
-.maxWidth_lg {
-  max-width: 11.563rem;
-}
-
-.maxWidth_xl {
-  max-width: 13.5rem;
-}
-
-.fontWeight_regular {
-  font-weight: $font-weight-regular;
-}
-
-.fontWeight_medium {
-  font-weight: $font-weight-medium;
-}
-
-.fontWeight_bold {
-  font-weight: $font-weight-bold;
-}
-
-.fontWeight_semibold {
-  font-weight: $font-weight-semibold;
-}
-
-.fontWeight_extrabold {
-  font-weight: $font-weight-extrabold;
+.minWidth_lg {
+  min-width: $button-min-width-lg;
 }

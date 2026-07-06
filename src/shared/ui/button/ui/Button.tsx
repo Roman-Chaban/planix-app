@@ -1,9 +1,9 @@
 import { buildClassName } from '@/shared/lib';
 
-import { Typography } from '@/shared/ui';
+import { Box } from '@/shared/ui';
 import type { ButtonProps } from '@/shared/ui/button';
 
-import { getButtonProps } from '../lib/get-button-props';
+import { getButtonProps } from '../lib/button.helpers';
 
 import styles from './Button.module.scss';
 
@@ -15,8 +15,7 @@ export const Button = (props: ButtonProps) => {
     size = 'compact',
     shape = 'default',
     fullWidth = false,
-    fontWeight = 400,
-    maxWidth = 'md',
+    minWidth,
     className,
     startIcon,
     endIcon,
@@ -25,7 +24,6 @@ export const Button = (props: ButtonProps) => {
     children,
     disabled,
     isLoading,
-    onClick,
     type,
   } = allProps;
 
@@ -34,35 +32,20 @@ export const Button = (props: ButtonProps) => {
     styles[variant],
     styles[size],
     styles[shape],
-    maxWidth && styles[`maxWidth_${maxWidth}`],
-    fontWeight && styles[`fontWeight_${fontWeight}`],
+    minWidth && styles[`minWidth_${minWidth}`],
     fullWidth && styles.fullWidth,
     className,
   );
 
   return (
-    <button
-      {...htmlProps}
-      className={buttonClasses}
-      disabled={disabled || isLoading}
-      type={type}
-      onClick={onClick}
-    >
+    <button {...htmlProps} className={buttonClasses} disabled={disabled || isLoading} type={type}>
       {startIcon && (
-        <Typography as="span" className={buildClassName(styles.icon, startIconClassName)}>
-          {startIcon}
-        </Typography>
+        <Box className={buildClassName(styles.icon, startIconClassName)}>{startIcon}</Box>
       )}
 
-      <>
-        {children}
+      {children}
 
-        {endIcon && (
-          <Typography as="span" className={buildClassName(styles.icon, endIconClassName)}>
-            {endIcon}
-          </Typography>
-        )}
-      </>
+      {endIcon && <Box className={buildClassName(styles.icon, endIconClassName)}>{endIcon}</Box>}
     </button>
   );
 };

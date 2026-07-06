@@ -9,6 +9,7 @@
   transition: all 0.2s ease;
 
   @include button-disabled;
+  @include text-ellipsis;
 }
 
 .default {

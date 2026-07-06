@@ -59,16 +59,20 @@
   padding: $padding;
 }
 
-@mixin active-left-bar($color, $height) {
+@mixin left-bar($color, $height, $background: transparent) {
   position: relative;
-  background: $bg-brand-subtle;
+  background: $background;
 
   &::before {
-    position: absolute;
     content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+
     width: 0.188rem;
     height: $height;
-    left: 0;
+
+    transform: translateY(-50%);
     background: $color;
   }
 }

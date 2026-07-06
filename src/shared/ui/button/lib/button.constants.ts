@@ -26,29 +26,19 @@ export const BUTTON_SHAPES = {
   PILL: 'pill',
 } as const;
 
-export const BUTTON_MAX_WIDTH = {
-  XS: 'xs',
+export const BUTTON_MIN_WIDTH = {
+  CONTENT: 'content',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',
-  XL: 'xl',
-  '2XL': '2xl',
 } as const;
-
-export const BUTTON_FONT_WEIGHTS = {
-  REGULAR: 'regular',
-  MEDIUM: 'medium',
-  SEMIBOLD: 'semibold',
-  BOLD: 'bold',
-  EXTRABOLD: 'extrabold',
-};
 
 export const BUTTON_UI_PROPS = [
   'variant',
   'size',
   'shape',
   'fullWidth',
-  'maxWidth',
+  'minWidth',
   'preset',
   'isLoading',
   'startIcon',

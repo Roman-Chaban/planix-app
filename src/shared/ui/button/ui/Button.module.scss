@@ -45,10 +45,6 @@
 
 .transparent {
   background: transparent;
-
-  &:hover {
-    background: transparent;
-  }
 }
 
 .circle {
@@ -64,6 +60,11 @@
 
 .rounded {
   border-radius: 1.875rem;
+}
+
+.compact {
+  padding: 0;
+  margin: 0;
 }
 
 .sm {

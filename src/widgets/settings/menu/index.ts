@@ -1,4 +1,4 @@
-export { getProfileMenuItems } from './lib/get-menu-items';
+export { PROFILE_MENU } from './lib/get-menu-items';
 export { DEFAULT_PROFILE_TAB } from './lib/menu.constants';
 export { resolveProfileTab } from './lib/resolve-profile-tab';
 export { PROFILE_TABS } from './lib/tabs-content';

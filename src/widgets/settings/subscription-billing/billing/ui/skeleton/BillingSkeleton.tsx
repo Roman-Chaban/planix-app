@@ -43,7 +43,7 @@ export const BillingTableSkeleton = ({ t, size }: BillingSkeletonProps) => {
             <TableRow key={rowIndex}>
               {columns.map((column) => (
                 <TableCell key={column.key} size={size}>
-                  <Skeleton />
+                  <Skeleton height={25} radius={30} />
                 </TableCell>
               ))}
             </TableRow>

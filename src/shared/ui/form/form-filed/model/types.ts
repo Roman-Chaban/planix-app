@@ -14,7 +14,7 @@ export type FormFieldVariant =
 
 export type IconPosition = 'start' | 'end';
 
-export type FormFieldProps = {
+export type FormFieldProps = WithClassName & {
   id: string;
   label?: string;
   error?: string;

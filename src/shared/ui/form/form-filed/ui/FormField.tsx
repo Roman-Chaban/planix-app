@@ -22,6 +22,7 @@ export const FormField = ({
   inputProps,
   inputRef,
   children,
+  className,
 }: FormFieldProps) => {
   const { placeholder, required, value, ...restInputProps } = inputProps || {};
 
@@ -36,7 +37,7 @@ export const FormField = ({
   });
 
   return (
-    <Box className={styles.field}>
+    <Box className={buildClassName(className, styles.field)}>
       {label && (
         <FormLabel error={error} htmlFor={id}>
           {label}

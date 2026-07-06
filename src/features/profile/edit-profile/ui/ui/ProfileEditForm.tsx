@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { AppForm, Button, FormFields } from '@/shared/ui';
 
-import { editFields } from '../lib/config';
+import { editFields } from '../lib/form-config';
 
 import { useEditProfile } from '../model/useEditProfile';
 

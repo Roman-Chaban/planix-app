@@ -2,9 +2,11 @@ import type { FieldErrors, FieldValues, UseFormRegister, Path } from 'react-hook
 
 import type { ReactNode } from 'react';
 
+import type { WithClassName } from '@/shared/types/types';
+
 type FormFieldFeature = 'password-toggle' | 'none';
 
-export type FormFieldConfig<T extends FieldValues> = {
+export type FormFieldConfig<T extends FieldValues> = WithClassName & {
   name: Path<T>;
   label: string;
   type: string;
@@ -14,7 +16,7 @@ export type FormFieldConfig<T extends FieldValues> = {
   endIcon?: ReactNode;
   feature?: FormFieldFeature;
   required?: boolean;
-  gridArea?: string;
+  gridArea: string;
 };
 
 export type FormFieldsProps<T extends FieldValues> = {

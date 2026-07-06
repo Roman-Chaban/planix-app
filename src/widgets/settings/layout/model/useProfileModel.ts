@@ -1,33 +1,55 @@
 'use client';
 
-import { useCallback } from 'react';
+import type { ProfileTabId } from '../../menu/model/types';
+
+import { useCallback, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 import { ROUTES } from '@/app/routes';
-import { PROFILE_TABS } from '@/widgets/settings/menu/lib/tabs-content';
-import { useLocalizedRouter } from '@/shared/lib/hooks';
+import { useAuth, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { resolveProfileTab } from '../../menu';
+import { PROFILE_MENU } from '../../menu';
 
 const { SETTINGS } = ROUTES;
 
 export const useProfileModel = () => {
+  const { isAuthenticated, isLoading } = useAuth();
+
   const searchParams = useSearchParams();
   const localizedRouter = useLocalizedRouter();
 
-  const activeId = resolveProfileTab(searchParams.get('tab'));
-  const ActiveComponent = PROFILE_TABS[activeId] ?? PROFILE_TABS.profile;
+  const requestedTabId = searchParams.get('tab');
+
+  const profileTabs = useMemo(() => PROFILE_MENU.filter((item) => item.type === 'tab'), []);
+
+  const availableTabs = useMemo(
+    () => profileTabs.filter((tab) => isAuthenticated || !tab.requiresAuth),
+    [profileTabs, isAuthenticated],
+  );
+
+  const activeTab = useMemo(() => {
+    return availableTabs.find((tab) => tab.id === requestedTabId) ?? availableTabs[0];
+  }, [availableTabs, requestedTabId]);
+
+  useEffect(() => {
+    if (isLoading) return;
+
+    if (requestedTabId && requestedTabId !== activeTab.id) {
+      localizedRouter.replace(`${SETTINGS}?tab=${activeTab.id}`);
+    }
+  }, [requestedTabId, activeTab.id, localizedRouter, isLoading]);
 
   const handleTabChange = useCallback(
-    (id: string) => {
+    (id: ProfileTabId) => {
       localizedRouter.push(`${SETTINGS}?tab=${id}`);
     },
     [localizedRouter],
   );
 
   return {
-    activeId,
-    ActiveComponent,
+    activeId: activeTab.id,
+    ActiveComponent: activeTab.component,
     handleTabChange,
+    isAuthenticated,
   };
 };

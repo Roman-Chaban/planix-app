@@ -2,21 +2,35 @@ import type { MenuProps } from '../model/types';
 
 import { List } from '@/shared/ui';
 
-import { PROFILE_MENU } from '../lib/get-menu-items';
+import { PROFILE_MENU } from '../lib/profile-menu';
 
 import { MenuItem } from './MenuItem';
 import styles from './ProfileMenu.module.scss';
 
-export const Menu = ({ t, activeId, setActiveId }: MenuProps) => {
+export const Menu = ({ t, activeId, setActiveId, isAuthenticated }: MenuProps) => {
   return (
     <List
       className={styles.list}
-      getItemKey={(key) => key.id}
+      getItemKey={(item) => item.id}
       renderList={PROFILE_MENU}
       renderItem={(item) => {
+        if (item.type === 'action') {
+          return null;
+        }
+
         const isActive = item.id === activeId;
 
-        return <MenuItem {...item} isActive={isActive} setActiveId={setActiveId} t={t} />;
+        const disabled = item.requiresAuth && !isAuthenticated;
+
+        return (
+          <MenuItem
+            {...item}
+            t={t}
+            isActive={isActive}
+            disabled={disabled}
+            setActiveId={setActiveId}
+          />
+        );
       }}
     />
   );

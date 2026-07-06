@@ -10,7 +10,7 @@ import { Box, Typography } from '@/shared/ui';
 import { Menu } from './Menu';
 import styles from './ProfileMenu.module.scss';
 
-export const ProfileMenu = ({ activeId, setActiveId }: ProfileMenuProps) => {
+export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: ProfileMenuProps) => {
   const { t } = useTranslation(NS.SETTINGS);
 
   return (
@@ -20,7 +20,12 @@ export const ProfileMenu = ({ activeId, setActiveId }: ProfileMenuProps) => {
           {t('settings')}
         </Typography>
 
-        <Menu t={t} activeId={activeId} setActiveId={setActiveId} />
+        <Menu
+          isAuthenticated={isAuthenticated}
+          t={t}
+          activeId={activeId}
+          setActiveId={setActiveId}
+        />
       </Box>
     </Box>
   );

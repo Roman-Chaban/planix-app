@@ -1,32 +1,46 @@
 import type { ComponentType } from 'react';
 
-import { type TranslateFn } from '@/shared/types/types';
+import { type IsAuthenticated, type TranslateFn } from '@/shared/types/types';
 
 type WithActiveMenu = {
-  activeId: string;
-  setActiveId: (id: string) => void;
+  activeId: ProfileTabId;
+  setActiveId: (id: ProfileTabId) => void;
 };
 
-type MenuItemBase = {
-  id: string;
+export type ProfileTabId = 'profile' | 'notifications' | 'subscription' | 'system';
+export type MenuActionId = 'logout';
+export type MenuId = ProfileTabId | MenuActionId;
+
+type BaseMenuItem = {
   label: string;
+  requiresAuth?: boolean;
 };
 
-export type MenuItem = MenuItemBase;
-
-export type MenuItemProps = MenuItemBase & {
-  t: TranslateFn;
-  isActive: boolean;
-  setActiveId: (id: string) => void;
+export type ProfileTabMenuItem = BaseMenuItem & {
+  type: 'tab';
+  id: ProfileTabId;
+  component: ComponentType;
 };
 
-export type MenuProps = WithActiveMenu & { t: TranslateFn };
-export type ProfileMenuProps = WithActiveMenu;
+export type ActionMenuItem = BaseMenuItem & {
+  type: 'action';
+  id: MenuActionId;
+};
+
+export type MenuItem = ProfileTabMenuItem | ActionMenuItem;
+
 export type MenuItems = MenuItem[];
 
-export type ProfileTabId = 'profile' | 'notifications' | 'subscription';
+export type MenuItemProps = ProfileTabMenuItem & {
+  t: TranslateFn;
+  isActive: boolean;
+  disabled?: boolean;
+  setActiveId: (id: ProfileTabId) => void;
+};
 
-export type ProfileTabComponent = ComponentType;
+export type MenuProps = WithActiveMenu &
+  IsAuthenticated & {
+    t: TranslateFn;
+  };
 
-export type ProfileTabMap = Record<ProfileTabId, ProfileTabComponent>;
-export type TabId = ProfileTabId;
+export type ProfileMenuProps = WithActiveMenu & IsAuthenticated;

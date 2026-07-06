@@ -1,26 +1,51 @@
 import type { MenuItemProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, Button, Typography } from '@/shared/ui';
+import { Box, Button, Tooltip, Typography } from '@/shared/ui';
 
 import { BUTTON_VARIANTS } from '@/shared/ui/button';
+
+import { BlockedIcon } from '@/shared/ui/icons';
+
+import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './ProfileMenu.module.scss';
 
 const { TRANSPARENT } = BUTTON_VARIANTS;
+const { RIGHT } = TOOLTIP_POSITION;
 
-export const MenuItem = ({ id, label, t, isActive, setActiveId }: MenuItemProps) => {
+export const MenuItem = ({ id, label, t, isActive, disabled, setActiveId }: MenuItemProps) => {
+  const handleClick = () => {
+    if (disabled) return;
+
+    setActiveId(id);
+  };
+
   return (
-    <Box className={buildClassName(styles.box, isActive && styles.boxActive)}>
+    <Box
+      className={buildClassName(
+        styles.box,
+        disabled ? styles.boxDisabled : isActive && styles.boxActive,
+      )}
+    >
       <Button
         fullWidth
         variant={TRANSPARENT}
-        onClick={() => setActiveId(id)}
+        data-disabled={disabled}
+        onClick={handleClick}
         className={styles.item}
       >
         <Typography as="span" className={buildClassName(styles.label, isActive && styles.isActive)}>
           {t(label)}
         </Typography>
+
+        {disabled && (
+          <Box as="div" className={styles.blockedIcon}>
+            <Tooltip position={RIGHT} message={t('profileMenu.restrictedFeature')}>
+              <BlockedIcon />
+            </Tooltip>
+          </Box>
+        )}
       </Button>
     </Box>
   );

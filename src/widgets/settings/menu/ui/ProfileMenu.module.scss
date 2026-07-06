@@ -33,17 +33,36 @@
 }
 
 .boxActive {
-  @include active-left-bar($icon-brand, 3.188rem);
+  @include left-bar($icon-brand, 3.188rem, $bg-brand-subtle);
+}
+
+.boxDisabled {
+  @include left-bar($neutral-300, 3.188rem, $neutral-100);
+  padding-inline-end: 0.5rem;
 }
 
 .item {
   @include flex-start;
   padding: 0;
+  overflow: visible;
+}
+
+.item[data-disabled='true'] {
+  @include flex-between;
+
+  .label {
+    color: $text-disabled;
+  }
+}
+
+.blockedIcon {
+  color: $neutral-400;
 }
 
 .label {
   line-height: $line-height-base;
   font-size: $body-lg-font-size;
+  font-weight: $font-weight-regular;
   color: $neutral-800;
 }
 

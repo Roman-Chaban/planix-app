@@ -3,11 +3,14 @@
 import { type FieldValues, Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
+import { buildClassName } from '@/shared/lib';
 import { usePasswordToggle } from '@/shared/lib/hooks';
 import { FormField } from '@/shared/ui';
 import type { FormFieldsProps } from '@/shared/ui/form/form-fields';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
+
+import styles from './FormFields.module.scss';
 
 const { TEXT, PASSWORD } = INPUT_TYPES;
 const { DEFAULT } = INPUT_VARIANTS;
@@ -48,6 +51,7 @@ export function FormFields<T extends FieldValues>({
                   error={errorText}
                   inputRef={ref}
                   variant={DEFAULT}
+                  className={buildClassName(styles[field.gridArea ?? ''])}
                   inputProps={{
                     type,
                     name: field.name,

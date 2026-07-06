@@ -11,7 +11,7 @@ import {
 const { SUBMIT, BUTTON } = BUTTON_TYPES;
 const { SM, LG, CONTENT } = BUTTON_MIN_WIDTH;
 const { ROUNDED, CIRCLE } = BUTTON_SHAPES;
-const { SMALL, MEDIUM } = BUTTON_SIZES;
+const { SMALL, MEDIUM, LARGE } = BUTTON_SIZES;
 const { DEFAULT, OUTLINE, TRANSPARENT } = BUTTON_VARIANTS;
 
 export const BUTTON_PRESETS: ButtonPresets = {
@@ -68,6 +68,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
     size: MEDIUM,
     variant: DEFAULT,
   },
+
   EDIT: {
     fullWidth: true,
     type: BUTTON,
@@ -76,6 +77,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
     shape: ROUNDED,
     variant: DEFAULT,
   },
+
   CANCEL_PLAN: {
     fullWidth: true,
     type: BUTTON,
@@ -84,6 +86,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
     size: MEDIUM,
     variant: OUTLINE,
   },
+
   UPDATE_PLAN: {
     fullWidth: true,
     type: BUTTON,
@@ -91,6 +94,14 @@ export const BUTTON_PRESETS: ButtonPresets = {
     shape: ROUNDED,
     size: MEDIUM,
     variant: DEFAULT,
+  },
+
+  EMPTY_PROJECTS: {
+    type: BUTTON,
+    variant: DEFAULT,
+    shape: ROUNDED,
+    minWidth: LG,
+    size: LARGE,
   },
 } as const;
 

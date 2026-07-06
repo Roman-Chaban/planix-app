@@ -1,15 +1,15 @@
-export type { ButtonProps, MaxWidth } from './model/types';
+export type { ButtonProps, MinWidth } from './model/button.types';
 
-export { getButtonProps } from './lib/get-button-props';
-export { BUTTON_PRESETS, type ButtonPresetKey } from './lib/presets';
+export { getButtonProps } from './lib/button.helpers';
+export { BUTTON_PRESETS, type ButtonPresetKey } from './lib/button.presets';
 
 export {
   BUTTON_SHAPES,
   BUTTON_SIZES,
   BUTTON_TYPES,
   BUTTON_VARIANTS,
-  BUTTON_MAX_WIDTH,
+  BUTTON_MIN_WIDTH,
   BUTTON_UI_PROPS,
-} from './lib/constants';
+} from './lib/button.constants';
 
 export { Button } from './ui/Button';

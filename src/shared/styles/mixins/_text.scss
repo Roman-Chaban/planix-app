@@ -55,7 +55,7 @@
   gap: $gap;
 }
 
-@mixin link-style($color: $primary-700, $weight: $font-weight-semibold, $decoration: none) {
+@mixin link-style($color: $primary-700, $weight: $font-weight-medium, $decoration: none) {
   color: $color;
   font-weight: $weight;
   text-decoration: $decoration;

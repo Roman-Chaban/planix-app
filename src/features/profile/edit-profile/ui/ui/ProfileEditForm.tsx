@@ -22,7 +22,9 @@ export const ProfileEditForm = ({ onSuccess }: ProfileEditFormProps) => {
     <AppForm form={form} onSubmit={onSubmit} className={styles.form}>
       <FormFields fields={editFields} translationNamespace={NS.SETTINGS} />
 
-      <Button preset="SUBMIT">{t('profileDetails.save')}</Button>
+      <Button preset="SUBMIT" className={styles.save}>
+        {t('profileDetails.save')}
+      </Button>
     </AppForm>
   );
 };

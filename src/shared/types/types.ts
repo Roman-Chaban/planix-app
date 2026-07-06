@@ -1,6 +1,6 @@
 import type { TFunction } from 'i18next';
 
-import type { FC, ReactNode, SVGProps } from 'react';
+import type { FC, ReactNode, Ref, SVGProps } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
 import type { Locale } from '@/shared/i18n/locales/locales';
@@ -20,4 +20,12 @@ export type WithClassName = {
 
 export type WithSkeleton = {
   skeleton: ReactNode;
+};
+
+export type IsAuthenticated = {
+  isAuthenticated: boolean;
+};
+
+export type WithRef<T, R> = T & {
+  ref?: Ref<R>;
 };

@@ -5,7 +5,8 @@
     "notificationSettings": "Notification Setting",
     "subscription": "Subscription & Billing",
     "systemSettings": "System Setting",
-    "logOut": "Log Out"
+    "logOut": "Log Out",
+    "restrictedFeature": "Sign in to access this feature."
   },
   "profileDetails": {
     "editLabel": "Edit",

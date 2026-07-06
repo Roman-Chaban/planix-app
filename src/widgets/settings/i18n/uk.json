@@ -5,7 +5,8 @@
     "notificationSettings": "Налаштування сповіщень",
     "subscription": "Підписка та білінг",
     "systemSettings": "Системні налаштування",
-    "logOut": "Вийти"
+    "logOut": "Вийти",
+    "restrictedFeature": "Увійдіть, щоб отримати доступ до цієї функції."
   },
   "profileDetails": {
     "editLabel": "Редагувати",

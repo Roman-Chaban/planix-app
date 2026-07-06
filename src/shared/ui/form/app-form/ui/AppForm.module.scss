@@ -1,7 +1,0 @@
-@use '@/shared/styles' as *;
-
-.appForm {
-  width: 100%;
-  height: auto;
-  @include flex(flex, column, start, start, 1.5rem);
-}

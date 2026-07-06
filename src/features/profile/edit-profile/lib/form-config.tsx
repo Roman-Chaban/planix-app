@@ -1,4 +1,4 @@
-import type { ProfileFormValues } from '../model/types';
+import type { ProfileFormValues } from '../model/edit-profile.types';
 
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { INPUT_TYPES } from '@/shared/ui/input';

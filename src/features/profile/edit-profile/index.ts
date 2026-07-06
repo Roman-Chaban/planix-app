@@ -1,1 +1,1 @@
-export { ProfileEditForm } from './ui/ui/ProfileEditForm';
+export { ProfileEditForm } from './ui/ProfileEditForm';

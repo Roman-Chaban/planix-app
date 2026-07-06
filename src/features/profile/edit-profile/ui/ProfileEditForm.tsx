@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProfileEditFormProps } from '../model/types';
+import type { ProfileEditFormProps } from '../model/edit-profile.types';
 
 import { useTranslation } from 'react-i18next';
 

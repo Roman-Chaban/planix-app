@@ -78,7 +78,6 @@ export const BUTTON_PRESETS: ButtonPresets = {
   },
 
   CANCEL_PLAN: {
-    fullWidth: true,
     type: BUTTON,
     minWidth: LG,
     shape: ROUNDED,
@@ -87,7 +86,6 @@ export const BUTTON_PRESETS: ButtonPresets = {
   },
 
   UPDATE_PLAN: {
-    fullWidth: true,
     type: BUTTON,
     minWidth: LG,
     shape: ROUNDED,

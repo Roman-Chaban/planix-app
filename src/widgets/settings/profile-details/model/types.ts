@@ -1,7 +1,7 @@
 import type { Profile } from '@/entities/settings';
 import type { TranslateFn, WithChildren } from '@/shared/types/types';
 
-type ProfileProps = { profile: Profile; t: TranslateFn };
+type ProfileProps = { profile: Profile | null; t: TranslateFn };
 
 export type ProfileInfoItemProps = WithChildren & {
   label?: string;

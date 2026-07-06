@@ -29,7 +29,7 @@ export const ProfileDetails = () => {
   return (
     <Box className={styles.details}>
       <Box className={styles.profileDetails}>
-        <ProfileHeader profile={profile!} t={t} onMode={toggleMode} />
+        <ProfileHeader profile={profile} t={t} onMode={toggleMode} />
 
         {isView ? (
           <ProfileInfoList profile={profile} t={t} />

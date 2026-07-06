@@ -3,7 +3,5 @@
 .appForm {
   width: 100%;
   height: auto;
-  @include flex(flex, column, start, stretch, 1.5rem);
-  padding-inline: 1.875rem;
-  padding-block-end: 1.875rem;
+  @include flex(flex, column, start, start, 1.5rem);
 }

@@ -16,7 +16,7 @@ export type FormFieldConfig<T extends FieldValues> = WithClassName & {
   endIcon?: ReactNode;
   feature?: FormFieldFeature;
   required?: boolean;
-  gridArea: string;
+  gridArea?: string | null;
 };
 
 export type FormFieldsProps<T extends FieldValues> = {

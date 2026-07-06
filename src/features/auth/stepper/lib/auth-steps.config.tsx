@@ -30,7 +30,7 @@ export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
     ),
   },
   [REGISTER]: {
-    component: () => <RegisterForm onNavigate={onNavigate} />,
+    component: () => <RegisterForm />,
     header: (
       <AuthHeader title={t('register.title')} subtitle={t('register.subtitle')} isHighlightedIcon />
     ),

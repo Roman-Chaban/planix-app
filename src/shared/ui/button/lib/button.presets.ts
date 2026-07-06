@@ -11,7 +11,7 @@ import {
 const { SUBMIT, BUTTON } = BUTTON_TYPES;
 const { SM, LG, CONTENT } = BUTTON_MIN_WIDTH;
 const { ROUNDED, CIRCLE } = BUTTON_SHAPES;
-const { SMALL, MEDIUM, LARGE } = BUTTON_SIZES;
+const { SMALL, MEDIUM, LARGE, COMPACT } = BUTTON_SIZES;
 const { DEFAULT, OUTLINE, TRANSPARENT } = BUTTON_VARIANTS;
 
 export const BUTTON_PRESETS: ButtonPresets = {
@@ -99,6 +99,13 @@ export const BUTTON_PRESETS: ButtonPresets = {
     shape: ROUNDED,
     minWidth: LG,
     size: LARGE,
+  },
+
+  UPLOAD_AVATAR: {
+    type: BUTTON,
+    variant: TRANSPARENT,
+    size: COMPACT,
+    shape: CIRCLE,
   },
 } as const;
 

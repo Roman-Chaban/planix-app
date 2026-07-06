@@ -5,7 +5,11 @@ import { useTranslation } from 'react-i18next';
 import { useDeleteProjectModal, type DeleteProjectModalProps } from '@/features/project-delete';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Modal, ModalHeader, Textarea, Box, Button } from '@/shared/ui';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/lib/constants';
+import {
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+  BUTTON_VARIANTS,
+} from '@/shared/ui/button/lib/button.constants';
 import { CloseIcon } from '@/shared/ui/icons';
 
 import styles from './DeleteProjectModal.module.scss';

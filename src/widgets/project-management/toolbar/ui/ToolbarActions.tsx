@@ -7,24 +7,12 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, FormField, ProjectButton } from '@/shared/ui';
 
-import {
-  BUTTON_MAX_WIDTH,
-  BUTTON_SHAPES,
-  BUTTON_SIZES,
-  BUTTON_TYPES,
-  BUTTON_VARIANTS,
-} from '@/shared/ui/button';
 import { SearchIconPrimary } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
 import styles from './Toolbar.module.scss';
 
 const { SEARCH } = INPUT_TYPES;
-const { BUTTON } = BUTTON_TYPES;
-const { DEFAULT } = BUTTON_VARIANTS;
-const { LARGE } = BUTTON_SIZES;
-const { ROUNDED } = BUTTON_SHAPES;
-const { XL } = BUTTON_MAX_WIDTH;
 
 export const ToolbarActions = ({ handleCreateProject }: ToolbarActionsProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
@@ -47,13 +35,8 @@ export const ToolbarActions = ({ handleCreateProject }: ToolbarActionsProps) => 
       <Box className={styles.platform}>Select Platform</Box>
 
       <ProjectButton
-        type={BUTTON}
-        shape={ROUNDED}
-        variant={DEFAULT}
-        size={LARGE}
-        maxWidth={XL}
+        preset="ADD"
         onClick={handleCreateProject}
-        fullWidth
         label={t('toolbar.addProjectButton')}
       />
     </Box>

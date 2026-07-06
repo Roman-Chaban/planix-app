@@ -12,21 +12,15 @@ import { PageWrapper } from '@/shared/ui';
 import styles from './Layout.module.scss';
 
 export const Layout = () => {
-  const { activeId, setActiveId, isEmpty, hasData, deleteModal, projects } =
-    useProjectsPageModel();
+  const { activeId, setActiveId, isEmpty, hasData, deleteModal, projects } = useProjectsPageModel();
 
   return (
-    <PageWrapper
-      header={<Header title={'projects'} />}
-      sectionClassName={styles.projects}
-    >
+    <PageWrapper header={<Header title={'projects'} />} sectionClassName={styles.projects}>
       <Toolbar activeId={activeId} setActiveId={setActiveId} />
 
       {isEmpty && <Empty />}
 
-      {hasData && (
-        <Table onDelete={deleteModal.openDeleteModal} projects={projects} />
-      )}
+      {hasData && <Table onDelete={deleteModal.openDeleteModal} projects={projects} />}
 
       <DeleteProjectModal
         isOpen={deleteModal.isOpen}

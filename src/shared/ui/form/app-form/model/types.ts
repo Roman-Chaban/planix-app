@@ -1,8 +1,4 @@
-import {
-  type FieldValues,
-  type SubmitHandler,
-  type UseFormReturn,
-} from 'react-hook-form';
+import { type FieldValues, type SubmitHandler, type UseFormReturn } from 'react-hook-form';
 
 import type { WithChildren } from '@/shared/types/types';
 

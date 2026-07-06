@@ -1,26 +1,14 @@
-import type { FC } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 
-import {
-  FormError,
-  FormLabel,
-  Box,
-  FormIcon,
-  Input,
-  Typography,
-} from '@/shared/ui';
+import { FormError, FormLabel, Box, FormIcon, Input, Typography } from '@/shared/ui';
 
-import {
-  type FormFieldProps,
-  ICON_POSITION,
-} from '@/shared/ui/form/form-filed';
+import { type FormFieldProps, ICON_POSITION } from '@/shared/ui/form/form-filed';
 
 import styles from './FormField.module.scss';
 
 const { START, END } = ICON_POSITION;
 
-export const FormField: FC<FormFieldProps> = ({
+export const FormField = ({
   id,
   label,
   error,
@@ -34,11 +22,10 @@ export const FormField: FC<FormFieldProps> = ({
   inputProps,
   inputRef,
   children,
-}) => {
+}: FormFieldProps) => {
   const { placeholder, required, value, ...restInputProps } = inputProps || {};
 
-  const isFilled =
-    value !== undefined && value !== null && String(value).length > 0;
+  const isFilled = value !== undefined && value !== null && String(value).length > 0;
 
   const wrapperClassName = buildClassName(styles.inputWrapper, {
     [styles.error]: !!error,

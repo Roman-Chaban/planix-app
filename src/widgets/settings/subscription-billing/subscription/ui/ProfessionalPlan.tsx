@@ -2,7 +2,6 @@
 
 import type { ProfessionalPlanProps } from '../model/types';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n';
@@ -11,13 +10,13 @@ import { Box, Typography } from '@/shared/ui';
 
 import styles from './Subscription.module.scss';
 
-export const ProfessionalPlan: FC<ProfessionalPlanProps> = ({
+export const ProfessionalPlan = ({
   planName,
   planPrice = 0,
   nextBillingDateFormatted,
   skeleton: Skeleton,
   isLoading,
-}) => {
+}: ProfessionalPlanProps) => {
   const { t, i18n } = useTranslation(NS.SETTINGS);
   const currentLocale = i18n.language;
 

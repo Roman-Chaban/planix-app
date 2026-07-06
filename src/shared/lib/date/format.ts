@@ -7,8 +7,7 @@ dayjs.extend(customParseFormat);
 
 export const applyDateMask = (value: string): string => {
   const raw = value.replace(/\D/g, '').slice(0, 8);
-  if (raw.length > 4)
-    return `${raw.slice(0, 2)}.${raw.slice(2, 4)}.${raw.slice(4)}`;
+  if (raw.length > 4) return `${raw.slice(0, 2)}.${raw.slice(2, 4)}.${raw.slice(4)}`;
   if (raw.length > 2) return `${raw.slice(0, 2)}.${raw.slice(2)}`;
   return raw;
 };

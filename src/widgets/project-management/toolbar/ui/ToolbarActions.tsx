@@ -2,7 +2,6 @@
 
 import type { ToolbarActionsProps } from '../model/types';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
@@ -27,9 +26,7 @@ const { LARGE } = BUTTON_SIZES;
 const { ROUNDED } = BUTTON_SHAPES;
 const { XL } = BUTTON_MAX_WIDTH;
 
-export const ToolbarActions: FC<ToolbarActionsProps> = ({
-  handleCreateProject,
-}) => {
+export const ToolbarActions = ({ handleCreateProject }: ToolbarActionsProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
   return (

@@ -2,7 +2,7 @@
 
 import type { TableProps } from '../model/types';
 
-import { useMemo, type FC } from 'react';
+import { useMemo } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -24,7 +24,7 @@ const DRAG_SCROLL_AXIS = AXIS.X;
 
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 
-export const Table: FC<TableProps> = ({ projects, onDelete }) => {
+export const Table = ({ projects, onDelete }: TableProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
   const localizedRouter = useLocalizedRouter();
   const columns = useMemo(() => getTableColumns(t), [t]);
@@ -57,11 +57,7 @@ export const Table: FC<TableProps> = ({ projects, onDelete }) => {
 
         <tbody className={styles.body}>
           {projects.map((project) => (
-            <TableRow
-              key={project.id}
-              project={project}
-              actionsFactory={actionsFactory}
-            />
+            <TableRow key={project.id} project={project} actionsFactory={actionsFactory} />
           ))}
         </tbody>
       </table>

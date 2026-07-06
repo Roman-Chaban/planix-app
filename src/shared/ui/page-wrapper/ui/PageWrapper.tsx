@@ -1,7 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { useSidebar } from '@/app/providers/sidebar';
 import { Sidebar } from '@/widgets/sidebar';
 import { buildClassName } from '@/shared/lib';
@@ -10,11 +8,7 @@ import type { PageWrapperProps } from '@/shared/ui/page-wrapper';
 
 import styles from './PageWrapper.module.scss';
 
-export const PageWrapper: FC<PageWrapperProps> = ({
-  children,
-  header,
-  sectionClassName,
-}) => {
+export const PageWrapper = ({ children, header, sectionClassName }: PageWrapperProps) => {
   const { isSidebarOpen, toggleSidebar, hydrated } = useSidebar();
 
   if (!hydrated) {

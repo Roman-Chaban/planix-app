@@ -1,10 +1,6 @@
 import type { Key, ReactNode } from 'react';
 
-import type {
-  SVGComponent,
-  WithChildren,
-  WithClassName,
-} from '@/shared/types/types';
+import type { SVGComponent, WithChildren, WithClassName } from '@/shared/types/types';
 
 type BaseTableComponentProps = WithChildren & WithClassName;
 type BaseTableAppearanceProps = BaseTableComponentProps & TableStylesProps;
@@ -29,12 +25,11 @@ export type TableColumn<T> = {
   render?: (row: T) => ReactNode;
 };
 
-export type DataTableProps<T extends Record<string, ReactNode>> =
-  TableStylesProps & {
-    data: T[];
-    columns: TableColumn<T>[];
-    getRowKey: (row: T) => Key;
-  };
+export type DataTableProps<T extends Record<string, ReactNode>> = TableStylesProps & {
+  data: T[];
+  columns: TableColumn<T>[];
+  getRowKey: (row: T) => Key;
+};
 
 /* Design System Types */
 

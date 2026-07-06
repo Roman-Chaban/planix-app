@@ -2,8 +2,6 @@
 
 import type { ProfileHeaderProps } from '../model/types';
 
-import { type FC } from 'react';
-
 import { Box, Tooltip, Typography } from '@/shared/ui';
 
 import { Button } from '@/shared/ui/button';
@@ -14,11 +12,7 @@ import styles from './ProfileDetails.module.scss';
 
 const { BOTTOM } = TOOLTIP_POSITION;
 
-export const ProfileHeader: FC<ProfileHeaderProps> = ({
-  profile,
-  t,
-  onMode,
-}) => {
+export const ProfileHeader = ({ profile, t, onMode }: ProfileHeaderProps) => {
   if (!profile) return null;
 
   return (

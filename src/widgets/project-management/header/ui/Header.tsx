@@ -2,21 +2,19 @@
 
 import type { ProjectHeaderProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { Box, StatusBadge, Typography } from '@/shared/ui';
 
 import styles from './Header.module.scss';
 
-export const ProjectHeader: FC<ProjectHeaderProps> = ({
+export const ProjectHeader = ({
   title,
   metaInfo,
   translationNamespace,
   status,
   showStatus = false,
-}) => {
+}: ProjectHeaderProps) => {
   const { t } = useTranslation(translationNamespace);
 
   return (

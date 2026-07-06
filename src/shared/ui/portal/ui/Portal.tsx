@@ -1,6 +1,6 @@
 'use client';
 
-import { type ReactNode, type FC, useState, useEffect } from 'react';
+import { type ReactNode, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 type PortalProps = {
@@ -8,10 +8,7 @@ type PortalProps = {
   containerId?: string;
 };
 
-export const Portal: FC<PortalProps> = ({
-  children,
-  containerId = 'portal-root',
-}) => {
+export const Portal = ({ children, containerId = 'portal-root' }: PortalProps) => {
   const [container, setContainer] = useState<HTMLElement | null>(null);
 
   useEffect(() => {

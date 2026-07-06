@@ -21,10 +21,7 @@ export const LanguageSelect = () => {
 
   const isTabletScreen = useMediaQuery(TABLET);
 
-  const styles = useMemo(
-    () => createSelectStyles(isTabletScreen),
-    [isTabletScreen],
-  );
+  const styles = useMemo(() => createSelectStyles(isTabletScreen), [isTabletScreen]);
 
   return (
     <Select<LanguageOption, false>

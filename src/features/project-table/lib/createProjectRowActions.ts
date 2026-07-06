@@ -1,7 +1,4 @@
-import type {
-  ProjectRowActionsFactory,
-  ProjectRowActionsConfig,
-} from '@/features/project-table';
+import type { ProjectRowActionsFactory, ProjectRowActionsConfig } from '@/features/project-table';
 import type { ActionItems } from '@/shared/ui/actions-bar/model/types';
 
 import { DeleteIcon, ViewIcon, EditIcon } from '@/shared/ui/icons';

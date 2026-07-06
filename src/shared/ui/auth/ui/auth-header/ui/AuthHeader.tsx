@@ -1,17 +1,15 @@
-import { type FC } from 'react';
-
 import { Box, Typography } from '@/shared/ui';
 
 import type { AuthHeaderProps } from '@/shared/ui/auth/ui/auth-header';
 
 import styles from './AuthHeader.module.scss';
 
-export const AuthHeader: FC<AuthHeaderProps> = ({
+export const AuthHeader = ({
   title,
   highlightedText,
   isHighlightedIcon,
   subtitle,
-}) => {
+}: AuthHeaderProps) => {
   return (
     <Box className={styles.header}>
       <Typography as="h1" className={styles.title}>

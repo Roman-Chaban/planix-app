@@ -1,8 +1,4 @@
-export {
-  Subscription,
-  ProfessionalPlan,
-  ProfessionalPlanActions,
-} from './subscription';
+export { Subscription, ProfessionalPlan, ProfessionalPlanActions } from './subscription';
 
 export { getBillingHistoryColumns } from './billing';
 

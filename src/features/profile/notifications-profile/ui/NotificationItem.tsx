@@ -2,23 +2,13 @@
 
 import type { NotificationItemProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { useLocalStorage } from '@/shared/lib/hooks';
 import { Box, Switch, Typography } from '@/shared/ui';
 
 import styles from './Notifications.module.scss';
 
-export const NotificationItem: FC<NotificationItemProps> = ({
-  id,
-  icon: Icon,
-  title,
-  subtitle,
-}) => {
-  const [isOn, setIsOn, hydrated] = useLocalStorage<boolean>(
-    `switch-${id}`,
-    false,
-  );
+export const NotificationItem = ({ id, icon: Icon, title, subtitle }: NotificationItemProps) => {
+  const [isOn, setIsOn, hydrated] = useLocalStorage<boolean>(`switch-${id}`, false);
 
   if (!hydrated) {
     return null;

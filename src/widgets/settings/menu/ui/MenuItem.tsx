@@ -1,7 +1,5 @@
 import type { MenuItemProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Typography } from '@/shared/ui';
 
@@ -11,13 +9,7 @@ import styles from './ProfileMenu.module.scss';
 
 const { TRANSPARENT } = BUTTON_VARIANTS;
 
-export const MenuItem: FC<MenuItemProps> = ({
-  id,
-  label,
-  t,
-  isActive,
-  setActiveId,
-}) => {
+export const MenuItem = ({ id, label, t, isActive, setActiveId }: MenuItemProps) => {
   return (
     <Box className={buildClassName(styles.box, isActive && styles.boxActive)}>
       <Button
@@ -26,10 +18,7 @@ export const MenuItem: FC<MenuItemProps> = ({
         onClick={() => setActiveId(id)}
         className={styles.item}
       >
-        <Typography
-          as="span"
-          className={buildClassName(styles.label, isActive && styles.isActive)}
-        >
+        <Typography as="span" className={buildClassName(styles.label, isActive && styles.isActive)}>
           {t(label)}
         </Typography>
       </Button>

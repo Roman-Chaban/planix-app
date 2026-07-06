@@ -25,14 +25,7 @@ export { Textarea } from './textarea';
 export { Typography } from './typography';
 export { Modal, ModalContent, ModalHeader, ModalOverlay } from './modal';
 export { FileUpload } from './file-upload';
-export {
-  AuthLayout,
-  AuthButton,
-  AuthFooter,
-  AuthHeader,
-  AuthRedirect,
-  AuthWrapper,
-} from './auth';
+export { AuthLayout, AuthButton, AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from './auth';
 export { Loader } from './loader';
 export { Tooltip } from './tooltip';
 export { Portal } from './portal';

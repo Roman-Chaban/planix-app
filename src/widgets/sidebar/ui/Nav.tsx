@@ -1,6 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { NavItem, isActiveRoute, type NavProps } from '@/widgets/sidebar';
@@ -11,7 +10,7 @@ import { getNavItems } from '../lib/items';
 
 import styles from './Sidebar.module.scss';
 
-export const Nav: FC<NavProps> = ({ isCollapsed, t }) => {
+export const Nav = ({ isCollapsed, t }: NavProps) => {
   const pathname = usePathname();
   const navItems = getNavItems(t);
 

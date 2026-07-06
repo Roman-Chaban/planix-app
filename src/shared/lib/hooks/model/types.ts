@@ -19,9 +19,6 @@ export type UseDragScrollOptions = {
   dragThreshold?: number;
 };
 
-export type UseAppFormProps<T extends FieldValues> = Omit<
-  UseFormProps<T>,
-  'resolver'
-> & {
+export type UseAppFormProps<T extends FieldValues> = Omit<UseFormProps<T>, 'resolver'> & {
   schema: Parameters<typeof zodResolver>[0];
 };

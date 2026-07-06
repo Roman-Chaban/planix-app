@@ -1,4 +1,4 @@
-import type { ChangeEvent, FC } from 'react';
+import type { ChangeEvent } from 'react';
 
 import { Box, Input } from '@/shared/ui';
 
@@ -13,19 +13,14 @@ type SwitchProps = {
   onToggle: (value: boolean) => void;
 };
 
-export const Switch: FC<SwitchProps> = ({ isOn, onToggle }) => {
+export const Switch = ({ isOn, onToggle }: SwitchProps) => {
   const handleSwitch = (event: ChangeEvent<HTMLInputElement>) => {
     onToggle(event.target.checked);
   };
 
   return (
     <Box as="label" className={styles.switch}>
-      <Input
-        type={CHECKBOX}
-        checked={isOn}
-        onChange={handleSwitch}
-        className={styles.input}
-      />
+      <Input type={CHECKBOX} checked={isOn} onChange={handleSwitch} className={styles.input} />
       <Box className={styles.track} />
       <Box className={styles.circle} />
     </Box>

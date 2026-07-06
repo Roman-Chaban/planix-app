@@ -1,7 +1,5 @@
 import type { MenuProps } from '../model/types';
 
-import { type FC } from 'react';
-
 import { List } from '@/shared/ui';
 
 import { getProfileMenuItems } from '../lib/get-menu-items';
@@ -9,7 +7,7 @@ import { getProfileMenuItems } from '../lib/get-menu-items';
 import { MenuItem } from './MenuItem';
 import styles from './ProfileMenu.module.scss';
 
-export const Menu: FC<MenuProps> = ({ t, activeId, setActiveId }) => {
+export const Menu = ({ t, activeId, setActiveId }: MenuProps) => {
   const menuItems = getProfileMenuItems(t);
 
   return (
@@ -20,14 +18,7 @@ export const Menu: FC<MenuProps> = ({ t, activeId, setActiveId }) => {
       renderItem={(item) => {
         const isActive = item.id === activeId;
 
-        return (
-          <MenuItem
-            {...item}
-            isActive={isActive}
-            setActiveId={setActiveId}
-            t={t}
-          />
-        );
+        return <MenuItem {...item} isActive={isActive} setActiveId={setActiveId} t={t} />;
       }}
     />
   );

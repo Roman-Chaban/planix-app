@@ -2,11 +2,9 @@
 
 import type { TableHeaderProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import styles from './Table.module.scss';
 
-export const TableHeader: FC<TableHeaderProps> = ({ columns }) => {
+export const TableHeader = ({ columns }: TableHeaderProps) => {
   return (
     <thead className={styles.head}>
       <tr className={styles.row}>

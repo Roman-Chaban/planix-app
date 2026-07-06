@@ -2,7 +2,6 @@
 
 import type { ProfileEditFormProps } from '../model/types';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n';
@@ -14,7 +13,7 @@ import { useEditProfile } from '../model/useEditProfile';
 
 import styles from './ProfileEditForm.module.scss';
 
-export const ProfileEditForm: FC<ProfileEditFormProps> = ({ onSuccess }) => {
+export const ProfileEditForm = ({ onSuccess }: ProfileEditFormProps) => {
   const { t } = useTranslation(NS.SETTINGS);
 
   const { form, onSubmit } = useEditProfile({ onSuccess });

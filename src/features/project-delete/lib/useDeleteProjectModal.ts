@@ -3,10 +3,7 @@ import { useState } from 'react';
 import type { UseDeleteProjectOptions } from '@/features/project-delete';
 import { useProjectActions } from '@/entities/project';
 
-export const useDeleteProjectModal = ({
-  projectId,
-  onClose,
-}: UseDeleteProjectOptions) => {
+export const useDeleteProjectModal = ({ projectId, onClose }: UseDeleteProjectOptions) => {
   const [reason, setReason] = useState<string>('');
 
   const { deleteProject, isProjectActionPending } = useProjectActions();

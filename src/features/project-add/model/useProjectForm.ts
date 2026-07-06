@@ -3,10 +3,7 @@
 import type { SubmitHandler } from 'react-hook-form';
 
 import { ROUTES } from '@/app/routes';
-import {
-  projectDetailsSchema,
-  type ProjectDetailsSchema,
-} from '@/features/project-add';
+import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
 import { uploadFileToSupabase } from '@/entities/project/model/projects';
 import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
@@ -46,9 +43,7 @@ export const useProjectForm = () => {
     );
   };
 
-  const handleFormSubmit: SubmitHandler<ProjectDetailsSchema> = async (
-    formData,
-  ) => {
+  const handleFormSubmit: SubmitHandler<ProjectDetailsSchema> = async (formData) => {
     try {
       const processedFiles = await processFiles(formData.files);
 

@@ -2,8 +2,6 @@
 
 import type { ToolbarProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { useSidebar } from '@/app/providers/sidebar';
 import { ToolbarHeader, ToolbarActions } from '@/widgets/project-management';
 
@@ -14,7 +12,7 @@ import { useToolbar } from '../model/useToolbar';
 
 import styles from './Toolbar.module.scss';
 
-export const Toolbar: FC<ToolbarProps> = ({ activeId, setActiveId }) => {
+export const Toolbar = ({ activeId, setActiveId }: ToolbarProps) => {
   const { handleCreateProject } = useToolbar();
   const { isSidebarOpen } = useSidebar();
 
@@ -26,11 +24,7 @@ export const Toolbar: FC<ToolbarProps> = ({ activeId, setActiveId }) => {
         { [styles.toolbarExpanded]: isSidebarOpen },
       )}
     >
-      <ToolbarHeader
-        activeId={activeId}
-        setActiveId={setActiveId}
-        isSidebarOpen={isSidebarOpen}
-      />
+      <ToolbarHeader activeId={activeId} setActiveId={setActiveId} isSidebarOpen={isSidebarOpen} />
       <ToolbarActions handleCreateProject={handleCreateProject} />
     </Box>
   );

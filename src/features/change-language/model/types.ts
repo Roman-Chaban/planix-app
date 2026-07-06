@@ -9,8 +9,4 @@ export type LanguageOption = {
   icon: SVGComponent;
 };
 
-export type LanguageSelectStyles = StylesConfig<
-  LanguageOption,
-  false,
-  GroupBase<LanguageOption>
->;
+export type LanguageSelectStyles = StylesConfig<LanguageOption, false, GroupBase<LanguageOption>>;

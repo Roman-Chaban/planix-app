@@ -33,9 +33,7 @@ export const DataTable = <T extends Record<string, ReactNode>>({
           {data.map((row) => (
             <TableRow key={getRowKey(row)}>
               {columns.map((column) => {
-                const renderedValue = column.render
-                  ? column.render(row)
-                  : row[column.key];
+                const renderedValue = column.render ? column.render(row) : row[column.key];
 
                 const Icon = column.icon;
 

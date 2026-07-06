@@ -1,18 +1,16 @@
 import type { AnalyticsHeaderProps } from '../model/types';
 
-import { type FC } from 'react';
-
 import { Box, Typography } from '@/shared/ui';
 
 import styles from './Analytics.module.scss';
 
-export const AnalyticsHeader: FC<AnalyticsHeaderProps> = ({
+export const AnalyticsHeader = ({
   id,
   variant,
   title,
   content,
   children,
-}) => {
+}: AnalyticsHeaderProps) => {
   return (
     <Box key={id} className={styles[variant]}>
       <Box className={styles.analyticsHeader}>

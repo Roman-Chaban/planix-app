@@ -1,5 +1,3 @@
-import { type FC } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 
 import { Typography } from '@/shared/ui';
@@ -10,16 +8,15 @@ import styles from './FormField.module.scss';
 
 const { START } = ICON_POSITION;
 
-export const FormIcon: FC<FormIconProps> = ({
+export const FormIcon = ({
   children,
   position = START,
   onClick,
   error,
   className,
   ...iconProps
-}) => {
-  const positionClassname =
-    position === START ? styles.slotStart : styles.slotEnd;
+}: FormIconProps) => {
+  const positionClassname = position === START ? styles.slotStart : styles.slotEnd;
 
   const isClickable = Boolean(onClick);
 
@@ -31,12 +28,7 @@ export const FormIcon: FC<FormIconProps> = ({
   );
 
   return (
-    <Typography
-      as="div"
-      className={rootClassnames}
-      onClick={onClick}
-      {...iconProps}
-    >
+    <Typography as="div" className={rootClassnames} onClick={onClick} {...iconProps}>
       {children}
     </Typography>
   );

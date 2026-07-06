@@ -1,18 +1,12 @@
 import type { DescriptionProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { Box, Typography } from '@/shared/ui';
 
 import { FileItem } from '../../files';
 
 import styles from './Description.module.scss';
 
-export const Description: FC<DescriptionProps> = ({
-  description,
-  documentTitle,
-  files,
-}) => {
+export const Description = ({ description, documentTitle, files }: DescriptionProps) => {
   return (
     <>
       <Typography as="span" className={styles.text}>

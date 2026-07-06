@@ -10,10 +10,7 @@ import { AUTH_STEPS, type AuthStep } from '../lib/constants';
 const { LOGIN } = AUTH_STEPS;
 
 export const useAuthStepper = () => {
-  const [step, setStep, hydrated] = useLocalStorage<AuthStep>(
-    'auth-step',
-    LOGIN,
-  );
+  const [step, setStep, hydrated] = useLocalStorage<AuthStep>('auth-step', LOGIN);
 
   const { t } = useTranslation(NS.AUTH);
 

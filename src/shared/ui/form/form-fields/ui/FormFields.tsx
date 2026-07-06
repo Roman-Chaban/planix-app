@@ -29,28 +29,15 @@ export function FormFields<T extends FieldValues>({
         const visible = isPassword && getVisibility(field.name);
         const type = isPassword ? (visible ? TEXT : PASSWORD) : field.type;
 
-        const endIcon = isPassword ? (
-          visible ? (
-            <ViewIcon />
-          ) : (
-            <ViewOffIcon />
-          )
-        ) : (
-          field.endIcon
-        );
+        const endIcon = isPassword ? visible ? <ViewIcon /> : <ViewOffIcon /> : field.endIcon;
 
         return (
           <Controller
             key={field.name}
             name={field.name}
             control={control}
-            render={({
-              field: { onChange, onBlur, value, ref },
-              fieldState,
-            }) => {
-              const errorText = fieldState.error?.message
-                ? t(fieldState.error.message)
-                : undefined;
+            render={({ field: { onChange, onBlur, value, ref }, fieldState }) => {
+              const errorText = fieldState.error?.message ? t(fieldState.error.message) : undefined;
 
               return (
                 <FormField
@@ -73,26 +60,18 @@ export function FormFields<T extends FieldValues>({
                           : event;
                       onChange(actualValue);
                     },
-                    placeholder: field.placeholder
-                      ? t(field.placeholder)
-                      : undefined,
+                    placeholder: field.placeholder ? t(field.placeholder) : undefined,
                     autoComplete: field.autoComplete,
                     required: field.required,
                   }}
                   onEndIconMouseDown={
-                    isPassword
-                      ? () => toggleVisibility(field.name, true)
-                      : undefined
+                    isPassword ? () => toggleVisibility(field.name, true) : undefined
                   }
                   onEndIconMouseUp={
-                    isPassword
-                      ? () => toggleVisibility(field.name, false)
-                      : undefined
+                    isPassword ? () => toggleVisibility(field.name, false) : undefined
                   }
                   onEndIconMouseLeave={
-                    isPassword
-                      ? () => toggleVisibility(field.name, false)
-                      : undefined
+                    isPassword ? () => toggleVisibility(field.name, false) : undefined
                   }
                 />
               );

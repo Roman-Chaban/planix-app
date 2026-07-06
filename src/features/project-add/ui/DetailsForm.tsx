@@ -39,10 +39,7 @@ export const DetailsForm = () => {
       <DetailsHeader />
 
       <AppForm form={form} onSubmit={onSubmit}>
-        <FormFields
-          fields={projectAddFields}
-          translationNamespace={NS.PROJECT_ADD}
-        />
+        <FormFields fields={projectAddFields} translationNamespace={NS.PROJECT_ADD} />
 
         <Box className={styles.row}>
           <StartDateField />

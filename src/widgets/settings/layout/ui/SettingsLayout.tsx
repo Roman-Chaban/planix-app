@@ -12,10 +12,7 @@ export const SettingsLayout = () => {
   const { activeId, ActiveComponent, handleTabChange } = useProfileModel();
 
   return (
-    <PageWrapper
-      header={<Header title="profile" />}
-      sectionClassName={styles.profile}
-    >
+    <PageWrapper header={<Header title="profile" />} sectionClassName={styles.profile}>
       <ProfileMenu activeId={activeId} setActiveId={handleTabChange} />
 
       <ActiveComponent />

@@ -56,11 +56,7 @@ export const HeaderActions = () => {
       ) : (
         <Tooltip position={LEFT} message={t('settingsTooltip')}>
           <AppLink href={SETTINGS}>
-            <Avatar
-              alt={profile.fullName}
-              fallback={profile.initials}
-              className={styles.avatar}
-            />
+            <Avatar alt={profile.fullName} fallback={profile.initials} className={styles.avatar} />
           </AppLink>
         </Tooltip>
       )}

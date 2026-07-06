@@ -17,11 +17,7 @@
 }
 
 .title {
-  @include title-bold(
-    $font-weight-semibold,
-    $body-lg-font-size,
-    $text-secondary
-  );
+  @include title-bold($font-weight-semibold, $body-lg-font-size, $text-secondary);
 }
 
 .form {

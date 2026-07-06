@@ -60,8 +60,7 @@
 .information {
   @include grid-fields(
     3,
-    'firstName lastName birthDate' 'email contact gender'
-      'address address address'
+    'firstName lastName birthDate' 'email contact gender' 'address address address'
   );
 }
 

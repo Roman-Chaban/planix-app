@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 
 import { Typography } from '@/shared/ui';
@@ -9,7 +7,7 @@ import { getButtonProps } from '../lib/get-button-props';
 
 import styles from './Button.module.scss';
 
-export const Button: FC<ButtonProps> = (props) => {
+export const Button = (props: ButtonProps) => {
   const { allProps, htmlProps } = getButtonProps(props);
 
   const {
@@ -51,10 +49,7 @@ export const Button: FC<ButtonProps> = (props) => {
       onClick={onClick}
     >
       {startIcon && (
-        <Typography
-          as="span"
-          className={buildClassName(styles.icon, startIconClassName)}
-        >
+        <Typography as="span" className={buildClassName(styles.icon, startIconClassName)}>
           {startIcon}
         </Typography>
       )}
@@ -63,10 +58,7 @@ export const Button: FC<ButtonProps> = (props) => {
         {children}
 
         {endIcon && (
-          <Typography
-            as="span"
-            className={buildClassName(styles.icon, endIconClassName)}
-          >
+          <Typography as="span" className={buildClassName(styles.icon, endIconClassName)}>
             {endIcon}
           </Typography>
         )}

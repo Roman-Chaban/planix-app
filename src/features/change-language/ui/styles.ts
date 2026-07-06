@@ -1,8 +1,6 @@
 import type { LanguageSelectStyles } from '@/features/change-language/model/types';
 
-export const createSelectStyles = (
-  isTablet: boolean,
-): LanguageSelectStyles => ({
+export const createSelectStyles = (isTablet: boolean): LanguageSelectStyles => ({
   container: (base) => ({
     ...base,
     width: '10rem',

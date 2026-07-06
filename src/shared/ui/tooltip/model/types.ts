@@ -6,5 +6,4 @@ export type TooltipProps = WithChildren & {
   position?: TooltipPosition;
 };
 
-export type TooltipPosition =
-  (typeof TOOLTIP_POSITION)[keyof typeof TOOLTIP_POSITION];
+export type TooltipPosition = (typeof TOOLTIP_POSITION)[keyof typeof TOOLTIP_POSITION];

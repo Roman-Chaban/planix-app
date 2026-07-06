@@ -1,16 +1,9 @@
 'use client';
 
-import { type FC } from 'react';
-
 import { ModalContent, ModalOverlay, Portal } from '@/shared/ui';
 import { useModalBehavior, type ModalProps } from '@/shared/ui/modal';
 
-export const Modal: FC<ModalProps> = ({
-  isOpen,
-  onClose,
-  closeOnOverlayClick = true,
-  children,
-}) => {
+export const Modal = ({ isOpen, onClose, closeOnOverlayClick = true, children }: ModalProps) => {
   useModalBehavior({ isOpen, onClose });
 
   if (!isOpen) return null;

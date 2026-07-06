@@ -2,8 +2,6 @@
 
 import type { DetailsProps } from './model/types';
 
-import { type FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { Header } from '@/widgets/header';
@@ -18,7 +16,7 @@ import { InfoCard, InfoList } from '../info';
 import styles from './Details.module.scss';
 import { mapProjectDetails } from './lib/project.mapper';
 
-export const Details: FC<DetailsProps> = ({ project }) => {
+export const Details = ({ project }: DetailsProps) => {
   const { t, i18n } = useTranslation(NS.PROJECT);
 
   const { details, description } = mapProjectDetails({

@@ -4,9 +4,7 @@ import { StatusBadge } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
 import type { TableColumn } from '@/shared/ui/table/model/types';
 
-export const getBillingHistoryColumns = (
-  t: TranslateFn,
-): TableColumn<Billing>[] => [
+export const getBillingHistoryColumns = (t: TranslateFn): TableColumn<Billing>[] => [
   {
     key: 'formattedDate',
     title: t('subscriptionAndBilling.billingTable.columns.date'),

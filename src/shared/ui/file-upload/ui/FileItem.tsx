@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import { Box, Button, Typography } from '@/shared/ui';
 
 import { BUTTON_TYPES } from '@/shared/ui/button/lib/constants';
@@ -10,7 +8,7 @@ import styles from './FileUpload.module.scss';
 
 const { BUTTON } = BUTTON_TYPES;
 
-export const FileItem: FC<FileItemProps> = ({ file, onRemove }) => {
+export const FileItem = ({ file, onRemove }: FileItemProps) => {
   const isNativeFile = file instanceof File;
 
   const isPdf = isNativeFile
@@ -23,9 +21,7 @@ export const FileItem: FC<FileItemProps> = ({ file, onRemove }) => {
         <CloseIcon width={12} height={12} />
       </Button>
 
-      <Box
-        className={`${styles.fileIconWrapper} ${isPdf ? styles.pdfType : styles.photoType}`}
-      >
+      <Box className={`${styles.fileIconWrapper} ${isPdf ? styles.pdfType : styles.photoType}`}>
         {isPdf ? <PdfIcon /> : <UploadIcon />}
       </Box>
 

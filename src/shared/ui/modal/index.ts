@@ -1,8 +1,4 @@
-export type {
-  ModalProps,
-  ModalHeaderProps,
-  ModalOverlayProps,
-} from './model/types';
+export type { ModalProps, ModalHeaderProps, ModalOverlayProps } from './model/types';
 
 export { useModalBehavior } from './model/useModalBehavior';
 

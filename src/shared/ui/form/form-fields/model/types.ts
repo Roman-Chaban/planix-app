@@ -1,9 +1,4 @@
-import type {
-  FieldErrors,
-  FieldValues,
-  UseFormRegister,
-  Path,
-} from 'react-hook-form';
+import type { FieldErrors, FieldValues, UseFormRegister, Path } from 'react-hook-form';
 
 import type { ReactNode } from 'react';
 

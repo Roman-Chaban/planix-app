@@ -1,20 +1,11 @@
 'use client';
 
-import { type FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
-import {
-  useDeleteProjectModal,
-  type DeleteProjectModalProps,
-} from '@/features/project-delete';
+import { useDeleteProjectModal, type DeleteProjectModalProps } from '@/features/project-delete';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Modal, ModalHeader, Textarea, Box, Button } from '@/shared/ui';
-import {
-  BUTTON_SIZES,
-  BUTTON_TYPES,
-  BUTTON_VARIANTS,
-} from '@/shared/ui/button/lib/constants';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/lib/constants';
 import { CloseIcon } from '@/shared/ui/icons';
 
 import styles from './DeleteProjectModal.module.scss';
@@ -23,32 +14,18 @@ const { BUTTON } = BUTTON_TYPES;
 const { OUTLINE, DEFAULT } = BUTTON_VARIANTS;
 const { LARGE } = BUTTON_SIZES;
 
-export const DeleteProjectModal: FC<DeleteProjectModalProps> = ({
-  projectId,
-  onClose,
-  isOpen,
-}) => {
+export const DeleteProjectModal = ({ projectId, onClose, isOpen }: DeleteProjectModalProps) => {
   const { t } = useTranslation(NS.MODAL);
 
-  const {
-    handleClose,
-    handleDeleteProject,
-    isProjectActionPending,
-    reason,
-    setReason,
-    isDeleted,
-  } = useDeleteProjectModal({
-    projectId,
-    onClose,
-  });
+  const { handleClose, handleDeleteProject, isProjectActionPending, reason, setReason, isDeleted } =
+    useDeleteProjectModal({
+      projectId,
+      onClose,
+    });
 
   return (
     <Modal isOpen={isOpen} onClose={handleClose}>
-      <ModalHeader
-        onClose={handleClose}
-        title={t('title')}
-        icon={<CloseIcon />}
-      />
+      <ModalHeader onClose={handleClose} title={t('title')} icon={<CloseIcon />} />
 
       <Textarea
         value={reason}

@@ -1,11 +1,9 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { Button } from '@/shared/ui';
 import type { ProjectButtonProps } from '@/shared/ui/project-button';
 
-export const ProjectButton: FC<ProjectButtonProps> = ({
+export const ProjectButton = ({
   onClick,
   type,
   disabled,
@@ -16,7 +14,7 @@ export const ProjectButton: FC<ProjectButtonProps> = ({
   fullWidth,
   maxWidth,
   label,
-}) => {
+}: ProjectButtonProps) => {
   return (
     <Button
       type={type}

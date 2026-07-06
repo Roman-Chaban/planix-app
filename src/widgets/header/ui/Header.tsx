@@ -1,7 +1,5 @@
 'use client';
 
-import { type FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { HeaderActions, type HeaderProps } from '@/widgets/header';
@@ -11,7 +9,7 @@ import { Box, Typography } from '@/shared/ui';
 
 import styles from './Header.module.scss';
 
-export const Header: FC<HeaderProps> = ({ title }) => {
+export const Header = ({ title }: HeaderProps) => {
   const { t } = useTranslation(NS.HEADER);
 
   return (

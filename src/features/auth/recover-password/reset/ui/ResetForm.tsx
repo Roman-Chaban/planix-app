@@ -1,10 +1,9 @@
 'use client';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import type { NavigateFn } from '@/shared/types/types';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
@@ -14,13 +13,12 @@ import { useResetPassword } from '../model/useResetPassword';
 const { XL } = BUTTON_MAX_WIDTH;
 
 type ResetFormProps = {
-  onNavigate: (step: AuthStep) => void;
+  onNavigate: NavigateFn;
 };
 
-export const ResetForm: FC<ResetFormProps> = ({ onNavigate }) => {
+export const ResetForm = ({ onNavigate }: ResetFormProps) => {
   const { t } = useTranslation(NS.AUTH);
-  const { resetForm, isValid, isSubmitting, handleSubmit } =
-    useResetPassword(onNavigate);
+  const { resetForm, isValid, isSubmitting, handleSubmit } = useResetPassword(onNavigate);
 
   const isSubmitDisabled = !isValid || isSubmitting;
 

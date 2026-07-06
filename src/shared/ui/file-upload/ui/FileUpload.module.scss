@@ -97,12 +97,7 @@
 }
 
 .errorMessage {
-  @include error-text(
-    $body-md-font-size,
-    $icon-danger,
-    0.3rem,
-    $font-weight-medium
-  );
+  @include error-text($body-md-font-size, $icon-danger, 0.3rem, $font-weight-medium);
 }
 
 .errorText {

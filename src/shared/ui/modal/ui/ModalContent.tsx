@@ -1,10 +1,9 @@
-import type { FC, ReactNode } from 'react';
-
+import type { WithChildren } from '@/shared/types/types';
 import { Box } from '@/shared/ui';
 
 import styles from './Modal.module.scss';
 
-export const ModalContent: FC<{ children: ReactNode }> = ({ children }) => {
+export const ModalContent = ({ children }: WithChildren) => {
   return (
     <Box
       className={styles.modal}

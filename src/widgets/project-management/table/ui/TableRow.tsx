@@ -1,6 +1,6 @@
 import type { TableRowProps } from '../model/types';
 
-import { useMemo, type FC } from 'react';
+import { useMemo } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 import { StatusBadge, ActionsBar } from '@/shared/ui';
@@ -8,23 +8,11 @@ import { CalendarIcon } from '@/shared/ui/icons';
 
 import styles from './Table.module.scss';
 
-export const TableRow: FC<TableRowProps> = ({ project, actionsFactory }) => {
-  const {
-    status,
-    client_name,
-    project_name,
-    slug,
-    due_date,
-    platform,
-    progress,
-    price,
-    id,
-  } = project;
+export const TableRow = ({ project, actionsFactory }: TableRowProps) => {
+  const { status, client_name, project_name, slug, due_date, platform, progress, price, id } =
+    project;
 
-  const rowActions = useMemo(
-    () => actionsFactory(slug, id),
-    [actionsFactory, slug, id],
-  );
+  const rowActions = useMemo(() => actionsFactory(slug, id), [actionsFactory, slug, id]);
 
   return (
     <tr className={styles.bodyRow}>

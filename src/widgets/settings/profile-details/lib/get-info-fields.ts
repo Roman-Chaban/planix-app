@@ -3,10 +3,7 @@ import type { TFunction } from 'i18next';
 
 import type { Profile } from '@/entities/settings';
 
-export const getInfoFields = (
-  profile: Profile,
-  t: TFunction,
-): ProfileFieldConfig[] => [
+export const getInfoFields = (profile: Profile, t: TFunction): ProfileFieldConfig[] => [
   {
     key: 'firstName',
     label: t('profileDetails.firstName'),

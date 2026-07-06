@@ -1,4 +1,4 @@
-import { useId, type ChangeEvent, type FC } from 'react';
+import { useId, type ChangeEvent } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 
@@ -11,12 +11,7 @@ import styles from './Checkbox.module.scss';
 
 const { CHECKBOX } = INPUT_TYPES;
 
-export const Checkbox: FC<CheckboxProps> = ({
-  checked,
-  onChange,
-  label,
-  disabled,
-}) => {
+export const Checkbox = ({ checked, onChange, label, disabled }: CheckboxProps) => {
   const checkboxId = useId();
 
   const handleCheckChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -38,12 +33,7 @@ export const Checkbox: FC<CheckboxProps> = ({
       />
 
       <Typography as="span" className={styles.box}>
-        <CheckIcon
-          className={buildClassName(
-            styles.checkIcon,
-            checked && styles.visible,
-          )}
-        />
+        <CheckIcon className={buildClassName(styles.checkIcon, checked && styles.visible)} />
       </Typography>
 
       {label && (

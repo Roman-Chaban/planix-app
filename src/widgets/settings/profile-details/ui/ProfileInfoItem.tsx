@@ -1,16 +1,10 @@
 import type { ProfileInfoItemProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { Box, Typography } from '@/shared/ui';
 
 import styles from './ProfileDetails.module.scss';
 
-export const ProfileInfoItem: FC<ProfileInfoItemProps> = ({
-  label,
-  value,
-  children,
-}) => {
+export const ProfileInfoItem = ({ label, value, children }: ProfileInfoItemProps) => {
   return (
     <Box className={styles.field}>
       <Typography as="span" className={styles.label}>

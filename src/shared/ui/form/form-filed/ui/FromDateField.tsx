@@ -1,6 +1,6 @@
 'use client';
 
-import type { FC, ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE } from '@/shared/i18n';
@@ -14,13 +14,13 @@ import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 const { TEXT } = INPUT_TYPES;
 const { DEFAULT } = INPUT_VARIANTS;
 
-export const FormDateField: FC<FormDateFieldProps> = ({
+export const FormDateField = ({
   id,
   label,
   placeholder,
   error,
   inputProps,
-}) => {
+}: FormDateFieldProps) => {
   const { t } = useTranslation(NAMESPACE.PROJECT_ADD);
 
   const { value, onChange, ref, required, ...rest } = inputProps;

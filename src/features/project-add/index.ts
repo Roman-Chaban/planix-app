@@ -1,7 +1,4 @@
-export {
-  type ProjectDetailsSchema,
-  projectDetailsSchema,
-} from './model/project.schema';
+export { type ProjectDetailsSchema, projectDetailsSchema } from './model/project.schema';
 
 export { useProjectForm } from './model/useProjectForm';
 

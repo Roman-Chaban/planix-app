@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import type { NavigateFn } from '@/shared/types/types';
 import { AppForm } from '@/shared/ui';
 
@@ -9,7 +7,7 @@ type VerifyFormProps = {
   onNavigate: NavigateFn;
 };
 
-export const VerifyForm: FC<VerifyFormProps> = ({ onNavigate }) => {
+export const VerifyForm = ({ onNavigate }: VerifyFormProps) => {
   const { resetForm, handleSubmit } = useResetPassword(onNavigate);
 
   return (

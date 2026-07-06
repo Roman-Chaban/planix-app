@@ -10,14 +10,7 @@ import type {
 import type { WithChildren, WithClassName } from '@/shared/types/types';
 
 export type FormFieldVariant =
-  | 'default'
-  | 'search'
-  | 'hover'
-  | 'typing'
-  | 'filed'
-  | 'disabled'
-  | 'error'
-  | 'noBorder';
+  'default' | 'search' | 'hover' | 'typing' | 'filed' | 'disabled' | 'error' | 'noBorder';
 
 export type IconPosition = 'start' | 'end';
 
@@ -46,8 +39,7 @@ export type FormErrorProps = WithClassName & {
   error: string;
 };
 
-export type FormInputProps = InputHTMLAttributes<HTMLInputElement> &
-  WithClassName;
+export type FormInputProps = InputHTMLAttributes<HTMLInputElement> & WithClassName;
 
 export type FormIconProps = WithChildren &
   WithClassName & {
@@ -68,6 +60,5 @@ export type FormDateFieldProps = WithClassName & {
   label: string;
   placeholder: string;
   error?: string;
-  inputProps: DateFieldProps &
-    Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
+  inputProps: DateFieldProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
 };

@@ -9,9 +9,7 @@ export const mapProfile = (data: ProfileData): Profile => {
 
   const birthDate = data.birth_date ? new Date(data.birth_date) : null;
   const createdAt = new Date(data.created_at);
-  const nextBillingDate = data.next_billing_date
-    ? new Date(data.next_billing_date)
-    : null;
+  const nextBillingDate = data.next_billing_date ? new Date(data.next_billing_date) : null;
 
   return {
     id: data.id,
@@ -24,9 +22,7 @@ export const mapProfile = (data: ProfileData): Profile => {
     createdAt,
     initials,
     createdAtFormatted: dayjs(createdAt).format(DATE_FORMAT.DISPLAY),
-    birthDateFormatted: birthDate
-      ? dayjs(birthDate).format(DATE_FORMAT.DISPLAY)
-      : '',
+    birthDateFormatted: birthDate ? dayjs(birthDate).format(DATE_FORMAT.DISPLAY) : '',
     planName: data.plan_name,
     planPrice: data.plan_price ?? 0,
     nextBillingDate,

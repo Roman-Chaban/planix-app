@@ -1,6 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
@@ -18,7 +17,7 @@ import styles from './Sidebar.module.scss';
 const { DASHBOARD } = ROUTES;
 const { TRANSPARENT } = BUTTON_VARIANTS;
 
-export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
+export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
   const { t } = useTranslation(NS.SIDEBAR);
 
   const renderToggleIcon = isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />;

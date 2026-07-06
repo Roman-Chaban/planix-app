@@ -1,6 +1,5 @@
 import type { LoginActionsProps } from '../model/types';
 
-import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 
 import { AuthButton, Box, Checkbox } from '@/shared/ui';
@@ -12,7 +11,7 @@ import styles from './LoginForm.module.scss';
 const { SM, LG } = BUTTON_MAX_WIDTH;
 const { TRANSPARENT } = BUTTON_VARIANTS;
 
-export const LoginActions: FC<LoginActionsProps> = ({
+export const LoginActions = ({
   control,
   rememberMeLabel,
   forgotPasswordLabel,
@@ -20,7 +19,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
   isValid,
   isLoading,
   onForgotPassword,
-}) => {
+}: LoginActionsProps) => {
   return (
     <Box className={styles.loginFormMainWrapper}>
       <Box className={styles.loginFormMain}>
@@ -28,11 +27,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
           name="rememberMe"
           control={control}
           render={({ field }) => (
-            <Checkbox
-              checked={field.value}
-              onChange={field.onChange}
-              label={rememberMeLabel}
-            />
+            <Checkbox checked={field.value} onChange={field.onChange} label={rememberMeLabel} />
           )}
         />
 
@@ -46,12 +41,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
         </Button>
       </Box>
 
-      <AuthButton
-        label={submitLabel}
-        disabled={isValid}
-        maxWidth={SM}
-        isLoading={isLoading}
-      />
+      <AuthButton label={submitLabel} disabled={isValid} maxWidth={SM} isLoading={isLoading} />
     </Box>
   );
 };

@@ -1,19 +1,10 @@
 'use client';
 
-import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { AuthStep } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import {
-  AppForm,
-  AuthButton,
-  Box,
-  FormFields,
-  FormDateField,
-  Tooltip,
-} from '@/shared/ui';
+import { AppForm, AuthButton, Box, FormFields, FormDateField, Tooltip } from '@/shared/ui';
 import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
 import { registerFormFields } from '../lib/form-config';
@@ -23,14 +14,9 @@ import styles from './RegisterForm.module.scss';
 
 const { LG } = BUTTON_MAX_WIDTH;
 
-type RegisterFormProps = {
-  onNavigate: (step: AuthStep) => void;
-};
-
-export const RegisterForm: FC<RegisterFormProps> = () => {
+export const RegisterForm = () => {
   const { t } = useTranslation(NS.AUTH);
-  const { isValid, isSubmitting, handleSubmit, registrationForm, control } =
-    useRegistration();
+  const { isValid, isSubmitting, handleSubmit, registrationForm, control } = useRegistration();
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);

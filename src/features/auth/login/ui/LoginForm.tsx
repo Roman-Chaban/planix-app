@@ -2,7 +2,6 @@
 
 import type { LoginFormProps } from '../model/types';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { AUTH_STEPS } from '@/features/auth/stepper';
@@ -16,11 +15,10 @@ import { LoginActions } from './LoginActions';
 
 const { FORGOT } = AUTH_STEPS;
 
-export const LoginForm: FC<LoginFormProps> = ({ onNavigate }) => {
+export const LoginForm = ({ onNavigate }: LoginFormProps) => {
   const { t } = useTranslation(NS.AUTH);
 
-  const { isValid, isSubmitting, loginForm, handleSubmit, control } =
-    useLogin(t);
+  const { isValid, isSubmitting, loginForm, handleSubmit, control } = useLogin(t);
 
   const isSubmitDisabled = !isValid || isSubmitting;
 

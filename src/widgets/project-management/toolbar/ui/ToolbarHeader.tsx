@@ -2,8 +2,6 @@
 
 import type { ToolbarHeaderProps } from '../model/types';
 
-import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n';
@@ -16,11 +14,7 @@ import styles from './Toolbar.module.scss';
 
 import { ToolbarHeaderItem } from './ToolbarHeaderItem';
 
-export const ToolbarHeader: FC<ToolbarHeaderProps> = ({
-  activeId,
-  setActiveId,
-  isSidebarOpen,
-}) => {
+export const ToolbarHeader = ({ activeId, setActiveId, isSidebarOpen }: ToolbarHeaderProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
   const headerItems = getHeaderItems(t);

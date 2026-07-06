@@ -3,19 +3,13 @@
 import { useMemo, useCallback } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-import {
-  languageOptions,
-  type LanguageOption,
-} from '@/features/change-language';
+import { languageOptions, type LanguageOption } from '@/features/change-language';
 
 export const useLanguageSelect = () => {
   const router = useRouter();
   const pathname = usePathname() ?? '/';
 
-  const segments = useMemo(
-    () => pathname.split('/').filter(Boolean),
-    [pathname],
-  );
+  const segments = useMemo(() => pathname.split('/').filter(Boolean), [pathname]);
 
   const currentLocale = useMemo(() => {
     const possibleLocale = segments[0];
@@ -26,9 +20,7 @@ export const useLanguageSelect = () => {
   }, [segments]);
 
   const selectValue = useMemo(
-    () =>
-      languageOptions.find((option) => option.value === currentLocale) ??
-      languageOptions[0],
+    () => languageOptions.find((option) => option.value === currentLocale) ?? languageOptions[0],
 
     [currentLocale],
   );
@@ -43,8 +35,7 @@ export const useLanguageSelect = () => {
 
       const newPath = '/' + newSegments.join('/');
 
-      const search =
-        typeof window !== 'undefined' ? window.location.search : '';
+      const search = typeof window !== 'undefined' ? window.location.search : '';
 
       router.push(newPath + search);
     },

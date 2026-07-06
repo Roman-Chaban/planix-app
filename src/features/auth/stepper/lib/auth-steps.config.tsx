@@ -1,10 +1,4 @@
-import {
-  LoginForm,
-  ForgotForm,
-  RegisterForm,
-  ResetForm,
-  VerifyForm,
-} from '@/features/auth';
+import { LoginForm, ForgotForm, RegisterForm, ResetForm, VerifyForm } from '@/features/auth';
 import type { NavigateFn, TranslateFn } from '@/shared/types/types';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
@@ -38,11 +32,7 @@ export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
   [REGISTER]: {
     component: () => <RegisterForm onNavigate={onNavigate} />,
     header: (
-      <AuthHeader
-        title={t('register.title')}
-        subtitle={t('register.subtitle')}
-        isHighlightedIcon
-      />
+      <AuthHeader title={t('register.title')} subtitle={t('register.subtitle')} isHighlightedIcon />
     ),
     footer: (
       <AuthFooter>
@@ -57,9 +47,7 @@ export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
   },
   [FORGOT]: {
     component: () => <ForgotForm onNavigate={onNavigate} />,
-    header: (
-      <AuthHeader title={t('forgot.title')} subtitle={t('forgot.subtitle')} />
-    ),
+    header: <AuthHeader title={t('forgot.title')} subtitle={t('forgot.subtitle')} />,
     footer: (
       <AuthFooter>
         <AuthRedirect
@@ -74,9 +62,7 @@ export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
   },
   [RESET]: {
     component: () => <ResetForm onNavigate={onNavigate} />,
-    header: (
-      <AuthHeader title={t('reset.title')} subtitle={t('reset.subtitle')} />
-    ),
+    header: <AuthHeader title={t('reset.title')} subtitle={t('reset.subtitle')} />,
     footer: (
       <AuthFooter>
         <AuthRedirect
@@ -91,9 +77,7 @@ export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
   },
   [VERIFY]: {
     component: () => <VerifyForm onNavigate={onNavigate} />,
-    header: (
-      <AuthHeader title={t('verify.title')} subtitle={t('verify.subtitle')} />
-    ),
+    header: <AuthHeader title={t('verify.title')} subtitle={t('verify.subtitle')} />,
     footer: (
       <AuthFooter>
         <AuthRedirect

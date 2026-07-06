@@ -3,19 +3,11 @@ import type { ProjectDetailsMapOptions } from '../model/types';
 import { APP_LOCALES } from '@/shared/i18n/locales/locales';
 import { toDisplay } from '@/shared/lib';
 
-export const mapProjectDetails = ({
-  project,
-  t,
-  lng,
-}: ProjectDetailsMapOptions) => {
+export const mapProjectDetails = ({ project, t, lng }: ProjectDetailsMapOptions) => {
   const isUk = lng === APP_LOCALES.UK;
 
-  const name = isUk
-    ? project.project_name_uk || project.project_name
-    : project.project_name;
-  const description = isUk
-    ? project.description_uk || project.description
-    : project.description;
+  const name = isUk ? project.project_name_uk || project.project_name : project.project_name;
+  const description = isUk ? project.description_uk || project.description : project.description;
 
   const details = [
     { id: 'name', label: t('fields.projectName'), value: name },

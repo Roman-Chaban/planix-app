@@ -6,6 +6,7 @@ import { Box, Tooltip, Typography } from '@/shared/ui';
 
 import { Button } from '@/shared/ui/button';
 
+import { UploadAvatarIcon } from '@/shared/ui/icons';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './ProfileDetails.module.scss';
@@ -20,7 +21,12 @@ export const ProfileHeader = ({ profile, t, onMode }: ProfileHeaderProps) => {
       <Box className={styles.profileInfo}>
         <Box className={styles.profileBox}>
           {/* TODO: [Temporary mock Avatar, the image will be added soon] */}
-          <Box className={styles.avatar}>Avatar</Box>
+          <Box className={styles.avatar}>
+            Avatar
+            <Button preset="UPLOAD_AVATAR" className={styles.avatarUpload}>
+              <UploadAvatarIcon />
+            </Button>
+          </Box>
 
           <Box className={styles.info}>
             <Typography as="h2" className={styles.fullName}>

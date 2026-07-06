@@ -45,3 +45,4 @@ export { NotificationProject } from './Icons';
 export { NotificationMessage } from './Icons';
 export { NotificationTask } from './Icons';
 export { NotificationSecurity } from './Icons';
+export { BlockedIcon } from './Icons';

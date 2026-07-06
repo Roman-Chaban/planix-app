@@ -1,3 +1,5 @@
+@use '../tokens/' as *;
+
 @mixin trend-state($border, $background, $color) {
   border: $border;
   background: $background;
@@ -78,4 +80,42 @@
   #{$container}:hover #{$tooltip}[data-position='right'] {
     transform: translate(0, -50%) scale(1);
   }
+}
+
+@mixin tooltip-style {
+  position: absolute;
+  z-index: $z-tooltip;
+
+  width: max-content;
+  max-width: 18rem;
+
+  padding: $space-3 $space-4;
+
+  color: $text-inverse;
+  font-size: $text-body-sm;
+  font-weight: $font-weight-medium;
+  line-height: $body-sm-line-height;
+  letter-spacing: 0.01em;
+
+  background: $neutral-900;
+
+  border: 0.125rem solid rgba($neutral-0, 0.06);
+  border-radius: calc(#{$radius-lg} + 0.125rem);
+
+  user-select: none;
+  white-space: nowrap;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+
+  @include tooltip-hidden;
+}
+
+@mixin tooltip-arrow-style {
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: $neutral-900;
+  transform: rotate(45deg);
 }

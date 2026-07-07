@@ -47,3 +47,4 @@ export { NotificationTask } from './Icons';
 export { NotificationSecurity } from './Icons';
 export { BlockedIcon } from './Icons';
 export { UploadAvatarIcon } from './Icons';
+export { LanguageIcon } from './Icons';

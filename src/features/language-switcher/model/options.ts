@@ -1,4 +1,4 @@
-import type { LanguageOption } from '@/features/change-language';
+import type { LanguageOption } from '@/features/language-switcher';
 import { UkraineIcon, UnitedStatesIcon } from '@/shared/ui/icons/index';
 
 export const languageOptions = [

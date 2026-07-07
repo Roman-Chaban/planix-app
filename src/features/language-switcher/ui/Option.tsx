@@ -1,6 +1,6 @@
 import { type OptionProps, components } from 'react-select';
 
-import type { LanguageOption } from '@/features/change-language';
+import type { LanguageOption } from '@/features/language-switcher';
 import { Box, Typography } from '@/shared/ui';
 import { OPTION_STYLES, OPTION_ICON_SHRINK } from '@/shared/ui/theme/model/styles';
 

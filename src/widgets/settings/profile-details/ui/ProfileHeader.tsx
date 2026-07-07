@@ -2,28 +2,55 @@
 
 import type { ProfileHeaderProps } from '../model/types';
 
-import { Box, Tooltip, Typography } from '@/shared/ui';
+import { Avatar, Box, Input, Tooltip, Typography } from '@/shared/ui';
 
+import { AVATAR_VARIANTS } from '@/shared/ui/avatar';
 import { Button } from '@/shared/ui/button';
 
 import { UploadAvatarIcon } from '@/shared/ui/icons';
+import { INPUT_TYPES } from '@/shared/ui/input';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
+
+import { useUploadAvatar } from '../model/useUploadAvatar';
 
 import styles from './ProfileDetails.module.scss';
 
 const { BOTTOM } = TOOLTIP_POSITION;
+const { FILE } = INPUT_TYPES;
+const { CIRCLE } = AVATAR_VARIANTS;
 
 export const ProfileHeader = ({ profile, t, onMode }: ProfileHeaderProps) => {
+  const { uploadAvatarRef, handleFileChange, handleUploadClick } = useUploadAvatar();
+
   if (!profile) return null;
 
   return (
     <Box className={styles.profile}>
       <Box className={styles.profileInfo}>
         <Box className={styles.profileBox}>
-          {/* TODO: [Temporary mock Avatar, the image will be added soon] */}
-          <Box className={styles.avatar}>
-            Avatar
-            <Button preset="UPLOAD_AVATAR" className={styles.avatarUpload}>
+          <Box className={styles.avatarBox}>
+            <Input
+              type={FILE}
+              hidden
+              ref={uploadAvatarRef}
+              onChange={(event) => handleFileChange(profile.id, event)}
+            />
+
+            <Avatar
+              width={74}
+              height={74}
+              src={profile.avatarUrl}
+              alt={profile.fullName}
+              fallback={profile.initials}
+              variant={CIRCLE}
+              className={styles.avatarImage}
+            />
+
+            <Button
+              preset="UPLOAD_AVATAR"
+              className={styles.avatarUpload}
+              onClick={handleUploadClick}
+            >
               <UploadAvatarIcon />
             </Button>
           </Box>

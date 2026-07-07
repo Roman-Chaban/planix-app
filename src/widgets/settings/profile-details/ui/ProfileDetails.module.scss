@@ -33,15 +33,12 @@
   @include flex-col(0.188rem, start, start, column);
 }
 
-.avatar {
+.avatarBox {
   position: relative;
   @include flex-center;
   width: 100%;
   max-width: 4.625rem;
   min-height: 4.625rem;
-  border-radius: $radius-full;
-  background: $neutral-200;
-  border: 0.188rem solid $neutral-0;
 }
 
 .avatarUpload {
@@ -49,10 +46,10 @@
   position: absolute;
   width: 1.75rem;
   height: 1.75rem;
-  background: $neutral-0;
   bottom: -0.125rem;
   right: -0.3rem;
   box-shadow: $shadow-sm;
+  background: $neutral-0;
 }
 
 .fullName {

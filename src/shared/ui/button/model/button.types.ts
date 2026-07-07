@@ -5,7 +5,7 @@ import type { ButtonPresetKey } from '@/shared/ui/button';
 
 export type Variant = 'default' | 'outline' | 'soft' | 'tertiary' | 'transparent';
 export type Size = 'sm' | 'md' | 'lg' | 'compact';
-export type Shape = 'default' | 'rounded' | 'circle' | 'pill';
+export type Shape = 'normal' | 'rounded' | 'circle' | 'pill';
 export type MinWidth = 'content' | 'sm' | 'md' | 'lg';
 export type ButtonPresets = Record<string, ButtonPreset>;
 

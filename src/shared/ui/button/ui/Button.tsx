@@ -13,7 +13,7 @@ export const Button = (props: ButtonProps) => {
   const {
     variant = 'default',
     size = 'compact',
-    shape = 'default',
+    shape = 'normal',
     fullWidth = false,
     minWidth,
     className,

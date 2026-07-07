@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 import { ROUTES } from '@/app/routes';
 
-import { LanguageSelect } from '@/features/change-language';
 import { useProfile } from '@/entities/settings/api';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppLink, Avatar, Box, Button, Tooltip } from '@/shared/ui';
@@ -27,8 +26,6 @@ export const HeaderActions = () => {
 
   return (
     <Box className={styles.headerAuth}>
-      <LanguageSelect />
-
       <Button
         preset="NOTIFICATION"
         className={styles.button}

@@ -2,10 +2,9 @@ import type { MenuItems } from '../model/types';
 
 import { Notifications } from '@/features/profile';
 
-import { Box } from '@/shared/ui';
-
 import { ProfileDetails } from '../../profile-details';
 import { Subscription } from '../../subscription-billing';
+import { System } from '../../system';
 
 export const PROFILE_MENU: MenuItems = [
   {
@@ -33,7 +32,7 @@ export const PROFILE_MENU: MenuItems = [
     id: 'system',
     label: 'profileMenu.systemSettings',
     requiresAuth: false,
-    component: Box,
+    component: System,
     type: 'tab',
   },
   {

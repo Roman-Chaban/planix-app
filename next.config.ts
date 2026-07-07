@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
       '@widgets': path.resolve(__dirname, 'src/widgets/'),
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'nivcthoqirpqmuhsnjkm.supabase.co',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

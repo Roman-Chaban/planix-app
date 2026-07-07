@@ -45,6 +45,12 @@
 
 .transparent {
   background: transparent;
+  color: inherit;
+
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 .circle {

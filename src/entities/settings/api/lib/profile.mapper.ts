@@ -29,5 +29,6 @@ export const mapProfile = (data: ProfileData): Profile => {
     nextBillingDateFormatted: nextBillingDate
       ? dayjs(nextBillingDate).format(DATE_FORMAT.DISPLAY)
       : '',
+    avatarUrl: data.avatar_url,
   };
 };

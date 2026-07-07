@@ -9,6 +9,7 @@ import { useProfile } from '@/entities/settings/api';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppLink, Avatar, Box, Button, Tooltip } from '@/shared/ui';
 
+import { AVATAR_VARIANTS } from '@/shared/ui/avatar';
 import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
@@ -18,6 +19,7 @@ import { HeaderActionsSkeleton } from './skeleton/HeaderActionsSkeleton';
 
 const { AUTH, SETTINGS } = ROUTES;
 const { BOTTOM, LEFT } = TOOLTIP_POSITION;
+const { CIRCLE } = AVATAR_VARIANTS;
 
 export const HeaderActions = () => {
   const { t } = useTranslation(NS.HEADER);
@@ -49,7 +51,15 @@ export const HeaderActions = () => {
       ) : (
         <Tooltip position={LEFT} message={t('settingsTooltip')}>
           <AppLink href={SETTINGS}>
-            <Avatar alt={profile.fullName} fallback={profile.initials} className={styles.avatar} />
+            <Avatar
+              width={50}
+              height={50}
+              variant={CIRCLE}
+              alt={profile.fullName}
+              src={profile.avatarUrl}
+              fallback={profile.initials}
+              className={styles.avatar}
+            />
           </AppLink>
         </Tooltip>
       )}

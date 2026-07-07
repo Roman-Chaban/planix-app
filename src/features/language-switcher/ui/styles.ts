@@ -1,4 +1,4 @@
-import type { LanguageSelectStyles } from '@/features/change-language/model/types';
+import type { LanguageSelectStyles } from '../model/types';
 
 export const createSelectStyles = (): LanguageSelectStyles => ({
   container: (base) => ({

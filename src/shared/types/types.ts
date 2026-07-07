@@ -1,6 +1,6 @@
 import type { TFunction } from 'i18next';
 
-import type { FC, ReactNode, Ref, SVGProps } from 'react';
+import type { ComponentType, FC, ReactNode, Ref, SVGProps } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
 import type { Locale } from '@/shared/i18n/locales/locales';
@@ -29,3 +29,22 @@ export type IsAuthenticated = {
 export type WithRef<T, R> = T & {
   ref?: Ref<R>;
 };
+
+export type WithSwitch = {
+  id: string;
+  icon?: ComponentType;
+  title: string;
+  subtitle: string;
+};
+
+export type IdentifiableSwitch = WithSwitch & {
+  id: string | number;
+};
+
+export type SettingSwitchListProps<T> = {
+  list: T[];
+  className?: string;
+  itemClassName?: string;
+};
+
+export type SettingSwitchList = WithSwitch[];

@@ -69,5 +69,11 @@
         "status": "Status"
       }
     }
+  },
+  "system": {
+    "languageTitle": "Language Setting",
+    "securityTitle": "Security Settings",
+    "changePasswordTitle": "Change Password",
+    "selectLabel": "Default Language"
   }
 }

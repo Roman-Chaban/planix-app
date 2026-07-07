@@ -69,5 +69,11 @@
         "status": "Статус"
       }
     }
+  },
+  "system": {
+    "languageTitle": "Налаштування мови",
+    "securityTitle": "Налаштування безпеки",
+    "changePasswordTitle": "Змінити пароль",
+    "selectLabel": "Мова за замовчуванням"
   }
 }

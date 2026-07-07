@@ -20,7 +20,7 @@ export const Avatar = ({
   ...avatarProps
 }: AvatarProps) => {
   return (
-    <Box className={buildClassName(styles.avatar, styles[size], styles[variant], className)}>
+    <Box className={buildClassName(styles.avatar, className)}>
       {icon && <Box className={styles.icon}>{icon}</Box>}
 
       {!icon && src && (
@@ -30,7 +30,7 @@ export const Avatar = ({
           {...avatarProps}
           src={src}
           alt={alt}
-          className={styles.image}
+          className={buildClassName(styles.image, styles[size], styles[variant])}
         />
       )}
 

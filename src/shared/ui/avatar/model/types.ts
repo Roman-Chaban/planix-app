@@ -14,7 +14,7 @@ type BaseAvatarProps = WithClassName & {
 };
 
 export type AvatarProps = BaseAvatarProps & {
-  src?: string;
+  src?: string | null;
   icon?: ReactNode;
   fallback?: ReactNode;
 };

@@ -8,6 +8,7 @@ export type ProfileData = {
   plan_name: string;
   plan_price?: number;
   next_billing_date?: string | null;
+  avatar_url: string | null;
 };
 
 export type Profile = {
@@ -26,4 +27,5 @@ export type Profile = {
   planPrice: number;
   nextBillingDate: Date | null;
   nextBillingDateFormatted: string;
+  avatarUrl: string | null;
 };

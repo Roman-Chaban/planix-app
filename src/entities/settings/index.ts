@@ -5,4 +5,5 @@ export {
   mapProfile,
   queryKeys,
   useProfile,
+  uploadProfileAvatar,
 } from '../settings/api';

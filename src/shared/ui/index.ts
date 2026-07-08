@@ -23,7 +23,7 @@ export { ProjectButton } from './project-button';
 export { StatusBadge } from './status-badge';
 export { Textarea } from './textarea';
 export { Typography } from './typography';
-export { Modal, ModalContent, ModalHeader, ModalOverlay } from './modal';
+export { Modal, ModalContent, ModalHeader, ModalOverlay, ModalActions } from './modal';
 export { FileUpload } from './file-upload';
 export { AuthLayout, AuthButton, AuthFooter, AuthHeader, AuthRedirect, AuthWrapper } from './auth';
 export { Loader } from './loader';

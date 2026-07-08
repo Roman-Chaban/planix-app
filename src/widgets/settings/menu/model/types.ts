@@ -31,16 +31,18 @@ export type MenuItem = ProfileTabMenuItem | ActionMenuItem;
 
 export type MenuItems = MenuItem[];
 
-export type MenuItemProps = ProfileTabMenuItem & {
-  t: TranslateFn;
-  isActive: boolean;
+export type MenuItemProps = {
+  label: string;
   disabled?: boolean;
-  setActiveId: (id: ProfileTabId) => void;
+  isActive: boolean;
+  t: TranslateFn;
+  onClick: () => void;
 };
 
 export type MenuProps = WithActiveMenu &
   IsAuthenticated & {
     t: TranslateFn;
+    setLogoutModalOpen: (isOpen: boolean) => void;
   };
 
 export type ProfileMenuProps = WithActiveMenu & IsAuthenticated;

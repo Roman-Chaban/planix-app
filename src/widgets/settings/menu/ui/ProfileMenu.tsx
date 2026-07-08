@@ -25,6 +25,7 @@ export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: ProfileM
           t={t}
           activeId={activeId}
           setActiveId={setActiveId}
+          setLogoutModalOpen={() => {}}
         />
       </Box>
     </Box>

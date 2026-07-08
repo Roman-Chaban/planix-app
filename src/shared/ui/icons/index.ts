@@ -48,3 +48,4 @@ export { NotificationSecurity } from './Icons';
 export { BlockedIcon } from './Icons';
 export { UploadAvatarIcon } from './Icons';
 export { LanguageIcon } from './Icons';
+export { LogoutGraphicIcon } from './Icons';

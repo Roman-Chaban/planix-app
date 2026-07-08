@@ -1,19 +1,29 @@
 import { supabase } from '@/shared/api';
 
 export const changePassword = async (oldPassword: string, newPassword: string) => {
-  const { error: reauthError } = await supabase.auth.reauthenticate({
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
+
+  if (userError || !user?.email) {
+    throw new Error('User not found');
+  }
+
+  const { error: signInError } = await supabase.auth.signInWithPassword({
+    email: user.email,
     password: oldPassword,
   });
 
-  if (reauthError) {
-    throw reauthError;
+  if (signInError) {
+    throw new Error('Current password is incorrect');
   }
 
-  const { error } = await supabase.auth.updateUser({
+  const { error: updateError } = await supabase.auth.updateUser({
     password: newPassword,
   });
 
-  if (error) {
-    throw error;
+  if (updateError) {
+    throw updateError;
   }
 };

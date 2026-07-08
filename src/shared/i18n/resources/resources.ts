@@ -6,6 +6,7 @@ import { projectManagementI18n } from '@/widgets/project-management/i18n';
 import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
+import { logoutModalI18n } from '@/features/profile/logout/i18n';
 import { projectAddI18n } from '@/features/project-add/i18n';
 import { deleteProjectI18n } from '@/features/project-delete/i18n';
 
@@ -21,6 +22,7 @@ export const resources = {
     project: projectI18n.en,
     projectAdd: projectAddI18n.en,
     settings: settingsI18n.en,
+    logoutModal: logoutModalI18n.en,
   },
   uk: {
     auth: authI18n.uk,
@@ -33,5 +35,6 @@ export const resources = {
     project: projectI18n.uk,
     projectAdd: projectAddI18n.uk,
     settings: settingsI18n.uk,
+    logoutModal: logoutModalI18n.uk,
   },
 };

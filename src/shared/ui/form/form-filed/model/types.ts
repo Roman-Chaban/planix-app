@@ -14,7 +14,7 @@ export type FormFieldVariant =
 
 export type IconPosition = 'start' | 'end';
 
-export type FormFieldProps = WithClassName & {
+export type FormFieldProps = WithClassName & WithChildren & {
   id: string;
   label?: string;
   error?: string;
@@ -27,7 +27,6 @@ export type FormFieldProps = WithClassName & {
   onEndIconMouseLeave?: MouseEventHandler<HTMLDivElement>;
   inputProps?: React.ComponentPropsWithoutRef<'input'>;
   inputRef?: React.Ref<HTMLInputElement>;
-  children?: ReactNode;
 };
 
 export type FormLabelProps = WithChildren &

@@ -48,6 +48,7 @@ export function FormFields<T extends FieldValues>({
                   error={errorText}
                   inputRef={ref}
                   variant={DEFAULT}
+                  className={field.className}
                   inputProps={{
                     type,
                     name: field.name,

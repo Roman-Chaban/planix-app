@@ -1,9 +1,11 @@
 import type { ButtonHTMLAttributes } from 'react';
 
+import type { WithClassName } from '@/shared/types/types';
 import type { ButtonPresetKey } from '@/shared/ui/button';
 
-export type AuthButtonProps = {
-  label: string;
-  isLoading?: boolean;
-  preset: ButtonPresetKey;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+export type AuthButtonProps = WithClassName &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    label: string;
+    isLoading?: boolean;
+    preset: ButtonPresetKey;
+  };

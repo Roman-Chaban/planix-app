@@ -2,9 +2,10 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { PasswordForm } from '@/features/auth/password';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import type { NavigateFn } from '@/shared/types/types';
-import { AppForm, AuthButton, FormFields } from '@/shared/ui';
+import { AuthButton } from '@/shared/ui';
 
 import { resetFormFields } from '../lib/form-config';
 import { useResetPassword } from '../model/useResetPassword';
@@ -20,14 +21,17 @@ export const ResetForm = ({ onNavigate }: ResetFormProps) => {
   const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
-    <AppForm form={resetForm} onSubmit={handleSubmit}>
-      <FormFields fields={resetFormFields} translationNamespace={NS.AUTH} />
-
+    <PasswordForm
+      form={resetForm}
+      onSubmit={handleSubmit}
+      fields={resetFormFields}
+      translationNamespace={NS.AUTH}
+    >
       <AuthButton
         preset="AUTH_FORGOT_SEND"
         label={t('reset.resetPasswordButton')}
         disabled={isSubmitDisabled}
       />
-    </AppForm>
+    </PasswordForm>
   );
 };

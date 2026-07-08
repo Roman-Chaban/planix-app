@@ -1,6 +1,6 @@
 'use client';
 
-import { ModalContent, ModalOverlay, Portal } from '@/shared/ui';
+import { ModalOverlay, Portal } from '@/shared/ui';
 import { useModalBehavior, type ModalProps } from '@/shared/ui/modal';
 
 export const Modal = ({ isOpen, onClose, closeOnOverlayClick = true, children }: ModalProps) => {
@@ -11,7 +11,7 @@ export const Modal = ({ isOpen, onClose, closeOnOverlayClick = true, children }:
   return (
     <Portal containerId="modal-root">
       <ModalOverlay onClose={onClose} closeOnOverlayClick={closeOnOverlayClick}>
-        <ModalContent>{children}</ModalContent>
+        {children}
       </ModalOverlay>
     </Portal>
   );

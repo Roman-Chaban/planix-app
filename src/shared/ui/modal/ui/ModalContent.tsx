@@ -1,9 +1,11 @@
-import type { WithChildren } from '@/shared/types/types';
+import type { ModalContentProps } from '../model/types';
+
+import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
 
 import styles from './Modal.module.scss';
 
-export const ModalContent = ({ children }: WithChildren) => {
+export const ModalContent = ({ children, className }: ModalContentProps) => {
   return (
     <Box
       className={styles.modal}
@@ -11,7 +13,7 @@ export const ModalContent = ({ children }: WithChildren) => {
       role="dialog"
       aria-modal="true"
     >
-      <Box className={styles.content}>{children}</Box>
+      <Box className={buildClassName(className, styles.content)}>{children}</Box>
     </Box>
   );
 };

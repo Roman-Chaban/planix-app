@@ -65,12 +65,7 @@
     width: 100%;
     height: $gradient-height;
     border-radius: inherit;
-    background: linear-gradient(
-      180deg,
-      $gradient-color 0%,
-      $gradient-color 45.38%,
-      $gradient-color 100%
-    );
+    background: $gradient-overlay-tertiary;
     z-index: 1;
   }
 

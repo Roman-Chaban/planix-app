@@ -18,7 +18,7 @@ export const Notifications = () => {
       <Box className={styles.container}>
         <SettingsHeader title={t('notifications.title')} />
 
-        <SettingSwitchList className={styles.notificationsList} list={notificationsList} />
+        <SettingSwitchList t={t} className={styles.notificationsList} list={notificationsList} />
       </Box>
     </Box>
   );

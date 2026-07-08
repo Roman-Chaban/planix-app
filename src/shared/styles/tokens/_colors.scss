@@ -113,6 +113,13 @@ $gradient-overlay-secondary: linear-gradient(
   rgba(65, 101, 183, 0.11) 100%
 );
 
+$gradient-overlay-tertiary: linear-gradient(
+  180deg,
+  $gradient-color 0%,
+  $gradient-color 45.38%,
+  $gradient-color 100%
+);
+
 $color-gradient-blue: rgba(65, 101, 183, 0.21);
 $color-overlay-white: rgba(255, 255, 255, 0.6);
 

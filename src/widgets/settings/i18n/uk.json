@@ -74,6 +74,33 @@
     "languageTitle": "Налаштування мови",
     "securityTitle": "Налаштування безпеки",
     "changePasswordTitle": "Змінити пароль",
-    "selectLabel": "Мова за замовчуванням"
+    "selectLabel": "Мова за замовчуванням",
+
+    "twoFactorAuthentication": {
+      "title": "Двофакторна автентифікація (2FA)",
+      "description": "Захистіть свій обліковий запис від несанкціонованого доступу."
+    },
+
+    "darkTheme": {
+      "title": "Темна тема",
+      "description": "Перемкніться на темніший інтерфейс, який комфортний для очей."
+    },
+
+    "oldPasswordLabel": "Старий пароль",
+    "oldPasswordPlaceholder": "Введіть старий пароль",
+
+    "newPasswordLabel": "Новий пароль",
+    "newPasswordPlaceholder": "Введіть новий пароль",
+
+    "confirmPasswordLabel": "Підтвердження пароля",
+    "confirmPasswordPlaceholder": "Підтвердіть новий пароль",
+
+    "savePassword": "Оновити Пароль",
+
+    "validation": {
+      "required": "Це поле є обов'язковим.",
+      "minPassword": "Пароль має містити щонайменше 8 символів.",
+      "mismatch": "Паролі не збігаються."
+    }
   }
 }

@@ -26,6 +26,10 @@ export type IsAuthenticated = {
   isAuthenticated: boolean;
 };
 
+export type WithTranslationNamespace = {
+  translationNamespace: string;
+};
+
 export type WithRef<T, R> = T & {
   ref?: Ref<R>;
 };

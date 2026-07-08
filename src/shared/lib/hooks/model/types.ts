@@ -1,6 +1,6 @@
-import type { zodResolver } from '@hookform/resolvers/zod';
-
 import type { FieldValues, UseFormProps } from 'react-hook-form';
+
+import type { ZodType } from 'zod';
 
 export type Point = { x: number; y: number };
 export type ScrollPosition = { left: number; top: number };
@@ -20,5 +20,5 @@ export type UseDragScrollOptions = {
 };
 
 export type UseAppFormProps<T extends FieldValues> = Omit<UseFormProps<T>, 'resolver'> & {
-  schema: Parameters<typeof zodResolver>[0];
+  schema: ZodType<T, T>;
 };

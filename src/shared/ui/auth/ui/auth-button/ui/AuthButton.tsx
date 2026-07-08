@@ -8,7 +8,7 @@ import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
 
-export const AuthButton = ({ label, disabled, isLoading, preset }: AuthButtonProps) => {
+export const AuthButton = ({ label, disabled, isLoading, preset, className }: AuthButtonProps) => {
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
@@ -16,7 +16,7 @@ export const AuthButton = ({ label, disabled, isLoading, preset }: AuthButtonPro
   const isButtonDisabled = disabled || isLoading;
 
   return (
-    <Button preset={preset} size={buttonSizes} disabled={isButtonDisabled}>
+    <Button className={className} preset={preset} size={buttonSizes} disabled={isButtonDisabled}>
       {isLoading ? <Loader /> : label}
     </Button>
   );

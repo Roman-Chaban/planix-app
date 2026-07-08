@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@/shared/types/types';
 
 type WithOnClose = {
   onClose: () => void;
@@ -15,6 +15,8 @@ export type ModalProps = WithChildren &
   WithOnClose & {
     closeOnOverlayClick?: boolean;
   };
+
+export type ModalContentProps = WithChildren & WithClassName;
 
 export type ModalHeaderProps = WithOnClose & {
   title: string;

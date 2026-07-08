@@ -14,20 +14,21 @@ export type FormFieldVariant =
 
 export type IconPosition = 'start' | 'end';
 
-export type FormFieldProps = WithClassName & WithChildren & {
-  id: string;
-  label?: string;
-  error?: string;
-  variant: FormFieldVariant;
-  startIcon?: ReactNode;
-  endIcon?: ReactNode;
-  onStartIconClick?: () => void;
-  onEndIconMouseDown?: MouseEventHandler<HTMLDivElement>;
-  onEndIconMouseUp?: MouseEventHandler<HTMLDivElement>;
-  onEndIconMouseLeave?: MouseEventHandler<HTMLDivElement>;
-  inputProps?: React.ComponentPropsWithoutRef<'input'>;
-  inputRef?: React.Ref<HTMLInputElement>;
-};
+export type FormFieldProps = WithClassName &
+  WithChildren & {
+    id: string;
+    label?: string;
+    error?: string;
+    variant: FormFieldVariant;
+    startIcon?: ReactNode;
+    endIcon?: ReactNode;
+    onStartIconClick?: () => void;
+    onEndIconMouseDown?: MouseEventHandler<HTMLDivElement>;
+    onEndIconMouseUp?: MouseEventHandler<HTMLDivElement>;
+    onEndIconMouseLeave?: MouseEventHandler<HTMLDivElement>;
+    inputProps?: React.ComponentPropsWithoutRef<'input'>;
+    inputRef?: React.Ref<HTMLInputElement>;
+  };
 
 export type FormLabelProps = WithChildren &
   WithClassName & {

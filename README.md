@@ -1,9 +1,11 @@
 # Planix-App Modern CRM Dashboard
 
 ## 📖 Overview
+
 Planix is a modern, scalable CRM dashboard built with cutting-edge frontend technologies. It is designed as a foundation for SaaS platforms, admin panels, and internal business tools, providing a structured and maintainable architecture for real-world applications.
 
 ## 🚀 Features
+
 - Analytics dashboard with visual insights and metrics
 - Client management system
 - Project management module
@@ -17,11 +19,13 @@ Planix is a modern, scalable CRM dashboard built with cutting-edge frontend tech
 ## 🛠 Tech Stack
 
 Frontend:
+
 - React
 - Next.js
 - TypeScript
 
 Other:
+
 - i18next
 - react-i18next
 - i18next-browser-languagedetector
@@ -36,8 +40,10 @@ Other:
 - Node.js / pnpm
 
 ## 📦 Installation
+
 ```bash
 git clone https://github.com/your-username/planix.git
 cd planix
 pnpm install
 pnpm dev
+```

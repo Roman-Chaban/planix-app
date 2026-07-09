@@ -1,0 +1,55 @@
+@use '@/shared/styles' as *;
+
+.toast {
+  width: 100%;
+  max-width: 21.875rem;
+  padding: $space-4 $space-3;
+  @include flex(flex, row, space-between, center, $space-3);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-toast-default;
+  border: 0.094rem solid;
+}
+
+.content {
+  @include flex-center;
+  gap: $space-3;
+}
+
+.close {
+  @include flex-center;
+}
+
+.description {
+  line-height: $line-height-base;
+  font-weight: $font-weight-medium;
+}
+
+.default {
+  background: $neutral-0;
+  border-color: $toast-border-default;
+  color: $toast-color-default;
+}
+
+.info {
+  background: $toast-background-info;
+  border-color: $toast-color-info;
+  color: $toast-color-info;
+}
+
+.success {
+  background: $toast-background-success;
+  border-color: $toast-color-success;
+  color: $toast-color-success;
+}
+
+.error {
+  background: $toast-background-error;
+  border-color: $toast-color-error;
+  color: $toast-color-error;
+}
+
+.warning {
+  background: $toast-background-warning;
+  border-color: $toast-color-warning;
+  color: $toast-color-warning;
+}

@@ -1,0 +1,46 @@
+@use '@/shared/styles' as *;
+
+.content {
+  position: relative;
+  min-width: 33.375rem;
+  min-height: 32.375rem;
+  border-radius: 1.875rem;
+  overflow: hidden;
+  z-index: $z-overlay;
+
+  @include overlay-background;
+}
+
+.logoutContent,
+.graphic {
+  z-index: 3;
+}
+
+.graphic {
+  position: relative;
+  min-width: 9.375rem;
+  min-height: 9.375rem;
+  @include flex-center;
+  background: $primary-50;
+  border-radius: $radius-full;
+}
+
+.logoutContent {
+  @include flex-col($space-2, start, center, column);
+  width: 100%;
+  max-width: 24.75rem;
+  margin-block-end: $space-5;
+}
+
+.contentTitle,
+.contentSubtitle {
+  text-align: center;
+}
+
+.contentTitle {
+  @include title-bold($font-weight-semibold, $h5-font-size, $neutral-950);
+}
+
+.contentSubtitle {
+  @include text-body-sm($neutral-600, $body-md-font-size);
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import { Header } from '@/widgets/header';
+import { LogoutModal } from '@/features/profile/logout';
 import { PageWrapper } from '@/shared/ui';
 
 import { ProfileMenu } from '../../menu';
@@ -20,6 +21,8 @@ export const SettingsLayout = () => {
       />
 
       <ActiveComponent />
+
+      <LogoutModal />
     </PageWrapper>
   );
 };

@@ -11,13 +11,14 @@ export const useLocalizedRouter = () => {
   const router = useRouter();
   const { i18n } = useTranslation();
 
+  const locale = i18n.language || DEFAULT_LOCALE;
+
   return useMemo(
     () => ({
       ...router,
-      push: (path: string) => {
-        router.push(buildHref(path, i18n.language || DEFAULT_LOCALE));
-      },
+      push: (path: string) => router.push(buildHref(path, locale)),
+      replace: (path: string) => router.replace(buildHref(path, locale)),
     }),
-    [router, i18n.language],
+    [router, locale],
   );
 };

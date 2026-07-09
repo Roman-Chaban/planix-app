@@ -1,48 +1,33 @@
-import type { MenuItem as MenuItemConfig, MenuProps } from '../model/types';
+import type { MenuProps } from '../model/menu.types';
 
 import { List } from '@/shared/ui';
 
 import { PROFILE_MENU } from '../lib/profile-menu';
 
+import { MenuTabType } from '../model/menu.enums';
+
 import { MenuItem } from './MenuItem';
 import styles from './ProfileMenu.module.scss';
 
-export const Menu = ({
-  t,
-  activeId,
-  setActiveId,
-  isAuthenticated,
-  setLogoutModalOpen,
-}: MenuProps) => {
-  const handleItemClick = (item: MenuItemConfig) => {
-    if (item.type === 'tab') {
-      setActiveId(item.id);
-      return;
-    }
-
-    switch (item.id) {
-      case 'logout':
-        setLogoutModalOpen(true);
-        break;
-    }
-  };
-
+export const Menu = ({ t, selectedId, setActiveId, isAuthenticated, onAction }: MenuProps) => {
   return (
     <List
       className={styles.list}
       getItemKey={(item) => item.id}
       renderList={PROFILE_MENU}
       renderItem={(item) => {
-        const isActive = item.type === 'tab' && item.id === activeId;
         const disabled = item.requiresAuth && !isAuthenticated;
+
+        const onClick =
+          item.type === MenuTabType.TAB ? () => setActiveId(item.id) : () => onAction(item.id);
 
         return (
           <MenuItem
             {...item}
             t={t}
             disabled={disabled}
-            isActive={isActive}
-            onClick={() => handleItemClick(item)}
+            isActive={item.id === selectedId}
+            onClick={onClick}
           />
         );
       }}

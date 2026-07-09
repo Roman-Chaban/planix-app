@@ -1,4 +1,4 @@
-import type { MenuItemProps } from '../model/types';
+import type { MenuItemProps } from '../model/menu.types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Tooltip, Typography } from '@/shared/ui';

@@ -1,17 +1,25 @@
 'use client';
 
-import type { ProfileMenuProps } from '../model/types';
+import type { ProfileMenuProps } from '../model/menu.types';
 
 import { useTranslation } from 'react-i18next';
 
+import { ModalId, useModal } from '@/app/providers/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, Typography } from '@/shared/ui';
+
+import { ProfileTabIdEnum } from '../model/menu.enums';
 
 import { Menu } from './Menu';
 import styles from './ProfileMenu.module.scss';
 
 export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: ProfileMenuProps) => {
+  const { openModal, isModalOpen } = useModal();
   const { t } = useTranslation(NS.SETTINGS);
+
+  const selectedId = isModalOpen(ModalId.LOGOUT)
+    ? ModalId.LOGOUT
+    : (activeId ?? ProfileTabIdEnum.PROFILE);
 
   return (
     <Box className={styles.menu}>
@@ -23,9 +31,9 @@ export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: ProfileM
         <Menu
           isAuthenticated={isAuthenticated}
           t={t}
-          activeId={activeId}
+          selectedId={selectedId}
           setActiveId={setActiveId}
-          setLogoutModalOpen={() => {}}
+          onAction={openModal}
         />
       </Box>
     </Box>

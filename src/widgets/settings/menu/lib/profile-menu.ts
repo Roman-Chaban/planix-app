@@ -1,44 +1,46 @@
-import type { MenuItems } from '../model/types';
+import type { MenuItems } from '../model/menu.types';
 
+import { ModalId } from '@/app/providers/modal';
 import { Notifications } from '@/features/profile';
 
 import { ProfileDetails } from '../../profile-details';
 import { Subscription } from '../../subscription-billing';
 import { System } from '../../system';
+import { MenuTabType, ProfileTabIdEnum } from '../model/menu.enums';
 
 export const PROFILE_MENU: MenuItems = [
   {
-    id: 'profile',
+    id: ProfileTabIdEnum.PROFILE,
     label: 'profileMenu.myProfile',
     requiresAuth: true,
     component: ProfileDetails,
-    type: 'tab',
+    type: MenuTabType.TAB,
   },
   {
-    id: 'notifications',
+    id: ProfileTabIdEnum.NOTIFICATIONS,
     label: 'profileMenu.notificationSettings',
     requiresAuth: false,
     component: Notifications,
-    type: 'tab',
+    type: MenuTabType.TAB,
   },
   {
-    id: 'subscription',
+    id: ProfileTabIdEnum.SUBSCRIPTION,
     label: 'profileMenu.subscription',
     requiresAuth: true,
     component: Subscription,
-    type: 'tab',
+    type: MenuTabType.TAB,
   },
   {
-    id: 'system',
+    id: ProfileTabIdEnum.SYSTEM,
     label: 'profileMenu.systemSettings',
     requiresAuth: false,
     component: System,
-    type: 'tab',
+    type: MenuTabType.TAB,
   },
   {
-    id: 'logout',
+    id: ModalId.LOGOUT,
     label: 'profileMenu.logOut',
     requiresAuth: true,
-    type: 'action',
+    type: MenuTabType.ACTIONS,
   },
 ] as const;

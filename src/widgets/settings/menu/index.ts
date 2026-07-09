@@ -6,7 +6,7 @@ export type {
   MenuProps,
   ProfileMenuProps,
   ProfileTabId,
-} from './model/types';
+} from './model/menu.types';
 
 export { ProfileMenu } from './ui/ProfileMenu';
 export { Menu } from './ui/Menu';

@@ -7,10 +7,6 @@ export type ProjectsLayoutFormValues = {
 };
 
 export type TabId =
-  | 'AllProjects'
-  | 'In Progress'
-  | 'Pending'
-  | 'Completed'
-  | 'Canceled';
+  'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
 export type TabsContent = Record<TabId, ComponentType>;
 export type StatusMap = Record<TabId, Status | null>;

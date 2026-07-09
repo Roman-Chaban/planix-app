@@ -1,11 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export type ButtonVariant =
-  | 'default'
-  | 'outline'
-  | 'soft'
-  | 'tertiary'
-  | 'transparent';
+  'default' | 'outline' | 'soft' | 'tertiary' | 'transparent';
 export type ButtonSize = 'sm' | 'md' | 'lg' | 'compact';
 export type ButtonShape = 'default' | 'rounded' | 'circle' | 'pill';
 export type MaxWidth = 'sm' | 'md' | 'lg' | 'xl' | '2xl';

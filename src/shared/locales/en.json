@@ -34,6 +34,33 @@
       "registration": "Registration"
     }
   },
+  "SidebarNav": {
+    "dashboard": "Dashboard",
+    "projects": "Project Management",
+    "client": "Client Management",
+    "lead": "Lead Management",
+    "inbox": "Inbox",
+    "analytics": "Analytics",
+    "settings": "Settings"
+  },
+  "DashboardHeader": {
+    "title": "Dashboard"
+  },
+  "DashboardCard": {
+    "totalProjects": "Total Projects",
+    "clients": "Clients",
+    "revenue": "Revenue",
+    "newLead": "New Lead",
+    "totalTask": "Total Task",
+    "vsLastMonth": "vs Last month"
+  },
+  "DashboardAnalytics": {
+    "Header": {
+      "revenueTitle": "Revenue Analytics",
+      "projectTitle": "Projects Summary",
+      "taskOverview": "Task Overview"
+    }
+  },
   "NotFound": {
     "error": "Error",
     "404": "404",

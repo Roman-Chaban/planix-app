@@ -1,0 +1,33 @@
+@use '@/shared/styles/tokens/mixins' as *;
+@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/shadows' as shadow;
+@use '@/shared/styles/tokens/typography' as size;
+
+.layout {
+  min-height: 100dvh;
+  @include flex-center;
+  padding: 2rem;
+
+  @include respond(laptop) {
+    padding: 1rem;
+  }
+}
+
+.container {
+  @include bounding-container;
+  place-items: center;
+  min-height: 90dvh;
+  background: color.$color-white;
+  border-top: 3px solid color.$color-primary-800;
+  box-shadow: shadow.$shadow-not-found;
+  border-radius: 1.875rem;
+
+  @include respond(laptop) {
+    @include flex-col(3rem, center, center);
+  }
+}
+
+.errorBlock {
+  @include flex-col(2rem, center, stretch);
+}

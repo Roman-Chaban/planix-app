@@ -34,6 +34,33 @@
       "registration": "Реєстрація"
     }
   },
+  "SidebarNav": {
+    "dashboard": "Панель керування",
+    "projects": "Управління проєктами",
+    "client": "Управління клієнтами",
+    "lead": "Управління лідами",
+    "inbox": "Вхідні",
+    "analytics": "Аналітика",
+    "settings": "Налаштування"
+  },
+  "DashboardHeader": {
+    "title": "Панель керування"
+  },
+  "DashboardCard": {
+    "totalProjects": "Усього проєктів",
+    "clients": "Клієнти",
+    "revenue": "Дохід",
+    "newLead": "Нові ліди",
+    "totalTask": "Усього задач",
+    "vsLastMonth": "за останній місяць"
+  },
+  "DashboardAnalytics": {
+    "Header": {
+      "revenueTitle": "Аналітика доходів",
+      "projectTitle": "Зведення проєктів",
+      "taskOverview": "Огляд завдань"
+    }
+  },
   "NotFound": {
     "error": "Помилка",
     "404": "404",

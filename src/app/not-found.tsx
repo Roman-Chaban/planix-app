@@ -1,5 +1,5 @@
-import { NotFoundLayout } from "@/shared/ui/notFound/NotFound";
+import { NotFoundLayout } from '@/shared/ui/index';
 
-export default async function NotFound() {
+export default function NotFound() {
   return <NotFoundLayout />;
 }

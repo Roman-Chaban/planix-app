@@ -1,0 +1,82 @@
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/flex' as *;
+@use '@/shared/styles/tokens/mixins' as *;
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: calc(100dvh - 3rem);
+
+  background: {
+    image: url('/images/login/images/primary-banner.svg');
+    size: cover;
+    position: right;
+    repeat: no-repeat;
+  }
+
+  border-radius: 1.875rem;
+  padding: 1.875rem;
+
+  &::after {
+    @include overlay(1.875rem, color.$linear-gradient-100);
+    z-index: 0;
+  }
+
+  > * {
+    @include overlay-content;
+  }
+
+  @include respond(desktop) {
+    background-position: 20%;
+  }
+
+  @include respond(laptop) {
+    background-position: top;
+    max-height: 45dvh;
+  }
+
+  @include respond(mobile-lg) {
+    padding: 1rem;
+  }
+}
+
+.header {
+  @include overlay-content;
+  width: fit-content;
+
+  @include flex-row(1.375rem, start, center);
+
+  @include respond(mobile-lg) {
+    gap: 1rem;
+  }
+}
+
+.title {
+  font-weight: size.$font-weight-semibold;
+  line-height: 150%;
+  font-size: size.$font-size-h4;
+
+  @include respond(mobile-lg) {
+    font-size: size.$font-size-h5;
+  }
+}
+
+.subtitle {
+  @include bottom-overlay(1.875rem);
+  width: 100%;
+  max-width: 33rem;
+  line-height: 150%;
+  font-weight: size.$font-weight-bold;
+  color: color.$color-white;
+  font-size: size.$font-size-h5;
+
+  @include respond(tablet) {
+    font-size: size.$font-size-h6;
+  }
+
+  @include respond(mobile-lg) {
+    font-size: size.$font-size-subtitle;
+  }
+}

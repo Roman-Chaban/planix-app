@@ -1,14 +1,17 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-type AvatarSize = "sm" | "md" | "lg";
-type AvatarVariant = "circle" | "square";
+type AvatarSize = 'sm' | 'md' | 'lg';
+type AvatarVariant = 'circle' | 'square';
 
-export type AvatarProps = {
-  src?: string;
+type BaseAvatarProps = {
   alt?: string;
   size?: AvatarSize;
   variant?: AvatarVariant;
-  fallback?: ReactNode;
-  icon?: ReactNode;
   className?: string;
+};
+
+export type AvatarProps = BaseAvatarProps & {
+  src?: string;
+  icon?: ReactNode;
+  fallback?: ReactNode;
 };

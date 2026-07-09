@@ -1,5 +1,0 @@
-@use "@/shared/styles/tokens/flex" as *;
-
-.icon {
-  @include flex-row(0, center, center);
-}

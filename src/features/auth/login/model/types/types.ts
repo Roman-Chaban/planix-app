@@ -1,4 +1,4 @@
-import type { Control, UseFormRegister } from "react-hook-form";
+import type { Control, UseFormRegister } from 'react-hook-form';
 
 export type AuthFormValues = {
   email: string;

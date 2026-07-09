@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from 'react';
 
-export function useMediaQuery(breakpoint: number): boolean | null {
-  const query = `(max-width: ${breakpoint}px)`;
+export const useMediaQuery = (query: string): boolean => {
+  const getSnapshot = () => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia(query).matches;
+  };
 
-  const [matches, setMatches] = useState<boolean | null>(null);
+  const subscribe = (callback: () => void) => {
+    const mediaQueryList = window.matchMedia(query);
 
-  useEffect(() => {
-    const media = window.matchMedia(query);
+    mediaQueryList.addEventListener('change', callback);
 
-    const update = () => setMatches(media.matches);
+    return () => {
+      mediaQueryList.removeEventListener('change', callback);
+    };
+  };
 
-    update();
-
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, [query]);
-
-  return matches;
-}
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
+};

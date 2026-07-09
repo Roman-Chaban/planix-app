@@ -1,16 +1,15 @@
-import { forwardRef, useId } from "react";
+import { forwardRef, useId } from 'react';
 
-import { classNames } from "@/shared/lib/helpers/class-names";
-import { Box, Typography } from "@/shared/ui/index";
-import type { InputProps } from "@/shared/ui/input/model/types";
+import { buildClassName } from '@/shared/lib/helpers/buildClassName/buildClassName';
+import { Box, Typography } from '@/shared/ui/index';
+import type { InputProps } from '@/shared/ui/input/model/types';
 
-import styles from "./styles.module.scss";
-
+import styles from './styles.module.scss';
 
 export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      variant = "primary",
+      variant = 'primary',
       type,
       label,
       error,
@@ -19,7 +18,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
       startIcon,
       endIcon,
       onEndIconClick,
-      isSeparator,
+      isDivider,
       ...inputProps
     },
     ref,
@@ -27,7 +26,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
     const id = useId();
     const hasError = Boolean(error);
 
-    const rootClassname = classNames(
+    const rootClassname = buildClassName(
       styles.inputWrapper,
       styles[variant],
       { [styles.error]: hasError },
@@ -49,22 +48,12 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
             </Typography>
           )}
 
-          {isSeparator && <Typography as="span" className={styles.divider} />}
+          {isDivider && <Typography as="span" className={styles.divider} />}
 
-          <input
-            id={id}
-            ref={ref}
-            className={styles.input}
-            type={type}
-            {...inputProps}
-          />
+          <input id={id} ref={ref} className={styles.input} type={type} {...inputProps} />
 
           {endIcon && (
-            <Typography
-              as="span"
-              className={styles.slotEnd}
-              onClick={onEndIconClick}
-            >
+            <Typography as="span" className={styles.slotEnd} onClick={onEndIconClick}>
               {endIcon}
             </Typography>
           )}
@@ -78,4 +67,4 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   },
 );
 
-InputRoot.displayName = "InputRoot";
+InputRoot.displayName = 'InputRoot';

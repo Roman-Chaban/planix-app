@@ -1,8 +1,9 @@
-@use "sass:map";
-@use "@/shared/styles/tokens/typography" as size;
-@use "@/shared/styles/tokens/colors" as color;
-@use "@/shared/styles/tokens/spacing" as spacing;
-@use "@/shared/styles/tokens/breakpoints" as breakpoint;
+@use 'sass:map';
+@use '@/shared/styles/tokens/typography' as size;
+@use '@/shared/styles/tokens/colors' as color;
+@use '@/shared/styles/tokens/spacing' as spacing;
+@use '@/shared/styles/tokens/breakpoints' as breakpoint;
+@use '@/shared/styles/tokens/shadows' as shadow;
 
 /* Media Query mixins */
 
@@ -23,7 +24,7 @@
 @mixin bounding-container($padding: 0) {
   width: 100%;
   max-width: 93rem;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: $padding;
 }
 
@@ -182,10 +183,41 @@
   text-decoration: underline;
 }
 
+@mixin text-before-decoration(
+  $content: '',
+  $position,
+  $left,
+  $width,
+  $height,
+  $border-radius,
+  $background,
+  $centerY: false
+) {
+  content: $content;
+  position: $position;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background: $background;
+
+  @if $centerY == true {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin text-ellipsis {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* Overlay mixins */
 
 @mixin overlay($radius: 0, $bg: null) {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
 
@@ -212,6 +244,42 @@
   width: 0;
   height: 0;
   opacity: 0;
+}
+
+@mixin button-background-overlay(
+  $content: '',
+  $position,
+  $inset,
+  $background,
+  $opacity,
+  $border-radius,
+  $pointer-events
+) {
+  content: $content;
+  position: $position;
+  inset: $inset;
+  background: $background;
+  opacity: $opacity;
+  border-radius: $border-radius;
+  pointer-events: $pointer-events;
+}
+
+/* State mixins */
+
+@mixin trend-state($border, $background, $color) {
+  border: $border;
+  background: $background;
+  color: $color;
+}
+
+@mixin widget-box {
+  border: 0.125rem solid color.$color-black-300;
+  border-radius: 1rem;
+  min-height: 24rem;
+  box-shadow: shadow.$shadow-elevation-2;
+  background: color.$color-white;
+  padding-inline: 0.625rem;
+  padding-block: 0.625rem 1.438rem;
 }
 
 /* Text mixins */

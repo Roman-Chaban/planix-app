@@ -1,18 +1,13 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { ElementType, ComponentPropsWithoutRef, ReactNode } from 'react';
 
-export type TypographyAs =
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6"
-  | "p"
-  | "span";
+export type TypographyTag = ElementType;
 
-export type TypographyProps = {
-  as?: TypographyAs;
+type TypographyOwnProps<T extends TypographyTag> = {
+  as?: T;
   children?: ReactNode;
   className?: string;
-  id?: string;
-} & HTMLAttributes<HTMLElement>;
+  testId?: string;
+};
+
+export type TypographyProps<T extends TypographyTag = 'span'> = TypographyOwnProps<T> &
+  ComponentPropsWithoutRef<T>;

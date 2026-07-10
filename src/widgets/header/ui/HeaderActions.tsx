@@ -49,8 +49,8 @@ export const HeaderActions = () => {
         <Tooltip position={LEFT} message={t('settingsTooltip')}>
           <AppLink href={SETTINGS}>
             <Avatar
-              width={50}
-              height={50}
+              width={48}
+              height={48}
               variant={CIRCLE}
               alt={profile.fullName}
               src={profile.avatarUrl}

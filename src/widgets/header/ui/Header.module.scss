@@ -14,14 +14,10 @@
 .wrapper {
   width: 100%;
   @include flex(flex, row, start, center);
-  padding: 1.125rem 1rem;
+  padding: 1rem 1.875rem;
 
   @include respond(lg) {
     gap: 2rem;
-  }
-
-  @include respond(md) {
-    padding-inline: 1rem;
   }
 }
 
@@ -48,11 +44,6 @@
   @include container(header-rightSide);
   width: 100%;
   @include flex(flex, row, space-between, center, 0, nowrap);
-  padding-inline: 0.875rem;
-
-  @include respond(md) {
-    padding-inline: 0;
-  }
 }
 
 .title {
@@ -83,8 +74,8 @@
 .avatar {
   @include flex-center;
   color: $primary-400;
-  width: 3.125rem;
-  height: 3.125rem;
+  width: $space-9;
+  height: $space-9;
   flex-shrink: 0;
   background: $neutral-100;
   border-radius: $radius-full;

@@ -20,4 +20,6 @@ export type ToastProps = WithClassName & {
   variant: ToastVariant;
   description: ReactNode;
   onClose?: () => void;
+  isClosing: boolean;
+  onAnimationEnd: () => void;
 };

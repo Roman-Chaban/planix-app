@@ -8,6 +8,17 @@
   border-radius: $radius-lg;
   box-shadow: $shadow-toast-default;
   border: 0.094rem solid;
+
+  position: fixed;
+  top: $space-6;
+  right: $space-6;
+  z-index: $z-toast;
+
+  animation: toast-in 0.25s ease forwards;
+}
+
+.closing {
+  animation: toast-out 0.25s ease forwards;
 }
 
 .content {

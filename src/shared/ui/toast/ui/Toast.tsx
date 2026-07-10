@@ -12,11 +12,23 @@ import styles from './Toast.module.scss';
 
 const { TRANSPARENT } = BUTTON_VARIANTS;
 
-export const Toast = ({ variant, description, className, onClose }: ToastProps) => {
+export const Toast = ({
+  variant,
+  description,
+  className,
+  onClose,
+  isClosing,
+  onAnimationEnd,
+}: ToastProps) => {
   const { Icon, tone, role, ariaLive } = toastConfig[variant];
 
   return (
-    <Box role={role} aria-live={ariaLive} className={buildClassName(styles.toast, tone, className)}>
+    <Box
+      onClick={onAnimationEnd}
+      role={role}
+      aria-live={ariaLive}
+      className={buildClassName(styles.toast, tone, { [styles.closing]: isClosing }, className)}
+    >
       <Box className={styles.content}>
         <Icon className={styles.icon} aria-hidden />
 

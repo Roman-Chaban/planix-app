@@ -6,7 +6,7 @@
     "logoutLabel": "Log Out"
   },
   "toast": {
-      "logoutSuccess": "You have logged out successfully",
-      "logoutError": "You couldn't be logged out, please try again later"
+    "logoutSuccess": "You have logged out successfully",
+    "logoutError": "You couldn't be logged out, please try again later"
   }
 }

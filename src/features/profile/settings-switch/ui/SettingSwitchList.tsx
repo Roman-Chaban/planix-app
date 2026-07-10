@@ -7,7 +7,6 @@ import { SettingSwitchItem } from './SettingSwitchItem';
 export const SettingSwitchList = <T extends IdentifiableSwitch>({
   itemClassName,
   list,
-  t,
 }: SettingSwitchListProps<T>) => {
   return (
     <List
@@ -15,7 +14,7 @@ export const SettingSwitchList = <T extends IdentifiableSwitch>({
       itemClassName={itemClassName}
       renderList={list}
       getItemKey={({ id }) => id}
-      renderItem={(item) => <SettingSwitchItem t={t} {...item} />}
+      renderItem={(item) => <SettingSwitchItem {...item} />}
     />
   );
 };

@@ -2,18 +2,16 @@
 
 import type { SettingSwitchItemProps } from '../model/setting-switch.types';
 
+import { useTranslation } from 'react-i18next';
+
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalStorage } from '@/shared/lib/hooks';
 import { Box, Switch, Typography } from '@/shared/ui';
 
 import styles from './SettingSwitch.module.scss';
 
-export const SettingSwitchItem = ({
-  id,
-  icon: Icon,
-  title,
-  subtitle,
-  t,
-}: SettingSwitchItemProps) => {
+export const SettingSwitchItem = ({ id, icon: Icon, title, subtitle }: SettingSwitchItemProps) => {
+  const { t } = useTranslation(NS.SETTINGS);
   const [isOn, setIsOn, hydrated] = useLocalStorage<boolean>(`switch-${id}`, false);
 
   if (!hydrated) {

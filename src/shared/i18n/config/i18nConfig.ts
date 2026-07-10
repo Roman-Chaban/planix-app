@@ -1,12 +1,12 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import { resources } from '@/shared/i18n';
+import { DEFAULT_LOCALE, resources } from '@/shared/i18n';
 import { NAMESPACES } from '@/shared/i18n/namespaces/namespaces';
 
 const configOptions = {
   resources: resources,
-  fallbackLng: 'en',
+  fallbackLng: DEFAULT_LOCALE,
   supportedLngs: ['en', 'uk'],
   lng: 'en',
   ns: NAMESPACES,

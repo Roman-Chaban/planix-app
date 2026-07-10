@@ -4,5 +4,9 @@
     "subtitle": "Your data will be safe. Once you log in, you can view your data.",
     "cancelLabel": "Cancel",
     "logoutLabel": "Log Out"
+  },
+  "toast": {
+      "logoutSuccess": "You have logged out successfully",
+      "logoutError": "You couldn't be logged out, please try again later"
   }
 }

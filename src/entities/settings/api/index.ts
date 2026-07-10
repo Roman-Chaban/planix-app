@@ -4,5 +4,5 @@ export { uploadProfileAvatar } from './lib/upload-profile-avatar';
 
 export { queryKeys } from './queryKeys/queryKeys';
 
-export type { Profile, ProfileData } from './model/types';
+export type { Profile, ProfileData } from './model/settings.types';
 export { useProfile } from './model/useProfile';

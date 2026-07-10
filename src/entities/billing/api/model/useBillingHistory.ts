@@ -1,4 +1,4 @@
-import type { Billing } from './types';
+import type { Billing } from './billing.types';
 
 import { useQuery } from '@tanstack/react-query';
 

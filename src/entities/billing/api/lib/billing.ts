@@ -1,4 +1,4 @@
-import type { Billing } from '../model/types';
+import type { Billing } from '../model/billing.types';
 
 import { BILLING_HISTORY, PAYMENT_DATE, USER_ID } from '@/shared/api';
 import { supabase } from '@/shared/api/supabase';

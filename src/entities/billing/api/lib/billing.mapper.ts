@@ -1,4 +1,4 @@
-import type { Billing, BillingHistoryData } from '../model/types';
+import type { Billing, BillingHistoryData } from '../model/billing.types';
 
 import dayjs from 'dayjs';
 

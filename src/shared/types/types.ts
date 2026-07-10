@@ -49,7 +49,6 @@ export type SettingSwitchListProps<T> = {
   list: T[];
   className?: string;
   itemClassName?: string;
-  t: TranslateFn;
 };
 
 export type SettingSwitchList = WithSwitch[];

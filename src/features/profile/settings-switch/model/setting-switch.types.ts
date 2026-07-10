@@ -1,3 +1,3 @@
-import type { TranslateFn, WithSwitch } from '@/shared/types/types';
+import type { WithSwitch } from '@/shared/types/types';
 
-export type SettingSwitchItemProps = WithSwitch & { t: TranslateFn };
+export type SettingSwitchItemProps = WithSwitch;

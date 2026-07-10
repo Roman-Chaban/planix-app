@@ -1,43 +1,38 @@
 import { useTranslation } from 'react-i18next';
 
-import { ModalId, useModal } from '@/app/providers/modal';
-import { ROUTES } from '@/app/routes';
+import { useAppDispatch, useAppSelector } from '@/app/providers/store/hooks';
+import { closeModal, ModalId, selectIsModalOpen, usePersistModal } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { useLocalizedRouter } from '@/shared/lib/hooks';
 import { Button, Modal, ModalActions, ModalContent } from '@/shared/ui';
 
-import { useLogout } from '../model/useLogout';
+import { useLogoutAction } from '../model/useLogoutAction';
 
 import { LogoutContent } from './LogoutContent';
 import styles from './LogoutModal.module.scss';
 import { LogoutModalGraphic } from './LogoutModalGraphic';
 
-const { DASHBOARD } = ROUTES;
-
 export const LogoutModal = () => {
   const { t } = useTranslation(NS.LOGOUT_MODAL);
 
-  const localizedRouter = useLocalizedRouter();
+  usePersistModal(ModalId.LOGOUT, 'logout-modal');
 
-  const { closeModal, isModalOpen } = useModal();
+  const dispatch = useAppDispatch();
 
-  const { logout, isLoading } = useLogout();
+  const isOpen = useAppSelector(selectIsModalOpen(ModalId.LOGOUT));
 
-  const handleLogout = async () => {
-    await logout();
+  const { handleLogout, isLoading } = useLogoutAction();
 
-    closeModal();
-
-    localizedRouter.replace(DASHBOARD);
+  const handleClose = () => {
+    dispatch(closeModal());
   };
 
   return (
-    <Modal isOpen={isModalOpen(ModalId.LOGOUT)} onClose={closeModal}>
+    <Modal isOpen={isOpen} onClose={handleClose}>
       <ModalContent className={styles.content}>
         <LogoutModalGraphic />
         <LogoutContent title={t('modal.title')} subtitle={t('modal.subtitle')} />
         <ModalActions>
-          <Button preset="MODAL_OUTLINE" minWidth="md" onClick={closeModal}>
+          <Button preset="MODAL_OUTLINE" minWidth="md" onClick={handleClose}>
             {t('modal.cancelLabel')}
           </Button>
           <Button preset="MODAL_DEFAULT" minWidth="md" onClick={handleLogout} isLoading={isLoading}>

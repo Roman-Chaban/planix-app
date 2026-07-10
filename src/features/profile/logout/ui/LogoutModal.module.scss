@@ -3,10 +3,9 @@
 .content {
   position: relative;
   min-width: 33.375rem;
-  min-height: 32.375rem;
-  border-radius: 1.875rem;
-  overflow: hidden;
+  border-radius: $radius-2xl;
   z-index: $z-overlay;
+  overflow: hidden;
 
   @include overlay-background;
 }

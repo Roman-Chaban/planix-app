@@ -1,7 +1,8 @@
 import type { MenuItems } from '../model/menu.types';
 
-import { ModalId } from '@/app/providers/modal';
 import { Notifications } from '@/features/profile';
+
+import { ModalId } from '@/entities/modal';
 
 import { ProfileDetails } from '../../profile-details';
 import { Subscription } from '../../subscription-billing';

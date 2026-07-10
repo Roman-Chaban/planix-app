@@ -48,6 +48,7 @@
 
 .item[data-disabled='true'] {
   @include flex-between;
+  cursor: not-allowed;
 
   .label {
     color: $text-disabled;

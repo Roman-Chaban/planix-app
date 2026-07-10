@@ -18,8 +18,17 @@ export const Menu = ({ t, selectedId, setActiveId, isAuthenticated, onAction }: 
       renderItem={(item) => {
         const disabled = item.requiresAuth && !isAuthenticated;
 
-        const onClick =
-          item.type === MenuTabType.TAB ? () => setActiveId(item.id) : () => onAction(item.id);
+        const onClick = () => {
+          if (disabled) {
+            return;
+          }
+
+          if (item.type === MenuTabType.TAB) {
+            setActiveId(item.id);
+          } else {
+            onAction(item.id);
+          }
+        };
 
         return (
           <MenuItem

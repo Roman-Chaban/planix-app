@@ -107,6 +107,25 @@ export const BUTTON_PRESETS: ButtonPresets = {
     size: COMPACT,
     shape: CIRCLE,
   },
+
+  MODAL_OUTLINE: {
+    type: BUTTON,
+    variant: OUTLINE,
+    size: LARGE,
+    shape: ROUNDED,
+  },
+
+  MODAL_DEFAULT: {
+    type: BUTTON,
+    variant: DEFAULT,
+    size: LARGE,
+    shape: ROUNDED,
+  },
+
+  MODAL_CLOSE: {
+    type: BUTTON,
+    variant: TRANSPARENT,
+  },
 } as const;
 
 export type ButtonPresetKey = keyof typeof BUTTON_PRESETS;

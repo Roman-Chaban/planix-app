@@ -17,7 +17,7 @@ export const ModalHeader = ({ onClose, title, icon }: ModalHeaderProps) => {
         {t(title)}
       </Typography>
 
-      <Button className={styles.button} onClick={onClose}>
+      <Button preset="MODAL_CLOSE" className={styles.button} onClick={onClose}>
         {icon}
       </Button>
     </Box>

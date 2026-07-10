@@ -1,14 +1,12 @@
 'use client';
 
-import type { ProfileTabId } from '../../menu/model/types';
-
 import { useCallback, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 import { ROUTES } from '@/app/routes';
 import { useAuth, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { PROFILE_MENU } from '../../menu';
+import { PROFILE_MENU, type ProfileTabId } from '../../menu';
 
 const { SETTINGS } = ROUTES;
 

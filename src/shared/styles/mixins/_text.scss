@@ -1,9 +1,9 @@
 @use '../tokens' as *;
 
-@mixin text-body-sm($color) {
+@mixin text-body-sm($color, $size: $body-sm-font-size) {
   color: $color;
   font: {
-    size: $body-sm-font-size;
+    size: $size;
   }
   line-height: 150%;
 }

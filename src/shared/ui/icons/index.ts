@@ -48,3 +48,8 @@ export { NotificationSecurity } from './Icons';
 export { BlockedIcon } from './Icons';
 export { UploadAvatarIcon } from './Icons';
 export { LanguageIcon } from './Icons';
+export { LogoutGraphicIcon } from './Icons';
+export { DefaultToastIcon } from './Icons';
+export { SuccessToastIcon } from './Icons';
+export { ErrorToastIcon } from './Icons';
+export { CloseToastIcon } from './Icons';

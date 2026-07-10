@@ -1,4 +1,4 @@
-import type { MenuItemProps } from '../model/types';
+import type { MenuItemProps } from '../model/menu.types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Tooltip, Typography } from '@/shared/ui';
@@ -14,13 +14,7 @@ import styles from './ProfileMenu.module.scss';
 const { TRANSPARENT } = BUTTON_VARIANTS;
 const { RIGHT } = TOOLTIP_POSITION;
 
-export const MenuItem = ({ id, label, t, isActive, disabled, setActiveId }: MenuItemProps) => {
-  const handleClick = () => {
-    if (disabled) return;
-
-    setActiveId(id);
-  };
-
+export const MenuItem = ({ label, t, isActive, disabled, onClick }: MenuItemProps) => {
   return (
     <Box
       className={buildClassName(
@@ -32,7 +26,7 @@ export const MenuItem = ({ id, label, t, isActive, disabled, setActiveId }: Menu
         fullWidth
         variant={TRANSPARENT}
         data-disabled={disabled}
-        onClick={handleClick}
+        onClick={onClick}
         className={styles.item}
       >
         <Typography as="span" className={buildClassName(styles.label, isActive && styles.isActive)}>

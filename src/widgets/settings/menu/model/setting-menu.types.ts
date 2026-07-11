@@ -1,4 +1,4 @@
-import type { MenuTabType, ProfileTabIdEnum } from './menu.enums';
+import type { MenuTabType, SettingTabIdEnum } from './setting-menu.enums';
 
 import type { ComponentType } from 'react';
 
@@ -11,10 +11,10 @@ type WithActiveMenu = {
 };
 
 export type ProfileTabId =
-  | ProfileTabIdEnum.PROFILE
-  | ProfileTabIdEnum.NOTIFICATIONS
-  | ProfileTabIdEnum.SUBSCRIPTION
-  | ProfileTabIdEnum.SYSTEM;
+  | SettingTabIdEnum.PROFILE
+  | SettingTabIdEnum.NOTIFICATIONS
+  | SettingTabIdEnum.SUBSCRIPTION
+  | SettingTabIdEnum.SYSTEM;
 
 export type MenuActionId = ModalId.LOGOUT;
 
@@ -56,4 +56,4 @@ export type MenuProps = {
   t: TranslateFn;
 };
 
-export type ProfileMenuProps = WithActiveMenu & IsAuthenticated;
+export type SettingMenuProps = WithActiveMenu & IsAuthenticated;

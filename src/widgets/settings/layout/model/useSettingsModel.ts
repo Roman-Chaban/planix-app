@@ -6,11 +6,11 @@ import { useSearchParams } from 'next/navigation';
 import { ROUTES } from '@/app/routes';
 import { useAuth, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { PROFILE_MENU, type ProfileTabId } from '../../menu';
+import { SETTINGS_MENU, type ProfileTabId } from '../../menu';
 
 const { SETTINGS } = ROUTES;
 
-export const useProfileModel = () => {
+export const useSettingsModel = () => {
   const { isAuthenticated, isLoading } = useAuth();
 
   const searchParams = useSearchParams();
@@ -18,7 +18,7 @@ export const useProfileModel = () => {
 
   const requestedTabId = searchParams.get('tab');
 
-  const profileTabs = useMemo(() => PROFILE_MENU.filter((item) => item.type === 'tab'), []);
+  const profileTabs = useMemo(() => SETTINGS_MENU.filter((item) => item.type === 'tab'), []);
 
   const availableTabs = useMemo(
     () => profileTabs.filter((tab) => isAuthenticated || !tab.requiresAuth),

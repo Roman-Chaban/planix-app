@@ -3,7 +3,7 @@ export enum MenuTabType {
   ACTIONS = 'action',
 }
 
-export enum ProfileTabIdEnum {
+export enum SettingTabIdEnum {
   PROFILE = 'profile',
   NOTIFICATIONS = 'notifications',
   SUBSCRIPTION = 'subscription',

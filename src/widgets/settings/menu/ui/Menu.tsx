@@ -1,20 +1,20 @@
-import type { MenuProps } from '../model/menu.types';
+import type { MenuProps } from '../model/setting-menu.types';
 
 import { List } from '@/shared/ui';
 
-import { PROFILE_MENU } from '../lib/profile-menu';
+import { SETTINGS_MENU } from '../lib/settings-menu';
 
-import { MenuTabType } from '../model/menu.enums';
+import { MenuTabType } from '../model/setting-menu.enums';
 
 import { MenuItem } from './MenuItem';
-import styles from './ProfileMenu.module.scss';
+import styles from './SettingMenu.module.scss';
 
 export const Menu = ({ t, selectedId, setActiveId, isAuthenticated, onAction }: MenuProps) => {
   return (
     <List
       className={styles.list}
       getItemKey={(item) => item.id}
-      renderList={PROFILE_MENU}
+      renderList={SETTINGS_MENU}
       renderItem={(item) => {
         const disabled = item.requiresAuth && !isAuthenticated;
 

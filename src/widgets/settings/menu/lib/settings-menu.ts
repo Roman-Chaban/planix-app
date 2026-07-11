@@ -1,4 +1,4 @@
-import type { MenuItems } from '../model/menu.types';
+import type { MenuItems } from '../model/setting-menu.types';
 
 import { Notifications } from '@/features/profile';
 
@@ -7,40 +7,40 @@ import { ModalId } from '@/entities/modal';
 import { ProfileDetails } from '../../profile-details';
 import { Subscription } from '../../subscription-billing';
 import { System } from '../../system';
-import { MenuTabType, ProfileTabIdEnum } from '../model/menu.enums';
+import { MenuTabType, SettingTabIdEnum } from '../model/setting-menu.enums';
 
-export const PROFILE_MENU: MenuItems = [
+export const SETTINGS_MENU: MenuItems = [
   {
-    id: ProfileTabIdEnum.PROFILE,
-    label: 'profileMenu.myProfile',
+    id: SettingTabIdEnum.PROFILE,
+    label: 'settingsMenu.myProfile',
     requiresAuth: true,
     component: ProfileDetails,
     type: MenuTabType.TAB,
   },
   {
-    id: ProfileTabIdEnum.NOTIFICATIONS,
-    label: 'profileMenu.notificationSettings',
+    id: SettingTabIdEnum.NOTIFICATIONS,
+    label: 'settingsMenu.notificationSettings',
     requiresAuth: false,
     component: Notifications,
     type: MenuTabType.TAB,
   },
   {
-    id: ProfileTabIdEnum.SUBSCRIPTION,
-    label: 'profileMenu.subscription',
+    id: SettingTabIdEnum.SUBSCRIPTION,
+    label: 'settingsMenu.subscription',
     requiresAuth: true,
     component: Subscription,
     type: MenuTabType.TAB,
   },
   {
-    id: ProfileTabIdEnum.SYSTEM,
-    label: 'profileMenu.systemSettings',
+    id: SettingTabIdEnum.SYSTEM,
+    label: 'settingsMenu.systemSettings',
     requiresAuth: false,
     component: System,
     type: MenuTabType.TAB,
   },
   {
     id: ModalId.LOGOUT,
-    label: 'profileMenu.logOut',
+    label: 'settingsMenu.logOut',
     requiresAuth: true,
     type: MenuTabType.ACTIONS,
   },

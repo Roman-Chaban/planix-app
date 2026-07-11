@@ -1,6 +1,6 @@
 @use '@/shared/styles' as *;
 
-.profile {
+.settings {
   @include widget-box(100%, 81.063rem, 50.938rem, 0);
   @include flex(flex, row, start, stretch, 0);
   border: none;

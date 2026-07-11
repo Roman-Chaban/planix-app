@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProfileMenuProps } from '../model/menu.types';
+import type { SettingMenuProps } from '../model/setting-menu.types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -10,18 +10,18 @@ import { openModal } from '@/entities/modal/model/modal.slice';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, Typography } from '@/shared/ui';
 
-import { ProfileTabIdEnum } from '../model/menu.enums';
+import { SettingTabIdEnum } from '../model/setting-menu.enums';
 
 import { Menu } from './Menu';
-import styles from './ProfileMenu.module.scss';
+import styles from './SettingMenu.module.scss';
 
-export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: ProfileMenuProps) => {
+export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: SettingMenuProps) => {
   const { t } = useTranslation(NS.SETTINGS);
   const dispatch = useAppDispatch();
 
   const isLogoutModalOpen = useAppSelector(selectIsModalOpen(ModalId.LOGOUT));
 
-  const selectedId = isLogoutModalOpen ? ModalId.LOGOUT : (activeId ?? ProfileTabIdEnum.PROFILE);
+  const selectedId = isLogoutModalOpen ? ModalId.LOGOUT : (activeId ?? SettingTabIdEnum.PROFILE);
 
   const handleModalAction = (id: ModalId) => {
     dispatch(openModal(id));

@@ -1,6 +1,6 @@
 {
   "settings": "General Settings",
-  "profileMenu": {
+  "settingsMenu": {
     "myProfile": "My Profile",
     "notificationSettings": "Notification Setting",
     "subscription": "Subscription & Billing",

@@ -5,15 +5,15 @@ import { LogoutModal } from '@/features/profile/logout';
 import { PageWrapper } from '@/shared/ui';
 
 import { ProfileMenu } from '../../menu';
-import { useProfileModel } from '../model/useProfileModel';
+import { useSettingsModel } from '../model/useSettingsModel';
 
 import styles from './SettingsLayout.module.scss';
 
 export const SettingsLayout = () => {
-  const { activeId, ActiveComponent, handleTabChange, isAuthenticated } = useProfileModel();
+  const { activeId, ActiveComponent, handleTabChange, isAuthenticated } = useSettingsModel();
 
   return (
-    <PageWrapper header={<Header title="profile" />} sectionClassName={styles.profile}>
+    <PageWrapper header={<Header title="setting" />} sectionClassName={styles.settings}>
       <ProfileMenu
         isAuthenticated={isAuthenticated}
         activeId={activeId}

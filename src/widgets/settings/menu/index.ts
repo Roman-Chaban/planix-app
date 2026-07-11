@@ -1,13 +1,13 @@
-export { PROFILE_MENU } from './lib/profile-menu';
+export { SETTINGS_MENU } from './lib/settings-menu';
 
 export type {
   MenuItemProps,
   MenuItems,
   MenuProps,
-  ProfileMenuProps,
+  SettingMenuProps,
   ProfileTabId,
-} from './model/menu.types';
+} from './model/setting-menu.types';
 
-export { ProfileMenu } from './ui/ProfileMenu';
+export { ProfileMenu } from './ui/SettingMenu';
 export { Menu } from './ui/Menu';
 export { MenuItem } from './ui/MenuItem';

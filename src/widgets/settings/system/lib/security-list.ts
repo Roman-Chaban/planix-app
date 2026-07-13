@@ -8,6 +8,7 @@ export const securityList: SettingSwitchList = [
     title: 'system.twoFactorAuthentication.title',
     subtitle: 'system.twoFactorAuthentication.description',
     icon: NotificationSecurity,
+    requiresAuth: true,
   },
   {
     id: 'themeMode',

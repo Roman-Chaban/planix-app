@@ -1,6 +1,6 @@
 import { buildClassName } from '@/shared/lib';
 
-import type { WithClassName } from '@/shared/types/types';
+import type { WithClassName } from '@types';
 import { Typography } from '@/shared/ui';
 
 import styles from './FormField.module.scss';

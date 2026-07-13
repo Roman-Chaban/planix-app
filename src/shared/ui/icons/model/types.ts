@@ -1,4 +1,4 @@
-import type { WithClassName } from '@/shared/types/types';
+import type { WithClassName } from '@types';
 
 export type IconProps = WithClassName & {
   width?: number | string;

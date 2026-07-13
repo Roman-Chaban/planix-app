@@ -1,6 +1,6 @@
 import type { ElementType, ComponentPropsWithoutRef } from 'react';
 
-import type { WithChildren, WithClassName } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@types';
 
 type BoxOwnProps<T extends ElementType> = WithChildren &
   WithClassName & {

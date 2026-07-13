@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren } from '@types';
 import type { ButtonPresetKey } from '@/shared/ui/button';
 
 export type Variant = 'default' | 'outline' | 'soft' | 'tertiary' | 'transparent';

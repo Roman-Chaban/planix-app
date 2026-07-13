@@ -1,4 +1,4 @@
-import type { WithChildren, WithClassName } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@types';
 
 type SpanItems = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 

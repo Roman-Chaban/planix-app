@@ -1,4 +1,4 @@
-import type { SVGComponent, TranslateFn } from '@/shared/types/types';
+import type { SVGComponent, TranslateFn } from '@types';
 
 export type SidebarProps = {
   isSidebarOpen?: boolean;

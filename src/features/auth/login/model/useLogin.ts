@@ -4,7 +4,7 @@ import { ROUTES } from '@/app/routes';
 import { supabase } from '@/shared/api/supabase';
 import { setFormErrors } from '@/shared/lib';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 
 import { loginSchema, type LoginFormSchema } from './schema';
 

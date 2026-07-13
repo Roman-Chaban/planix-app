@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import type { WithClassName } from '@/shared/types/types';
+import type { WithClassName } from '@types';
 
 type AvatarSize = 'sm' | 'md' | 'lg';
 type AvatarVariant = 'circle' | 'square';

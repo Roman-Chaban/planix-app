@@ -7,7 +7,7 @@ import type {
   Ref,
 } from 'react';
 
-import type { WithChildren, WithClassName } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@types';
 
 export type FormFieldVariant =
   'default' | 'search' | 'hover' | 'typing' | 'filed' | 'disabled' | 'error' | 'noBorder';

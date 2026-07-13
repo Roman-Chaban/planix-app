@@ -1,4 +1,4 @@
-import type { SVGComponent } from '@/shared/types/types';
+import type { SVGComponent } from '@types';
 
 export type ActionItem = {
   id: string;

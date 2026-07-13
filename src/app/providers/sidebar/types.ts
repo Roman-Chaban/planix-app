@@ -1,4 +1,4 @@
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren } from '@types';
 
 export type SidebarProviderProps = WithChildren;
 

@@ -1,7 +1,7 @@
-export { getBillingHistory } from './api/lib/billing';
-export { mapBilling } from './api/lib/billing.mapper';
+export { getBillingHistory } from './lib/billing';
+export { mapBilling } from './lib/billing.mapper';
 
-export type { Billing, BillingHistoryData } from './api/model/billing.types';
-export { useBillingHistory } from './api/model/useBillingHistory';
+export type { Billing, BillingHistoryData } from './model/billing.types';
+export { useBillingHistory } from './model/useBillingHistory';
 
-export { queryKeys } from './api/queryKeys/queryKeys';
+export { queryKeys } from './queryKeys/queryKeys';

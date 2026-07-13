@@ -28,20 +28,20 @@ export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
     label: 'profileDetails.email',
     type: EMAIL,
     className: styles.email,
-    startIcon: <MessageIcon />
+    startIcon: <MessageIcon />,
   },
   {
     name: 'birthDate',
     label: 'profileDetails.birthDate',
     type: TEXT,
     className: styles.birthDate,
-    startIcon: <CalendarIcon />
+    startIcon: <CalendarIcon />,
   },
   {
     name: 'contact',
     label: 'profileDetails.contact',
     type: TEXT,
     className: styles.contact,
-    startIcon: <ContactIcon />
+    startIcon: <ContactIcon />,
   },
 ] as const;

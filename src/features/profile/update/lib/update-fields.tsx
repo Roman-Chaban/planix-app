@@ -12,6 +12,7 @@ export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {
     name: 'firstName',
     label: 'profileDetails.firstName',
+    placeholder: 'profileDetails.firstName',
     required: true,
     type: TEXT,
     className: styles.firstName,
@@ -20,6 +21,7 @@ export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {
     name: 'lastName',
     label: 'profileDetails.lastName',
+    placeholder: 'profileDetails.lastName',
     required: true,
     type: TEXT,
     className: styles.lastName,
@@ -28,6 +30,7 @@ export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {
     name: 'email',
     label: 'profileDetails.email',
+    placeholder: 'profileDetails.email',
     required: true,
     type: EMAIL,
     className: styles.email,
@@ -36,6 +39,7 @@ export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {
     name: 'birthDate',
     label: 'profileDetails.birthDate',
+    placeholder: 'profileDetails.birthDate',
     required: true,
     type: TEXT,
     className: styles.birthDate,
@@ -44,6 +48,7 @@ export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {
     name: 'contact',
     label: 'profileDetails.contact',
+    placeholder: 'profileDetails.contact',
     required: true,
     type: TEXT,
     className: styles.contact,

@@ -1,5 +1,6 @@
 {
   "settings": "Загальні налаштування",
+
   "profileMenu": {
     "myProfile": "Мій профіль",
     "notificationSettings": "Налаштування сповіщень",
@@ -8,6 +9,7 @@
     "logOut": "Вийти",
     "restrictedFeature": "Увійдіть, щоб отримати доступ до цієї функції."
   },
+
   "profileDetails": {
     "editLabel": "Редагувати",
     "firstName": "Ім'я",
@@ -18,8 +20,31 @@
     "edit": "Натисніть, щоб редагувати",
     "save": "Зберегти профіль"
   },
+
+  "editForm": {
+    "validation": {
+      "firstName": {
+        "required": "Ім'я є обов'язковим"
+      },
+      "lastName": {
+        "required": "Прізвище є обов'язковим"
+      },
+      "contact": {
+        "required": "Контактний номер є обов'язковим"
+      },
+      "email": {
+        "required": "Email є обов'язковим",
+        "invalid": "Введіть коректну адресу електронної пошти"
+      },
+      "birthDate": {
+        "required": "Дата народження є обов'язковою"
+      }
+    }
+  },
+
   "notifications": {
     "title": "Сповіщення",
+
     "items": {
       "emailNotifications": {
         "title": "Сповіщення електронною поштою",
@@ -47,18 +72,22 @@
       }
     }
   },
+
   "subscriptionAndBilling": {
     "title": "Підписка та білінг",
+
     "professionalPlan": {
       "title": "Професійний план",
       "subtitle": "Найпопулярніший для бізнесів, що зростають",
       "perMonth": "/місяць",
       "nextBilling": "Наступне списання: {{date}}"
     },
+
     "professionalActions": {
       "cancelPlan": "Скасувати план",
       "updatePlan": "Оновити план"
     },
+
     "billingTable": {
       "title": "Історія платежів",
       "columns": {
@@ -70,6 +99,7 @@
       }
     }
   },
+
   "system": {
     "languageTitle": "Налаштування мови",
     "securityTitle": "Налаштування безпеки",

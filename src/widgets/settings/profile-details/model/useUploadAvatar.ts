@@ -1,6 +1,6 @@
 import { type ChangeEvent, useRef } from 'react';
 
-import { uploadProfileAvatar } from '@/entities/settings';
+import { uploadProfileAvatar } from '@/entities/profile';
 
 export const useUploadAvatar = () => {
   const uploadAvatarRef = useRef<HTMLInputElement>(null);

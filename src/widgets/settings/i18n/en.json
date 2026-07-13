@@ -1,5 +1,6 @@
 {
   "settings": "General Settings",
+
   "settingsMenu": {
     "myProfile": "My Profile",
     "notificationSettings": "Notification Setting",
@@ -8,6 +9,7 @@
     "logOut": "Log Out",
     "restrictedFeature": "Sign in to access this feature."
   },
+
   "profileDetails": {
     "editLabel": "Edit",
     "firstName": "First Name",
@@ -18,8 +20,31 @@
     "edit": "Click to edit",
     "save": "Save Profile"
   },
+
+  "editForm": {
+    "validation": {
+      "firstName": {
+        "required": "First name is required"
+      },
+      "lastName": {
+        "required": "Last name is required"
+      },
+      "contact": {
+        "required": "Contact is required"
+      },
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "birthDate": {
+        "required": "Birth date is required"
+      }
+    }
+  },
+
   "notifications": {
     "title": "Notifications",
+
     "items": {
       "emailNotifications": {
         "title": "Email Notifications",
@@ -47,18 +72,22 @@
       }
     }
   },
+
   "subscriptionAndBilling": {
     "title": "Subscription & Billing",
+
     "professionalPlan": {
       "title": "Professional Plan",
       "subtitle": "Most Popular for Growing businesses",
       "perMonth": "/per month",
       "nextBilling": "Next billing: {{date}}"
     },
+
     "professionalActions": {
       "cancelPlan": "Cancel Plan",
       "updatePlan": "Update Plan"
     },
+
     "billingTable": {
       "title": "Billing History",
       "columns": {
@@ -70,6 +99,7 @@
       }
     }
   },
+
   "system": {
     "languageTitle": "Language Setting",
     "securityTitle": "Security Settings",

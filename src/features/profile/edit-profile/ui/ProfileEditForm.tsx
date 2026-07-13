@@ -1,17 +1,19 @@
 'use client';
 
-import type { ProfileEditFormProps } from '../model/edit-profile.types';
-
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { AppForm, Button, FormFields } from '@/shared/ui';
 
-import { editFields } from '../lib/form-config';
+import { editFields } from '../lib/fields';
 
 import { useEditProfile } from '../model/useEditProfile';
 
 import styles from './ProfileEditForm.module.scss';
+
+export type ProfileEditFormProps = {
+  onSuccess?: () => void;
+};
 
 export const ProfileEditForm = ({ onSuccess }: ProfileEditFormProps) => {
   const { t } = useTranslation(NS.SETTINGS);

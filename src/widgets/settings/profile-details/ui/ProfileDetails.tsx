@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { ProfileEditForm } from '@/features/profile/edit-profile';
-import { useProfile } from '@/entities/settings';
+import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
 

@@ -1,4 +1,4 @@
-import type { Profile } from '@/entities/settings';
+import type { Profile } from '@/entities/profile';
 import type { TranslateFn, WithChildren } from '@/shared/types/types';
 
 type ProfileProps = { profile: Profile | null; t: TranslateFn };

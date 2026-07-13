@@ -1,4 +1,4 @@
-import type { ProfileFormValues } from '../model/edit-profile.types';
+import type { ProfileFormValues } from '../model/edit-profile-schema';
 
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { CalendarIcon, ClientIcon, ContactIcon, MessageIcon } from '@/shared/ui/icons';
@@ -12,6 +12,7 @@ export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
   {
     name: 'firstName',
     label: 'profileDetails.firstName',
+    required: true,
     type: TEXT,
     className: styles.firstName,
     startIcon: <ClientIcon />,
@@ -19,6 +20,7 @@ export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
   {
     name: 'lastName',
     label: 'profileDetails.lastName',
+    required: true,
     type: TEXT,
     className: styles.lastName,
     startIcon: <ClientIcon />,
@@ -26,6 +28,7 @@ export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
   {
     name: 'email',
     label: 'profileDetails.email',
+    required: true,
     type: EMAIL,
     className: styles.email,
     startIcon: <MessageIcon />,
@@ -33,6 +36,7 @@ export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
   {
     name: 'birthDate',
     label: 'profileDetails.birthDate',
+    required: true,
     type: TEXT,
     className: styles.birthDate,
     startIcon: <CalendarIcon />,
@@ -40,6 +44,7 @@ export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
   {
     name: 'contact',
     label: 'profileDetails.contact',
+    required: true,
     type: TEXT,
     className: styles.contact,
     startIcon: <ContactIcon />,

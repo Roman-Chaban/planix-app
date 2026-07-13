@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSelect } from '@/features/language-switcher';
 import { ChangePasswordForm } from '@/features/profile/change-password';
 import { SettingSwitchList } from '@/features/profile/settings-switch';
-import { useProfile } from '@/entities/settings';
+import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
 

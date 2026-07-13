@@ -101,6 +101,11 @@
       "required": "This field is required.",
       "minPassword": "Password must be at least 8 characters long.",
       "mismatch": "Passwords do not match."
+    },
+
+    "toast": {
+      "changePasswordSuccess": "Password changed successfully.",
+      "changePasswordError": "Failed to change password."
     }
   }
 }

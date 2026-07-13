@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProfileHeaderProps } from '../model/types';
+import type { ProfileHeaderProps } from '../model/details.types';
 
 import { Avatar, Box, Input, Tooltip, Typography } from '@/shared/ui';
 
@@ -13,13 +13,13 @@ import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import { useUploadAvatar } from '../model/useUploadAvatar';
 
-import styles from './ProfileDetails.module.scss';
+import styles from './Details.module.scss';
 
 const { BOTTOM } = TOOLTIP_POSITION;
 const { FILE } = INPUT_TYPES;
 const { CIRCLE } = AVATAR_VARIANTS;
 
-export const ProfileHeader = ({ profile, t, onMode }: ProfileHeaderProps) => {
+export const DetailsHeader = ({ profile, t, onMode }: ProfileHeaderProps) => {
   const { uploadAvatarRef, handleFileChange, handleUploadClick } = useUploadAvatar();
 
   if (!profile) return null;

@@ -1,14 +1,14 @@
-import type { ProfileInfoItemProps } from '../model/types';
+import type { DetailsItemProps } from '../model/details.types';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './ProfileDetails.module.scss';
+import styles from './Details.module.scss';
 
-export const ProfileInfoItem = ({ label, value, children }: ProfileInfoItemProps) => {
+export const DetailsItem = ({ label, value, t, children }: DetailsItemProps) => {
   return (
     <Box className={styles.field}>
       <Typography as="span" className={styles.label}>
-        {label}
+        {label && (t ? t(label) : label)}
       </Typography>
       <Typography as="span" className={styles.value}>
         {value}

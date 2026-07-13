@@ -9,12 +9,14 @@ import { Box } from '@/shared/ui';
 
 import { useChangeMode } from '../model/useChangeMode';
 
-import styles from './ProfileDetails.module.scss';
-import { ProfileHeader } from './ProfileHeader';
-import { ProfileInfoList } from './ProfileInfoList';
-import { ProfileDetailsSkeleton } from './skeleton/ProfileDetailsSkeleton';
+import { DetailsList } from '../ui/DetailsList';
 
-export const ProfileDetails = () => {
+import styles from './Details.module.scss';
+import { DetailsHeader } from './DetailsHeader';
+
+import { DetailsSkeleton } from './skeleton/DetailsSkeleton';
+
+export const Details = () => {
   const { t } = useTranslation(NS.SETTINGS);
 
   const { profile, isLoading } = useProfile();
@@ -22,17 +24,17 @@ export const ProfileDetails = () => {
 
   if (!hydrated) return null;
 
-  if (isLoading) return <ProfileDetailsSkeleton />;
+  if (isLoading) return <DetailsSkeleton />;
 
   if (!profile) return null;
 
   return (
     <Box className={styles.details}>
       <Box className={styles.profileDetails}>
-        <ProfileHeader profile={profile} t={t} onMode={toggleMode} />
+        <DetailsHeader profile={profile} t={t} onMode={toggleMode} />
 
         {isView ? (
-          <ProfileInfoList profile={profile} t={t} />
+          <DetailsList profile={profile} t={t} />
         ) : (
           <ProfileUpdateForm onSuccess={toggleMode} />
         )}

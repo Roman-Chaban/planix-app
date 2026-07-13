@@ -1,14 +1,13 @@
-import { ProfileInfoItem } from '@/widgets/settings';
-
 import { Box } from '@/shared/ui';
 
 import { Skeleton } from '@/shared/ui/skeleton/ui/Skeleton';
 
-import styles from '../ProfileDetails.module.scss';
+import styles from '../Details.module.scss';
+import { DetailsItem } from '../DetailsItem';
 
 const ROWS_COUNT = 5;
 
-export const ProfileDetailsSkeleton = () => {
+export const DetailsSkeleton = () => {
   const rows = Array.from({ length: ROWS_COUNT });
 
   return (
@@ -33,9 +32,9 @@ export const ProfileDetailsSkeleton = () => {
         </Box>
         <Box className={styles.information}>
           {rows.map((_, rowIndex) => (
-            <ProfileInfoItem key={rowIndex}>
+            <DetailsItem key={rowIndex}>
               <Skeleton height={30} radius="20" />
-            </ProfileInfoItem>
+            </DetailsItem>
           ))}
         </Box>
       </Box>

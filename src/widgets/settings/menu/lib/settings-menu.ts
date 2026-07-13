@@ -4,7 +4,7 @@ import { Notifications } from '@/features/profile';
 
 import { ModalId } from '@/entities/modal';
 
-import { ProfileDetails } from '../../profile-details';
+import { Details } from '../../details';
 import { Subscription } from '../../subscription-billing';
 import { System } from '../../system';
 import { MenuTabType, SettingTabIdEnum } from '../model/setting-menu.enums';
@@ -14,7 +14,7 @@ export const SETTINGS_MENU: MenuItems = [
     id: SettingTabIdEnum.PROFILE,
     label: 'settingsMenu.myProfile',
     requiresAuth: true,
-    component: ProfileDetails,
+    component: Details,
     type: MenuTabType.TAB,
   },
   {

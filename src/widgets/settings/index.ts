@@ -1,3 +1,3 @@
 export { SettingsLayout } from './layout';
-export { ProfileDetails, ProfileInfoItem } from './profile-details';
+export { Details, DetailsHeader, DetailsItem, DetailsList, DetailsSkeleton } from './details';
 export { ProfileMenu } from './menu';

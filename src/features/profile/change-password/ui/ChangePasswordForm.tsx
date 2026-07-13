@@ -12,8 +12,10 @@ import styles from './ChangePasswordForm.module.scss';
 export const ChangePasswordForm = ({
   translationNamespace,
   buttonLabel,
+  successMessage,
+  errorMessage,
 }: ChangePasswordFormProps) => {
-  const { form, onSubmit } = useChangePassword();
+  const { form, onSubmit } = useChangePassword({ successMessage, errorMessage });
 
   return (
     <PasswordForm

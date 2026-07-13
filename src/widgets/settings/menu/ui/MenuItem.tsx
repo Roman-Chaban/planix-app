@@ -35,7 +35,7 @@ export const MenuItem = ({ label, t, isActive, disabled, onClick }: MenuItemProp
 
         {disabled && (
           <Box as="div" className={styles.blockedIcon}>
-            <Tooltip position={RIGHT} message={t('profileMenu.restrictedFeature')}>
+            <Tooltip position={RIGHT} message={t('settingsMenu.restrictedFeature')}>
               <BlockedIcon />
             </Tooltip>
           </Box>

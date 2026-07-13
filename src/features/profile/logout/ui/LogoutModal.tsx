@@ -12,7 +12,7 @@ import styles from './LogoutModal.module.scss';
 import { LogoutModalGraphic } from './LogoutModalGraphic';
 
 export const LogoutModal = () => {
-  const { t } = useTranslation(NS.LOGOUT_MODAL);
+  const { t } = useTranslation(NS.SETTINGS);
 
   usePersistModal(ModalId.LOGOUT, 'logout-modal');
 
@@ -30,13 +30,13 @@ export const LogoutModal = () => {
     <Modal isOpen={isOpen} onClose={handleClose}>
       <ModalContent className={styles.content}>
         <LogoutModalGraphic />
-        <LogoutContent title={t('modal.title')} subtitle={t('modal.subtitle')} />
+        <LogoutContent title={t('logout.modal.title')} subtitle={t('logout.modal.subtitle')} />
         <ModalActions>
           <Button preset="MODAL_OUTLINE" minWidth="md" onClick={handleClose}>
-            {t('modal.cancelLabel')}
+            {t('logout.modal.cancelLabel')}
           </Button>
           <Button preset="MODAL_DEFAULT" minWidth="md" onClick={handleLogout} isLoading={isLoading}>
-            {t('modal.logoutLabel')}
+            {t('logout.modal.logoutLabel')}
           </Button>
         </ModalActions>
       </ModalContent>

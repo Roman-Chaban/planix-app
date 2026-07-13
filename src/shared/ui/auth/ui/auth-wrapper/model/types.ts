@@ -1,6 +1,6 @@
-import type { BaseSyntheticEvent, ReactNode } from 'react';
-
 import type { WithChildren } from '@types';
+
+import type { BaseSyntheticEvent, ReactNode } from 'react';
 
 export type AuthWrapperProps = Partial<
   WithChildren & {

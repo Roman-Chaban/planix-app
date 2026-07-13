@@ -1,8 +1,8 @@
 'use client';
 
-import { Provider } from 'react-redux';
-
 import type { WithChildren } from '@types';
+
+import { Provider } from 'react-redux';
 
 import { store } from './store';
 

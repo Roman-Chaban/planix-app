@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-
 import type { WithChildren, WithClassName } from '@types';
+
+import type { ReactNode } from 'react';
 
 type WithOnClose = {
   onClose: () => void;

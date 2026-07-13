@@ -1,6 +1,7 @@
+import type { SVGComponent } from '@types';
+
 import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 import type { Status } from '@/entities/project';
-import type { SVGComponent } from '@types';
 
 export type StatusMap = Record<TabId, Status | null>;
 export type StatusClasses = Record<Status, string>;

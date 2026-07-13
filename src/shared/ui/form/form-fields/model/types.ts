@@ -1,8 +1,7 @@
+import type { WithClassName } from '@types';
 import type { FieldErrors, FieldValues, UseFormRegister, Path } from 'react-hook-form';
 
 import type { ReactNode } from 'react';
-
-import type { WithClassName } from '@types';
 
 type FormFieldFeature = 'password-toggle' | 'none';
 

@@ -1,4 +1,5 @@
 import type { IdentifiableSwitch, SettingSwitchListProps } from '@types';
+
 import { List } from '@/shared/ui';
 
 import styles from './SettingSwitch.module.scss';

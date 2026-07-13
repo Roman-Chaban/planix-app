@@ -1,3 +1,5 @@
+import type { WithChildren, WithClassName } from '@types';
+
 import type {
   HTMLAttributes,
   InputHTMLAttributes,
@@ -6,8 +8,6 @@ import type {
   ReactNode,
   Ref,
 } from 'react';
-
-import type { WithChildren, WithClassName } from '@types';
 
 export type FormFieldVariant =
   'default' | 'search' | 'hover' | 'typing' | 'filed' | 'disabled' | 'error' | 'noBorder';

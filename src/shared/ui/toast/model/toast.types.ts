@@ -1,8 +1,8 @@
 import type { ToastVariant } from '../lib/toast.constants';
 
-import type { ReactNode } from 'react';
-
 import type { SVGComponent, WithClassName } from '@types';
+
+import type { ReactNode } from 'react';
 
 type ToastConfigRole = 'alert' | 'status';
 type ToastConfigAriaLive = 'assertive' | 'polite';

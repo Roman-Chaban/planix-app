@@ -1,4 +1,5 @@
 import type { SettingSwitchList } from '@types';
+
 import {
   NotificationEmail,
   NotificationMessage,

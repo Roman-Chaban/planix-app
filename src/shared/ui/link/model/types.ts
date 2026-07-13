@@ -1,6 +1,6 @@
-import type { AnchorHTMLAttributes } from 'react';
-
 import type { WithChildren, WithClassName } from '@types';
+
+import type { AnchorHTMLAttributes } from 'react';
 
 export type AppLinkProps = WithChildren &
   WithClassName & {

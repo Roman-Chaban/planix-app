@@ -1,4 +1,5 @@
 import type { NavigateFn } from '@types';
+
 import { AppForm } from '@/shared/ui';
 
 import { useResetPassword } from '../../reset';

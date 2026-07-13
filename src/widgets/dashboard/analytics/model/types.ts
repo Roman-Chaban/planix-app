@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-
 import type { WithChildren } from '@types';
+
+import type { ReactNode } from 'react';
 
 type WidgetVariant = 'primary' | 'secondary' | 'tertiary';
 

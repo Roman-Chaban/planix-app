@@ -2,10 +2,11 @@
 
 import type { Session } from '@supabase/supabase-js';
 
+import type { WithChildren } from '@types';
+
 import { useEffect, useState } from 'react';
 
 import { supabase } from '@/shared/api/supabase';
-import type { WithChildren } from '@types';
 
 import { AuthContext } from './AuthContext';
 

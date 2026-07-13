@@ -1,6 +1,6 @@
-import type { JSX, Key, ReactNode } from 'react';
-
 import type { WithClassName } from '@types';
+
+import type { JSX, Key, ReactNode } from 'react';
 
 export type ListProps<T> = WithClassName & {
   renderList: T[];

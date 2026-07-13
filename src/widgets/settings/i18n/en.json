@@ -137,5 +137,19 @@
       "changePasswordSuccess": "Password changed successfully.",
       "changePasswordError": "Failed to change password."
     }
+  },
+
+  "logout": {
+    "modal": {
+      "title": "Are You Sure You Want To Log Out?",
+      "subtitle": "Your data will be safe. Once you log in, you can view your data.",
+      "cancelLabel": "Cancel",
+      "logoutLabel": "Log Out"
+    },
+
+    "toast": {
+      "logoutSuccess": "You have logged out successfully",
+      "logoutError": "You couldn't be logged out, please try again later"
+    }
   }
 }

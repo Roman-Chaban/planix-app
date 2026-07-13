@@ -8,10 +8,12 @@ import { AUTH_STEPS } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, FormFields } from '@/shared/ui';
 
-import { loginFormFields } from '../lib/form-config';
+import { loginFormFields } from '../lib/login-fields';
 import { useLogin } from '../model/useLogin';
 
 import { LoginActions } from './LoginActions';
+
+import styles from './LoginForm.module.scss';
 
 const { FORGOT } = AUTH_STEPS;
 
@@ -23,9 +25,10 @@ export const LoginForm = ({ onNavigate }: LoginFormProps) => {
   const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
-    <AppForm form={loginForm} onSubmit={handleSubmit}>
-      <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
-
+    <>
+      <AppForm form={loginForm} onSubmit={handleSubmit} className={styles.loginForm}>
+        <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
+      </AppForm>
       <LoginActions
         control={control}
         rememberMeLabel={t('login.rememberMe')}
@@ -35,6 +38,6 @@ export const LoginForm = ({ onNavigate }: LoginFormProps) => {
         isLoading={isSubmitting}
         onForgotPassword={() => onNavigate(FORGOT)}
       />
-    </AppForm>
+    </>
   );
 };

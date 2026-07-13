@@ -28,7 +28,7 @@ export const LoginActions = ({
           )}
         />
 
-        <Button preset="AUTH_FORGOT" className={styles.loginButton} onClick={onForgotPassword}>
+        <Button preset="AUTH_FORGOT" className={styles.forgotButton} onClick={onForgotPassword}>
           {forgotPasswordLabel}
         </Button>
       </Box>

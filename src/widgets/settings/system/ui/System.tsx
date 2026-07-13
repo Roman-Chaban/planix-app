@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSelect } from '@/features/language-switcher';
 import { ChangePasswordForm } from '@/features/profile/change-password';
 import { SettingSwitchList } from '@/features/profile/settings-switch';
+import { useProfile } from '@/entities/settings';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
 
@@ -16,6 +17,10 @@ import { SystemSection } from './SystemSection';
 export const System = () => {
   const { t } = useTranslation(NS.SETTINGS);
 
+  const { profile } = useProfile();
+
+  const visibleSecurityList = securityList.filter((item) => !item.requiresAuth || profile);
+
   return (
     <Box className={styles.system}>
       <SystemSection title={t('system.languageTitle')}>
@@ -25,17 +30,21 @@ export const System = () => {
       </SystemSection>
 
       <SystemSection title={t('system.securityTitle')}>
-        <SettingSwitchList list={securityList} />
+        <SettingSwitchList list={visibleSecurityList} />
       </SystemSection>
 
-      <SystemSection title={t('system.changePasswordTitle')}>
-        <Box className={styles.content}>
-          <ChangePasswordForm
-            translationNamespace={NS.SETTINGS}
-            buttonLabel={t('system.savePassword')}
-          />
-        </Box>
-      </SystemSection>
+      {profile && (
+        <SystemSection title={t('system.changePasswordTitle')}>
+          <Box className={styles.content}>
+            <ChangePasswordForm
+              translationNamespace={NS.SETTINGS}
+              buttonLabel={t('system.savePassword')}
+              successMessage={t('system.toast.changePasswordSuccess')}
+              errorMessage={t('system.toast.changePasswordError')}
+            />
+          </Box>
+        </SystemSection>
+      )}
     </Box>
   );
 };

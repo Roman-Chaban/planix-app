@@ -9,15 +9,15 @@ import {
   Option,
   INSTANCE_ID,
   type LanguageOption,
-  useLanguageSelect,
+  useLanguageSwitcher,
   createSelectStyles,
 } from '@/features/language-switcher';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { FormLabel } from '@/shared/ui';
 
-export const LanguageSelect = () => {
+export const LanguageSwitcher = () => {
   const { t } = useTranslation(NS.SETTINGS);
-  const { selectValue, languageOptions, handleChange } = useLanguageSelect();
+  const { selectValue, languageOptions, handleChange } = useLanguageSwitcher();
 
   const styles = useMemo(() => createSelectStyles(), []);
 

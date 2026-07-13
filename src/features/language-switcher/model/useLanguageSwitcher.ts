@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { languageOptions, type LanguageOption } from '@/features/language-switcher';
 
-export const useLanguageSelect = () => {
+export const useLanguageSwitcher = () => {
   const router = useRouter();
   const pathname = usePathname() ?? '/';
   const searchParams = useSearchParams();

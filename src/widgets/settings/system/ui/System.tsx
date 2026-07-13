@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { LanguageSelect } from '@/features/language-switcher';
+import { LanguageSwitcher } from '@/features/language-switcher';
 import { ChangePasswordForm } from '@/features/profile/change-password';
 import { SettingSwitchList } from '@/features/profile/settings-switch';
 import { useProfile } from '@/entities/profile';
@@ -25,7 +25,7 @@ export const System = () => {
     <Box className={styles.system}>
       <SystemSection title={t('system.languageTitle')}>
         <Box className={styles.content}>
-          <LanguageSelect />
+          <LanguageSwitcher />
         </Box>
       </SystemSection>
 

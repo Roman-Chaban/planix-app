@@ -1,13 +1,13 @@
-export { INSTANCE_ID } from './lib/constants';
+export { INSTANCE_ID } from './lib/language-switcher.constants';
 
-export type { LanguageOption, LanguageSelectStyles } from './model/types';
+export type { LanguageOption, LanguageSelectStyles } from './model/language-switcher.types';
 
-export { languageOptions } from './model/options';
+export { languageOptions } from './model/language-switcher-list';
 
-export { useLanguageSelect } from './model/useLanguageSelect';
+export { useLanguageSwitcher } from './model/useLanguageSwitcher';
 
 export { createSelectStyles } from './ui/styles';
 
-export { LanguageSelect } from './ui/LanguageSelect';
+export { LanguageSwitcher } from './ui/LanguageSwitcher';
 export { Option } from './ui/Option';
 export { SingleValue } from './ui/SingleValue';

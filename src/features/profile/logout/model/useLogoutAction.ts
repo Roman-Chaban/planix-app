@@ -15,7 +15,7 @@ const { DASHBOARD } = ROUTES;
 const { SUCCESS, ERROR } = TOAST_VARIANT;
 
 export const useLogoutAction = () => {
-  const { t } = useTranslation(NS.LOGOUT_MODAL);
+  const { t } = useTranslation(NS.SETTINGS);
 
   const localizedRouter = useLocalizedRouter();
   const dispatch = useAppDispatch();

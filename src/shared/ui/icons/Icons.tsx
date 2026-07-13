@@ -364,7 +364,7 @@ export const ProjectIcon = ({ width = 24, height = 24 }: IconProps) => {
   );
 };
 
-export const ClientIcon = ({ width = 24, height = 24 }: IconProps) => {
+export const ClientIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}

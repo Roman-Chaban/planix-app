@@ -27,6 +27,5 @@ export const loginFormFields: readonly FormFieldConfig<LoginFormSchema>[] = [
     startIcon: <LockIcon />,
     required: true,
     feature: 'password-toggle',
-    endIcon: null,
   },
 ] as const;

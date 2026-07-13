@@ -1,0 +1,5 @@
+@use '@/shared/styles' as *;
+
+.forgotForm {
+  @include auth-form-flex-wrapper;
+}

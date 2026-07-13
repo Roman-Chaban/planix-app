@@ -31,7 +31,7 @@ export const useLogoutAction = () => {
       dispatch(
         showToast({
           variant: SUCCESS,
-          description: t('toast.logoutSuccess'),
+          description: t('logout.toast.logoutSuccess'),
         }),
       );
 
@@ -40,7 +40,7 @@ export const useLogoutAction = () => {
       dispatch(
         showToast({
           variant: ERROR,
-          description: t('toast.logoutError'),
+          description: t('logout.toast.logoutError'),
         }),
       );
     }

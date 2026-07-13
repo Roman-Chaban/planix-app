@@ -1,4 +1,4 @@
-import type { ProfileFormValues } from '@/features/profile/edit-profile';
+import type { ProfileFormValues } from '@/features/profile/update';
 import { AVATARS, PROFILES, ID } from '@/shared/api';
 import { supabase } from '@/shared/api/supabase';
 

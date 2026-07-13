@@ -1,4 +1,4 @@
-import type { ProfileFormValues } from '../model/edit-profile-schema';
+import type { UpdateFormValues } from '../model/update.schema';
 
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { CalendarIcon, ClientIcon, ContactIcon, MessageIcon } from '@/shared/ui/icons';
@@ -6,9 +6,9 @@ import { INPUT_TYPES } from '@/shared/ui/input';
 
 const { TEXT, EMAIL } = INPUT_TYPES;
 
-import styles from '../ui/ProfileEditForm.module.scss';
+import styles from '../ui/ProfileUpdateForm.module.scss';
 
-export const editFields: readonly FormFieldConfig<ProfileFormValues>[] = [
+export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {
     name: 'firstName',
     label: 'profileDetails.firstName',

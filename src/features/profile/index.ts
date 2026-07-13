@@ -1,2 +1,2 @@
-export { ProfileEditForm } from './edit-profile';
+export { ProfileUpdateForm } from './update';
 export { Notifications } from './notifications-profile';

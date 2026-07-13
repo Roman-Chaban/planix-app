@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProfileEditFormProps } from '../ui/ProfileEditForm';
+import type { ProfileUpdateFormProps } from '../ui/ProfileUpdateForm';
 
 import { useEffect } from 'react';
 
@@ -8,15 +8,16 @@ import { useProfile } from '@/entities/profile';
 
 import { useAppForm } from '@/shared/lib/hooks';
 
-import { profileEditSchema, type ProfileFormValues } from './edit-profile-schema';
-import { useEditProfileMutation } from './useEditProfile.mutation';
+import { updateSchema, type UpdateFormValues } from './update.schema';
+import { useUpdateForm } from './useUpdateForm';
 
-export const useEditProfile = ({ onSuccess }: ProfileEditFormProps) => {
+export const useUpdateProfile = ({ onSuccess }: ProfileUpdateFormProps) => {
   const { profile, refetch } = useProfile();
-  const mutation = useEditProfileMutation();
+  const mutation = useUpdateForm();
 
-  const editForm = useAppForm<ProfileFormValues>({
-    schema: profileEditSchema,
+  const editForm = useAppForm<UpdateFormValues>({
+    schema: updateSchema,
+    mode: 'onChange',
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -25,6 +26,10 @@ export const useEditProfile = ({ onSuccess }: ProfileEditFormProps) => {
       birthDate: '',
     },
   });
+
+  const {
+    formState: { isValid },
+  } = editForm;
 
   useEffect(() => {
     if (!profile) return;
@@ -38,7 +43,7 @@ export const useEditProfile = ({ onSuccess }: ProfileEditFormProps) => {
     });
   }, [profile, editForm]);
 
-  const onSubmit = async (data: ProfileFormValues) => {
+  const onSubmit = async (data: UpdateFormValues) => {
     if (!profile?.id) return;
 
     await mutation.mutateAsync({
@@ -56,6 +61,7 @@ export const useEditProfile = ({ onSuccess }: ProfileEditFormProps) => {
     profile,
     onSubmit,
     isLoading: mutation.isPending,
+    isValid,
     error: mutation.error,
   };
 };

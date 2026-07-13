@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ProfileEditForm } from '@/features/profile/edit-profile';
+import { ProfileUpdateForm } from '@/features/profile/update';
 import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
@@ -34,7 +34,7 @@ export const ProfileDetails = () => {
         {isView ? (
           <ProfileInfoList profile={profile} t={t} />
         ) : (
-          <ProfileEditForm onSuccess={toggleMode} />
+          <ProfileUpdateForm onSuccess={toggleMode} />
         )}
       </Box>
     </Box>

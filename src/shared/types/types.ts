@@ -39,6 +39,7 @@ export type WithSwitch = {
   icon?: ComponentType;
   title: string;
   subtitle: string;
+  requiresAuth?: boolean;
 };
 
 export type IdentifiableSwitch = WithSwitch & {

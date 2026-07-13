@@ -1,12 +1,24 @@
 import type { SubmitHandler } from 'react-hook-form';
 
-import { setFormErrors } from '@/shared/lib';
+import { useAppDispatch } from '@/app/providers/store/hooks';
+import { showToast } from '@/entities/toast';
 import { useAppForm } from '@/shared/lib/hooks';
+
+import { TOAST_VARIANT } from '@/shared/ui/toast';
 
 import { changePasswordSchema, type ChangePasswordSchema } from './change-password.schema';
 import { useChangePasswordMutation } from './useChangePasswordMutation';
 
-export const useChangePassword = () => {
+const { SUCCESS, ERROR } = TOAST_VARIANT;
+
+export type UseChangePasswordOptions = {
+  successMessage: string;
+  errorMessage: string;
+};
+
+export const useChangePassword = ({ successMessage, errorMessage }: UseChangePasswordOptions) => {
+  const dispatch = useAppDispatch();
+
   const form = useAppForm({
     schema: changePasswordSchema,
     defaultValues: {
@@ -26,12 +38,15 @@ export const useChangePassword = () => {
       });
 
       form.reset();
+
+      dispatch(showToast({ variant: SUCCESS, description: successMessage }));
     } catch {
-      setFormErrors({
-        form,
-        fields: ['oldPassword'],
-        message: 'settings.validation.invalidPassword',
-      });
+      dispatch(
+        showToast({
+          variant: ERROR,
+          description: errorMessage,
+        }),
+      );
     }
   };
 

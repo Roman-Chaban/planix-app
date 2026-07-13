@@ -1,5 +1,5 @@
 import { getBillingHistoryColumns } from '@/widgets/settings/subscription-billing';
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 import {
   Table,
   TableBody,

@@ -1,5 +1,5 @@
 import { BrandBanner } from '@/widgets/brand-banner';
-import type { WithChildren, WithClassName } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@types';
 import { Box, Grid, GridItem } from '@/shared/ui';
 
 import styles from './AuthLayout.module.scss';

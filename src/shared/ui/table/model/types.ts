@@ -1,7 +1,7 @@
 import type { Key, ReactNode } from 'react';
 
 import type { Axis } from '@/shared/lib/hooks/model/types';
-import type { SVGComponent, WithChildren, WithClassName, WithRef } from '@/shared/types/types';
+import type { SVGComponent, WithChildren, WithClassName, WithRef } from '@types';
 
 type BaseTableComponentProps = WithChildren & WithClassName;
 type BaseTableAppearanceProps = BaseTableComponentProps & TableStylesProps;

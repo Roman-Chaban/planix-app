@@ -1,5 +1,5 @@
 import type { Billing } from '@/entities/billing';
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 import { StatusBadge } from '@/shared/ui';
 import { CalendarIcon } from '@/shared/ui/icons';
 import type { TableColumn } from '@/shared/ui/table/model/types';

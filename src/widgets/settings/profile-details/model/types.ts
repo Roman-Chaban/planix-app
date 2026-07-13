@@ -1,5 +1,5 @@
 import type { Profile } from '@/entities/profile';
-import type { TranslateFn, WithChildren } from '@/shared/types/types';
+import type { TranslateFn, WithChildren } from '@types';
 
 type ProfileProps = { profile: Profile | null; t: TranslateFn };
 

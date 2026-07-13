@@ -1,4 +1,4 @@
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren } from '@types';
 import type { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 export type TooltipProps = WithChildren & {

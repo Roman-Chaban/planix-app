@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { PasswordForm } from '@/features/auth/password';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import type { NavigateFn } from '@/shared/types/types';
+import type { NavigateFn } from '@types';
 import { AuthButton } from '@/shared/ui';
 
 import { resetFormFields } from '../lib/form-config';

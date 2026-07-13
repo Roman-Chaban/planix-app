@@ -2,7 +2,7 @@
 
 import { Provider } from 'react-redux';
 
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren } from '@types';
 
 import { store } from './store';
 

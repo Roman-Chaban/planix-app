@@ -1,4 +1,4 @@
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 
 import { VARIANTS } from './analytics.constants';
 

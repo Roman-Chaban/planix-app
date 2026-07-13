@@ -1,5 +1,5 @@
 import type { Project } from '@/entities/project';
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 
 export type BaseDetailsProps = {
   project: Project;

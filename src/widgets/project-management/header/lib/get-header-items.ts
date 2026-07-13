@@ -1,6 +1,6 @@
 import type { HeaderItems } from '../model/types';
 
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 
 export const getHeaderItems = (t: TranslateFn): HeaderItems => [
   {

@@ -2,7 +2,7 @@ import type { ToastVariant } from '../lib/toast.constants';
 
 import type { ReactNode } from 'react';
 
-import type { SVGComponent, WithClassName } from '@/shared/types/types';
+import type { SVGComponent, WithClassName } from '@types';
 
 type ToastConfigRole = 'alert' | 'status';
 type ToastConfigAriaLive = 'assertive' | 'polite';

@@ -1,6 +1,6 @@
 import type { TableColumn } from '../model/types';
 
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 
 export const getTableColumns = (t: TranslateFn): TableColumn[] => {
   return [

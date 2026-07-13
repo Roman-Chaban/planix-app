@@ -1,6 +1,6 @@
 import type { DashboardCards } from '../model/types';
 
-import type { TranslateFn } from '@/shared/types/types';
+import type { TranslateFn } from '@types';
 
 export const getDashboardCards = (t: TranslateFn): DashboardCards =>
   [

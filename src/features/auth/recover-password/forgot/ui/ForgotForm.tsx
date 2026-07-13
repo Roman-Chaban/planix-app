@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import type { NavigateFn } from '@/shared/types/types';
+import type { NavigateFn } from '@types';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
 
 import { registerFormFields } from '../lib/form-config';

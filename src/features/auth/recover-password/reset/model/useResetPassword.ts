@@ -3,7 +3,7 @@ import type { SubmitHandler } from 'react-hook-form';
 import { AUTH_STEPS } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
-import type { NavigateFn } from '@/shared/types/types';
+import type { NavigateFn } from '@types';
 
 import { resetSchema, type ResetFormSchema } from './schema';
 

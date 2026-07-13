@@ -1,4 +1,4 @@
-import type { WithTranslationNamespace } from '@/shared/types/types';
+import type { WithTranslationNamespace } from '@types';
 
 export type ChangePasswordFormProps = WithTranslationNamespace & {
   buttonLabel: string;

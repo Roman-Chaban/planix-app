@@ -1,7 +1,7 @@
 import { DM_Sans } from 'next/font/google';
 
 import '@shared/styles/base/index.scss';
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren } from '@types';
 
 const dm_sans = DM_Sans({
   weight: ['400', '500', '600', '700', '800'],

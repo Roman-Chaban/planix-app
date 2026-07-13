@@ -1,3 +1,3 @@
-import type { WithSwitch } from '@/shared/types/types';
+import type { WithSwitch } from '@types';
 
 export type SettingSwitchItemProps = WithSwitch;

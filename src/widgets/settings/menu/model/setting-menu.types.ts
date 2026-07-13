@@ -3,7 +3,7 @@ import type { MenuTabType, SettingTabIdEnum } from './setting-menu.enums';
 import type { ComponentType } from 'react';
 
 import type { ModalId } from '@/entities/modal';
-import { type IsAuthenticated, type TranslateFn } from '@/shared/types/types';
+import { type IsAuthenticated, type TranslateFn } from '@types';
 
 type WithActiveMenu = {
   activeId: ProfileTabId;

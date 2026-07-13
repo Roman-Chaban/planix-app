@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes } from 'react';
 
-import type { WithClassName } from '@/shared/types/types';
+import type { WithClassName } from '@types';
 import type { ButtonPresetKey } from '@/shared/ui/button';
 
 export type AuthButtonProps = WithClassName &

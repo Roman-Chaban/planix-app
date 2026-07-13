@@ -1,5 +1,5 @@
 import { LoginForm, ForgotForm, RegisterForm, ResetForm, VerifyForm } from '@/features/auth';
-import type { NavigateFn, TranslateFn } from '@/shared/types/types';
+import type { NavigateFn, TranslateFn } from '@types';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 

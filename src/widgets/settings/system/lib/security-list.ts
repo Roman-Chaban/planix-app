@@ -1,4 +1,4 @@
-import type { SettingSwitchList } from '@/shared/types/types';
+import type { SettingSwitchList } from '@types';
 
 import { NotificationProject, NotificationSecurity } from '@/shared/ui/icons';
 

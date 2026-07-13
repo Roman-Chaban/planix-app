@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import type { WithChildren } from '@/shared/types/types';
+import type { WithChildren } from '@types';
 
 import { createQueryClient } from './lib/createQueryClient';
 

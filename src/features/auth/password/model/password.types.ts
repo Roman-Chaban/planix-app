@@ -1,6 +1,6 @@
 import type { FieldValues, SubmitHandler, UseFormReturn } from 'react-hook-form';
 
-import type { WithChildren, WithClassName } from '@/shared/types/types';
+import type { WithChildren, WithClassName } from '@types';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 export type PasswordFormProps<T extends FieldValues> = WithChildren &

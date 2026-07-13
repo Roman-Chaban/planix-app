@@ -1,4 +1,4 @@
-import type { WithSkeleton } from '@/shared/types/types';
+import type { WithSkeleton } from '@types';
 
 export type ProfessionalPlanProps = WithSkeleton & {
   planName?: string;

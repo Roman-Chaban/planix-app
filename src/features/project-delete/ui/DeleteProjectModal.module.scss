@@ -1,10 +1,20 @@
 @use '@/shared/styles' as *;
 
+.content {
+  min-width: 35.313rem;
+  min-height: 24.813rem;
+  border: {
+    top: 0.188rem solid $primary-700;
+    radius: 0.75rem;
+  }
+  box-shadow: $shadow-not-found;
+}
+
 .textarea {
   width: 100%;
   max-width: 100%;
   border: 0.094rem solid $neutral-300;
-  border-radius: 1rem;
+  border-radius: $radius-lg;
   min-height: 8rem;
   padding: 1rem 1.125rem;
   caret-color: $neutral-600;
@@ -22,24 +32,14 @@
 }
 
 .reasonLabel {
-  line-height: 150%;
+  line-height: $line-height-base;
   font-size: $body-sm-font-size;
   color: $neutral-700;
 }
 
-.actions {
-  @include flex-center;
-  gap: 1.25rem;
-
-  @include respond(sm) {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
 .cancel,
 .save {
-  border-radius: 1.875rem;
+  border-radius: $radius-2xl;
   max-width: 8.813rem;
   min-height: 3.375rem;
   font-weight: $font-weight-semibold;

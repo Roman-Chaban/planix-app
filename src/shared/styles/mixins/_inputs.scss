@@ -8,7 +8,7 @@
   $transform: translateY(-50%),
   $display: flex,
   $align-items: center,
-  $color: $neutral-600,
+  $color: $icon-secondary,
   $cursor: pointer
 ) {
   position: absolute;
@@ -55,5 +55,15 @@
   &:has(input:disabled) {
     border: 0.125rem solid $border;
     background: $bg;
+  }
+}
+
+@mixin autofill-background-disabled {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 9999s ease-in-out 0s;
+    -webkit-text-fill-color: $text-secondary;
   }
 }

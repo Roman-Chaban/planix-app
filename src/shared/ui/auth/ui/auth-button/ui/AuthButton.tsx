@@ -1,42 +1,22 @@
-import type { FC } from 'react';
-
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { Button, Loader } from '@/shared/ui';
 
 import type { AuthButtonProps } from '@/shared/ui/auth/ui/auth-button';
-import {
-  BUTTON_SHAPES,
-  BUTTON_SIZES,
-  BUTTON_TYPES,
-  BUTTON_VARIANTS,
-} from '@/shared/ui/button/model/constants';
+import { BUTTON_SIZES } from '@/shared/ui/button/lib/button.constants';
 import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
 
-const { SUBMIT } = BUTTON_TYPES;
-const { DEFAULT } = BUTTON_VARIANTS;
 const { MOBILE_LARGE } = BREAKPOINTS;
 const { SMALL, MEDIUM } = BUTTON_SIZES;
-const { ROUNDED } = BUTTON_SHAPES;
 
-export const AuthButton: FC<AuthButtonProps> = ({
-  label,
-  disabled,
-  maxWidth,
-  isLoading,
-}) => {
+export const AuthButton = ({ label, disabled, isLoading, preset, className }: AuthButtonProps) => {
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
+
   const buttonSizes = isMobileLargeScreen ? SMALL : MEDIUM;
+
   const isButtonDisabled = disabled || isLoading;
 
   return (
-    <Button
-      type={SUBMIT}
-      variant={DEFAULT}
-      size={buttonSizes}
-      shape={ROUNDED}
-      disabled={isButtonDisabled}
-      maxWidth={maxWidth}
-    >
+    <Button className={className} preset={preset} size={buttonSizes} disabled={isButtonDisabled}>
       {isLoading ? <Loader /> : label}
     </Button>
   );

@@ -8,3 +8,4 @@ export { useLocalizedRouter } from './useLocalizedRouter';
 export { usePasswordToggle } from './usePasswordToggle';
 export { useAppForm } from './useAppForm';
 export { useLocalStorage } from './useLocalStorage';
+export { useAuth } from './useAuth';

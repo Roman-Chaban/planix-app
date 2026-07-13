@@ -14,14 +14,10 @@
 .wrapper {
   width: 100%;
   @include flex(flex, row, start, center);
-  padding: 1.125rem 1rem;
+  padding: 1rem 1.875rem;
 
   @include respond(lg) {
     gap: 2rem;
-  }
-
-  @include respond(md) {
-    padding-inline: 1rem;
   }
 }
 
@@ -37,7 +33,7 @@
 
 .logoTitle {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -48,11 +44,6 @@
   @include container(header-rightSide);
   width: 100%;
   @include flex(flex, row, space-between, center, 0, nowrap);
-  padding-inline: 0.875rem;
-
-  @include respond(md) {
-    padding-inline: 0;
-  }
 }
 
 .title {
@@ -60,22 +51,15 @@
   font: {
     weight: $font-weight-bold;
   }
-  line-height: 150%;
+  line-height: $line-height-base;
 }
 
 .button {
+  @include flex-center;
   position: relative;
 
   &::after {
-    @include button-background-overlay(
-      '',
-      absolute,
-      0,
-      $primary-700,
-      0.05,
-      inherit,
-      none
-    );
+    @include button-background-overlay('', absolute, 0, $primary-700, 0.05, inherit, none);
   }
 }
 
@@ -83,10 +67,18 @@
   width: 0.75rem;
   height: 0.75rem;
   position: absolute;
-  top: 2px;
-  right: 1.5px;
+  top: 0.225rem;
+  right: 0.5rem;
+}
 
-  transform: translate(25%, -40%);
+.avatar {
+  @include flex-center;
+  color: $primary-400;
+  width: $space-9;
+  height: $space-9;
+  flex-shrink: 0;
+  background: $neutral-100;
+  border-radius: $radius-full;
 }
 
 .headerAuth {
@@ -100,6 +92,7 @@
 
 .link {
   color: $neutral-0;
+  font-weight: $font-weight-semibold;
 
   &:visited {
     color: inherit;

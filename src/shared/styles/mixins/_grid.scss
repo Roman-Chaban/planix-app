@@ -19,3 +19,8 @@
   }
   gap: $gap;
 }
+
+@mixin grid-fields($columns, $areas) {
+  width: 100%;
+  @include grid($columns: repeat($columns, 1fr), $rows: auto, $areas: $areas, $gap: 1.625rem);
+}

@@ -1,17 +1,14 @@
-import type { FC } from 'react';
+import type { LoginActionsProps } from '../model/types';
+
 import { Controller } from 'react-hook-form';
 
-import type { LoginActionsProps } from '@/features/auth/login';
 import { AuthButton, Box, Checkbox } from '@/shared/ui';
 
-import { Button, BUTTON_MAX_WIDTH, BUTTON_VARIANTS } from '@/shared/ui/button';
+import { Button } from '@/shared/ui/button';
 
 import styles from './LoginForm.module.scss';
 
-const { SM, LG } = BUTTON_MAX_WIDTH;
-const { TRANSPARENT } = BUTTON_VARIANTS;
-
-export const LoginActions: FC<LoginActionsProps> = ({
+export const LoginActions = ({
   control,
   rememberMeLabel,
   forgotPasswordLabel,
@@ -19,7 +16,7 @@ export const LoginActions: FC<LoginActionsProps> = ({
   isValid,
   isLoading,
   onForgotPassword,
-}) => {
+}: LoginActionsProps) => {
   return (
     <Box className={styles.loginFormMainWrapper}>
       <Box className={styles.loginFormMain}>
@@ -27,28 +24,19 @@ export const LoginActions: FC<LoginActionsProps> = ({
           name="rememberMe"
           control={control}
           render={({ field }) => (
-            <Checkbox
-              checked={field.value}
-              onChange={field.onChange}
-              label={rememberMeLabel}
-            />
+            <Checkbox checked={field.value} onChange={field.onChange} label={rememberMeLabel} />
           )}
         />
 
-        <Button
-          variant={TRANSPARENT}
-          maxWidth={LG}
-          className={styles.loginButton}
-          onClick={onForgotPassword}
-        >
+        <Button preset="AUTH_FORGOT" className={styles.loginButton} onClick={onForgotPassword}>
           {forgotPasswordLabel}
         </Button>
       </Box>
 
       <AuthButton
+        preset="AUTH_LOGIN"
         label={submitLabel}
         disabled={isValid}
-        maxWidth={SM}
         isLoading={isLoading}
       />
     </Box>

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 
 import { AppProviders } from '@/app/providers/index';
-import { LOCALES } from '@/shared/lib/i18n/locales';
+import { LOCALES } from '@/shared/i18n/locales/locales';
 import { isLocale } from '@/shared/lib/routing/isLocale';
 
 export function generateStaticParams() {

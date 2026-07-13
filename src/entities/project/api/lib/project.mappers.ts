@@ -1,9 +1,7 @@
 import type { ProjectDetailsSchema } from '@/features/project-add';
 import type { UpdateProjectPayload, Project } from '@/entities/project';
 
-export const mapCreateProject = (
-  formData: ProjectDetailsSchema,
-): Partial<Project> => {
+export const mapCreateProject = (formData: ProjectDetailsSchema): Partial<Project> => {
   return {
     project_name: formData.projectName,
     client_id: String(Date.now()),

@@ -1,9 +1,12 @@
+import type { WithClassName } from '@types';
+
 import type { ButtonHTMLAttributes } from 'react';
 
-import type { MaxWidth } from '@/shared/ui/button';
+import type { ButtonPresetKey } from '@/shared/ui/button';
 
-export type AuthButtonProps = {
-  label: string;
-  maxWidth: MaxWidth;
-  isLoading?: boolean;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+export type AuthButtonProps = WithClassName &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    label: string;
+    isLoading?: boolean;
+    preset: ButtonPresetKey;
+  };

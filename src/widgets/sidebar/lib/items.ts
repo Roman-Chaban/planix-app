@@ -1,3 +1,5 @@
+import type { TFunction } from 'i18next';
+
 import { ROUTES } from '@/app/routes';
 import type { NavItemData } from '@/widgets/sidebar/model/types';
 import {
@@ -10,50 +12,49 @@ import {
   SettingsIcon,
 } from '@/shared/ui/icons';
 
-const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } =
-  ROUTES;
+const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } = ROUTES;
 
-export const navItems: NavItemData[] = [
+export const getNavItems = (t: TFunction): NavItemData[] => [
   {
     id: 'dashboard',
     icon: DashboardIcon,
-    label: 'dashboard',
+    label: t('dashboard'),
     href: DASHBOARD,
   },
   {
     id: 'projects',
     icon: ProjectIcon,
-    label: 'projects',
+    label: t('projects'),
     href: PROJECT,
   },
   {
     id: 'clients',
     icon: ClientIcon,
-    label: 'clients',
+    label: t('clients'),
     href: CLIENTS,
   },
   {
     id: 'leads',
     icon: LeadIcon,
-    label: 'leads',
+    label: t('leads'),
     href: LEADS,
   },
   {
     id: 'inbox',
     icon: InboxIcon,
-    label: 'inbox',
+    label: t('inbox'),
     href: INBOX,
   },
   {
     id: 'analytics',
     icon: AnalyticsIcon,
-    label: 'analytics',
+    label: t('analytics'),
     href: ANALYTICS,
   },
   {
     id: 'settings',
     icon: SettingsIcon,
-    label: 'settings',
+    label: t('settings'),
     href: SETTINGS,
   },
-] as const;
+];

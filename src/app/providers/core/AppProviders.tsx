@@ -1,21 +1,24 @@
-import type { FC, ReactNode } from 'react';
+import type { AppProvidersProps } from './types';
 
-import { I18nProvider } from '@/app/providers/i18n';
-import { QueryProvider } from '@/app/providers/query';
-import { SidebarProvider } from '@/features/sidebar';
-import type { Locale } from '@/shared/lib/i18n/locales';
+import { AppToast } from '@/entities/toast';
 
-type AppProvidersProps = {
-  children: ReactNode;
-  locale: Locale;
-};
+import { AuthProvider } from '../auth';
+import { I18nProvider } from '../i18n';
+import { QueryProvider } from '../query';
+import { SidebarProvider } from '../sidebar';
+import { StoreProvider } from '../store';
 
-export const AppProviders: FC<AppProvidersProps> = ({ children, locale }) => {
+export const AppProviders = ({ children, locale }: AppProvidersProps) => {
   return (
     <QueryProvider>
-      <SidebarProvider>
-        <I18nProvider locale={locale}>{children}</I18nProvider>
-      </SidebarProvider>
+      <StoreProvider>
+        <AppToast />
+        <AuthProvider>
+          <SidebarProvider>
+            <I18nProvider locale={locale}>{children}</I18nProvider>
+          </SidebarProvider>
+        </AuthProvider>
+      </StoreProvider>
     </QueryProvider>
   );
 };

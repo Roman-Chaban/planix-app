@@ -1,5 +1,5 @@
-import { ProjectLayout } from '@/widgets/project-layout/ui/ProjectLayout';
+import { Layout } from '@/widgets/project-management/ui/layout';
 
 export default function ProjectManagementPage() {
-  return <ProjectLayout />;
+  return <Layout />;
 }

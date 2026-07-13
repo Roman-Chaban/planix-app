@@ -1,18 +1,19 @@
-import type { TFunction } from 'i18next';
+import type { TranslateFn } from '@types';
 import type { SubmitHandler } from 'react-hook-form';
 
 import { ROUTES } from '@/app/routes';
-import { loginSchema, type LoginFormSchema } from '@/features/auth/login';
 import { supabase } from '@/shared/api/supabase';
 import { setFormErrors } from '@/shared/lib';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
+import { loginSchema, type LoginFormSchema } from './schema';
+
 const { DASHBOARD } = ROUTES;
 
-export const useLogin = (t: TFunction) => {
+export const useLogin = (t: TranslateFn) => {
   const localizedRouter = useLocalizedRouter();
 
-  const form = useAppForm<LoginFormSchema>({
+  const loginForm = useAppForm<LoginFormSchema>({
     schema: loginSchema,
     defaultValues: {
       email: '',
@@ -24,7 +25,7 @@ export const useLogin = (t: TFunction) => {
   const {
     control,
     formState: { isValid, isSubmitting },
-  } = form;
+  } = loginForm;
 
   const handleLogin = async (data: LoginFormSchema) => {
     const { email, password } = data;
@@ -39,12 +40,12 @@ export const useLogin = (t: TFunction) => {
     localizedRouter.push(DASHBOARD);
   };
 
-  const onSubmit: SubmitHandler<LoginFormSchema> = async (data) => {
+  const handleSubmit: SubmitHandler<LoginFormSchema> = async (data) => {
     try {
       await handleLogin(data);
     } catch {
       setFormErrors<LoginFormSchema>({
-        form,
+        form: loginForm,
         fields: ['email', 'password'],
         message: t('login.validation.invalidCredentials'),
       });
@@ -55,7 +56,7 @@ export const useLogin = (t: TFunction) => {
     isValid,
     isSubmitting,
     control,
-    form,
-    onSubmit,
+    loginForm,
+    handleSubmit,
   };
 };

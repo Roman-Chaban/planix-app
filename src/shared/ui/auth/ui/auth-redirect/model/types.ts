@@ -1,3 +1,5 @@
+import type { NavigateFn } from '@types';
+
 import type { ReactNode } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
@@ -7,5 +9,5 @@ export type AuthRedirectProps = {
   label: string;
   icon?: ReactNode;
   step: AuthStep;
-  onNavigate: (step: AuthStep) => void;
+  onNavigate: NavigateFn;
 };

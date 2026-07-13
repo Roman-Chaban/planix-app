@@ -1,0 +1,17 @@
+import { UploadIcon } from '@/shared/ui/icons';
+
+import { FILE_CONFIGURATIONS } from './files.constants';
+
+export const getFileIcon = (fileName: string) => {
+  if (!fileName) {
+    return { icon: UploadIcon, type: 'default', ext: '' };
+  }
+
+  const ext = fileName.split('.').pop()?.toLowerCase() || '';
+
+  const config = FILE_CONFIGURATIONS[ext] || {
+    icon: UploadIcon,
+    type: 'default',
+  };
+  return { ...config, ext };
+};

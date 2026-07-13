@@ -1,8 +1,6 @@
-import type { FC } from 'react';
-
 import type { IconProps } from '@/shared/ui/icons';
 
-export const UserIcon: FC<IconProps> = ({ width, height }) => {
+export const UserIcon = ({ width, height }: IconProps) => {
   return (
     <svg
       width={width}
@@ -23,7 +21,7 @@ export const UserIcon: FC<IconProps> = ({ width, height }) => {
   );
 };
 
-export const MessageIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const MessageIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -44,7 +42,7 @@ export const MessageIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const PlanixLogoIcon: FC<IconProps> = ({ width = 78, height = 88 }) => {
+export const PlanixLogoIcon = ({ width = 78, height = 88 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -92,15 +90,8 @@ export const PlanixLogoIcon: FC<IconProps> = ({ width = 78, height = 88 }) => {
           <feOffset dy="9" />
           <feGaussianBlur stdDeviation="9" />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_12137_21218"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_12137_21218" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -113,7 +104,7 @@ export const PlanixLogoIcon: FC<IconProps> = ({ width = 78, height = 88 }) => {
   );
 };
 
-export const LockIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const LockIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -147,7 +138,7 @@ export const LockIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const ViewOffIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const ViewOffIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -202,7 +193,7 @@ export const ViewOffIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const ViewIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const ViewIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -229,11 +220,7 @@ export const ViewIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const SearchIcon: FC<IconProps> = ({
-  width = 20,
-  height = 20,
-  stroke = 'currentColor',
-}) => {
+export const SearchIcon = ({ width = 20, height = 20, stroke = 'currentColor' }: IconProps) => {
   return (
     <svg
       width={width}
@@ -260,10 +247,7 @@ export const SearchIcon: FC<IconProps> = ({
   );
 };
 
-export const SearchIconPrimary: FC<IconProps> = ({
-  width = 20,
-  height = 20,
-}) => {
+export const SearchIconPrimary = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -290,11 +274,7 @@ export const SearchIconPrimary: FC<IconProps> = ({
   );
 };
 
-export const CheckIcon: FC<IconProps> = ({
-  width = 16,
-  height = 16,
-  className,
-}) => {
+export const CheckIcon = ({ width = 16, height = 16, className }: IconProps) => {
   return (
     <svg
       className={className}
@@ -315,7 +295,7 @@ export const CheckIcon: FC<IconProps> = ({
   );
 };
 
-export const DashboardIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const DashboardIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -336,7 +316,7 @@ export const DashboardIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const ProjectIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const ProjectIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -384,7 +364,7 @@ export const ProjectIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const ClientIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const ClientIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -405,7 +385,7 @@ export const ClientIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const LeadIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const LeadIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -434,7 +414,7 @@ export const LeadIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const InboxIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const InboxIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -463,7 +443,7 @@ export const InboxIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const AnalyticsIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const AnalyticsIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -490,7 +470,7 @@ export const AnalyticsIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const SettingsIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const SettingsIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -511,10 +491,7 @@ export const SettingsIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const NotificationIcon: FC<IconProps> = ({
-  width = 24,
-  height = 24,
-}) => {
+export const NotificationIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -542,10 +519,7 @@ export const NotificationIcon: FC<IconProps> = ({
   );
 };
 
-export const NotificationErrorIcon: FC<IconProps> = ({
-  width = 12,
-  height = 12,
-}) => {
+export const NotificationErrorIcon = ({ width = 12, height = 12 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -562,12 +536,7 @@ export const NotificationErrorIcon: FC<IconProps> = ({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M6 9.11108H6.00898H6Z"
-        fill="#D92D20"
-      />
+      <path fillRule="evenodd" clipRule="evenodd" d="M6 9.11108H6.00898H6Z" fill="#D92D20" />
       <path
         d="M6 9.11108H6.00898"
         stroke="white"
@@ -579,10 +548,7 @@ export const NotificationErrorIcon: FC<IconProps> = ({
   );
 };
 
-export const UnitedStatesIcon: FC<IconProps> = ({
-  width = 20,
-  height = 20,
-}) => {
+export const UnitedStatesIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -612,7 +578,7 @@ export const UnitedStatesIcon: FC<IconProps> = ({
   );
 };
 
-export const UkraineIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const UkraineIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -634,10 +600,7 @@ export const UkraineIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
   );
 };
 
-export const NotFoundBanner: FC<IconProps> = ({
-  width = 490,
-  height = 457,
-}) => {
+export const NotFoundBanner = ({ width = 490, height = 457 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -718,10 +681,7 @@ export const NotFoundBanner: FC<IconProps> = ({
   );
 };
 
-export const NotFoundTextDecartionIcon: FC<IconProps> = ({
-  width = 392,
-  height = 255,
-}) => {
+export const NotFoundTextDecartionIcon = ({ width = 392, height = 255 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -814,7 +774,7 @@ export const NotFoundTextDecartionIcon: FC<IconProps> = ({
   );
 };
 
-export const NoProjectsIcon: FC<IconProps> = ({ width = 77, height = 77 }) => {
+export const NoProjectsIcon = ({ width = 77, height = 77 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -855,7 +815,7 @@ export const NoProjectsIcon: FC<IconProps> = ({ width = 77, height = 77 }) => {
   );
 };
 
-export const CalendarIcon: FC<IconProps> = ({ width = 18, height = 18 }) => {
+export const CalendarIcon = ({ width = 18, height = 18 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -940,13 +900,7 @@ export const CalendarIcon: FC<IconProps> = ({ width = 18, height = 18 }) => {
 
 export const PendingIcon = () => {
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_14304_10194)">
         <path
           d="M6.97998 0.916992C10.3395 0.916992 13.0629 3.6404 13.0629 6.99993C13.0629 10.3594 10.3395 13.0829 6.97998 13.0829"
@@ -1048,13 +1002,7 @@ export const PendingIcon = () => {
 
 export const InProgressIcon = () => {
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M6.99995 2.98796C6.72626 2.98796 6.50439 2.76612 6.50439 2.49241V0.495551C6.50439 0.22184 6.72626 0 6.99995 0C7.27363 0 7.4955 0.22184 7.4955 0.495551V2.49244C7.4955 2.76612 7.27363 2.98796 6.99995 2.98796Z"
         fill="currentColor"
@@ -1135,13 +1083,7 @@ export const InProgressIcon = () => {
 
 export const CanceledIcon = () => {
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M7.98672 14.8841C7.08115 14.8858 6.18422 14.7085 5.3474 14.3624C4.51059 14.0164 3.75044 13.5083 3.11058 12.8676C0.421474 10.1785 0.421474 5.80328 3.11058 3.11419C3.74947 2.4717 4.50947 1.96231 5.34656 1.61551C6.18362 1.26871 7.08119 1.09137 7.98728 1.09377C9.82947 1.09377 11.5613 1.81101 12.8634 3.11419C14.166 4.41681 14.8838 6.14866 14.8838 7.99087C14.8838 9.83309 14.1666 11.5649 12.8634 12.8676C12.2234 13.5083 11.4632 14.0164 10.6263 14.3624C9.78937 14.7085 8.89234 14.8858 7.98672 14.8841ZM7.98728 2.19722C7.22612 2.19506 6.47212 2.34395 5.76894 2.63526C5.06575 2.92658 4.42734 3.35453 3.89072 3.89431C2.79665 4.98841 2.19416 6.44328 2.19416 7.99087C2.19416 9.53847 2.79665 10.9928 3.89072 12.0874C6.14947 14.3462 9.82506 14.3468 12.0833 12.0874C13.1773 10.9934 13.7804 9.53847 13.7804 7.99087C13.7804 6.44328 13.1779 4.98894 12.0833 3.89431C11.5466 3.35469 10.9083 2.92685 10.2052 2.63554C9.50215 2.34424 8.74831 2.19526 7.98728 2.19722Z"
         fill="currentColor"
@@ -1160,13 +1102,7 @@ export const CanceledIcon = () => {
 
 export const CompletedIcon = () => {
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M9.70832 5.16565L6.0395 8.83447L4.29297 7.08797"
         stroke="currentColor"
@@ -1207,13 +1143,7 @@ export const CompletedIcon = () => {
 
 export const EditIcon = () => {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M11.7168 2.75098C12.3355 2.73364 13.0212 3.01918 13.7773 3.7334C14.5336 4.44783 14.8584 5.11663 14.876 5.73535C14.8934 6.3542 14.6072 7.04043 13.8926 7.79688L7.73535 14.3145L7.7334 14.3164C7.49319 14.5738 7.00759 14.8346 6.66016 14.8916L6.65723 14.8926L4.26367 15.3008C4.11144 15.3107 4.0642 15.3203 3.96582 15.3203C3.62089 15.3203 3.32183 15.2015 3.11816 15.0078L3.11621 15.0068L3.02441 14.9072C2.82221 14.6612 2.71515 14.3106 2.76074 13.9043L3.03809 11.4746C3.05679 11.312 3.11985 11.0979 3.21973 10.8828C3.31994 10.6671 3.44044 10.485 3.55078 10.3721L3.55664 10.3662L9.71484 3.84863C10.4293 3.09239 11.098 2.76845 11.7168 2.75098ZM11.7588 2.86328C10.9613 2.86328 10.3315 3.3621 9.80469 3.91992L3.64746 10.4443C3.51849 10.5803 3.41141 10.7691 3.33691 10.9287C3.28021 11.0502 3.22496 11.193 3.19043 11.332L3.16309 11.4697L3.16211 11.4814L2.88379 13.9111C2.84193 14.2632 2.92033 14.6421 3.20312 14.9092C3.48882 15.1787 3.86875 15.2259 4.20605 15.1748L4.21484 15.1729L6.62988 14.7607H6.63086C6.81592 14.7288 7.0151 14.6429 7.17188 14.5586C7.32898 14.4741 7.5087 14.3561 7.63574 14.2227L7.63672 14.2217L13.7949 7.7041L13.7959 7.70312C14.2758 7.19222 14.701 6.60431 14.7432 5.90723C14.7869 5.18267 14.4115 4.50006 13.6826 3.81543C13.0388 3.19722 12.405 2.86337 11.7588 2.86328Z"
         fill="currentColor"
@@ -1230,13 +1160,7 @@ export const EditIcon = () => {
 
 export const DeleteIcon = () => {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M15.7502 5.0476C15.7352 5.0476 15.7127 5.0476 15.6902 5.0476C11.7227 4.6501 7.76274 4.5001 3.84024 4.8976L2.31024 5.0476C1.99524 5.0776 1.71774 4.8526 1.68774 4.5376C1.65774 4.2226 1.88274 3.9526 2.19024 3.9226L3.72024 3.7726C7.71024 3.3676 11.7527 3.5251 15.8027 3.9226C16.1102 3.9526 16.3352 4.2301 16.3052 4.5376C16.2827 4.8301 16.0352 5.0476 15.7502 5.0476Z"
         fill="currentColor"
@@ -1261,7 +1185,7 @@ export const DeleteIcon = () => {
   );
 };
 
-export const CloseIcon: FC<IconProps> = ({ width = 26, height = 26 }) => {
+export const CloseIcon = ({ width = 26, height = 26 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1297,13 +1221,7 @@ export const CloseIcon: FC<IconProps> = ({ width = 26, height = 26 }) => {
 
 export const ProjectNameIcon = () => {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.3083 7.3999H14.6833"
         stroke="currentColor"
@@ -1345,13 +1263,7 @@ export const ProjectNameIcon = () => {
 
 export const PriceIcon = () => {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M14.1667 17.0832H5.83332C3.33332 17.0832 1.66666 15.8332 1.66666 12.9165V7.08317C1.66666 4.1665 3.33332 2.9165 5.83332 2.9165H14.1667C16.6667 2.9165 18.3333 4.1665 18.3333 7.08317V12.9165C18.3333 15.8332 16.6667 17.0832 14.1667 17.0832Z"
         stroke="currentColor"
@@ -1390,13 +1302,7 @@ export const PriceIcon = () => {
 
 export const PlatformIcon = () => {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M5.36669 1.6665H14.625C17.5917 1.6665 18.3334 2.40817 18.3334 5.3665V10.6415C18.3334 13.6082 17.5917 14.3415 14.6334 14.3415H5.36669C2.40835 14.3498 1.66669 13.6082 1.66669 10.6498V5.3665C1.66669 2.40817 2.40835 1.6665 5.36669 1.6665Z"
         stroke="currentColor"
@@ -1429,7 +1335,7 @@ export const PlatformIcon = () => {
   );
 };
 
-export const UploadIcon: FC<IconProps> = ({ width = 18, height = 18 }) => {
+export const UploadIcon = ({ width = 18, height = 18 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1457,7 +1363,7 @@ export const UploadIcon: FC<IconProps> = ({ width = 18, height = 18 }) => {
   );
 };
 
-export const PdfIcon: FC<IconProps> = ({ width = 18, height = 24 }) => {
+export const PdfIcon = ({ width = 18, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1487,7 +1393,7 @@ export const PdfIcon: FC<IconProps> = ({ width = 18, height = 24 }) => {
   );
 };
 
-export const CollapsedIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const CollapsedIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1504,7 +1410,7 @@ export const CollapsedIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
   );
 };
 
-export const ExpandedIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
+export const ExpandedIcon = ({ width = 24, height = 24 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1523,13 +1429,7 @@ export const ExpandedIcon: FC<IconProps> = ({ width = 24, height = 24 }) => {
 
 export const ContactIcon = () => {
   return (
-    <svg
-      width="19"
-      height="19"
-      viewBox="0 0 19 19"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M17.3917 14.3583C17.3917 14.6583 17.325 14.9667 17.1833 15.2667C17.0417 15.5667 16.8583 15.85 16.6167 16.1167C16.2083 16.5667 15.7583 16.8917 15.25 17.1C14.75 17.3083 14.2083 17.4167 13.625 17.4167C12.775 17.4167 11.8667 17.2167 10.9083 16.8083C9.95 16.4 8.99167 15.85 8.04167 15.1583C7.08333 14.4583 6.175 13.6833 5.30833 12.825C4.45 11.9583 3.675 11.05 2.98333 10.1C2.3 9.15 1.75 8.2 1.35 7.25833C0.95 6.30833 0.75 5.4 0.75 4.53333C0.75 3.96667 0.85 3.425 1.05 2.925C1.25 2.41667 1.56667 1.95 2.00833 1.53333C2.54167 1.00833 3.125 0.75 3.74167 0.75C3.975 0.75 4.20833 0.8 4.41667 0.9C4.63333 1 4.825 1.15 4.975 1.36667L6.90833 4.09167C7.05833 4.3 7.16667 4.49167 7.24167 4.675C7.31667 4.85 7.35833 5.025 7.35833 5.18333C7.35833 5.38333 7.3 5.58333 7.18333 5.775C7.075 5.96667 6.91667 6.16667 6.71667 6.36667L6.08333 7.025C5.99167 7.11667 5.95 7.225 5.95 7.35833C5.95 7.425 5.95833 7.48333 5.975 7.55C6 7.61667 6.025 7.66667 6.04167 7.71667C6.19167 7.99167 6.45 8.35 6.81667 8.78333C7.19167 9.21667 7.59167 9.65833 8.025 10.1C8.475 10.5417 8.90833 10.95 9.35 11.325C9.78333 11.6917 10.1417 11.9417 10.425 12.0917C10.4667 12.1083 10.5167 12.1333 10.575 12.1583C10.6417 12.1833 10.7083 12.1917 10.7833 12.1917C10.925 12.1917 11.0333 12.1417 11.125 12.05L11.7583 11.425C11.9667 11.2167 12.1667 11.0583 12.3583 10.9583C12.55 10.8417 12.7417 10.7833 12.95 10.7833C13.1083 10.7833 13.275 10.8167 13.4583 10.8917C13.6417 10.9667 13.8333 11.075 14.0417 11.2167L16.8 13.175C17.0167 13.325 17.1667 13.5 17.2583 13.7083C17.3417 13.9167 17.3917 14.125 17.3917 14.3583Z"
         stroke="currentColor"
@@ -1540,7 +1440,7 @@ export const ContactIcon = () => {
   );
 };
 
-export const BackIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
+export const BackIcon = ({ width = 20, height = 20 }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1564,6 +1464,462 @@ export const BackIcon: FC<IconProps> = ({ width = 20, height = 20 }) => {
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const NotificationEmail = () => {
+  return (
+    <svg
+      id="e5cb9f87-7b25-4ce4-8df5-8cd66afecc6d"
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 18 18"
+    >
+      <defs>
+        <linearGradient
+          id="bd9b1662-9bee-4ea8-9cee-787e4ccd4f18"
+          x1="9"
+          y1="0.81"
+          x2="9"
+          y2="21.28"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#ffd70f" />
+          <stop offset="0.34" stopColor="#eeb309" />
+          <stop offset="0.77" stopColor="#dc8c03" />
+          <stop offset="1" stopColor="#d57d01" />
+        </linearGradient>
+      </defs>
+      <g>
+        <g>
+          <path
+            d="M17.5,2.5V13.33a.58.58,0,0,1-.59.58H12.39a.14.14,0,0,0-.14.14V15.8a.28.28,0,0,1-.45.22L9.08,13.94l-.09,0H1.09a.58.58,0,0,1-.59-.58V2.5a.58.58,0,0,1,.59-.58H16.91A.58.58,0,0,1,17.5,2.5Z"
+            fill="url(#bd9b1662-9bee-4ea8-9cee-787e4ccd4f18)"
+          />
+          <path
+            d="M2.05,9l3,2.52a.29.29,0,0,0,.47-.22v-1.1H17.48V8.5H2.23A.29.29,0,0,0,2.05,9Z"
+            fill="#ffe452"
+          />
+          <path
+            d="M16.24,6.46,13.13,3.94a.29.29,0,0,0-.47.22v1.1H.5V7H16.06A.29.29,0,0,0,16.24,6.46Z"
+            fill="#fff"
+          />
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+export const NotificationProject = () => {
+  return (
+    <svg
+      id="abd0f203-bb3f-40b1-aa70-d3c4523b69e9"
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 18 18"
+    >
+      <defs>
+        <linearGradient
+          id="bf34fd15-2ab2-49bf-80d2-731c19b20dc3"
+          x1="9"
+          y1="1.36"
+          x2="9"
+          y2="17.87"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.18" stopColor="#5ea0ef" />
+          <stop offset="1" stopColor="#0078d4" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M16.36,8.4c0,4.84-5.85,8.74-7.12,9.53a.46.46,0,0,1-.48,0c-1.27-.79-7.12-4.69-7.12-9.53V2.58a.46.46,0,0,1,.45-.46C6.64,2,5.59,0,9,0s2.36,2,6.91,2.12a.46.46,0,0,1,.45.46Z"
+        fill="#0078d4"
+      />
+      <path
+        d="M15.75,8.45c0,4.44-5.36,8-6.53,8.74a.43.43,0,0,1-.44,0c-1.17-.72-6.53-4.3-6.53-8.74V3.11a.42.42,0,0,1,.41-.42C6.83,2.58,5.87.75,9,.75s2.17,1.83,6.34,1.94a.42.42,0,0,1,.41.42Z"
+        fill="url(#bf34fd15-2ab2-49bf-80d2-731c19b20dc3)"
+      />
+      <path
+        d="M11.8,12.52a.48.48,0,0,1-.48.48H6.68a.48.48,0,0,1-.48-.48V3.94a.48.48,0,0,1,.48-.49h4.64a.48.48,0,0,1,.48.49Z"
+        fill="#e6e6e6"
+      />
+      <path
+        d="M7,5a.6.6,0,0,1,.6-.6h2.8A.6.6,0,0,1,11,5h0a.6.6,0,0,1-.6.61H7.6A.6.6,0,0,1,7,5Z"
+        fill="#003067"
+      />
+      <circle cx="7.63" cy="4.99" r="0.41" fill="#50e6ff" />
+      <path
+        d="M7,6.9a.61.61,0,0,1,.6-.61h2.8a.61.61,0,0,1,.6.61h0a.6.6,0,0,1-.6.61H7.6A.6.6,0,0,1,7,6.9Z"
+        fill="#003067"
+      />
+      <circle cx="7.63" cy="6.9" r="0.41" fill="#50e6ff" />
+    </svg>
+  );
+};
+
+export const NotificationMessage = () => {
+  return (
+    <svg
+      fill="#1A73E8"
+      role="img"
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zM4.911 7.089h11.456a2.197 2.197 0 0 1 2.165 2.19v5.863a2.213 2.213 0 0 1-2.177 2.178H8.04c-1.174 0-2.04-.99-2.04-2.178v-4.639L4.503 7.905c-.31-.42-.05-.816.408-.816zm3.415 2.19c-.347 0-.68.21-.68.544 0 .334.333.544.68.544h7.905c.346 0 .68-.21.68-.544 0-.334-.334-.545-.68-.545zm0 2.177c-.347 0-.68.21-.68.544 0 .334.333.544.68.544h7.905c.346 0 .68-.21.68-.544 0-.334-.334-.544-.68-.544zm-.013 2.19c-.346 0-.68.21-.68.544 0 .334.334.544.68.544h5.728c.347 0 .68-.21.68-.544 0-.334-.333-.545-.68-.545z" />
+    </svg>
+  );
+};
+
+export const NotificationTask = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      fill="none"
+      viewBox="0 0 190 190"
+    >
+      <g clipPath="url(#a)">
+        <rect width="152" height="130" x="20" y="52" fill="#bbe2ff" rx="65" />
+        <rect width="172" height="152" x="10" y="14" fill="#3186ff" rx="74" />
+        <mask id="d" width="172" height="152" x="10" y="14" maskUnits="userSpaceOnUse">
+          <rect width="172" height="152" x="10" y="14" fill="#3c90ff" rx="74" />
+        </mask>
+        <g filter="url(#b)" mask="url(#d)">
+          <rect width="152" height="130" x="20" y="52" fill="url(#e)" rx="65" />
+        </g>
+        <g clipPath="url(#f)">
+          <path
+            stroke="#fff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="12"
+            d="m61 90 22.172 22.172a4 4 0 0 0 5.656 0L138 63"
+          />
+        </g>
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h192v192H0z" />
+        </clipPath>
+        <clipPath id="f">
+          <path fill="#fff" d="M44 38h104v104H44z" />
+        </clipPath>
+        <linearGradient
+          id="e"
+          x1="96"
+          x2="100.64"
+          y1="166.9"
+          y2="67.25"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".01" stopColor="#a9a8ff" />
+          <stop offset=".79" stopColor="#a9a8ff" stopOpacity="0" />
+        </linearGradient>
+        <filter
+          id="b"
+          width="176"
+          height="154"
+          x="8"
+          y="40"
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+          <feGaussianBlur result="effect1_foregroundBlur_37601_9976" stdDeviation="6" />
+        </filter>
+      </defs>
+    </svg>
+  );
+};
+
+export const NotificationSecurity = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 18 18">
+      <defs>
+        <linearGradient
+          id="e1bc122a-5193-4b91-8d10-c94c8a3caf04"
+          x1="11.202"
+          y1="13.906"
+          x2="2.831"
+          y2="-0.576"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#5e9624" />
+          <stop offset="1" stopColor="#b4ec36" />
+        </linearGradient>
+      </defs>
+      <g id="f0ccebc5-934d-463a-9e07-8c81671ecf94">
+        <path
+          d="M12.574,7.01c0,4.036-4.969,7.286-6.049,7.945a.4.4,0,0,1-.412,0C5.032,14.3.064,11.046.064,7.01V2.153a.39.39,0,0,1,.384-.385C4.312,1.666,3.423,0,6.319,0S8.325,1.666,12.19,1.768a.39.39,0,0,1,.384.385Z"
+          fill="#86d633"
+        />
+        <path
+          d="M12.055,7.051c0,3.7-4.556,6.682-5.547,7.286a.366.366,0,0,1-.378,0c-.991-.6-5.547-3.584-5.547-7.286V2.6a.357.357,0,0,1,.352-.353C4.479,2.15,3.663.623,6.319.623S8.159,2.15,11.7,2.244a.357.357,0,0,1,.352.353Z"
+          fill="url(#e1bc122a-5193-4b91-8d10-c94c8a3caf04)"
+        />
+        <path
+          d="M6.13,8.631H17.548a.369.369,0,0,1,.388.347v8.675a.369.369,0,0,1-.388.347H6.13a.369.369,0,0,1-.388-.347V8.978A.37.37,0,0,1,6.13,8.631Z"
+          fill="#b4ec36"
+        />
+        <path
+          d="M6.108,8.631H17.571a.348.348,0,0,1,.365.327h0v1.307H5.742V8.958a.349.349,0,0,1,.366-.327Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <path
+          d="M16.275,13.673H8.749c-.167,0-.3.076-.3.17v.42c0,.094.136.17.3.17h7.526c.168,0,.3-.076.3-.17v-.42C16.578,13.749,16.443,13.673,16.275,13.673Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <path
+          d="M16.275,11.759H8.749c-.167,0-.3.076-.3.17v.42c0,.094.136.17.3.17h7.526c.168,0,.3-.076.3-.17v-.42C16.578,11.835,16.443,11.759,16.275,11.759Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <path
+          d="M16.76,16.272H8.733c-.179,0-.324.082-.324.182V16.9c0,.1.145.181.324.181H16.76c.179,0,.324-.081.324-.181v-.448C17.084,16.354,16.939,16.272,16.76,16.272Z"
+          fill="#fff"
+          opacity="0.7"
+        />
+        <circle cx="7.198" cy="12.139" r="0.498" fill="#fff" opacity="0.7" />
+        <circle cx="7.198" cy="14.053" r="0.498" fill="#fff" opacity="0.7" />
+        <circle cx="7.078" cy="16.678" r="0.531" fill="#fff" opacity="0.7" />
+      </g>
+    </svg>
+  );
+};
+
+export const BlockedIcon = ({ width = 24, height = 24, fill = 'currentColor' }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.0001 17.3501C12.9003 17.3501 13.6301 16.6203 13.6301 15.7201C13.6301 14.8199 12.9003 14.0901 12.0001 14.0901C11.0999 14.0901 10.3701 14.8199 10.3701 15.7201C10.3701 16.6203 11.0999 17.3501 12.0001 17.3501Z"
+        fill={fill}
+      />
+      <path
+        d="M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z"
+        fill={fill}
+      />
+    </svg>
+  );
+};
+
+export const UploadAvatarIcon = ({ width = 16, height = 16, fill = 'currentColor' }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.4933 15.1663H4.50662C2.63995 15.1663 1.45329 14.053 1.34662 12.193L0.999953 6.69301C0.946619 5.85967 1.23329 5.05967 1.80662 4.45301C2.37329 3.84634 3.17329 3.49967 3.99995 3.49967C4.21329 3.49967 4.41995 3.37301 4.51995 3.17301L4.99995 2.21967C5.39329 1.43967 6.37995 0.833008 7.23995 0.833008H8.76662C9.62662 0.833008 10.6066 1.43967 11 2.21301L11.48 3.18634C11.58 3.37301 11.78 3.49967 12 3.49967C12.8266 3.49967 13.6266 3.84634 14.1933 4.45301C14.7666 5.06634 15.0533 5.85967 15 6.69301L14.6533 12.1997C14.5333 14.0863 13.38 15.1663 11.4933 15.1663ZM7.23995 1.83301C6.74662 1.83301 6.11995 2.21967 5.89329 2.66634L5.41329 3.62634C5.13329 4.16634 4.59329 4.49967 3.99995 4.49967C3.43995 4.49967 2.91995 4.72634 2.53329 5.13301C2.15329 5.53967 1.95995 6.07301 1.99995 6.62634L2.34662 12.133C2.42662 13.4797 3.15329 14.1663 4.50662 14.1663H11.4933C12.84 14.1663 13.5666 13.4797 13.6533 12.133L14 6.62634C14.0333 6.07301 13.8466 5.53967 13.4666 5.13301C13.08 4.72634 12.56 4.49967 12 4.49967C11.4066 4.49967 10.8666 4.16634 10.5866 3.63967L10.1 2.66634C9.87995 2.22634 9.25329 1.83967 8.75995 1.83967H7.23995V1.83301Z"
+        fill={fill}
+      />
+      <path
+        d="M9 5.83301H7C6.72667 5.83301 6.5 5.60634 6.5 5.33301C6.5 5.05967 6.72667 4.83301 7 4.83301H9C9.27333 4.83301 9.5 5.05967 9.5 5.33301C9.5 5.60634 9.27333 5.83301 9 5.83301Z"
+        fill={fill}
+      />
+      <path
+        d="M7.99992 12.5003C6.52659 12.5003 5.33325 11.307 5.33325 9.83366C5.33325 8.36033 6.52659 7.16699 7.99992 7.16699C9.47325 7.16699 10.6666 8.36033 10.6666 9.83366C10.6666 11.307 9.47325 12.5003 7.99992 12.5003ZM7.99992 8.16699C7.07992 8.16699 6.33325 8.91366 6.33325 9.83366C6.33325 10.7537 7.07992 11.5003 7.99992 11.5003C8.91992 11.5003 9.66659 10.7537 9.66659 9.83366C9.66659 8.91366 8.91992 8.16699 7.99992 8.16699Z"
+        fill={fill}
+      />
+    </svg>
+  );
+};
+
+export const LanguageIcon = ({ width = 20, height = 20, fill = 'currentColor' }) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.0003 18.3337C14.6027 18.3337 18.3337 14.6027 18.3337 10.0003C18.3337 5.39795 14.6027 1.66699 10.0003 1.66699C5.39795 1.66699 1.66699 5.39795 1.66699 10.0003C1.66699 14.6027 5.39795 18.3337 10.0003 18.3337Z"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M6.66667 2.5H7.5C5.875 7.36667 5.875 12.6333 7.5 17.5H6.66667" fill={fill} />
+      <path
+        d="M6.66667 2.5H7.5C5.875 7.36667 5.875 12.6333 7.5 17.5H6.66667"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.5 2.5C14.125 7.36667 14.125 12.6333 12.5 17.5"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M2.5 13.3333V12.5C7.36667 14.125 12.6333 14.125 17.5 12.5V13.3333"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M2.5 7.5C7.36667 5.875 12.6333 5.875 17.5 7.5"
+        stroke="black"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const LogoutGraphicIcon = ({ width = 84, height = 84 }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 84 84"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M41.4746 18.375H33.5996V65.625H41.4746C45.9371 65.625 49.3496 62.2125 49.3496 57.75V26.25C49.3496 21.7875 45.9371 18.375 41.4746 18.375Z"
+        fill="#E3E3E3"
+      />
+      <path
+        d="M32.8121 11.812C30.7121 10.237 27.8246 9.97453 25.4621 11.0245L9.71211 17.3245C6.82461 18.3745 4.72461 21.262 4.72461 24.6745V59.587C4.72461 62.737 6.56211 65.6245 9.71211 66.937L25.4621 73.237C29.6621 74.812 34.1246 72.712 35.6996 68.7745C35.9621 67.987 36.2246 66.937 36.2246 65.887V18.3745C36.2246 15.7495 34.9121 13.1245 32.8121 11.812Z"
+        fill="#4165B7"
+      />
+      <path
+        d="M78.4871 40.1619L64.3121 24.9369C63.2621 23.8869 61.6871 23.8869 60.6371 24.9369C60.1121 25.4619 59.8496 25.9869 59.8496 26.7744V34.1244H44.0996C41.2121 34.1244 38.8496 36.4869 38.8496 39.3744V44.6244C38.8496 47.5119 41.2121 49.8744 44.0996 49.8744H59.8496V57.2244C59.8496 58.7994 61.1621 59.8494 62.4746 59.8494C63.2621 59.8494 63.7871 59.5869 64.3121 59.0619L78.4871 43.8369C79.5371 42.7869 79.5371 41.2119 78.4871 40.1619Z"
+        fill="#848484"
+      />
+      <path
+        d="M23.0996 44.625C24.5494 44.625 25.7246 43.4497 25.7246 42C25.7246 40.5503 24.5494 39.375 23.0996 39.375C21.6499 39.375 20.4746 40.5503 20.4746 42C20.4746 43.4497 21.6499 44.625 23.0996 44.625Z"
+        fill="#E68B3F"
+      />
+    </svg>
+  );
+};
+
+export const DefaultToastIcon = ({
+  width = 24,
+  height = 24,
+  fill = 'currentColor',
+  className,
+}: IconProps) => {
+  return (
+    <svg
+      className={className}
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_2002_45)">
+        <rect width="24" height="24" rx="6" fill={fill} />
+        <path
+          d="M13.5 16.5C13.5 16.6989 13.421 16.8897 13.2803 17.0303C13.1397 17.171 12.9489 17.25 12.75 17.25C12.3522 17.25 11.9706 17.092 11.6893 16.8107C11.408 16.5294 11.25 16.1478 11.25 15.75V12C11.0511 12 10.8603 11.921 10.7197 11.7803C10.579 11.6397 10.5 11.4489 10.5 11.25C10.5 11.0511 10.579 10.8603 10.7197 10.7197C10.8603 10.579 11.0511 10.5 11.25 10.5C11.6478 10.5 12.0294 10.658 12.3107 10.9393C12.592 11.2206 12.75 11.6022 12.75 12V15.75C12.9489 15.75 13.1397 15.829 13.2803 15.9697C13.421 16.1103 13.5 16.3011 13.5 16.5ZM10.5 7.875C10.5 7.6525 10.566 7.43499 10.6896 7.24998C10.8132 7.06498 10.9889 6.92078 11.1945 6.83564C11.4 6.75049 11.6262 6.72821 11.8445 6.77162C12.0627 6.81503 12.2632 6.92217 12.4205 7.07951C12.5778 7.23684 12.685 7.43729 12.7284 7.65552C12.7718 7.87375 12.7495 8.09995 12.6644 8.30552C12.5792 8.51109 12.435 8.68679 12.25 8.8104C12.065 8.93402 11.8475 9 11.625 9C11.3266 9 11.0405 8.88147 10.8295 8.6705C10.6185 8.45952 10.5 8.17337 10.5 7.875Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_2002_45">
+          <rect width="24" height="24" rx="6" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export const SuccessToastIcon = ({ width = 24, height = 24 }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_2002_13)">
+        <rect width={width} height={height} rx="6" fill="#01E17B" />
+        <path
+          d="M16.281 9.21996C16.3508 9.28962 16.4061 9.37234 16.4438 9.46339C16.4816 9.55443 16.501 9.65203 16.501 9.75059C16.501 9.84915 16.4816 9.94675 16.4438 10.0378C16.4061 10.1288 16.3508 10.2116 16.281 10.2812L11.031 15.5312C10.9614 15.6009 10.8787 15.6563 10.7876 15.694C10.6966 15.7318 10.599 15.7512 10.5004 15.7512C10.4019 15.7512 10.3043 15.7318 10.2132 15.694C10.1222 15.6563 10.0394 15.6009 9.96979 15.5312L7.71979 13.2812C7.57906 13.1405 7.5 12.9496 7.5 12.7506C7.5 12.5516 7.57906 12.3607 7.71979 12.22C7.86052 12.0792 8.05139 12.0002 8.25042 12.0002C8.44944 12.0002 8.64031 12.0792 8.78104 12.22L10.5004 13.9403L15.2198 9.21996C15.2894 9.15023 15.3722 9.09491 15.4632 9.05717C15.5543 9.01943 15.6519 9 15.7504 9C15.849 9 15.9466 9.01943 16.0376 9.05717C16.1287 9.09491 16.2114 9.15023 16.281 9.21996Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_2002_13">
+          <rect width="24" height="24" rx="6" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export const ErrorToastIcon = ({
+  width = 24,
+  height = 24,
+  fill = 'currentColor',
+  className,
+}: IconProps) => {
+  return (
+    <svg
+      className={className}
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_2006_51)">
+        <rect width="24" height="24" rx="6" fill={fill} />
+        <path
+          d="M11.25 12.75V7.5C11.25 7.30109 11.329 7.11032 11.4697 6.96967C11.6103 6.82902 11.8011 6.75 12 6.75C12.1989 6.75 12.3897 6.82902 12.5303 6.96967C12.671 7.11032 12.75 7.30109 12.75 7.5V12.75C12.75 12.9489 12.671 13.1397 12.5303 13.2803C12.3897 13.421 12.1989 13.5 12 13.5C11.8011 13.5 11.6103 13.421 11.4697 13.2803C11.329 13.1397 11.25 12.9489 11.25 12.75ZM13.125 16.125C13.125 16.3475 13.059 16.565 12.9354 16.75C12.8118 16.935 12.6361 17.0792 12.4305 17.1644C12.225 17.2495 11.9988 17.2718 11.7805 17.2284C11.5623 17.185 11.3618 17.0778 11.2045 16.9205C11.0472 16.7632 10.94 16.5627 10.8966 16.3445C10.8532 16.1262 10.8755 15.9 10.9606 15.6945C11.0458 15.4889 11.19 15.3132 11.375 15.1896C11.56 15.066 11.7775 15 12 15C12.2984 15 12.5845 15.1185 12.7955 15.3295C13.0065 15.5405 13.125 15.8266 13.125 16.125Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_2006_51">
+          <rect width="24" height="24" rx="6" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export const CloseToastIcon = ({ width = 15, height = 15, fill = 'currentColor' }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.781 13.7198C14.8507 13.7895 14.906 13.8722 14.9437 13.9632C14.9814 14.0543 15.0008 14.1519 15.0008 14.2504C15.0008 14.349 14.9814 14.4465 14.9437 14.5376C14.906 14.6286 14.8507 14.7114 14.781 14.781C14.7114 14.8507 14.6286 14.906 14.5376 14.9437C14.4465 14.9814 14.349 15.0008 14.2504 15.0008C14.1519 15.0008 14.0543 14.9814 13.9632 14.9437C13.8722 14.906 13.7895 14.8507 13.7198 14.781L7.50042 8.56073L1.28104 14.781C1.14031 14.9218 0.94944 15.0008 0.750417 15.0008C0.551394 15.0008 0.360523 14.9218 0.219792 14.781C0.0790615 14.6403 3.92322e-09 14.4494 0 14.2504C-3.92322e-09 14.0514 0.0790615 13.8605 0.219792 13.7198L6.4401 7.50042L0.219792 1.28104C0.0790615 1.14031 0 0.94944 0 0.750417C0 0.551394 0.0790615 0.360523 0.219792 0.219792C0.360523 0.0790615 0.551394 0 0.750417 0C0.94944 0 1.14031 0.0790615 1.28104 0.219792L7.50042 6.4401L13.7198 0.219792C13.8605 0.0790615 14.0514 -3.92322e-09 14.2504 0C14.4494 3.92322e-09 14.6403 0.0790615 14.781 0.219792C14.9218 0.360523 15.0008 0.551394 15.0008 0.750417C15.0008 0.94944 14.9218 1.14031 14.781 1.28104L8.56073 7.50042L14.781 13.7198Z"
+        fill={fill}
       />
     </svg>
   );

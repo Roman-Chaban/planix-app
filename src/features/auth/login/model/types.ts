@@ -1,6 +1,6 @@
+import type { LoginFormSchema } from './schema';
+import type { NavigateFn } from '@types';
 import type { Control } from 'react-hook-form';
-
-import type { LoginFormSchema } from '@/features/auth/login';
 
 export type LoginActionsProps = {
   control: Control<LoginFormSchema>;
@@ -11,3 +11,5 @@ export type LoginActionsProps = {
   isLoading?: boolean;
   onForgotPassword?: () => void;
 };
+
+export type LoginFormProps = { onNavigate: NavigateFn };

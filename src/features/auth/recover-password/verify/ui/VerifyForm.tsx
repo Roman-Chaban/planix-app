@@ -1,18 +1,18 @@
-import type { FC } from 'react';
+import type { NavigateFn } from '@types';
 
-import { useResetPassword } from '@/features/auth/recover-password/reset';
-import type { AuthStep } from '@/features/auth/stepper';
 import { AppForm } from '@/shared/ui';
 
+import { useResetPassword } from '../../reset';
+
 type VerifyFormProps = {
-  onNavigate: (step: AuthStep) => void;
+  onNavigate: NavigateFn;
 };
 
-export const VerifyForm: FC<VerifyFormProps> = ({ onNavigate }) => {
-  const { form, onSubmit } = useResetPassword(onNavigate);
+export const VerifyForm = ({ onNavigate }: VerifyFormProps) => {
+  const { resetForm, handleSubmit } = useResetPassword(onNavigate);
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
+    <AppForm form={resetForm} onSubmit={handleSubmit}>
       Form
     </AppForm>
   );

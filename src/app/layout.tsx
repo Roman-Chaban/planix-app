@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import type { WithChildren } from '@types';
+
 import { DM_Sans } from 'next/font/google';
 
 import '@shared/styles/base/index.scss';
@@ -10,7 +11,7 @@ const dm_sans = DM_Sans({
   adjustFontFallback: true,
 });
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: WithChildren) {
   return (
     <html lang="en">
       <body className={dm_sans.className}>{children}</body>

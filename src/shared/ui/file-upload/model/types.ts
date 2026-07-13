@@ -1,3 +1,5 @@
+import type { KeyboardEvent } from 'react';
+
 import type { ProjectFile } from '@/entities/project';
 
 export type FileUploadProps = {
@@ -12,4 +14,14 @@ export type FileUploadProps = {
 export type FileItemProps = {
   file: File | ProjectFile;
   onRemove: () => void;
+};
+
+export type UseFileUploadParams = {
+  onFileSelect?: (file: File | ProjectFile) => void;
+};
+
+export type FileUploadItemProps = {
+  handleTrigger: () => void;
+  handleKeyDown: (event: KeyboardEvent<HTMLElement>) => void;
+  uploadPhotosLabel: string;
 };

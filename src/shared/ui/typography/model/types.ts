@@ -1,13 +1,9 @@
-import type { ElementType, ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { ElementType, ComponentPropsWithoutRef } from 'react';
 
-export type TypographyTag = ElementType;
-
-type TypographyOwnProps<T extends TypographyTag> = {
-  as?: T;
-  children?: ReactNode;
-  className?: string;
+type OwnProps = {
+  as?: ElementType;
   testId?: string;
 };
 
-export type TypographyProps<T extends TypographyTag = 'span'> =
-  TypographyOwnProps<T> & ComponentPropsWithoutRef<T>;
+export type TypographyProps<T extends ElementType = 'span'> = OwnProps &
+  ComponentPropsWithoutRef<T>;

@@ -1,6 +1,4 @@
-import type { TFunction } from 'i18next';
-
-import type { ComponentType, SVGProps } from 'react';
+import type { SVGComponent, TranslateFn } from '@types';
 
 export type SidebarProps = {
   isSidebarOpen?: boolean;
@@ -9,7 +7,7 @@ export type SidebarProps = {
 
 export type NavItemData = {
   id: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  icon: SVGComponent;
   label: string;
   href: string;
 };
@@ -17,10 +15,10 @@ export type NavItemData = {
 export type NavItemProps = NavItemData & {
   isActive?: boolean;
   isCollapsed?: boolean;
-  t: TFunction;
+  t: TranslateFn;
 };
 
 export type NavProps = {
   isCollapsed?: boolean;
-  t: TFunction;
+  t: TranslateFn;
 };

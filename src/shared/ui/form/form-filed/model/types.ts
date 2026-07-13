@@ -1,60 +1,52 @@
+import type { WithChildren, WithClassName } from '@types';
+
 import type {
+  HTMLAttributes,
   InputHTMLAttributes,
   LabelHTMLAttributes,
-  PropsWithChildren,
+  MouseEventHandler,
   ReactNode,
   Ref,
 } from 'react';
 
 export type FormFieldVariant =
-  | 'default'
-  | 'search'
-  | 'hover'
-  | 'typing'
-  | 'filed'
-  | 'disabled'
-  | 'error'
-  | 'noBorder';
+  'default' | 'search' | 'hover' | 'typing' | 'filed' | 'disabled' | 'error' | 'noBorder';
 
 export type IconPosition = 'start' | 'end';
 
-export type FormFieldProps = {
-  id: string;
-  label?: string;
-  error?: string;
-  variant: FormFieldVariant;
-  startIcon?: ReactNode;
-  endIcon?: ReactNode;
-  onStartIconClick?: () => void;
-  onEndIconClick?: () => void;
-  inputProps?: React.ComponentPropsWithoutRef<'input'>;
-  inputRef?: React.Ref<HTMLInputElement>;
-  children?: ReactNode;
-};
-
-export type FormLabelProps = PropsWithChildren<
-  LabelHTMLAttributes<HTMLLabelElement> & {
+export type FormFieldProps = WithClassName &
+  WithChildren & {
+    id: string;
+    label?: string;
     error?: string;
-    className?: string;
-  }
->;
+    variant: FormFieldVariant;
+    startIcon?: ReactNode;
+    endIcon?: ReactNode;
+    onStartIconClick?: () => void;
+    onEndIconMouseDown?: MouseEventHandler<HTMLDivElement>;
+    onEndIconMouseUp?: MouseEventHandler<HTMLDivElement>;
+    onEndIconMouseLeave?: MouseEventHandler<HTMLDivElement>;
+    inputProps?: React.ComponentPropsWithoutRef<'input'>;
+    inputRef?: React.Ref<HTMLInputElement>;
+  };
 
-export type FormErrorProps = {
+export type FormLabelProps = WithChildren &
+  WithClassName & {
+    error?: string;
+  } & LabelHTMLAttributes<HTMLLabelElement>;
+
+export type FormErrorProps = WithClassName & {
   error: string;
-  className?: string;
 };
 
-export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  className?: string;
-};
+export type FormInputProps = InputHTMLAttributes<HTMLInputElement> & WithClassName;
 
-export type FormIconProps = {
-  error?: string;
-  children: ReactNode;
-  position?: IconPosition;
-  onClick?: () => void;
-  className?: string;
-};
+export type FormIconProps = WithChildren &
+  WithClassName & {
+    error?: string;
+    position?: IconPosition;
+    onClick?: () => void;
+  } & HTMLAttributes<HTMLDivElement>;
 
 export type DateFieldProps = {
   value: string;
@@ -63,12 +55,10 @@ export type DateFieldProps = {
   ref?: Ref<HTMLInputElement>;
 };
 
-export type FormDateFieldProps = {
+export type FormDateFieldProps = WithClassName & {
   id: string;
   label: string;
   placeholder: string;
   error?: string;
-  className?: string;
-  inputProps: DateFieldProps &
-    Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
+  inputProps: DateFieldProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
 };

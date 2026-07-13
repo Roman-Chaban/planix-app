@@ -1,35 +1,19 @@
 'use client';
 
-import type { FC } from 'react';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import {
-  registerFormFields,
-  useRegistration,
-} from '@/features/auth/registration';
-import type { AuthStep } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
-import {
-  AppForm,
-  AuthButton,
-  Box,
-  FormFields,
-  FormDateField,
-} from '@/shared/ui';
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { AppForm, AuthButton, Box, FormFields, FormDateField, Tooltip } from '@/shared/ui';
+
+import { registerFormFields } from '../lib/form-config';
+import { useRegistration } from '../model/useRegistration';
 
 import styles from './RegisterForm.module.scss';
 
-const { LG } = BUTTON_MAX_WIDTH;
-
-type RegisterFormProps = {
-  onNavigate: (step: AuthStep) => void;
-};
-
-export const RegisterForm: FC<RegisterFormProps> = () => {
+export const RegisterForm = () => {
   const { t } = useTranslation(NS.AUTH);
-  const { isValid, isSubmitting, onSubmit, form, control } = useRegistration();
+  const { isValid, isSubmitting, handleSubmit, registrationForm, control } = useRegistration();
 
   const personalFields = registerFormFields.slice(0, 2);
   const securityFields = registerFormFields.slice(2, 4);
@@ -41,7 +25,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
   };
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
+    <AppForm form={registrationForm} onSubmit={handleSubmit}>
       <FormFields fields={personalFields} {...formFieldsProps} />
 
       <Box className={styles.box}>
@@ -63,6 +47,7 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
                 value: field.value ?? '',
                 onChange: field.onChange,
                 ref: field.ref,
+                required: true,
               }}
               error={t(fieldState.error?.message ?? '')}
             />
@@ -70,12 +55,14 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
         />
       </Box>
 
-      <AuthButton
-        label={t('register.registration')}
-        disabled={!isValid}
-        maxWidth={LG}
-        isLoading={isSubmitting}
-      />
+      <Tooltip position="bottom" message={t('register.tooltipMessage')}>
+        <AuthButton
+          preset="AUTH_REGISTER"
+          label={t('register.registration')}
+          disabled={!isValid}
+          isLoading={isSubmitting}
+        />
+      </Tooltip>
     </AppForm>
   );
 };

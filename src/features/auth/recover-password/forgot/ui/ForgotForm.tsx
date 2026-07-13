@@ -1,36 +1,29 @@
 'use client';
 
-import type { FC } from 'react';
+import type { NavigateFn } from '@types';
+
 import { useTranslation } from 'react-i18next';
 
-import {
-  registerFormFields,
-  useForgotPassword,
-} from '@/features/auth/recover-password/forgot';
-import type { AuthStep } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
 
-const { MD } = BUTTON_MAX_WIDTH;
+import { registerFormFields } from '../lib/form-config';
+import { useForgotPassword } from '../model/useForgotPassword';
 
 type ForgotFormProps = {
-  onNavigate: (step: AuthStep) => void;
+  onNavigate: NavigateFn;
 };
 
-export const ForgotForm: FC<ForgotFormProps> = ({ onNavigate }) => {
+export const ForgotForm = ({ onNavigate }: ForgotFormProps) => {
   const { t } = useTranslation(NS.AUTH);
-  const { isValid, form, onSubmit } = useForgotPassword(onNavigate);
+
+  const { isValid, forgotForm, handleSubmit } = useForgotPassword(onNavigate);
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
+    <AppForm form={forgotForm} onSubmit={handleSubmit}>
       <FormFields fields={registerFormFields} translationNamespace={NS.AUTH} />
 
-      <AuthButton
-        label={t('forgot.button')}
-        disabled={!isValid}
-        maxWidth={MD}
-      />
+      <AuthButton label={t('forgot.button')} disabled={!isValid} preset="AUTH_FORGOT_SEND" />
     </AppForm>
   );
 };

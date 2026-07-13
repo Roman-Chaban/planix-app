@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useId, type FC } from 'react';
+import { useCallback, useId } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Typography, FormField, FormError } from '@/shared/ui';
@@ -18,22 +18,21 @@ import styles from './FileUpload.module.scss';
 const { FILE } = INPUT_TYPES;
 const { NO_BORDER } = INPUT_VARIANTS;
 
-export const FileUpload: FC<FileUploadProps> = ({
+export const FileUpload = ({
   value = [],
   onChange,
   label,
   uploadLabel,
   uploadPhotosLabel,
   error,
-}) => {
+}: FileUploadProps) => {
   const uploadId = useId();
 
-  const { handleTrigger, handleFileChange, handleKeyDown, inputRef } =
-    useFileUpload({
-      onFileSelect: (file) => {
-        onChange?.([...value, file]);
-      },
-    });
+  const { handleTrigger, handleFileChange, handleKeyDown, inputRef } = useFileUpload({
+    onFileSelect: (file) => {
+      onChange?.([...value, file]);
+    },
+  });
 
   const handleRemoveFile = useCallback(
     (index: number) => {

@@ -9,10 +9,7 @@ export const projectDetailsSchema = zod
       .string()
       .min(5, 'validation.projectNameMin')
       .max(25, 'validation.projectNameMax'),
-    clientName: zod
-      .string()
-      .min(5, 'validation.clientNameMin')
-      .max(25, 'validation.clientNameMax'),
+    clientName: zod.string().min(5, 'validation.clientNameMin').max(25, 'validation.clientNameMax'),
     status: zod.enum(['Pending', 'In Progress', 'Completed', 'Canceled']),
 
     startDate: zod.string().min(1, 'validation.startDateRequired'),
@@ -34,26 +31,16 @@ export const projectDetailsSchema = zod
 
     files: zod
       .array(
-        zod.union([
-          zod.instanceof(File),
-          zod.object({ name: zod.string(), url: zod.string() }),
-        ]),
+        zod.union([zod.instanceof(File), zod.object({ name: zod.string(), url: zod.string() })]),
       )
       .min(1, 'validation.filesRequired')
       .refine(
-        (files) =>
-          files.every((f) =>
-            f instanceof File ? f.size <= 5 * 1024 * 1024 : true,
-          ),
+        (files) => files.every((f) => (f instanceof File ? f.size <= 5 * 1024 * 1024 : true)),
         'validation.fileSizeExceeded',
       ),
   })
   .superRefine((data, ctx) => {
-    const start = dayjs(
-      data.startDate,
-      [DATE_FORMAT.ISO, DATE_FORMAT.INPUT],
-      true,
-    );
+    const start = dayjs(data.startDate, [DATE_FORMAT.ISO, DATE_FORMAT.INPUT], true);
     const end = dayjs(data.dueDate, [DATE_FORMAT.ISO, DATE_FORMAT.INPUT], true);
 
     if (data.startDate && !start.isValid()) {

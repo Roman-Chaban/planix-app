@@ -1,22 +1,14 @@
-import type { TFunction } from 'i18next';
+import type { NavigateFn, TranslateFn } from '@types';
 
-import {
-  LoginForm,
-  ForgotForm,
-  RegisterForm,
-  ResetForm,
-  VerifyForm,
-} from '@/features/auth';
-import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
+import { LoginForm, ForgotForm, RegisterForm, ResetForm, VerifyForm } from '@/features/auth';
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
+import { AUTH_STEPS } from './constants';
+
 const { REGISTER, LOGIN, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 
-export const getAuthSteps = (
-  t: TFunction,
-  onNavigate: (step: AuthStep) => void,
-) => ({
+export const getAuthSteps = (t: TranslateFn, onNavigate: NavigateFn) => ({
   [LOGIN]: {
     component: () => <LoginForm onNavigate={onNavigate} />,
     header: (
@@ -39,13 +31,9 @@ export const getAuthSteps = (
     ),
   },
   [REGISTER]: {
-    component: () => <RegisterForm onNavigate={onNavigate} />,
+    component: () => <RegisterForm />,
     header: (
-      <AuthHeader
-        title={t('register.title')}
-        subtitle={t('register.subtitle')}
-        isHighlightedIcon
-      />
+      <AuthHeader title={t('register.title')} subtitle={t('register.subtitle')} isHighlightedIcon />
     ),
     footer: (
       <AuthFooter>
@@ -60,9 +48,7 @@ export const getAuthSteps = (
   },
   [FORGOT]: {
     component: () => <ForgotForm onNavigate={onNavigate} />,
-    header: (
-      <AuthHeader title={t('forgot.title')} subtitle={t('forgot.subtitle')} />
-    ),
+    header: <AuthHeader title={t('forgot.title')} subtitle={t('forgot.subtitle')} />,
     footer: (
       <AuthFooter>
         <AuthRedirect
@@ -77,9 +63,7 @@ export const getAuthSteps = (
   },
   [RESET]: {
     component: () => <ResetForm onNavigate={onNavigate} />,
-    header: (
-      <AuthHeader title={t('reset.title')} subtitle={t('reset.subtitle')} />
-    ),
+    header: <AuthHeader title={t('reset.title')} subtitle={t('reset.subtitle')} />,
     footer: (
       <AuthFooter>
         <AuthRedirect
@@ -94,9 +78,7 @@ export const getAuthSteps = (
   },
   [VERIFY]: {
     component: () => <VerifyForm onNavigate={onNavigate} />,
-    header: (
-      <AuthHeader title={t('verify.title')} subtitle={t('verify.subtitle')} />
-    ),
+    header: <AuthHeader title={t('verify.title')} subtitle={t('verify.subtitle')} />,
     footer: (
       <AuthFooter>
         <AuthRedirect

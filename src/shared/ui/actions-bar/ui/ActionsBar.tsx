@@ -1,11 +1,9 @@
-import type { FC } from 'react';
-
 import { Box, Button } from '@/shared/ui';
 import type { ActionsBarProps } from '@/shared/ui/actions-bar';
 
 import styles from './ActionsBar.module.scss';
 
-export const ActionsBar: FC<ActionsBarProps> = ({ actions }) => {
+export const ActionsBar = ({ actions }: ActionsBarProps) => {
   return (
     <Box className={styles.actions}>
       {actions.map(({ id, icon: Icon, onClick }) => (

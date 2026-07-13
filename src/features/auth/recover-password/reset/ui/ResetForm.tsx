@@ -1,39 +1,38 @@
 'use client';
 
-import type { FC } from 'react';
+import type { NavigateFn } from '@types';
+
 import { useTranslation } from 'react-i18next';
 
-import {
-  resetFormFields,
-  useResetPassword,
-} from '@/features/auth/recover-password/reset';
-import type { AuthStep } from '@/features/auth/stepper';
-import { NAMESPACE as NS } from '@/shared/lib/i18n/namespaces';
-import { AppForm, AuthButton, FormFields } from '@/shared/ui';
-import { BUTTON_MAX_WIDTH } from '@/shared/ui/button';
+import { PasswordForm } from '@/features/auth/password';
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { AuthButton } from '@/shared/ui';
 
-const { XL } = BUTTON_MAX_WIDTH;
+import { resetFormFields } from '../lib/form-config';
+import { useResetPassword } from '../model/useResetPassword';
 
 type ResetFormProps = {
-  onNavigate: (step: AuthStep) => void;
+  onNavigate: NavigateFn;
 };
 
-export const ResetForm: FC<ResetFormProps> = ({ onNavigate }) => {
+export const ResetForm = ({ onNavigate }: ResetFormProps) => {
   const { t } = useTranslation(NS.AUTH);
-  const { form, onSubmit, isValid, isSubmitting } =
-    useResetPassword(onNavigate);
+  const { resetForm, isValid, isSubmitting, handleSubmit } = useResetPassword(onNavigate);
 
   const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
-    <AppForm form={form} onSubmit={onSubmit}>
-      <FormFields fields={resetFormFields} translationNamespace={NS.AUTH} />
-
+    <PasswordForm
+      form={resetForm}
+      onSubmit={handleSubmit}
+      fields={resetFormFields}
+      translationNamespace={NS.AUTH}
+    >
       <AuthButton
+        preset="AUTH_FORGOT_SEND"
         label={t('reset.resetPasswordButton')}
-        maxWidth={XL}
         disabled={isSubmitDisabled}
       />
-    </AppForm>
+    </PasswordForm>
   );
 };

@@ -1,17 +1,14 @@
-import type { FC } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 
-import { FormError, FormLabel, Box, FormIcon, Input } from '@/shared/ui';
+import { FormError, FormLabel, Box, FormIcon, Input, Typography } from '@/shared/ui';
 
-import type { FormFieldProps } from '@/shared/ui/form/form-filed/model/types';
-import { ICON_POSITION } from '@/shared/ui/input';
+import { type FormFieldProps, ICON_POSITION } from '@/shared/ui/form/form-filed';
 
 import styles from './FormField.module.scss';
 
 const { START, END } = ICON_POSITION;
 
-export const FormField: FC<FormFieldProps> = ({
+export const FormField = ({
   id,
   label,
   error,
@@ -19,20 +16,28 @@ export const FormField: FC<FormFieldProps> = ({
   startIcon,
   endIcon,
   onStartIconClick,
-  onEndIconClick,
+  onEndIconMouseDown,
+  onEndIconMouseLeave,
+  onEndIconMouseUp,
   inputProps,
   inputRef,
   children,
-}) => {
-  const { ...restInputProps } = inputProps || {};
+  className,
+}: FormFieldProps) => {
+  const { placeholder, required, value, ...restInputProps } = inputProps || {};
+
+  const isFilled = value !== undefined && value !== null && String(value).length > 0;
 
   const wrapperClassName = buildClassName(styles.inputWrapper, {
     [styles.error]: !!error,
     [styles[variant]]: !!variant,
+    [styles.filled]: isFilled,
+    [styles.withStartIcon]: !!startIcon,
+    [styles.withEndIcon]: !!endIcon,
   });
 
   return (
-    <Box className={styles.field}>
+    <Box className={buildClassName(className, styles.field)}>
       {label && (
         <FormLabel error={error} htmlFor={id}>
           {label}
@@ -50,11 +55,30 @@ export const FormField: FC<FormFieldProps> = ({
           id={id}
           ref={inputRef}
           aria-invalid={!!error}
+          value={value}
+          className={styles.input}
           {...restInputProps}
+          placeholder=""
         />
 
+        {placeholder && (
+          <Typography as="span" className={styles.floatingLabel}>
+            {placeholder}
+            {required && (
+              <Typography as="span" className={styles.required}>
+                *
+              </Typography>
+            )}
+          </Typography>
+        )}
+
         {endIcon && (
-          <FormIcon position={END} onClick={onEndIconClick}>
+          <FormIcon
+            position={END}
+            onMouseDown={onEndIconMouseDown}
+            onMouseUp={onEndIconMouseUp}
+            onMouseLeave={onEndIconMouseLeave}
+          >
             {endIcon}
           </FormIcon>
         )}

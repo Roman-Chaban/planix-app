@@ -16,24 +16,28 @@
 }
 
 .content {
-  @include flex-col(1.75rem, start, stretch, column);
+  @include flex-col(1.75rem, start, center, column);
   padding: 2.5rem;
-  border: {
-    top: 0.188rem solid $primary-700;
-    radius: 0.75rem;
-  }
-  width: 100%;
-  max-width: 35.313rem;
-  min-height: 24.813rem;
   background: $neutral-0;
-  box-shadow: $shadow-not-found;
 
   @include respond(sm) {
     padding-inline: 1.5rem;
   }
 }
 
+.actions {
+  @include flex-center;
+  width: 100%;
+  gap: 1.25rem;
+  z-index: 3;
+
+  @include respond(sm) {
+    gap: 0.5rem;
+  }
+}
+
 .header {
+  width: 100%;
   @include flex(flex, row, space-between, center, 0);
 }
 
@@ -48,5 +52,4 @@
 .button {
   width: 1.625rem;
   height: 1.625rem;
-  background: transparent;
 }

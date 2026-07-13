@@ -1,8 +1,4 @@
-import {
-  isClassObject,
-  isStringValue,
-  type ClassValue,
-} from '@/shared/lib/classnames';
+import { isClassObject, isStringValue, type ClassValue } from '@/shared/lib/classnames';
 
 export const buildClassName = (...classValues: ClassValue[]): string => {
   const classList: string[] = [];

@@ -17,7 +17,9 @@ export function FormFields<T extends FieldValues>({
   translationNamespace,
 }: Omit<FormFieldsProps<T>, 'register' | 'errors'>) {
   const { t } = useTranslation(translationNamespace);
-  const { getVisibility, toggle } = usePasswordToggle();
+
+  const { getVisibility, toggleVisibility } = usePasswordToggle();
+
   const { control } = useFormContext<T>();
 
   return (
@@ -27,28 +29,15 @@ export function FormFields<T extends FieldValues>({
         const visible = isPassword && getVisibility(field.name);
         const type = isPassword ? (visible ? TEXT : PASSWORD) : field.type;
 
-        const endIcon = isPassword ? (
-          visible ? (
-            <ViewIcon />
-          ) : (
-            <ViewOffIcon />
-          )
-        ) : (
-          field.endIcon
-        );
+        const endIcon = isPassword ? visible ? <ViewIcon /> : <ViewOffIcon /> : field.endIcon;
 
         return (
           <Controller
             key={field.name}
             name={field.name}
             control={control}
-            render={({
-              field: { onChange, onBlur, value, ref },
-              fieldState,
-            }) => {
-              const errorText = fieldState.error?.message
-                ? t(fieldState.error.message)
-                : undefined;
+            render={({ field: { onChange, onBlur, value, ref }, fieldState }) => {
+              const errorText = fieldState.error?.message ? t(fieldState.error.message) : undefined;
 
               return (
                 <FormField
@@ -56,12 +45,10 @@ export function FormFields<T extends FieldValues>({
                   label={t(field.label)}
                   startIcon={field.startIcon}
                   endIcon={endIcon}
-                  onEndIconClick={
-                    isPassword ? () => toggle(field.name) : undefined
-                  }
                   error={errorText}
                   inputRef={ref}
                   variant={DEFAULT}
+                  className={field.className}
                   inputProps={{
                     type,
                     name: field.name,
@@ -74,11 +61,19 @@ export function FormFields<T extends FieldValues>({
                           : event;
                       onChange(actualValue);
                     },
-                    placeholder: field.placeholder
-                      ? t(field.placeholder)
-                      : undefined,
+                    placeholder: field.placeholder ? t(field.placeholder) : undefined,
                     autoComplete: field.autoComplete,
+                    required: field.required,
                   }}
+                  onEndIconMouseDown={
+                    isPassword ? () => toggleVisibility(field.name, true) : undefined
+                  }
+                  onEndIconMouseUp={
+                    isPassword ? () => toggleVisibility(field.name, false) : undefined
+                  }
+                  onEndIconMouseLeave={
+                    isPassword ? () => toggleVisibility(field.name, false) : undefined
+                  }
                 />
               );
             }}

@@ -1,35 +1,34 @@
-import { type FC } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 
 import { Typography } from '@/shared/ui';
-import type { FormIconProps } from '@/shared/ui/form/form-filed';
+
+import { ICON_POSITION, type FormIconProps } from '@/shared/ui/form/form-filed';
 
 import styles from './FormField.module.scss';
 
-export const FormIcon: FC<FormIconProps> = ({
+const { START } = ICON_POSITION;
+
+export const FormIcon = ({
   children,
-  position = 'start',
+  position = START,
   onClick,
   error,
   className,
-}) => {
-  const positionClass =
-    position === 'start' ? styles.slotStart : styles.slotEnd;
+  ...iconProps
+}: FormIconProps) => {
+  const positionClassname = position === START ? styles.slotStart : styles.slotEnd;
 
   const isClickable = Boolean(onClick);
 
+  const rootClassnames = buildClassName(
+    positionClassname,
+    { [styles.clickable]: isClickable },
+    { [styles.errorIcon]: !!error },
+    className,
+  );
+
   return (
-    <Typography
-      as="span"
-      className={buildClassName(
-        positionClass,
-        { [styles.clickable]: isClickable },
-        { [styles.errorIcon]: !!error },
-        className,
-      )}
-      onClick={onClick}
-    >
+    <Typography as="div" className={rootClassnames} onClick={onClick} {...iconProps}>
       {children}
     </Typography>
   );

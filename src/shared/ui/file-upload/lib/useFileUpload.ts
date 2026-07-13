@@ -1,11 +1,6 @@
 'use client';
 
-import {
-  type ChangeEvent,
-  type KeyboardEvent,
-  useRef,
-  useCallback,
-} from 'react';
+import { type ChangeEvent, type KeyboardEvent, useRef, useCallback } from 'react';
 
 import type { UseFileUploadParams } from '@/shared/ui/file-upload';
 

@@ -38,15 +38,12 @@ export const useProjectActions = () => {
   });
 
   const updateProject = useMutation<Project, Error, UpdateProjectPayload>({
-    mutationFn: ({ id, data }) =>
-      updateProjectRepository(id, mapUpdateProject({ id, data })),
+    mutationFn: ({ id, data }) => updateProjectRepository(id, mapUpdateProject({ id, data })),
     onSuccess: invalidateProjects,
   });
 
   const isProjectActionPending =
-    createProject.isPending ||
-    deleteProject.isPending ||
-    updateProject.isPending;
+    createProject.isPending || deleteProject.isPending || updateProject.isPending;
 
   return {
     createProject,

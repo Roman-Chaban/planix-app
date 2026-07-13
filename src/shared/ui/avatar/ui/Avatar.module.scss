@@ -3,3 +3,7 @@
 .icon {
   @include flex-row(0, center, center);
 }
+
+.circle {
+  border-radius: $radius-full;
+}

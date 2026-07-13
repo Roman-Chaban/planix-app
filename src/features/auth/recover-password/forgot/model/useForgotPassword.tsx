@@ -1,19 +1,18 @@
 import type { SubmitHandler } from 'react-hook-form';
 
 import { ROUTES } from '@/app/routes';
-import {
-  forgotPasswordSchema,
-  type ForgotPasswordSchema,
-} from '@/features/auth/recover-password/forgot';
+
 import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm } from '@/shared/lib/hooks';
+
+import { forgotPasswordSchema, type ForgotPasswordSchema } from './schema';
 
 const { AUTH } = ROUTES;
 const { RESET } = AUTH_STEPS;
 
 export const useForgotPassword = (onNavigate: (step: AuthStep) => void) => {
-  const form = useAppForm<ForgotPasswordSchema>({
+  const forgotForm = useAppForm<ForgotPasswordSchema>({
     schema: forgotPasswordSchema,
     defaultValues: {
       email: '',
@@ -22,9 +21,9 @@ export const useForgotPassword = (onNavigate: (step: AuthStep) => void) => {
 
   const {
     formState: { isValid, isSubmitting },
-  } = form;
+  } = forgotForm;
 
-  const onSubmit: SubmitHandler<ForgotPasswordSchema> = async (data) => {
+  const handleSubmit: SubmitHandler<ForgotPasswordSchema> = async (data) => {
     const { error } = await supabase.auth.resetPasswordForEmail(data.email, {
       redirectTo: `${window.location.origin}${AUTH}`,
     });
@@ -37,5 +36,5 @@ export const useForgotPassword = (onNavigate: (step: AuthStep) => void) => {
     onNavigate(RESET);
   };
 
-  return { form, isValid, isSubmitting, onSubmit };
+  return { forgotForm, isValid, isSubmitting, handleSubmit };
 };

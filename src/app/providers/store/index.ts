@@ -1,11 +1,4 @@
-export {
-  store,
-  type AppDispatch,
-  type AppStore,
-  type RootState,
-} from './store';
-
-export { useAppDispatch, useAppSelector } from './hooks';
+export { store, type AppDispatch, type AppStore, type RootState } from './store';
 
 export { rootReducer } from './rootReducer';
 

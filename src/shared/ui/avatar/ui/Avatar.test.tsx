@@ -46,12 +46,12 @@ describe('Avatar', () => {
     expect(screen.getByText('AB')).toBeInTheDocument();
   });
 
-  it('applies size and variant classes', () => {
-    const { container } = setup(createProps());
+  it('applies size and variant classes to image', () => {
+    setup(createProps());
 
-    const root = container.firstChild;
+    const image = screen.getByAltText('User avatar');
 
-    expect(root).toHaveClass('lg');
-    expect(root).toHaveClass('square');
+    expect(image).toHaveClass('lg');
+    expect(image).toHaveClass('square');
   });
 });

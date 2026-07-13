@@ -1,3 +1,3 @@
-export { ICON_POSITION, INPUT_VARIANTS, INPUT_TYPES } from './lib/constants';
+export { INPUT_VARIANTS, INPUT_TYPES } from './lib/input.constants';
 
 export { Input } from './ui/Input';

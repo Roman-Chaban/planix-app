@@ -1,18 +1,13 @@
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 
-dayjs.extend(customParseFormat);
+import { DATE_FORMAT } from '../common';
 
-export const DATE_FORMAT = {
-  DISPLAY: 'MMM DD, YYYY',
-  INPUT: 'DD.MM.YYYY',
-  ISO: 'YYYY-MM-DD',
-} as const;
+dayjs.extend(customParseFormat);
 
 export const applyDateMask = (value: string): string => {
   const raw = value.replace(/\D/g, '').slice(0, 8);
-  if (raw.length > 4)
-    return `${raw.slice(0, 2)}.${raw.slice(2, 4)}.${raw.slice(4)}`;
+  if (raw.length > 4) return `${raw.slice(0, 2)}.${raw.slice(2, 4)}.${raw.slice(4)}`;
   if (raw.length > 2) return `${raw.slice(0, 2)}.${raw.slice(2)}`;
   return raw;
 };

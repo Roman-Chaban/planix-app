@@ -1,0 +1,30 @@
+{
+  "title": "Project Details",
+  "label": "Project Details  /",
+  "value": "Project List",
+  "detailsTitle": "Project Details",
+  "descriptionTitle": "Project Description",
+  "documentTitle": "Project Document",
+
+  "fields": {
+    "projectName": "Project Name",
+    "clientName": "Client Name",
+    "startDate": "Start Date",
+    "dueDate": "Due Date",
+    "price": "Price",
+    "platform": "Platform",
+    "progress": "Progress",
+    "complete": "Complete"
+  },
+  "create": {
+    "title": "Add Project",
+    "label": "Add Project  /",
+    "value": "Project List",
+    "projects": "Project Management"
+  },
+  "edit": {
+    "title": "Edit Project",
+    "label": "Edit Project  /",
+    "value": "Project List"
+  }
+}

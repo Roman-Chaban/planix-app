@@ -2,5 +2,8 @@
   "title": "Planix",
   "dashboard": "Dashboard",
   "projects": "Project Management",
-  "login": "Login"
+  "login": "Login",
+  "setting": "Setting",
+  "logIn": "Log in",
+  "settingsTooltip": "Go to settings"
 }

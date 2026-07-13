@@ -1,0 +1,155 @@
+{
+  "settings": "Загальні налаштування",
+
+  "profileMenu": {
+    "myProfile": "Мій профіль",
+    "notificationSettings": "Налаштування сповіщень",
+    "subscription": "Підписка та білінг",
+    "systemSettings": "Системні налаштування",
+    "logOut": "Вийти",
+    "restrictedFeature": "Увійдіть, щоб отримати доступ до цієї функції."
+  },
+
+  "profileDetails": {
+    "editLabel": "Редагувати",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище",
+    "birthDate": "Дата народження",
+    "email": "Електронна пошта",
+    "contact": "Контактний номер",
+    "edit": "Натисніть, щоб редагувати",
+    "save": "Зберегти профіль"
+  },
+
+  "editForm": {
+    "validation": {
+      "firstName": {
+        "required": "Ім'я є обов'язковим"
+      },
+      "lastName": {
+        "required": "Прізвище є обов'язковим"
+      },
+      "contact": {
+        "required": "Контактний номер є обов'язковим"
+      },
+      "email": {
+        "required": "Email є обов'язковим",
+        "invalid": "Введіть коректну адресу електронної пошти"
+      },
+      "birthDate": {
+        "required": "Дата народження є обов'язковою"
+      }
+    }
+  },
+
+  "notifications": {
+    "title": "Сповіщення",
+
+    "items": {
+      "emailNotifications": {
+        "title": "Сповіщення електронною поштою",
+        "subtitle": "Захищайте свій обліковий запис від несанкціонованого доступу."
+      },
+
+      "projectNotifications": {
+        "title": "Сповіщення про проєкти",
+        "subtitle": "Сповіщення, пов’язані з прогресом проєкту та оновленнями."
+      },
+
+      "messageNotifications": {
+        "title": "Сповіщення про повідомлення",
+        "subtitle": "Слідкуйте за новими повідомленнями в режимі реального часу."
+      },
+
+      "taskNotifications": {
+        "title": "Сповіщення про завдання",
+        "subtitle": "Отримуйте сповіщення про нові завдання, оновлення та наближення дедлайнів."
+      },
+
+      "securityNotifications": {
+        "title": "Сповіщення про безпеку",
+        "subtitle": "Отримуйте сповіщення про активність входу та дії, пов’язані з безпекою."
+      }
+    }
+  },
+
+  "subscriptionAndBilling": {
+    "title": "Підписка та білінг",
+
+    "professionalPlan": {
+      "title": "Професійний план",
+      "subtitle": "Найпопулярніший для бізнесів, що зростають",
+      "perMonth": "/місяць",
+      "nextBilling": "Наступне списання: {{date}}"
+    },
+
+    "professionalActions": {
+      "cancelPlan": "Скасувати план",
+      "updatePlan": "Оновити план"
+    },
+
+    "billingTable": {
+      "title": "Історія платежів",
+      "columns": {
+        "date": "Дата",
+        "duration": "Тривалість",
+        "amount": "Сума",
+        "paymentMethod": "Метод оплати",
+        "status": "Статус"
+      }
+    }
+  },
+
+  "system": {
+    "languageTitle": "Налаштування мови",
+    "securityTitle": "Налаштування безпеки",
+    "changePasswordTitle": "Змінити пароль",
+    "selectLabel": "Мова за замовчуванням",
+
+    "twoFactorAuthentication": {
+      "title": "Двофакторна автентифікація (2FA)",
+      "description": "Захистіть свій обліковий запис від несанкціонованого доступу."
+    },
+
+    "darkTheme": {
+      "title": "Темна тема",
+      "description": "Перемкніться на темніший інтерфейс, який комфортний для очей."
+    },
+
+    "oldPasswordLabel": "Старий пароль",
+    "oldPasswordPlaceholder": "Введіть старий пароль",
+
+    "newPasswordLabel": "Новий пароль",
+    "newPasswordPlaceholder": "Введіть новий пароль",
+
+    "confirmPasswordLabel": "Підтвердження пароля",
+    "confirmPasswordPlaceholder": "Підтвердіть новий пароль",
+
+    "savePassword": "Оновити Пароль",
+
+    "validation": {
+      "required": "Це поле є обов'язковим.",
+      "minPassword": "Пароль має містити щонайменше 8 символів.",
+      "mismatch": "Паролі не збігаються."
+    },
+
+    "toast": {
+      "changePasswordSuccess": "Пароль успішно змінено.",
+      "changePasswordError": "Не вдалося змінити пароль."
+    }
+  },
+
+  "logout": {
+    "modal": {
+      "title": "Ви дійсно бажаєте вийти?",
+      "subtitle": "Ваші дані в безпеці. Ви зможете переглянути їх, щойно увійдете знову.",
+      "cancelLabel": "Скасувати",
+      "logoutLabel": "Вийти"
+    },
+
+    "toast": {
+      "logoutSuccess": "Ви успішно вийшли з системи",
+      "logoutError": "Не вдалося вийти з системи, спробуйте пізніше"
+    }
+  }
+}

@@ -34,7 +34,7 @@
 
 .sidebarTitle {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -76,7 +76,7 @@
 
 .button.iconCollapsed {
   top: 5rem;
-  right: 1.7rem;
+  right: 1.4rem;
 }
 
 .content {
@@ -141,7 +141,7 @@
   position: relative;
   border: 0.125rem solid $primary-700;
   color: $primary-700;
-  border-radius: 0.5rem;
+  border-radius: $radius-sm;
 
   transition:
     border-color 250ms ease,
@@ -152,15 +152,7 @@
   }
 
   &::after {
-    @include button-background-overlay(
-      '',
-      absolute,
-      0,
-      $primary-700,
-      0.05,
-      inherit,
-      none
-    );
+    @include button-background-overlay('', absolute, 0, $primary-700, 0.05, inherit, none);
   }
 
   &::before {

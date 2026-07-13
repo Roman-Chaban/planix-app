@@ -1,14 +1,13 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
+
 import { queryKeys } from '@/entities/project/api/queryKeys';
-import { getProjects } from '@/entities/project/lib/projects';
-import { useQueryWithSkeleton } from '@/shared/lib/hooks/useQueryWithSkeleton';
-import { ProjectsTableSkeleton } from '@/shared/ui/skeletons/project-table/ui/ProjectTableSkeleton';
+import { getProjects } from '@/entities/project/model/projects';
 
 export const useProjects = () => {
-  return useQueryWithSkeleton({
+  return useQuery({
     queryKey: queryKeys.projects.all,
-    Skeleton: ProjectsTableSkeleton,
 
     queryFn: async () => {
       const data = await getProjects();
@@ -23,6 +22,7 @@ export const useProjects = () => {
         },
       };
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 1000 * 60 * 5,
+    retry: false,
   });
 };

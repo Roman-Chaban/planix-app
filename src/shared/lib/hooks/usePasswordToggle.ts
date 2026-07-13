@@ -5,14 +5,14 @@ import { useState } from 'react';
 export function usePasswordToggle() {
   const [visible, setVisible] = useState<Record<string, boolean>>({});
 
-  const toggle = (name: string) => {
+  const toggleVisibility = (name: string, isVisible: boolean) => {
     setVisible((prev) => ({
       ...prev,
-      [name]: !prev[name],
+      [name]: isVisible,
     }));
   };
 
   const getVisibility = (name: string) => !!visible[name];
 
-  return { toggle, getVisibility };
+  return { toggleVisibility, getVisibility };
 }

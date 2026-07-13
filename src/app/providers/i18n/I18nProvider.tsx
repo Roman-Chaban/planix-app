@@ -1,18 +1,16 @@
 'use client';
 
-import { type FC, type ReactNode, useEffect } from 'react';
+import type { WithChildren, AppLocale } from '@types';
+
+import { useEffect } from 'react';
 
 import { I18nextProvider } from 'react-i18next';
 
-import i18n from '@/shared/lib/i18n/i18nConfig';
-import type { Locale } from '@/shared/lib/i18n/locales';
+import i18n from '@/shared/i18n/config/i18nConfig';
 
-type I18nProviderProps = {
-  children: ReactNode;
-  locale: Locale;
-};
+type I18nProviderProps = WithChildren & { locale: AppLocale };
 
-export const I18nProvider: FC<I18nProviderProps> = ({ children, locale }) => {
+export const I18nProvider = ({ children, locale }: I18nProviderProps) => {
   useEffect(() => {
     if (i18n.language !== locale) {
       i18n.changeLanguage(locale);

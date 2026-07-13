@@ -1,7 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
-
 import type { NavItemProps } from '@/widgets/sidebar';
 
 import { buildClassName } from '@/shared/lib';
@@ -9,7 +7,7 @@ import { AppLink, Box, Typography } from '@/shared/ui';
 
 import styles from './Sidebar.module.scss';
 
-export const NavItem: FC<NavItemProps> = ({
+export const NavItem = ({
   id: key,
   icon: Icon,
   label,
@@ -17,7 +15,7 @@ export const NavItem: FC<NavItemProps> = ({
   isActive,
   isCollapsed,
   t,
-}) => {
+}: NavItemProps) => {
   return (
     <AppLink href={href} key={key}>
       <Box

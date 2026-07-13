@@ -1,0 +1,130 @@
+@use '@/shared/styles' as *;
+
+.toolbar {
+  width: 100%;
+  @include flex(flex, row, space-between, center, 1rem, nowrap);
+}
+
+.toolbarCollapsed {
+  flex-direction: row;
+}
+
+@include respond(2xl) {
+  .toolbarExpanded {
+    flex-direction: column;
+  }
+
+  .toolbarCollapsed {
+    flex-direction: row;
+  }
+}
+
+@include respond(lg) {
+  .toolbarCollapsed {
+    flex-direction: column;
+  }
+}
+
+.toolbarActions {
+  width: 100%;
+  @include flex(flex, row, end, center, 1rem);
+
+  @include respond(2xl) {
+    justify-content: space-between;
+  }
+
+  @include respond(sm) {
+    flex-direction: column;
+
+    .search,
+    .platform,
+    .buttonWrapper {
+      flex: 1 1 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.scrollContainer {
+  width: 100%;
+  max-width: 50rem;
+  @include menu-horizontal-scroll;
+  box-shadow: $shadow-not-found;
+  background: $neutral-0;
+  border-radius: $radius-lg;
+
+  @include respond(2xl) {
+    max-width: 100%;
+  }
+}
+
+.list {
+  width: 100%;
+  @include flex-row(1rem, start, center);
+  padding: 0.5rem;
+
+  @include respond(2xl) {
+    justify-content: space-between;
+  }
+}
+
+.search {
+  flex: 1 1 18.875rem;
+  max-width: 18.875rem;
+
+  @include respond(2xl) {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+// TODO: Temporary mock these styles
+.platform {
+  @include flex-center;
+  flex: 1 1 11.563rem;
+  max-width: 11.563rem;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: $shadow-not-found;
+  background: $neutral-0;
+  border-radius: $radius-lg;
+  min-height: 3.375rem;
+  padding: 1rem;
+
+  @include respond(2xl) {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.box {
+  width: 100%;
+  @include flex-center;
+  padding: 0.406rem 1.625rem;
+  border-radius: $radius-md;
+  border: 0.125rem solid transparent;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  white-space: nowrap;
+}
+
+.label {
+  color: $neutral-950;
+  line-height: $line-height-base;
+
+  font: {
+    weight: $font-weight-regular;
+    size: $body-lg-font-size;
+  }
+}
+
+.active {
+  border-color: $primary-700;
+  box-shadow: $shadow-not-found;
+}
+
+.activeLabel {
+  font-weight: $font-weight-semibold;
+  color: $primary-700;
+}

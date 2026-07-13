@@ -1,13 +1,13 @@
-import type { FC, ReactNode } from 'react';
+import type { WithChildren, WithClassName } from '@types';
 
 import { BrandBanner } from '@/widgets/brand-banner';
 import { Box, Grid, GridItem } from '@/shared/ui';
 
 import styles from './AuthLayout.module.scss';
 
-type AuthLayoutProps = { children: ReactNode };
+type AuthLayoutProps = WithChildren & WithClassName;
 
-export const AuthLayout: FC<AuthLayoutProps> = ({ children }) => {
+export const AuthLayout = ({ children }: AuthLayoutProps) => {
   return (
     <Box className={styles.layout}>
       <Grid className={styles.grid}>

@@ -2,5 +2,8 @@
   "title": "Planix",
   "dashboard": "Панель керування",
   "projects": "Управління проєктами",
-  "login": "Увійти"
+  "login": "Увійти",
+  "profile": "Налаштування",
+  "logIn": "Увійти",
+  "settingsTooltip": "Перейти до налаштувань"
 }

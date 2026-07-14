@@ -5,15 +5,15 @@ import { ROUTES } from '@/app/routes';
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { type RegisterFormSchema, signUpFormSchema } from './schema';
+import { type RegisterFormValues, registerSchema } from './register.schema';
 
 const { DASHBOARD } = ROUTES;
 
 export const useRegistration = () => {
   const localizedRouter = useLocalizedRouter();
 
-  const registrationForm = useAppForm<RegisterFormSchema>({
-    schema: signUpFormSchema,
+  const registrationForm = useAppForm<RegisterFormValues>({
+    schema: registerSchema,
     defaultValues: {
       email: '',
       fullName: '',
@@ -29,7 +29,7 @@ export const useRegistration = () => {
     formState: { isValid, isSubmitting },
   } = registrationForm;
 
-  const handleSubmit: SubmitHandler<RegisterFormSchema> = async (data) => {
+  const handleSubmit: SubmitHandler<RegisterFormValues> = async (data) => {
     const { email, password, fullName, contact, birthDate } = data;
 
     const { error: authError } = await supabase.auth.signUp({

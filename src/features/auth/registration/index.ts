@@ -1,6 +1,6 @@
-export { signUpFormSchema, type RegisterFormSchema } from './model/schema';
+export { registerSchema, type RegisterFormValues } from './model/register.schema';
 
-export { registerFormFields } from './lib/form-config';
+export { registerFormFields } from './lib/register-fields';
 
 export { useRegistration } from './model/useRegistration';
 

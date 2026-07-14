@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, AuthButton, Box, FormFields, FormDateField, Tooltip } from '@/shared/ui';
 
-import { registerFormFields } from '../lib/form-config';
+import { registerFormFields } from '../lib/register-fields';
 import { useRegistration } from '../model/useRegistration';
 
 import styles from './RegisterForm.module.scss';
@@ -25,7 +25,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <AppForm form={registrationForm} onSubmit={handleSubmit}>
+    <AppForm form={registrationForm} onSubmit={handleSubmit} className={styles.registerForm}>
       <FormFields fields={personalFields} {...formFieldsProps} />
 
       <Box className={styles.box}>
@@ -61,6 +61,7 @@ export const RegisterForm = () => {
           label={t('register.registration')}
           disabled={!isValid}
           isLoading={isSubmitting}
+          className={styles.registerButton}
         />
       </Tooltip>
     </AppForm>

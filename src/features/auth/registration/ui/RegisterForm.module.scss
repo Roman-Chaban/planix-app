@@ -1,9 +1,19 @@
 @use '@/shared/styles' as *;
 
+.registerForm {
+  width: 100%;
+  @include flex-col($space-6, start, start, column);
+}
+
 .box {
+  width: 100%;
   @include flex-row($space-6, start, start);
 
   @include respond(xl) {
     flex-direction: column;
   }
+}
+
+.registerButton {
+  margin-block-start: 2.125rem;
 }

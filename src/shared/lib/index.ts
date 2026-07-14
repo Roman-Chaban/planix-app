@@ -6,5 +6,6 @@ export { formatCurrency, formatDate } from './formatters';
 export { slugify } from './routing/slugify';
 export { getLogoSized, setFormErrors, getInitials, splitFullName, getAvatarPath } from './helpers';
 export { applyDateMask, toDisplay, toISO, toInputFormat } from './date/format';
+export { buildAuthSearchParams, getAuthStep, isAuthStep } from './auth';
 
-export { AUTH_SESSION, DATE_FORMAT } from './common';
+export { AUTH_SESSION, DATE_FORMAT, AUTH_STEP_VALUES } from './common';

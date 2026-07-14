@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { AUTH_STEPS } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import { AppForm, FormFields } from '@/shared/ui';
+import { AppForm, Box, FormFields } from '@/shared/ui';
 
 import { loginFormFields } from '../lib/login-fields';
 import { useLogin } from '../model/useLogin';
@@ -26,7 +26,9 @@ export const LoginForm = ({ onNavigate }: LoginFormProps) => {
 
   return (
     <AppForm form={loginForm} onSubmit={handleSubmit} className={styles.loginForm}>
-      <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
+      <Box className={styles.loginContainer}>
+        <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
+      </Box>
       <LoginActions
         control={control}
         rememberMeLabel={t('login.rememberMe')}

@@ -1,7 +1,12 @@
 @use '@/shared/styles' as *;
 
 .loginForm {
+  @include flex-col(1.188rem, start, start, column);
+}
+
+.loginContainer {
   @include flex-col($space-6, start, start, column);
+  width: 100%;
 }
 
 .loginFormMainWrapper {

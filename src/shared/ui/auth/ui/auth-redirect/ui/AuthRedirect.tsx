@@ -10,6 +10,7 @@ const { TRANSPARENT } = BUTTON_VARIANTS;
 export const AuthRedirect = ({ title, label, icon, step, onNavigate }: AuthRedirectProps) => (
   <Box className={styles.box}>
     {icon && icon}
+
     <Typography as="span" className={styles.text}>
       {title}
     </Typography>

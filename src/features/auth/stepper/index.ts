@@ -1,4 +1,4 @@
-export { AUTH_STEPS, type AuthStep } from './lib/constants';
+export { AUTH_STEPS, type AuthStep } from './lib/stepper.constants';
 
 export { useAuthStepper } from './model/useAuthStepper';
 

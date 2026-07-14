@@ -4,7 +4,7 @@ import { LoginForm, ForgotForm, RegisterForm, ResetForm, VerifyForm } from '@/fe
 import { AuthFooter, AuthHeader, AuthRedirect } from '@/shared/ui';
 import { BackIcon } from '@/shared/ui/icons';
 
-import { AUTH_STEPS } from './constants';
+import { AUTH_STEPS } from './stepper.constants';
 
 const { REGISTER, LOGIN, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 

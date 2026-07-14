@@ -1,3 +1,4 @@
+export { calculateAge, FULL_NAME_REGEX, PASSWORD_REGEX, PHONE_REGEX } from './validation';
 export { buildClassName } from './classnames/buildClassName';
 export { buildHref } from './routing/buildHref';
 export { getCleanPathname } from './routing/getCleanPathname';

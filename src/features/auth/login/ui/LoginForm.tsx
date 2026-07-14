@@ -25,10 +25,8 @@ export const LoginForm = ({ onNavigate }: LoginFormProps) => {
   const isSubmitDisabled = !isValid || isSubmitting;
 
   return (
-    <>
-      <AppForm form={loginForm} onSubmit={handleSubmit} className={styles.loginForm}>
-        <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
-      </AppForm>
+    <AppForm form={loginForm} onSubmit={handleSubmit} className={styles.loginForm}>
+      <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
       <LoginActions
         control={control}
         rememberMeLabel={t('login.rememberMe')}
@@ -38,6 +36,6 @@ export const LoginForm = ({ onNavigate }: LoginFormProps) => {
         isLoading={isSubmitting}
         onForgotPassword={() => onNavigate(FORGOT)}
       />
-    </>
+    </AppForm>
   );
 };

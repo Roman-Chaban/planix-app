@@ -23,6 +23,7 @@
         "required": "Email is required",
         "invalid": "Please enter a valid email address"
       },
+
       "password": {
         "min": "Password must be at least 8 characters",
         "noSpaces": "Password must not contain leading or trailing spaces"
@@ -30,6 +31,7 @@
       "invalidCredentials": "Invalid email or password"
     }
   },
+
   "register": {
     "title": "Registration",
     "subtitle": "Log In to Your CRM Dashboard",
@@ -80,10 +82,12 @@
         "invalid": "Please enter a valid phone number (10-15 digits)"
       },
       "birthDate": {
+        "required": "Please select your date of birth",
         "invalid": "Please select a valid date in the past"
       }
     }
   },
+
   "forgot": {
     "title": "Forgot Password ?",
     "subtitle": "Enter your email and we will send password reset link",
@@ -96,12 +100,18 @@
 
     "button": "Send",
 
+    "modal": {
+      "checkYourEmail": "Check your email",
+      "passwordResetLinkSent": "We sent a password reset link to: "
+    },
+
     "validation": {
       "email": {
         "invalid": "Please enter a valid email address"
       }
     }
   },
+
   "reset": {
     "title": "Reset Password",
     "subtitle": "Your New Password Must Be Different From Previously Used Password",
@@ -121,6 +131,7 @@
       "mismatch": "Passwords do not match"
     }
   },
+
   "verify": {
     "title": "OTP Verification",
     "subtitle": "Please verify your account using the OTP code.",

@@ -8,6 +8,7 @@ import type { Locale } from '@/shared/i18n/locales/locales';
 export type TranslateFn = TFunction;
 export type AppLocale = Locale;
 export type NavigateFn = (step: AuthStep) => void;
+export type EmailSentFn = (email: string) => void;
 export type SVGComponent = FC<SVGProps<SVGSVGElement>>;
 
 export type WithChildren = {

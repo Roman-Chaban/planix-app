@@ -30,6 +30,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
   AUTH_FORGOT: {
     variant: TRANSPARENT,
     minWidth: LG,
+    type: BUTTON,
   },
 
   AUTH_FORGOT_SEND: {

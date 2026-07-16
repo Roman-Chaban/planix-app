@@ -14,6 +14,7 @@ export type ModalProps = WithChildren &
   WithIsOpen &
   WithOnClose & {
     closeOnOverlayClick?: boolean;
+    containerId?: string;
   };
 
 export type ModalContentProps = WithChildren & WithClassName;

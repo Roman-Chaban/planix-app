@@ -52,3 +52,9 @@
   width: 100%;
   max-width: $maxWidth;
 }
+
+@mixin button-close-right {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import type { NavigateFn } from '@types';
+import type { ForgotFormProps } from '../model/forgot.types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -12,20 +12,23 @@ import { useForgotPassword } from '../model/useForgotPassword';
 
 import styles from './ForgotForm.module.scss';
 
-type ForgotFormProps = {
-  onNavigate: NavigateFn;
-};
-
-export const ForgotForm = ({ onNavigate }: ForgotFormProps) => {
+export const ForgotForm = ({ onEmailSent }: ForgotFormProps) => {
   const { t } = useTranslation(NS.AUTH);
 
-  const { isValid, forgotForm, handleSubmit } = useForgotPassword(onNavigate);
+  const { forgotForm, isSubmitting, isSubmitDisabled, handleSubmit } = useForgotPassword({
+    onEmailSent,
+  });
 
   return (
     <AppForm form={forgotForm} onSubmit={handleSubmit} className={styles.forgotForm}>
       <FormFields fields={registerFormFields} translationNamespace={NS.AUTH} />
 
-      <AuthButton label={t('forgot.button')} disabled={!isValid} preset="AUTH_FORGOT_SEND" />
+      <AuthButton
+        label={t('forgot.button')}
+        disabled={isSubmitDisabled}
+        preset="AUTH_FORGOT_SEND"
+        isLoading={isSubmitting}
+      />
     </AppForm>
   );
 };

@@ -10,11 +10,7 @@ import { AUTH_STEPS } from './stepper.constants';
 
 const { LOGIN, REGISTER, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 
-export const getAuthFooter = ({
-  activeStep,
-  navigateToStep,
-  t,
-}: AuthFooterProps): ReactNode => {
+export const getAuthFooter = ({ activeStep, navigateToStep, t }: AuthFooterProps): ReactNode => {
   switch (activeStep) {
     case LOGIN: {
       return (

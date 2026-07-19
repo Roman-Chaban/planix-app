@@ -22,6 +22,8 @@ export const useResetPassword = (onNavigate: NavigateFn) => {
     formState: { isValid, isSubmitting },
   } = resetForm;
 
+  const isSubmitDisabled = !isValid || isSubmitting;
+
   const handleSubmit: SubmitHandler<ResetFormSchema> = async (data) => {
     const { error } = await supabase.auth.updateUser({
       password: data.newPassword,
@@ -35,5 +37,5 @@ export const useResetPassword = (onNavigate: NavigateFn) => {
     onNavigate(VERIFY);
   };
 
-  return { resetForm, isValid, isSubmitting, handleSubmit };
+  return { resetForm, isValid, isSubmitting, isSubmitDisabled, handleSubmit };
 };

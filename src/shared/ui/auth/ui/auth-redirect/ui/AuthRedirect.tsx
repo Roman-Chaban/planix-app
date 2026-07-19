@@ -11,7 +11,7 @@ export const AuthRedirect = ({ title, label, icon, step, onNavigate }: AuthRedir
   <Box className={styles.box}>
     {icon && icon}
 
-    <Typography as="span" className={styles.text}>
+    <Typography as="span" className={styles.title}>
       {title}
     </Typography>
 

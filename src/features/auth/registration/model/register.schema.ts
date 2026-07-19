@@ -47,9 +47,21 @@ export const registerSchema = z
       message: 'register.validation.contact.invalid',
     }),
 
-    birthDate: z.string().min(1, {
-      message: 'register.validation.birthDate.required',
-    }),
+    birthDate: z
+      .string()
+      .min(1, {
+        message: 'register.validation.birthDate.required',
+      })
+      .refine(
+        (value) => {
+          const date = new Date(value);
+
+          return !Number.isNaN(date.getTime()) && date < new Date();
+        },
+        {
+          message: 'register.validation.birthDate.invalid',
+        },
+      ),
   })
   .superRefine((data, ctx) => {
     if (data.password !== data.confirmPassword) {

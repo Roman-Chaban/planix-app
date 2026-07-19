@@ -61,7 +61,6 @@ export const RegisterForm = () => {
           label={t('register.registration')}
           disabled={!isValid}
           isLoading={isSubmitting}
-          className={styles.registerButton}
         />
       </Tooltip>
     </AppForm>

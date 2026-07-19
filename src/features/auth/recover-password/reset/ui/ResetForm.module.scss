@@ -1,0 +1,5 @@
+@use '@/shared/styles' as *;
+
+.resetForm {
+  @include flex-col($space-6, start, start, column);
+}

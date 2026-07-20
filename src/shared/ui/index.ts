@@ -43,3 +43,4 @@ export {
 } from './table';
 
 export { Skeleton } from './skeleton';
+export { PageLoader } from './page-loader';

@@ -36,3 +36,13 @@
     transform: translateY(-0.5rem) scale(0.92);
   }
 }
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}

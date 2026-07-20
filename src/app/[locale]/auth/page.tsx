@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 
 import { AuthStepper } from '@/features/auth/stepper/ui/AuthStepper';
-import { AuthLayout, Loader } from '@/shared/ui';
+import { AuthLayout, PageLoader } from '@/shared/ui';
 
 export default function AuthPage() {
   return (
-    <Suspense fallback={<Loader />}>
+    <Suspense fallback={<PageLoader />}>
       <AuthLayout>
         <AuthStepper />
       </AuthLayout>

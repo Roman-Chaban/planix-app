@@ -42,7 +42,7 @@ export const MessageIcon = ({ width = 20, height = 20 }: IconProps) => {
   );
 };
 
-export const PlanixLogoIcon = ({ width = 78, height = 88 }: IconProps) => {
+export const PlanixLogoIcon = ({ width = 78, height = 78 }: IconProps) => {
   return (
     <svg
       width={width}

@@ -4,7 +4,7 @@ import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import { AppForm, AuthButton, Box, FormFields, FormDateField, Tooltip } from '@/shared/ui';
+import { AppForm, AuthButton, Box, FormFields, FormDateField } from '@/shared/ui';
 
 import { registerFormFields } from '../lib/register-fields';
 import { useRegistration } from '../model/useRegistration';
@@ -55,14 +55,12 @@ export const RegisterForm = () => {
         />
       </Box>
 
-      <Tooltip position="bottom" message={t('register.tooltipMessage')}>
-        <AuthButton
-          preset="AUTH_REGISTER"
-          label={t('register.registration')}
-          disabled={!isValid}
-          isLoading={isSubmitting}
-        />
-      </Tooltip>
+      <AuthButton
+        preset="AUTH_REGISTER"
+        label={t('register.registration')}
+        disabled={!isValid}
+        isLoading={isSubmitting}
+      />
     </AppForm>
   );
 };

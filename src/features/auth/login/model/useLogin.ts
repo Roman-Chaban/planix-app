@@ -6,7 +6,7 @@ import { supabase } from '@/shared/api/supabase';
 import { setFormErrors } from '@/shared/lib';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { loginSchema, type LoginFormSchema } from './schema';
+import { loginSchema, type LoginFormSchema } from './login.schema';
 
 const { DASHBOARD } = ROUTES;
 

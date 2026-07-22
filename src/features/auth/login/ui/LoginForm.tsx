@@ -1,6 +1,6 @@
 'use client';
 
-import type { LoginFormProps } from '../model/types';
+import type { LoginFormProps } from '../model/login.types';
 
 import { useTranslation } from 'react-i18next';
 

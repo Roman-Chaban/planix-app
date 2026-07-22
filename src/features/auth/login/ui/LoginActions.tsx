@@ -1,6 +1,6 @@
 'use client';
 
-import type { LoginActionsProps } from '../model/types';
+import type { LoginActionsProps } from '../model/login.types';
 
 import { Controller } from 'react-hook-form';
 

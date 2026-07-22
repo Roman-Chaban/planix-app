@@ -1,4 +1,4 @@
-import type { LoginFormSchema } from './schema';
+import type { LoginFormSchema } from './login.schema';
 import type { NavigateFn } from '@types';
 import type { Control } from 'react-hook-form';
 

@@ -1,6 +1,6 @@
-export { loginSchema, type LoginFormSchema } from './model/schema';
+export { loginSchema, type LoginFormSchema } from './model/login.schema';
 
-export type { LoginActionsProps } from './model/types';
+export type { LoginActionsProps } from './model/login.types';
 
 export { useLogin } from './model/useLogin';
 

@@ -13,7 +13,7 @@ import { DEFAULT_LOCALE } from '@/shared/i18n';
 import { buildHref } from '@/shared/lib';
 import { useAppForm } from '@/shared/lib/hooks';
 
-import { forgotPasswordSchema, type ForgotPasswordSchema } from './schema';
+import { forgotPasswordSchema, type ForgotPasswordSchema } from './forgot.schema';
 
 const { AUTH } = ROUTES;
 const { RESET } = AUTH_STEPS;

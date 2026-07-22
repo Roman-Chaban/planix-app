@@ -21,3 +21,8 @@ export const buildAuthSearchParams = (searchParams: ReadonlyURLSearchParams, ste
 
   return params.toString();
 };
+
+export const clearRecoveryState = () => {
+  sessionStorage.removeItem('resetEmail');
+  localStorage.removeItem('verify-modal');
+};

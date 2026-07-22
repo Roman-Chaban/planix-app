@@ -1,1 +1,1 @@
-export { buildAuthSearchParams, getAuthStep, isAuthStep } from './auth';
+export { buildAuthSearchParams, getAuthStep, isAuthStep, clearRecoveryState } from './auth';

@@ -5,7 +5,7 @@ import type { ForgotModalProps } from '../model/forgot.types';
 import { useTranslation } from 'react-i18next';
 
 import { useAppDispatch, useAppSelector } from '@/app/providers/store/hooks';
-import { closeModal, ModalId, selectIsModalOpen, usePersistModal } from '@/entities/modal';
+import { closeModal, ModalId, selectIsModalOpen } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Button, Modal, ModalContent, Typography } from '@/shared/ui';
 
@@ -15,8 +15,6 @@ import styles from './ForgotForm.module.scss';
 
 export const ForgotModal = ({ email }: ForgotModalProps) => {
   const { t } = useTranslation(NS.AUTH);
-
-  usePersistModal(ModalId.VERIFY_EMAIL, 'verify-modal');
 
   const dispatch = useAppDispatch();
 

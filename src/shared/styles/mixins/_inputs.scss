@@ -67,3 +67,11 @@
     -webkit-text-fill-color: $text-secondary;
   }
 }
+
+@mixin hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 0.063rem;
+  height: 0.063rem;
+  pointer-events: none;
+}

@@ -119,3 +119,25 @@
   background: $neutral-900;
   transform: rotate(45deg);
 }
+
+@mixin otp-input-cursor(
+  $left: 50%,
+  $width: 0.125rem,
+  $height: 1.563rem,
+  $radius: $radius-sm,
+  $background: $primary-700
+) {
+  position: absolute;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background: $background;
+  animation: blink 1s step-end infinite;
+  transform: translateX(-50%);
+}
+
+@mixin disabled-cell {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

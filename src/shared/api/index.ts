@@ -7,4 +7,5 @@ export {
   USER_ID,
   PAYMENT_DATE,
   ID,
+  SUBSCRIPTION_PLANS,
 } from './lib/supabase.constants';

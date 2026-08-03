@@ -53,3 +53,4 @@ export { DefaultToastIcon } from './Icons';
 export { SuccessToastIcon } from './Icons';
 export { ErrorToastIcon } from './Icons';
 export { CloseToastIcon } from './Icons';
+export { PlanCheckIcon } from './Icons';

@@ -44,6 +44,7 @@ export const SubscriptionPlan = ({
         </Typography>
 
         <List
+          itemClassName={styles.featuresListItem}
           className={styles.featuresList}
           renderList={plan.features}
           getItemKey={(feature) => feature}

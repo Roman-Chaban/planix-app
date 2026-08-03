@@ -4,7 +4,7 @@ import { buildClassName } from '@/shared/lib';
 
 import { Typography } from '@/shared/ui';
 import type { CheckboxProps } from '@/shared/ui/checkbox';
-import { PlanCheckIcon } from '@/shared/ui/icons/Icons';
+import { CheckIcon } from '@/shared/ui/icons/Icons';
 import { INPUT_TYPES } from '@/shared/ui/input';
 
 import styles from './Checkbox.module.scss';
@@ -33,7 +33,7 @@ export const Checkbox = ({ checked, onChange, label, disabled }: CheckboxProps) 
       />
 
       <Typography as="span" className={styles.box}>
-        <PlanCheckIcon className={buildClassName(styles.checkIcon, checked && styles.visible)} />
+        <CheckIcon className={buildClassName(styles.checkIcon, checked && styles.visible)} />
       </Typography>
 
       {label && (

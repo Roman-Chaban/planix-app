@@ -1,0 +1,22 @@
+@use '@/shared/styles' as *;
+
+.subscription {
+  @include flex-center;
+  min-height: 100dvh;
+  padding: $space-7;
+}
+
+.container {
+  @include bounding-container;
+  @include page-border-decoration;
+  @include overlay-background;
+  z-index: $z-overlay;
+}
+
+.body {
+  @include flex-col-center;
+  gap: 3.5rem;
+  padding-block: $space-11 $space-9;
+  position: relative;
+  z-index: 3;
+}

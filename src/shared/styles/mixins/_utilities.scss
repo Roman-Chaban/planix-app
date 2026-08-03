@@ -125,3 +125,16 @@
     transform: translateY(-50%) rotate(45deg);
   }
 }
+
+@mixin plan-card-bottom-decoration {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.75rem;
+    height: 0.063rem;
+    background: $neutral-300;
+    border-radius: $radius-sm;
+  }
+}

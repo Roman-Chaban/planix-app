@@ -29,6 +29,7 @@ export const LoginForm = ({ onNavigate }: LoginFormProps) => {
       <Box className={styles.loginContainer}>
         <FormFields fields={loginFormFields} translationNamespace={NS.AUTH} />
       </Box>
+
       <LoginActions
         control={control}
         rememberMeLabel={t('login.rememberMe')}

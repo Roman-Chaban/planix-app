@@ -129,6 +129,11 @@
       "required": "This field is required",
       "minPassword": "Password must be at least 8 characters",
       "mismatch": "Passwords do not match"
+    },
+
+    "toast": {
+      "resetSuccess": "Password has been reset successfully.",
+      "resetError": "Failed to reset password. Please try again."
     }
   },
 

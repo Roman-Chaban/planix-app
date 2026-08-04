@@ -1,6 +1,6 @@
-export { type ResetFormSchema, resetSchema } from './model/schema';
+export { type ResetFormSchema, resetSchema } from './model/reset.schema';
 
-export { resetFormFields } from './lib/form-config';
+export { resetFormFields } from './lib/reset-fields';
 
 export { useResetPassword } from './model/useResetPassword';
 

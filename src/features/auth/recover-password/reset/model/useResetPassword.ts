@@ -12,7 +12,7 @@ import { useAppForm } from '@/shared/lib/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 
-import { resetSchema, type ResetFormSchema } from './schema';
+import { resetSchema, type ResetFormSchema } from './reset.schema';
 
 const { LOGIN } = AUTH_STEPS;
 const { SUCCESS, ERROR } = TOAST_VARIANT;

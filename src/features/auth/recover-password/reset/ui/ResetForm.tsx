@@ -8,7 +8,7 @@ import { PasswordForm } from '@/features/auth/password';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AuthButton } from '@/shared/ui';
 
-import { resetFormFields } from '../lib/form-config';
+import { resetFormFields } from '../lib/reset-fields';
 import { useResetPassword } from '../model/useResetPassword';
 
 import styles from './ResetForm.module.scss';

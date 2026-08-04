@@ -7,3 +7,12 @@
 .circle {
   border-radius: $radius-full;
 }
+
+.fallback {
+  font: {
+    size: $subtitle-font-size;
+    weight: $font-weight-medium;
+  }
+
+  color: $primary-400;
+}

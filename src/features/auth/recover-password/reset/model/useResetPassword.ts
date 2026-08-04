@@ -1,15 +1,26 @@
 import type { NavigateFn } from '@types';
 import type { SubmitHandler } from 'react-hook-form';
 
+import { useTranslation } from 'react-i18next';
+
+import { useAppDispatch } from '@/app/providers/store/hooks';
 import { AUTH_STEPS } from '@/features/auth/stepper';
+import { showToast } from '@/entities/toast';
 import { supabase } from '@/shared/api/supabase';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { useAppForm } from '@/shared/lib/hooks';
+
+import { TOAST_VARIANT } from '@/shared/ui/toast';
 
 import { resetSchema, type ResetFormSchema } from './schema';
 
-const { VERIFY } = AUTH_STEPS;
+const { LOGIN } = AUTH_STEPS;
+const { SUCCESS, ERROR } = TOAST_VARIANT;
 
 export const useResetPassword = (onNavigate: NavigateFn) => {
+  const { t } = useTranslation(NS.AUTH);
+  const dispatch = useAppDispatch();
+
   const resetForm = useAppForm<ResetFormSchema>({
     schema: resetSchema,
     defaultValues: {
@@ -30,11 +41,27 @@ export const useResetPassword = (onNavigate: NavigateFn) => {
     });
 
     if (error) {
-      console.error(error.message);
+      dispatch(
+        showToast({
+          variant: ERROR,
+          description: t('reset.toast.resetError'),
+        }),
+      );
+
       return;
     }
 
-    onNavigate(VERIFY);
+    dispatch(
+      showToast({
+        variant: SUCCESS,
+        description: t('reset.toast.resetSuccess'),
+      }),
+    );
+
+    // TODO: Temporary navigate to dashboard after successufll password reet. Remove this after implementing the next step in the auth flow
+    // onNavigate(VERIFY);
+
+    onNavigate(LOGIN);
   };
 
   return { resetForm, isValid, isSubmitting, isSubmitDisabled, handleSubmit };

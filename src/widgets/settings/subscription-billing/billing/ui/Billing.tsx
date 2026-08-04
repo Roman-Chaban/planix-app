@@ -22,6 +22,8 @@ export const Billing = ({ skeleton: Skeleton }: BillingProps) => {
 
   const columns = getBillingHistoryColumns(t);
 
+  console.log(billing);
+
   if (!isLoading && !billing) {
     return null;
   }

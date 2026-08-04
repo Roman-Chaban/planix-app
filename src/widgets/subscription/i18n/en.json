@@ -1,0 +1,10 @@
+{
+  "header": {
+    "title": "Choose Your Plan",
+    "subtitle": "Pick the best plan to grow your business"
+  },
+  "planCard": {
+    "month": "/Month"
+  },
+  "select": "Select Plan"
+}

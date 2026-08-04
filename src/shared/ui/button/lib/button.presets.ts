@@ -127,6 +127,14 @@ export const BUTTON_PRESETS: ButtonPresets = {
     type: BUTTON,
     variant: TRANSPARENT,
   },
+
+  SELECT_PLAN: {
+    type: BUTTON,
+    variant: DEFAULT,
+    size: LARGE,
+    shape: ROUNDED,
+    minWidth: LG,
+  },
 } as const;
 
 export type ButtonPresetKey = keyof typeof BUTTON_PRESETS;

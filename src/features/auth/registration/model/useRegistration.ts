@@ -7,7 +7,7 @@ import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
 import { type RegisterFormValues, registerSchema } from './register.schema';
 
-const { DASHBOARD } = ROUTES;
+const { SUBSCRIPTION } = ROUTES;
 
 export const useRegistration = () => {
   const localizedRouter = useLocalizedRouter();
@@ -49,7 +49,7 @@ export const useRegistration = () => {
       return;
     }
 
-    localizedRouter.push(DASHBOARD);
+    localizedRouter.push(SUBSCRIPTION);
   };
 
   return {

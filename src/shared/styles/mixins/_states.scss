@@ -141,3 +141,15 @@
   cursor: not-allowed;
   opacity: 0.5;
 }
+
+@mixin page-border-decoration(
+  $background: $neutral-0,
+  $border-color: $primary-700,
+  $shadow: $shadow-not-found,
+  $radius: $radius-2xl
+) {
+  background: $background;
+  border-top: 0.188rem solid $border-color;
+  box-shadow: $shadow;
+  border-radius: $radius;
+}

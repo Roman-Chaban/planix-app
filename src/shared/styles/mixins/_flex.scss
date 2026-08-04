@@ -14,7 +14,7 @@
   flex-wrap: $wrap;
 }
 
-@mixin flex-col($gap: 0, $justify: start, $align: stretch, $direction) {
+@mixin flex-col($gap: 0, $justify: start, $align: stretch, $direction: column) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;

@@ -18,7 +18,12 @@
     "email": "Email",
     "contact": "Contact No",
     "edit": "Click to edit",
-    "save": "Save Profile"
+    "save": "Save Profile",
+
+    "toast": {
+      "success": "Avatar updated successfully",
+      "error": "Failed to update avatar"
+    }
   },
 
   "editForm": {

@@ -17,7 +17,7 @@ export const DetailsSkeleton = () => {
           <Box className={styles.profileInfo}>
             <Box className={styles.profileBox}>
               <Box className={styles.avatar}>
-                <Skeleton width="100%" height="100%" />
+                <Skeleton width={74} height={74} radius="100%" />
               </Box>
 
               <Box className={styles.info}>

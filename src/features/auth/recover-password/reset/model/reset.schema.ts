@@ -1,16 +1,16 @@
-import * as zod from 'zod';
+import * as z from 'zod';
 
-export const resetSchema = zod
+export const resetSchema = z
   .object({
-    newPassword: zod
+    newPassword: z
       .string()
       .min(1, 'reset.validation.required')
       .min(8, 'reset.validation.minPassword'),
-    confirmPassword: zod.string().min(1, 'reset.validation.required'),
+    confirmPassword: z.string().min(1, 'reset.validation.required'),
   })
   .refine((data) => data.newPassword === data.confirmPassword, {
     message: 'reset.validation.mismatch',
     path: ['confirmPassword'],
   });
 
-export type ResetFormSchema = zod.infer<typeof resetSchema>;
+export type ResetFormSchema = z.infer<typeof resetSchema>;

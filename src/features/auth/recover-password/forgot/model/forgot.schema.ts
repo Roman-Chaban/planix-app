@@ -1,7 +1,7 @@
-import * as zod from 'zod';
+import * as z from 'zod';
 
-export const forgotPasswordSchema = zod.object({
-  email: zod.email({ message: 'forgot.validation.email.invalid' }),
+export const forgotPasswordSchema = z.object({
+  email: z.email({ message: 'forgot.validation.email.invalid' }),
 });
 
-export type ForgotPasswordSchema = zod.infer<typeof forgotPasswordSchema>;
+export type ForgotPasswordSchema = z.infer<typeof forgotPasswordSchema>;

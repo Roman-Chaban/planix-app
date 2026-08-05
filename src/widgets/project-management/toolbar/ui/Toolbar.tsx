@@ -2,10 +2,10 @@
 
 import type { ToolbarProps } from '../model/types';
 
-import { useSidebar } from '@/app/providers/sidebar';
 import { ToolbarHeader, ToolbarActions } from '@/widgets/project-management';
 
 import { buildClassName } from '@/shared/lib';
+import { useSidebar } from '@/shared/providers/sidebar';
 import { Box } from '@/shared/ui';
 
 import { useToolbar } from '../model/useToolbar';

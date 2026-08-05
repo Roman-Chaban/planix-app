@@ -2,11 +2,11 @@ import type { AppProvidersProps } from './core.types';
 
 import { AppToast } from '@/entities/toast';
 
-import { SidebarProvider } from '../../../app/providers/sidebar';
-import { StoreProvider } from '../store';
 import { AuthProvider } from '../auth';
 import { I18nProvider } from '../i18n';
 import { QueryProvider } from '../query';
+import { SidebarProvider } from '../sidebar';
+import { StoreProvider } from '../store';
 
 export const AppProviders = ({ children, locale }: AppProvidersProps) => {
   return (

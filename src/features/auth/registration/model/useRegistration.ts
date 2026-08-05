@@ -1,6 +1,6 @@
 import type { SubmitHandler } from 'react-hook-form';
 
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 
 import { supabase } from '@/shared/api/supabase';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';

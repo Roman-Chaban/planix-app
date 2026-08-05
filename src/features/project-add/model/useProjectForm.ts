@@ -2,7 +2,7 @@
 
 import type { SubmitHandler } from 'react-hook-form';
 
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
 import { useProjectActions } from '@/entities/project/api/useProjectActions';
 import { uploadFileToSupabase } from '@/entities/project/model/projects';

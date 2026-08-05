@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 import { Nav, type SidebarProps } from '@/widgets/sidebar';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { buildClassName } from '@/shared/lib';

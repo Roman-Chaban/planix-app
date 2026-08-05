@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 
 import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';

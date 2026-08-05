@@ -5,7 +5,7 @@ import type { SubmitHandler } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 
 import { AUTH_STEPS } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';

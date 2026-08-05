@@ -1,4 +1,4 @@
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 
 export const useToolbar = () => {

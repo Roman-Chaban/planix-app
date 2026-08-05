@@ -2,7 +2,7 @@ import { type ChangeEvent, useRef } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch } from '@/app/providers/store/hooks';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 import { uploadProfileAvatar } from '@/entities/profile';
 import { showToast } from '@/entities/toast';
 import { NAMESPACE as NS } from '@/shared/i18n';

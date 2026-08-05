@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { useAppDispatch } from '@/app/providers/store/hooks';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { closeModal } from '@/entities/modal';
 import { supabase } from '@/shared/api';

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch } from '@/app/providers/store/hooks';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 import { ROUTES } from '@/app/routes';
 import { closeModal } from '@/entities/modal';
 import { showToast } from '@/entities/toast';

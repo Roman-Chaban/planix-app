@@ -4,11 +4,11 @@ import { useCallback, useEffect, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch } from '@/shared/providers/store/hooks';
 import { closeModal, ModalId, openModal } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { buildAuthSearchParams, clearRecoveryState, getAuthStep } from '@/shared/lib';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { AUTH_STEPS, type AuthStep } from '../lib/stepper.constants';
 

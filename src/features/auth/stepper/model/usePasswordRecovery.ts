@@ -3,11 +3,10 @@
 import { useEffect } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { useAppDispatch } from '@/shared/providers/store/hooks';
-
 import { closeModal } from '@/entities/modal';
 import { supabase } from '@/shared/api';
 import { buildAuthSearchParams, clearRecoveryState } from '@/shared/lib';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { AUTH_STEPS } from '../lib/stepper.constants';
 

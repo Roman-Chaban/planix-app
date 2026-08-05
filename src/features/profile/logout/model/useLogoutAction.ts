@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch } from '@/shared/providers/store/hooks';
 import { ROUTES } from '@/app/routes';
 import { closeModal } from '@/entities/modal';
 import { showToast } from '@/entities/toast';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 

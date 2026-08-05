@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/shared/config/routes';
 import { closeModal } from '@/entities/modal';
 import { showToast } from '@/entities/toast';
+import { ROUTES } from '@/shared/config/routes';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 import { useAppDispatch } from '@/shared/providers/store/hooks';

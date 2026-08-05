@@ -1,8 +1,8 @@
 import type { SubmitHandler } from 'react-hook-form';
 
+import { supabase } from '@/shared/api/supabase';
 import { ROUTES } from '@/shared/config/routes';
 
-import { supabase } from '@/shared/api/supabase';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
 import { type RegisterFormValues, registerSchema } from './register.schema';

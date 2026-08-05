@@ -2,9 +2,9 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { useProfile } from '@/entities/profile';
 import { ROUTES } from '@/shared/config/routes';
 
-import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppLink, Avatar, Box, Button, Tooltip } from '@/shared/ui';
 

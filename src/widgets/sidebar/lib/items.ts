@@ -1,7 +1,7 @@
 import type { TFunction } from 'i18next';
 
-import { ROUTES } from '@/shared/config/routes';
 import type { NavItemData } from '@/widgets/sidebar/model/types';
+import { ROUTES } from '@/shared/config/routes';
 import {
   AnalyticsIcon,
   ClientIcon,

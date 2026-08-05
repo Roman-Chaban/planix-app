@@ -1,1 +1,1 @@
-export { AppProviders } from './core/AppProviders';
+export { AppProviders } from '../../shared/providers/core/AppProviders';

@@ -1,12 +1,12 @@
 import { Header } from '@/widgets/header';
 import { PageWrapper } from '@/shared/ui';
 
-import { Analytics } from '../../analytics';
-import { Cards } from '../../cards';
+import { Analytics } from './analytics';
+import { Cards } from './cards';
 
-import styles from './DashboardLayout.module.scss';
+import styles from './Dashboard.module.scss';
 
-export const DashboardLayout = () => {
+export const Dashboard = () => {
   return (
     <PageWrapper header={<Header title={'dashboard'} />} sectionClassName={styles.dashboard}>
       <Cards />

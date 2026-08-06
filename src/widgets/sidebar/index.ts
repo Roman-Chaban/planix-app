@@ -1,6 +1,6 @@
 export type { SidebarProps, NavItemData, NavItemProps, NavProps } from './model/types';
 
-export { getNavItems } from './lib/items';
+export { getNavItems } from './lib/get-nav-items';
 
 export { isActiveRoute } from './lib/is-active-route';
 

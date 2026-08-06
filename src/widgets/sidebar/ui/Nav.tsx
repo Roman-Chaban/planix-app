@@ -6,7 +6,7 @@ import { NavItem, isActiveRoute, type NavProps } from '@/widgets/sidebar';
 
 import { List } from '@/shared/ui';
 
-import { getNavItems } from '../lib/items';
+import { getNavItems } from '../lib/get-nav-items';
 
 import styles from './Sidebar.module.scss';
 

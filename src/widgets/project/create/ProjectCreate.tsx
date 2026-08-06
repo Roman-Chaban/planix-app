@@ -4,7 +4,7 @@ import { DetailsForm } from '@/features/project-add';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { PageWrapper } from '@/shared/ui';
 
-export const ProjectCreateLayout = () => {
+export const ProjectCreate = () => {
   return (
     <PageWrapper header={<Header title="projects" />}>
       <ProjectHeader

@@ -1,4 +1,4 @@
-export type { SidebarProps, NavItemData, NavItemProps, NavProps } from './model/types';
+export type { SidebarProps, NavItemData, NavItemProps, NavProps } from './model/sidebar.types';
 
 export { getNavItems } from './lib/get-nav-items';
 

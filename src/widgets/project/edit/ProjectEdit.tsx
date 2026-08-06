@@ -3,7 +3,7 @@ import { ProjectHeader } from '@/widgets/project-management';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { PageWrapper } from '@/shared/ui';
 
-export const ProjectEditLayout = () => {
+export const ProjectEdit = () => {
   return (
     <PageWrapper header={<Header title="projects" />}>
       <ProjectHeader

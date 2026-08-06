@@ -1,1 +1,1 @@
-export { ProjectEditLayout } from './ui/ProjectEditLayout';
+export { ProjectEdit } from './ProjectEdit';

@@ -4,12 +4,12 @@ import { Header } from '@/widgets/header';
 import { LogoutModal } from '@/features/profile/logout';
 import { PageWrapper } from '@/shared/ui';
 
-import { ProfileMenu } from '../../menu';
-import { useSettingsModel } from '../model/useSettingsModel';
+import { ProfileMenu } from './menu';
 
-import styles from './SettingsLayout.module.scss';
+import { useSettingsModel } from './model/useSettingsModel';
+import styles from './Settings.module.scss';
 
-export const SettingsLayout = () => {
+export const Settings = () => {
   const { activeId, ActiveComponent, handleTabChange, isAuthenticated } = useSettingsModel();
 
   return (

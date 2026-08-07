@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { useSession } from '@/shared/providers/auth/useSession';
 
-import { getProfile } from '../lib/profile';
+import { getProfile } from '../api';
 import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useProfile = () => {

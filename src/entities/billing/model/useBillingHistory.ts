@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { supabase } from '@/shared/api/supabase';
 
-import { getBillingHistory } from '../lib/get-billing-history';
+import { getBillingHistory } from '../api/getBillingHistory';
 import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useBillingHistory = () => {

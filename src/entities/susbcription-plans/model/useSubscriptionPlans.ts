@@ -2,8 +2,8 @@ import type { UseSubscriptionPlansOptions } from './susbcription-plans.types';
 
 import { useQuery } from '@tanstack/react-query';
 
+import { getSubscriptionPlans } from '../api/getSubscriptionPlans';
 import { mapSubscriptionPlan } from '../lib/subscription-plans.mapper';
-import { getSubscriptionPlans } from '../lib/susbcription-plans';
 import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useSubscriptionPlans = ({ lng }: UseSubscriptionPlansOptions) => {

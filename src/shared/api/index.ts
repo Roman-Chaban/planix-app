@@ -11,4 +11,5 @@ export {
   CREATED_AT,
   PROJECTS,
   PROJECT_FILES,
+  PRICE,
 } from './lib/supabase.constants';

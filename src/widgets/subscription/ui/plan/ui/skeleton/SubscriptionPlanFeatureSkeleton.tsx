@@ -2,7 +2,7 @@
 
 import { Box, Skeleton } from '@/shared/ui';
 
-import styles from '../ui/SubscriptionPlan.module.scss';
+import styles from '../SubscriptionPlan.module.scss';
 
 export const SubscriptionPlanFeatureSkeleton = () => {
   return (

@@ -3,7 +3,7 @@ import type { Billing } from '../model/billing.types';
 import { BILLING_HISTORY, PAYMENT_DATE, USER_ID } from '@/shared/api';
 import { supabase } from '@/shared/api/supabase';
 
-import { mapBilling } from './billing.mapper';
+import { mapBilling } from '../lib/billing.mapper';
 
 export const getBillingHistory = async (userId: string): Promise<Billing[]> => {
   const { data, error } = await supabase

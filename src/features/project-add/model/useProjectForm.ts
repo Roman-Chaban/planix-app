@@ -3,8 +3,8 @@
 import type { SubmitHandler } from 'react-hook-form';
 
 import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
+import { uploadProjectFile } from '@/entities/project';
 import { useProjectActions } from '@/entities/project/model/useProjectActions';
-import { uploadProjectFile } from '@/entities/project/api/getProjects';
 import { ROUTES } from '@/shared/config/routes';
 import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
 

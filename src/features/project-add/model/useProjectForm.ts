@@ -3,8 +3,8 @@
 import type { SubmitHandler } from 'react-hook-form';
 
 import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
-import { useProjectActions } from '@/entities/project/api/useProjectActions';
-import { uploadFileToSupabase } from '@/entities/project/model/projects';
+import { useProjectActions } from '@/entities/project/model/useProjectActions';
+import { uploadProjectFile } from '@/entities/project/api/getProjects';
 import { ROUTES } from '@/shared/config/routes';
 import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
 
@@ -36,7 +36,7 @@ export const useProjectForm = () => {
     return Promise.all(
       files.map(async (file) => {
         if (file instanceof File) {
-          return await uploadFileToSupabase(file);
+          return await uploadProjectFile(file);
         }
         return file;
       }),

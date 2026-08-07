@@ -1,7 +1,7 @@
 import type { Project } from '@/entities/project';
 import { toDisplay } from '@/shared/lib';
 
-import { STATUSES } from './statuses';
+import { STATUSES } from './statuses.constants';
 
 export const toProjectTableItem = (project: Project) => {
   const formattedDueDate = toDisplay(project.due_date);

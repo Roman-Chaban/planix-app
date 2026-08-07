@@ -12,9 +12,9 @@ import {
   updateProject as updateProjectRepository,
 } from '@/entities/project';
 
-import { queryKeys } from '@/entities/project/api/queryKeys';
+import { queryKeys } from '@/entities/project/queryKeys/queryKeys';
 
-import { mapCreateProject, mapUpdateProject } from './lib/project.mappers';
+import { mapCreateProject, mapUpdateProject } from '../lib/project.mapper';
 
 export const useProjectActions = () => {
   const queryClient = useQueryClient();

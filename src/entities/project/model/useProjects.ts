@@ -2,8 +2,8 @@
 
 import { useQuery } from '@tanstack/react-query';
 
-import { queryKeys } from '@/entities/project/api/queryKeys';
-import { getProjects } from '@/entities/project/model/projects';
+import { getProjects } from '../api';
+import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useProjects = () => {
   return useQuery({

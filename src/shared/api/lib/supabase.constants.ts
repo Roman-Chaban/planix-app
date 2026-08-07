@@ -5,3 +5,6 @@ export const USER_ID = 'user_id';
 export const PAYMENT_DATE = 'payment_date';
 export const ID = 'id';
 export const SUBSCRIPTION_PLANS = 'plans';
+export const PROJECTS = 'Projects';
+export const CREATED_AT = 'created_at';
+export const PROJECT_FILES = 'project-files';

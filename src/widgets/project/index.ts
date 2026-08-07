@@ -7,7 +7,7 @@ export type {
   ProjectDetailsMapOptions,
 } from './ui/model/types';
 
-export { ProjectCreateLayout } from './create';
+export { ProjectCreate } from './create';
 export { Description } from './description';
 export { Details } from './ui/Details';
 export { FileItem } from './files';

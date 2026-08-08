@@ -1,3 +1,3 @@
-export { Analytics, AnalyticsHeader, AnalyticsHeaders, AnalyticsRevenue } from './analytics';
-export { Cards } from './cards';
-export { Dashboard } from './Dashboard';
+export { Analytics, AnalyticsHeader, AnalyticsHeaders, AnalyticsRevenue } from './ui/analytics';
+export { Cards } from './ui/cards';
+export { Dashboard } from './ui/Dashboard';

@@ -3,7 +3,7 @@
 .item {
   @include flex-row($space-3);
 
-  padding: 0.813rem 1.688rem 0.875rem 0.75rem;
+  padding: 0.813rem 0.5rem 0.875rem 0.75rem;
   border: 0.125rem solid transparent;
 
   color: $neutral-700;
@@ -44,9 +44,6 @@
   opacity: 1;
   transform: translateX(0);
 
-  white-space: nowrap;
-  overflow: hidden;
-
   @include smooth-transitions(
     width 300ms ease,
     max-width 300ms ease,
@@ -78,5 +75,17 @@
     opacity: 1;
 
     @include smooth-transitions(opacity 200ms ease, transform 200ms ease);
+  }
+
+  &::before {
+    @include text-before-decoration(
+      '',
+      absolute,
+      0,
+      0.125rem,
+      1.75rem,
+      0 0.5rem 0.5rem 0,
+      $primary-700
+    );
   }
 }

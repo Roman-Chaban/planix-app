@@ -19,14 +19,11 @@ export const Nav = ({ isCollapsed, t }: NavProps) => {
     <List
       getItemKey={({ id }) => id}
       renderList={navItems}
-      renderItem={(item) => (
-        <NavItem
-          {...item}
-          isActive={isActiveRoute(pathname, item.href)}
-          isCollapsed={isCollapsed}
-          t={t}
-        />
-      )}
+      renderItem={(item) => {
+        const isActive = isActiveRoute(pathname, item.href);
+
+        return <NavItem {...item} isActive={isActive} isCollapsed={isCollapsed} t={t} />;
+      }}
     />
   );
 };

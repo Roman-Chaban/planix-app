@@ -1,15 +1,5 @@
-import type { FieldValues, UseFormSetError, Path } from 'react-hook-form';
-
-type FormErrorType = 'server' | 'manual' | 'validate';
-
-type SetFormErrorParams<T extends FieldValues> = {
-  form: {
-    setError: UseFormSetError<T>;
-  };
-  fields: Path<T>[];
-  message: string;
-  type?: FormErrorType;
-};
+import type { SetFormErrorParams } from './helpers.types';
+import type { FieldValues } from 'react-hook-form';
 
 export const setFormErrors = <T extends FieldValues>({
   form,

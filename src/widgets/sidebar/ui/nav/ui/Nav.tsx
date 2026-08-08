@@ -1,14 +1,15 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import type { NavProps } from '../model/nav.types';
 
-import { NavItem, isActiveRoute, type NavProps } from '@/widgets/sidebar';
+import { usePathname } from 'next/navigation';
 
 import { List } from '@/shared/ui';
 
 import { getNavItems } from '../lib/get-nav-items';
+import { isActiveRoute } from '../lib/is-active-route';
 
-import styles from './Sidebar.module.scss';
+import { NavItem } from './NavItem';
 
 export const Nav = ({ isCollapsed, t }: NavProps) => {
   const pathname = usePathname();
@@ -16,7 +17,6 @@ export const Nav = ({ isCollapsed, t }: NavProps) => {
 
   return (
     <List
-      className={styles.list}
       getItemKey={({ id }) => id}
       renderList={navItems}
       renderItem={(item) => (

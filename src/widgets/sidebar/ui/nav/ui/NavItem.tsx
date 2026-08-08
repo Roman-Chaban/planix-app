@@ -1,11 +1,11 @@
 'use client';
 
-import type { NavItemProps } from '@/widgets/sidebar';
+import type { NavItemProps } from '../model/nav.types';
 
 import { buildClassName } from '@/shared/lib';
 import { AppLink, Box, Typography } from '@/shared/ui';
 
-import styles from './Sidebar.module.scss';
+import styles from './Nav.module.scss';
 
 export const NavItem = ({
   id: key,

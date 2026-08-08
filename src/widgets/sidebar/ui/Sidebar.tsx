@@ -20,8 +20,6 @@ const { TRANSPARENT } = BUTTON_VARIANTS;
 export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
   const { t } = useTranslation(NS.SIDEBAR);
 
-  const renderToggleIcon = isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />;
-
   return (
     <Box
       as="aside"
@@ -40,11 +38,11 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
         <Button
           onClick={toggleSidebar}
           variant={TRANSPARENT}
-          className={buildClassName(styles.button, {
+          className={buildClassName(styles.toggleButton, {
             [styles.iconCollapsed]: !isSidebarOpen,
           })}
         >
-          {renderToggleIcon}
+          {isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />}
         </Button>
       </Box>
 

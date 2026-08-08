@@ -17,8 +17,8 @@
 }
 
 .sidebarLogo {
-  position: relative;
   width: 100%;
+  position: relative;
   @include flex-row(0.813rem, start, center);
   padding: 1.125rem 1rem;
 
@@ -63,17 +63,19 @@
   overflow: hidden;
 }
 
-.button {
+.toggleButton {
+  @include flex-center;
   position: absolute;
-  color: $primary-200;
   top: 50%;
   right: 0.75rem;
   transform: translateY(-50%);
+  color: $primary-200;
 }
 
-.button.iconCollapsed {
-  top: 5rem;
-  right: 1.4rem;
+.toggleButton.iconCollapsed {
+  top: calc(2.75rem + 1.125rem + 1rem);
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 .content {

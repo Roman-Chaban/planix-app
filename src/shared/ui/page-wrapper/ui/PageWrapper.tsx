@@ -1,16 +1,14 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { Sidebar } from '@/widgets/sidebar';
-import { useSidebar } from '@/features/sidebar';
 import { buildClassName } from '@/shared/lib';
+import { useSidebar } from '@/shared/providers/sidebar';
 import { Box, Grid } from '@/shared/ui';
 import type { PageWrapperProps } from '@/shared/ui/page-wrapper';
 
 import styles from './PageWrapper.module.scss';
 
-export const PageWrapper: FC<PageWrapperProps> = ({ children, header, sectionClassName }) => {
+export const PageWrapper = ({ children, header, sectionClassName }: PageWrapperProps) => {
   const { isSidebarOpen, toggleSidebar, hydrated } = useSidebar();
 
   if (!hydrated) {
@@ -29,7 +27,9 @@ export const PageWrapper: FC<PageWrapperProps> = ({ children, header, sectionCla
 
       <Box
         as="main"
-        className={buildClassName(styles.main, { [styles.mainCollapsed]: !isSidebarOpen })}
+        className={buildClassName(styles.main, {
+          [styles.mainCollapsed]: !isSidebarOpen,
+        })}
       >
         <Box as="section" className={sectionClassName}>
           {children}

@@ -1,5 +1,5 @@
-import { ProjectCreateLayout } from '@/widgets/project-create';
+import { ProjectCreate } from '@/widgets/project/create';
 
 export default function ProjectCreatePage() {
-  return <ProjectCreateLayout />;
+  return <ProjectCreate />;
 }

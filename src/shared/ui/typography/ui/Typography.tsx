@@ -1,17 +1,16 @@
-import type { TypographyProps, TypographyTag } from '@/shared/ui/typography';
+import type { TypographyProps } from '../model/types';
 
-export const Typography = <T extends TypographyTag = 'span'>({
-  as,
-  children,
-  className,
-  testId,
-  ...props
-}: TypographyProps<T>) => {
-  const Component = as || 'span';
+import { forwardRef, type ElementType } from 'react';
 
-  return (
-    <Component className={className} data-testid={testId} {...props}>
-      {children}
-    </Component>
-  );
-};
+export const Typography = forwardRef(
+  <T extends ElementType = 'span'>(
+    { as, testId, ...props }: TypographyProps<T>,
+    ref: React.Ref<Element>,
+  ) => {
+    const Component = as ?? 'span';
+
+    return <Component ref={ref} data-testid={testId} {...props} />;
+  },
+);
+
+Typography.displayName = 'Typography';

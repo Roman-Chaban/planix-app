@@ -1,4 +1,4 @@
-import { ProjectDetailsLayout } from '@/widgets/project-details';
+import { Details } from '@/widgets/project/ui/Details';
 import { supabase } from '@/shared/api/supabase';
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -6,5 +6,5 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   const { data: project } = await supabase.from('Projects').select('*').eq('slug', slug).single();
 
-  return <ProjectDetailsLayout project={project} />;
+  return <Details project={project} />;
 }

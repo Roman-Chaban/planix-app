@@ -1,16 +1,10 @@
-import type { FC, ReactNode } from 'react';
-
 import { Box } from '@/shared/ui';
+
+import type { ModalOverlayProps } from '@/shared/ui/modal';
 
 import styles from './Modal.module.scss';
 
-type ModalOverlayProps = {
-  children: ReactNode;
-  onClose: () => void;
-  closeOnOverlayClick: boolean;
-};
-
-export const ModalOverlay: FC<ModalOverlayProps> = ({ children, onClose, closeOnOverlayClick }) => {
+export const ModalOverlay = ({ children, onClose, closeOnOverlayClick }: ModalOverlayProps) => {
   return (
     <Box className={styles.overlay} onClick={closeOnOverlayClick ? onClose : undefined}>
       {children}

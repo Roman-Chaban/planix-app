@@ -1,11 +1,6 @@
-export type {
-  DeleteProjectModalProps,
-  UseDeleteProjectOptions,
-  DeleteProjectActionsProps,
-} from './model/types';
+export type { DeleteProjectModalProps, UseDeleteProjectOptions } from './model/types';
 
-export { useDeleteModal } from './lib/useDeleteModal';
 export { useDeleteProject } from './lib/useDeleteProject';
+export { useDeleteProjectModal } from './lib/useDeleteProjectModal';
 
-export { DeleteModal } from './ui/DeleteModal';
-export { DeleteModalActions } from './ui/DeleteModalActions';
+export { DeleteProjectModal } from './ui/DeleteProjectModal';

@@ -1,0 +1,27 @@
+@use '@/shared/styles' as *;
+
+.box {
+  @include flex-row(0.5rem, start, center);
+
+  & svg {
+    color: $icon-muted;
+  }
+}
+
+.title {
+  line-height: 150%;
+  font-size: $body-lg-font-size;
+}
+
+.button {
+  line-height: 150%;
+  font-size: $body-lg-font-size;
+  color: $icon-brand;
+}
+
+.title,
+.button {
+  @include respond(sm) {
+    font-size: $body-md-font-size;
+  }
+}

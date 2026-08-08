@@ -1,24 +1,24 @@
 'use client';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
-import { SidebarNav, type SidebarProps } from '@/widgets/sidebar';
-
+import { Nav, type SidebarProps } from '@/widgets/sidebar';
+import { ROUTES } from '@/shared/config/routes';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { buildClassName } from '@/shared/lib';
+
 import { AppLink, Box, Button, Typography } from '@/shared/ui';
 
+import { BUTTON_VARIANTS } from '@/shared/ui/button';
 import { CollapsedIcon, ExpandedIcon, PlanixLogoIcon } from '@/shared/ui/icons';
 
 import styles from './Sidebar.module.scss';
 
 const { DASHBOARD } = ROUTES;
+const { TRANSPARENT } = BUTTON_VARIANTS;
 
-export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
-  const { t } = useTranslation('sidebar');
-
-  const renderToggleIcon = isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />;
+export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
+  const { t } = useTranslation(NS.SIDEBAR);
 
   return (
     <Box
@@ -37,15 +37,17 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
 
         <Button
           onClick={toggleSidebar}
-          variant="transparent"
-          className={buildClassName(styles.button, { [styles.iconCollapsed]: !isSidebarOpen })}
+          variant={TRANSPARENT}
+          className={buildClassName(styles.toggleButton, {
+            [styles.iconCollapsed]: !isSidebarOpen,
+          })}
         >
-          {renderToggleIcon}
+          {isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />}
         </Button>
       </Box>
 
       <Box as="nav" className={styles.content}>
-        <SidebarNav isCollapsed={!isSidebarOpen} />
+        <Nav isCollapsed={!isSidebarOpen} t={t} />
       </Box>
     </Box>
   );

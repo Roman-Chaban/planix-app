@@ -1,7 +1,5 @@
 'use client';
 
-import type { FC } from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 import { Box, Button, Typography } from '@/shared/ui';
@@ -10,7 +8,7 @@ import type { ModalHeaderProps } from '@/shared/ui/modal';
 
 import styles from './Modal.module.scss';
 
-export const ModalHeader: FC<ModalHeaderProps> = ({ onClose, title, icon }) => {
+export const ModalHeader = ({ onClose, title, icon }: ModalHeaderProps) => {
   const { t } = useTranslation();
 
   return (
@@ -19,7 +17,7 @@ export const ModalHeader: FC<ModalHeaderProps> = ({ onClose, title, icon }) => {
         {t(title)}
       </Typography>
 
-      <Button className={styles.button} onClick={onClose}>
+      <Button preset="MODAL_CLOSE" className={styles.button} onClick={onClose}>
         {icon}
       </Button>
     </Box>

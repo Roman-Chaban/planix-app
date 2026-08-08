@@ -1,14 +1,13 @@
-export type {
-  ProjectFormData as ProjectDetailsFormData,
-  ProjectDetailsFormProps,
-} from './model/types';
-export { type ProjectDetailsSchema, projectDetailsSchema } from './ui//add-project-details';
+export { type ProjectDetailsSchema, projectDetailsSchema } from './model/project-add.schema';
 
-export { DATE_FORMAT } from './ui/project-add-fields';
+export { useProjectForm } from './model/useProjectForm';
 
-export { useProjectDetailsForm } from './lib/useProjectDetailsForm';
+export { projectAddFields } from './lib/config';
 
-export { ProjectDetails } from './ui/add-project-details/ui/ProjectDetails';
-export { DateFormField } from './ui/project-add-fields/ui/DateFormField';
-export { ProjectDetailsForm } from './ui/add-project-details/ui/ProjectDetailsForm';
-export { ProjectDetailsFields } from './ui/add-project-details/ui/ProjectDetailsFields';
+export { DescriptionField } from './ui/DescriptionField';
+export { DueDateField } from './ui/DueDateField';
+export { FilesField } from './ui/FilesField';
+export { StartDateField } from './ui/StartDateField';
+
+export { DetailsForm } from './ui/DetailsForm';
+export { DetailsHeader } from './ui/DetailsHeader';

@@ -1,0 +1,7 @@
+@use '@/shared/styles' as *;
+
+.skeleton {
+  border-radius: $radius-lg;
+  background: $gradient-skeleton;
+  animation: shimmer 1.2s infinite;
+}

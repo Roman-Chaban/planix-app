@@ -17,8 +17,8 @@
 }
 
 .sidebarLogo {
-  position: relative;
   width: 100%;
+  position: relative;
   @include flex-row(0.813rem, start, center);
   padding: 1.125rem 1rem;
 
@@ -34,7 +34,7 @@
 
 .sidebarTitle {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -42,10 +42,7 @@
 
   white-space: nowrap;
 
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    max-width 0.35s ease;
+  @include smooth-transitions(opacity 0.2s ease, transform 0.2s ease, max-width 0.35s ease);
   opacity: 1;
 }
 
@@ -66,99 +63,28 @@
   overflow: hidden;
 }
 
-.button {
+.toggleButton {
+  @include flex-center;
   position: absolute;
-  color: $primary-200;
   top: 50%;
   right: 0.75rem;
   transform: translateY(-50%);
+  color: $primary-700;
 }
 
-.button.iconCollapsed {
-  top: 5rem;
-  right: 1.7rem;
+.toggleButton.iconCollapsed {
+  top: calc(2.75rem + 1.125rem + 1rem);
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 .content {
+  width: 100%;
   min-height: 100dvh;
   @include flex-col(3.063rem, start, stretch, column);
   padding: 1.938rem 1rem 0 1rem;
 
   @include respond(lg) {
     display: none;
-  }
-}
-
-.item {
-  @include flex-row($space-3);
-
-  padding: 0.813rem 1.688rem 0.875rem 0.75rem;
-  border: 0.125rem solid transparent;
-
-  color: $neutral-700;
-  min-width: 0;
-  cursor: pointer;
-
-  transition:
-    padding 250ms ease,
-    justify-content 250ms ease,
-    border-color 250ms ease,
-    color 250ms ease;
-
-  svg {
-    flex-shrink: 0;
-  }
-}
-
-.sidebarClosed .item {
-  padding-inline: 0.6rem;
-  pointer-events: none;
-}
-
-.label {
-  display: block;
-  font-size: $body-lg-font-size;
-  font-weight: $font-weight-regular;
-  color: inherit;
-  opacity: 1;
-  transform: translateX(0);
-  white-space: nowrap;
-  width: 100%;
-
-  transition:
-    opacity 180ms ease,
-    transform 250ms ease,
-    max-width 300ms ease;
-}
-
-.sidebarClosed .label {
-  max-width: 0;
-  opacity: 0;
-  transform: translateX(-0.375rem);
-}
-
-.active {
-  position: relative;
-  border: 0.125rem solid $primary-700;
-  color: $primary-700;
-  border-radius: 0.5rem;
-
-  transition:
-    border-color 250ms ease,
-    color 250ms ease;
-
-  .label {
-    font-weight: $font-weight-semibold;
-  }
-
-  &::after {
-    @include button-background-overlay('', absolute, 0, $primary-700, 0.05, inherit, none);
-  }
-
-  &::before {
-    opacity: 1;
-    transition:
-      opacity 200ms ease,
-      transform 200ms ease;
   }
 }

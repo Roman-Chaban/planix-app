@@ -1,0 +1,160 @@
+{
+  "settings": "General Settings",
+
+  "settingsMenu": {
+    "myProfile": "My Profile",
+    "notificationSettings": "Notification Setting",
+    "subscription": "Subscription & Billing",
+    "systemSettings": "System Setting",
+    "logOut": "Log Out",
+    "restrictedFeature": "Sign in to access this feature."
+  },
+
+  "profileDetails": {
+    "editLabel": "Edit",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthDate": "Date of Birth",
+    "email": "Email",
+    "contact": "Contact No",
+    "edit": "Click to edit",
+    "save": "Save Profile",
+
+    "toast": {
+      "success": "Avatar updated successfully",
+      "error": "Failed to update avatar"
+    }
+  },
+
+  "editForm": {
+    "validation": {
+      "firstName": {
+        "required": "First name is required"
+      },
+      "lastName": {
+        "required": "Last name is required"
+      },
+      "contact": {
+        "required": "Contact is required"
+      },
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "birthDate": {
+        "required": "Birth date is required"
+      }
+    }
+  },
+
+  "notifications": {
+    "title": "Notifications",
+
+    "items": {
+      "emailNotifications": {
+        "title": "Email Notifications",
+        "subtitle": "Protect your account from unauthorized access."
+      },
+
+      "projectNotifications": {
+        "title": "Project Notifications",
+        "subtitle": "Notifications related to project progress and updates."
+      },
+
+      "messageNotifications": {
+        "title": "Message Notifications",
+        "subtitle": "Stay updated with real-time alerts for new messages."
+      },
+
+      "taskNotifications": {
+        "title": "Task Notifications",
+        "subtitle": "Get alerts for new tasks, updates, and approaching deadlines."
+      },
+
+      "securityNotifications": {
+        "title": "Security Notifications",
+        "subtitle": "Get alerts for login activity and security-related actions."
+      }
+    }
+  },
+
+  "subscriptionAndBilling": {
+    "title": "Subscription & Billing",
+
+    "professionalPlan": {
+      "title": "Professional Plan",
+      "subtitle": "Most Popular for Growing businesses",
+      "perMonth": "/per month",
+      "nextBilling": "Next billing: {{date}}"
+    },
+
+    "professionalActions": {
+      "cancelPlan": "Cancel Plan",
+      "updatePlan": "Update Plan"
+    },
+
+    "billingTable": {
+      "title": "Billing History",
+      "columns": {
+        "date": "Date",
+        "duration": "Duration",
+        "amount": "Amount",
+        "paymentMethod": "Payment Method",
+        "status": "Status"
+      }
+    }
+  },
+
+  "system": {
+    "languageTitle": "Language Setting",
+    "securityTitle": "Security Settings",
+    "changePasswordTitle": "Change Password",
+    "selectLabel": "Default Language",
+
+    "twoFactorAuthentication": {
+      "title": "Two-Factor Authentication (2FA)",
+      "description": "Protect your account from unauthorized access."
+    },
+
+    "darkTheme": {
+      "title": "Dark Theme Mode",
+      "description": "Switch to a darker interface that's easy on the eyes."
+    },
+
+    "oldPasswordLabel": "Old Password",
+    "oldPasswordPlaceholder": "Enter Old Password",
+
+    "newPasswordLabel": "New Password",
+    "newPasswordPlaceholder": "Enter New Password",
+
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordPlaceholder": "Enter Confirm Password",
+
+    "savePassword": "Save Password",
+
+    "validation": {
+      "required": "This field is required.",
+      "minPassword": "Password must be at least 8 characters long.",
+      "mismatch": "Passwords do not match."
+    },
+
+    "toast": {
+      "changePasswordSuccess": "Password changed successfully.",
+      "changePasswordError": "Failed to change password."
+    }
+  },
+
+  "logout": {
+    "modal": {
+      "title": "Are You Sure You Want To Log Out?",
+      "subtitle": "Your data will be safe. Once you log in, you can view your data.",
+      "cancelLabel": "Cancel",
+      "logoutLabel": "Log Out"
+    },
+
+    "toast": {
+      "logoutSuccess": "You have logged out successfully",
+      "logoutError": "You couldn't be logged out, please try again later"
+    }
+  }
+}

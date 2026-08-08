@@ -1,0 +1,72 @@
+@use '@/shared/styles' as *;
+
+.menu {
+  width: 100%;
+  max-width: 16rem;
+  border-right: 0.125rem solid $border-subtle;
+}
+
+.container {
+  @include flex(flex, column, start, stretch, 1.5rem);
+}
+
+.title {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+  color: $text-muted;
+  line-height: $line-height-tight;
+  font: {
+    weight: $font-weight-bold;
+    size: $body-sm-font-size;
+  }
+}
+
+.list {
+  @include flex(flex, column, start, stretch, 0.625rem);
+}
+
+.box {
+  width: 100%;
+  padding-inline-start: 1.25rem;
+  @include flex(flex, row, start, center);
+  min-height: 3.188rem;
+}
+
+.boxActive {
+  @include left-bar($icon-brand, 3.188rem, $bg-brand-subtle);
+}
+
+.boxDisabled {
+  @include left-bar($neutral-300, 3.188rem, $neutral-100);
+  padding-inline-end: 0.5rem;
+}
+
+.item {
+  @include flex-start;
+  padding: 0;
+  overflow: visible;
+}
+
+.item[data-disabled='true'] {
+  @include flex-between;
+  cursor: not-allowed;
+
+  .label {
+    color: $text-disabled;
+  }
+}
+
+.blockedIcon {
+  color: $neutral-400;
+}
+
+.label {
+  line-height: $line-height-base;
+  font-size: $body-lg-font-size;
+  font-weight: $font-weight-regular;
+  color: $neutral-800;
+}
+
+.isActive {
+  color: $icon-brand;
+  font-weight: $font-weight-medium;
+}

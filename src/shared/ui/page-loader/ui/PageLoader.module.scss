@@ -1,0 +1,35 @@
+@use '@/shared/styles' as *;
+
+.pageLoader {
+  min-height: 100dvh;
+
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  @include flex-col-center;
+  gap: 1.5rem;
+}
+
+.indicator {
+  width: 4rem;
+  height: 0.1875rem;
+
+  overflow: hidden;
+  border-radius: $radius-full;
+  background-color: $loader-background;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 40%;
+    height: 100%;
+
+    border-radius: inherit;
+    background-color: $primary-700;
+
+    animation: progress 1.3s ease-in-out infinite;
+  }
+}

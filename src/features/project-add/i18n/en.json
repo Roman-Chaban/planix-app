@@ -18,6 +18,7 @@
   "uploadLabel": "Tap to upload document",
   "uploadPhotosLabel": "Upload files",
   "isProjectPeding": "Project creation in progress...",
+  "addProjectButton": "Add Project",
 
   "validation": {
     "projectNameMin": "Project name must be at least 5 characters long",

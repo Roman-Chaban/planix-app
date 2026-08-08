@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { PlanixLogoIcon } from '@/shared/ui/icons';
@@ -13,11 +14,11 @@ import styles from './BrandBanner.module.scss';
 const { MOBILE_LARGE } = BREAKPOINTS;
 
 export const BrandBanner = () => {
-  const { t } = useTranslation('brand');
+  const { t } = useTranslation(NS.BRAND);
 
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
-  const logoSize = getLogoSized(isMobileLargeScreen, 60, 60);
+  const logoSize = getLogoSized(isMobileLargeScreen, { geometry: 60 });
 
   return (
     <Box className={styles.banner}>

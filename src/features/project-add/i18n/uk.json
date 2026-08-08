@@ -18,6 +18,7 @@
   "uploadLabel": "Натисніть, щоб завантажити документ",
   "uploadPhotosLabel": "Завантажити файли",
   "isProjectPeding": "Створення проекту в процесі...",
+  "addProjectButton": "Додати проєкт",
 
   "validation": {
     "projectNameMin": "Назва проєкту повинна містити щонайменше 5 символів",

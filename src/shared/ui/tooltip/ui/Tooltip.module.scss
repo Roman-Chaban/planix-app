@@ -1,0 +1,53 @@
+@use '@/shared/styles' as *;
+
+.container {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.trigger {
+  @include flex-center;
+}
+
+.tooltip {
+  @include tooltip-style;
+}
+
+.arrow {
+  @include tooltip-arrow-style;
+}
+
+@include tooltip-hover('.container', '.tooltip');
+
+.tooltip[data-position='top'] {
+  @include tooltip-position(top);
+}
+
+.tooltip[data-position='bottom'] {
+  @include tooltip-position(bottom);
+}
+
+.tooltip[data-position='left'] {
+  @include tooltip-position(left);
+}
+
+.tooltip[data-position='right'] {
+  @include tooltip-position(right);
+}
+
+.tooltip[data-position='top'] .arrow {
+  @include arrow-position(top);
+}
+
+.tooltip[data-position='bottom'] .arrow {
+  @include arrow-position(bottom);
+}
+
+.tooltip[data-position='left'] .arrow {
+  @include arrow-position(left);
+}
+
+.tooltip[data-position='right'] .arrow {
+  @include arrow-position(right);
+}

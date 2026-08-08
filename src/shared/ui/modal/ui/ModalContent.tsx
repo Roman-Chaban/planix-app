@@ -1,10 +1,11 @@
-import type { FC, ReactNode } from 'react';
+import type { ModalContentProps } from '../model/types';
 
+import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
 
 import styles from './Modal.module.scss';
 
-export const ModalContent: FC<{ children: ReactNode }> = ({ children }) => {
+export const ModalContent = ({ children, className }: ModalContentProps) => {
   return (
     <Box
       className={styles.modal}
@@ -12,7 +13,7 @@ export const ModalContent: FC<{ children: ReactNode }> = ({ children }) => {
       role="dialog"
       aria-modal="true"
     >
-      <Box className={styles.content}>{children}</Box>
+      <Box className={buildClassName(className, styles.content)}>{children}</Box>
     </Box>
   );
 };

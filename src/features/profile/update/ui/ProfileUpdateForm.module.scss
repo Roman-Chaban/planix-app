@@ -1,0 +1,39 @@
+@use '@/shared/styles' as *;
+
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  grid-template-areas:
+    'firstName lastName'
+    'email email'
+    'birthDate contact'
+    'submit submit';
+}
+
+.save {
+  grid-area: submit;
+  justify-self: start;
+}
+
+.firstName {
+  grid-area: firstName;
+}
+
+.lastName {
+  grid-area: lastName;
+}
+
+.email {
+  grid-area: email;
+}
+
+.birthDate {
+  grid-area: birthDate;
+}
+
+.contact {
+  grid-area: contact;
+}

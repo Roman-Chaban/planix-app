@@ -1,26 +1,24 @@
 @use '@/shared/styles' as *;
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  min-width: auto;
+  font-weight: $font-weight-medium;
   gap: 0.625rem;
   line-height: 150%;
-
   font-family: inherit;
   border: none;
   cursor: pointer;
-
   transition: all 0.2s ease;
 
   @include button-disabled;
+  @include text-ellipsis;
 }
 
 .default {
   background: $primary-700;
-  color: $neutral-50;
-
-  @include button-interaction($primary-925);
+  color: $text-inverse;
+  font-weight: $font-weight-semibold;
+  @include button-interaction($primary-800);
 }
 
 .outline {
@@ -30,7 +28,7 @@
   @include button-outline($primary-700, none, null);
 
   &:hover {
-    background: $neutral-100;
+    background: $surface-secondary;
   }
 }
 
@@ -47,9 +45,6 @@
 
 .transparent {
   background: transparent;
-  &:hover {
-    background: none;
-  }
 }
 
 .circle {
@@ -60,17 +55,16 @@
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  background: none;
+  background: transparent;
+}
+
+.rounded {
+  border-radius: 1.875rem;
 }
 
 .compact {
   padding: 0;
-  min-height: unset;
-  font-size: inherit;
-}
-
-.none {
-  padding: 0;
+  margin: 0;
 }
 
 .sm {
@@ -93,18 +87,23 @@
   width: 100%;
 }
 
-.content {
-  width: auto;
-  height: auto;
-  position: relative;
-  @include flex-center;
-}
-
 .startIcon,
 .endIcon {
   @include flex-center;
 }
 
-.rounded {
-  border-radius: 1.875rem;
+.minWidth_content {
+  min-width: auto;
+}
+
+.minWidth_sm {
+  min-width: $button-min-width-sm;
+}
+
+.minWidth_md {
+  min-width: $button-min-width-md;
+}
+
+.minWidth_lg {
+  min-width: $button-min-width-lg;
 }

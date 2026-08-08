@@ -2,8 +2,8 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
 import { Nav, type SidebarProps } from '@/widgets/sidebar';
+import { ROUTES } from '@/shared/config/routes';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { buildClassName } from '@/shared/lib';
 
@@ -19,8 +19,6 @@ const { TRANSPARENT } = BUTTON_VARIANTS;
 
 export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
   const { t } = useTranslation(NS.SIDEBAR);
-
-  const renderToggleIcon = isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />;
 
   return (
     <Box
@@ -40,11 +38,11 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
         <Button
           onClick={toggleSidebar}
           variant={TRANSPARENT}
-          className={buildClassName(styles.button, {
+          className={buildClassName(styles.toggleButton, {
             [styles.iconCollapsed]: !isSidebarOpen,
           })}
         >
-          {renderToggleIcon}
+          {isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />}
         </Button>
       </Box>
 

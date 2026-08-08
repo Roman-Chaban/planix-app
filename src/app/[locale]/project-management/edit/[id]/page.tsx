@@ -1,5 +1,5 @@
-import { ProjectEditLayout } from '@/widgets/project/edit';
+import { ProjectEdit } from '@/widgets/project/edit';
 
 export default function ProjectEditPage() {
-  return <ProjectEditLayout />;
+  return <ProjectEdit />;
 }

@@ -4,9 +4,8 @@ import type { ModalId } from './modal.types';
 
 import { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from '@/app/providers/store/hooks';
-
 import { useLocalStorage } from '@/shared/lib/hooks';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
 
 import { selectIsModalOpen } from './modal.selectorts';
 

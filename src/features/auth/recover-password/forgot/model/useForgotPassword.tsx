@@ -5,10 +5,9 @@ import type { SubmitHandler } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
-
 import { AUTH_STEPS } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
+import { ROUTES } from '@/shared/config/routes';
 import { DEFAULT_LOCALE } from '@/shared/i18n';
 import { buildHref } from '@/shared/lib';
 import { useAppForm } from '@/shared/lib/hooks';

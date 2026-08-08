@@ -18,7 +18,7 @@ export const BrandBanner = () => {
 
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
-  const logoSize = getLogoSized(isMobileLargeScreen, 60, 60);
+  const logoSize = getLogoSized(isMobileLargeScreen, { geometry: 60 });
 
   return (
     <Box className={styles.banner}>

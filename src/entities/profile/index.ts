@@ -1,4 +1,4 @@
-export { getProfile, uploadProfileAvatar, updateProfile } from './lib/profile';
+export { getProfile, updateProfile, uploadProfileAvatar } from './api';
 
 export { mapProfile } from './lib/profile.mapper';
 

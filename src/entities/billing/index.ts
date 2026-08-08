@@ -1,4 +1,4 @@
-export { getBillingHistory } from './lib/billing';
+export { getBillingHistory } from './api/getBillingHistory';
 export { mapBilling } from './lib/billing.mapper';
 
 export type { Billing, BillingHistoryData } from './model/billing.types';

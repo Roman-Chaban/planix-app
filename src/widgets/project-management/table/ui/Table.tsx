@@ -6,9 +6,9 @@ import { useMemo } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
-
 import { createProjectRowActions } from '@/features/project-table/lib/createProjectRowActions';
+import { ROUTES } from '@/shared/config/routes';
+
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { AXIS, useDragScroll, useLocalizedRouter } from '@/shared/lib/hooks';
 

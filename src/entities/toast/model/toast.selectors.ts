@@ -1,4 +1,4 @@
-import type { RootState } from '@/app/providers/store';
+import type { RootState } from '@/shared/providers/store';
 
 export const selectToast = (state: RootState) => state.toast.current;
 

@@ -2,7 +2,7 @@ export { INSTANCE_ID } from './lib/language-switcher.constants';
 
 export type { LanguageOption, LanguageSelectStyles } from './model/language-switcher.types';
 
-export { languageOptions } from './model/language-switcher-list';
+export { languageOptions } from './lib/language-switcher-options';
 
 export { useLanguageSwitcher } from './model/useLanguageSwitcher';
 

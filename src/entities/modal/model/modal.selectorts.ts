@@ -1,6 +1,6 @@
 import type { ModalId } from './modal.types';
 
-import type { RootState } from '@/app/providers/store';
+import type { RootState } from '@/shared/providers/store';
 
 export const selectActiveModal = (state: RootState) => state.modal.activeModal;
 

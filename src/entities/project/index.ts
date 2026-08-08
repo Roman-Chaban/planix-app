@@ -5,8 +5,8 @@ export type {
   Project,
   ProjectFile,
   Status,
-} from './model/types';
+} from './model/project.types';
 
-export { getProjects, updateProject, createProject, deleteProject } from './model/projects';
+export { getProjects, updateProject, createProject, deleteProject, uploadProjectFile } from './api';
 
-export { useProjectActions } from './api/useProjectActions';
+export { useProjectActions } from './model/useProjectActions';

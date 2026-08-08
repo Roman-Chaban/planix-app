@@ -4,9 +4,9 @@ import type { ForgotModalProps } from '../model/forgot.types';
 
 import { useTranslation } from 'react-i18next';
 
-import { useAppDispatch, useAppSelector } from '@/app/providers/store/hooks';
 import { closeModal, ModalId, selectIsModalOpen } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
 import { Button, Modal, ModalContent, Typography } from '@/shared/ui';
 
 import { CloseIcon } from '@/shared/ui/icons';

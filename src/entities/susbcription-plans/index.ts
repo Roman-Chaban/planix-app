@@ -1,5 +1,5 @@
 export { mapSubscriptionPlan } from './lib/subscription-plans.mapper';
-export { getSubscriptionPlans } from './lib/susbcription-plans';
+export { getSubscriptionPlans } from './api/getSubscriptionPlans';
 
 export type {
   Plan,

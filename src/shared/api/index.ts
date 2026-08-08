@@ -8,4 +8,8 @@ export {
   PAYMENT_DATE,
   ID,
   SUBSCRIPTION_PLANS,
+  CREATED_AT,
+  PROJECTS,
+  PROJECT_FILES,
+  PRICE,
 } from './lib/supabase.constants';

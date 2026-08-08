@@ -1,8 +1,8 @@
 import type { SubmitHandler } from 'react-hook-form';
 
-import { useAppDispatch } from '@/app/providers/store/hooks';
 import { showToast } from '@/entities/toast';
 import { useAppForm } from '@/shared/lib/hooks';
+import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 

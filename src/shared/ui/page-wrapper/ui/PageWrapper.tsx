@@ -1,8 +1,8 @@
 'use client';
 
-import { useSidebar } from '@/app/providers/sidebar';
 import { Sidebar } from '@/widgets/sidebar';
 import { buildClassName } from '@/shared/lib';
+import { useSidebar } from '@/shared/providers/sidebar';
 import { Box, Grid } from '@/shared/ui';
 import type { PageWrapperProps } from '@/shared/ui/page-wrapper';
 

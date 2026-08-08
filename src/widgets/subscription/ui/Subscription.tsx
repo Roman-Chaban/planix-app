@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { ROUTES } from '@/app/routes';
+import { ROUTES } from '@/shared/config/routes';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 import { Box, Button } from '@/shared/ui';

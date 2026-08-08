@@ -13,7 +13,7 @@ export const Header = ({ title }: HeaderProps) => {
   const { t } = useTranslation(NS.HEADER);
 
   return (
-    <header className={styles.header}>
+    <Box as="header" className={styles.header}>
       <Box className={styles.wrapper}>
         <Box className={styles.headerRightSide}>
           <Typography as="h1" className={styles.title}>
@@ -22,6 +22,6 @@ export const Header = ({ title }: HeaderProps) => {
           <HeaderActions />
         </Box>
       </Box>
-    </header>
+    </Box>
   );
 };

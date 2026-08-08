@@ -13,7 +13,7 @@ const { LAPTOP } = BREAKPOINTS;
 export const NotFoundLayout = () => {
   const isLaptopScreen = useMediaQuery(LAPTOP);
 
-  const logoSize = getLogoSized(isLaptopScreen, 330, 330);
+  const logoSize = getLogoSized(isLaptopScreen, { geometry: 330 });
 
   return (
     <Box className={styles.layout}>

@@ -1,19 +1,19 @@
 import type { LogoSize } from './helpers.types';
 
-export const getLogoSized = (isMedia: boolean, size: LogoSize) => {
+export const getLogoSized = (isMedia: boolean, { geometry, width, height }: LogoSize) => {
   if (!isMedia) {
     return undefined;
   }
 
-  if ('geometry' in size) {
+  if (geometry !== undefined) {
     return {
-      width: size.geometry,
-      height: size.geometry,
+      width: geometry,
+      height: geometry,
     };
   }
 
   return {
-    width: size.width,
-    height: size.height,
+    width,
+    height,
   };
 };

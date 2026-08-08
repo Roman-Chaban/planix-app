@@ -1,16 +1,10 @@
 import type { FieldValues, Path, UseFormSetError } from 'react-hook-form';
 
-export type LogoSize =
-  | {
-      geometry: number;
-      width?: never;
-      height?: never;
-    }
-  | {
-      geometry?: never;
-      width: number;
-      height: number;
-    };
+export type LogoSize = {
+  geometry?: number;
+  width?: number;
+  height?: number;
+};
 
 export type FormErrorType = 'server' | 'manual' | 'validate';
 

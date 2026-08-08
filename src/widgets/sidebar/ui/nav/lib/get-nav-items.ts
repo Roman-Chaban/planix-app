@@ -1,6 +1,6 @@
+import type { NavItemData } from '../model/nav.types';
 import type { TFunction } from 'i18next';
 
-import type { NavItemData } from '@/widgets/sidebar/model/sidebar.types';
 import { ROUTES } from '@/shared/config/routes';
 import {
   AnalyticsIcon,
@@ -11,6 +11,7 @@ import {
   ProjectIcon,
   SettingsIcon,
 } from '@/shared/ui/icons';
+
 
 const { DASHBOARD, PROJECT, CLIENTS, LEADS, INBOX, ANALYTICS, SETTINGS } = ROUTES;
 

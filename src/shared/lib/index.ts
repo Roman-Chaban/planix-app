@@ -9,4 +9,4 @@ export { getLogoSized, setFormErrors, getInitials, splitFullName, getAvatarPath 
 export { applyDateMask, toDisplay, toISO, toInputFormat } from './date/format';
 export { buildAuthSearchParams, getAuthStep, isAuthStep, clearRecoveryState } from './auth';
 
-export { AUTH_SESSION, DATE_FORMAT, AUTH_STEP_VALUES } from './common';
+export { AUTH_SESSION, DATE_FORMAT, AUTH_STEP_VALUES, STATUSES } from './common';

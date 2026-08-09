@@ -1,6 +1,6 @@
 'use client';
 
-import type { ToolbarActionsProps } from '../model/types';
+import type { ToolbarActionsProps } from '../model/actions.types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -10,7 +10,7 @@ import { Box, FormField, ProjectButton } from '@/shared/ui';
 import { SearchIconPrimary } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
-import styles from './Toolbar.module.scss';
+import styles from './ToolbarActions.module.scss';
 
 const { SEARCH } = INPUT_TYPES;
 

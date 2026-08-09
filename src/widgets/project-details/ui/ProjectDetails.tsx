@@ -1,6 +1,6 @@
 'use client';
 
-import type { DetailsProps } from './model/types';
+import type { ProjectDetailsProps } from '../model/project-details.types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -9,14 +9,15 @@ import { ProjectHeader } from '@/widgets/project-management';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, PageWrapper } from '@/shared/ui';
 
-import { Description } from '../description';
+import { Description } from '../../project/description';
 
-import { InfoCard, InfoList } from '../info';
+import { InfoCard, InfoList } from '../../project/info';
 
-import styles from './Details.module.scss';
-import { mapProjectDetails } from './lib/project.mapper';
+import { mapProjectDetails } from '../lib/project-details.mapper';
 
-export const Details = ({ project }: DetailsProps) => {
+import styles from './ProjectDetails.module.scss';
+
+export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { t, i18n } = useTranslation(NS.PROJECT);
 
   const { details, description } = mapProjectDetails({

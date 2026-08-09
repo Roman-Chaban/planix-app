@@ -7,7 +7,7 @@ export type BaseDetailsProps = {
 };
 
 export type DetailsLayoutProps = BaseDetailsProps;
-export type DetailsProps = BaseDetailsProps;
+export type ProjectDetailsProps = BaseDetailsProps;
 
 export type ProjectDetailsMapOptions = {
   project: Project;

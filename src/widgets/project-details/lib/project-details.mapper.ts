@@ -1,4 +1,4 @@
-import type { ProjectDetailsMapOptions } from '../model/types';
+import type { ProjectDetailsMapOptions } from '../model/project-details.types';
 
 import { APP_LOCALES } from '@/shared/i18n/locales/locales';
 import { toDisplay } from '@/shared/lib';

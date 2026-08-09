@@ -1,14 +1,14 @@
-export { mapProjectDetails } from './ui/lib/project.mapper';
+export { mapProjectDetails } from '../project-details/lib/project-details.mapper';
 
 export type {
   BaseDetailsProps,
   DetailsLayoutProps,
-  DetailsProps,
+  ProjectDetailsProps as DetailsProps,
   ProjectDetailsMapOptions,
-} from './ui/model/types';
+} from '../project-details/model/project-details.types';
 
 export { ProjectCreate } from './create';
 export { Description } from './description';
-export { Details } from './ui/Details';
+export { ProjectDetails as Details } from '../project-details/ui/ProjectDetails';
 export { FileItem } from './files';
 export { InfoCard, InfoList } from './info';

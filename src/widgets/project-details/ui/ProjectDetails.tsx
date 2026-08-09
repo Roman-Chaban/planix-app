@@ -32,8 +32,8 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         showStatus
         status={project.status}
         translationNamespace="project"
-        title="title"
-        metaInfo={{ label: 'label', value: 'value' }}
+        title="headerTitle"
+        metaInfo={{ label: 'headerLabel', value: 'headerValue' }}
       />
 
       <Box className={styles.wrapper}>

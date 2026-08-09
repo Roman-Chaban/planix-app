@@ -1,7 +1,7 @@
 {
-  "title": "Деталі проекту",
-  "label": "Деталі проекту  /",
-  "value": "Список проектів",
+  "headerTitle": "Деталі проекту",
+  "headerLabel": "Деталі проекту  /",
+  "headerValue": "Список проектів",
   "detailsTitle": "Деталі проекту",
   "descriptionTitle": "Опис проекту",
   "documentTitle": "Проектний документ",

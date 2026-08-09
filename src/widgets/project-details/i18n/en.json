@@ -1,7 +1,7 @@
 {
-  "title": "Project Details",
-  "label": "Project Details  /",
-  "value": "Project List",
+  "headerTitle": "Project Details",
+  "headerLabel": "Project Details  /",
+  "headerValue": "Project List",
   "detailsTitle": "Project Details",
   "descriptionTitle": "Project Description",
   "documentTitle": "Project Document",
@@ -16,12 +16,14 @@
     "progress": "Progress",
     "complete": "Complete"
   },
+
   "create": {
     "title": "Add Project",
     "label": "Add Project  /",
     "value": "Project List",
     "projects": "Project Management"
   },
+
   "edit": {
     "title": "Edit Project",
     "label": "Edit Project  /",

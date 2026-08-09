@@ -1,4 +1,4 @@
-import type { Status } from '@/entities/project';
+import type { Status } from '@types';
 
 export type BillingHistoryData = {
   id: number;

@@ -4,7 +4,6 @@ export type {
   DeleteProjectPayload,
   Project,
   ProjectFile,
-  Status,
 } from './model/project.types';
 
 export { getProjects, updateProject, createProject, deleteProject, uploadProjectFile } from './api';

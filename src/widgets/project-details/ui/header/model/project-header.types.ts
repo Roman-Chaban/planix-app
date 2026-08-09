@@ -1,4 +1,4 @@
-import type { Status } from '@/entities/project';
+import type { ProjectsHeaderProps, Status } from '@types';
 
 export type ProjectHeaderProps = {
   title: string;
@@ -11,4 +11,4 @@ export type ProjectHeaderProps = {
   showStatus?: boolean;
 };
 
-export type HeaderItems = ProjectHeaderProps[];
+export type HeaderItems = ProjectsHeaderProps[];

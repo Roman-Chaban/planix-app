@@ -1,4 +1,5 @@
-import type { Status } from '@/entities/project';
+import type { Status } from '@types';
+
 import { CanceledIcon, CompletedIcon, InProgressIcon, PendingIcon } from '@/shared/ui/icons';
 import type { StatusClasses, StatusIcons, StatusMap } from '@/shared/ui/status-badge/model/types';
 

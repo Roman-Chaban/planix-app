@@ -1,9 +1,10 @@
+import type { TabId } from '@types';
+
 import { useMemo, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
 import { getHeaderItems } from '@/widgets/project-details/ui/header/lib/get-header-items';
-import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
 import { useDeleteProject } from '@/features/project-delete';
 import { STATUSES } from '@/entities/project/lib/statuses.constants';
 import { toProjectTableItem } from '@/entities/project/lib/toProjectTableItem';

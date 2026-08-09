@@ -1,7 +1,8 @@
+import type { Status } from '@types';
+
 import type { ProjectDetailsSchema } from '@/features/project-add';
 
 export type ProjectId = string | number;
-export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 
 export type Client = {
   id: string;

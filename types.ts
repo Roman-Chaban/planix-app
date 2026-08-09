@@ -58,8 +58,9 @@ export type SettingSwitchList = WithSwitch[];
 export type FileType = 'pdf' | 'image' | 'default';
 
 export type TabId = 'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
+export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 
-export type ProjectHeaderProps = {
+export type ProjectsHeaderProps = {
   id: TabId;
   label: string;
   isActive?: boolean;

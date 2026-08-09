@@ -1,4 +1,4 @@
-import type { ProjectHeaderProps, TabId } from '@types';
+import type { ProjectsHeaderProps, TabId } from '@types';
 
 import type { Dispatch, SetStateAction } from 'react';
 
@@ -7,7 +7,7 @@ export type ToolbarProps = {
   setActiveId: Dispatch<SetStateAction<TabId>>;
 };
 
-export type ToolbarHeaderItemProps = ProjectHeaderProps;
+export type ToolbarHeaderItemProps = ProjectsHeaderProps;
 
 export type ToolbarHeaderProps = {
   activeId: TabId;

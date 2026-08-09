@@ -10,28 +10,28 @@ export const mapProjectDetails = ({ project, t, lng }: ProjectDetailsMapOptions)
   const description = isUk ? project.description_uk || project.description : project.description;
 
   const details = [
-    { id: 'name', label: t('fields.projectName'), value: name },
-    { id: 'client', label: t('fields.clientName'), value: project.client_name },
+    { id: 'name', label: t('infoFields.projectName'), value: name },
+    { id: 'client', label: t('infoFields.clientName'), value: project.client_name },
     {
       id: 'createdAt',
-      label: t('fields.startDate'),
+      label: t('infoFields.startDate'),
       value: toDisplay(project.start_date ?? ''),
     },
     {
       id: 'dueDate',
-      label: t('fields.dueDate'),
+      label: t('infoFields.dueDate'),
       value: toDisplay(project.due_date ?? ''),
     },
     {
       id: 'price',
-      label: t('fields.price'),
+      label: t('infoFields.price'),
       value: `$${project.price.toLocaleString()}`,
     },
-    { id: 'platform', label: t('fields.platform'), value: project.platform },
+    { id: 'platform', label: t('infoFields.platform'), value: project.platform },
     {
       id: 'progress',
-      label: t('fields.progress'),
-      value: `${project.progress}% ${t('fields.complete')}`,
+      label: t('infoFields.progress'),
+      value: `${project.progress}% ${t('infoFields.complete')}`,
     },
   ];
 

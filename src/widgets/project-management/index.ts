@@ -1,2 +1,1 @@
-export { ToolbarHeader } from './toolbar';
-export { ToolbarHeaderItem, ToolbarActions, Toolbar } from './toolbar';
+export { ToolbarHeaderItem, Toolbar } from './toolbar';

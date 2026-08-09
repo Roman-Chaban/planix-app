@@ -4,11 +4,10 @@ import type { ToolbarHeaderProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
+import { getHeaderItems } from '@/widgets/project-details/ui/header/lib/get-header-items';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { buildClassName } from '@/shared/lib';
 import { Box, List } from '@/shared/ui';
-
-import { getHeaderItems } from '../../header/lib/get-header-items';
 
 import styles from './Toolbar.module.scss';
 

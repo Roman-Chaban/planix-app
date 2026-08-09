@@ -5,7 +5,6 @@ import type { ProjectDetailsProps } from '../model/project-details.types';
 import { useTranslation } from 'react-i18next';
 
 import { Header } from '@/widgets/header';
-import { ProjectHeader } from '@/widgets/project-management';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, PageWrapper } from '@/shared/ui';
 
@@ -15,6 +14,7 @@ import { InfoCard, InfoList } from '../../project/info';
 
 import { mapProjectDetails } from '../lib/project-details.mapper';
 
+import { ProjectHeader } from './header/ProjectHeader';
 import styles from './ProjectDetails.module.scss';
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {

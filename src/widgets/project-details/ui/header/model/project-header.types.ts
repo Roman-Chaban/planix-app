@@ -1,4 +1,4 @@
-import type { ToolbarHeaderItemProps } from '../../toolbar';
+import type { ToolbarHeaderItemProps } from '../../../../project-management/toolbar';
 
 import type { Status } from '@/entities/project';
 

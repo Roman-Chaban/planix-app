@@ -1,5 +1,3 @@
-import type { ToolbarHeaderItemProps } from '../../../../project-management/toolbar';
-
 import type { Status } from '@/entities/project';
 
 export type ProjectHeaderProps = {
@@ -13,4 +11,4 @@ export type ProjectHeaderProps = {
   showStatus?: boolean;
 };
 
-export type HeaderItems = ToolbarHeaderItemProps[];
+export type HeaderItems = ProjectHeaderProps[];

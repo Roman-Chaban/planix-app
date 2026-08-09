@@ -1,18 +1,13 @@
-import type { Dispatch, SetStateAction } from 'react';
+import type { ProjectHeaderProps, TabId } from '@types';
 
-import type { TabId } from '@/widgets/project-management/ui/layout/model/types';
+import type { Dispatch, SetStateAction } from 'react';
 
 export type ToolbarProps = {
   activeId: TabId;
   setActiveId: Dispatch<SetStateAction<TabId>>;
 };
 
-export type ToolbarHeaderItemProps = {
-  id: TabId;
-  label: string;
-  isActive?: boolean;
-  onClick?: () => void;
-};
+export type ToolbarHeaderItemProps = ProjectHeaderProps;
 
 export type ToolbarHeaderProps = {
   activeId: TabId;

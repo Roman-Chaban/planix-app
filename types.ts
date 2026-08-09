@@ -56,3 +56,12 @@ export type SettingSwitchListProps<T> = {
 export type SettingSwitchList = WithSwitch[];
 
 export type FileType = 'pdf' | 'image' | 'default';
+
+export type TabId = 'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
+
+export type ProjectHeaderProps = {
+  id: TabId;
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
+};

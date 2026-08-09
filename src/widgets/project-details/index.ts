@@ -1,2 +1,4 @@
 export { ProjectDetails } from './ui/ProjectDetails';
-export { ProjectHeader } from './ui/header/ui/ProjectHeader';
+export { Description } from './ui/description';
+export { FileItem } from './ui/file-item';
+export { ProjectHeader } from './ui/header';

@@ -1,0 +1,38 @@
+@use '@/shared/styles' as *;
+
+.loginForm {
+  @include flex-col(1.188rem, start, start, column);
+}
+
+.loginContainer {
+  @include flex-col($space-6, start, start, column);
+  width: 100%;
+}
+
+.loginFormMainWrapper {
+  width: 100%;
+  @include auth-form-flex-wrapper;
+
+  @include respond(md) {
+    gap: $space-6;
+  }
+}
+
+.loginFormMain {
+  width: 100%;
+  @include flex-between;
+}
+
+.forgotButton {
+  @include flex-end;
+  line-height: $line-height-base;
+  color: $neutral-950;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
+}
+
+.button {
+  @include button-default-wrapper-size(8.188rem);
+}

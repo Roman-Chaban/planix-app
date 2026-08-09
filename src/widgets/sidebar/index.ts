@@ -1,7 +1,9 @@
-export { useSidebar } from './lib/useSidebar';
+export type { SidebarProps } from './model/sidebar.types';
 
-export type { SidebarNavItems, SidebarProps, SidebarNavProps } from './model/types';
+export { getNavItems } from './ui/nav/lib/get-nav-items';
+
+export { isActiveRoute } from './ui/nav/lib/is-active-route';
 
 export { Sidebar } from './ui/Sidebar';
-export { SidebarNav } from './ui/SidebarNav';
-export { SidebarNavItem } from './ui/SidebarNavItem';
+export { Nav } from './ui/nav/ui/Nav';
+export { NavItem } from './ui/nav/ui/NavItem';

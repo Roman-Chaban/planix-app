@@ -1,5 +1,9 @@
 {
   "title": "Planix",
   "dashboard": "Dashboard",
-  "projects": "Project Management"
+  "projects": "Project Management",
+  "login": "Login",
+  "setting": "Setting",
+  "logIn": "Log in",
+  "settingsTooltip": "Go to settings"
 }

@@ -1,1 +1,4 @@
-export { ProjectDetailsLayout } from './ui/ProjectDetailsLayout';
+export { ProjectDetails } from './ui/ProjectDetails';
+export { Description } from './ui/description';
+export { FileItem } from './ui/file-item';
+export { ProjectHeader } from './ui/header';

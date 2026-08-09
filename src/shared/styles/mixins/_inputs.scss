@@ -8,7 +8,7 @@
   $transform: translateY(-50%),
   $display: flex,
   $align-items: center,
-  $color: $neutral-600,
+  $color: $icon-secondary,
   $cursor: pointer
 ) {
   position: absolute;
@@ -56,4 +56,22 @@
     border: 0.125rem solid $border;
     background: $bg;
   }
+}
+
+@mixin autofill-background-disabled {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 9999s ease-in-out 0s;
+    -webkit-text-fill-color: $text-secondary;
+  }
+}
+
+@mixin hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 0.063rem;
+  height: 0.063rem;
+  pointer-events: none;
 }

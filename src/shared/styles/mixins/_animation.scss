@@ -1,3 +1,7 @@
-@mixin smooth-transition($props...) {
-  transition: $props 0.35s ease-in-out;
+@mixin smooth-transition($property, $duration: 0.35s, $timing: ease-in-out, $delay: 0s) {
+  transition: $property $duration $timing $delay;
+}
+
+@mixin smooth-transitions($transitions...) {
+  transition: $transitions;
 }

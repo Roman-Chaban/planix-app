@@ -2,8 +2,6 @@
 
 import { forwardRef, useId } from 'react';
 
-import { useTranslation } from 'react-i18next';
-
 import { buildClassName } from '@/shared/lib';
 import { Box, FormError, FormLabel } from '@/shared/ui';
 import type { TextareaProps } from '@/shared/ui/textarea';
@@ -12,25 +10,24 @@ import styles from './Textarea.module.scss';
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ label, id, textareaClassName, labelClassName, placeholder, error, ...props }, ref) => {
-    const { t } = useTranslation();
     const generatedId = useId();
     const textareaId = id || generatedId;
 
     return (
       <Box className={styles.wrapper}>
         <FormLabel htmlFor={textareaId} className={buildClassName(labelClassName)}>
-          {t(label)}
+          {label}
         </FormLabel>
 
         <textarea
           ref={ref}
           id={textareaId}
-          placeholder={placeholder ? t(placeholder) : undefined}
+          placeholder={placeholder}
           className={buildClassName(styles.textarea, textareaClassName)}
           {...props}
         />
 
-        <FormError error={error} />
+        <FormError error={error ?? ''} />
       </Box>
     );
   },

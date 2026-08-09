@@ -1,0 +1,44 @@
+@use '@/shared/styles' as *;
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  border-radius: $radius-md;
+  background: $neutral-200;
+  transition: background 0.3s ease;
+}
+
+.circle {
+  position: relative;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  border-radius: $radius-full;
+  background: $neutral-0;
+  transition: transform 0.3s ease;
+}
+
+.input:checked + .track {
+  background: $primary-700;
+}
+
+.input:checked ~ .circle {
+  transform: translateX(1.5rem);
+}

@@ -1,0 +1,32 @@
+@use '@/shared/styles' as *;
+
+.forgotForm {
+  @include auth-form-flex-wrapper;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 25rem;
+  min-height: auto;
+  border-radius: $radius-lg;
+}
+
+.modalClose {
+  @include flex-center;
+  @include button-close-right;
+  border-radius: $radius-lg;
+}
+
+.modalTitle {
+  @include title-bold($font-weight-medium, $body-lg-font-size, $neutral-950);
+}
+
+.modalSubtitle {
+  @include text-body-sm($neutral-950, $body-md-font-size);
+  text-align: center;
+}
+
+.modalEmail {
+  font-weight: $font-weight-semibold;
+}

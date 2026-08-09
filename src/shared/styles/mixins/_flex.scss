@@ -14,7 +14,7 @@
   flex-wrap: $wrap;
 }
 
-@mixin flex-col($gap: 0, $justify: start, $align: stretch, $direction) {
+@mixin flex-col($gap: 0, $justify: start, $align: stretch, $direction: column) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -30,8 +30,40 @@
   gap: $gap;
 }
 
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin auth-form-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3.625rem;
 }

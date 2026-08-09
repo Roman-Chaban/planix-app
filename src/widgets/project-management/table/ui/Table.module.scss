@@ -1,0 +1,99 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  width: 100%;
+  padding: 0 0.5rem;
+  background: $neutral-0;
+  box-shadow: $shadow-sm;
+  border-radius: $radius-lg;
+  @include table-scroll;
+  @include hide-scrollbar;
+}
+
+.table {
+  width: 100%;
+  min-width: 96.25rem;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 0.575rem;
+}
+
+.head {
+  .row {
+    width: 100%;
+  }
+
+  .heading {
+    background: $neutral-100;
+    @include table-cell(0.563rem 1rem);
+
+    &:first-child {
+      border-radius: $radius-md 0 0 $radius-md;
+    }
+
+    &:last-child {
+      border-radius: 0 $radius-md $radius-md 0;
+    }
+  }
+}
+
+.heading {
+  color: $neutral-950;
+  font-weight: $font-weight-semibold;
+}
+
+.cell {
+  @include table-cell(0.563rem 1.813rem);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bodyRow {
+  td {
+    @include table-cell(0.5rem 1rem);
+    border-bottom: 0.094rem solid $neutral-200;
+  }
+
+  &:last-child td {
+    border-bottom: none;
+  }
+}
+
+.calendarCell {
+  white-space: nowrap;
+
+  svg {
+    vertical-align: -0.19rem;
+    margin-right: 0.4rem;
+  }
+}
+
+.colClient {
+  width: 10%;
+}
+.colName {
+  width: 10%;
+}
+.colDueDate {
+  width: 8%;
+}
+.colPlatform {
+  width: 7%;
+}
+.colProgress {
+  width: 8%;
+}
+.colPrice {
+  width: 6%;
+}
+.colReason {
+  width: 10%;
+}
+.colStatus {
+  width: 8%;
+}
+.colActions {
+  width: 6%;
+}

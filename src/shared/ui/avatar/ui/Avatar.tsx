@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import Image from 'next/image';
 
 import { buildClassName } from '@/shared/lib';
@@ -9,7 +7,7 @@ import type { AvatarProps } from '@/shared/ui/avatar';
 
 import styles from './Avatar.module.scss';
 
-export const Avatar: FC<AvatarProps> = ({
+export const Avatar = ({
   src,
   icon,
   alt = 'avatar',
@@ -20,9 +18,9 @@ export const Avatar: FC<AvatarProps> = ({
   fallback,
   className,
   ...avatarProps
-}) => {
+}: AvatarProps) => {
   return (
-    <Box className={buildClassName(styles.avatar, styles[size], styles[variant], className)}>
+    <Box className={buildClassName(styles.avatar, className)}>
       {icon && <Box className={styles.icon}>{icon}</Box>}
 
       {!icon && src && (
@@ -32,7 +30,7 @@ export const Avatar: FC<AvatarProps> = ({
           {...avatarProps}
           src={src}
           alt={alt}
-          className={styles.image}
+          className={buildClassName(styles.image, styles[size], styles[variant])}
         />
       )}
 

@@ -1,19 +1,32 @@
+import type { WithChildren, WithClassName } from '@types';
+
 import type { ReactNode } from 'react';
 
-export type ModalProps = {
-  children: ReactNode;
-  isOpen: boolean;
-  closeOnOverlayClick?: boolean;
+type WithOnClose = {
   onClose: () => void;
 };
 
-export type ModalHeaderProps = {
+type WithIsOpen = {
+  isOpen: boolean;
+};
+
+export type ModalProps = WithChildren &
+  WithIsOpen &
+  WithOnClose & {
+    closeOnOverlayClick?: boolean;
+    containerId?: string;
+  };
+
+export type ModalContentProps = WithChildren & WithClassName;
+
+export type ModalHeaderProps = WithOnClose & {
   title: string;
   icon?: ReactNode;
-  onClose: () => void;
 };
 
-export type UseModalBehaviorParams = {
-  isOpen: boolean;
-  onClose: () => void;
-};
+export type UseModalBehaviorParams = WithIsOpen & WithOnClose;
+
+export type ModalOverlayProps = WithChildren &
+  WithOnClose & {
+    closeOnOverlayClick: boolean;
+  };

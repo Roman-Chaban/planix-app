@@ -18,6 +18,7 @@ export const useFileUpload = ({ onFileSelect }: UseFileUploadParams = {}) => {
 
       const newFiles = Array.from(fileList);
       newFiles.forEach((file) => onFileSelect?.(file));
+
       event.target.value = '';
     },
     [onFileSelect],

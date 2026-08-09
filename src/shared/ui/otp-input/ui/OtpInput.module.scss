@@ -1,0 +1,43 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  position: relative;
+}
+
+.hidden {
+  @include hidden-input;
+}
+
+.cellContainer {
+  @include flex-row(1.875rem, start, center);
+}
+
+.cell {
+  @include flex-center;
+
+  position: relative;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border: 0.094rem solid $neutral-500;
+  border-radius: $radius-md;
+
+  color: $neutral-800;
+  font-size: $h6-font-size;
+
+  cursor: text;
+}
+
+.activeCell {
+  @include flex-start;
+  border-color: $primary-700;
+}
+
+.cursor {
+  @include otp-input-cursor;
+}
+
+.disabledCell {
+  @include disabled-cell;
+}

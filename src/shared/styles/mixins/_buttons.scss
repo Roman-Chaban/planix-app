@@ -13,10 +13,10 @@
 }
 
 @mixin button-disabled(
-  $bg: $neutral-200,
-  $text: $button-disabled-bg,
+  $bg: $surface-tertiary,
+  $text: $text-disabled,
   $border: none,
-  $bgHover: $neutral-100
+  $bgHover: $surface-secondary
 ) {
   &:disabled {
     background: $bg;
@@ -44,11 +44,17 @@
 }
 
 @mixin button-link {
-  color: $primary-700;
+  color: $icon-brand;
   text-decoration: underline;
 }
 
 @mixin button-default-wrapper-size($maxWidth) {
-  width: fit-content;
-  min-width: $maxWidth;
+  width: 100%;
+  max-width: $maxWidth;
+}
+
+@mixin button-close-right {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }

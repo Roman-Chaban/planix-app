@@ -1,23 +1,23 @@
 @use '@/shared/styles' as *;
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
   width: 100%;
   border-bottom: 0.094rem solid $neutral-100;
   box-shadow: $shadow-xs;
+  background: $neutral-0;
   grid-area: header;
 }
 
 .wrapper {
   width: 100%;
   @include flex(flex, row, start, center);
-  padding: 1.125rem 1rem;
+  padding: 1rem 1.875rem;
 
   @include respond(lg) {
     gap: 2rem;
-  }
-
-  @include respond(md) {
-    padding-inline: 1rem;
   }
 }
 
@@ -33,7 +33,7 @@
 
 .logoTitle {
   color: $neutral-950;
-  line-height: 150%;
+  line-height: $line-height-base;
   font: {
     weight: $font-weight-semibold;
     size: $body-md-line-height;
@@ -44,11 +44,6 @@
   @include container(header-rightSide);
   width: 100%;
   @include flex(flex, row, space-between, center, 0, nowrap);
-  padding-inline: 0.875rem;
-
-  @include respond(md) {
-    padding-inline: 0;
-  }
 }
 
 .title {
@@ -56,10 +51,11 @@
   font: {
     weight: $font-weight-bold;
   }
-  line-height: 150%;
+  line-height: $line-height-base;
 }
 
 .button {
+  @include flex-center;
   position: relative;
 
   &::after {
@@ -71,10 +67,18 @@
   width: 0.75rem;
   height: 0.75rem;
   position: absolute;
-  top: 2px;
-  right: 1.5px;
+  top: 0.225rem;
+  right: 0.5rem;
+}
 
-  transform: translate(25%, -40%);
+.avatar {
+  @include flex-center;
+  color: $primary-400;
+  width: $space-9;
+  height: $space-9;
+  flex-shrink: 0;
+  background: $neutral-100;
+  border-radius: $radius-full;
 }
 
 .headerAuth {
@@ -86,12 +90,11 @@
   }
 }
 
-/* Styles Mock: [Temporary mock these styles] */
-.avatar {
-  @include flex-center;
-  width: 3rem;
-  height: 3rem;
-  background: $primary-200;
+.link {
   color: $neutral-0;
-  border-radius: 100%;
+  font-weight: $font-weight-semibold;
+
+  &:visited {
+    color: inherit;
+  }
 }

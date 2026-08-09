@@ -1,21 +1,24 @@
 'use client';
 
-import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { SidebarNav, type SidebarProps } from '@/widgets/sidebar';
-
+import { Nav, type SidebarProps } from '@/widgets/sidebar';
+import { ROUTES } from '@/shared/config/routes';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { buildClassName } from '@/shared/lib';
-import { Box, Button, Typography } from '@/shared/ui';
 
+import { AppLink, Box, Button, Typography } from '@/shared/ui';
+
+import { BUTTON_VARIANTS } from '@/shared/ui/button';
 import { CollapsedIcon, ExpandedIcon, PlanixLogoIcon } from '@/shared/ui/icons';
 
 import styles from './Sidebar.module.scss';
 
-export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
-  const { t } = useTranslation('sidebar');
+const { DASHBOARD } = ROUTES;
+const { TRANSPARENT } = BUTTON_VARIANTS;
 
-  const renderToggleIcon = isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />;
+export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
+  const { t } = useTranslation(NS.SIDEBAR);
 
   return (
     <Box
@@ -25,22 +28,26 @@ export const Sidebar: FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
       })}
     >
       <Box className={styles.sidebarLogo}>
-        <PlanixLogoIcon width={44} height={44} />
+        <AppLink href={DASHBOARD}>
+          <PlanixLogoIcon width={44} height={44} />
+        </AppLink>
         <Typography as="span" className={styles.sidebarTitle}>
           {t('title')}
         </Typography>
 
         <Button
           onClick={toggleSidebar}
-          variant="transparent"
-          className={buildClassName(styles.button, { [styles.iconCollapsed]: !isSidebarOpen })}
+          variant={TRANSPARENT}
+          className={buildClassName(styles.toggleButton, {
+            [styles.iconCollapsed]: !isSidebarOpen,
+          })}
         >
-          {renderToggleIcon}
+          {isSidebarOpen ? <CollapsedIcon /> : <ExpandedIcon />}
         </Button>
       </Box>
 
       <Box as="nav" className={styles.content}>
-        <SidebarNav isCollapsed={!isSidebarOpen} />
+        <Nav isCollapsed={!isSidebarOpen} t={t} />
       </Box>
     </Box>
   );

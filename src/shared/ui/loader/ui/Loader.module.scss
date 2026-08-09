@@ -1,0 +1,11 @@
+@use '@/shared/styles' as *;
+
+.loader {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}

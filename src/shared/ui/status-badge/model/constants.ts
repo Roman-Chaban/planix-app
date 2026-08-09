@@ -1,3 +1,5 @@
+import type { Status } from '@types';
+
 import { CanceledIcon, CompletedIcon, InProgressIcon, PendingIcon } from '@/shared/ui/icons';
 import type { StatusClasses, StatusIcons, StatusMap } from '@/shared/ui/status-badge/model/types';
 
@@ -24,3 +26,18 @@ export const statusMap: StatusMap = {
   Completed: 'Completed',
   Canceled: 'Canceled',
 } as const;
+
+export const getProgressByStatus = (status: Status): number => {
+  switch (status) {
+    case 'Pending':
+      return 0;
+    case 'In Progress':
+      return 20;
+    case 'Completed':
+      return 100;
+    case 'Canceled':
+      return 0;
+    default:
+      return 0;
+  }
+};

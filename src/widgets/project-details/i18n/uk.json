@@ -6,7 +6,7 @@
   "descriptionTitle": "Опис проекту",
   "documentTitle": "Проектний документ",
 
-  "fields": {
+  "infoFields": {
     "projectName": "Назва проекту",
     "clientName": "Клієнт",
     "startDate": "Дата початку",

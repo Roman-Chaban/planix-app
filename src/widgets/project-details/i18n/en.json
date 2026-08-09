@@ -6,7 +6,7 @@
   "descriptionTitle": "Project Description",
   "documentTitle": "Project Document",
 
-  "fields": {
+  "infoFields": {
     "projectName": "Project Name",
     "clientName": "Client Name",
     "startDate": "Start Date",

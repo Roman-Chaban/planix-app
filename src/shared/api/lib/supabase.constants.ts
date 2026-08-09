@@ -9,3 +9,4 @@ export const PROJECTS = 'Projects';
 export const CREATED_AT = 'created_at';
 export const PROJECT_FILES = 'project-files';
 export const PRICE = 'price';
+export const SLUG = 'slug';

@@ -2,7 +2,6 @@
 
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import Select from 'react-select';
 
 import {
   SingleValue,
@@ -10,16 +9,15 @@ import {
   INSTANCE_ID,
   type LanguageOption,
   useLanguageSwitcher,
-  createSelectStyles,
 } from '@/features/language-switcher';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { FormLabel } from '@/shared/ui';
+import { createSelectStyles, FormLabel, Select } from '@/shared/ui';
 
 export const LanguageSwitcher = () => {
   const { t } = useTranslation(NS.SETTINGS);
   const { selectValue, languageOptions, handleChange } = useLanguageSwitcher();
 
-  const styles = useMemo(() => createSelectStyles(), []);
+  const styles = useMemo(() => createSelectStyles<LanguageOption>(), []);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import type { FileConfiguration } from '../model/types';
+import type { FileConfiguration } from '../model/file-item.types';
 
 import { PdfIcon, UploadIcon } from '@/shared/ui/icons';
 

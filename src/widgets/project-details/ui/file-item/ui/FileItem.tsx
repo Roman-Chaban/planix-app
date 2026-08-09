@@ -1,10 +1,10 @@
-import type { FileItemProps } from '../model/types';
+import type { FileItemProps } from '../model/file-item.types';
 
 import type { ProjectFile } from '@/entities/project';
 import { Box } from '@/shared/ui';
 import { LINK_TARGETS } from '@/shared/ui/link';
 
-import { getFileIcon } from '../lib/get-file-icon';
+import { getFileIcon } from '../lib/getFileIcon';
 
 import styles from './FileItem.module.scss';
 

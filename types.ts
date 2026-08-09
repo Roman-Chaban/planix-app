@@ -54,3 +54,5 @@ export type SettingSwitchListProps<T> = {
 };
 
 export type SettingSwitchList = WithSwitch[];
+
+export type FileType = 'pdf' | 'image' | 'default';

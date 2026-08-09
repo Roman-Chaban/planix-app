@@ -7,8 +7,7 @@ export type {
   ProjectDetailsMapOptions,
 } from '../project-details/model/project-details.types';
 
-export { ProjectCreate } from './create';
-export { Description } from './description';
+export { Description } from '../project-details/ui/description';
 export { ProjectDetails as Details } from '../project-details/ui/ProjectDetails';
 export { FileItem } from './files';
 export { InfoCard, InfoList } from './info';

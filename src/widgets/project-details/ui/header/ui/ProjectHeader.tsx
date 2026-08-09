@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProjectHeaderProps } from './model/project-header.types';
+import type { ProjectHeaderProps } from '../model/project-header.types';
 
 import { useTranslation } from 'react-i18next';
 

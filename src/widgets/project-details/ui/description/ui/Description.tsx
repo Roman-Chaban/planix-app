@@ -1,8 +1,8 @@
-import type { DescriptionProps } from '../model/types';
+import type { DescriptionProps } from '../model/description.types';
 
 import { Box, Typography } from '@/shared/ui';
 
-import { FileItem } from '../../files';
+import { FileItem } from '../../../../project/files';
 
 import styles from './Description.module.scss';
 

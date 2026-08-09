@@ -1,1 +1,2 @@
-export { ProjectDetails as Details } from './ui/ProjectDetails';
+export { ProjectDetails } from './ui/ProjectDetails';
+export { ProjectHeader } from './ui/header/ui/ProjectHeader';

@@ -13,8 +13,8 @@ import { useToolbar } from '../model/useToolbar';
 
 import { ToolbarActions } from './actions/ui/ToolbarActions';
 import { ToolbarHeader } from './header/ui/ToolbarHeader';
-import styles from './Toolbar.module.scss';
 import { ToolbarSelectMobile } from './select/ui/ToolbarSelectMobile';
+import styles from './Toolbar.module.scss';
 
 const { WIDE } = BREAKPOINTS;
 

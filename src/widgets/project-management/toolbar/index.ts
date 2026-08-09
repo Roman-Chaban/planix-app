@@ -1,13 +1,8 @@
-export type {
-  ToolbarActionsProps,
-  ToolbarHeaderItemProps,
-  ToolbarHeaderProps,
-  ToolbarProps,
-} from './model/types';
+export type { ToolbarProps } from './model/toolbar.types';
 
 export { useToolbar } from './model/useToolbar';
 
 export { Toolbar } from './ui/Toolbar';
-export { ToolbarActions } from './ui/ToolbarActions';
-export { ToolbarHeader } from './ui/ToolbarHeader';
-export { ToolbarHeaderItem } from './ui/ToolbarHeaderItem';
+export { ToolbarActions } from './ui/actions';
+export { ToolbarHeader, ToolbarHeaderItem } from './ui/header';
+export { ToolbarSelectMobile } from './ui/select';

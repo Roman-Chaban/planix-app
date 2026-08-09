@@ -1,4 +1,4 @@
-import type { InfoListProps } from '../model/types';
+import type { InfoListProps } from '../model/info.types';
 
 import { Box, List, Typography } from '@/shared/ui';
 

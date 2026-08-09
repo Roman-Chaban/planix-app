@@ -8,13 +8,13 @@ import { Header } from '@/widgets/header';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, PageWrapper } from '@/shared/ui';
 
-import { InfoCard, InfoList } from '../../project/info';
-
 import { mapProjectDetails } from '../lib/project-details.mapper';
 
 import { Description } from './description/ui/Description';
 
 import { ProjectHeader } from './header/ui/ProjectHeader';
+import { InfoCard } from './info/ui/InfoCard';
+import { InfoList } from './info/ui/InfoList';
 import styles from './ProjectDetails.module.scss';
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {

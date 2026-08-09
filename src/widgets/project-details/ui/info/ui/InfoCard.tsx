@@ -1,4 +1,4 @@
-import type { InfoCardProps } from '../model/types';
+import type { InfoCardProps } from '../model/info.types';
 
 import { Box, Typography } from '@/shared/ui';
 

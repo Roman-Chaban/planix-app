@@ -1,0 +1,24 @@
+@use '@/shared/styles' as *;
+
+.badge {
+  @include flex-inline-center;
+  border-radius: $radius-full;
+  padding: 0.063rem 0.625rem;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+}
+
+.default {
+  background: $neutral-100;
+  color: $neutral-700;
+}
+
+.success {
+  background: $success-100;
+  color: $success-700;
+}
+
+.warning {
+  background: $warning-100;
+  color: $warning-700;
+}

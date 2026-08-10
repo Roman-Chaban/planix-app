@@ -21,6 +21,7 @@ export { List } from './list';
 export { PageWrapper } from './page-wrapper';
 export { ProjectButton } from './project-button';
 export { StatusBadge } from './status-badge';
+export { MetricBadge } from './metric-badge';
 export { Textarea } from './textarea';
 export { Typography } from './typography';
 export { Modal, ModalContent, ModalHeader, ModalOverlay, ModalActions } from './modal';

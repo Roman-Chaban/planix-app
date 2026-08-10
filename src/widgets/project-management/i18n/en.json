@@ -8,6 +8,7 @@
     "addProjectButton": "Add Project",
     "searchPlaceholder": "Search here..."
   },
+
   "tableHeader": {
     "clientName": "Client Name",
     "projectName": "Project Name",
@@ -19,6 +20,7 @@
     "status": "Status",
     "action": "Action"
   },
+
   "projectEmpty": {
     "title": "No Projects Yet",
     "subtitle": "You haven’t created any projects yet. Start by adding your first project to track progress, deadlines, and pricing in one place.",

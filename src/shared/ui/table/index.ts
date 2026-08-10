@@ -1,3 +1,5 @@
+export { TABLE_SIZES, TABLE_VARIANTS } from './lib/table.constants';
+
 export { TableContainer } from './ui/TableContainer';
 export { DataTable } from './ui/DataTable';
 export { Table } from './ui/Table';

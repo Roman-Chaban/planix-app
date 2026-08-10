@@ -2,8 +2,8 @@
 
 import { Header } from '@/widgets/header';
 import { Toolbar } from '@/widgets/project-management';
-import { Empty } from '@/widgets/project-management/empty';
-import { ProjectsTable } from '@/widgets/project-management/table';
+import { Empty } from '@/widgets/project-management/ui/empty';
+import { ProjectsTable } from '@/widgets/project-management/ui/table';
 import { useProjectsPageModel } from '@/widgets/project-management/ui/model/useProjectsPageModel';
 
 import { DeleteProjectModal } from '@/features/project-delete';

@@ -35,6 +35,7 @@ export const ToolbarActions = ({ handleCreateProject }: ToolbarActionsProps) => 
       <Box className={styles.platform}>Select Platform</Box>
 
       <ProjectButton
+        className={styles.button}
         preset="ADD"
         onClick={handleCreateProject}
         label={t('toolbar.addProjectButton')}

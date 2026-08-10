@@ -6,7 +6,7 @@ import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 import { CalendarIcon } from '@/shared/ui/icons';
 import type { TableColumn } from '@/shared/ui/table/model/types';
 
-export const getTableColumns = (
+export const getProjectsTableColumns = (
   t: TranslateFn,
   actionsFactory: (slug: string, id: string | number) => ActionItem[],
 ): TableColumn<TableItem>[] => {

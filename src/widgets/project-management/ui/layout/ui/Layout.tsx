@@ -3,7 +3,7 @@
 import { Header } from '@/widgets/header';
 import { Toolbar } from '@/widgets/project-management';
 import { Empty } from '@/widgets/project-management/empty';
-import { Table } from '@/widgets/project-management/table';
+import { ProjectsTable } from '@/widgets/project-management/table';
 import { useProjectsPageModel } from '@/widgets/project-management/ui/layout/model/useProjectsPageModel';
 
 import { DeleteProjectModal } from '@/features/project-delete';
@@ -20,7 +20,7 @@ export const Layout = () => {
 
       {isEmpty && <Empty />}
 
-      {hasData && <Table onDelete={deleteModal.openDeleteModal} projects={projects} />}
+      {hasData && <ProjectsTable onDelete={deleteModal.openDeleteModal} projects={projects} />}
 
       <DeleteProjectModal
         isOpen={deleteModal.isOpen}

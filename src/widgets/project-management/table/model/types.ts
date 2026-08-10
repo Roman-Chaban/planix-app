@@ -1,6 +1,6 @@
 import type { toProjectTableItem } from '@/entities/project/lib/toProjectTableItem';
 
-export type TableProps = {
+export type ProjectsTableProps = {
   projects: TableItem[];
   onDelete: (id: string | number) => void;
 };

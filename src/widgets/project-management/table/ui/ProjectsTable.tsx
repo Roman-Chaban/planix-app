@@ -1,6 +1,6 @@
 'use client';
 
-import type { TableProps } from '../model/types';
+import type { ProjectsTableProps } from '../model/types';
 
 import { useMemo } from 'react';
 
@@ -12,12 +12,12 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { AXIS, useLocalizedRouter } from '@/shared/lib/hooks';
 import { DataTable } from '@/shared/ui';
 
-import { getTableColumns } from '../lib/get-table-columns';
+import { getProjectsTableColumns } from '../lib/get-table-columns';
 
 const { X } = AXIS;
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 
-export const Table = ({ projects, onDelete }: TableProps) => {
+export const ProjectsTable = ({ projects, onDelete }: ProjectsTableProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
   const localizedRouter = useLocalizedRouter();
 
@@ -37,7 +37,7 @@ export const Table = ({ projects, onDelete }: TableProps) => {
     [localizedRouter, onDelete],
   );
 
-  const columns = useMemo(() => getTableColumns(t, actionsFactory), [t, actionsFactory]);
+  const columns = useMemo(() => getProjectsTableColumns(t, actionsFactory), [t, actionsFactory]);
 
   return (
     <DataTable

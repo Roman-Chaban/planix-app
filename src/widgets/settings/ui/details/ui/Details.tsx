@@ -9,7 +9,6 @@ import { Box } from '@/shared/ui';
 
 import { useChangeMode } from '../model/useChangeMode';
 
-
 import styles from './Details.module.scss';
 import { DetailsHeader } from './DetailsHeader';
 

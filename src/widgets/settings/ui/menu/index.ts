@@ -8,6 +8,6 @@ export type {
   ProfileTabId,
 } from './model/setting-menu.types';
 
-export { ProfileMenu } from './ui/SettingMenu';
 export { Menu } from './ui/Menu';
 export { MenuItem } from './ui/MenuItem';
+export { ProfileMenu } from './ui/SettingMenu';

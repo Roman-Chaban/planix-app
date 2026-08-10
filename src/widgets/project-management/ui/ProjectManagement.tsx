@@ -5,9 +5,9 @@ import { Header } from '@/widgets/header';
 import { DeleteProjectModal } from '@/features/project-delete';
 import { PageWrapper } from '@/shared/ui';
 
-import { Empty } from './empty';
-
 import { useProjectsPageModel } from '../model/useProjectsPageModel';
+
+import { Empty } from './empty';
 
 import styles from './ProjectManagement.module.scss';
 import { ProjectsTable } from './table';

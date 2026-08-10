@@ -2,8 +2,8 @@
 
 .badge {
   @include flex-inline-center;
-  border-radius: $radius-full;
   padding: 0.063rem 0.625rem;
+  border-radius: $radius-full;
   font-weight: $font-weight-semibold;
   line-height: $line-height-base;
 }

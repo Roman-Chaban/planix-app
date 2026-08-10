@@ -1,0 +1,16 @@
+@use '@/shared/styles' as *;
+
+.select {
+  width: 100%;
+  max-width: 12.5rem;
+
+  @include respond(lg) {
+    max-width: 100%;
+  }
+}
+
+@include respond(xl) {
+  .selectCollapsed {
+    max-width: 100%;
+  }
+}

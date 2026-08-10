@@ -2,16 +2,22 @@
 
 .tableContainer {
   width: 100%;
+  display: block;
   @include table-scroll;
   @include hide-scrollbar;
 }
 
 .table {
   width: max-content;
-  min-width: 0;
+  min-width: 44rem;
   border-collapse: separate;
   table-layout: auto;
   border-spacing: 0;
+}
+
+.headCell,
+.cell {
+  white-space: nowrap;
 }
 
 .thead {

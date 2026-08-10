@@ -12,10 +12,14 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { AXIS, useLocalizedRouter } from '@/shared/lib/hooks';
 import { DataTable } from '@/shared/ui';
 
+import { TABLE_SIZES, TABLE_VARIANTS } from '@/shared/ui/table';
+
 import { getProjectsTableColumns } from '../lib/get-table-columns';
 
 const { X } = AXIS;
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
+const { MD } = TABLE_SIZES;
+const { MINIMAL } = TABLE_VARIANTS;
 
 export const ProjectsTable = ({ projects, onDelete }: ProjectsTableProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
@@ -41,8 +45,8 @@ export const ProjectsTable = ({ projects, onDelete }: ProjectsTableProps) => {
 
   return (
     <DataTable
-      size="md"
-      variant="minimal"
+      size={MD}
+      variant={MINIMAL}
       data={projects}
       columns={columns}
       getRowKey={(project) => project.id}

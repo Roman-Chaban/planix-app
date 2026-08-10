@@ -23,34 +23,38 @@ export const getTableColumns = (
   );
 
   return [
-    { key: 'client_name', title: t('tableHeader.clientName'), width: '9.563rem' },
-    { key: 'project_name', title: t('tableHeader.projectName'), width: '12.5rem  ' },
+    { key: 'client_name', title: t('tableHeader.clientName'), width: 'max-content' },
+    { key: 'project_name', title: t('tableHeader.projectName'), width: 'max-content' },
     {
       key: 'due_date',
       title: t('tableHeader.dueDate'),
-      width: '10.625rem',
+      width: 'max-content',
       icon: CalendarIcon,
     },
-    { key: 'platform', title: t('tableHeader.platform') },
+    { key: 'platform', title: t('tableHeader.platform'), width: 'max-content' },
     {
       key: 'progress',
       title: t('tableHeader.progress'),
       render: buildProgressCell,
+      width: 'max-content',
     },
     {
       key: 'price',
       title: t('tableHeader.price'),
       render: buildPriceCell,
+      width: 'max-content',
     },
     {
       key: 'status',
       title: t('tableHeader.status'),
       render: (row) => <StatusBadge status={row.status} />,
+      width: 'max-content',
     },
     {
       key: 'actions',
       title: t('tableHeader.action'),
       render: buildActionCell,
+      width: 'max-content',
     },
   ];
 };

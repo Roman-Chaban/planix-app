@@ -7,10 +7,10 @@
 }
 
 .table {
-  width: 100%;
-  min-width: 62.438rem;
+  width: max-content;
+  min-width: 0;
   border-collapse: separate;
-  table-layout: fixed;
+  table-layout: auto;
   border-spacing: 0;
 }
 

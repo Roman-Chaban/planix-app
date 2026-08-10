@@ -4,9 +4,10 @@ import { Header } from '@/widgets/header';
 import { LogoutModal } from '@/features/profile/logout';
 import { PageWrapper } from '@/shared/ui';
 
+import { useSettingsModel } from '../model/useSettingsModel';
+
 import { ProfileMenu } from './menu';
 
-import { useSettingsModel } from './model/useSettingsModel';
 import styles from './Settings.module.scss';
 
 export const Settings = () => {

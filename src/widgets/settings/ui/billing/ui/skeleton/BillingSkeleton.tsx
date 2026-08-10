@@ -1,6 +1,5 @@
 import type { TranslateFn } from '@types';
 
-import { getBillingHistoryColumns } from '@/widgets/settings/subscription-billing';
 import {
   Table,
   TableBody,
@@ -13,6 +12,8 @@ import {
 import { Skeleton } from '@/shared/ui/skeleton/ui/Skeleton';
 
 import type { TableSize } from '@/shared/ui/table/model/types';
+
+import { getBillingHistoryColumns } from '../../lib/get-billing-history-columns';
 
 type BillingSkeletonProps = {
   t: TranslateFn;

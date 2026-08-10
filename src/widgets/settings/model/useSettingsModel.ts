@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { ROUTES } from '@/shared/config/routes';
 import { useAuth, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { SETTINGS_MENU, type ProfileTabId } from '../menu';
+import { type ProfileTabId, SETTINGS_MENU } from '../ui/menu';
 
 const { SETTINGS } = ROUTES;
 

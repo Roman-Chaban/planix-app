@@ -31,6 +31,7 @@ export const createSelectStyles = <
     margin: 0,
     color: '#525252',
     cursor: 'pointer',
+    overflow: 'visible',
   }),
 
   dropdownIndicator: (base) => ({

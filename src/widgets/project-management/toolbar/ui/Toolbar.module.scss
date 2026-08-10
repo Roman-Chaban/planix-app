@@ -1,26 +1,15 @@
 @use '@/shared/styles' as *;
 
 .toolbar {
-  width: 100%;
   @include flex(flex, row, space-between, center, 1rem, nowrap);
-}
 
-.toolbarCollapsed {
-  flex-direction: row;
-}
-
-@include respond(2xl) {
-  .toolbarExpanded {
+  @include respond(lg) {
     flex-direction: column;
   }
-
-  .toolbarCollapsed {
-    flex-direction: row;
-  }
 }
 
-@include respond(lg) {
-  .toolbarCollapsed {
+@include respond(xl) {
+  .toolbarExpanded {
     flex-direction: column;
   }
 }

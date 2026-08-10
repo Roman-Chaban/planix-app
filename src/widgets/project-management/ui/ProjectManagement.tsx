@@ -7,7 +7,7 @@ import { PageWrapper } from '@/shared/ui';
 
 import { Empty } from './empty';
 
-import { useProjectsPageModel } from './model/useProjectsPageModel';
+import { useProjectsPageModel } from '../model/useProjectsPageModel';
 
 import styles from './ProjectManagement.module.scss';
 import { ProjectsTable } from './table';

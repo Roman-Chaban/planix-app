@@ -1,15 +1,17 @@
 'use client';
 
 import { Header } from '@/widgets/header';
-import { Toolbar } from '@/widgets/project-management';
-import { Empty } from '@/widgets/project-management/ui/empty';
-import { ProjectsTable } from '@/widgets/project-management/ui/table';
-import { useProjectsPageModel } from '@/widgets/project-management/ui/model/useProjectsPageModel';
 
 import { DeleteProjectModal } from '@/features/project-delete';
 import { PageWrapper } from '@/shared/ui';
 
+import { Empty } from './empty';
+
+import { useProjectsPageModel } from './model/useProjectsPageModel';
+
 import styles from './ProjectManagement.module.scss';
+import { ProjectsTable } from './table';
+import { Toolbar } from './toolbar';
 
 export const ProjectManagement = () => {
   const { activeId, setActiveId, isEmpty, hasData, deleteModal, projects } = useProjectsPageModel();

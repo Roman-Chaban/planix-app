@@ -21,13 +21,14 @@ export type TableStylesProps = {
 };
 
 export type TableColumn<T> = {
-  key: Extract<keyof T, string>;
+  key: string;
   title: string;
   icon?: SVGComponent;
+  width?: string | number;
   render?: (row: T) => ReactNode;
 };
 
-export type DataTableProps<T extends Record<string, ReactNode>> = TableStylesProps & {
+export type DataTableProps<T extends Record<string, unknown>> = TableStylesProps & {
   data: T[];
   columns: TableColumn<T>[];
   getRowKey: (row: T) => Key;

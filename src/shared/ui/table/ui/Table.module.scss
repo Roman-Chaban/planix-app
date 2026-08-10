@@ -2,7 +2,6 @@
 
 .tableContainer {
   width: 100%;
-  padding-inline: $space-4;
   @include table-scroll;
   @include hide-scrollbar;
 }
@@ -37,15 +36,16 @@
 
 .cell.sizeSm {
   padding-inline: 0.5rem;
-  padding-block: 1rem 1.125rem;
+  padding-block: 0.75rem 0.875rem;
 }
 
 .headCell.sizeMd {
   padding: 0.75rem 1rem;
 }
 
-// .cell.sizeMd {
-// }
+.cell.sizeMd {
+  padding: 0.5rem 1rem;
+}
 
 .headCell.sizeLg {
   padding: 1rem 1.25rem;
@@ -65,6 +65,7 @@
 }
 
 .variantDefault {
+  padding-inline: $space-4;
   background: $neutral-0;
 
   .row:not(:last-child) .cell {
@@ -90,4 +91,8 @@
   .cell {
     font-weight: $font-weight-medium;
   }
+}
+
+.tableContainer .variantMinimal {
+  padding-inline: 0;
 }

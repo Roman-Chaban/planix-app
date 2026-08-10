@@ -12,7 +12,7 @@ import { TableHead } from './TableHead';
 import { TableHeadCell } from './TableHeadCell';
 import { TableRow } from './TableRow';
 
-export const DataTable = <T extends Record<string, ReactNode>>({
+export const DataTable = <T extends Record<string, unknown>>({
   data,
   columns,
   getRowKey,
@@ -27,6 +27,11 @@ export const DataTable = <T extends Record<string, ReactNode>>({
   return (
     <TableContainer ref={drafRef} variant={variant}>
       <Table>
+        <colgroup>
+          {columns.map((column) => (
+            <col key={column.key} style={column.width ? { width: column.width } : undefined} />
+          ))}
+        </colgroup>
         <TableHead>
           <TableRow>
             {columns.map((column) => (
@@ -40,7 +45,9 @@ export const DataTable = <T extends Record<string, ReactNode>>({
           {data.map((row) => (
             <TableRow key={getRowKey(row)}>
               {columns.map((column) => {
-                const renderedValue = column.render ? column.render(row) : row[column.key];
+                const renderedValue = column.render
+                  ? column.render(row)
+                  : (row[column.key] as ReactNode);
 
                 const Icon = column.icon;
 

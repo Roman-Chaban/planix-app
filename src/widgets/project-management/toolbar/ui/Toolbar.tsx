@@ -13,7 +13,7 @@ import { useToolbar } from '../model/useToolbar';
 
 import { ToolbarActions } from './actions/ui/ToolbarActions';
 import { ToolbarHeader } from './header/ui/ToolbarHeader';
-import { ToolbarSelectMobile } from './select/ui/ToolbarSelectMobile';
+import { ToolbarSelect } from './select/ui/ToolbarSelect';
 import styles from './Toolbar.module.scss';
 
 const { WIDE } = BREAKPOINTS;
@@ -35,7 +35,7 @@ export const Toolbar = ({ activeId, setActiveId }: ToolbarProps) => {
       {!isWideScreen ? (
         <ToolbarHeader activeId={activeId} setActiveId={setActiveId} />
       ) : (
-        <ToolbarSelectMobile activeId={activeId} setActiveId={setActiveId} />
+        <ToolbarSelect activeId={activeId} setActiveId={setActiveId} />
       )}
       <ToolbarActions handleCreateProject={handleCreateProject} />
     </Box>

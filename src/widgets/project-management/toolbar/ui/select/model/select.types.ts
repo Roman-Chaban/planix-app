@@ -2,7 +2,7 @@ import type { TabId } from '@types';
 
 import type { Dispatch, SetStateAction } from 'react';
 
-export type ToolbarSelectMobileProps = {
+export type ToolbarSelectProps = {
   activeId: TabId;
   setActiveId: Dispatch<SetStateAction<TabId>>;
 };

@@ -5,4 +5,4 @@ export { useToolbar } from './model/useToolbar';
 export { Toolbar } from './ui/Toolbar';
 export { ToolbarActions } from './ui/actions';
 export { ToolbarHeader, ToolbarHeaderItem } from './ui/header';
-export { ToolbarSelectMobile } from './ui/select';
+export { ToolbarSelect } from './ui/select';

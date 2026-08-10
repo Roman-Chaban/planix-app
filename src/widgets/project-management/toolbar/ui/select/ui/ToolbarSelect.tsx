@@ -1,6 +1,6 @@
 'use client';
 
-import type { ToolbarSelectMobileProps, ToolbarSelectOption } from '../model/select.types';
+import type { ToolbarSelectProps, ToolbarSelectOption } from '../model/select.types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -9,7 +9,7 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { Select } from '@/shared/ui';
 
-export const ToolbarSelectMobile = ({ activeId, setActiveId }: ToolbarSelectMobileProps) => {
+export const ToolbarSelect = ({ activeId, setActiveId }: ToolbarSelectProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
   const headerItems = getHeaderItems(t);

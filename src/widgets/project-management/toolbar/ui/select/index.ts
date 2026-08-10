@@ -1,1 +1,1 @@
-export { ToolbarSelectMobile } from './ui/ToolbarSelectMobile';
+export { ToolbarSelect } from './ui/ToolbarSelect';

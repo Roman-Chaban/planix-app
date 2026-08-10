@@ -13,4 +13,5 @@ export {
   ProfileMenu,
   Subscription,
   System,
+  Settings,
 } from './ui';

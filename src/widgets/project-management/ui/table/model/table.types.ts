@@ -1,4 +1,4 @@
-import type { toProjectTableItem } from '@/entities/project/lib/toProjectTableItem';
+import type { toProjectTableItem } from '@/entities/project';
 
 export type ProjectsTableProps = {
   projects: TableItem[];

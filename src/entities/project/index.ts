@@ -8,4 +8,6 @@ export type {
 
 export { getProjects, updateProject, createProject, deleteProject, uploadProjectFile } from './api';
 
+export { toProjectTableItem } from './lib/toProjectTableItem';
+
 export { useProjectActions } from './model/useProjectActions';

@@ -73,3 +73,8 @@
   align-items: start;
   gap: 3.625rem;
 }
+
+@mixin flex-inline-center {
+  @include flex-center();
+  display: inline-flex;
+}

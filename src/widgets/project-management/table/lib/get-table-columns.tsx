@@ -1,4 +1,4 @@
-import type { TableItem } from '../model/types';
+import type { TableItem } from '../model/table.types';
 import type { TranslateFn } from '@types';
 
 import { ActionsBar, MetricBadge, StatusBadge } from '@/shared/ui';
@@ -13,7 +13,6 @@ export const getProjectsTableColumns = (
   t: TranslateFn,
   actionsFactory: (slug: string, id: string | number) => ActionItem[],
 ): TableColumn<TableItem>[] => {
-  
   const buildActionCell = (row: TableItem) => (
     <ActionsBar actions={actionsFactory(row.slug, row.id)} />
   );

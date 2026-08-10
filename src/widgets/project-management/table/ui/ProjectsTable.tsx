@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProjectsTableProps } from '../model/types';
+import type { ProjectsTableProps } from '../model/table.types';
 
 import { useMemo } from 'react';
 

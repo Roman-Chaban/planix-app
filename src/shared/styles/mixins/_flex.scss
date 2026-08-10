@@ -14,6 +14,12 @@
   flex-wrap: $wrap;
 }
 
+@mixin full-width-on-mobile {
+  width: 100%;
+  max-width: 100%;
+  flex: none;
+}
+
 @mixin flex-col($gap: 0, $justify: start, $align: stretch, $direction: column) {
   display: flex;
   flex-direction: $direction;

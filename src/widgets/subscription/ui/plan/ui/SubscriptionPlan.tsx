@@ -1,6 +1,6 @@
 'use client';
 
-import type { SubscriptionPlanProps } from '../model/subscription-plan.types';
+import type { SubscriptionPlanProps } from '../model/plan-types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, List, Typography } from '@/shared/ui';

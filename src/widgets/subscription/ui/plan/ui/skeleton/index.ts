@@ -1,2 +1,2 @@
-export { SubscriptionPlanSkeleton } from './SubscriptionPlanSkeleton';
-export { SubscriptionPlanFeatureSkeleton } from './SubscriptionPlanFeatureSkeleton';
+export { SubscriptionPlanSkeleton } from './ui/SubscriptionPlanSkeleton';
+export { SubscriptionPlanFeatureSkeleton } from './ui/SubscriptionPlanFeatureSkeleton';

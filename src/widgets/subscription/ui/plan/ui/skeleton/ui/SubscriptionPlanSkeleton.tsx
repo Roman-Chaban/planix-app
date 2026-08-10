@@ -2,7 +2,7 @@
 
 import { Box, List, Skeleton } from '@/shared/ui';
 
-import { FEATURES } from '../../lib/plan.constants';
+import { FEATURES } from '../../../lib/plan.constants';
 import styles from '../SubscriptionPlan.module.scss';
 
 import { SubscriptionPlanFeatureSkeleton } from './SubscriptionPlanFeatureSkeleton';

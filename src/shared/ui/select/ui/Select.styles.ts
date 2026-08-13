@@ -1,52 +1,38 @@
-import type { SelectStyles } from '../model/select.types';
-import type { GroupBase } from 'react-select';
+import type { SelectStyles, SelectVariant } from '../model/select.types';
+
+import { type GroupBase } from 'react-select';
+
+import { mergeStyles } from '../lib/merge-styles.helper';
+import { SELECT_VARIANTS } from '../lib/select.styles';
 
 export const createSelectStyles = <
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>,
->(): SelectStyles<Option, IsMulti, Group> => ({
-  container: (base) => ({
-    ...base,
-    width: '100%',
-  }),
+>(
+  variant: SelectVariant = 'default',
+): SelectStyles<Option, IsMulti, Group> => {
+  const styles = SELECT_VARIANTS.default;
+  const variantStyles = SELECT_VARIANTS[variant];
 
-  control: (base) => ({
-    ...base,
-    width: '100%',
-    minHeight: '2.5rem',
-    borderColor: '#b9b9b9',
-    borderRadius: '1rem',
-    marginBlockStart: '0.188rem',
-    padding: '0.5rem 1.125rem',
-  }),
+  return {
+    container: (base) => mergeStyles(base, styles.container, variantStyles.container),
 
-  valueContainer: (base) => ({
-    ...base,
-    paddingInlineEnd: 0,
-  }),
+    control: (base) => mergeStyles(base, styles.control, variantStyles.control),
 
-  singleValue: (base) => ({
-    ...base,
-    margin: 0,
-    color: '#525252',
-    cursor: 'pointer',
-    overflow: 'visible',
-  }),
+    valueContainer: (base) =>
+      mergeStyles(base, styles.valueContainer, variantStyles.valueContainer),
 
-  dropdownIndicator: (base) => ({
-    ...base,
-    cursor: 'pointer',
-  }),
+    singleValue: (base) => mergeStyles(base, styles.singleValue, variantStyles.singleValue),
 
-  indicatorSeparator: () => ({}),
+    dropdownIndicator: (base) =>
+      mergeStyles(base, styles.dropdownIndicator, variantStyles.dropdownIndicator),
 
-  menu: (base) => ({
-    ...base,
-  }),
+    indicatorSeparator: () =>
+      mergeStyles({}, styles.indicatorSeparator, variantStyles.indicatorSeparator),
 
-  option: (base) => ({
-    ...base,
-    cursor: 'pointer',
-  }),
-});
+    menu: (base) => mergeStyles(base, styles.menu, variantStyles.menu),
+
+    option: (base) => mergeStyles(base, styles.option, variantStyles.option),
+  };
+};

@@ -2,46 +2,25 @@
 
 import type { ProjectsTableProps } from '../model/table.types';
 
-import { useMemo } from 'react';
-
-import { useTranslation } from 'react-i18next';
-
-import { createProjectRowActions } from '@/features/project-table/lib/createProjectRowActions';
-import { ROUTES } from '@/shared/config/routes';
-import { NAMESPACE as NS } from '@/shared/i18n';
-import { AXIS, useLocalizedRouter } from '@/shared/lib/hooks';
+import { AXIS } from '@/shared/lib/hooks';
 import { DataTable } from '@/shared/ui';
 
 import { TABLE_SIZES, TABLE_VARIANTS } from '@/shared/ui/table';
 
-import { getProjectsTableColumns } from '../lib/get-table-columns';
+import { useProjectsTableConfig } from '../model/useProjectsTableConfig';
+
+import { ProjectsTableSkeleton } from './skeleton/ProjectsTableSkeleton';
 
 const { X } = AXIS;
-const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 const { MD } = TABLE_SIZES;
 const { MINIMAL } = TABLE_VARIANTS;
 
-export const ProjectsTable = ({ projects, onDelete }: ProjectsTableProps) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
-  const localizedRouter = useLocalizedRouter();
+export const ProjectsTable = ({ projects, onDelete, isLoading }: ProjectsTableProps) => {
+  const { t, columns } = useProjectsTableConfig(onDelete);
 
-  const actionsFactory = useMemo(
-    () =>
-      createProjectRowActions({
-        onView: (slug) => {
-          const projectDetailsUrl = `${PROJECT}${PROJECT_DETAILS}${slug}`;
-          localizedRouter.push(projectDetailsUrl);
-        },
-        onEdit: (id) => {
-          const projectEditUrl = `${PROJECT_EDIT}${id}`;
-          localizedRouter.push(projectEditUrl);
-        },
-        onDelete,
-      }),
-    [localizedRouter, onDelete],
-  );
-
-  const columns = useMemo(() => getProjectsTableColumns(t, actionsFactory), [t, actionsFactory]);
+  if (isLoading) {
+    return <ProjectsTableSkeleton t={t} size={MD} />;
+  }
 
   return (
     <DataTable

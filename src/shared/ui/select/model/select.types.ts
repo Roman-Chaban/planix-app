@@ -1,4 +1,22 @@
-import type { GroupBase, Props, StylesConfig } from 'react-select';
+import type { GroupBase, Props, StylesConfig, CSSObjectWithLabel } from 'react-select';
+
+export type SelectVariant = 'default' | 'language' | 'toolbar';
+
+export type SelectVariantStyles = {
+  container?: CSSObjectWithLabel;
+  control?: CSSObjectWithLabel;
+  valueContainer?: CSSObjectWithLabel;
+  singleValue?: CSSObjectWithLabel;
+  dropdownIndicator?: CSSObjectWithLabel;
+  indicatorSeparator?: CSSObjectWithLabel;
+  indicatorsContainer?: CSSObjectWithLabel;
+  menu?: CSSObjectWithLabel;
+  option?: CSSObjectWithLabel;
+  optionFocused?: CSSObjectWithLabel;
+  optionSelected?: CSSObjectWithLabel;
+};
+
+export type SelectVariants = Record<SelectVariant, SelectVariantStyles>;
 
 export type SelectProps<
   Option,

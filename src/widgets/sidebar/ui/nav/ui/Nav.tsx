@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { List } from '@/shared/ui';
 
 import { getNavItems } from '../lib/get-nav-items';
-import { isActiveRoute } from '../lib/is-active-route';
+import { isActiveRoute } from '../lib/isActiveRoute';
 
 import { NavItem } from './NavItem';
 

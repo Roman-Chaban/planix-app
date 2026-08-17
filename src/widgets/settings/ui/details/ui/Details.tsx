@@ -9,11 +9,10 @@ import { Box } from '@/shared/ui';
 
 import { useChangeMode } from '../model/useChangeMode';
 
-import { DetailsList } from '../ui/DetailsList';
-
 import styles from './Details.module.scss';
 import { DetailsHeader } from './DetailsHeader';
 
+import { DetailsList } from './DetailsList';
 import { DetailsSkeleton } from './skeleton/DetailsSkeleton';
 
 export const Details = () => {

@@ -32,7 +32,7 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
           <PlanixLogoIcon width={44} height={44} />
         </AppLink>
         <Typography as="span" className={styles.sidebarTitle}>
-          {t('title')}
+          {t('nav.title')}
         </Typography>
 
         <Button

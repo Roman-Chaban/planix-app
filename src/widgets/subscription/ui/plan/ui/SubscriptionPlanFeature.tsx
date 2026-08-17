@@ -1,4 +1,4 @@
-import type { SubscriptionPlanFeatureProps } from '../model/subscription-plan.types';
+import type { SubscriptionPlanFeatureProps } from '../model/plan-types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Typography } from '@/shared/ui';

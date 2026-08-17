@@ -3,32 +3,25 @@
 import type { ToolbarSelectProps, ToolbarSelectOption } from '../model/select.types';
 
 import { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
-
-import { getHeaderItems } from '@/widgets/project-details';
-import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { buildClassName } from '@/shared/lib';
 import { useSidebar } from '@/shared/providers/sidebar';
 import { createSelectStyles, Select } from '@/shared/ui';
 
+import { SELECT_CONTROL_VARIANTS } from '@/shared/ui/select';
+
+import { useToolbarSelect } from '../model/useToolbarSelect';
+
 import styles from './ToolbarSelect.module.scss';
 
-export const ToolbarSelect = ({ activeId, setActiveId }: ToolbarSelectProps) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+const { TOOLBAR } = SELECT_CONTROL_VARIANTS;
 
+export const ToolbarSelect = ({ activeId, setActiveId }: ToolbarSelectProps) => {
   const { isSidebarOpen } = useSidebar();
 
-  const headerItems = getHeaderItems(t);
+  const { options, selectedOption, handleChange } = useToolbarSelect(activeId, setActiveId);
 
-  const options: ToolbarSelectOption[] = headerItems.map((item) => ({
-    value: item.id,
-    label: item.label,
-  }));
-
-  const selectedOption = options.find((option) => option.value === activeId) ?? null;
-
-  const selectStyles = useMemo(() => createSelectStyles<ToolbarSelectOption>(), []);
+  const selectStyles = useMemo(() => createSelectStyles<ToolbarSelectOption>(TOOLBAR), []);
 
   return (
     <Select<ToolbarSelectOption, false>
@@ -38,14 +31,7 @@ export const ToolbarSelect = ({ activeId, setActiveId }: ToolbarSelectProps) => 
       styles={selectStyles}
       isSearchable={false}
       isClearable={false}
-
-      onChange={(option) => {
-        if (!option) {
-          return;
-        }
-
-        setActiveId(option.value);
-      }}
+      onChange={handleChange}
     />
   );
 };

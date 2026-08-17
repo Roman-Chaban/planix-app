@@ -14,15 +14,22 @@ import { ProjectsTable } from './table';
 import { Toolbar } from './toolbar';
 
 export const ProjectManagement = () => {
-  const { activeId, setActiveId, isEmpty, hasData, deleteModal, projects } = useProjectsPageModel();
+  const { activeId, setActiveId, projects, isLoading, isEmpty, hasData, deleteModal } =
+    useProjectsPageModel();
 
   return (
-    <PageWrapper header={<Header title={'projects'} />} sectionClassName={styles.projects}>
+    <PageWrapper header={<Header title="projects" />} sectionClassName={styles.projects}>
       <Toolbar activeId={activeId} setActiveId={setActiveId} />
 
       {isEmpty && <Empty />}
 
-      {hasData && <ProjectsTable onDelete={deleteModal.openDeleteModal} projects={projects} />}
+      {(isLoading || hasData) && (
+        <ProjectsTable
+          isLoading={isLoading}
+          projects={projects}
+          onDelete={deleteModal.openDeleteModal}
+        />
+      )}
 
       <DeleteProjectModal
         isOpen={deleteModal.isOpen}

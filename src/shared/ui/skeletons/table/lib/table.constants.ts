@@ -1,11 +1,10 @@
-export const DEFAULT_ROWS_COUNT = 5;
+import type { TableSize } from '@/shared/ui/table/model/types';
+
+export const TABLE_SKELETON_ROW_COUNT = {
+  sm: 5,
+  md: 10,
+  lg: 15,
+} satisfies Record<TableSize, number>;
+
 export const DEFAULT_CELL_HEIGHT = 25;
 export const DEFAULT_CELL_RADIUS = 30;
-
-export const TABLE_SKELETON_ROWS = {
-  XS: 3,
-  SM: 5,
-  MD: 10,
-  LG: 15,
-  XL: 20,
-} as const;

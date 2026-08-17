@@ -7,7 +7,7 @@ export type TableSkeletonColumn = {
 
 export type TableSkeletonProps = {
   columns: TableSkeletonColumn[];
-  rowsCount?: number;
+  rowCount?: number;
   cellHeight?: number;
   cellRadius?: number;
   size: TableSize;

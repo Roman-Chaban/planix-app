@@ -14,18 +14,18 @@ import { Skeleton } from '@/shared/ui/skeleton/ui/Skeleton';
 import {
   DEFAULT_CELL_HEIGHT,
   DEFAULT_CELL_RADIUS,
-  DEFAULT_ROWS_COUNT,
+  TABLE_SKELETON_ROW_COUNT,
 } from '../lib/table.constants';
 
 export const TableSkeleton = ({
   columns,
-  rowsCount = DEFAULT_ROWS_COUNT,
+  rowCount,
   cellHeight = DEFAULT_CELL_HEIGHT,
   cellRadius = DEFAULT_CELL_RADIUS,
   variant,
   size,
 }: TableSkeletonProps) => {
-  const rows = Array.from({ length: rowsCount });
+  const resolvedRowCount = rowCount ?? TABLE_SKELETON_ROW_COUNT[size];
 
   return (
     <TableContainer>
@@ -39,7 +39,7 @@ export const TableSkeleton = ({
         </TableHead>
 
         <TableBody>
-          {rows.map((_, rowIndex) => (
+          {Array.from({ length: resolvedRowCount }, (_, rowIndex) => (
             <TableRow key={rowIndex}>
               {columns.map((column) => (
                 <TableCell key={column.key} size={size}>

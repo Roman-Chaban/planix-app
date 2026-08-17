@@ -3,8 +3,7 @@ export type { TableSkeletonColumn, TableSkeletonProps } from './model/table.type
 export {
   DEFAULT_CELL_HEIGHT,
   DEFAULT_CELL_RADIUS,
-  DEFAULT_ROWS_COUNT,
-  TABLE_SKELETON_ROWS,
+  TABLE_SKELETON_ROW_COUNT,
 } from './lib/table.constants';
 
 export { TableSkeleton } from './ui/TableSkeleton';

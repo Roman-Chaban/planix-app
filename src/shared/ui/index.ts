@@ -47,3 +47,4 @@ export { Skeleton } from './skeleton';
 export { PageLoader } from './page-loader';
 export { OtpInput, OtpCell, OtpCursor } from './otp-input';
 export { Select, createSelectStyles } from './select';
+export { TableSkeleton } from './skeletons';

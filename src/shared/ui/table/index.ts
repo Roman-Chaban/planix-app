@@ -1,3 +1,5 @@
+export type { TableSize, TableVariant } from './model/types';
+
 export { TABLE_SIZES, TABLE_VARIANTS } from './lib/table.constants';
 
 export { TableContainer } from './ui/TableContainer';

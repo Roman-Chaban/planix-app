@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, ProjectButton, Typography } from '@/shared/ui';
 
 import { NoProjectsIcon } from '@/shared/ui/icons';
@@ -24,15 +24,15 @@ export const Empty = () => {
 
       <Box className={styles.content}>
         <Typography as="h4" className={styles.title}>
-          {t('projectEmpty.title')}
+          {t('emptyProjects.title')}
         </Typography>
         <Typography as="p" className={styles.subtitle}>
-          {t('projectEmpty.subtitle')}
+          {t('emptyProjects.subtitle')}
         </Typography>
 
         <ProjectButton
           preset="EMPTY_PROJECTS"
-          label={t('projectEmpty.addProjectButton')}
+          label={t('emptyProjects.addProjectButton')}
           onClick={handleCreateProject}
         />
       </Box>

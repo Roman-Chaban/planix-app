@@ -7,6 +7,7 @@ export type {
 
 export { mergeStyles } from './lib/merge-styles.helper';
 export { SELECT_VARIANTS } from './lib/select.styles';
+export { SELECT_CONTROL_VARIANTS } from './lib/select.constants';
 
 export { Select } from './ui/Select';
 export { createSelectStyles } from './ui/Select.styles';

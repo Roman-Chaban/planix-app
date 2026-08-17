@@ -9,8 +9,11 @@ export type SelectVariantStyles = {
   singleValue?: CSSObjectWithLabel;
   dropdownIndicator?: CSSObjectWithLabel;
   indicatorSeparator?: CSSObjectWithLabel;
+  indicatorsContainer?: CSSObjectWithLabel;
   menu?: CSSObjectWithLabel;
   option?: CSSObjectWithLabel;
+  optionFocused?: CSSObjectWithLabel;
+  optionSelected?: CSSObjectWithLabel;
 };
 
 export type SelectVariants = Record<SelectVariant, SelectVariantStyles>;

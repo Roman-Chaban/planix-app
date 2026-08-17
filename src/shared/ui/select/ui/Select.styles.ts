@@ -25,14 +25,43 @@ export const createSelectStyles = <
 
     singleValue: (base) => mergeStyles(base, styles.singleValue, variantStyles.singleValue),
 
-    dropdownIndicator: (base) =>
-      mergeStyles(base, styles.dropdownIndicator, variantStyles.dropdownIndicator),
+    dropdownIndicator: (base, state) => {
+      const indicatorStyles = mergeStyles(
+        base,
+        styles.dropdownIndicator,
+        variantStyles.dropdownIndicator,
+      );
 
-    indicatorSeparator: () =>
-      mergeStyles({}, styles.indicatorSeparator, variantStyles.indicatorSeparator),
+      return {
+        ...indicatorStyles,
+
+        '& svg': {
+          ...(indicatorStyles['& svg'] as object),
+          transform: state.selectProps.menuIsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+        },
+      };
+    },
+
+    indicatorsContainer: () =>
+      mergeStyles({}, styles.indicatorsContainer, variantStyles.indicatorsContainer),
+
+    indicatorSeparator: (base) =>
+      mergeStyles(base, styles.indicatorSeparator, variantStyles.indicatorSeparator),
 
     menu: (base) => mergeStyles(base, styles.menu, variantStyles.menu),
 
-    option: (base) => mergeStyles(base, styles.option, variantStyles.option),
+    option: (base, state) => {
+      const optionStyles = mergeStyles(base, styles.option, variantStyles.option);
+
+      if (state.isSelected) {
+        return mergeStyles(optionStyles, styles.optionSelected, variantStyles.optionSelected);
+      }
+
+      if (state.isFocused) {
+        return mergeStyles(optionStyles, styles.optionFocused, variantStyles.optionFocused);
+      }
+
+      return optionStyles;
+    },
   };
 };

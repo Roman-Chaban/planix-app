@@ -33,9 +33,7 @@ export const TableSkeleton = ({
         <TableHead>
           <TableRow>
             {columns.map((column) => (
-              <TableHeadCell key={column.key} >
-                {column.title}
-              </TableHeadCell>
+              <TableHeadCell key={column.key}>{column.title}</TableHeadCell>
             ))}
           </TableRow>
         </TableHead>

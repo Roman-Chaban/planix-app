@@ -774,7 +774,7 @@ export const NotFoundTextDecartionIcon = ({ width = 392, height = 255 }: IconPro
   );
 };
 
-export const NoProjectsIcon = ({ width = 77, height = 77 }: IconProps) => {
+export const EmptyStateIcon = ({ width = 77, height = 77 }: IconProps) => {
   return (
     <svg
       width={width}

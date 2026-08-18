@@ -22,7 +22,7 @@ export { UnitedStatesIcon } from './Icons';
 export { UkraineIcon } from './Icons';
 export { NotFoundBanner } from './Icons';
 export { NotFoundTextDecartionIcon } from './Icons';
-export { NoProjectsIcon } from './Icons';
+export { EmptyStateIcon } from './Icons';
 export { CalendarIcon } from './Icons';
 export { PendingIcon } from './Icons';
 export { InProgressIcon } from './Icons';

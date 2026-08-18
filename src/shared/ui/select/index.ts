@@ -10,4 +10,5 @@ export { SELECT_VARIANTS } from './lib/select.styles';
 export { SELECT_CONTROL_VARIANTS } from './lib/select.constants';
 
 export { Select } from './ui/Select';
+export { CustomDropdownIndicator } from './ui/CustomDropdownIndicator';
 export { createSelectStyles } from './ui/Select.styles';

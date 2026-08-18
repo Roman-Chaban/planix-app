@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, ProjectButton, Typography } from '@/shared/ui';
 
-import { NoProjectsIcon } from '@/shared/ui/icons';
+import { EmptyStateIcon } from '@/shared/ui/icons';
 
 import { useToolbar } from '../../model/use-toolbar';
 
@@ -19,7 +19,7 @@ export const EmptyState = () => {
   return (
     <Box className={styles.box}>
       <Box className={styles.iconWrapper}>
-        <NoProjectsIcon />
+        <EmptyStateIcon />
       </Box>
 
       <Box className={styles.content}>

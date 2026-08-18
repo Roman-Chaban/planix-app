@@ -6,7 +6,7 @@ import { buildClassName } from '@/shared/lib';
 import { Box, FormError, FormLabel } from '@/shared/ui';
 import type { TextareaProps } from '@/shared/ui/textarea';
 
-import styles from './Textarea.module.scss';
+import styles from './textarea.module.scss';
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ label, id, textareaClassName, labelClassName, placeholder, error, ...props }, ref) => {

@@ -5,7 +5,7 @@ import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
 import type { AvatarProps } from '@/shared/ui/avatar';
 
-import styles from './Avatar.module.scss';
+import styles from './avatar.module.scss';
 
 export const Avatar = ({
   src,

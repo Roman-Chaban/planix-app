@@ -1,0 +1,11 @@
+import type { WithChildren, WithClassName } from '@types';
+
+import { Box } from '../../box';
+
+import styles from './modal.module.scss';
+
+export type ModalActionsProps = WithChildren & WithClassName;
+
+export const ModalActions = ({ children, className }: ModalActionsProps) => {
+  return <Box className={`${styles.actions} ${className || ''}`}>{children}</Box>;
+};

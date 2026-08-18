@@ -1,4 +1,4 @@
-import type { ToastProps } from '../model/toast.types';
+import type { ToastProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
 
@@ -6,9 +6,9 @@ import { Box } from '../../box';
 import { Button, BUTTON_VARIANTS } from '../../button';
 import { CloseToastIcon } from '../../icons';
 import { Typography } from '../../typography';
-import { toastConfig } from '../lib/toast.config';
+import { toastConfig } from '../lib/config';
 
-import styles from './Toast.module.scss';
+import styles from './toast.module.scss';
 
 const { TRANSPARENT } = BUTTON_VARIANTS;
 

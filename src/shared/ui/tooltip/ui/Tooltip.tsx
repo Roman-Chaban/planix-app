@@ -1,7 +1,7 @@
 import { Box } from '@/shared/ui';
 import { TOOLTIP_POSITION, type TooltipProps } from '@/shared/ui/tooltip';
 
-import styles from './Tooltip.module.scss';
+import styles from './tooltip.module.scss';
 
 const { TOP } = TOOLTIP_POSITION;
 

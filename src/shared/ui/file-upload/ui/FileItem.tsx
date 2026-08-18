@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from '@/shared/ui';
 
-import { BUTTON_TYPES } from '@/shared/ui/button/lib/button.constants';
+import { BUTTON_TYPES } from '@/shared/ui/button/lib/constants';
 import type { FileItemProps } from '@/shared/ui/file-upload';
 import { CloseIcon, PdfIcon, UploadIcon } from '@/shared/ui/icons';
 

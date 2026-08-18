@@ -3,9 +3,9 @@ import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
 import type { ButtonProps } from '@/shared/ui/button';
 
-import { getButtonProps } from '../lib/button.helpers';
+import { getButtonProps } from '../lib/helpers';
 
-import styles from './Button.module.scss';
+import styles from './button.module.scss';
 
 export const Button = (props: ButtonProps) => {
   const { allProps, htmlProps } = getButtonProps(props);

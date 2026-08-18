@@ -5,7 +5,7 @@ import { buildClassName } from '@/shared/lib';
 import { Box, Typography } from '@/shared/ui';
 import type { CardProps } from '@/shared/ui/card';
 
-import styles from './Card.module.scss';
+import styles from './card.module.scss';
 
 export const Card = ({ id, label, name, value, trend, trendType }: CardProps) => {
   return (

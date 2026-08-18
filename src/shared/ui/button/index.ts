@@ -1,7 +1,7 @@
-export type { ButtonProps, MinWidth } from './model/button.types';
+export type { ButtonProps, MinWidth } from './model/types';
 
-export { getButtonProps } from './lib/button.helpers';
-export { BUTTON_PRESETS, type ButtonPresetKey } from './lib/button.presets';
+export { getButtonProps } from './lib/helpers';
+export { BUTTON_PRESETS, type ButtonPresetKey } from './lib/presets';
 
 export {
   BUTTON_SHAPES,
@@ -10,6 +10,6 @@ export {
   BUTTON_VARIANTS,
   BUTTON_MIN_WIDTH,
   BUTTON_UI_PROPS,
-} from './lib/button.constants';
+} from './lib/constants';
 
-export { Button } from './ui/Button';
+export { Button } from './ui/button';

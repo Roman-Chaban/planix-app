@@ -1,4 +1,4 @@
 export type { GridProps, GridItemProps } from './model/types';
 
-export { Grid } from './ui/Grid';
-export { GridItem } from './ui/GridItem';
+export { Grid } from './ui/grid';
+export { GridItem } from './ui/grid-item';

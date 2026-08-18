@@ -1,12 +1,12 @@
 export type { TableSize, TableVariant } from './model/types';
 
-export { TABLE_SIZES, TABLE_VARIANTS } from './lib/table.constants';
+export { TABLE_SIZES, TABLE_VARIANTS } from './lib/constants';
 
-export { TableContainer } from './ui/TableContainer';
-export { DataTable } from './ui/DataTable';
-export { Table } from './ui/Table';
-export { TableBody } from './ui/TableBody';
-export { TableCell } from './ui/TableCell';
-export { TableHead } from './ui/TableHead';
-export { TableHeadCell } from './ui/TableHeadCell';
-export { TableRow } from './ui/TableRow';
+export { TableContainer } from './ui/table-container';
+export { DataTable } from './ui/data-table';
+export { Table } from './ui/table';
+export { TableBody } from './ui/table-body';
+export { TableCell } from './ui/table-cell';
+export { TableHead } from './ui/table-head';
+export { TableHeadCell } from './ui/table-head-cell';
+export { TableRow } from './ui/table-row';

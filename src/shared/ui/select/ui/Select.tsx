@@ -1,6 +1,6 @@
 'use client';
 
-import type { SelectProps } from '../model/select.types';
+import type { SelectProps } from '../model/types';
 
 import ReactSelect, { type GroupBase } from 'react-select';
 

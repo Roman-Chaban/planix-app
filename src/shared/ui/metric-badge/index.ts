@@ -1,5 +1,5 @@
-export type { MetricBadgeProps, MetricBadgeVariant } from './model/metric-badge.types';
+export type { MetricBadgeProps, MetricBadgeVariant } from './model/types';
 
-export { METRIC_STATUSES } from './lib/metric-badge.constants';
+export { METRIC_STATUSES } from './lib/constants';
 
-export { MetricBadge } from './ui/MetricBadge';
+export { MetricBadge } from './ui/metric-badge';

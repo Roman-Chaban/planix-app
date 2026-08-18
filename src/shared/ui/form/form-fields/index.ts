@@ -1,3 +1,3 @@
 export type { FormFieldConfig, FormFieldsProps } from './model/types';
 
-export { FormFields } from './ui/FormFields';
+export { FormFields } from './ui/form-fields';

@@ -1,5 +1,4 @@
-import { Box } from '@/shared/ui';
-import { Skeleton } from '@/shared/ui/skeleton/ui/Skeleton';
+import { Box, Skeleton } from '@/shared/ui';
 
 import styles from '../Subscription.module.scss';
 

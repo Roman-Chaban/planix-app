@@ -4,7 +4,7 @@ import { buildClassName } from '@/shared/lib';
 
 import { variantClass } from '../lib/styles';
 
-import styles from './Table.module.scss';
+import styles from './table.module.scss';
 
 export const Table = ({ children, className, variant = 'default' }: TableProps) => {
   return (

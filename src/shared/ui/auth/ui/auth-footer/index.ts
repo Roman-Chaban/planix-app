@@ -1,3 +1,3 @@
 export type { AuthFooterProps } from './model/types';
 
-export { AuthFooter } from './ui/AuthFooter';
+export { AuthFooter } from './ui/auth-footer';

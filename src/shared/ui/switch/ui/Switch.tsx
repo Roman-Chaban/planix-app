@@ -4,7 +4,7 @@ import { Box, Input } from '@/shared/ui';
 
 import { INPUT_TYPES } from '@/shared/ui/input';
 
-import styles from './Switch.module.scss';
+import styles from './switch.module.scss';
 
 const { CHECKBOX } = INPUT_TYPES;
 

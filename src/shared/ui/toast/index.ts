@@ -1,3 +1,3 @@
-export { TOAST_VARIANT } from './lib/toast.constants';
+export { TOAST_VARIANT } from './lib/constants';
 
-export { Toast } from './ui/Toast';
+export { Toast } from './ui/toast';

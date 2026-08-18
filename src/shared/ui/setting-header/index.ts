@@ -1,1 +1,1 @@
-export { SettingsHeader } from './ui/SettingsHeader';
+export { SettingsHeader } from './ui/settings-header';

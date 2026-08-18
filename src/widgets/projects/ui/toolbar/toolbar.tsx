@@ -18,7 +18,7 @@ import styles from './toolbar.module.scss';
 
 const { WIDE } = BREAKPOINTS;
 
-export const Toolbar = ({ activeId, setActiveId }: ToolbarProps) => {
+export const Toolbar = ({ activeId, setActiveId, projects }: ToolbarProps) => {
   const { handleCreateProject } = useToolbar();
   const { isSidebarOpen } = useSidebar();
 
@@ -37,7 +37,12 @@ export const Toolbar = ({ activeId, setActiveId }: ToolbarProps) => {
       ) : (
         <ToolbarSelect activeId={activeId} setActiveId={setActiveId} />
       )}
-      <ToolbarActions handleCreateProject={handleCreateProject} />
+      <ToolbarActions
+        projects={projects}
+        handleCreateProject={handleCreateProject}
+        activeId={activeId}
+        setActiveId={setActiveId}
+      />
     </Box>
   );
 };

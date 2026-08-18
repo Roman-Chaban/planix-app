@@ -10,11 +10,17 @@ import { Box, FormField, ProjectButton } from '@/shared/ui';
 import { SearchIconPrimary } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
+import { PlatformSelect } from './platform-select';
 import styles from './toolbar.module.scss';
 
 const { SEARCH } = INPUT_TYPES;
 
-export const ToolbarActions = ({ handleCreateProject }: ToolbarActionsProps) => {
+export const ToolbarActions = ({
+  handleCreateProject,
+  activeId,
+  setActiveId,
+  projects,
+}: ToolbarActionsProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
   return (
@@ -31,8 +37,7 @@ export const ToolbarActions = ({ handleCreateProject }: ToolbarActionsProps) => 
         />
       </Box>
 
-      {/* TODO: [Select Platform will be added later] */}
-      <Box className={styles.platform}>Select Platform</Box>
+      <PlatformSelect activeId={activeId} setActiveId={setActiveId} projects={projects} />
 
       <ProjectButton
         className={styles.button}

@@ -1,30 +1,34 @@
-import type { ProjectsHeaderProps, TabId } from '@types';
+import type { ActiveTabProps, ProjectsHeaderProps, TabId } from '@types';
 
-import type { Dispatch, SetStateAction } from 'react';
+import type { Project } from '@/entities/project';
 
-export type ToolbarProps = {
-  activeId: TabId;
-  setActiveId: Dispatch<SetStateAction<TabId>>;
+export type ToolbarProps = ActiveTabProps & {
+  projects: Project[];
 };
 
-export type ToolbarSelectProps = {
-  activeId: TabId;
-  setActiveId: Dispatch<SetStateAction<TabId>>;
-};
+export type ToolbarSelectProps = ActiveTabProps;
 
 export type ToolbarSelectOption = {
   value: TabId;
   label: string;
 };
 
-export type ToolbarHeaderProps = {
-  activeId: TabId;
-  setActiveId: Dispatch<SetStateAction<TabId>>;
+export type ToolbarHeaderProps = ActiveTabProps & {
   isSidebarOpen?: boolean;
 };
 
-export type ToolbarActionsProps = {
+export type ToolbarActionsProps = ActiveTabProps & {
   handleCreateProject?: () => void;
+  projects: Project[];
 };
 
 export type ToolbarHeaderItemProps = ProjectsHeaderProps;
+
+export type PlatformOption = {
+  value: TabId;
+  label: string;
+};
+
+export type PlatformSelectProps = ActiveTabProps & {
+  projects: Project[];
+};

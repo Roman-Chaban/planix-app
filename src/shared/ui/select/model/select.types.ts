@@ -1,6 +1,14 @@
-import type { GroupBase, Props, StylesConfig, CSSObjectWithLabel } from 'react-select';
+import type {
+  GroupBase,
+  Props,
+  StylesConfig,
+  CSSObjectWithLabel,
+  DropdownIndicatorProps,
+} from 'react-select';
 
-export type SelectVariant = 'default' | 'language' | 'toolbar';
+import type { ReactNode } from 'react';
+
+export type SelectVariant = 'default' | 'language' | 'toolbar' | 'platform';
 
 export type SelectVariantStyles = {
   container?: CSSObjectWithLabel;
@@ -10,6 +18,7 @@ export type SelectVariantStyles = {
   dropdownIndicator?: CSSObjectWithLabel;
   indicatorSeparator?: CSSObjectWithLabel;
   indicatorsContainer?: CSSObjectWithLabel;
+  placeholder?: CSSObjectWithLabel;
   menu?: CSSObjectWithLabel;
   option?: CSSObjectWithLabel;
   optionFocused?: CSSObjectWithLabel;
@@ -29,3 +38,11 @@ export type SelectStyles<
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>,
 > = StylesConfig<Option, IsMulti, Group>;
+
+export type CustomDropdownIndicatorProps<
+  Option,
+  IsMulti extends boolean = false,
+  Group extends GroupBase<Option> = GroupBase<Option>,
+> = DropdownIndicatorProps<Option, IsMulti, Group> & {
+  icon: ReactNode;
+};

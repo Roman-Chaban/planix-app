@@ -23,13 +23,22 @@ export const useProjectsPageModel = () => {
     [projectsData],
   );
 
+  const filteredProjects = useMemo(() => {
+    if (activeId === 'AllProjects') {
+      return projects;
+    }
+
+    return projects.filter((project) => project.platform === activeId);
+  }, [projects, activeId]);
+
   const isEmpty = !isLoading && projects.length === 0;
-  const hasData = !isLoading && projects.length > 0;
+  const hasData = !isLoading && filteredProjects.length > 0;
 
   return {
     activeId,
     setActiveId,
     projects,
+    filteredProjects,
     isLoading,
     isEmpty,
     hasData,

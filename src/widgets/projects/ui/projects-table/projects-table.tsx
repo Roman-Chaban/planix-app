@@ -19,7 +19,7 @@ export const ProjectsTable = ({ projects, onDelete, isLoading }: ProjectsTablePr
   const { t, columns } = useProjectsTableConfig(onDelete);
 
   if (isLoading) {
-    return <ProjectsTableSkeleton t={t} size={MD} />;
+    return <ProjectsTableSkeleton t={t} />;
   }
 
   return (

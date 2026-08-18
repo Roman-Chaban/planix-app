@@ -1,4 +1,4 @@
-import { ProjectManagement } from '@/widgets/project-management';
+import { ProjectManagement } from '@/widgets/projects';
 
 export default function ProjectManagementPage() {
   return <ProjectManagement />;

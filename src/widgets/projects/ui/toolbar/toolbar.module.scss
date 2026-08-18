@@ -1,0 +1,132 @@
+@use '@/shared/styles' as *;
+
+.toolbar {
+  @include flex(flex, row, space-between, center, 1rem, nowrap);
+
+  @include respond(lg) {
+    flex-direction: column;
+  }
+}
+
+@include respond(xl) {
+  .toolbarExpanded {
+    flex-direction: column;
+  }
+}
+
+.toolbarActions {
+  width: 100%;
+  max-width: 43.875rem;
+
+  @include flex(flex, row, space-between, center, 1rem);
+
+  @include respond(xl) {
+    max-width: 100%;
+  }
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}
+
+.search {
+  flex: 1 1 18.875rem;
+  max-width: 18.875rem;
+
+  @include respond(xl) {
+    max-width: 100%;
+  }
+
+  @include respond(sm) {
+    @include full-width-on-mobile;
+  }
+}
+
+.platform {
+  @include flex-center;
+  flex: 1 1 11.563rem;
+  max-width: 11.563rem;
+  min-height: 3.375rem;
+  padding: 1rem;
+
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: $shadow-not-found;
+  background: $neutral-0;
+  border-radius: $radius-lg;
+
+  @include respond(sm) {
+    @include full-width-on-mobile;
+  }
+}
+
+.button {
+  @include respond(sm) {
+    @include full-width-on-mobile;
+  }
+}
+
+.scrollContainer {
+  width: 100%;
+  max-width: 50rem;
+  @include menu-horizontal-scroll;
+  box-shadow: $shadow-not-found;
+  background: $neutral-0;
+  border-radius: $radius-lg;
+}
+
+.list {
+  width: 100%;
+  @include flex-row(1rem, start, center);
+  padding: 0.5rem;
+
+  @include respond(2xl) {
+    justify-content: space-between;
+  }
+}
+
+.box {
+  width: 100%;
+  @include flex-center;
+  padding: 0.406rem 1.625rem;
+  border-radius: $radius-md;
+  border: 0.063rem solid transparent;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  white-space: nowrap;
+}
+
+.label {
+  color: $neutral-950;
+  line-height: $line-height-base;
+
+  font: {
+    weight: $font-weight-regular;
+    size: $body-lg-font-size;
+  }
+}
+
+.active {
+  border-color: $primary-700;
+  box-shadow: $shadow-not-found;
+}
+
+.activeLabel {
+  font-weight: $font-weight-semibold;
+  color: $primary-700;
+}
+
+.select {
+  width: 100%;
+  max-width: 18.75rem;
+
+  @include respond(lg) {
+    max-width: 100%;
+  }
+}
+
+@include respond(xl) {
+  .selectCollapsed {
+    max-width: 100%;
+  }
+}

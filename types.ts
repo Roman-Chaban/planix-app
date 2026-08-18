@@ -1,6 +1,6 @@
 import type { TFunction } from 'i18next';
 
-import type { ComponentType, FC, ReactNode, Ref, SVGProps } from 'react';
+import type { ComponentType, Dispatch, FC, ReactNode, Ref, SetStateAction, SVGProps } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
 import type { Locale } from '@/shared/i18n/locales/locales';
@@ -65,4 +65,9 @@ export type ProjectsHeaderProps = {
   label: string;
   isActive?: boolean;
   onClick?: () => void;
+};
+
+export type ActiveTabProps = {
+  activeId: TabId;
+  setActiveId: Dispatch<SetStateAction<TabId>>;
 };

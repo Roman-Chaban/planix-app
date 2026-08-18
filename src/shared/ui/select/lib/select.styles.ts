@@ -27,6 +27,7 @@ export const SELECT_VARIANTS: SelectVariants = {
     },
 
     dropdownIndicator: {
+      padding: 0,
       cursor: 'pointer',
 
       '& svg': {
@@ -44,6 +45,26 @@ export const SELECT_VARIANTS: SelectVariants = {
   },
 
   language: {},
+
+  platform: {
+    container: {
+      maxWidth: '11.563rem',
+    },
+
+    control: {
+      borderColor: '#e3e3e3',
+      boxShadow: '0 2px 16px 0 rgba(19, 20, 21, 0.1)',
+      padding: '0.438rem',
+      paddingInlineEnd: '1.125rem',
+      minHeight: '3.375rem',
+    },
+
+    placeholder: {
+      color: '#525252',
+      lineHeight: '150%',
+      margin: 0,
+    },
+  },
 
   toolbar: {
     container: {

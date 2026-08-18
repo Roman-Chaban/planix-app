@@ -8,7 +8,11 @@ import { getProjectsTableSkeletonColumns } from '../lib/get-projects-table-skele
 
 const { lg } = TABLE_SKELETON_ROW_COUNT;
 
-export const ProjectsTableSkeleton = ({ t, size, variant }: ProjectsTableSkeletonProps) => {
+export const ProjectsTableSkeleton = ({
+  t,
+  size = 'md',
+  variant = 'default',
+}: ProjectsTableSkeletonProps) => {
   const columns = getProjectsTableSkeletonColumns(t);
 
   return <TableSkeleton variant={variant} columns={columns} rowCount={lg} size={size} />;

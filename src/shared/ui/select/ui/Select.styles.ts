@@ -25,6 +25,8 @@ export const createSelectStyles = <
 
     singleValue: (base) => mergeStyles(base, styles.singleValue, variantStyles.singleValue),
 
+    placeholder: (base) => mergeStyles(base, styles.placeholder, variantStyles.placeholder),
+
     dropdownIndicator: (base, state) => {
       const indicatorStyles = mergeStyles(
         base,

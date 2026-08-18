@@ -13,6 +13,6 @@ export type TableItem = ReturnType<typeof toProjectTableItem>;
 
 export type ProjectsTableSkeletonProps = {
   t: TranslateFn;
-  size: TableSize;
+  size?: TableSize;
   variant?: TableVariant;
 };

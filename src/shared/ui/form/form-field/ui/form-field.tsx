@@ -28,7 +28,7 @@ export const FormField = ({
 
   const isFilled = value !== undefined && value !== null && String(value).length > 0;
 
-  const wrapperClassName = buildClassName(styles.inputWrapper, {
+  const wrapperClassName = buildClassName(styles.inputWrapper, className, {
     [styles.error]: !!error,
     [styles[variant]]: !!variant,
     [styles.filled]: isFilled,

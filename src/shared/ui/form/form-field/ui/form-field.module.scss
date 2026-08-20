@@ -28,7 +28,6 @@
   position: relative;
   transition: all 0.35s ease-in-out 0s;
 
-  padding: 0.938rem 1.125rem;
   @include input-wrapper-border($border-default);
   @include input-border-active($border-focus);
   @include input-disabled($surface-tertiary, $surface-secondary);

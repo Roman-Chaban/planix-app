@@ -12,7 +12,7 @@ import { Box, List } from '@/shared/ui';
 import { ToolbarHeaderItem } from './toolbar-header-item';
 import styles from './toolbar.module.scss';
 
-export const ToolbarHeader = ({ activeId, setActiveId, isSidebarOpen }: ToolbarHeaderProps) => {
+export const ToolbarHeader = ({ statusId, setStatusId, isSidebarOpen }: ToolbarHeaderProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
   const headerItems = getHeaderItems(t);
@@ -30,8 +30,8 @@ export const ToolbarHeader = ({ activeId, setActiveId, isSidebarOpen }: ToolbarH
         renderItem={(item) => (
           <ToolbarHeaderItem
             {...item}
-            isActive={item.id === activeId}
-            onClick={() => setActiveId(item.id)}
+            isActive={item.id === statusId}
+            onClick={() => setStatusId(item.id)}
           />
         )}
       />

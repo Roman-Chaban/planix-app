@@ -17,8 +17,8 @@ const { SEARCH } = INPUT_TYPES;
 
 export const ToolbarActions = ({
   handleCreateProject,
-  activeId,
-  setActiveId,
+  platformId,
+  setPlatformId,
   projects,
 }: ToolbarActionsProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
@@ -37,7 +37,11 @@ export const ToolbarActions = ({
         />
       </Box>
 
-      <PlatformSelect activeId={activeId} setActiveId={setActiveId} projects={projects} />
+      <PlatformSelect
+        platformId={platformId}
+        setPlatformId={setPlatformId}
+        projects={projects}
+      />
 
       <ProjectButton
         className={styles.button}

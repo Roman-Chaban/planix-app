@@ -18,7 +18,7 @@ import styles from './toolbar.module.scss';
 
 const { WIDE } = BREAKPOINTS;
 
-export const Toolbar = ({ activeId, setActiveId, projects }: ToolbarProps) => {
+export const Toolbar = ({ statusId, setStatusId, platformId, setPlatformId, projects }: ToolbarProps) => {
   const { handleCreateProject } = useToolbar();
   const { isSidebarOpen } = useSidebar();
 
@@ -33,15 +33,15 @@ export const Toolbar = ({ activeId, setActiveId, projects }: ToolbarProps) => {
       )}
     >
       {!isWideScreen ? (
-        <ToolbarHeader activeId={activeId} setActiveId={setActiveId} />
+        <ToolbarHeader statusId={statusId} setStatusId={setStatusId} />
       ) : (
-        <ToolbarSelect activeId={activeId} setActiveId={setActiveId} />
+        <ToolbarSelect statusId={statusId} setStatusId={setStatusId} />
       )}
       <ToolbarActions
         projects={projects}
         handleCreateProject={handleCreateProject}
-        activeId={activeId}
-        setActiveId={setActiveId}
+        platformId={platformId}
+        setPlatformId={setPlatformId}
       />
     </Box>
   );

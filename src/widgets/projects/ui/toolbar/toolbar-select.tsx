@@ -16,10 +16,10 @@ import styles from './toolbar.module.scss';
 
 const { TOOLBAR } = SELECT_CONTROL_VARIANTS;
 
-export const ToolbarSelect = ({ activeId, setActiveId }: ToolbarSelectProps) => {
+export const ToolbarSelect = ({ statusId, setStatusId }: ToolbarSelectProps) => {
   const { isSidebarOpen } = useSidebar();
 
-  const { options, selectedOption, handleChange } = useToolbarSelect(activeId, setActiveId);
+  const { options, selectedOption, handleChange } = useToolbarSelect(statusId, setStatusId);
 
   const selectStyles = useMemo(() => createSelectStyles<ToolbarSelectOption>(TOOLBAR), []);
 

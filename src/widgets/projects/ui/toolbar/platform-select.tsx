@@ -7,14 +7,14 @@ import { Select, CustomDropdownIndicator } from '@/shared/ui';
 
 import { PlatformDropdownIcon } from '@/shared/ui/icons';
 
-import { usePlaformSelect } from '../../model/use-platform-select';
+import { usePlatformSelect } from '../../model/use-platform-select';
 
-export const PlatformSelect = ({ activeId, setActiveId, projects }: PlatformSelectProps) => {
+export const PlatformSelect = ({ platformId, setPlatformId, projects }: PlatformSelectProps) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
-  const { options, selectedOption, selectStyles, handleChange } = usePlaformSelect({
-    activeId,
-    setActiveId,
+  const { options, selectedOption, selectStyles, handleChange } = usePlatformSelect({
+    platformId,
+    setPlatformId,
     projects,
   });
 

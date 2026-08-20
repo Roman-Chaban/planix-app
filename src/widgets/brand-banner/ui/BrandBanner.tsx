@@ -7,7 +7,7 @@ import { getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { PlanixLogoIcon } from '@/shared/ui/icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
-import { BREAKPOINTS } from '@/shared/ui/theme/model/breakpoints';
+import { BREAKPOINTS } from '@/shared/ui/theme/lib/breakpoints';
 
 import styles from './BrandBanner.module.scss';
 

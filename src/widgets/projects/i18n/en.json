@@ -28,5 +28,6 @@
     "addProjectButton": "Add Project"
   },
 
-  "platformPlaceholder": "Select Platform"
+  "platformPlaceholder": "Select Platform",
+  "allPlatforms": "All"
 }

@@ -2,7 +2,7 @@ import type { ToastConfigOptions } from '../model/types';
 
 import { DefaultToastIcon, ErrorToastIcon, SuccessToastIcon } from '../../icons';
 
-import styles from '../ui/Toast.module.scss';
+import styles from '../ui/toast.module.scss';
 
 export const toastConfig: ToastConfigOptions = {
   default: {

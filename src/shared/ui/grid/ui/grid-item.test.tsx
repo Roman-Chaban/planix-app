@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 
 import { Box, GridItem } from '@/shared/ui';
-import styles from '@/shared/ui/grid/ui/Grid.module.scss';
+import styles from '@/shared/ui/grid/ui/grid.module.scss';
 import { createSetup } from '@/mocks';
 
 const setup = createSetup(GridItem);

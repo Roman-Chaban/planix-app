@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 
-import styles from '@/shared/ui/grid/Grid.module.scss';
+import styles from '@/shared/ui/grid/ui/grid.module.scss';
 import { Grid } from '@/shared/ui/index';
 import { createSetup } from '@/mocks';
 

@@ -47,9 +47,7 @@ export const SELECT_VARIANTS: SelectVariants = {
   language: {},
 
   platform: {
-    container: {
-      maxWidth: '11.563rem',
-    },
+    container: {},
 
     control: {
       borderColor: '#e3e3e3',
@@ -57,6 +55,7 @@ export const SELECT_VARIANTS: SelectVariants = {
       padding: '0.438rem',
       paddingInlineEnd: '1.125rem',
       minHeight: '3.375rem',
+      marginBlockStart: 0,
     },
 
     placeholder: {
@@ -72,7 +71,7 @@ export const SELECT_VARIANTS: SelectVariants = {
     },
 
     control: {
-      minHeight: '3.6rem',
+      minHeight: '3.375rem',
     },
 
     valueContainer: {},

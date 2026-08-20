@@ -7,8 +7,8 @@ import { getHeaderItems } from '@/widgets/project-details';
 import { NAMESPACE as NS } from '@/shared/i18n';
 
 export const useToolbarSelect = (
-  activeId: ToolbarSelectProps['activeId'],
-  setActiveId: ToolbarSelectProps['setActiveId'],
+  statusId: ToolbarSelectProps['statusId'],
+  setStatusId: ToolbarSelectProps['setStatusId'],
 ) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
 
@@ -19,14 +19,14 @@ export const useToolbarSelect = (
     label: item.label,
   }));
 
-  const selectedOption = options.find((option) => option.value === activeId) ?? null;
+  const selectedOption = options.find((option) => option.value === statusId) ?? null;
 
   const handleChange = (option: ToolbarSelectOption | null) => {
     if (!option) {
       return;
     }
 
-    setActiveId(option.value);
+    setStatusId(option.value);
   };
 
   return {

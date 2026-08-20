@@ -1,4 +1,4 @@
-import type { TabId } from '@types';
+import type { PlatformId, TabId } from '@types';
 
 import { useMemo, useState } from 'react';
 
@@ -13,7 +13,8 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 
 export const useProjectsPageModel = () => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
-  const [activeId, setActiveId] = useState<TabId>(getHeaderItems(t)[0].id);
+  const [statusId, setStatusId] = useState<TabId>(getHeaderItems(t)[0].id);
+  const [platformId, setPlatformId] = useState<PlatformId | null>(null);
 
   const deleteModal = useDeleteProject();
   const { data: projectsData, isLoading } = useProjects();
@@ -23,20 +24,24 @@ export const useProjectsPageModel = () => {
     [projectsData],
   );
 
-  const filteredProjects = useMemo(() => {
-    if (activeId === 'AllProjects') {
-      return projects;
-    }
-
-    return projects.filter((project) => project.platform === activeId);
-  }, [projects, activeId]);
+  const filteredProjects = useMemo(
+    () =>
+      projects.filter(
+        (project) =>
+          (platformId === null || project.platform === platformId) &&
+          (statusId === 'AllProjects' || project.status === statusId),
+      ),
+    [projects, platformId, statusId],
+  );
 
   const isEmpty = !isLoading && projects.length === 0;
   const hasData = !isLoading && filteredProjects.length > 0;
 
   return {
-    activeId,
-    setActiveId,
+    statusId,
+    setStatusId,
+    platformId,
+    setPlatformId,
     projects,
     filteredProjects,
     isLoading,

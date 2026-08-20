@@ -3,6 +3,7 @@ import type { TFunction } from 'i18next';
 import type { ComponentType, Dispatch, FC, ReactNode, Ref, SetStateAction, SVGProps } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
+import type { Project } from '@/entities/project';
 import type { Locale } from '@/shared/i18n/locales/locales';
 
 export type TranslateFn = TFunction;
@@ -58,6 +59,7 @@ export type SettingSwitchList = WithSwitch[];
 export type FileType = 'pdf' | 'image' | 'default';
 
 export type TabId = 'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
+export type PlatformId = 'Web' | 'IOS' | 'Android';
 export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 
 export type ProjectsHeaderProps = {
@@ -71,3 +73,5 @@ export type ActiveTabProps = {
   activeId: TabId;
   setActiveId: Dispatch<SetStateAction<TabId>>;
 };
+
+export type Projects = Project[];

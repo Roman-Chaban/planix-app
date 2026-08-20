@@ -1,10 +1,12 @@
-import type { ActiveTabProps, Status, TabId } from '@types';
+import type { PlatformId, Projects, Status, TabId } from '@types';
 
-import type { ComponentType } from 'react';
-
-import type { Project } from '@/entities/project';
+import type { ComponentType, Dispatch, SetStateAction } from 'react';
 
 export type TabsContent = Record<TabId, ComponentType>;
 export type StatusMap = Record<TabId, Status | null>;
 
-export type UsePlatformSelectOptions = ActiveTabProps & { projects: Project[] };
+export type UsePlatformSelectOptions = {
+  platformId: PlatformId | null;
+  setPlatformId: Dispatch<SetStateAction<PlatformId | null>>;
+  projects: Projects;
+};

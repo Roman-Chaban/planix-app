@@ -1,22 +1,24 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
+import { useEffect, useState } from 'react';
 
-export const useMediaQuery = (query: string): boolean => {
-  const getSnapshot = () => {
-    if (typeof window === 'undefined') return false;
-    return window.matchMedia(query).matches;
-  };
+import type { Breakpoint } from '@/shared/ui/theme';
 
-  const subscribe = (callback: () => void) => {
-    const mediaQueryList = window.matchMedia(query);
+export const useMediaQuery = (breakpoint: Breakpoint) => {
+  const mediaQuery = `(max-width: ${breakpoint})px`;
 
-    mediaQueryList.addEventListener('change', callback);
+  const [matches, setMatches] = useState(false);
 
-    return () => {
-      mediaQueryList.removeEventListener('change', callback);
-    };
-  };
+  useEffect(() => {
+    const mediaQueryList = window.matchMedia(mediaQuery);
+    const handleChange = (event: MediaQueryListEvent) => setMatches(event.matches);
 
-  return useSyncExternalStore(subscribe, getSnapshot, () => false);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMatches(mediaQueryList.matches);
+    mediaQueryList.addEventListener('change', handleChange);
+
+    return () => mediaQueryList.removeEventListener('change', handleChange);
+  }, [mediaQuery]);
+
+  return matches;
 };

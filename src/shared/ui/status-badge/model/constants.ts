@@ -3,7 +3,7 @@ import type { Status } from '@types';
 import { CanceledIcon, CompletedIcon, InProgressIcon, PendingIcon } from '@/shared/ui/icons';
 import type { StatusClasses, StatusIcons, StatusMap } from '@/shared/ui/status-badge/model/types';
 
-import styles from '../ui/StatusBadge.module.scss';
+import styles from '../ui/status-badge.module.scss';
 
 export const statusClasses: StatusClasses = {
   Pending: styles.pending,

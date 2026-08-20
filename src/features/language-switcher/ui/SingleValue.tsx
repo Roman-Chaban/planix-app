@@ -3,7 +3,7 @@ import { type SingleValueProps, components } from 'react-select';
 import type { LanguageOption } from '@/features/language-switcher';
 import { Box, Typography } from '@/shared/ui';
 import { LanguageIcon } from '@/shared/ui/icons';
-import { OPTION_LABEL, OPTION_STYLES } from '@/shared/ui/theme/model/styles';
+import { OPTION_LABEL, OPTION_STYLES } from '@/shared/ui/theme/lib/styles';
 
 export const SingleValue = (valueProps: SingleValueProps<LanguageOption>) => {
   return (

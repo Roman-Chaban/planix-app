@@ -1,6 +1,6 @@
 import type { TableSize, TableVariant } from '../model/types';
 
-import styles from '../ui/Table.module.scss';
+import styles from '../ui/table.module.scss';
 
 export const sizeClass: Record<TableSize, string> = {
   sm: styles.sizeSm,

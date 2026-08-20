@@ -1,3 +1,3 @@
 export type { AuthWrapperProps } from './model/types';
 
-export { AuthWrapper } from './ui/AuthWrapper';
+export { AuthWrapper } from './ui/auth-wrapper';

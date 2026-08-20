@@ -1,3 +1,3 @@
 export type { CardProps } from './model/types';
 
-export { Card } from './ui/Card';
+export { Card } from './ui/card';

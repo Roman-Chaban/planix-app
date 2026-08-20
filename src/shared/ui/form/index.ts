@@ -6,5 +6,5 @@ export {
   FormIcon,
   FormDateField,
   FormLabel,
-} from './form-filed';
+} from './form-field';
 export { FormFields } from './form-fields';

@@ -14,8 +14,10 @@ import { Toolbar } from './toolbar/toolbar';
 
 export const ProjectManagement = () => {
   const {
-    activeId,
-    setActiveId,
+    statusId,
+    setStatusId,
+    platformId,
+    setPlatformId,
     projects,
     filteredProjects,
     isLoading,
@@ -26,7 +28,13 @@ export const ProjectManagement = () => {
 
   return (
     <PageWrapper header={<Header title="projects" />} sectionClassName={styles.projects}>
-      <Toolbar activeId={activeId} setActiveId={setActiveId} projects={projects} />
+      <Toolbar
+        statusId={statusId}
+        setStatusId={setStatusId}
+        platformId={platformId}
+        setPlatformId={setPlatformId}
+        projects={projects}
+      />
 
       {isEmpty && <EmptyState />}
 

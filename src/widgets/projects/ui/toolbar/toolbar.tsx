@@ -18,7 +18,13 @@ import styles from './toolbar.module.scss';
 
 const { WIDE } = BREAKPOINTS;
 
-export const Toolbar = ({ statusId, setStatusId, platformId, setPlatformId, projects }: ToolbarProps) => {
+export const Toolbar = ({
+  statusId,
+  setStatusId,
+  platformId,
+  setPlatformId,
+  projects,
+}: ToolbarProps) => {
   const { handleCreateProject } = useToolbar();
   const { isSidebarOpen } = useSidebar();
 

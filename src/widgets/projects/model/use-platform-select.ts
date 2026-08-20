@@ -14,7 +14,11 @@ import { getPlatformValues } from '../ui/toolbar/lib/get-platform-values';
 
 const { PLATFORM } = SELECT_CONTROL_VARIANTS;
 
-export const usePlatformSelect = ({ platformId, setPlatformId, projects }: UsePlatformSelectOptions) => {
+export const usePlatformSelect = ({
+  platformId,
+  setPlatformId,
+  projects,
+}: UsePlatformSelectOptions) => {
   const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
   const selectStyles = useMemo(() => createSelectStyles<PlatformOption>(PLATFORM), []);
 

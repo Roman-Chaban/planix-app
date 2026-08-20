@@ -37,11 +37,7 @@ export const ToolbarActions = ({
         />
       </Box>
 
-      <PlatformSelect
-        platformId={platformId}
-        setPlatformId={setPlatformId}
-        projects={projects}
-      />
+      <PlatformSelect platformId={platformId} setPlatformId={setPlatformId} projects={projects} />
 
       <ProjectButton
         className={styles.button}

@@ -1,13 +1,15 @@
 import type { PlatformOption } from '../model/types';
-import type { TabId } from '@types';
 
-import type { Project } from '@/entities/project';
+import type { PlatformId, Projects } from '@types';
 
-export const getPlatformValues = (projects: Project[]): PlatformOption[] => {
+export const getPlatformValues = (projects: Projects, allLabel: string): PlatformOption[] => {
   const platforms = [...new Set(projects.map((project) => project.platform))];
 
-  return platforms.map((platform) => ({
-    value: platform as TabId,
-    label: platform,
-  }));
+  return [
+    { value: null, label: allLabel },
+    ...platforms.map((platform) => ({
+      value: platform as PlatformId,
+      label: platform,
+    })),
+  ];
 };

@@ -1,3 +1,5 @@
+'use client';
+
 import type { DropdownIndicatorProps } from 'react-select';
 
 import { CustomDropdownIndicator } from '@/shared/ui';

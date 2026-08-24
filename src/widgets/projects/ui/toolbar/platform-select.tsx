@@ -1,3 +1,5 @@
+'use client';
+
 import type { PlatformOption, PlatformSelectProps } from './model/types';
 
 import { useTranslation } from 'react-i18next';

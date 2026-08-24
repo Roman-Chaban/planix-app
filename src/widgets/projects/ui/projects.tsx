@@ -3,7 +3,10 @@
 import { Header } from '@/widgets/header';
 
 import { DeleteProjectModal } from '@/features/project-delete';
+import { useMediaQuery } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';
+
+import { BREAKPOINTS } from '@/shared/ui/theme';
 
 import { useProjectsPageModel } from '../model/use-projects-page-model';
 
@@ -11,6 +14,8 @@ import { EmptyState } from './empty-state/empty-state';
 import { ProjectsTable } from './projects-table/projects-table';
 import styles from './projects.module.scss';
 import { Toolbar } from './toolbar/toolbar';
+
+const { MOBILE_LARGE } = BREAKPOINTS;
 
 export const ProjectManagement = () => {
   const {
@@ -26,8 +31,12 @@ export const ProjectManagement = () => {
     deleteModal,
   } = useProjectsPageModel();
 
+  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
+
+  const headerTitle = isMobileLargeScreen ? 'mobile.projects' : 'projects';
+
   return (
-    <PageWrapper header={<Header title="projects" />} sectionClassName={styles.projects}>
+    <PageWrapper header={<Header title={headerTitle} />} sectionClassName={styles.projects}>
       <Toolbar
         statusId={statusId}
         setStatusId={setStatusId}

@@ -3,5 +3,6 @@
   "fieldLabel": "Reason",
   "fieldPlaceholder": "Enter the reason...",
   "cancelAction": "Cancel",
-  "saveAction": "Save"
+  "saveAction": "Save",
+  "deleteError": "The project could not be deleted. Please try again."
 }

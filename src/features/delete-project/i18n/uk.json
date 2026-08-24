@@ -3,5 +3,6 @@
   "fieldLabel": "Причина",
   "fieldPlaceholder": "Введіть причину...",
   "cancelAction": "Скасувати",
-  "saveAction": "Зберегти"
+  "saveAction": "Зберегти",
+  "deleteError": "Не вдалося видалити проєкт. Спробуйте ще раз."
 }

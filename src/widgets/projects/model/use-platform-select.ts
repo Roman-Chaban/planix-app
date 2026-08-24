@@ -22,7 +22,10 @@ export const usePlatformSelect = ({
   const { t } = useTranslation(NS.PROJECTS);
   const selectStyles = useMemo(() => createSelectStyles<PlatformOption>(TOOLBAR), []);
 
-  const options = useMemo(() => getPlatformValues(projects, t('allPlatforms')), [projects, t]);
+  const options = useMemo(
+    () => getPlatformValues(projects, t('select.allPlatforms')),
+    [projects, t],
+  );
 
   const selectedOption = options.find((option) => option.value === platformId) ?? null;
 

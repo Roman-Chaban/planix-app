@@ -36,10 +36,13 @@ export const ProjectManagement = () => {
 
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
 
-  const headerTitle = isMobileLargeScreen ? 'mobile.projects' : 'projects';
+  const responsiveHeaderTitle = isMobileLargeScreen ? 'mobile.projects' : 'projects';
 
   return (
-    <PageWrapper header={<Header title={headerTitle} />} sectionClassName={styles.projects}>
+    <PageWrapper
+      header={<Header title={responsiveHeaderTitle} />}
+      sectionClassName={styles.projects}
+    >
       <Toolbar
         statusId={statusId}
         platformId={platformId}

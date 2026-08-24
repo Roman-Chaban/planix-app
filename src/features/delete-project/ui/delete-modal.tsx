@@ -21,7 +21,7 @@ export const DeleteModal = ({
   onReasonChange,
   onDelete,
 }: DeleteModalProps) => {
-  const { t } = useTranslation(NS.MODAL);
+  const { t } = useTranslation(NS.DELETE_MODAL);
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>

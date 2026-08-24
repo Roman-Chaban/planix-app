@@ -12,6 +12,7 @@ import { SELECT_CONTROL_VARIANTS } from '@/shared/ui/select';
 
 import { useToolbarSelect } from '../../model/use-toolbar-select';
 
+import { DropdownIndicator } from './custom-dropdown-indicator';
 import styles from './toolbar.module.scss';
 
 const { TOOLBAR } = SELECT_CONTROL_VARIANTS;
@@ -30,6 +31,7 @@ export const ToolbarSelect = ({ statusId, setStatusId }: ToolbarSelectProps) => 
       options={options}
       styles={selectStyles}
       isSearchable={false}
+      components={{ DropdownIndicator }}
       isClearable={false}
       onChange={handleChange}
     />

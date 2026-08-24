@@ -20,7 +20,7 @@ export const DeleteModalActions = ({
   onDelete,
   onClose,
 }: DeleteModalActionsProps) => {
-  const { t } = useTranslation(NS.MODAL);
+  const { t } = useTranslation(NS.DELETE_MODAL);
 
   return (
     <>

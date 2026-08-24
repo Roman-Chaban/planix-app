@@ -23,6 +23,8 @@ export const Toolbar = ({
   setStatusId,
   platformId,
   setPlatformId,
+  search,
+  setSearchQuery,
   projects,
 }: ToolbarProps) => {
   const { handleCreateProject } = useToolbar();
@@ -53,6 +55,8 @@ export const Toolbar = ({
         handleCreateProject={handleCreateProject}
         platformId={platformId}
         setPlatformId={setPlatformId}
+        search={search}
+        setSearchQuery={setSearchQuery}
       />
     </Box>
   );

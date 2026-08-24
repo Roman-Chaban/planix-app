@@ -3,7 +3,7 @@ export const NAMESPACE = {
   AUTH: 'auth',
   SUBSCRIPTION: 'subscription',
   DASHBOARD: 'dashboard',
-  PROJECT_MANAGEMENT: 'projectManagement',
+  PROJECTS: 'projectManagement',
   SIDEBAR: 'sidebar',
   MODAL: 'modal',
   HEADER: 'header',

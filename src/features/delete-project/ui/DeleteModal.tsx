@@ -1,15 +1,16 @@
 'use client';
 
+import type { DeleteModalProps } from '../model/types';
+
 import { useTranslation } from 'react-i18next';
 
-import type { DeleteProjectModalProps } from '@/features/delete-project';
-import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { NAMESPACE as NS } from '@/shared/i18n';
 import { Modal, ModalHeader, Textarea, Button, ModalContent, ModalActions } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 
-import styles from './DeleteProjectModal.module.scss';
+import styles from './DeleteModal.module.scss';
 
-export const DeleteProjectModal = ({
+export const DeleteModal = ({
   isOpen,
   reason,
   canDelete,
@@ -18,7 +19,7 @@ export const DeleteProjectModal = ({
   onClose,
   onReasonChange,
   onDelete,
-}: DeleteProjectModalProps) => {
+}: DeleteModalProps) => {
   const { t } = useTranslation(NS.MODAL);
 
   return (

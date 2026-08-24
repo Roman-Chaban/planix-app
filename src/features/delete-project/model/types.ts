@@ -1,4 +1,4 @@
-export type DeleteProjectModalProps = {
+export type DeleteModalProps = {
   isOpen: boolean;
   reason: string;
   canDelete: boolean;

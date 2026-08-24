@@ -1,9 +1,0 @@
-{
-  "title": "Cancellation Reason",
-
-  "label": "Reason",
-  "placeholder": "Enter the reason...",
-
-  "cancelButton": "Cancel",
-  "saveButton": "Save"
-}

@@ -1,0 +1,7 @@
+{
+  "heading": "Причина скасування",
+  "fieldLabel": "Причина",
+  "fieldPlaceholder": "Введіть причину...",
+  "cancelAction": "Скасувати",
+  "saveAction": "Зберегти"
+}

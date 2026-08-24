@@ -2,7 +2,7 @@
 
 import { Header } from '@/widgets/header';
 
-import { DeleteProjectModal } from '@/features/project-delete';
+import { DeleteModal } from '@/features/delete-project';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';
 
@@ -61,10 +61,15 @@ export const ProjectManagement = () => {
         />
       )}
 
-      <DeleteProjectModal
+      <DeleteModal
         isOpen={deleteModal.isOpen}
-        projectId={deleteModal.projectToDelete}
+        reason={deleteModal.reason}
+        canDelete={deleteModal.canDelete}
+        isDeleting={deleteModal.isDeleting}
+        error={deleteModal.error}
         onClose={deleteModal.closeDeleteModal}
+        onReasonChange={deleteModal.setReason}
+        onDelete={deleteModal.handleDeleteProject}
       />
     </PageWrapper>
   );

@@ -9,7 +9,7 @@ import {
 } from './constants';
 
 const { SUBMIT, BUTTON } = BUTTON_TYPES;
-const { SM, LG, CONTENT } = BUTTON_MIN_WIDTH;
+const { SM, LG, MD, CONTENT } = BUTTON_MIN_WIDTH;
 const { ROUNDED, CIRCLE } = BUTTON_SHAPES;
 const { SMALL, MEDIUM, LARGE, COMPACT } = BUTTON_SIZES;
 const { DEFAULT, OUTLINE, TRANSPARENT } = BUTTON_VARIANTS;
@@ -114,6 +114,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
     variant: OUTLINE,
     size: LARGE,
     shape: ROUNDED,
+    minWidth: MD,
   },
 
   MODAL_DEFAULT: {
@@ -121,6 +122,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
     variant: DEFAULT,
     size: LARGE,
     shape: ROUNDED,
+    minWidth: MD,
   },
 
   MODAL_CLOSE: {

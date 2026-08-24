@@ -4,5 +4,6 @@
   "fieldPlaceholder": "Enter the reason...",
   "cancelAction": "Cancel",
   "saveAction": "Save",
-  "deleteError": "The project could not be deleted. Please try again."
+  "deleteError": "The project could not be deleted. Please try again.",
+  "tooltipMessage": "Enter a reason to enable Save"
 }

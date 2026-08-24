@@ -3,9 +3,13 @@ import type { DeleteModalActionsProps } from '../model/types';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { Button, ModalActions, Textarea } from '@/shared/ui';
+import { Button, ModalActions, Textarea, Tooltip } from '@/shared/ui';
+
+import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './delete-modal.module.scss';
+
+const { BOTTOM } = TOOLTIP_POSITION;
 
 export const DeleteModalActions = ({
   reason,
@@ -36,15 +40,17 @@ export const DeleteModalActions = ({
           {t('cancelAction')}
         </Button>
 
-        <Button
-          preset="MODAL_DEFAULT"
-          disabled={!canDelete}
-          isLoading={isDeleting}
-          className={styles.save}
-          onClick={onDelete}
-        >
-          {t('saveAction')}
-        </Button>
+        <Tooltip position={BOTTOM} message={t('tooltipMessage')}>
+          <Button
+            preset="MODAL_DEFAULT"
+            disabled={!canDelete}
+            isLoading={isDeleting}
+            className={styles.save}
+            onClick={onDelete}
+          >
+            {t('saveAction')}
+          </Button>
+        </Tooltip>
       </ModalActions>
     </>
   );

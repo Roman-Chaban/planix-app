@@ -11,3 +11,5 @@ export const PROJECT_TOOLBAR_NAMES = {
   COMPLETE: 'Completed',
   CANCELLED: 'Cancelled',
 } as const;
+
+export const LOADING_TIMEOUT = 200;

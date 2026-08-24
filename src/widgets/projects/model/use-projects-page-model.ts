@@ -5,12 +5,15 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { useDeleteProject } from '@/features/project-delete';
+import { useDeleteProject } from '@/features/delete-project';
 import { toProjectTableItem } from '@/entities/project/lib/toProjectTableItem';
 import { useProjects } from '@/entities/project/model/useProjects';
 
+import { LOADING_TIMEOUT, PROJECT_TOOLBAR_NAMES } from '../lib/constants';
 import { getProjectQueryParams } from '../lib/get-project-query-params';
 import { updateProjectQueryParams } from '../lib/update-project-query-params';
+
+const { ALL_PROJECTS } = PROJECT_TOOLBAR_NAMES;
 
 export const useProjectsPageModel = () => {
   const pathname = usePathname();
@@ -21,11 +24,11 @@ export const useProjectsPageModel = () => {
   const [debouncedFilters, setDebouncedFilters] = useState({ search, status, platform });
 
   useEffect(() => {
-    const timeoutId = window.setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setDebouncedFilters({ search, status, platform });
-    }, 200);
+    }, LOADING_TIMEOUT);
 
-    return () => window.clearTimeout(timeoutId);
+    return () => clearTimeout(timeoutId);
   }, [platform, search, status]);
 
   const updateQuery = (updates: ProjectQueryUpdates) => {
@@ -77,7 +80,7 @@ export const useProjectsPageModel = () => {
       return (
         matchesSearch &&
         (debouncedFilters.platform === null || project.platform === debouncedFilters.platform) &&
-        (debouncedFilters.status === 'AllProjects' || project.status === debouncedFilters.status)
+        (debouncedFilters.status === ALL_PROJECTS || project.status === debouncedFilters.status)
       );
     });
   }, [debouncedFilters, projects]);

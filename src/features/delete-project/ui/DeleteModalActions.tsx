@@ -31,14 +31,13 @@ export const DeleteModalActions = ({
         error={error ? t('deleteError') : undefined}
       />
 
-      <ModalActions>
-        <Button preset="MODAL_OUTLINE" minWidth="lg" className={styles.cancel} onClick={onClose}>
+      <ModalActions className={styles.deleteActions}>
+        <Button preset="MODAL_OUTLINE" className={styles.cancel} onClick={onClose}>
           {t('cancelAction')}
         </Button>
 
         <Button
           preset="MODAL_DEFAULT"
-          minWidth="lg"
           disabled={!canDelete}
           isLoading={isDeleting}
           className={styles.save}

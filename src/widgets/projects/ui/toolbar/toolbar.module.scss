@@ -1,73 +1,14 @@
 @use '@/shared/styles' as *;
 
 .toolbar {
-  @include flex(flex, row, space-between, center, 1rem, nowrap);
-
-  @include respond(lg) {
-    flex-direction: column;
-  }
-}
-
-@include respond(xl) {
-  .toolbarExpanded {
-    flex-direction: column;
-  }
-}
-
-.toolbarActions {
   width: 100%;
-  max-width: 43.875rem;
-
-  @include flex(flex, row, space-between, center, 1rem);
-
-  @include respond(xl) {
-    max-width: 100%;
-  }
-
-  @include respond(sm) {
-    flex-direction: column;
-  }
-}
-
-.search {
-  flex: 1 1 18.875rem;
-  max-width: 18.875rem;
-
-  @include respond(xl) {
-    max-width: 100%;
-  }
-
-  @include respond(sm) {
-    @include full-width-on-mobile;
-  }
-}
-
-.platform {
-  @include flex-center;
-  flex: 1 1 11.563rem;
-  max-width: 11.563rem;
-  min-height: 3.375rem;
-  padding: 1rem;
-
-  white-space: nowrap;
-  text-align: center;
-  box-shadow: $shadow-not-found;
-  background: $neutral-0;
-  border-radius: $radius-lg;
-
-  @include respond(sm) {
-    @include full-width-on-mobile;
-  }
-}
-
-.button {
-  @include respond(sm) {
-    @include full-width-on-mobile;
-  }
+  min-width: 0;
+  @include flex(flex, row, space-between, center, 1rem, nowrap);
 }
 
 .scrollContainer {
   width: 100%;
+  min-width: 0;
   max-width: 50rem;
   @include menu-horizontal-scroll;
   box-shadow: $shadow-not-found;
@@ -79,10 +20,6 @@
   width: 100%;
   @include flex-row(1rem, start, center);
   padding: 0.5rem;
-
-  @include respond(2xl) {
-    justify-content: space-between;
-  }
 }
 
 .box {
@@ -116,17 +53,102 @@
   color: $primary-700;
 }
 
+.toolbarActions {
+  width: 100%;
+  max-width: 43.875rem;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 11.563rem) auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search {
+  width: 100%;
+  min-width: 0;
+  max-width: 18.875rem;
+  min-height: 3.375rem;
+}
+
+.platformSelect {
+  width: 100%;
+  min-width: 0;
+  max-width: 11.563rem;
+}
+
+.addButton {
+  width: max-content;
+  max-width: 100%;
+  min-height: 3.375rem;
+  white-space: nowrap;
+}
+
 .select {
   width: 100%;
   max-width: 18.75rem;
+  min-width: 0;
+  flex-shrink: 1;
+}
 
-  @include respond(lg) {
-    max-width: 100%;
+.toolbar.toolbarExpanded {
+  flex-direction: column;
+  align-items: stretch;
+
+  > * {
+    width: 100%;
+    max-width: none;
+  }
+
+  .search {
+    max-width: none;
+  }
+
+  .list {
+    justify-content: space-between;
+  }
+
+  .box {
+    padding-inline: 4rem;
   }
 }
 
-@include respond(xl) {
-  .selectCollapsed {
-    max-width: 100%;
+@include respond(lg) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbarActions {
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .search {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+
+  .platformSelect {
+    max-width: none;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+
+  .scrollContainer,
+  .select {
+    max-width: none;
+  }
+}
+
+@include respond(sm) {
+  .toolbarActions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .platformSelect,
+  .addButton {
+    grid-column: 1;
   }
 }

@@ -1,5 +1,4 @@
-export type DeleteModalProps = {
-  isOpen: boolean;
+export type DeleteModalActionsProps = {
   reason: string;
   canDelete: boolean;
   isDeleting: boolean;
@@ -7,4 +6,8 @@ export type DeleteModalProps = {
   onClose: () => void;
   onReasonChange: (reason: string) => void;
   onDelete: () => void;
+};
+
+export type DeleteModalProps = DeleteModalActionsProps & {
+  isOpen: boolean;
 };

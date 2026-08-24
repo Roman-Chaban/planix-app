@@ -6,5 +6,7 @@ export {
   ToolbarActions,
   ToolbarHeader,
   ToolbarHeaderItem,
+  DropdownIndicator,
+  PlatformSelect,
   ToolbarSelect,
 } from './ui';

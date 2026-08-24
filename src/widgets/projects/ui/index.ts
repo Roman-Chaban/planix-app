@@ -6,3 +6,5 @@ export { ToolbarActions } from './toolbar/toolbar-actions';
 export { ToolbarHeader } from './toolbar/toolbar-header';
 export { ToolbarHeaderItem } from './toolbar/toolbar-header-item';
 export { ToolbarSelect } from './toolbar/toolbar-select';
+export { DropdownIndicator } from './toolbar/custom-dropdown-indicator';
+export { PlatformSelect } from './toolbar/platform-select';

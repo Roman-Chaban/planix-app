@@ -2,7 +2,7 @@
 
 import { Header } from '@/widgets/header';
 
-import { DeleteProjectModal } from '@/features/delete-project';
+import { DeleteModal } from '@/features/delete-project';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';
 
@@ -61,7 +61,7 @@ export const ProjectManagement = () => {
         />
       )}
 
-      <DeleteProjectModal
+      <DeleteModal
         isOpen={deleteModal.isOpen}
         reason={deleteModal.reason}
         canDelete={deleteModal.canDelete}

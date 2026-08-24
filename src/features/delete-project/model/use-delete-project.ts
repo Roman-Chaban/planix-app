@@ -9,6 +9,7 @@ import { NAMESPACE } from '@/shared/i18n';
 import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
+
 const { SUCCESS, ERROR } = TOAST_VARIANT;
 
 export const useDeleteProject = () => {

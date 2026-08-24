@@ -6,11 +6,14 @@ import { useProfile } from '@/entities/profile';
 import { ROUTES } from '@/shared/config/routes';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { useMediaQuery } from '@/shared/lib/hooks';
 import { AppLink, Avatar, Box, Button, Tooltip } from '@/shared/ui';
 
 import { AVATAR_VARIANTS } from '@/shared/ui/avatar';
+import { BUTTON_SIZES } from '@/shared/ui/button';
 import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
+import { BREAKPOINTS } from '@/shared/ui/theme';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './Header.module.scss';
@@ -19,10 +22,17 @@ import { HeaderActionsSkeleton } from './skeleton/HeaderActionsSkeleton';
 const { AUTH, SETTINGS } = ROUTES;
 const { BOTTOM, LEFT } = TOOLTIP_POSITION;
 const { CIRCLE } = AVATAR_VARIANTS;
+const { MOBILE_LARGE } = BREAKPOINTS;
+const { SMALL, MEDIUM } = BUTTON_SIZES;
 
 export const HeaderActions = () => {
   const { t } = useTranslation(NS.HEADER);
+
   const { profile, isLoading } = useProfile();
+
+  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
+
+  const authButtonSize = isMobileLargeScreen ? SMALL : MEDIUM;
 
   return (
     <Box className={styles.headerAuth}>
@@ -39,7 +49,7 @@ export const HeaderActions = () => {
         <HeaderActionsSkeleton />
       ) : !profile ? (
         <Tooltip position={BOTTOM} message={t('logIn')}>
-          <Button preset="HEADER_LOGIN">
+          <Button preset="HEADER_LOGIN" size={authButtonSize}>
             <AppLink href={AUTH} className={styles.link}>
               {t('login')}
             </AppLink>

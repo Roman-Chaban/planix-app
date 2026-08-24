@@ -6,5 +6,6 @@
   "saveAction": "Save",
   "deleteError": "The project could not be deleted. Please try again.",
   "tooltipMessage": "Enter a reason to enable Save",
-  "toastSuccess": "Project deleted successfully"
+  "toastSuccess": "Project deleted successfully",
+  "toastError": "Failed to delete project"
 }

@@ -46,7 +46,7 @@ export const SELECT_VARIANTS: SelectVariants = {
 
   language: {},
 
-  platform: {
+  toolbar: {
     container: {},
 
     control: {
@@ -65,43 +65,5 @@ export const SELECT_VARIANTS: SelectVariants = {
     },
   },
 
-  toolbar: {
-    container: {
-      zIndex: 4,
-    },
-
-    control: {
-      minHeight: '3.375rem',
-    },
-
-    valueContainer: {},
-
-    singleValue: {
-      fontWeight: 500,
-      color: '#6a6a6a',
-    },
-
-    dropdownIndicator: {
-      color: '#848484',
-
-      '& svg': {
-        transition: 'transform 0.2s ease',
-      },
-    },
-
-    indicatorSeparator: {},
-
-    indicatorsContainer: {},
-
-    menu: {},
-
-    option: {
-      color: '#1e305a',
-    },
-
-    optionSelected: {
-      color: '#ffffff',
-      background: '#4165b7',
-    },
-  },
+  platform: {},
 };

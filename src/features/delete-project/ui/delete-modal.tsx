@@ -8,8 +8,8 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { Modal, ModalHeader, ModalContent } from '@/shared/ui';
 import { CloseIcon } from '@/shared/ui/icons';
 
-import styles from './DeleteModal.module.scss';
-import { DeleteModalActions } from './DeleteModalActions';
+import { DeleteModalActions } from './delete-modal-actions';
+import styles from './delete-modal.module.scss';
 
 export const DeleteModal = ({
   isOpen,

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Button, ModalActions, Textarea } from '@/shared/ui';
 
-import styles from './DeleteModal.module.scss';
+import styles from './delete-modal.module.scss';
 
 export const DeleteModalActions = ({
   reason,

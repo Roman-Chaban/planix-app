@@ -11,7 +11,7 @@ export const SELECT_VARIANTS: SelectVariants = {
       minHeight: '2.5rem',
       borderColor: '#b9b9b9',
       borderRadius: '1rem',
-      marginBlockStart: '0.188rem',
+      marginBlockStart: '0',
       padding: '0.5rem 1.125rem',
     },
 

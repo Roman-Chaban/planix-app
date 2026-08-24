@@ -1,0 +1,18 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.loadingOverlay {
+  @include flex-center;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  min-height: 6rem;
+  background: rgba($neutral-0, 0.72);
+  backdrop-filter: blur(0.125rem);
+  color: $primary-700;
+  pointer-events: none;
+}

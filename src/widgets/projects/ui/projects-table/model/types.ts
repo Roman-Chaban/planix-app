@@ -7,6 +7,7 @@ export type ProjectsTableProps = {
   projects: TableItem[];
   onDelete: (id: string | number) => void;
   isLoading: boolean;
+  isFiltering?: boolean;
 };
 
 export type TableItem = ReturnType<typeof toProjectTableItem>;

@@ -12,7 +12,7 @@ import { useToolbar } from '../../model/use-toolbar';
 import styles from './empty-state.module.scss';
 
 export const EmptyState = () => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+  const { t } = useTranslation(NS.PROJECTS);
 
   const { handleCreateProject } = useToolbar();
 

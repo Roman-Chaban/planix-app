@@ -20,11 +20,8 @@ const { MOBILE_LARGE } = BREAKPOINTS;
 export const ProjectManagement = () => {
   const {
     statusId,
-    setStatusId,
     platformId,
-    setPlatformId,
     search,
-    setSearchQuery,
     projects,
     filteredProjects,
     isFiltering,
@@ -32,6 +29,9 @@ export const ProjectManagement = () => {
     isEmpty,
     hasData,
     deleteModal,
+    setStatusId,
+    setPlatformId,
+    setSearchQuery,
   } = useProjectsPageModel();
 
   const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
@@ -42,12 +42,12 @@ export const ProjectManagement = () => {
     <PageWrapper header={<Header title={headerTitle} />} sectionClassName={styles.projects}>
       <Toolbar
         statusId={statusId}
-        setStatusId={setStatusId}
         platformId={platformId}
-        setPlatformId={setPlatformId}
         search={search}
-        setSearchQuery={setSearchQuery}
         projects={projects}
+        setStatusId={setStatusId}
+        setPlatformId={setPlatformId}
+        setSearchQuery={setSearchQuery}
       />
 
       {isEmpty && <EmptyState />}

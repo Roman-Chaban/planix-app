@@ -19,13 +19,13 @@ import styles from './toolbar.module.scss';
 const { WIDE } = BREAKPOINTS;
 
 export const Toolbar = ({
-  statusId,
-  setStatusId,
-  platformId,
-  setPlatformId,
-  search,
-  setSearchQuery,
   projects,
+  statusId,
+  platformId,
+  search,
+  setStatusId,
+  setPlatformId,
+  setSearchQuery,
 }: ToolbarProps) => {
   const { handleCreateProject } = useToolbar();
   const { isSidebarOpen } = useSidebar();
@@ -45,17 +45,17 @@ export const Toolbar = ({
       ) : (
         <ToolbarHeader
           statusId={statusId}
-          setStatusId={setStatusId}
           isSidebarOpen={isSidebarOpen}
+          setStatusId={setStatusId}
         />
       )}
 
       <ToolbarActions
         projects={projects}
-        handleCreateProject={handleCreateProject}
         platformId={platformId}
-        setPlatformId={setPlatformId}
         search={search}
+        handleCreateProject={handleCreateProject}
+        setPlatformId={setPlatformId}
         setSearchQuery={setSearchQuery}
       />
     </Box>

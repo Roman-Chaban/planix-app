@@ -38,11 +38,16 @@ export const Toolbar = ({
         { [styles.toolbarExpanded]: isSidebarOpen },
       )}
     >
-      {!isWideScreen ? (
-        <ToolbarHeader statusId={statusId} setStatusId={setStatusId} />
-      ) : (
+      {isWideScreen ? (
         <ToolbarSelect statusId={statusId} setStatusId={setStatusId} />
+      ) : (
+        <ToolbarHeader
+          statusId={statusId}
+          setStatusId={setStatusId}
+          isSidebarOpen={isSidebarOpen}
+        />
       )}
+
       <ToolbarActions
         projects={projects}
         handleCreateProject={handleCreateProject}

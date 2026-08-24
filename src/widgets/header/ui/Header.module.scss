@@ -19,6 +19,10 @@
   @include respond(lg) {
     gap: 2rem;
   }
+
+  @include respond(sm) {
+    padding-inline: 1rem;
+  }
 }
 
 .headerLeftSide {

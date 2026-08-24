@@ -67,7 +67,7 @@ export const useDeleteProject = () => {
           dispatch(
             showToast({
               variant: ERROR,
-              description: error instanceof Error ? error.message : 'Failed to delete project',
+              description: error instanceof Error ? error.message : t('toastError'),
             }),
           );
         },

@@ -21,26 +21,25 @@ export const ToolbarActions = ({
   setPlatformId,
   projects,
 }: ToolbarActionsProps) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+  const { t } = useTranslation(NS.PROJECTS);
 
   return (
     <Box className={styles.toolbarActions}>
-      <Box className={styles.search}>
-        <FormField
-          id="project-search"
-          variant={INPUT_VARIANTS.DEFAULT}
-          startIcon={<SearchIconPrimary />}
-          inputProps={{
-            type: SEARCH,
-            placeholder: t('toolbar.searchPlaceholder'),
-          }}
-        />
-      </Box>
+      <FormField
+        id="project-search"
+        variant={INPUT_VARIANTS.DEFAULT}
+        startIcon={<SearchIconPrimary />}
+        className={styles.search}
+        inputProps={{
+          type: SEARCH,
+          placeholder: t('toolbar.searchPlaceholder'),
+        }}
+      />
 
       <PlatformSelect platformId={platformId} setPlatformId={setPlatformId} projects={projects} />
 
       <ProjectButton
-        className={styles.button}
+        className={styles.addButton}
         preset="ADD"
         onClick={handleCreateProject}
         label={t('toolbar.addProjectButton')}

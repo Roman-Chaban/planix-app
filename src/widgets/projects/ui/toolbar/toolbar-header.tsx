@@ -13,7 +13,7 @@ import { ToolbarHeaderItem } from './toolbar-header-item';
 import styles from './toolbar.module.scss';
 
 export const ToolbarHeader = ({ statusId, setStatusId, isSidebarOpen }: ToolbarHeaderProps) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+  const { t } = useTranslation(NS.PROJECTS);
 
   const headerItems = getHeaderItems(t);
 

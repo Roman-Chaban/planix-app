@@ -1,3 +1,4 @@
+import type { ProjectQueryUpdates } from './types';
 import type { PlatformId, TabId } from '@types';
 
 import { useEffect, useMemo, useState } from 'react';
@@ -27,8 +28,8 @@ export const useProjectsPageModel = () => {
     return () => window.clearTimeout(timeoutId);
   }, [platform, search, status]);
 
-  const updateQuery = (updates: Parameters<typeof updateProjectQueryParams>[1]) => {
-    const nextParams = updateProjectQueryParams(searchParams, updates);
+  const updateQuery = (updates: ProjectQueryUpdates) => {
+    const nextParams = updateProjectQueryParams({ searchParams, updates });
 
     const query = nextParams.toString();
     router.replace(query ? `${pathname}?${query}` : pathname);

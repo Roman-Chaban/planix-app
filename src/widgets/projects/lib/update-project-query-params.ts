@@ -1,18 +1,14 @@
-import type { PlatformId, TabId } from '@types';
+import type { UpdateProjectQueryParamsOptions } from '../model/types';
 
 import { PROJECT_QUERY_KEYS, PROJECT_TOOLBAR_NAMES } from './constants';
 
 const { SEARCH, STATUS, PLATFORM } = PROJECT_QUERY_KEYS;
 const { ALL_PROJECTS } = PROJECT_TOOLBAR_NAMES;
 
-export const updateProjectQueryParams = (
-  searchParams: URLSearchParams,
-  updates: Partial<{
-    search: string;
-    status: TabId;
-    platform: PlatformId | null;
-  }>,
-) => {
+export const updateProjectQueryParams = ({
+  searchParams,
+  updates,
+}: UpdateProjectQueryParamsOptions) => {
   const params = new URLSearchParams(searchParams);
 
   if ('search' in updates) {

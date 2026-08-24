@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import type { Breakpoint } from '@/shared/ui/theme';
 
 export const useMediaQuery = (breakpoint: Breakpoint) => {
-  const mediaQuery = `(max-width: ${breakpoint})px`;
+  const mediaQuery = `(max-width: ${breakpoint}px)`;
 
   const [matches, setMatches] = useState(false);
 

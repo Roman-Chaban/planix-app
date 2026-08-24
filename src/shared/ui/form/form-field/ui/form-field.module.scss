@@ -7,6 +7,7 @@
 
 .input {
   width: 100%;
+  min-height: 3.375rem;
   border: none;
   outline: none;
   background: transparent;
@@ -27,6 +28,8 @@
   width: 100%;
   position: relative;
   transition: all 0.35s ease-in-out 0s;
+  display: flex;
+  align-items: center;
 
   @include input-wrapper-border($border-default);
   @include input-border-active($border-focus);
@@ -35,7 +38,7 @@
 
 .withStartIcon .input,
 .withEndIcon .input {
-  padding-inline-start: $space-7;
+  padding-inline-start: $space-9;
 }
 
 .floatingLabel {

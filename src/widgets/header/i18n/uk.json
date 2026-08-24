@@ -5,5 +5,9 @@
   "login": "Увійти",
   "profile": "Налаштування",
   "logIn": "Увійти",
-  "settingsTooltip": "Перейти до налаштувань"
+  "settingsTooltip": "Перейти до налаштувань",
+
+  "mobile": {
+    "projects": "Проекти"
+  }
 }

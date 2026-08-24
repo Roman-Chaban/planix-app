@@ -5,5 +5,9 @@
   "login": "Login",
   "setting": "Setting",
   "logIn": "Log in",
-  "settingsTooltip": "Go to settings"
+  "settingsTooltip": "Go to settings",
+
+  "mobile": {
+    "projects": "Projects"
+  }
 }

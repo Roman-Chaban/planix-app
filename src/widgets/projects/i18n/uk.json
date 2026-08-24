@@ -28,6 +28,8 @@
     "addProjectButton": "Додати проєкт"
   },
 
-  "platformPlaceholder": "Виберіть платформу",
-  "allPlatforms": "Усі"
+  "select": {
+    "platformPlaceholder": "Виберіть платформу",
+    "allPlatforms": "Усі"
+  }
 }

@@ -12,7 +12,7 @@ import { useProjects } from '@/entities/project/model/useProjects';
 import { NAMESPACE as NS } from '@/shared/i18n';
 
 export const useProjectsPageModel = () => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+  const { t } = useTranslation(NS.PROJECTS);
   const [statusId, setStatusId] = useState<TabId>(getHeaderItems(t)[0].id);
   const [platformId, setPlatformId] = useState<PlatformId | null>(null);
 

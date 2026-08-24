@@ -10,7 +10,7 @@ export const useToolbarSelect = (
   statusId: ToolbarSelectProps['statusId'],
   setStatusId: ToolbarSelectProps['setStatusId'],
 ) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+  const { t } = useTranslation(NS.PROJECTS);
 
   const headerItems = getHeaderItems(t);
 

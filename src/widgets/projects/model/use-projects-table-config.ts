@@ -13,7 +13,7 @@ import { getProjectsTableColumns } from '../ui/projects-table/lib/get-table-colu
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 
 export const useProjectsTableConfig = (onDelete: ProjectsTableProps['onDelete']) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
+  const { t } = useTranslation(NS.PROJECTS);
   const { push } = useLocalizedRouter();
 
   const actions = useMemo(

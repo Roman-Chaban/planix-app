@@ -1,20 +1,20 @@
 import type { PlatformId, ProjectsHeaderProps, TabId } from '@types';
 
-import type { Dispatch, SetStateAction } from 'react';
-
 import type { Project } from '@/entities/project';
 
 export type ToolbarProps = {
   statusId: TabId;
-  setStatusId: Dispatch<SetStateAction<TabId>>;
+  setStatusId: (status: TabId) => void;
   platformId: PlatformId | null;
-  setPlatformId: Dispatch<SetStateAction<PlatformId | null>>;
+  setPlatformId: (platform: PlatformId | null) => void;
+  search: string;
+  setSearchQuery: (search: string) => void;
   projects: Project[];
 };
 
 export type ToolbarSelectProps = {
   statusId: TabId;
-  setStatusId: Dispatch<SetStateAction<TabId>>;
+  setStatusId: (status: TabId) => void;
 };
 
 export type ToolbarSelectOption = {
@@ -30,7 +30,9 @@ export type ToolbarActionsProps = {
   handleCreateProject?: () => void;
   projects: Project[];
   platformId: PlatformId | null;
-  setPlatformId: Dispatch<SetStateAction<PlatformId | null>>;
+  setPlatformId: (platform: PlatformId | null) => void;
+  search: string;
+  setSearchQuery: (search: string) => void;
 };
 
 export type ToolbarHeaderItemProps = ProjectsHeaderProps;
@@ -42,6 +44,6 @@ export type PlatformOption = {
 
 export type PlatformSelectProps = {
   platformId: PlatformId | null;
-  setPlatformId: Dispatch<SetStateAction<PlatformId | null>>;
+  setPlatformId: (platform: PlatformId | null) => void;
   projects: Project[];
 };

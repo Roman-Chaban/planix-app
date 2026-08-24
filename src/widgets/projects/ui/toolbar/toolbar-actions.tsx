@@ -19,6 +19,8 @@ export const ToolbarActions = ({
   handleCreateProject,
   platformId,
   setPlatformId,
+  search,
+  setSearchQuery,
   projects,
 }: ToolbarActionsProps) => {
   const { t } = useTranslation(NS.PROJECTS);
@@ -32,6 +34,8 @@ export const ToolbarActions = ({
         className={styles.search}
         inputProps={{
           type: SEARCH,
+          value: search,
+          onChange: (event) => setSearchQuery(event.target.value),
           placeholder: t('toolbar.searchPlaceholder'),
         }}
       />

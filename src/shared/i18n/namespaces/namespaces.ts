@@ -5,7 +5,7 @@ export const NAMESPACE = {
   DASHBOARD: 'dashboard',
   PROJECTS: 'projectManagement',
   SIDEBAR: 'sidebar',
-  MODAL: 'modal',
+  DELETE_MODAL: 'deleteModal',
   HEADER: 'header',
   PROJECT: 'project',
   PROJECT_ADD: 'projectAdd',

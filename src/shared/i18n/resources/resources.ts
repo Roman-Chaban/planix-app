@@ -7,7 +7,7 @@ import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { subscriptionI18n } from '@/widgets/subscription/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
-import { deleteProjectI18n } from '@/features/delete-project/i18n';
+import { deleteModalI18n } from '@/features/delete-project/i18n';
 import { projectAddI18n } from '@/features/project-add/i18n';
 
 export const resources = {
@@ -17,7 +17,7 @@ export const resources = {
     dashboard: dashboardI18n.en,
     brand: brandI18n.en,
     sidebar: sidebarI18n.en,
-    modal: deleteProjectI18n.en,
+    deleteModal: deleteModalI18n.en,
     header: headerI18n.en,
     projectManagement: projectManagementI18n.en,
     project: projectI18n.en,
@@ -30,7 +30,7 @@ export const resources = {
     dashboard: dashboardI18n.uk,
     brand: brandI18n.uk,
     sidebar: sidebarI18n.uk,
-    modal: deleteProjectI18n.uk,
+    deleteModal: deleteModalI18n.uk,
     header: headerI18n.uk,
     projectManagement: projectManagementI18n.uk,
     project: projectI18n.uk,

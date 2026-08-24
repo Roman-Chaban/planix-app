@@ -12,15 +12,15 @@ import { SELECT_CONTROL_VARIANTS } from '@/shared/ui/select';
 
 import { getPlatformValues } from '../ui/toolbar/lib/get-platform-values';
 
-const { PLATFORM } = SELECT_CONTROL_VARIANTS;
+const { TOOLBAR } = SELECT_CONTROL_VARIANTS;
 
 export const usePlatformSelect = ({
   platformId,
   setPlatformId,
   projects,
 }: UsePlatformSelectOptions) => {
-  const { t } = useTranslation(NS.PROJECT_MANAGEMENT);
-  const selectStyles = useMemo(() => createSelectStyles<PlatformOption>(PLATFORM), []);
+  const { t } = useTranslation(NS.PROJECTS);
+  const selectStyles = useMemo(() => createSelectStyles<PlatformOption>(TOOLBAR), []);
 
   const options = useMemo(() => getPlatformValues(projects, t('allPlatforms')), [projects, t]);
 

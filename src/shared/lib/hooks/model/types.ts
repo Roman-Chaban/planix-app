@@ -2,6 +2,8 @@ import type { FieldValues, UseFormProps } from 'react-hook-form';
 
 import type { ZodType } from 'zod';
 
+import type { Breakpoint } from '@/shared/ui/theme';
+
 export type Point = { x: number; y: number };
 export type ScrollPosition = { left: number; top: number };
 export type Axis = 'x' | 'y' | 'both';
@@ -21,4 +23,10 @@ export type UseDragScrollOptions = {
 
 export type UseAppFormProps<T extends FieldValues> = Omit<UseFormProps<T>, 'resolver'> & {
   schema: ZodType<T, T>;
+};
+
+export type UseResponsiveValueOptions<T> = {
+  largeScreenValue: T;
+  smallScreenValue: T;
+  breakpoint: Breakpoint;
 };

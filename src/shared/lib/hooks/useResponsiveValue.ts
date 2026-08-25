@@ -1,15 +1,15 @@
 'use client';
 
-import type { Breakpoint } from '@/shared/ui/theme';
+import type { UseResponsiveValueOptions } from './model/types';
 
 import { useMediaQuery } from './useMediaQuery';
 
-export const useResponsiveValue = <T>(
-  largeScreenValue: T,
-  smallScreenValue: T,
-  breakpoint: Breakpoint,
-): T => {
-  const isLargeScreen = useMediaQuery(breakpoint);
+export const useResponsiveValue = <T>({
+  largeScreenValue,
+  smallScreenValue,
+  breakpoint,
+}: UseResponsiveValueOptions<T>): T => {
+  const isSmallScreen = useMediaQuery(breakpoint);
 
-  return isLargeScreen ? largeScreenValue : smallScreenValue;
+  return isSmallScreen ? smallScreenValue : largeScreenValue;
 };

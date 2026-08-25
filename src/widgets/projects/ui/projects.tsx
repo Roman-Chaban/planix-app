@@ -3,7 +3,7 @@
 import { Header } from '@/widgets/header';
 
 import { DeleteModal } from '@/features/delete-project';
-import { useMediaQuery } from '@/shared/lib/hooks';
+import { useResponsiveValue } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';
 
 import { BREAKPOINTS } from '@/shared/ui/theme';
@@ -34,15 +34,10 @@ export const ProjectManagement = () => {
     setSearchQuery,
   } = useProjectsPageModel();
 
-  const isMobileLargeScreen = useMediaQuery(MOBILE_LARGE);
-
-  const responsiveHeaderTitle = isMobileLargeScreen ? 'mobile.projects' : 'projects';
+  const title = useResponsiveValue('mobile.projects', 'projects', MOBILE_LARGE);
 
   return (
-    <PageWrapper
-      header={<Header title={responsiveHeaderTitle} />}
-      sectionClassName={styles.projects}
-    >
+    <PageWrapper header={<Header title={title} />} sectionClassName={styles.projects}>
       <Toolbar
         statusId={statusId}
         platformId={platformId}

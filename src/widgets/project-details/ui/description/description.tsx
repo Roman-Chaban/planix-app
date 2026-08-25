@@ -2,7 +2,7 @@ import type { DescriptionProps } from './model/types';
 
 import { Box, Typography } from '@/shared/ui';
 
-import { FileItem } from '../file-item/file-item';
+import { FileItem } from '../file-item';
 
 import styles from './description.module.scss';
 

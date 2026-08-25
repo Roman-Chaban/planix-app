@@ -2,6 +2,7 @@
 
 import type { ToolbarActionsProps } from './model/types';
 
+import type { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
@@ -10,32 +11,39 @@ import { Box, FormField, ProjectButton } from '@/shared/ui';
 import { SearchIconPrimary } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
+import { useNavigateToCreate } from '../../model/use-navigate-to-create';
+
 import { PlatformSelect } from './platform-select';
 import styles from './toolbar.module.scss';
 
 const { SEARCH } = INPUT_TYPES;
+const { DEFAULT } = INPUT_VARIANTS;
 
 export const ToolbarActions = ({
-  handleCreateProject,
+  projects,
+  search,
   platformId,
   setPlatformId,
-  search,
   setSearchQuery,
-  projects,
 }: ToolbarActionsProps) => {
   const { t } = useTranslation(NS.PROJECTS);
+  const { navigateToCreate } = useNavigateToCreate();
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
 
   return (
     <Box className={styles.toolbarActions}>
       <FormField
         id="project-search"
-        variant={INPUT_VARIANTS.DEFAULT}
+        variant={DEFAULT}
         startIcon={<SearchIconPrimary />}
         className={styles.search}
         inputProps={{
           type: SEARCH,
           value: search,
-          onChange: (event) => setSearchQuery(event.target.value),
+          onChange: handleSearch,
           placeholder: t('toolbar.searchPlaceholder'),
         }}
       />
@@ -45,7 +53,7 @@ export const ToolbarActions = ({
       <ProjectButton
         className={styles.addButton}
         preset="ADD"
-        onClick={handleCreateProject}
+        onClick={navigateToCreate}
         label={t('toolbar.addProjectButton')}
       />
     </Box>

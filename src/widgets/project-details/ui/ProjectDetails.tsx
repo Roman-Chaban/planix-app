@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProjectDetailsProps } from '../model/project-details.types';
+import type { ProjectDetailsProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -8,7 +8,7 @@ import { Header } from '@/widgets/header';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, PageWrapper } from '@/shared/ui';
 
-import { mapProjectDetails } from '../lib/project-details.mapper';
+import { mapProjectDetails } from '../lib/map-project-details';
 
 import { Description } from './description/ui/Description';
 

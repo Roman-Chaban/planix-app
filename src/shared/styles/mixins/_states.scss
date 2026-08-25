@@ -153,3 +153,8 @@
   box-shadow: $shadow;
   border-radius: $radius;
 }
+
+@mixin toolbar-responsive-item {
+  flex: 1 1 auto;
+  min-width: 0;
+}

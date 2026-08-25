@@ -1,10 +1,10 @@
-import type { DescriptionProps } from '../model/description.types';
+import type { DescriptionProps } from './model/types';
 
 import { Box, Typography } from '@/shared/ui';
 
-import { FileItem } from '../../file-item/ui/FileItem';
+import { FileItem } from '../file-item/file-item';
 
-import styles from './Description.module.scss';
+import styles from './description.module.scss';
 
 export const Description = ({ description, documentTitle, files }: DescriptionProps) => {
   return (

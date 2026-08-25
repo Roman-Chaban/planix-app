@@ -1,12 +1,12 @@
 'use client';
 
-import type { ProjectHeaderProps } from '../model/project-header.types';
+import type { ProjectHeaderProps } from './model/types';
 
 import { useTranslation } from 'react-i18next';
 
 import { Box, StatusBadge, Typography } from '@/shared/ui';
 
-import styles from './ProjectHeader.module.scss';
+import styles from './project-header.module.scss';
 
 export const ProjectHeader = ({
   title,

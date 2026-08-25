@@ -10,12 +10,12 @@ import { Box, PageWrapper } from '@/shared/ui';
 
 import { mapProjectDetails } from '../lib/map-project-details';
 
-import { Description } from './description/ui/Description';
+import { Description } from './description/description';
 
-import { ProjectHeader } from './header/ui/ProjectHeader';
-import { InfoCard } from './info/ui/InfoCard';
-import { InfoList } from './info/ui/InfoList';
-import styles from './ProjectDetails.module.scss';
+import { ProjectHeader } from './header/project-header';
+import { InfoCard } from './info/info-card';
+import { InfoList } from './info/info-list';
+import styles from './project-details.module.scss';
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { t, i18n } = useTranslation(NS.PROJECT);

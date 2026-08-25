@@ -1,8 +1,8 @@
-import type { InfoListProps } from '../model/info.types';
+import type { InfoListProps } from './model/types';
 
 import { Box, List, Typography } from '@/shared/ui';
 
-import styles from './Info.module.scss';
+import styles from './info-list.module.scss';
 
 export const InfoList = ({ details }: InfoListProps) => {
   return (

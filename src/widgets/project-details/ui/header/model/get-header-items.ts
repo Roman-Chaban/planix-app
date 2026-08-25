@@ -1,4 +1,4 @@
-import type { HeaderItems } from '../model/project-header.types';
+import type { HeaderItems } from './types';
 
 import type { TranslateFn } from '@types';
 

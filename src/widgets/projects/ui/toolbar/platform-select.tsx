@@ -12,7 +12,7 @@ import { usePlatformSelect } from '../../model/use-platform-select';
 import { DropdownIndicator } from './custom-dropdown-indicator';
 import styles from './toolbar.module.scss';
 
-export const PlatformSelect = ({ platformId, setPlatformId, projects }: PlatformSelectProps) => {
+export const PlatformSelect = ({ platformId, projects, setPlatformId }: PlatformSelectProps) => {
   const { t } = useTranslation(NS.PROJECTS);
 
   const { options, selectedOption, selectStyles, handleChange } = usePlatformSelect({

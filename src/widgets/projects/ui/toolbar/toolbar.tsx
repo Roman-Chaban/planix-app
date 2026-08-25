@@ -9,8 +9,6 @@ import { Box } from '@/shared/ui';
 
 import { BREAKPOINTS } from '@/shared/ui/theme';
 
-import { useToolbar } from '../../model/use-toolbar';
-
 import { ToolbarActions } from './toolbar-actions';
 import { ToolbarHeader } from './toolbar-header';
 import { ToolbarSelect } from './toolbar-select';
@@ -27,7 +25,6 @@ export const Toolbar = ({
   setPlatformId,
   setSearchQuery,
 }: ToolbarProps) => {
-  const { handleCreateProject } = useToolbar();
   const { isSidebarOpen } = useSidebar();
 
   const isWideScreen = useMediaQuery(WIDE);
@@ -43,18 +40,13 @@ export const Toolbar = ({
       {isWideScreen ? (
         <ToolbarSelect statusId={statusId} setStatusId={setStatusId} />
       ) : (
-        <ToolbarHeader
-          statusId={statusId}
-          isSidebarOpen={isSidebarOpen}
-          setStatusId={setStatusId}
-        />
+        <ToolbarHeader statusId={statusId} setStatusId={setStatusId} />
       )}
 
       <ToolbarActions
         projects={projects}
         platformId={platformId}
         search={search}
-        handleCreateProject={handleCreateProject}
         setPlatformId={setPlatformId}
         setSearchQuery={setSearchQuery}
       />

@@ -1,4 +1,4 @@
-import type { ToolbarSelectOption, ToolbarSelectProps } from '../ui/toolbar/model/types';
+import type { ToolbarSelectOption, ToolbarSelectProps } from '../model/types';
 
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

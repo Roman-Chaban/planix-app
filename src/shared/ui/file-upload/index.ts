@@ -7,8 +7,8 @@ export type {
 
 export { FILE_TYPES } from './model/constants';
 
-export { useFileUpload } from './lib/useFileUpload';
+export { useFileUpload } from './lib/use-file-upload';
 
-export { FileUpload } from './ui/FileUpload';
-export { FileItem } from './ui/FileItem';
-export { FileUploadItem } from './ui/FileUploadItem';
+export { FileUpload } from './ui/file-upload';
+export { FileItem } from './ui/file-item';
+export { FileUploadItem } from './ui/file-upload-item';

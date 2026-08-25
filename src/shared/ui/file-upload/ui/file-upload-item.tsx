@@ -2,7 +2,7 @@ import { Box, Typography } from '@/shared/ui';
 import type { FileUploadItemProps } from '@/shared/ui/file-upload';
 import { UploadIcon } from '@/shared/ui/icons';
 
-import styles from './FileUpload.module.scss';
+import styles from './file-upload.module.scss';
 
 export const FileUploadItem = ({
   handleTrigger,

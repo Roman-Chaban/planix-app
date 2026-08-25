@@ -4,7 +4,7 @@ import { BUTTON_TYPES } from '@/shared/ui/button/lib/constants';
 import type { FileItemProps } from '@/shared/ui/file-upload';
 import { CloseIcon, PdfIcon, UploadIcon } from '@/shared/ui/icons';
 
-import styles from './FileUpload.module.scss';
+import styles from './file-upload.module.scss';
 
 const { BUTTON } = BUTTON_TYPES;
 

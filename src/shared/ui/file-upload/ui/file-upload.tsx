@@ -13,7 +13,7 @@ import {
 import { UploadIcon } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
-import styles from './FileUpload.module.scss';
+import styles from './file-upload.module.scss';
 
 const { FILE } = INPUT_TYPES;
 const { NO_BORDER } = INPUT_VARIANTS;

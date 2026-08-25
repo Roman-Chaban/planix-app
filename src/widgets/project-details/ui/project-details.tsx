@@ -31,9 +31,9 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       <ProjectHeader
         showStatus
         status={project.status}
-        translationNamespace="project"
-        title="headerTitle"
-        metaInfo={{ label: 'headerLabel', value: 'headerValue' }}
+        translationNamespace={NS.PROJECT}
+        title="header.title"
+        metaInfo={{ label: 'header.label', value: 'header.value' }}
       />
 
       <Box className={styles.wrapper}>

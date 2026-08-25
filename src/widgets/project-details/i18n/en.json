@@ -1,7 +1,10 @@
 {
-  "headerTitle": "Project Details",
-  "headerLabel": "Project Details  /",
-  "headerValue": "Project List",
+  "header": {
+    "title": "Project Details",
+    "label": "Project Details  /",
+    "value": "Project List"
+  },
+
   "detailsTitle": "Project Details",
   "descriptionTitle": "Project Description",
   "documentTitle": "Project Document",

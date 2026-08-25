@@ -34,7 +34,11 @@ export const ProjectManagement = () => {
     setSearchQuery,
   } = useProjectsPageModel();
 
-  const title = useResponsiveValue('mobile.projects', 'projects', MOBILE_LARGE);
+  const title = useResponsiveValue({
+    largeScreenValue: 'projects',
+    smallScreenValue: 'mobile.projects',
+    breakpoint: MOBILE_LARGE,
+  });
 
   return (
     <PageWrapper header={<Header title={title} />} sectionClassName={styles.projects}>

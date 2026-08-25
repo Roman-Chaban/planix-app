@@ -1,0 +1,19 @@
+@use '../tokens/' as *;
+
+@mixin table-cell($padding: 1rem 1rem) {
+  padding: $padding;
+  line-height: $line-height-base;
+}
+
+@mixin table-scroll {
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+}
+
+@mixin table-col($width, $min-width: null) {
+  width: $width;
+
+  @if $min-width {
+    min-width: $min-width;
+  }
+}

@@ -1,0 +1,6 @@
+@use '@/shared/styles' as *;
+
+.subscriptionPlans {
+  width: 100%;
+  @include flex(flex, row, center, center, 2.25rem);
+}

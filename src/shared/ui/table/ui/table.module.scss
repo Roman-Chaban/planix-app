@@ -1,0 +1,103 @@
+@use '@/shared/styles' as *;
+
+.tableContainer {
+  width: 100%;
+  display: block;
+  @include table-scroll;
+  @include hide-scrollbar;
+}
+
+.table {
+  width: max-content;
+  min-width: 44rem;
+  border-collapse: separate;
+  table-layout: auto;
+  border-spacing: 0;
+}
+
+.headCell,
+.cell {
+  white-space: nowrap;
+}
+
+.thead {
+  text-align: left;
+}
+
+.headCell {
+  line-height: $line-height-base;
+  font-weight: $font-weight-semibold;
+}
+
+.cell > svg {
+  vertical-align: middle;
+  margin-inline-end: 0.5rem;
+}
+
+/* Table Sizes */
+
+.headCell.sizeSm {
+  padding: 0.563rem 0.875rem;
+}
+
+.cell.sizeSm {
+  padding-inline: 0.5rem;
+  padding-block: 0.75rem 0.875rem;
+}
+
+.headCell.sizeMd {
+  padding: 0.75rem 1rem;
+}
+
+.cell.sizeMd {
+  padding: 0.813rem 1rem;
+}
+
+.headCell.sizeLg {
+  padding: 1rem 1.25rem;
+}
+
+// .cell.sizeLg {
+// }
+
+/* Table Variants */
+
+.tableContainer .variantDefault {
+  width: 100%;
+  padding: $space-3;
+  border: 0.094rem solid $neutral-300;
+  border-radius: $radius-lg;
+  background: $neutral-0;
+}
+
+.variantDefault {
+  background: $neutral-0;
+
+  .row:not(:last-child) .cell {
+    border-bottom: 0.094rem solid $neutral-200;
+  }
+
+  .headCell {
+    background: $neutral-100;
+
+    &:first-child {
+      padding-left: 1.125rem;
+      border-top-left-radius: $radius-md;
+      border-bottom-left-radius: $radius-md;
+    }
+
+    &:last-child {
+      padding-right: 1.125rem;
+      border-top-right-radius: $radius-md;
+      border-bottom-right-radius: $radius-md;
+    }
+  }
+
+  .cell {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.tableContainer .variantMinimal {
+  padding-inline: 0;
+}

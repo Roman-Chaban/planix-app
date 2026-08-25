@@ -1,0 +1,35 @@
+{
+  "toolbar": {
+    "allProjects": "Усі проєкти",
+    "inProgress": "У процесі",
+    "pending": "Очікують",
+    "completed": "Завершені",
+    "canceled": "Скасовані",
+
+    "addProjectButton": "Додати проєкт",
+    "searchPlaceholder": "Пошук..."
+  },
+
+  "tableHeader": {
+    "clientName": "Назва клієнта",
+    "projectName": "Назва проєкту",
+    "dueDate": "Термін виконання",
+    "platform": "Платформа",
+    "progress": "Прогрес",
+    "reason": "Причина",
+    "price": "Ціна",
+    "status": "Статус",
+    "action": "Дії"
+  },
+
+  "emptyProjects": {
+    "title": "Проєктів ще немає",
+    "subtitle": "Ви ще не створили жодного проєкту. Почніть із додавання першого проєкту, щоб відстежувати прогрес, дедлайни та вартість в одному місці.",
+    "addProjectButton": "Додати проєкт"
+  },
+
+  "select": {
+    "platformPlaceholder": "Виберіть платформу",
+    "allPlatforms": "Усі"
+  }
+}

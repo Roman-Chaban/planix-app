@@ -1,17 +1,11 @@
-import type { JSX, ReactNode } from 'react';
+import type { WithClassName } from '@types';
 
-export type ListItemKey = string | number;
+import type { JSX, Key, ReactNode } from 'react';
 
-export type BaseListProps<T> = {
+export type ListProps<T> = WithClassName & {
   renderList: T[];
   renderItem: (item: T, index: number) => ReactNode;
-  getItemKey?: (item: T) => ListItemKey;
-};
-
-export type ListLayoutProps = {
+  getItemKey: (item: T) => Key;
   tag?: keyof JSX.IntrinsicElements;
-  className?: string;
   itemClassName?: string;
 };
-
-export type ListProps<T> = BaseListProps<T> & ListLayoutProps;

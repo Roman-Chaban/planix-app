@@ -1,0 +1,88 @@
+@use '@/shared/styles' as *;
+
+.planCard {
+  width: 100%;
+  min-width: 25.438rem;
+  min-height: 30.625rem;
+  border: 0.063rem solid $neutral-300;
+  border-radius: $radius-md;
+  box-shadow: $shadow-xs;
+  cursor: pointer;
+  @include smooth-transitions(border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease);
+}
+
+.activeCard {
+  border-color: $primary-700;
+  border-width: 0.125rem;
+  box-shadow: $shadow-md;
+  transform: translateY(-0.188rem);
+}
+
+.planHeader {
+  padding: $space-2;
+}
+
+.planHeaderBox {
+  z-index: 3;
+  @include flex-col(0.188rem, start, start);
+  width: 100%;
+  background: $gradient-overlay-dark;
+  border-radius: $radius-sm;
+  padding: $space-3 $space-5;
+  position: relative;
+  @include plan-card-bottom-decoration;
+  @include smooth-transition(background, 0.25s);
+}
+
+.activeHeaderBox {
+  background: $gradient-blue-overlay;
+}
+
+.planTitle {
+  @include title-bold($font-weight-semibold, $subtitle-font-size, $neutral-950);
+}
+
+.planSubtitle {
+  @include header-subtitle($neutral-700, $body-sm-font-size);
+}
+
+.planContent {
+  @include flex-col($space-5, start, start, column);
+  padding: 1.164rem 1.875rem;
+}
+
+.planPrice {
+  @include title-bold($font-weight-bold, $h5-font-size, $primary-700);
+}
+
+.planMonth {
+  color: $neutral-950;
+  font-size: $body-md-font-size;
+  font-weight: $font-weight-medium;
+}
+
+.featuresList {
+  width: 100%;
+  @include flex-col(1rem, start, start);
+}
+
+.featuresListItem {
+  width: 100%;
+}
+
+.feature {
+  width: 100%;
+  @include flex-row($space-3, start, center);
+}
+
+.featureIcon {
+  @include smooth-transition(color, 0.1s);
+}
+
+.activeFeature {
+  color: $primary-700;
+}
+
+.featureText {
+  @include title-bold($font-weight-medium, $body-md-font-size, $neutral-950);
+}

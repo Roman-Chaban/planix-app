@@ -1,0 +1,60 @@
+@use '../tokens' as *;
+
+@mixin button-interaction($hover-bg: null) {
+  transition:
+    background 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &:hover {
+    @if $hover-bg {
+      background: $hover-bg;
+    }
+  }
+}
+
+@mixin button-disabled(
+  $bg: $surface-tertiary,
+  $text: $text-disabled,
+  $border: none,
+  $bgHover: $surface-secondary
+) {
+  &:disabled {
+    background: $bg;
+    color: $text;
+    border: $border;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    &:disabled {
+      background: $bgHover;
+    }
+  }
+}
+
+@mixin button-outline($border, $shadow: none, $hover-border: null) {
+  box-shadow: $shadow;
+  border: 0.125rem solid $border;
+
+  &:hover {
+    @if $hover-border {
+      border-color: $hover-border;
+    }
+  }
+}
+
+@mixin button-link {
+  color: $icon-brand;
+  text-decoration: underline;
+}
+
+@mixin button-default-wrapper-size($maxWidth) {
+  width: 100%;
+  max-width: $maxWidth;
+}
+
+@mixin button-close-right {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

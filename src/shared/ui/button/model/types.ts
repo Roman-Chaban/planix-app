@@ -1,24 +1,37 @@
+import type { WithChildren } from '@types';
+
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export type ButtonVariant = 'primary' | 'outline' | 'soft' | 'tertiary' | 'circle';
-export type ButtonSize = 'sm' | 'md' | 'lg' | 'none';
-export type ButtonOutline =
-  | 'white'
-  | 'light-blue'
-  | 'transparent'
-  | 'disabled'
-  | 'double-outline'
-  | 'none';
+import type { ButtonPresetKey } from '@/shared/ui/button';
+
+export type Variant = 'default' | 'outline' | 'soft' | 'tertiary' | 'transparent';
+export type Size = 'sm' | 'md' | 'lg' | 'compact';
+export type Shape = 'normal' | 'rounded' | 'circle' | 'pill';
+export type MinWidth = 'content' | 'sm' | 'md' | 'lg';
+export type ButtonPresets = Record<string, ButtonPreset>;
+
+export type ButtonPreset = {
+  variant?: Variant;
+  size?: Size;
+  shape?: Shape;
+  minWidth?: MinWidth;
+  fullWidth?: boolean;
+  type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+};
 
 export type ButtonProps = {
-  children: ReactNode;
-  disabled?: boolean;
-  className?: string;
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  outline?: ButtonOutline;
+  variant?: Variant;
+  size?: Size;
+  shape?: Shape;
+  fullWidth?: boolean;
+  minWidth?: MinWidth;
+
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   startIconClassName?: string;
   endIconClassName?: string;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+  isLoading?: boolean;
+  preset?: ButtonPresetKey;
+} & WithChildren &
+  ButtonHTMLAttributes<HTMLButtonElement>;

@@ -1,0 +1,80 @@
+@mixin flex(
+  $display: flex,
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin full-width-on-mobile {
+  width: 100%;
+  max-width: 100%;
+  flex: none;
+}
+
+@mixin flex-col($gap: 0, $justify: start, $align: stretch, $direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-row($gap: 0, $justify: flex-start, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin auth-form-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3.625rem;
+}
+
+@mixin flex-inline-center {
+  @include flex-center();
+  display: inline-flex;
+}

@@ -1,0 +1,52 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  @include flex(inline-flex, row, start, center, 0.625rem);
+  cursor: pointer;
+  user-select: none;
+
+  @include respond(sm) {
+    gap: 0.5rem;
+  }
+}
+
+.input {
+  @include hidden-overlay;
+}
+
+.box {
+  @include flex(flex, row, center, center);
+  position: relative;
+  width: $body-md-line-height;
+  height: $body-md-line-height;
+  border-radius: 0.375rem;
+  border: 0.125rem solid $neutral-300;
+
+  transition:
+    background 0.35s ease-in-out,
+    border-color 0.35s ease-in-out;
+}
+
+@include checkbox-checked($primary-600, $primary-600, $primary-700, $primary-700);
+
+.checkIcon {
+  color: $neutral-0;
+  opacity: 0;
+  transition:
+    opacity 0.35s ease-in-out,
+    transform 0.35s ease-in-out;
+}
+
+.input:checked + .box .checkIcon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.label {
+  line-height: 150%;
+  color: $neutral-950;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
+}

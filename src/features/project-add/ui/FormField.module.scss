@@ -1,0 +1,41 @@
+@use '@/shared/styles' as *;
+
+.textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 5.75rem;
+  padding: 1rem 1.125rem;
+  caret-color: $text-secondary;
+  color: $text-secondary;
+  resize: none;
+  border: none;
+  outline: none;
+  transition: all 0.35s ease-in-out 0s;
+  font-size: $body-md-font-size;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
+
+  @include input-wrapper-border($border-default);
+  @include input-border-active($border-focus);
+
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.errorTextarea {
+  @include input-wrapper-border($icon-danger);
+  @include input-border-active($icon-danger);
+}
+
+.descriptionLabel {
+  line-height: $line-height-base;
+  font-size: $body-sm-font-size;
+  color: $text-secondary;
+}
+
+.errorLabel {
+  @include error-color;
+}

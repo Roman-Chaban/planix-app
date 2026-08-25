@@ -1,0 +1,15 @@
+@use '@/shared/styles' as *;
+
+.header {
+  @include flex-col-center;
+  gap: $space-3;
+  width: 100%;
+}
+
+.title {
+  @include title-bold($font-weight-semibold, $h4-font-size, $neutral-950);
+}
+
+.subtitle {
+  @include header-subtitle($neutral-700, $body-lg-font-size);
+}

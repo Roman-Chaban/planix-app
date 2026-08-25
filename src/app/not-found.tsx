@@ -1,4 +1,4 @@
-import { NotFoundLayout } from '@/shared/ui/index';
+import { NotFoundLayout } from '@/widgets/not-found';
 
 export default function NotFound() {
   return <NotFoundLayout />;

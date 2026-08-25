@@ -1,0 +1,109 @@
+@use '@/shared/styles' as *;
+
+.button {
+  min-width: auto;
+  font-weight: $font-weight-medium;
+  gap: 0.625rem;
+  line-height: 150%;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @include button-disabled;
+  @include text-ellipsis;
+}
+
+.default {
+  background: $primary-700;
+  color: $text-inverse;
+  font-weight: $font-weight-semibold;
+  @include button-interaction($primary-800);
+}
+
+.outline {
+  color: $primary-700;
+  background: none;
+
+  @include button-outline($primary-700, none, null);
+
+  &:hover {
+    background: $surface-secondary;
+  }
+}
+
+.soft {
+  background: $primary-50;
+  color: $primary-700;
+
+  @include button-outline($primary-700, none, null);
+}
+
+.tertiary {
+  @include button-link;
+}
+
+.transparent {
+  background: transparent;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.circle.sm {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: transparent;
+}
+
+.rounded {
+  border-radius: 1.875rem;
+}
+
+.compact {
+  padding: 0;
+  margin: 0;
+}
+
+.sm {
+  padding: $space-2 $space-7;
+  font-size: $body-sm-font-size;
+}
+
+.md {
+  padding: $space-3 $space-7;
+  font-size: $body-md-font-size;
+}
+
+.lg {
+  padding-inline: $space-7;
+  padding-block: 0.875rem 0.813rem;
+  font-size: $body-lg-font-size;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.startIcon,
+.endIcon {
+  @include flex-center;
+}
+
+.minWidth_content {
+  min-width: auto;
+}
+
+.minWidth_sm {
+  min-width: $button-min-width-sm;
+}
+
+.minWidth_md {
+  min-width: $button-min-width-md;
+}
+
+.minWidth_lg {
+  min-width: $button-min-width-lg;
+}

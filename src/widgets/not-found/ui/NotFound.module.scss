@@ -1,0 +1,26 @@
+@use '@/shared/styles' as *;
+
+.layout {
+  min-height: 100dvh;
+  @include flex-center;
+  padding: 2rem;
+
+  @include respond(lg) {
+    padding: 1rem;
+  }
+}
+
+.container {
+  @include bounding-container;
+  @include page-border-decoration;
+  place-items: center;
+  min-height: 90dvh;
+
+  @include respond(lg) {
+    @include flex-col(3rem, center, center, column);
+  }
+}
+
+.errorBlock {
+  @include flex-col(2rem, center, stretch, column);
+}

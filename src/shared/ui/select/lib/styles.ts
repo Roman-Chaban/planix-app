@@ -1,0 +1,69 @@
+import type { SelectVariants } from '../model/types';
+
+export const SELECT_VARIANTS: SelectVariants = {
+  default: {
+    container: {
+      width: '100%',
+    },
+
+    control: {
+      width: '100%',
+      minHeight: '2.5rem',
+      borderColor: '#b9b9b9',
+      borderRadius: '1rem',
+      marginBlockStart: '0',
+      padding: '0.5rem 1.125rem',
+    },
+
+    valueContainer: {
+      paddingInlineEnd: 0,
+    },
+
+    singleValue: {
+      margin: 0,
+      color: '#525252',
+      cursor: 'pointer',
+      overflow: 'visible',
+    },
+
+    dropdownIndicator: {
+      padding: 0,
+      cursor: 'pointer',
+
+      '& svg': {
+        transition: 'transform 0.2s ease',
+      },
+    },
+
+    indicatorSeparator: {},
+
+    menu: {},
+
+    option: {
+      cursor: 'pointer',
+    },
+  },
+
+  language: {},
+
+  toolbar: {
+    container: {},
+
+    control: {
+      borderColor: '#e3e3e3',
+      boxShadow: '0 2px 16px 0 rgba(19, 20, 21, 0.1)',
+      padding: '0.438rem',
+      paddingInlineEnd: '1.125rem',
+      minHeight: '3.375rem',
+      marginBlockStart: 0,
+    },
+
+    placeholder: {
+      color: '#525252',
+      lineHeight: '150%',
+      margin: 0,
+    },
+  },
+
+  platform: {},
+};

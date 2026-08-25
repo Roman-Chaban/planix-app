@@ -1,0 +1,75 @@
+@use '../tokens' as *;
+
+@mixin input-icon(
+  $side: left,
+  $offset: $space-4,
+  $top: 50%,
+  $transform: translateY(-50%),
+  $display: flex,
+  $align-items: center,
+  $color: $icon-secondary,
+  $cursor: pointer
+) {
+  position: absolute;
+  top: $top;
+  transform: $transform;
+  display: $display;
+  align-items: $align-items;
+  color: $color;
+
+  @if $side == left {
+    left: $offset;
+    cursor: default;
+    pointer-events: none;
+  } @else if $side == right {
+    right: $offset;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+}
+
+@mixin icon-color($color) {
+  .iconWrapper {
+    color: $color;
+  }
+}
+
+@mixin input-wrapper-border($color) {
+  border-radius: 1rem;
+  border: 0.063rem solid $color;
+}
+
+@mixin input-border-active($color) {
+  &:hover {
+    border-color: $color;
+  }
+
+  &:focus-within {
+    border-color: $color;
+  }
+}
+
+@mixin input-disabled($border, $bg) {
+  &:has(input:disabled) {
+    border: 0.125rem solid $border;
+    background: $bg;
+  }
+}
+
+@mixin autofill-background-disabled {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 9999s ease-in-out 0s;
+    -webkit-text-fill-color: $text-secondary;
+  }
+}
+
+@mixin hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 0.063rem;
+  height: 0.063rem;
+  pointer-events: none;
+}

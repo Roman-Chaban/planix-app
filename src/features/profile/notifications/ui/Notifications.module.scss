@@ -1,0 +1,10 @@
+@use '@/shared/styles' as *;
+
+.notifications {
+  width: 100%;
+}
+
+.container {
+  @include flex-col(0, start, stretch, column);
+  position: relative;
+}

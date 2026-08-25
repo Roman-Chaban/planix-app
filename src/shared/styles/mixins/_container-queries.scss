@@ -1,0 +1,9 @@
+@use '../tokens/' as *;
+
+@mixin container($name, $type: inline-size) {
+  container: $name / $type;
+}
+
+@mixin fluid-type($min, $fluid, $max) {
+  font-size: clamp($min, $fluid, $max);
+}

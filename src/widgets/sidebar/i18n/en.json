@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Project Management",
+    "clients": "Client Management",
+    "leads": "Lead Management",
+    "inbox": "Inbox",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "title": "Planix"
+  }
+}

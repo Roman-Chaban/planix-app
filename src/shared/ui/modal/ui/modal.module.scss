@@ -1,0 +1,55 @@
+@use '@/shared/styles' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  background: $overlay-primary;
+  backdrop-filter: blur(0.3rem);
+}
+
+.modal {
+  width: 100vw;
+  min-height: 100dvh;
+  @include flex-center;
+  padding: 1rem;
+}
+
+.content {
+  @include flex-col(1.75rem, start, center, column);
+  padding: 2.5rem;
+  background: $neutral-0;
+
+  @include respond(sm) {
+    padding-inline: 1.5rem;
+  }
+}
+
+.actions {
+  @include flex-center;
+  width: 100%;
+  gap: 1.25rem;
+  z-index: 3;
+
+  @include respond(sm) {
+    gap: 0.5rem;
+  }
+}
+
+.header {
+  width: 100%;
+  @include flex(flex, row, space-between, center, 0);
+}
+
+.title {
+  line-height: 150%;
+  font: {
+    weight: $font-weight-extrabold;
+    size: $body-md-line-height;
+  }
+}
+
+.button {
+  width: 1.625rem;
+  height: 1.625rem;
+}

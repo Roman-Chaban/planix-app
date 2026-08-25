@@ -1,0 +1,128 @@
+@use '@/shared/styles' as *;
+
+.field {
+  width: 100%;
+  @include flex-col(0.188rem, start, stretch, column);
+}
+
+.input {
+  width: 100%;
+  min-height: 3.375rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  line-height: 150%;
+  border-radius: 1rem;
+  font-size: $body-md-font-size;
+  caret-color: $text-secondary;
+  color: $text-secondary;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
+
+  @include autofill-background-disabled;
+}
+
+.inputWrapper {
+  width: 100%;
+  position: relative;
+  transition: all 0.35s ease-in-out 0s;
+  display: flex;
+  align-items: center;
+
+  @include input-wrapper-border($border-default);
+  @include input-border-active($border-focus);
+  @include input-disabled($surface-tertiary, $surface-secondary);
+}
+
+.withStartIcon .input,
+.withEndIcon .input {
+  padding-inline-start: $space-9;
+}
+
+.floatingLabel {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: $line-height-base;
+  color: $neutral-600;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.inputWrapper:focus-within .floatingLabel,
+.inputWrapper.filled .floatingLabel {
+  top: 0rem;
+  transform: translateY(0);
+  font-size: $caption-md-font-size;
+}
+
+.inputWrapper.error .floatingLabel {
+  color: $icon-danger;
+}
+
+.inputWrapper.error:focus-within + .label {
+  color: $icon-danger;
+}
+
+.required {
+  color: $icon-danger;
+  margin-inline-start: 0.2rem;
+}
+
+.error {
+  @include input-wrapper-border($icon-danger);
+  @include input-border-active($icon-danger);
+}
+
+.label {
+  @include text-body-sm($text-secondary);
+}
+
+.slotStart {
+  @include input-icon(left);
+}
+
+.errorIcon {
+  @include error-color;
+}
+
+.slotEnd {
+  @include input-icon(right);
+}
+
+.divider {
+  position: absolute;
+  left: calc($space-8 + 1.25rem + $space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.113rem;
+  height: 1.313rem;
+  background: $border-subtle;
+  z-index: 2;
+}
+
+.search {
+  box-shadow: $shadow-input-search;
+  border-color: $border-subtle;
+}
+
+.noBorder {
+  border: none;
+  box-shadow: none;
+}
+
+.errorText {
+  @include error-text($body-md-font-size, $icon-danger, 0.3rem, $font-weight-medium);
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
+}
+
+.errorLabel {
+  color: $icon-danger;
+  font-weight: $font-weight-medium;
+}

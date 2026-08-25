@@ -1,0 +1,84 @@
+@use '../tokens' as *;
+
+@mixin overlay($radius: 0, $bg: null) {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  @if $bg {
+    background: $bg;
+  }
+
+  border-radius: $radius;
+}
+
+@mixin overlay-content {
+  position: relative;
+  z-index: 1;
+}
+
+@mixin bottom-overlay($bottom: 0) {
+  position: absolute;
+  bottom: $bottom;
+  width: 100%;
+}
+
+@mixin hidden-overlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+@mixin button-background-overlay(
+  $content: '',
+  $position,
+  $inset,
+  $background,
+  $opacity,
+  $border-radius,
+  $pointer-events
+) {
+  content: $content;
+  position: $position;
+  inset: $inset;
+  background: $background;
+  opacity: $opacity;
+  border-radius: $border-radius;
+  pointer-events: $pointer-events;
+}
+
+@mixin overlay-background(
+  $gradient-color: $color-gradient-blue,
+  $overlay-color: $color-overlay-white,
+  $blur-radius: 0.625rem,
+  $gradient-height: 6.938rem
+) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $gradient-height;
+    border-radius: inherit;
+    background: $gradient-overlay-tertiary;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    backdrop-filter: blur($blur-radius);
+    z-index: 2;
+    pointer-events: none;
+  }
+}

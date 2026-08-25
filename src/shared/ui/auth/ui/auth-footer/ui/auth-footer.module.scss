@@ -1,0 +1,13 @@
+@use '@/shared/styles' as *;
+
+.footer {
+  @include flex-row(0.313rem, center, center);
+
+  @include respond(md) {
+    margin-block-start: $space-5;
+  }
+
+  @include respond(sm) {
+    gap: 0.5rem;
+  }
+}

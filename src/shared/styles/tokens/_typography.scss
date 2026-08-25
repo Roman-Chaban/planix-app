@@ -1,51 +1,64 @@
-/* Font weights */
-
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 
-/* Headings */
+$h1-font-size: 3.375rem;
+$h1-line-height: 5.0625rem;
 
-$font-size-h1: 3.375rem; // 54px
-$line-height-h1: 5.0625rem; // 81px
+$h2-font-size: 3.125rem;
+$h2-line-height: 4.6875rem;
 
-$font-size-h2: 3.125rem; // 50px
-$line-height-h2: 4.6875rem; // 75px
+$h3-font-size: 2.5rem;
+$h3-line-height: 3.75rem;
 
-$font-size-h3: 2.5rem; // 40px
-$line-height-h3: 3.75rem; // 60px
+$h4-font-size: 2.25rem;
+$h4-line-height: 3.375rem;
 
-$font-size-h4: 2.25rem; // 36px
-$line-height-h4: 3.375rem; // 54px
+$h5-font-size: 1.875rem;
+$h5-line-height: 2.8125rem;
 
-$font-size-h5: 1.875rem; // 30px
-$line-height-h5: 2.8125rem; // 45px
+$h6-font-size: 1.5rem;
+$h6-line-height: 2.25rem;
 
-$font-size-h6: 1.5rem; // 24px
-$line-height-h6: 2.25rem; // 36px
+$subtitle-font-size: 1.25rem;
+$subtitle-line-height: 1.875rem;
 
-/* Subtitles */
+$body-lg-font-size: 1.125rem;
+$body-lg-line-height: 1.6875rem;
 
-$font-size-subtitle: 1.25rem; // 20px
-$line-height-subtitle: 1.875rem; // 30px
+$body-md-font-size: 1rem;
+$body-md-line-height: 1.5rem;
 
-/* Body text */
+$body-sm-font-size: 0.875rem;
+$body-sm-line-height: 1.3125rem;
 
-$font-size-body-lg: 1.125rem; // 18px
-$line-height-body-lg: 1.6875rem; // 27px
+$caption-lg-font-size: 0.8125rem;
+$caption-lg-line-height: 1.25rem;
 
-$font-size-body-md: 1rem; // 16px
-$line-height-body-md: 1.5rem; // 24px
+$caption-md-font-size: 0.75rem;
+$caption-md-line-height: 1.125rem;
 
-$font-size-body-sm: 0.875rem; // 14px
-$line-height-body-sm: 1.3125rem; // 21px
+$caption-sm-font-size: 0.813rem;
+$caption-sm-line-height: 1.25rem;
 
-/* Caption */
+$text-heading-1: $h1-font-size;
+$text-heading-2: $h2-font-size;
+$text-heading-3: $h3-font-size;
+$text-heading-4: $h4-font-size;
+$text-heading-5: $h5-font-size;
+$text-heading-6: $h6-font-size;
 
-$font-size-caption-lg: 0.8125rem; // 13px
-$line-height-caption-lg: 1.25rem; // 20px
+$text-subtitle: $subtitle-font-size;
 
-$font-size-caption-md: 0.75rem; // 12px
-$line-height-caption-md: 1.125rem; // 18px
+$text-body-lg: $body-lg-font-size;
+$text-body-md: $body-md-font-size;
+$text-body-sm: $body-sm-font-size;
+
+$text-caption-lg: $caption-lg-font-size;
+$text-caption-md: $caption-md-font-size;
+$text-caption-sm: $caption-sm-font-size;
+
+$line-height-base: 1.5;
+$line-height-tight: 1.3;

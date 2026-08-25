@@ -1,0 +1,31 @@
+@use '@/shared/styles' as *;
+
+.layout {
+  min-height: 100dvh;
+  @include bounding_container($space-6);
+  padding-inline-end: 3.5rem;
+
+  @include respond(lg) {
+    padding: 1rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 3.5rem;
+
+  @include respond(lg) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(sm) {
+    gap: 2rem;
+  }
+}
+
+.banner,
+.form {
+  @include respond(lg) {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,105 @@
+@use '@/shared/styles' as *;
+
+.hiddenInput {
+  display: none;
+}
+
+.mainWrapper {
+  @include flex-center;
+  @include input-wrapper-border($border-default);
+  @include input-border-active($border-focus);
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 8rem;
+  cursor: pointer;
+}
+
+.mainWrapper.error {
+  @include input-wrapper-border($icon-danger);
+}
+
+.iconContainer {
+  @include square-circle(2.5rem);
+  @include flex-center;
+  background: $bg-brand-soft;
+  color: $icon-brand;
+}
+
+.pdfType {
+  color: $pdf-icon;
+  background: $error-200;
+}
+
+.photoType {
+  background: $bg-brand-soft;
+  color: $icon-brand;
+}
+
+.filesGrid {
+  width: 100%;
+  padding-inline: 0.625rem;
+  @include flex-row(0.75rem, flex-start, center);
+}
+
+.uploadCard {
+  @include upload-item-base;
+  @include flex-col(0.938rem, center, center, column);
+}
+
+.fileCard {
+  @include upload-item-base;
+  @include flex-col(0.938rem, space-between, center, column);
+  position: relative;
+}
+
+.emptyStateTrigger {
+  @include flex-center;
+  gap: 0.75rem;
+}
+
+.removeButton {
+  @include square-circle(1.25rem);
+  position: absolute;
+  top: -0.4rem;
+  right: -0.25rem;
+  background: $surface-secondary;
+  border: 0.094rem solid $surface-primary;
+  z-index: 10;
+  color: $text-primary;
+
+  &:hover {
+    background: $surface-tertiary;
+  }
+}
+
+.fileIconWrapper {
+  @include square-circle(2.5rem);
+  @include flex-center;
+  position: relative;
+  top: 1.2rem;
+  border-radius: 0.563rem;
+}
+
+.fileNameBadge {
+  @include card-bottom-badge;
+  @include text-ellipsis;
+}
+
+.fileNameText {
+  font-size: $caption-sm-font-size;
+  line-height: 154%;
+  color: $text-primary;
+}
+
+.uploadCardText {
+  font-size: $body-sm-font-size;
+  text-align: center;
+}
+
+.errorMessage {
+  @include error-text($body-md-font-size, $icon-danger, 0.3rem, $font-weight-medium);
+}
+
+.errorText {
+  @include error-color;
+}

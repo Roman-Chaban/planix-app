@@ -11,6 +11,12 @@ export type AppLocale = Locale;
 export type NavigateFn = (step: AuthStep) => void;
 export type EmailSentFn = (email: string) => void;
 export type SVGComponent = FC<SVGProps<SVGSVGElement>>;
+export type SettingSwitchList = WithSwitch[];
+export type Projects = Project[];
+export type FileType = 'pdf' | 'image' | 'default';
+export type TabId = 'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
+export type PlatformId = 'Web' | 'IOS' | 'Android';
+export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 
 export type WithChildren = {
   children?: ReactNode;
@@ -54,14 +60,6 @@ export type SettingSwitchListProps<T> = {
   itemClassName?: string;
 };
 
-export type SettingSwitchList = WithSwitch[];
-
-export type FileType = 'pdf' | 'image' | 'default';
-
-export type TabId = 'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
-export type PlatformId = 'Web' | 'IOS' | 'Android';
-export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
-
 export type ProjectsHeaderProps = {
   id: TabId;
   label: string;
@@ -73,5 +71,3 @@ export type ActiveTabProps = {
   activeId: TabId;
   setActiveId: Dispatch<SetStateAction<TabId>>;
 };
-
-export type Projects = Project[];

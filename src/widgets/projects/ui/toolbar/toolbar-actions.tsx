@@ -11,7 +11,7 @@ import { Box, FormField, ProjectButton } from '@/shared/ui';
 import { SearchIconPrimary } from '@/shared/ui/icons';
 import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
-import { useNavigateToCreate } from '../../model/use-navigate-to-create';
+import { useNavigateToCreate } from './model/use-navigate-to-create';
 
 import { PlatformSelect } from './platform-select';
 import styles from './toolbar.module.scss';

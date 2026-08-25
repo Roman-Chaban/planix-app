@@ -7,9 +7,9 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Select } from '@/shared/ui';
 
-import { usePlatformSelect } from '../../model/use-platform-select';
-
 import { DropdownIndicator } from './custom-dropdown-indicator';
+import { usePlatformSelect } from './model/use-platform-select';
+
 import styles from './toolbar.module.scss';
 
 export const PlatformSelect = ({ platformId, projects, setPlatformId }: PlatformSelectProps) => {

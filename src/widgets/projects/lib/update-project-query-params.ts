@@ -1,6 +1,6 @@
 import type { UpdateProjectQueryParamsOptions } from '../model/types';
 
-import { PROJECT_QUERY_KEYS, PROJECT_TOOLBAR_NAMES } from './constants';
+import { PROJECT_QUERY_KEYS, PROJECT_TOOLBAR_NAMES } from '../model/constants';
 
 const { SEARCH, STATUS, PLATFORM } = PROJECT_QUERY_KEYS;
 const { ALL_PROJECTS } = PROJECT_TOOLBAR_NAMES;

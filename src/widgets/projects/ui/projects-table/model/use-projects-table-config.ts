@@ -1,4 +1,4 @@
-import type { ProjectsTableProps } from '../ui/projects-table/model/types';
+import type { ProjectsTableProps } from './types';
 
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,7 +8,7 @@ import { ROUTES } from '@/shared/config/routes';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { getProjectsTableColumns } from '../ui/projects-table/lib/get-table-columns';
+import { getProjectsTableColumns } from '../lib/get-table-columns';
 
 const { PROJECT, PROJECT_DETAILS, PROJECT_EDIT } = ROUTES;
 

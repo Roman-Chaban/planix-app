@@ -6,9 +6,9 @@ import { buildClassName } from '@/shared/lib';
 import { useSidebar } from '@/shared/providers/sidebar';
 import { Select } from '@/shared/ui';
 
-import { useToolbarSelect } from '../../model/use-toolbar-select';
-
 import { DropdownIndicator } from './custom-dropdown-indicator';
+import { useToolbarSelect } from './model/use-toolbar-select';
+
 import styles from './toolbar.module.scss';
 
 export const ToolbarSelect = ({ statusId, setStatusId }: ToolbarSelectProps) => {

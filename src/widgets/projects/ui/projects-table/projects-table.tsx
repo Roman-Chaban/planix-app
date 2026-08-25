@@ -7,7 +7,7 @@ import { Box, DataTable, Loader } from '@/shared/ui';
 
 import { TABLE_SIZES, TABLE_VARIANTS } from '@/shared/ui/table';
 
-import { useProjectsTableConfig } from '../../model/use-projects-table-config';
+import { useProjectsTableConfig } from './model/use-projects-table-config';
 
 import styles from './projects-table.module.scss';
 import { ProjectsTableSkeleton } from './skeleton/projects-table-skeleton';

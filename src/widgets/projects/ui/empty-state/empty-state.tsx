@@ -7,7 +7,7 @@ import { Box, ProjectButton, Typography } from '@/shared/ui';
 
 import { EmptyStateIcon } from '@/shared/ui/icons';
 
-import { useNavigateToCreate } from '../../model/use-navigate-to-create';
+import { useNavigateToCreate } from '../toolbar/model/use-navigate-to-create';
 
 import styles from './empty-state.module.scss';
 

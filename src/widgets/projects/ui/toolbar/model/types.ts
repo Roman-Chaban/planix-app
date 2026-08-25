@@ -1,4 +1,4 @@
-import type { PlatformId, ProjectsHeaderProps, TabId } from '@types';
+import type { PlatformId, Projects, ProjectsHeaderProps, TabId } from '@types';
 
 import type { Project } from '@/entities/project';
 
@@ -43,4 +43,10 @@ export type PlatformSelectProps = {
   platformId: PlatformId | null;
   projects: Project[];
   setPlatformId: (platform: PlatformId | null) => void;
+};
+
+export type UsePlatformSelectOptions = {
+  platformId: PlatformId | null;
+  setPlatformId: (platform: PlatformId | null) => void;
+  projects: Projects;
 };

@@ -1,5 +1,4 @@
-import type { UsePlatformSelectOptions } from './types';
-import type { PlatformOption } from '../ui/toolbar/model/types';
+import type { UsePlatformSelectOptions, PlatformOption } from './types';
 
 import { useMemo } from 'react';
 
@@ -10,7 +9,7 @@ import { createSelectStyles } from '@/shared/ui';
 
 import { SELECT_CONTROL_VARIANTS } from '@/shared/ui/select';
 
-import { getPlatformValues } from '../ui/toolbar/lib/get-platform-values';
+import { getPlatformValues } from '../lib/get-platform-values';
 
 const { TOOLBAR } = SELECT_CONTROL_VARIANTS;
 

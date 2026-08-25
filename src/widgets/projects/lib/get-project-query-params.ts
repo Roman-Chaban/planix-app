@@ -1,6 +1,6 @@
 import type { PlatformId, TabId } from '@types';
 
-import { PROJECT_QUERY_KEYS, PROJECT_TOOLBAR_NAMES } from './constants';
+import { PROJECT_QUERY_KEYS, PROJECT_TOOLBAR_NAMES } from '../model/constants';
 
 const { ALL_PROJECTS } = PROJECT_TOOLBAR_NAMES;
 

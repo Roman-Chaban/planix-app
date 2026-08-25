@@ -1,10 +1,4 @@
-import type { PlatformId, Projects, TabId } from '@types';
-
-export type UsePlatformSelectOptions = {
-  platformId: PlatformId | null;
-  setPlatformId: (platform: PlatformId | null) => void;
-  projects: Projects;
-};
+import type { PlatformId, TabId } from '@types';
 
 export type ProjectQueryUpdates = {
   search?: string;

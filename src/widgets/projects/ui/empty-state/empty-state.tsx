@@ -7,14 +7,14 @@ import { Box, ProjectButton, Typography } from '@/shared/ui';
 
 import { EmptyStateIcon } from '@/shared/ui/icons';
 
-import { useToolbar } from '../../model/use-toolbar';
+import { useNavigateToCreate } from '../../model/use-navigate-to-create';
 
 import styles from './empty-state.module.scss';
 
 export const EmptyState = () => {
   const { t } = useTranslation(NS.PROJECTS);
 
-  const { handleCreateProject } = useToolbar();
+  const { navigateToCreate } = useNavigateToCreate();
 
   return (
     <Box className={styles.box}>
@@ -33,7 +33,7 @@ export const EmptyState = () => {
         <ProjectButton
           preset="EMPTY_PROJECTS"
           label={t('emptyProjects.addProjectButton')}
-          onClick={handleCreateProject}
+          onClick={navigateToCreate}
         />
       </Box>
     </Box>

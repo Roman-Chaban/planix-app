@@ -17,16 +17,16 @@ export const EmptyState = () => {
   const { navigateToCreate } = useNavigateToCreate();
 
   return (
-    <Box className={styles.box}>
-      <Box className={styles.iconWrapper}>
+    <Box className={styles.stateContainer}>
+      <Box className={styles.stateIcon}>
         <EmptyStateIcon />
       </Box>
 
-      <Box className={styles.content}>
-        <Typography as="h4" className={styles.title}>
+      <Box className={styles.stateContent}>
+        <Typography as="h4" className={styles.stateTitle}>
           {t('emptyProjects.title')}
         </Typography>
-        <Typography as="p" className={styles.subtitle}>
+        <Typography as="p" className={styles.stateSubtitle}>
           {t('emptyProjects.subtitle')}
         </Typography>
 

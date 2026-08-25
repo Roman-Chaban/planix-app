@@ -1,6 +1,6 @@
 @use '@/shared/styles' as *;
 
-.box {
+.stateContainer {
   @include flex-col(1.5rem, center, center, column);
   width: 100%;
   min-height: 100dvh;
@@ -10,7 +10,7 @@
   border-radius: $radius-lg;
 }
 
-.iconWrapper {
+.stateIcon {
   @include flex-center;
   width: 8.75rem;
   height: 8.75rem;
@@ -18,11 +18,11 @@
   background: $neutral-100;
 }
 
-.content {
+.stateContent {
   @include flex-col(0.375rem, center, center, column);
 }
 
-.title {
+.stateTitle {
   color: $neutral-950;
   line-height: $line-height-base;
   font: {
@@ -31,7 +31,7 @@
   }
 }
 
-.subtitle {
+.stateSubtitle {
   color: $neutral-600;
   width: 100%;
   max-width: 36.375rem;

@@ -2,27 +2,22 @@
 
 import type { ToolbarSelectOption, ToolbarSelectProps } from './model/types';
 
-import { useMemo } from 'react';
-
 import { buildClassName } from '@/shared/lib';
 import { useSidebar } from '@/shared/providers/sidebar';
-import { createSelectStyles, Select } from '@/shared/ui';
-
-import { SELECT_CONTROL_VARIANTS } from '@/shared/ui/select';
+import { Select } from '@/shared/ui';
 
 import { useToolbarSelect } from '../../model/use-toolbar-select';
 
 import { DropdownIndicator } from './custom-dropdown-indicator';
 import styles from './toolbar.module.scss';
 
-const { TOOLBAR } = SELECT_CONTROL_VARIANTS;
-
 export const ToolbarSelect = ({ statusId, setStatusId }: ToolbarSelectProps) => {
   const { isSidebarOpen } = useSidebar();
 
-  const { options, selectedOption, handleChange } = useToolbarSelect(statusId, setStatusId);
-
-  const selectStyles = useMemo(() => createSelectStyles<ToolbarSelectOption>(TOOLBAR), []);
+  const { options, selectedOption, selectStyles, handleChange } = useToolbarSelect(
+    statusId,
+    setStatusId,
+  );
 
   return (
     <Select<ToolbarSelectOption, false>

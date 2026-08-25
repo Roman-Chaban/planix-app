@@ -3,18 +3,13 @@
 import type { ToolbarProps } from './model/types';
 
 import { buildClassName } from '@/shared/lib';
-import { useMediaQuery } from '@/shared/lib/hooks';
 import { useSidebar } from '@/shared/providers/sidebar';
 import { Box } from '@/shared/ui';
-
-import { BREAKPOINTS } from '@/shared/ui/theme';
 
 import { ToolbarActions } from './toolbar-actions';
 import { ToolbarHeader } from './toolbar-header';
 import { ToolbarSelect } from './toolbar-select';
 import styles from './toolbar.module.scss';
-
-const { WIDE } = BREAKPOINTS;
 
 export const Toolbar = ({
   projects,
@@ -27,8 +22,6 @@ export const Toolbar = ({
 }: ToolbarProps) => {
   const { isSidebarOpen } = useSidebar();
 
-  const isWideScreen = useMediaQuery(WIDE);
-
   return (
     <Box
       className={buildClassName(
@@ -37,11 +30,13 @@ export const Toolbar = ({
         { [styles.toolbarExpanded]: isSidebarOpen },
       )}
     >
-      {isWideScreen ? (
+      <Box className={styles.toolbarMobile}>
         <ToolbarSelect statusId={statusId} setStatusId={setStatusId} />
-      ) : (
+      </Box>
+
+      <Box className={styles.toolbarDesktop}>
         <ToolbarHeader statusId={statusId} setStatusId={setStatusId} />
-      )}
+      </Box>
 
       <ToolbarActions
         projects={projects}

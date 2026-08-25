@@ -16,6 +16,26 @@
   border-radius: $radius-lg;
 }
 
+.toolbarMobile {
+  @include toolbar-responsive-item;
+
+  display: none;
+
+  @include respond(2xl) {
+    display: block;
+  }
+}
+
+.toolbarDesktop {
+  @include toolbar-responsive-item;
+
+  display: block;
+
+  @include respond(2xl) {
+    display: none;
+  }
+}
+
 .list {
   width: 100%;
   @include flex-row(1rem, start, center);

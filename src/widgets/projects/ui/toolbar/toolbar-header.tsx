@@ -6,27 +6,22 @@ import { useTranslation } from 'react-i18next';
 
 import { getHeaderItems } from '@/widgets/project-details/ui/header/lib/get-header-items';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { buildClassName } from '@/shared/lib';
 import { Box, List } from '@/shared/ui';
 
 import { ToolbarHeaderItem } from './toolbar-header-item';
 import styles from './toolbar.module.scss';
 
-export const ToolbarHeader = ({ statusId, setStatusId, isSidebarOpen }: ToolbarHeaderProps) => {
+export const ToolbarHeader = ({ statusId, setStatusId }: ToolbarHeaderProps) => {
   const { t } = useTranslation(NS.PROJECTS);
 
   const headerItems = getHeaderItems(t);
 
   return (
-    <Box
-      className={buildClassName(styles.scrollContainer, {
-        [styles.collapsed]: !isSidebarOpen,
-      })}
-    >
+    <Box className={styles.scrollContainer}>
       <List
         className={styles.list}
         renderList={headerItems}
-        getItemKey={(item) => item.id}
+        getItemKey={({ id }) => id}
         renderItem={(item) => (
           <ToolbarHeaderItem
             {...item}

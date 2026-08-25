@@ -9,9 +9,10 @@ import { useDeleteProject } from '@/features/delete-project';
 import { toProjectTableItem } from '@/entities/project/lib/toProjectTableItem';
 import { useProjects } from '@/entities/project/model/useProjects';
 
-import { LOADING_TIMEOUT, PROJECT_TOOLBAR_NAMES } from './constants';
 import { getProjectQueryParams } from '../lib/get-project-query-params';
 import { updateProjectQueryParams } from '../lib/update-project-query-params';
+
+import { LOADING_TIMEOUT, PROJECT_TOOLBAR_NAMES } from './constants';
 
 const { ALL_PROJECTS } = PROJECT_TOOLBAR_NAMES;
 

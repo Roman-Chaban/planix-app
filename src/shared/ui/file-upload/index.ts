@@ -5,6 +5,8 @@ export type {
   UseFileUploadParams,
 } from './model/types';
 
+export { FILE_TYPES } from './model/constants';
+
 export { useFileUpload } from './lib/useFileUpload';
 
 export { FileUpload } from './ui/FileUpload';

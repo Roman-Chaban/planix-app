@@ -25,13 +25,14 @@ export type Project = {
   start_date: string;
   due_date: string;
   platform: string;
-  progress: string;
+  progress: string | number;
   price: string;
   status: Status;
   slug: string;
   description: string;
   description_uk: string;
   files: (ProjectFile | File)[];
+  user_id: string;
 };
 
 export type CreateProjectPayload = ProjectDetailsSchema;

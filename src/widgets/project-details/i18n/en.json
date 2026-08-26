@@ -2,7 +2,8 @@
   "header": {
     "title": "Project Details",
     "label": "Project Details  /",
-    "value": "Project List"
+    "value": "Project List",
+    "mobileTitle": "Details"
   },
 
   "detailsTitle": "Project Details",

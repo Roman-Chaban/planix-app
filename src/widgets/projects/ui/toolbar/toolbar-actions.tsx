@@ -52,7 +52,7 @@ export const ToolbarActions = ({
 
       <ProjectButton
         className={styles.addButton}
-        preset="ADD"
+        preset="CREATE_PROJECT"
         onClick={navigateToCreate}
         label={t('toolbar.addProjectButton')}
       />

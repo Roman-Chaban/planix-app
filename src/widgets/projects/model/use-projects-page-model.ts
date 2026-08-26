@@ -6,8 +6,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { useDeleteProject } from '@/features/delete-project';
-import { toProjectTableItem } from '@/entities/project/lib/toProjectTableItem';
-import { useProjects } from '@/entities/project/model/useProjects';
+import { toProjectTableItem, useProjects } from '@/entities/projects';
 
 import { getProjectQueryParams } from '../lib/get-project-query-params';
 import { updateProjectQueryParams } from '../lib/update-project-query-params';

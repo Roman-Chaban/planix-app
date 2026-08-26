@@ -7,6 +7,8 @@ import { CalendarIcon } from '@/shared/ui/icons';
 import { METRIC_STATUSES } from '@/shared/ui/metric-badge';
 import type { TableColumn } from '@/shared/ui/table/model/types';
 
+import { ClientCell } from '../client-cell';
+
 const { SUCCESS, WARNING } = METRIC_STATUSES;
 
 export const getProjectsTableColumns = (
@@ -17,6 +19,9 @@ export const getProjectsTableColumns = (
     key: 'client_name',
     title: t('tableHeader.clientName'),
     width: 'max-content',
+    render: (row: TableItem) => {
+      return <ClientCell {...row} />;
+    },
   },
   {
     key: 'project_name',

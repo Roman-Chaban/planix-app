@@ -31,13 +31,18 @@ export type Project = {
   slug: string;
   description: string;
   description_uk: string;
-  files: (ProjectFile | File)[];
+  files: ProjectFile[];
   user_id: string;
 };
 
-export type CreateProjectPayload = ProjectDetailsSchema;
+export type CreateProjectPayload = {
+  formData: ProjectDetailsSchema;
+  files: ProjectFile[];
+};
+
 export type UpdateProjectPayload = {
   id: ProjectId;
   data: Partial<ProjectDetailsSchema>;
 };
+
 export type DeleteProjectPayload = { id: ProjectId };

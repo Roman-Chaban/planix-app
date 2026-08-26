@@ -44,7 +44,7 @@ export const BUTTON_PRESETS: ButtonPresets = {
     shape: CIRCLE,
   },
 
-  ADD: {
+  CREATE_PROJECT: {
     type: BUTTON,
     shape: ROUNDED,
     variant: DEFAULT,

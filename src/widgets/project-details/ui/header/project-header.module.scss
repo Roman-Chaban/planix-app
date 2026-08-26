@@ -12,12 +12,6 @@
 
 .headingContainer {
   @include flex(flex, row, start, center, 0.75rem);
-
-  @include respond(sm) {
-    & > h5 {
-      display: none;
-    }
-  }
 }
 
 .heading {

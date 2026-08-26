@@ -1,4 +1,4 @@
-import type { UpdateProjectPayload } from "../model/types";
+import type { UpdateProjectPayload } from '../model/types';
 
 export const mapUpdateProject = (data: UpdateProjectPayload) => {
   return {

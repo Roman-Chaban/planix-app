@@ -1,3 +1,5 @@
+import { ProjectCreate } from '@/widgets/project-create';
+
 export default function ProjectCreatePage() {
-  return null;
+  return <ProjectCreate />;
 }

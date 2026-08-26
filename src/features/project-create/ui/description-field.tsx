@@ -9,7 +9,7 @@ import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { buildClassName } from '@/shared/lib';
 import { Textarea } from '@/shared/ui';
 
-import styles from './formField.module.scss';
+import styles from './create-form.module.scss';
 
 export const DescriptionField = () => {
   const { t } = useTranslation(NS.PROJECT_ADD);

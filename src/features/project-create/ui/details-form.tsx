@@ -10,12 +10,12 @@ import {
   StartDateField,
   DetailsHeader,
   useProjectForm,
-} from '@/features/project-add';
+} from '@/features/project-create';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, Box, FormFields, ProjectButton } from '@/shared/ui';
 
-import styles from './Details.module.scss';
+import styles from './details.module.scss';
 
 export const DetailsForm = () => {
   const { t } = useTranslation(NS.PROJECT_ADD);

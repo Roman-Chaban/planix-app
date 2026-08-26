@@ -2,7 +2,7 @@
 
 import { useController, useFormContext } from 'react-hook-form';
 
-import type { ProjectDetailsSchema } from '@/features/project-add';
+import type { ProjectDetailsSchema } from '@/features/project-create';
 
 import { FormDateField } from '@/shared/ui';
 

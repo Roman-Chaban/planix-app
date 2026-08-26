@@ -1,4 +1,4 @@
-import type { ProjectDetailsSchema } from '@/features/project-add';
+import type { ProjectDetailsSchema } from '@/features/project-create';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 import { ClientIcon, PlatformIcon, PriceIcon, ProjectNameIcon } from '@/shared/ui/icons';

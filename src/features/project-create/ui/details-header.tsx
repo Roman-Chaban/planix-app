@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './Details.module.scss';
+import styles from './details.module.scss';
 
 export const DetailsHeader = () => {
   const { t } = useTranslation(NS.PROJECT_ADD);

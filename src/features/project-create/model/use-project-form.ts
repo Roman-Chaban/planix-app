@@ -2,7 +2,7 @@
 
 import type { SubmitHandler } from 'react-hook-form';
 
-import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-add';
+import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-create';
 import { uploadProjectFile } from '@/entities/projects';
 import { useProjectActions } from '@/entities/projects/model/use-project-actions';
 import { ROUTES } from '@/shared/config/routes';

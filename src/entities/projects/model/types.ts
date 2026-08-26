@@ -1,6 +1,6 @@
 import type { Status } from '@types';
 
-import type { ProjectDetailsSchema } from '@/features/project-add';
+import type { ProjectDetailsSchema } from '@/features/project-create';
 
 export type ProjectId = string | number;
 

@@ -3,7 +3,7 @@
 import { useController, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import type { ProjectDetailsSchema } from '@/features/project-add';
+import type { ProjectDetailsSchema } from '@/features/project-create';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { FileUpload } from '@/shared/ui';
 

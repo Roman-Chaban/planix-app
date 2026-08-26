@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './details.module.scss';
+import styles from './create-form.module.scss';
 
-export const DetailsHeader = () => {
+export const CreateFormHeader = () => {
   const { t } = useTranslation(NS.PROJECT_ADD);
 
   return (

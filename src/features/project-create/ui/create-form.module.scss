@@ -4,9 +4,16 @@
   @include widget-box(100%, 57.813rem, 100%, $padding: 0.5rem);
   @include flex-col(1.5rem, space-between, stretch, column);
 
+  padding-block-end: 1.875rem;
+
   @include respond(lg) {
     max-width: 100%;
   }
+}
+
+.createForm {
+  padding-inline: 1.375rem;
+  @include flex-col($space-6, flex-start, flex-start);
 }
 
 .header {

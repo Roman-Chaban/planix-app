@@ -27,9 +27,10 @@ export const useProjectActions = () => {
   };
 
   const createProject = useMutation<Project, Error, CreateProjectPayload>({
-    mutationFn: (formData) => {
-      return createProjectRepository(mapCreateProject(formData));
+    mutationFn: ({ formData, files }) => {
+      return createProjectRepository(mapCreateProject(formData, files));
     },
+
     onSuccess: invalidateProjects,
   });
 

@@ -4,6 +4,7 @@ export const NAMESPACE = {
   SUBSCRIPTION: 'subscription',
   DASHBOARD: 'dashboard',
   PROJECTS: 'projectManagement',
+  PROJECT_CREATE: 'projectCreate',
   SIDEBAR: 'sidebar',
   DELETE_MODAL: 'deleteModal',
   HEADER: 'header',

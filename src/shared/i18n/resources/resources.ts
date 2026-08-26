@@ -1,6 +1,7 @@
 import { brandI18n } from '@/widgets/brand-banner/i18n';
 import { dashboardI18n } from '@/widgets/dashboard/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
+import { projectCreateI18n } from '@/widgets/project-create/i18n';
 import { projectI18n } from '@/widgets/project-details/i18n';
 import { projectManagementI18n } from '@/widgets/projects/i18n';
 import { settingsI18n } from '@/widgets/settings/i18n';
@@ -22,6 +23,7 @@ export const resources = {
     projectManagement: projectManagementI18n.en,
     project: projectI18n.en,
     projectAdd: projectAddI18n.en,
+    projectCreate: projectCreateI18n.en,
     settings: settingsI18n.en,
   },
   uk: {
@@ -35,6 +37,7 @@ export const resources = {
     projectManagement: projectManagementI18n.uk,
     project: projectI18n.uk,
     projectAdd: projectAddI18n.uk,
+    projectCreate: projectCreateI18n.en,
     settings: settingsI18n.uk,
   },
 };

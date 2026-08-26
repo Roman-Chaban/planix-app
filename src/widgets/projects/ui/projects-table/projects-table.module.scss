@@ -16,3 +16,8 @@
   color: $primary-700;
   pointer-events: none;
 }
+
+.clientCell {
+  @include flex-start;
+  gap: $space-2;
+}

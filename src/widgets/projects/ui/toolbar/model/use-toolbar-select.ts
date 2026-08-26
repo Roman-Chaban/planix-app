@@ -3,10 +3,9 @@ import type { ToolbarSelectOption, ToolbarSelectProps } from '../model/types';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { getHeaderItems } from '@/widgets/project-details';
-
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { createSelectStyles } from '@/shared/ui';
+import { getHeaderItems } from '@/shared/ui/project-header';
 import { SELECT_CONTROL_VARIANTS } from '@/shared/ui/select';
 
 const { TOOLBAR } = SELECT_CONTROL_VARIANTS;

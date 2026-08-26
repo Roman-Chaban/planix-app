@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Header } from '@/widgets/header';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { usePageTitles } from '@/shared/lib/hooks';
 import { Box, PageWrapper } from '@/shared/ui';
 
 import { mapProjectDetails } from '../lib/map-project-details';
@@ -20,6 +21,8 @@ import styles from './project-details.module.scss';
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { t, i18n } = useTranslation(NS.PROJECT);
 
+  const { headerTitle, pageTitle } = usePageTitles();
+
   const { details, description } = mapProjectDetails({
     project,
     t,
@@ -27,13 +30,13 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   });
 
   return (
-    <PageWrapper header={<Header title="projects" />}>
+    <PageWrapper header={<Header title={pageTitle} />}>
       <ProjectHeader
         showStatus
         status={project.status}
         translationNamespace={NS.PROJECT}
-        title="header.title"
-        metaInfo={{ label: 'header.label', value: 'header.value' }}
+        title={headerTitle}
+        metaInfo={{ label: 'header.label', value: headerTitle }}
       />
 
       <Box className={styles.wrapper}>

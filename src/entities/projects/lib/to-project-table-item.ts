@@ -1,4 +1,4 @@
-import type { Project } from '@/entities/project';
+import type { Project } from '@/entities/projects';
 import { toDisplay, STATUSES } from '@/shared/lib';
 
 export const toProjectTableItem = (project: Project) => {

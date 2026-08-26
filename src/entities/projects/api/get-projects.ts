@@ -1,8 +1,9 @@
-import type { Project } from '@/entities/project';
+import type { Projects } from '@types';
+
 import { CREATED_AT, PROJECTS } from '@/shared/api';
 import { supabase } from '@/shared/api/supabase';
 
-export const getProjects = async (): Promise<Project[]> => {
+export const getProjects = async (): Promise<Projects> => {
   const { data, error } = await supabase
     .from(PROJECTS)
     .select('*')

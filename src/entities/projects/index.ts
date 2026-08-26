@@ -4,10 +4,10 @@ export type {
   DeleteProjectPayload,
   Project,
   ProjectFile,
-} from './model/project.types';
+} from './model/types';
 
 export { getProjects, updateProject, createProject, deleteProject, uploadProjectFile } from './api';
 
-export { toProjectTableItem } from './lib/toProjectTableItem';
+export { toProjectTableItem } from './lib/to-project-table-item';
 
-export { useProjectActions } from './model/useProjectActions';
+export { useProjectActions } from './model/use-project-actions';

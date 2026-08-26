@@ -1,5 +1,6 @@
+import type { Project } from '../model/types';
+
 import type { ProjectDetailsSchema } from '@/features/project-add';
-import type { UpdateProjectPayload, Project } from '@/entities/project';
 
 export const mapCreateProject = (formData: ProjectDetailsSchema): Partial<Project> => {
   return {
@@ -16,14 +17,5 @@ export const mapCreateProject = (formData: ProjectDetailsSchema): Partial<Projec
     description: formData.description,
     slug: formData.projectName.toLowerCase().replace(/ /g, '-'),
     files: formData.files,
-  };
-};
-
-export const mapUpdateProject = (data: UpdateProjectPayload) => {
-  return {
-    name: data.data.projectName,
-    dueDate: data.data.dueDate,
-    price: data.data.price,
-    platform: data.data.platform,
   };
 };

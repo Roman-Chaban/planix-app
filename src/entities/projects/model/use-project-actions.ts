@@ -10,11 +10,12 @@ import {
   createProject as createProjectRepository,
   deleteProject as deleteProjectRepository,
   updateProject as updateProjectRepository,
-} from '@/entities/project';
+} from '@/entities/projects';
 
-import { queryKeys } from '@/entities/project/queryKeys/queryKeys';
+import { queryKeys } from '@/entities/projects/queryKeys/queryKeys';
 
-import { mapCreateProject, mapUpdateProject } from '../lib/project.mapper';
+import { mapCreateProject } from '../lib/map-create-project';
+import { mapUpdateProject } from '../lib/map-update-project';
 
 export const useProjectActions = () => {
   const queryClient = useQueryClient();

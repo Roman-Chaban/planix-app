@@ -1,4 +1,4 @@
-import type { Project } from '../model/project.types';
+import type { Project } from '../model/types';
 
 import { PROJECTS, supabase } from '@/shared/api';
 

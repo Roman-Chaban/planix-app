@@ -12,7 +12,7 @@ export const mapCreateProject = (formData: ProjectDetailsSchema): Partial<Projec
     due_date: formData.dueDate,
     platform: formData.platform,
     price: formData.price,
-    progress: '0',
+    progress: 0,
     status: 'Pending',
     description: formData.description,
     slug: formData.projectName.toLowerCase().replace(/ /g, '-'),

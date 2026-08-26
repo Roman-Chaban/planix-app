@@ -5,6 +5,7 @@ export const toProjectTableItem = (project: Project) => {
   const formattedDueDate = toDisplay(project.due_date);
 
   return {
+    user_id: project.user_id,
     id: project.id,
     project_name_uk: project.project_name_uk,
     project_name: project.project_name,

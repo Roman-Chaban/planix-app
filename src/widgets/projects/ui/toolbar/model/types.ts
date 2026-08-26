@@ -6,7 +6,7 @@ export type ToolbarProps = {
   statusId: TabId;
   platformId: PlatformId | null;
   search: string;
-  projects: Project[];
+  projects: Projects;
   setPlatformId: (platform: PlatformId | null) => void;
   setSearchQuery: (search: string) => void;
   setStatusId: (status: TabId) => void;

@@ -10,4 +10,3 @@ export { FilesField } from './ui/files-field';
 export { StartDateField } from './ui/start-date-field';
 
 export { CreateForm } from './ui/create-form';
-export { CreateFormHeader } from './ui/create-form-header';

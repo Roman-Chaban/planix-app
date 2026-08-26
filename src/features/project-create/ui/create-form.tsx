@@ -8,12 +8,11 @@ import {
   FilesField,
   DueDateField,
   StartDateField,
-  CreateFormHeader,
   useProjectForm,
 } from '@/features/project-create';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import { AppForm, Box, FormFields, ProjectButton } from '@/shared/ui';
+import { AppForm, Box, FormFields, ProjectButton, Typography } from '@/shared/ui';
 
 import styles from './create-form.module.scss';
 
@@ -23,7 +22,11 @@ export const CreateForm = () => {
 
   return (
     <Box className={styles.wrapper}>
-      <CreateFormHeader />
+      <Box className={styles.header}>
+        <Typography as="span" className={styles.title}>
+          {t('projectDetailsTitle')}
+        </Typography>
+      </Box>
 
       <AppForm form={form} onSubmit={onSubmit} className={styles.createForm}>
         <FormFields fields={projectAddFields} translationNamespace={NS.PROJECT_ADD} />

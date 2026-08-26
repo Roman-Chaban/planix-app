@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { closeModal, ModalId, openModal, selectIsModalOpen } from '@/entities/modal';
-import { useProjectActions } from '@/entities/project';
+import { useProjectActions } from '@/entities/projects';
 import { showToast } from '@/entities/toast';
 import { NAMESPACE } from '@/shared/i18n';
 import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';

@@ -1,6 +1,6 @@
 import type { TranslateFn } from '@types';
 
-import type { Project } from '@/entities/project';
+import type { Project } from '@/entities/projects';
 
 export type BaseDetailsProps = {
   project: Project;

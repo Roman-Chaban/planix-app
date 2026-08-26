@@ -1,6 +1,6 @@
 import type { FileItemProps } from './model/types';
 
-import type { ProjectFile } from '@/entities/project';
+import type { ProjectFile } from '@/entities/projects';
 import { Box } from '@/shared/ui';
 import { LINK_TARGETS } from '@/shared/ui/link';
 

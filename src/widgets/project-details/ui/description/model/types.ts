@@ -1,4 +1,4 @@
-import type { ProjectFile } from '@/entities/project';
+import type { ProjectFile } from '@/entities/projects';
 
 export type DescriptionProps = {
   description: string;

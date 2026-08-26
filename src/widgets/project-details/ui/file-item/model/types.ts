@@ -2,7 +2,7 @@ import type { FileType } from '@types';
 
 import type { ComponentType } from 'react';
 
-import type { ProjectFile } from '@/entities/project';
+import type { ProjectFile } from '@/entities/projects';
 
 export type FileItemProps = {
   file: ProjectFile | File;

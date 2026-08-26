@@ -3,7 +3,7 @@ import type { TFunction } from 'i18next';
 import type { ComponentType, Dispatch, FC, ReactNode, Ref, SetStateAction, SVGProps } from 'react';
 
 import type { AuthStep } from '@/features/auth/stepper';
-import type { Project } from '@/entities/project';
+import type { Project } from '@/entities/projects';
 import type { Locale } from '@/shared/i18n/locales/locales';
 
 export type TranslateFn = TFunction;

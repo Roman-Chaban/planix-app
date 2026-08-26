@@ -8,18 +8,18 @@ const { TEXT } = INPUT_TYPES;
 
 export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
   {
-    name: 'clientName',
-    label: 'clientNameLabel',
-    type: TEXT,
-    placeholder: 'clientNamePlaceholder',
-    startIcon: <ClientIcon width={20} height={20} />,
-  },
-  {
     name: 'projectName',
     label: 'projectNameLabel',
     type: TEXT,
     placeholder: 'projectNamePlaceholder',
     startIcon: <ProjectNameIcon />,
+  },
+  {
+    name: 'clientName',
+    label: 'clientNameLabel',
+    type: TEXT,
+    placeholder: 'clientNamePlaceholder',
+    startIcon: <ClientIcon width={20} height={20} />,
   },
   {
     name: 'platform',

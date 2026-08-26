@@ -9,5 +9,5 @@ export { DueDateField } from './ui/due-date-field';
 export { FilesField } from './ui/files-field';
 export { StartDateField } from './ui/start-date-field';
 
-export { DetailsForm } from './ui/details-form';
-export { DetailsHeader } from './ui/details-header';
+export { CreateForm } from './ui/create-form';
+export { CreateFormHeader } from './ui/create-form-header';

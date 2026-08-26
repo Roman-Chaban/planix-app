@@ -10,18 +10,6 @@ import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
 
 const { PROJECT } = ROUTES;
 
-const DEFAULT_VALUES: ProjectDetailsSchema = {
-  projectName: '',
-  clientName: '',
-  startDate: '',
-  dueDate: '',
-  price: '',
-  platform: '',
-  description: '',
-  status: 'Pending',
-  files: [],
-};
-
 export const useProjectForm = () => {
   const localizedRouter = useLocalizedRouter();
   const { createProject, isProjectActionPending } = useProjectActions();
@@ -29,7 +17,17 @@ export const useProjectForm = () => {
   const form = useAppForm<ProjectDetailsSchema>({
     schema: projectDetailsSchema,
     mode: 'onChange',
-    defaultValues: DEFAULT_VALUES,
+    defaultValues: {
+      projectName: '',
+      clientName: '',
+      startDate: '',
+      dueDate: '',
+      price: '',
+      platform: '',
+      description: '',
+      status: 'Pending',
+      files: [],
+    },
   });
 
   const processFiles = async (files: ProjectDetailsSchema['files']) => {

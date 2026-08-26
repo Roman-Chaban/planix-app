@@ -3,20 +3,25 @@
 import type { SubmitHandler } from 'react-hook-form';
 
 import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-create';
-import { uploadProjectFile } from '@/entities/projects';
+
+import { type ProjectFile, uploadProjectFile } from '@/entities/projects';
+
 import { useProjectActions } from '@/entities/projects/model/use-project-actions';
+
 import { ROUTES } from '@/shared/config/routes';
-import { useLocalizedRouter, useAppForm } from '@/shared/lib/hooks';
+import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
 const { PROJECT } = ROUTES;
 
 export const useProjectForm = () => {
   const localizedRouter = useLocalizedRouter();
+
   const { createProject, isProjectActionPending } = useProjectActions();
 
-  const form = useAppForm<ProjectDetailsSchema>({
+  const projectForm = useAppForm<ProjectDetailsSchema>({
     schema: projectDetailsSchema,
     mode: 'onChange',
+
     defaultValues: {
       projectName: '',
       clientName: '',
@@ -30,12 +35,13 @@ export const useProjectForm = () => {
     },
   });
 
-  const processFiles = async (files: ProjectDetailsSchema['files']) => {
+  const processFiles = async (files: ProjectDetailsSchema['files']): Promise<ProjectFile[]> => {
     return Promise.all(
       files.map(async (file) => {
         if (file instanceof File) {
-          return await uploadProjectFile(file);
+          return uploadProjectFile(file);
         }
+
         return file;
       }),
     );
@@ -43,23 +49,26 @@ export const useProjectForm = () => {
 
   const handleFormSubmit: SubmitHandler<ProjectDetailsSchema> = async (formData) => {
     try {
-      const processedFiles = await processFiles(formData.files);
+      const uploadedFiles = await processFiles(formData.files);
 
-      const payload: ProjectDetailsSchema = {
-        ...formData,
-        files: processedFiles,
-      };
-
-      createProject.mutate(payload, {
-        onSuccess: () => localizedRouter.push(PROJECT),
-      });
+      createProject.mutate(
+        {
+          formData,
+          files: uploadedFiles,
+        },
+        {
+          onSuccess: () => {
+            localizedRouter.push(PROJECT);
+          },
+        },
+      );
     } catch (error) {
-      console.error('Failed to process project submission:', error);
+      console.error('Failed to upload project files:', error);
     }
   };
 
   return {
-    form,
+    form: projectForm,
     onSubmit: handleFormSubmit,
     isLoading: isProjectActionPending,
   };

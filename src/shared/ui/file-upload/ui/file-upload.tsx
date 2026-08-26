@@ -3,15 +3,18 @@
 import { useCallback, useId } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, Typography, FormField, FormError } from '@/shared/ui';
+import { Box, FormError, FormField } from '@/shared/ui';
+import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
+
 import {
-  FileItem,
-  FileUploadItem,
+  FilePreview,
+  PhotoUploadTrigger,
+  UploadTrigger,
   useFileUpload,
   type FileUploadProps,
-} from '@/shared/ui/file-upload';
-import { UploadIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
+} from '../index';
+
+import { MAIN_FILE_ACCEPT, PHOTO_FILE_ACCEPT } from '../model/constants';
 
 import styles from './file-upload.module.scss';
 
@@ -19,75 +22,77 @@ const { FILE } = INPUT_TYPES;
 const { NO_BORDER } = INPUT_VARIANTS;
 
 export const FileUpload = ({
-  value = [],
+  value,
   onChange,
   label,
   uploadLabel,
   uploadPhotosLabel,
   error,
 }: FileUploadProps) => {
-  const uploadId = useId();
+  const inputId = useId();
 
-  const { handleTrigger, handleFileChange, handleKeyDown, inputRef } = useFileUpload({
-    onFileSelect: (file) => {
-      onChange?.([...value, file]);
+  const hasFiles = value.length > 0;
+
+  const { inputRef, openFileDialog, handleFileChange } = useFileUpload({
+    onFilesSelect: (files) => {
+      onChange([...value, ...files]);
     },
   });
 
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLElement>) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openFileDialog();
+      }
+    },
+    [openFileDialog],
+  );
+
   const handleRemoveFile = useCallback(
-    (index: number) => {
-      onChange?.(value.filter((_, i) => i !== index));
+    (fileIndex: number) => {
+      onChange(value.filter((_, index) => index !== fileIndex));
     },
     [onChange, value],
   );
 
-  const hasFiles = value.length > 0;
-
   return (
     <FormField
-      id={uploadId}
+      id={inputId}
       label={label}
       variant={NO_BORDER}
       inputRef={inputRef}
       inputProps={{
         type: FILE,
-        multiple: true,
+        multiple: hasFiles,
+        accept: hasFiles ? PHOTO_FILE_ACCEPT : MAIN_FILE_ACCEPT,
         onChange: handleFileChange,
-        'aria-invalid': !!error,
+        'aria-invalid': Boolean(error),
         className: styles.hiddenInput,
       }}
     >
       <Box
         tabIndex={0}
         className={buildClassName(styles.mainWrapper, {
-          [styles.error]: !!error,
+          [styles.error]: Boolean(error),
         })}
       >
         {!hasFiles ? (
-          <Box
-            onClick={handleTrigger}
-            onKeyDown={handleKeyDown}
-            tabIndex={0}
-            className={styles.emptyStateTrigger}
-          >
-            <Box className={styles.iconContainer}>
-              <UploadIcon />
-            </Box>
-
-            <Typography as="span" className={styles.text}>
-              {uploadLabel}
-            </Typography>
-          </Box>
+          <UploadTrigger
+            handleTrigger={openFileDialog}
+            handleKeyDown={handleKeyDown}
+            uploadLabel={uploadLabel ?? ''}
+          />
         ) : (
           <Box className={styles.filesGrid}>
-            <FileUploadItem
-              handleTrigger={handleTrigger}
+            <PhotoUploadTrigger
+              handleTrigger={openFileDialog}
               handleKeyDown={handleKeyDown}
               uploadPhotosLabel={uploadPhotosLabel}
             />
 
             {value.map((file, index) => (
-              <FileItem
+              <FilePreview
                 key={`${file.name}-${index}`}
                 file={file}
                 onRemove={() => handleRemoveFile(index)}
@@ -96,6 +101,7 @@ export const FileUpload = ({
           </Box>
         )}
       </Box>
+
       <FormError error={error ?? ''} />
     </FormField>
   );

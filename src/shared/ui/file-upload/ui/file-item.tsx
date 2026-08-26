@@ -1,0 +1,35 @@
+import { Box, Button, Typography } from '@/shared/ui';
+
+import { BUTTON_TYPES } from '@/shared/ui/button/lib/constants';
+import type { FileItemProps } from '@/shared/ui/file-upload';
+import { CloseIcon, PdfIcon, UploadIcon } from '@/shared/ui/icons';
+
+import styles from './file-upload.module.scss';
+
+const { BUTTON } = BUTTON_TYPES;
+
+export const FileItem = ({ file, onRemove }: FileItemProps) => {
+  const isNativeFile = file instanceof File;
+
+  const isPdf = isNativeFile
+    ? file.type === 'application/pdf'
+    : file.name.toLowerCase().endsWith('.pdf');
+
+  return (
+    <Box className={styles.fileCard}>
+      <Button type={BUTTON} className={styles.removeButton} onClick={onRemove}>
+        <CloseIcon width={12} height={12} />
+      </Button>
+
+      <Box className={`${styles.fileIconWrapper} ${isPdf ? styles.pdfType : styles.photoType}`}>
+        {isPdf ? <PdfIcon /> : <UploadIcon />}
+      </Box>
+
+      <Box className={styles.fileNameBadge}>
+        <Typography as="span" className={styles.fileNameText}>
+          {file.name}
+        </Typography>
+      </Box>
+    </Box>
+  );
+};

@@ -1,6 +1,6 @@
 import type { PlatformId, Projects, ProjectsHeaderProps, TabId } from '@types';
 
-import type { Project } from '@/entities/project';
+import type { Project } from '@/entities/projects';
 
 export type ToolbarProps = {
   statusId: TabId;

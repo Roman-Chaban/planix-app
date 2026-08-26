@@ -1,4 +1,4 @@
-import { ProjectDetails } from '@/widgets/project-details/ui/ProjectDetails';
+import { ProjectDetails } from '@/widgets/project-details/ui/project-details';
 import { PROJECTS, SLUG } from '@/shared/api';
 import { supabase } from '@/shared/api/supabase';
 

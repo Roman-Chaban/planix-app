@@ -1,6 +1,6 @@
 import type { TranslateFn } from '@types';
 
-import type { toProjectTableItem } from '@/entities/project';
+import type { toProjectTableItem } from '@/entities/projects';
 import type { TableSize, TableVariant } from '@/shared/ui/table';
 
 export type ProjectsTableProps = {

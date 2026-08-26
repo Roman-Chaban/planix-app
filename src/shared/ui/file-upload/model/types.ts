@@ -1,6 +1,6 @@
 import type { KeyboardEvent } from 'react';
 
-import type { ProjectFile } from '@/entities/project';
+import type { ProjectFile } from '@/entities/projects';
 
 export type FileUploadProps = {
   value: (File | ProjectFile)[];

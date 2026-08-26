@@ -1,1 +1,1 @@
-export { FileItem } from './ui/FileItem';
+export { FileItem } from './file-item';

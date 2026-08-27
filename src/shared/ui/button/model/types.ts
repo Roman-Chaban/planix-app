@@ -4,27 +4,27 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import type { ButtonPresetKey } from '@/shared/ui/button';
 
-export type Variant = 'default' | 'outline' | 'soft' | 'tertiary' | 'transparent';
-export type Size = 'sm' | 'md' | 'lg' | 'compact';
-export type Shape = 'normal' | 'rounded' | 'circle' | 'pill';
-export type MinWidth = 'content' | 'sm' | 'md' | 'lg';
+export type ButtonVariants = 'default' | 'outline' | 'soft' | 'tertiary' | 'transparent';
+export type ButtonSizes = 'sm' | 'md' | 'lg' | 'compact';
+export type ButtonShapes = 'normal' | 'rounded' | 'circle' | 'pill';
+export type ButtonMinWidths = 'content' | 'sm' | 'md' | 'lg';
 export type ButtonPresets = Record<string, ButtonPreset>;
 
 export type ButtonPreset = {
-  variant?: Variant;
-  size?: Size;
-  shape?: Shape;
-  minWidth?: MinWidth;
+  variant?: ButtonVariants;
+  size?: ButtonSizes;
+  shape?: ButtonShapes;
+  minWidth?: ButtonMinWidths;
   fullWidth?: boolean;
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
 };
 
 export type ButtonProps = {
-  variant?: Variant;
-  size?: Size;
-  shape?: Shape;
+  variant?: ButtonVariants;
+  size?: ButtonSizes;
+  shape?: ButtonShapes;
   fullWidth?: boolean;
-  minWidth?: MinWidth;
+  minWidth?: ButtonMinWidths;
 
   startIcon?: ReactNode;
   endIcon?: ReactNode;

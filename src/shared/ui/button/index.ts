@@ -1,4 +1,12 @@
-export type { ButtonProps, MinWidth } from './model/types';
+export type {
+  ButtonProps,
+  ButtonMinWidths,
+  ButtonShapes,
+  ButtonSizes,
+  ButtonPresets,
+  ButtonPreset,
+  ButtonVariants,
+} from './model/types';
 
 export { getButtonProps } from './lib/helpers';
 export { BUTTON_PRESETS, type ButtonPresetKey } from './lib/presets';

@@ -4,7 +4,7 @@ import type { Button } from '@/shared/ui';
 
 export type ProjectButtonProps = Pick<
   ComponentProps<typeof Button>,
-  'onClick' | 'disabled' | 'type' | 'className' | 'preset'
+  'onClick' | 'disabled' | 'type' | 'className' | 'preset' | 'size'
 > & {
   label: string;
   translationNamespace?: string;

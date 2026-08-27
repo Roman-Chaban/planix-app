@@ -15,6 +15,14 @@
 .createForm {
   @include flex-col($space-6, flex-start, flex-start);
   padding-inline: 1.375rem;
+
+  @include respond(md) {
+    padding-inline: $space-4;
+  }
+
+  @include respond(sm) {
+    padding-inline: $space-3;
+  }
 }
 
 .header {

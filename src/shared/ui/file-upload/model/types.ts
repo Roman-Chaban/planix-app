@@ -1,3 +1,5 @@
+import type { FormFieldSize } from '../../input/lib/constants';
+
 import type { ProjectFile } from '@/entities/projects';
 
 export type FileUploadItem = ProjectFile | File;
@@ -11,6 +13,7 @@ export type FileUploadProps = {
   uploadLabel?: string;
   uploadPhotosLabel: string;
   error?: string;
+  size?: FormFieldSize;
 };
 
 export type FilePreviewProps = {

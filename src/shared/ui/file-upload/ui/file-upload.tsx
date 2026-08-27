@@ -25,6 +25,7 @@ export const FileUpload = ({
   value,
   onChange,
   label,
+  size = 'hidden',
   uploadLabel,
   uploadPhotosLabel,
   error,
@@ -59,6 +60,7 @@ export const FileUpload = ({
   return (
     <FormField
       id={inputId}
+      size={size}
       label={label}
       variant={NO_BORDER}
       inputRef={inputRef}

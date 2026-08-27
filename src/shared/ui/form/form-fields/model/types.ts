@@ -3,7 +3,7 @@ import type { FieldErrors, FieldValues, UseFormRegister, Path } from 'react-hook
 
 import type { ReactNode } from 'react';
 
-import type { FormFieldSize } from '@/shared/ui/form/form-field';
+import type { FormFieldSize } from '@/shared/ui/input/lib/constants';
 
 type FormFieldFeature = 'password-toggle' | 'none';
 

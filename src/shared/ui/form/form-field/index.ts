@@ -5,7 +5,6 @@ export type {
   FormIconProps,
   FormErrorProps,
   FormFieldProps,
-  FormFieldSize,
   FormFieldVariant,
   FormInputProps,
   IconPosition,

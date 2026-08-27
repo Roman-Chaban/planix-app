@@ -1,14 +1,11 @@
 export type {
   ButtonProps,
-  ButtonMinWidths,
-  ButtonShapes,
-  ButtonSizes,
-  ButtonPresets,
   ButtonPreset,
-  ButtonVariants,
+  BuildButtonClassNameParams,
+  ButtonContentProps,
 } from './model/types';
 
-export { getButtonProps } from './lib/helpers';
+export { buildButtonClassName, resolveButtonProps, splitButtonProps } from './lib/helpers';
 export { BUTTON_PRESETS, type ButtonPresetKey } from './lib/presets';
 
 export {
@@ -16,8 +13,12 @@ export {
   BUTTON_SIZES,
   BUTTON_TYPES,
   BUTTON_VARIANTS,
-  BUTTON_MIN_WIDTH,
-  BUTTON_UI_PROPS,
-} from './lib/constants';
+  BUTTON_MIN_WIDTHS,
+  type ButtonMinWidths,
+  type ButtonShapes,
+  type ButtonSizes,
+  type ButtonTypes,
+  type ButtonVariants,
+} from './model/constants';
 
 export { Button } from './ui/button';

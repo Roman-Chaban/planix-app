@@ -17,3 +17,13 @@ export const INPUT_VARIANTS = {
   ERROR: 'error',
   NO_BORDER: 'noBorder',
 } as const;
+
+export const INPUT_SIZES = {
+  HIDDEN: 'hidden',
+  DEFAULT: 'default',
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+} as const;
+
+export type FormFieldSize = (typeof INPUT_SIZES)[keyof typeof INPUT_SIZES];

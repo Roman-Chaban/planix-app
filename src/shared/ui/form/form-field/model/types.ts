@@ -9,6 +9,8 @@ import type {
   Ref,
 } from 'react';
 
+import type { FormFieldSize } from '@/shared/ui/input/lib/constants';
+
 export type FormFieldVariant =
   'default' | 'search' | 'hover' | 'typing' | 'filed' | 'disabled' | 'error' | 'noBorder';
 
@@ -20,6 +22,7 @@ export type FormFieldProps = WithClassName &
     label?: string;
     error?: string;
     variant: FormFieldVariant;
+    size?: FormFieldSize;
     startIcon?: ReactNode;
     endIcon?: ReactNode;
     onStartIconClick?: () => void;
@@ -60,5 +63,6 @@ export type FormDateFieldProps = WithClassName & {
   label: string;
   placeholder: string;
   error?: string;
+  size?: FormFieldSize;
   inputProps: DateFieldProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
 };

@@ -15,6 +15,7 @@ const { DEFAULT } = INPUT_VARIANTS;
 export function FormFields<T extends FieldValues>({
   fields,
   translationNamespace,
+  size = 'default',
 }: Omit<FormFieldsProps<T>, 'register' | 'errors'>) {
   const { t } = useTranslation(translationNamespace);
 
@@ -46,6 +47,7 @@ export function FormFields<T extends FieldValues>({
                   startIcon={field.startIcon}
                   endIcon={endIcon}
                   error={errorText}
+                  size={size}
                   inputRef={ref}
                   variant={DEFAULT}
                   className={field.className}

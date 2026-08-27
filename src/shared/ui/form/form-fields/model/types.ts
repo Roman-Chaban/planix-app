@@ -3,6 +3,8 @@ import type { FieldErrors, FieldValues, UseFormRegister, Path } from 'react-hook
 
 import type { ReactNode } from 'react';
 
+import type { FormFieldSize } from '@/shared/ui/form/form-field';
+
 type FormFieldFeature = 'password-toggle' | 'none';
 
 export type FormFieldConfig<T extends FieldValues> = WithClassName & {
@@ -23,4 +25,5 @@ export type FormFieldsProps<T extends FieldValues> = {
   translationNamespace: string;
   register: UseFormRegister<T>;
   errors: FieldErrors<T>;
+  size?: FormFieldSize;
 };

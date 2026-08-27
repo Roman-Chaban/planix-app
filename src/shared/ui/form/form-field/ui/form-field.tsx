@@ -13,6 +13,7 @@ export const FormField = ({
   label,
   error,
   variant,
+  size,
   startIcon,
   endIcon,
   onStartIconClick,
@@ -28,9 +29,10 @@ export const FormField = ({
 
   const isFilled = value !== undefined && value !== null && String(value).length > 0;
 
-  const wrapperClassName = buildClassName(styles.inputWrapper, className, {
+  const wrapperClassName = buildClassName(styles.inputWrapper, {
     [styles.error]: !!error,
     [styles[variant]]: !!variant,
+    [styles[size ?? 'default']]: true,
     [styles.filled]: isFilled,
     [styles.withStartIcon]: !!startIcon,
     [styles.withEndIcon]: !!endIcon,

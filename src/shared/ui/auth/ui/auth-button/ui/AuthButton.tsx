@@ -2,7 +2,7 @@ import { useMediaQuery } from '@/shared/lib/hooks';
 import { Button, Loader } from '@/shared/ui';
 
 import type { AuthButtonProps } from '@/shared/ui/auth/ui/auth-button';
-import { BUTTON_SIZES } from '@/shared/ui/button/lib/constants';
+import { BUTTON_SIZES } from '@/shared/ui/button/model/constants';
 import { BREAKPOINTS } from '@/shared/ui/theme/lib/breakpoints';
 
 const { MOBILE_LARGE } = BREAKPOINTS;

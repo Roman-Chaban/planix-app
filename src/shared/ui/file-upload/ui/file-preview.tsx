@@ -2,7 +2,7 @@ import type { FilePreviewProps } from '../model/types';
 
 import { Box, Button, Typography } from '@/shared/ui';
 
-import { BUTTON_TYPES } from '@/shared/ui/button/lib/constants';
+import { BUTTON_TYPES } from '@/shared/ui/button/model/constants';
 import { CloseIcon, PdfIcon, UploadIcon } from '@/shared/ui/icons';
 
 import styles from './file-upload.module.scss';

@@ -19,6 +19,7 @@ export const FormDateField = ({
   label,
   placeholder,
   error,
+  size,
   inputProps,
 }: FormDateFieldProps) => {
   const { t } = useTranslation(NAMESPACE.PROJECT_ADD);
@@ -37,6 +38,7 @@ export const FormDateField = ({
       label={t(label)}
       error={error ? t(error) : ''}
       variant={DEFAULT}
+      size={size}
       startIcon={<CalendarIcon width={20} height={20} />}
       inputRef={ref}
       inputProps={{

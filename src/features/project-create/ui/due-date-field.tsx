@@ -5,8 +5,13 @@ import { useController, useFormContext } from 'react-hook-form';
 import type { ProjectDetailsSchema } from '@/features/project-create';
 
 import { FormDateField } from '@/shared/ui';
+import type { FormFieldSize } from '@/shared/ui/form/form-field';
 
-export const DueDateField = () => {
+type DueDateFieldProps = {
+  size?: FormFieldSize;
+};
+
+export const DueDateField = ({ size }: DueDateFieldProps) => {
   const { control } = useFormContext<ProjectDetailsSchema>();
 
   const { field, fieldState } = useController({
@@ -16,6 +21,7 @@ export const DueDateField = () => {
 
   return (
     <FormDateField
+      size={size}
       id="dueDate"
       label="dueDateLabel"
       placeholder="dueDatePlaceholder"

@@ -5,11 +5,11 @@ import type { SubmitHandler } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import { AUTH_STEPS } from '@/features/auth/stepper';
 import { supabase } from '@/shared/api/supabase';
 import { ROUTES } from '@/shared/config/routes';
 import { DEFAULT_LOCALE } from '@/shared/i18n';
 import { buildHref } from '@/shared/lib';
+import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { useAppForm } from '@/shared/lib/hooks';
 
 import { forgotPasswordSchema, type ForgotPasswordSchema } from './forgot.schema';

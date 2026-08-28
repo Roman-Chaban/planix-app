@@ -2,10 +2,11 @@ import type { AuthStepProps } from '../model/stepper.types';
 
 import type { ReactNode } from 'react';
 
+import { AUTH_STEPS } from '@/shared/lib/common/constants';
+
 import { LoginForm } from '../../login';
 import { ForgotForm, ResetForm, VerifyForm } from '../../recover-password';
 import { RegisterForm } from '../../registration';
-import { AUTH_STEPS } from '../lib/stepper.constants';
 
 const { LOGIN, REGISTER, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 

@@ -1,6 +1,6 @@
 import type { ReadonlyURLSearchParams } from 'next/navigation';
 
-import { AUTH_STEPS, type AuthStep } from '@/features/auth/stepper';
+import { AUTH_STEPS, type AuthStep } from '@/shared/lib/common/constants';
 
 import { AUTH_STEP_VALUES } from '../common';
 

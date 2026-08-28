@@ -6,9 +6,8 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { closeModal } from '@/entities/modal';
 import { supabase } from '@/shared/api';
 import { buildAuthSearchParams, clearRecoveryState } from '@/shared/lib';
+import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { useAppDispatch } from '@/shared/providers/store/hooks';
-
-import { AUTH_STEPS } from '../lib/stepper.constants';
 
 const { RESET } = AUTH_STEPS;
 

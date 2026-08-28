@@ -1,6 +1,6 @@
 import { Box } from '@/shared/ui';
 
-import type { FormFieldSize } from '@/shared/ui/input/lib/constants';
+import type { FormFieldSizes } from '@/shared/ui/form/form-field';
 
 import styles from './create-form.module.scss';
 import { DescriptionField } from './description-field';
@@ -9,7 +9,7 @@ import { FilesField } from './files-field';
 import { StartDateField } from './start-date-field';
 
 type CreateFormFieldsProps = {
-  fieldSize: FormFieldSize;
+  fieldSize: FormFieldSizes;
 };
 
 export const CreateFormFields = ({ fieldSize }: CreateFormFieldsProps) => {

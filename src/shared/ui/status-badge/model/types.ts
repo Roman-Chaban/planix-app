@@ -1,4 +1,6 @@
-import type { Status, SVGComponent, TabId } from '@types';
+import type { SVGComponent, TabId } from '@types';
+
+import type { Status } from '@/shared/lib/common/constants';
 
 export type StatusMap = Record<TabId, Status | null>;
 export type StatusClasses = Record<Status, string>;

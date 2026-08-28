@@ -1,4 +1,4 @@
-import type { HeaderItems } from './types';
+import type { HeaderItems } from '../model/types';
 
 import type { TranslateFn } from '@types';
 
@@ -8,7 +8,7 @@ export const getHeaderItems = (t: TranslateFn): HeaderItems => [
     label: t('toolbar.allProjects'),
   },
   {
-    id: 'In Progress',
+    id: 'InProgress',
     label: t('toolbar.inProgress'),
   },
   {

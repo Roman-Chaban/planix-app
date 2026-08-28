@@ -1,7 +1,8 @@
 'use client';
 
-import { Button } from '@/shared/ui';
-import type { ProjectButtonProps } from '@/shared/ui/project-button';
+import type { ProjectButtonProps } from '../model/types';
+
+import { Button } from '../../button';
 
 export const ProjectButton = ({
   onClick,

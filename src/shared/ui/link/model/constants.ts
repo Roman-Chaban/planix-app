@@ -5,3 +5,5 @@ export const LINK_TARGETS = {
   TOP: '_top',
   FRAMENAME: 'framename',
 } as const;
+
+export type LinkTargets = (typeof LINK_TARGETS)[keyof typeof LINK_TARGETS];

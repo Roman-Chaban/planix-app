@@ -4,7 +4,7 @@ import type { ToolbarHeaderItemProps } from './model/types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Typography } from '@/shared/ui';
-import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/lib/constants';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_VARIANTS } from '@/shared/ui/button/model/constants';
 
 import styles from './toolbar.module.scss';
 

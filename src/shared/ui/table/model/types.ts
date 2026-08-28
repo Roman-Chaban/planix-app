@@ -1,8 +1,9 @@
+import type { TableSizes, TableVariants } from './constants';
 import type { SVGComponent, WithChildren, WithClassName, WithRef } from '@types';
 
 import type { Key, ReactNode } from 'react';
 
-import type { Axis } from '@/shared/lib/hooks/model/types';
+import type { Axis } from '@/shared/lib/hooks/model/constants';
 
 type BaseTableComponentProps = WithChildren & WithClassName;
 type BaseTableAppearanceProps = BaseTableComponentProps & TableStylesProps;
@@ -15,8 +16,8 @@ export type TableHeadCellProps = BaseTableAppearanceProps;
 export type TableBodyProps = BaseTableComponentProps;
 
 export type TableStylesProps = {
-  size?: TableSize;
-  variant?: TableVariant;
+  size?: TableSizes;
+  variant?: TableVariants;
   // hoverable?: boolean;
 };
 
@@ -31,11 +32,6 @@ export type TableColumn<T> = {
 export type DataTableProps<T extends Record<string, unknown>> = TableStylesProps & {
   data: T[];
   columns: TableColumn<T>[];
-  getRowKey: (row: T) => Key;
   dragAxis?: Axis;
+  getRowKey: (row: T) => Key;
 };
-
-/* Design System Types */
-
-export type TableSize = 'sm' | 'md' | 'lg';
-export type TableVariant = 'default' | 'bordered' | 'minimal' | 'card';

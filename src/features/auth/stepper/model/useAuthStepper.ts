@@ -8,9 +8,8 @@ import { closeModal, ModalId, openModal } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
 
 import { buildAuthSearchParams, clearRecoveryState, getAuthStep } from '@/shared/lib';
+import { AUTH_STEPS, type AuthStep } from '@/shared/lib/common/constants';
 import { useAppDispatch } from '@/shared/providers/store/hooks';
-
-import { AUTH_STEPS, type AuthStep } from '../lib/stepper.constants';
 
 import { usePasswordRecovery } from './usePasswordRecovery';
 

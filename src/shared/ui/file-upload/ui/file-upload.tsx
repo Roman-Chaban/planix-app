@@ -3,9 +3,11 @@
 import { useCallback, useId } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, FormError, FormField } from '@/shared/ui';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
+import { Box } from '../../box';
+import { FormField, FormError } from '../../form';
+
+import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../../form/form-field';
 import {
   FilePreview,
   PhotoUploadTrigger,
@@ -18,8 +20,8 @@ import { MAIN_FILE_ACCEPT, PHOTO_FILE_ACCEPT } from '../model/constants';
 
 import styles from './file-upload.module.scss';
 
-const { FILE } = INPUT_TYPES;
-const { NO_BORDER } = INPUT_VARIANTS;
+const { FILE } = FORM_FIELD_TYPES;
+const { NO_BORDER } = FORM_FIELD_VARIANTS;
 
 export const FileUpload = ({
   value,

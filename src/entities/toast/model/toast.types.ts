@@ -1,4 +1,4 @@
-import type { ToastVariant } from '@/shared/ui/toast/lib/constants';
+import type { ToastVariant } from '@/shared/ui/toast/model/constants';
 
 export type ToastState = {
   current: ToastPayload | null;

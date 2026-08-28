@@ -1,4 +1,4 @@
-import { BREAKPOINTS } from '@/shared/ui/theme';
+import { BREAKPOINTS } from '../common/constants';
 
 import { useResponsiveValue } from './useResponsiveValue';
 

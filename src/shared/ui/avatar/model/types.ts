@@ -1,20 +1,18 @@
+import type { AvatarSizes, AvatarVariants } from './constants';
 import type { WithClassName } from '@types';
 
 import type { ReactNode } from 'react';
 
-type AvatarSize = 'sm' | 'md' | 'lg';
-type AvatarVariant = 'circle' | 'square';
-
-type BaseAvatarProps = WithClassName & {
+type BaseAvatarProps = {
   width?: number;
   height?: number;
   alt?: string;
-  size?: AvatarSize;
-  variant?: AvatarVariant;
-};
+  size?: AvatarSizes;
+  variant?: AvatarVariants;
+} & WithClassName;
 
-export type AvatarProps = BaseAvatarProps & {
+export type AvatarProps = {
   src?: string | null;
   icon?: ReactNode;
   fallback?: ReactNode;
-};
+} & BaseAvatarProps;

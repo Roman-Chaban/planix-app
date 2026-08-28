@@ -1,10 +1,9 @@
 'use client';
 
-import { getLogoSized } from '@/shared/lib';
+import { BREAKPOINTS, getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { Box, Grid, GridItem } from '@/shared/ui';
 import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons';
-import { BREAKPOINTS } from '@/shared/ui/theme/lib/breakpoints';
 
 import styles from './NotFound.module.scss';
 

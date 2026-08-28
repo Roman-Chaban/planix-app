@@ -1,6 +1,6 @@
-import { buildClassName } from '@/shared/lib';
+import type { FormLabelProps } from '../model/types';
 
-import type { FormLabelProps } from '@/shared/ui/form/form-field';
+import { buildClassName } from '@/shared/lib';
 
 import styles from './form-field.module.scss';
 

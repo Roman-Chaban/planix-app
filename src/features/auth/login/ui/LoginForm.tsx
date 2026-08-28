@@ -4,8 +4,8 @@ import type { LoginFormProps } from '../model/login.types';
 
 import { useTranslation } from 'react-i18next';
 
-import { AUTH_STEPS } from '@/features/auth/stepper';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { AppForm, Box, FormFields } from '@/shared/ui';
 
 import { loginFormFields } from '../lib/login-fields';

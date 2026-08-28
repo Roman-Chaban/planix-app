@@ -1,9 +1,9 @@
 import type { WithChildren } from '@types';
 
-import { type FieldValues, type SubmitHandler, type UseFormReturn } from 'react-hook-form';
+import type { FieldValues, SubmitHandler, UseFormReturn } from 'react-hook-form';
 
-export type AppFormProps<T extends FieldValues> = WithChildren & {
+export type AppFormProps<T extends FieldValues> = {
   form: UseFormReturn<T>;
-  onSubmit: SubmitHandler<T>;
   className?: string;
-};
+  onSubmit: SubmitHandler<T>;
+} & WithChildren;

@@ -1,5 +1,7 @@
 'use client';
 
+import type { FormDateFieldProps } from '../model/types';
+
 import type { ChangeEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -7,12 +9,12 @@ import { NAMESPACE } from '@/shared/i18n';
 import { applyDateMask, toISO, toInputFormat } from '@/shared/lib';
 
 import { FormField } from '@/shared/ui';
-import type { FormDateFieldProps } from '@/shared/ui/form/form-field';
 import { CalendarIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
-const { TEXT } = INPUT_TYPES;
-const { DEFAULT } = INPUT_VARIANTS;
+import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../model/constants';
+
+const { TEXT } = FORM_FIELD_TYPES;
+const { DEFAULT } = FORM_FIELD_VARIANTS;
 
 export const FormDateField = ({
   id,

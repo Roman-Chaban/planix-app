@@ -3,10 +3,10 @@ import type { SubmitHandler } from 'react-hook-form';
 
 import { useTranslation } from 'react-i18next';
 
-import { AUTH_STEPS } from '@/features/auth/stepper';
 import { showToast } from '@/entities/toast';
 import { supabase } from '@/shared/api/supabase';
 import { NAMESPACE as NS } from '@/shared/i18n';
+import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { useAppForm } from '@/shared/lib/hooks';
 import { useAppDispatch } from '@/shared/providers/store/hooks';
 

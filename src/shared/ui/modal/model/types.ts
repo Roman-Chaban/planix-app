@@ -10,23 +10,23 @@ type WithIsOpen = {
   isOpen: boolean;
 };
 
-export type ModalProps = WithChildren &
+export type ModalProps = {
+  closeOnOverlayClick?: boolean;
+  containerId?: string;
+} & WithChildren &
   WithIsOpen &
-  WithOnClose & {
-    closeOnOverlayClick?: boolean;
-    containerId?: string;
-  };
+  WithOnClose;
 
 export type ModalContentProps = WithChildren & WithClassName;
 
-export type ModalHeaderProps = WithOnClose & {
+export type ModalHeaderProps = {
   title: string;
   icon?: ReactNode;
-};
+} & WithOnClose;
 
 export type UseModalBehaviorParams = WithIsOpen & WithOnClose;
 
-export type ModalOverlayProps = WithChildren &
-  WithOnClose & {
-    closeOnOverlayClick: boolean;
-  };
+export type ModalOverlayProps = {
+  closeOnOverlayClick: boolean;
+} & WithChildren &
+  WithOnClose;

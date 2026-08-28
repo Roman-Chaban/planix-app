@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { projectAddFields, useProjectForm } from '@/features/project-create';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { BREAKPOINTS } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { AppForm, Box, FormFields, ProjectButton, Typography } from '@/shared/ui';
 
 import { BUTTON_SIZES } from '@/shared/ui/button';
-import { INPUT_SIZES } from '@/shared/ui/input';
-import { BREAKPOINTS } from '@/shared/ui/theme';
+import { FORM_FIELD_SIZES } from '@/shared/ui/form/form-field';
 
 import { CreateFormFields } from './create-form-fields';
 import styles from './create-form.module.scss';
@@ -24,7 +24,7 @@ export const CreateForm = () => {
   const isMobileLarge = useMediaQuery(MOBILE_LARGE);
 
   const buttonSize = isMobileLarge ? BUTTON_SIZES.SMALL : BUTTON_SIZES.MEDIUM;
-  const fieldSize = isMobileLarge ? INPUT_SIZES.MEDIUM : INPUT_SIZES.LARGE;
+  const fieldSize = isMobileLarge ? FORM_FIELD_SIZES.MEDIUM : FORM_FIELD_SIZES.LARGE;
 
   return (
     <Box className={styles.wrapper}>

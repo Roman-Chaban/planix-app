@@ -1,4 +1,4 @@
-import type { Status } from '@types';
+import type { Status } from '@/shared/lib/common/constants';
 
 export type BillingHistoryData = {
   id: number;

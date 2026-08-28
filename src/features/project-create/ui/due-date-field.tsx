@@ -5,10 +5,10 @@ import { useController, useFormContext } from 'react-hook-form';
 import type { ProjectDetailsSchema } from '@/features/project-create';
 
 import { FormDateField } from '@/shared/ui';
-import type { FormFieldSize } from '@/shared/ui/input/lib/constants';
+import type { FormFieldSizes } from '@/shared/ui/form/form-field';
 
 type DueDateFieldProps = {
-  size?: FormFieldSize;
+  size?: FormFieldSizes;
 };
 
 export const DueDateField = ({ size }: DueDateFieldProps) => {

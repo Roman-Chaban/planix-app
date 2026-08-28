@@ -1,10 +1,10 @@
 import type { ProjectDetailsSchema } from '@/features/project-create';
+import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 import { ClientIcon, PlatformIcon, PriceIcon, ProjectNameIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
-const { TEXT } = INPUT_TYPES;
+const { TEXT } = FORM_FIELD_TYPES;
 
 export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
   {

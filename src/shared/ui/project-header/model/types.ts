@@ -1,4 +1,6 @@
-import type { ProjectsHeaderProps, Status } from '@types';
+import type { ProjectsHeaderProps } from '@types';
+
+import type { Status } from '@/shared/lib/common/constants';
 
 export type ProjectHeaderProps = {
   title: string;

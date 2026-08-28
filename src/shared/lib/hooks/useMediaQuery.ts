@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import type { Breakpoint } from '../common/constants';
 
-import type { Breakpoint } from '@/shared/ui/theme';
+import { useEffect, useState } from 'react';
 
 export const useMediaQuery = (breakpoint: Breakpoint) => {
   const mediaQuery = `(max-width: ${breakpoint}px)`;

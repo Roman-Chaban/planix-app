@@ -1,4 +1,4 @@
-import type { ActionItems } from '@/shared/ui/actions-bar/model/types';
+import type { ActionItem } from '@/shared/ui/actions-bar';
 
 export type ProjectRowActionHandler = (projectId: string | number) => void;
 export type ProjectNameHandler = (projectName: string) => void;
@@ -12,4 +12,4 @@ export type ProjectRowActionsConfig = {
 export type ProjectRowActionsFactory = (
   projectName: string,
   projectId: string | number,
-) => ActionItems;
+) => ActionItem[];

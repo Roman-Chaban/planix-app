@@ -4,3 +4,7 @@
   width: 100%;
   @include flex-col(0.188rem, start, stretch, column);
 }
+
+.default {
+  // default styles
+}

@@ -1,28 +1,19 @@
 'use client';
 
-import { type ReactNode, useState, useEffect } from 'react';
+import type { WithChildren } from '@types';
+
 import { createPortal } from 'react-dom';
 
+import { usePortal } from '@/shared/lib/hooks';
+
 type PortalProps = {
-  children: ReactNode;
   containerId?: string;
-};
+} & WithChildren;
 
 export const Portal = ({ children, containerId = 'portal-root' }: PortalProps) => {
-  const [container, setContainer] = useState<HTMLElement | null>(null);
+  const portalContainer = usePortal(containerId);
 
-  useEffect(() => {
-    let portalElement = document.getElementById(containerId);
+  if (!portalContainer) return null;
 
-    if (!portalElement) {
-      portalElement = document.createElement('div');
-      portalElement.setAttribute('id', containerId);
-      document.body.appendChild(portalElement);
-    }
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setContainer(portalElement);
-  }, [containerId]);
-
-  return container ? createPortal(children, container) : null;
+  return portalContainer ? createPortal(children, portalContainer) : null;
 };

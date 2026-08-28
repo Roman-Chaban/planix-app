@@ -1,5 +1,6 @@
-import type { AuthStep as AuthStepParam } from '../lib/stepper.constants';
 import type { EmailSentFn, NavigateFn, TranslateFn } from '@types';
+
+import type { AuthStep as AuthStepParam } from '@/shared/lib/common/constants';
 
 export type AuthStepProps = {
   step: AuthStepParam;

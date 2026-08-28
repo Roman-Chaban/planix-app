@@ -1,7 +1,8 @@
 import type { TableSkeletonProps } from '../model/types';
 
+import { Skeleton } from '../../../skeleton';
+
 import {
-  Skeleton,
   Table,
   TableBody,
   TableCell,
@@ -9,13 +10,13 @@ import {
   TableHead,
   TableHeadCell,
   TableRow,
-} from '@/shared/ui';
+} from '../../../table';
 
 import {
   DEFAULT_CELL_HEIGHT,
   DEFAULT_CELL_RADIUS,
   TABLE_SKELETON_ROW_COUNT,
-} from '../lib/constants';
+} from '../model/constants';
 
 export const TableSkeleton = ({
   columns,

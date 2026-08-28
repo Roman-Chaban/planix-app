@@ -1,12 +1,12 @@
 import type { ChangePasswordSchema } from '../model/change-password.schema';
 
+import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { LockIcon, ViewOffIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
 import styles from '../ui/ChangePasswordForm.module.scss';
 
-const { PASSWORD } = INPUT_TYPES;
+const { PASSWORD } = FORM_FIELD_TYPES;
 
 export const changePasswordFields: readonly FormFieldConfig<ChangePasswordSchema>[] = [
   {

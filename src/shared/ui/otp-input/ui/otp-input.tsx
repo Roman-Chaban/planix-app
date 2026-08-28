@@ -6,12 +6,13 @@ import { useRef, useState, type ChangeEvent } from 'react';
 import { useController, type FieldValues } from 'react-hook-form';
 
 import { Box } from '../../box';
-import { Input, INPUT_TYPES } from '../../input';
+import { FORM_FIELD_TYPES } from '../../form/form-field';
+import { Input } from '../../input';
 
 import { OtpCell } from './otp-cell';
 import styles from './otp-input.module.scss';
 
-const { TEXT } = INPUT_TYPES;
+const { TEXT } = FORM_FIELD_TYPES;
 
 export const OtpInput = <T extends FieldValues>({
   control,

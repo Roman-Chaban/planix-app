@@ -1,3 +1,3 @@
-export type { ActionsBarProps } from './model/types';
+export type { ActionsBarProps, ActionItem } from './model/types';
 
 export { ActionsBar } from './ui/actions-bar';

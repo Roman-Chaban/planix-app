@@ -6,6 +6,8 @@ import type { IconProps } from '@/shared/ui/icons/model/types';
 
 jest.mock('@/shared/lib/hooks');
 
+const mockedUseMediaQuery = jest.mocked(useMediaQuery);
+
 jest.mock('@/shared/ui/icons', () => ({
   NotFoundBanner: (props: IconProps) => (
     <div data-testid="banner" data-props={JSON.stringify(props)} />
@@ -14,8 +16,6 @@ jest.mock('@/shared/ui/icons', () => ({
     <div data-testid="text-icon" data-props={JSON.stringify(props)} />
   ),
 }));
-
-const mockedUseMediaQuery = useMediaQuery as jest.Mock;
 
 const setup = (isLaptop: boolean) => {
   mockedUseMediaQuery.mockReturnValue(isLaptop);

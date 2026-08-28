@@ -1,16 +1,22 @@
 export type {
-  DateFieldProps,
   FormDateFieldProps,
   FormLabelProps,
   FormIconProps,
   FormErrorProps,
   FormFieldProps,
-  FormFieldVariant,
   FormInputProps,
-  IconPosition,
 } from './model/types';
 
-export { ICON_POSITION } from './model/constants';
+export {
+  ICON_POSITION,
+  FORM_FIELD_SIZES,
+  FORM_FIELD_TYPES,
+  FORM_FIELD_VARIANTS,
+  type FormFieldSizes,
+  type FormFieldVariants,
+  type FromFieldTypes,
+  type IconPosition,
+} from './model/constants';
 
 export { FormField } from './ui/form-field';
 export { FormLabel } from './ui/form-label';

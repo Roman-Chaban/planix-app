@@ -15,27 +15,20 @@ import { TEXTAREA_VARIANTS } from '../model/constants';
 import styles from './textarea.module.scss';
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  (
-    {
-      label,
-      id,
-      textareaClassName,
-      labelClassName,
-      placeholder,
-      error,
-      variant = TEXTAREA_VARIANTS.DEFAULT,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ label, id, placeholder, error, variant = TEXTAREA_VARIANTS.DEFAULT, ...props }, ref) => {
     const generatedId = useId();
     const textareaId = id ?? generatedId;
+    const hasError = !!error;
 
-    const classNames = buildClassName(styles.textarea, textareaClassName, styles[variant]);
+    const textareaClassNames = buildClassName(styles.textarea, styles[variant], {
+      [styles.error]: hasError,
+    });
+
+    const labelClassNames = buildClassName(styles.label, { [styles.errorLabel]: hasError });
 
     return (
       <Box className={styles.wrapper}>
-        <FormLabel htmlFor={textareaId} className={buildClassName(labelClassName)}>
+        <FormLabel htmlFor={textareaId} className={labelClassNames}>
           {label}
         </FormLabel>
 
@@ -43,7 +36,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           id={textareaId}
           placeholder={placeholder}
-          className={classNames}
+          className={textareaClassNames}
           {...props}
         />
 

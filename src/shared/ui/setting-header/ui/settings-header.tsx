@@ -1,8 +1,10 @@
-import type { SettingsHeaderProps } from '../model/types';
-
 import { Box, Typography } from '@/shared/ui';
 
 import styles from './settings-header.module.scss';
+
+export type SettingsHeaderProps = {
+  title: string;
+};
 
 export const SettingsHeader = ({ title }: SettingsHeaderProps) => {
   return (

@@ -1,13 +1,12 @@
+import type { FormFieldSizes } from '../../form-field/model/constants';
 import type { WithClassName } from '@types';
 import type { FieldErrors, FieldValues, UseFormRegister, Path } from 'react-hook-form';
 
 import type { ReactNode } from 'react';
 
-import type { FormFieldSize } from '@/shared/ui/input/lib/constants';
-
 type FormFieldFeature = 'password-toggle' | 'none';
 
-export type FormFieldConfig<T extends FieldValues> = WithClassName & {
+export type FormFieldConfig<T extends FieldValues> = {
   name: Path<T>;
   label: string;
   type: string;
@@ -18,12 +17,12 @@ export type FormFieldConfig<T extends FieldValues> = WithClassName & {
   feature?: FormFieldFeature;
   required?: boolean;
   gridArea?: string | null;
-};
+} & WithClassName;
 
 export type FormFieldsProps<T extends FieldValues> = {
   fields: readonly FormFieldConfig<T>[];
   translationNamespace: string;
   register: UseFormRegister<T>;
   errors: FieldErrors<T>;
-  size?: FormFieldSize;
+  size?: FormFieldSizes;
 };

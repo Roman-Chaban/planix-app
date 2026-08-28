@@ -15,12 +15,12 @@ export type BuildButtonClassNameParams = {
   className?: string;
 };
 
-export type ButtonContentProps = WithChildren & {
+export type ButtonContentProps = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   startIconClassName?: string;
   endIconClassName?: string;
-};
+} & WithChildren;
 
 export type ButtonPreset = {
   variant?: ButtonVariants;

@@ -3,10 +3,9 @@
 import { Header } from '@/widgets/header';
 
 import { DeleteModal } from '@/features/delete-project';
+import { BREAKPOINTS } from '@/shared/lib';
 import { useResponsiveValue } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';
-
-import { BREAKPOINTS } from '@/shared/ui/theme';
 
 import { useProjectsPageModel } from '../model/use-projects-page-model';
 

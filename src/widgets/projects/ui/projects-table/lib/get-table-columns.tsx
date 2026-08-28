@@ -4,12 +4,12 @@ import type { TranslateFn } from '@types';
 import { ActionsBar, MetricBadge, StatusBadge } from '@/shared/ui';
 import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 import { CalendarIcon } from '@/shared/ui/icons';
-import { METRIC_STATUSES } from '@/shared/ui/metric-badge';
+import { METRIC_BADGE_VARIANTS } from '@/shared/ui/metric-badge';
 import type { TableColumn } from '@/shared/ui/table/model/types';
 
 import { ClientCell } from '../client-cell';
 
-const { SUCCESS, WARNING } = METRIC_STATUSES;
+const { SUCCESS, WARNING } = METRIC_BADGE_VARIANTS;
 
 export const getProjectsTableColumns = (
   t: TranslateFn,

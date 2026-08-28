@@ -6,6 +6,7 @@ import { useProfile } from '@/entities/profile';
 import { ROUTES } from '@/shared/config/routes';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
+import { BREAKPOINTS } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { AppLink, Avatar, Box, Button, Tooltip } from '@/shared/ui';
 
@@ -13,7 +14,6 @@ import { AVATAR_VARIANTS } from '@/shared/ui/avatar';
 import { BUTTON_SIZES } from '@/shared/ui/button';
 import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
-import { BREAKPOINTS } from '@/shared/ui/theme';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
 import styles from './Header.module.scss';

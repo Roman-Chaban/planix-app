@@ -1,10 +1,11 @@
 import type { RegisterFormValues } from '../model/register.schema';
 
+import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
+
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { ClientIcon, ContactIcon, LockIcon, MessageIcon, ViewOffIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
-export const { TEXT, EMAIL, PASSWORD, DATE } = INPUT_TYPES;
+export const { TEXT, EMAIL, PASSWORD, DATE } = FORM_FIELD_TYPES;
 
 export const registerFormFields: readonly FormFieldConfig<RegisterFormValues>[] = [
   {

@@ -1,10 +1,11 @@
 import type { ForgotPasswordSchema } from '../model/forgot.schema';
 
+import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
+
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { MessageIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
-const { EMAIL } = INPUT_TYPES;
+const { EMAIL } = FORM_FIELD_TYPES;
 
 export const forgotFormFields: readonly FormFieldConfig<ForgotPasswordSchema>[] = [
   {

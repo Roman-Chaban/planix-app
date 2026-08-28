@@ -1,10 +1,11 @@
 import type { ResetFormSchema } from '../model/reset.schema';
 
+import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
+
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { LockIcon, ViewOffIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
-const { PASSWORD } = INPUT_TYPES;
+const { PASSWORD } = FORM_FIELD_TYPES;
 
 export const resetFormFields: readonly FormFieldConfig<ResetFormSchema>[] = [
   {

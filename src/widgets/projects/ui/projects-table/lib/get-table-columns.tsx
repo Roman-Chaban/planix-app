@@ -2,7 +2,7 @@ import type { TableItem } from '../model/types';
 import type { TranslateFn } from '@types';
 
 import { ActionsBar, MetricBadge, StatusBadge } from '@/shared/ui';
-import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
+import type { ActionItem } from '@/shared/ui/actions-bar';
 import { CalendarIcon } from '@/shared/ui/icons';
 import { METRIC_BADGE_VARIANTS } from '@/shared/ui/metric-badge';
 import type { TableColumn } from '@/shared/ui/table/model/types';

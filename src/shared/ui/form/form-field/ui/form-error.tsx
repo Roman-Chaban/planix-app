@@ -1,7 +1,7 @@
+import type { FormErrorProps } from '../model/types';
+
 import { buildClassName } from '@/shared/lib';
 import { Typography } from '@/shared/ui';
-
-import type { FormErrorProps } from '@/shared/ui/form/form-field';
 
 import styles from './form-field.module.scss';
 

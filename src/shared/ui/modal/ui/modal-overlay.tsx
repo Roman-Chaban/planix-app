@@ -1,6 +1,6 @@
 import type { ModalOverlayProps } from '../model/types';
 
-import { Box } from '@/shared/ui';
+import { Box } from '../../box';
 
 import styles from './modal.module.scss';
 

@@ -1,4 +1,5 @@
-import { Box, Typography } from '@/shared/ui';
+import { Box } from '../../box';
+import { Typography } from '../../typography';
 
 import styles from './settings-header.module.scss';
 

@@ -4,3 +4,5 @@ export const TOOLTIP_POSITION = {
   TOP: 'top',
   BOTTOM: 'bottom',
 } as const;
+
+export type TooltipPosition = (typeof TOOLTIP_POSITION)[keyof typeof TOOLTIP_POSITION];

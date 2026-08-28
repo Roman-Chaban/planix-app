@@ -2,7 +2,7 @@
 
 import type { ProjectButtonProps } from '../model/types';
 
-import { Button } from '@/shared/ui';
+import { Button } from '../../button';
 
 export const ProjectButton = ({
   onClick,

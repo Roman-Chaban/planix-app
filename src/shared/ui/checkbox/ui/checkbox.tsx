@@ -1,12 +1,12 @@
+import type { CheckboxProps } from '../model/types';
+
 import { useId, type ChangeEvent } from 'react';
 
 import { buildClassName } from '@/shared/lib';
 
-import { Typography } from '@/shared/ui';
-import type { CheckboxProps } from '@/shared/ui/checkbox';
-
 import { FORM_FIELD_TYPES } from '../../form/form-field';
 import { CheckIcon } from '../../icons';
+import { Typography } from '../../typography';
 
 import styles from './checkbox.module.scss';
 

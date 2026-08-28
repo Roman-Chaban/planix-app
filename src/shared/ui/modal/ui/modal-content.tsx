@@ -1,7 +1,8 @@
 import type { ModalContentProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
-import { Box } from '@/shared/ui';
+
+import { Box } from '../../box';
 
 import styles from './modal.module.scss';
 

@@ -1,10 +1,14 @@
 'use client';
 
+import type { TextareaProps } from '../model/types';
+
 import { forwardRef, useId } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, FormError, FormLabel } from '@/shared/ui';
-import type { TextareaProps } from '@/shared/ui/textarea';
+
+import { Box } from '../../box';
+
+import { FormLabel, FormError } from '../../form';
 
 import { TEXTAREA_VARIANTS } from '../model/constants';
 

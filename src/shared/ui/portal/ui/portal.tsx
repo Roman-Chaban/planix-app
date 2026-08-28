@@ -4,7 +4,7 @@ import type { WithChildren } from '@types';
 
 import { createPortal } from 'react-dom';
 
-import { usePortal } from '@/shared/lib/hooks/usePortal';
+import { usePortal } from '@/shared/lib/hooks';
 
 type PortalProps = {
   containerId?: string;

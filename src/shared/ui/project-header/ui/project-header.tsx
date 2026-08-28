@@ -4,7 +4,9 @@ import type { ProjectHeaderProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
-import { Box, StatusBadge, Typography } from '@/shared/ui';
+import { Box } from '../../box';
+import { StatusBadge } from '../../status-badge';
+import { Typography } from '../../typography';
 
 import styles from './project-header.module.scss';
 

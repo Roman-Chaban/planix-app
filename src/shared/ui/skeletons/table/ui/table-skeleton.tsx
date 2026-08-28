@@ -1,7 +1,8 @@
 import type { TableSkeletonProps } from '../model/types';
 
+import { Skeleton } from '../../../skeleton';
+
 import {
-  Skeleton,
   Table,
   TableBody,
   TableCell,
@@ -9,7 +10,7 @@ import {
   TableHead,
   TableHeadCell,
   TableRow,
-} from '@/shared/ui';
+} from '../../../table';
 
 import {
   DEFAULT_CELL_HEIGHT,

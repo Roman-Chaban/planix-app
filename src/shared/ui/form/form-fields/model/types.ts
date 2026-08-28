@@ -22,7 +22,7 @@ export type FormFieldConfig<T extends FieldValues> = {
 export type FormFieldsProps<T extends FieldValues> = {
   fields: readonly FormFieldConfig<T>[];
   translationNamespace: string;
-  register: UseFormRegister<T>;
   errors: FieldErrors<T>;
   size?: FormFieldSizes;
+  register: UseFormRegister<T>;
 };

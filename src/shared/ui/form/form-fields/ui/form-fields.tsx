@@ -1,11 +1,12 @@
 'use client';
 
+import type { FormFieldsProps } from '../model/types';
+
 import { type FieldValues, Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { usePasswordToggle } from '@/shared/lib/hooks';
 import { FormField } from '@/shared/ui';
-import type { FormFieldsProps } from '@/shared/ui/form/form-fields';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
 
 import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../../form-field/model/constants';

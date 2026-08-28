@@ -1,9 +1,10 @@
 'use client';
 
-import { ModalOverlay, Portal } from '@/shared/ui';
+import { Portal } from '../../portal';
 
 import { type ModalProps } from '../model/types';
 import { useModalBehavior } from '../model/use-modal-behavior';
+import { ModalOverlay } from '../ui/modal-overlay';
 
 export const Modal = ({
   isOpen,

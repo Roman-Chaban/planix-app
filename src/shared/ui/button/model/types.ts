@@ -1,8 +1,14 @@
-import type { ButtonMinWidths, ButtonShapes, ButtonSizes, ButtonVariants } from './constants';
+import type {
+  ButtonMinWidths,
+  ButtonShapes,
+  ButtonSizes,
+  ButtonTypes,
+  ButtonVariants,
+} from './constants';
 
 import type { ButtonPresetKey } from '../lib/presets';
 
-import type { WithChildren } from '@types';
+import type { WithChildren, WithClassName } from '@types';
 
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
@@ -12,8 +18,7 @@ export type BuildButtonClassNameParams = {
   shape: ButtonShapes;
   fullWidth: boolean;
   minWidth?: ButtonMinWidths;
-  className?: string;
-};
+} & WithClassName;
 
 export type ButtonContentProps = {
   startIcon?: ReactNode;
@@ -28,7 +33,7 @@ export type ButtonPreset = {
   shape?: ButtonShapes;
   minWidth?: ButtonMinWidths;
   fullWidth?: boolean;
-  type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+  type?: ButtonTypes;
 };
 
 export type ButtonProps = {

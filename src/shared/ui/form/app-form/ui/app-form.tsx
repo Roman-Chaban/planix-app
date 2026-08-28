@@ -1,8 +1,8 @@
 'use client';
 
-import { FormProvider, type FieldValues } from 'react-hook-form';
+import type { AppFormProps } from '../model/types';
 
-import type { AppFormProps } from '@/shared/ui/form/app-form';
+import { FormProvider, type FieldValues } from 'react-hook-form';
 
 export function AppForm<T extends FieldValues>({
   form,

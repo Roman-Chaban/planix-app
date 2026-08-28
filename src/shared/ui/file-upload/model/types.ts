@@ -7,12 +7,12 @@ export type FileUploadValue = FileUploadItem[];
 
 export type FileUploadProps = {
   value: FileUploadValue;
-  onChange: (files: FileUploadValue) => void;
   label?: string;
   uploadLabel?: string;
   uploadPhotosLabel: string;
   error?: string;
   size?: FormFieldSizes;
+  onChange: (files: FileUploadValue) => void;
 };
 
 export type FilePreviewProps = {

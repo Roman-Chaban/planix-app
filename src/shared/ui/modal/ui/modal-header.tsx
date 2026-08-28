@@ -4,7 +4,9 @@ import type { ModalHeaderProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
-import { Box, Button, Typography } from '@/shared/ui';
+import { Box } from '../../box';
+import { Button } from '../../button';
+import { Typography } from '../../typography';
 
 import styles from './modal.module.scss';
 

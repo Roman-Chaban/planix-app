@@ -1,9 +1,10 @@
+import type { AvatarProps } from '../model/types';
+
 import Image from 'next/image';
 
 import { buildClassName } from '@/shared/lib';
 
-import { Box } from '@/shared/ui';
-import type { AvatarProps } from '@/shared/ui/avatar';
+import { Box } from '../../box';
 
 import {
   AVATAR_SIZES,

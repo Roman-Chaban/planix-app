@@ -3,7 +3,9 @@
 import { useCallback, useId } from 'react';
 
 import { buildClassName } from '@/shared/lib';
-import { Box, FormError, FormField } from '@/shared/ui';
+
+import { Box } from '../../box';
+import { FormField, FormError } from '../../form';
 
 import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../../form/form-field';
 import {

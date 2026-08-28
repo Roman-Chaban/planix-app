@@ -1,7 +1,9 @@
+import type { StatusBadgeProps } from '../model/types';
+
 import { buildClassName } from '@/shared/lib';
-import { Typography } from '@/shared/ui';
-import type { StatusBadgeProps } from '@/shared/ui/status-badge';
-import { statusClasses, statusIcons } from '@/shared/ui/status-badge/model/constants';
+
+import { Typography } from '../../typography';
+import { statusClasses, statusIcons } from '../model/constants';
 
 import styles from './status-badge.module.scss';
 

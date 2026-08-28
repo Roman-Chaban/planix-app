@@ -2,9 +2,9 @@ import type { TFunction } from 'i18next';
 
 import type { ComponentType, Dispatch, FC, ReactNode, Ref, SetStateAction, SVGProps } from 'react';
 
-import type { AuthStep } from '@/features/auth/stepper';
 import type { Project } from '@/entities/projects';
 import type { Locale } from '@/shared/i18n/locales/locales';
+import type { AuthStep } from '@/shared/lib/common/constants';
 
 export type TranslateFn = TFunction;
 export type AppLocale = Locale;
@@ -14,9 +14,8 @@ export type SVGComponent = FC<SVGProps<SVGSVGElement>>;
 export type SettingSwitchList = WithSwitch[];
 export type Projects = Project[];
 export type FileType = 'pdf' | 'image' | 'default';
-export type TabId = 'AllProjects' | 'In Progress' | 'Pending' | 'Completed' | 'Canceled';
+export type TabId = 'AllProjects' | 'InProgress' | 'Pending' | 'Completed' | 'Canceled';
 export type PlatformId = 'Web' | 'IOS' | 'Android';
-export type Status = 'Pending' | 'In Progress' | 'Completed' | 'Canceled';
 
 export type WithChildren = {
   children?: ReactNode;

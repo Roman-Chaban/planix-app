@@ -1,5 +1,5 @@
 import type { ProjectRowActionsFactory, ProjectRowActionsConfig } from '@/features/project-table';
-import type { ActionItems } from '@/shared/ui/actions-bar/model/types';
+import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
 
 import { DeleteIcon, ViewIcon, EditIcon } from '@/shared/ui/icons';
 
@@ -8,7 +8,7 @@ export const createProjectRowActions = ({
   onEdit,
   onDelete,
 }: ProjectRowActionsConfig): ProjectRowActionsFactory => {
-  return (projectSlug: string, projectId: string | number): ActionItems => [
+  return (projectSlug: string, projectId: string | number): ActionItem[] => [
     {
       id: 'view',
       icon: ViewIcon,

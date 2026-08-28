@@ -12,10 +12,6 @@
   color: $text-secondary;
 }
 
-.errorLabel {
-  @include error-color;
-}
-
 .textarea {
   width: 100%;
   max-width: 100%;
@@ -42,6 +38,10 @@
   @include respond(sm) {
     font-size: $body-sm-font-size;
   }
+}
+
+.errorLabel {
+  @include error-color;
 }
 
 .error {

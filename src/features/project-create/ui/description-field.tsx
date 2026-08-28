@@ -20,7 +20,6 @@ export const DescriptionField = () => {
 
   return (
     <Textarea
-      tabIndex={0}
       {...field}
       error={t(fieldState.error?.message ?? '')}
       label={t('descriptionLabel')}

@@ -7,10 +7,11 @@ import { usePasswordToggle } from '@/shared/lib/hooks';
 import { FormField } from '@/shared/ui';
 import type { FormFieldsProps } from '@/shared/ui/form/form-fields';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
-const { TEXT, PASSWORD } = INPUT_TYPES;
-const { DEFAULT } = INPUT_VARIANTS;
+import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../../form-field/model/constants';
+
+const { TEXT, PASSWORD } = FORM_FIELD_TYPES;
+const { DEFAULT } = FORM_FIELD_VARIANTS;
 
 export function FormFields<T extends FieldValues>({
   fields,

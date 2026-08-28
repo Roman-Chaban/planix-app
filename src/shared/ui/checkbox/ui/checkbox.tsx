@@ -4,16 +4,16 @@ import { buildClassName } from '@/shared/lib';
 
 import { Typography } from '@/shared/ui';
 import type { CheckboxProps } from '@/shared/ui/checkbox';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
+import { FORM_FIELD_TYPES } from '../../form/form-field';
 import { CheckIcon } from '../../icons';
 
 import styles from './checkbox.module.scss';
 
-const { CHECKBOX } = INPUT_TYPES;
+const { CHECKBOX } = FORM_FIELD_TYPES;
 
 export const Checkbox = ({ checked, onChange, label, disabled }: CheckboxProps) => {
-  const checkboxId = useId();
+  const generatedId = useId();
 
   const handleCheckChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.checked);
@@ -21,11 +21,11 @@ export const Checkbox = ({ checked, onChange, label, disabled }: CheckboxProps) 
 
   return (
     <label
-      htmlFor={checkboxId}
+      htmlFor={generatedId}
       className={buildClassName(styles.wrapper, disabled && styles.disabled)}
     >
       <input
-        id={checkboxId}
+        id={generatedId}
         type={CHECKBOX}
         className={styles.input}
         checked={checked}

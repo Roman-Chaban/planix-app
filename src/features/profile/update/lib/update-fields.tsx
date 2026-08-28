@@ -1,10 +1,10 @@
 import type { UpdateFormValues } from '../model/update.schema';
 
+import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { CalendarIcon, ClientIcon, ContactIcon, MessageIcon } from '@/shared/ui/icons';
-import { INPUT_TYPES } from '@/shared/ui/input';
 
-const { TEXT, EMAIL } = INPUT_TYPES;
+const { TEXT, EMAIL } = FORM_FIELD_TYPES;
 
 import styles from '../ui/ProfileUpdateForm.module.scss';
 

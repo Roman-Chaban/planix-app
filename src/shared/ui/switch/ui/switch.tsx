@@ -4,11 +4,11 @@ import type { ChangeEvent } from 'react';
 
 import { Box, Input } from '@/shared/ui';
 
-import { INPUT_TYPES } from '@/shared/ui/input';
+import { FORM_FIELD_TYPES } from '../../form/form-field';
 
 import styles from './switch.module.scss';
 
-const { CHECKBOX } = INPUT_TYPES;
+const { CHECKBOX } = FORM_FIELD_TYPES;
 
 export const Switch = ({ isOn, onToggle }: SwitchProps) => {
   const handleSwitch = (event: ChangeEvent<HTMLInputElement>) => {

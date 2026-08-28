@@ -3,11 +3,10 @@
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import { getLogoSized } from '@/shared/lib';
+import { BREAKPOINTS, getLogoSized } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
 import { PlanixLogoIcon } from '@/shared/ui/icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
-import { BREAKPOINTS } from '@/shared/ui/theme/lib/breakpoints';
 
 import styles from './BrandBanner.module.scss';
 

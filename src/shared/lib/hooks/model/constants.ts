@@ -7,3 +7,5 @@ export const AXIS = {
   Y: 'y',
   BOTH: 'both',
 } as const;
+
+export type Axis = (typeof AXIS)[keyof typeof AXIS];

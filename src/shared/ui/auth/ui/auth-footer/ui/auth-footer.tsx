@@ -1,5 +1,6 @@
+import type { AuthFooterProps } from '../model/types';
+
 import { Box } from '@/shared/ui';
-import type { AuthFooterProps } from '@/shared/ui/auth/ui/auth-footer';
 
 import styles from './auth-footer.module.scss';
 

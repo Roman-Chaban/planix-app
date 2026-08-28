@@ -4,3 +4,6 @@ export const SELECT_CONTROL_VARIANTS = {
   TOOLBAR: 'toolbar',
   PLATFORM: 'platform',
 } as const;
+
+export type SelectControlVariants =
+  (typeof SELECT_CONTROL_VARIANTS)[keyof typeof SELECT_CONTROL_VARIANTS];

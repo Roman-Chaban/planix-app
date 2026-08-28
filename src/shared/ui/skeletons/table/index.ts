@@ -4,6 +4,7 @@ export {
   DEFAULT_CELL_HEIGHT,
   DEFAULT_CELL_RADIUS,
   TABLE_SKELETON_ROW_COUNT,
-} from './lib/constants';
+  type TableSkeletonRowCount,
+} from './model/constants';
 
 export { TableSkeleton } from './ui/table-skeleton';

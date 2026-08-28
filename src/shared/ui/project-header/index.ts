@@ -1,3 +1,3 @@
-export { getHeaderItems } from './model/get-header-items';
+export { getHeaderItems } from './lib/get-header-items';
 
-export { ProjectHeader } from './project-header';
+export { ProjectHeader } from './ui/project-header';

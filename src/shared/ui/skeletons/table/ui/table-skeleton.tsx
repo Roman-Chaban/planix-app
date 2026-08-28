@@ -15,7 +15,7 @@ import {
   DEFAULT_CELL_HEIGHT,
   DEFAULT_CELL_RADIUS,
   TABLE_SKELETON_ROW_COUNT,
-} from '../lib/constants';
+} from '../model/constants';
 
 export const TableSkeleton = ({
   columns,

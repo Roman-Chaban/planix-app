@@ -1,4 +1,4 @@
-import type { TableSize, TableVariant } from '@/shared/ui/table/model/types';
+import type { TableSizes, TableVariants } from '../../../table';
 
 export type TableSkeletonColumn = {
   key: string;
@@ -10,6 +10,6 @@ export type TableSkeletonProps = {
   rowCount?: number;
   cellHeight?: number;
   cellRadius?: number;
-  size: TableSize;
-  variant?: TableVariant;
+  size: TableSizes;
+  variant?: TableVariants;
 };

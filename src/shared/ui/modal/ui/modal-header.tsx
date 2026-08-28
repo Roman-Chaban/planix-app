@@ -1,10 +1,10 @@
 'use client';
 
+import type { ModalHeaderProps } from '../model/types';
+
 import { useTranslation } from 'react-i18next';
 
 import { Box, Button, Typography } from '@/shared/ui';
-
-import type { ModalHeaderProps } from '@/shared/ui/modal';
 
 import styles from './modal.module.scss';
 

@@ -17,7 +17,7 @@ const { DEFAULT } = FORM_FIELD_VARIANTS;
 export function FormFields<T extends FieldValues>({
   fields,
   translationNamespace,
-  size = 'default',
+  size = 'large',
 }: Omit<FormFieldsProps<T>, 'register' | 'errors'>) {
   const { t } = useTranslation(translationNamespace);
 

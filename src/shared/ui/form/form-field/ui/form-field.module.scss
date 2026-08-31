@@ -24,36 +24,31 @@
   @include autofill-background-disabled;
 }
 
-.inputWrapper.default {
-  min-height: $space-7;
-}
-
-.inputWrapper.small {
-  min-height: $space-8;
-}
-
-.inputWrapper.medium {
-  min-height: $space-9;
-}
-
-.inputWrapper.large {
-  min-height: 3.375rem;
-}
-
-.inputWrapper.hidden {
-  min-height: 0;
-}
-
 .inputWrapper {
   width: 100%;
   position: relative;
   transition: all 0.35s ease-in-out 0s;
-  display: flex;
-  align-items: center;
+  @include flex-center;
 
   @include input-wrapper-border($border-default);
   @include input-border-active($border-focus);
   @include input-disabled($surface-tertiary, $surface-secondary);
+
+  &.small {
+    min-height: $space-8;
+  }
+
+  &.medium {
+    min-height: $space-9;
+  }
+
+  &.large {
+    min-height: 3.375rem;
+  }
+
+  &.hidden {
+    min-height: 0;
+  }
 }
 
 .withStartIcon .input,

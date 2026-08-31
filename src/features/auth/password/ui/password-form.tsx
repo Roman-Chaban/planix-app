@@ -1,4 +1,4 @@
-import type { PasswordFormProps } from '../model/password.types';
+import type { PasswordFormProps } from '../model/types';
 import type { FieldValues } from 'react-hook-form';
 
 import { AppForm, FormFields } from '@/shared/ui';

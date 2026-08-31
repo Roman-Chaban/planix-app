@@ -1,3 +1,5 @@
+'use client';
+
 import type { SubmitHandler } from 'react-hook-form';
 
 import { showToast } from '@/entities/toast';

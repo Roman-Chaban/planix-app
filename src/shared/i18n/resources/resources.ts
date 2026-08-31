@@ -8,8 +8,8 @@ import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { subscriptionI18n } from '@/widgets/subscription/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
-import { deleteModalI18n } from '@/features/project-delete/i18n';
 import { projectAddI18n } from '@/features/project-create/i18n';
+import { deleteModalI18n } from '@/features/project-delete/i18n';
 
 export const resources = {
   en: {

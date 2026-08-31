@@ -5,7 +5,7 @@ import { useMediaQuery } from '@/shared/lib/hooks';
 import { Box, Grid, GridItem } from '@/shared/ui';
 import { NotFoundBanner, NotFoundTextDecartionIcon } from '@/shared/ui/icons';
 
-import styles from './NotFound.module.scss';
+import styles from './not-found.module.scss';
 
 const { LAPTOP } = BREAKPOINTS;
 

@@ -6,8 +6,8 @@ import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
 import { Portal } from '@/shared/ui';
 import { Toast } from '@/shared/ui/toast';
 
-import { selectToast } from '../model/toast.selectors';
-import { hideToast } from '../model/toast.slice';
+import { selectToast } from '../model/selectors';
+import { hideToast } from '../model/slice';
 
 export const AppToast = () => {
   const [isClosing, setIsClosing] = useState<boolean>(false);

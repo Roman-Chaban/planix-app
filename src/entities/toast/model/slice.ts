@@ -1,4 +1,4 @@
-import type { ToastPayload, ToastState } from './toast.types';
+import type { ToastPayload, ToastState } from './types';
 
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 

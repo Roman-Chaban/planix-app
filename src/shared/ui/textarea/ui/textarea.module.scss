@@ -23,6 +23,18 @@
   &::placeholder {
     color: $text-muted;
   }
+
+  &.small {
+    // small
+  }
+
+  &.medium {
+    min-height: 8rem;
+  }
+
+  &.large {
+    // large
+  }
 }
 
 .default {

@@ -5,7 +5,7 @@ import type { ModalId } from './types';
 import { useEffect } from 'react';
 
 import { useLocalStorage } from '@/shared/lib/hooks';
-import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/model/hooks';
 
 import { selectIsModalOpen } from './selectors';
 

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { closeModal, ModalId, selectIsModalOpen } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/model/hooks';
 import { Button, Modal, ModalContent, Typography } from '@/shared/ui';
 
 import { CloseIcon } from '@/shared/ui/icons';

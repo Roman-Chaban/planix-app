@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/model/hooks';
 import { Portal } from '@/shared/ui';
 import { Toast } from '@/shared/ui/toast';
 

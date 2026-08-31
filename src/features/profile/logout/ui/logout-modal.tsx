@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 import { closeModal, ModalId, selectIsModalOpen, usePersistModal } from '@/entities/modal';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/model/hooks';
 import { Button, Modal, ModalActions, ModalContent } from '@/shared/ui';
 
 import { useLogoutAction } from '../model/use-logout-action';

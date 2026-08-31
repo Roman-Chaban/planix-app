@@ -1,6 +1,6 @@
 'use client';
 
-import { useSession } from '@/shared/providers/auth/useSession';
+import { useSession } from '@/shared/providers/auth/model/use-session';
 
 export const useAuth = () => {
   const { session, isLoading } = useSession();

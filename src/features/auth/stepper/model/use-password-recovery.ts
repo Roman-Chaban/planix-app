@@ -7,7 +7,7 @@ import { closeModal } from '@/entities/modal';
 import { supabase } from '@/shared/api';
 import { buildAuthSearchParams, clearRecoveryState } from '@/shared/lib';
 import { AUTH_STEPS } from '@/shared/lib/common/constants';
-import { useAppDispatch } from '@/shared/providers/store/hooks';
+import { useAppDispatch } from '@/shared/providers/store/model/hooks';
 
 const { RESET } = AUTH_STEPS;
 

@@ -5,7 +5,7 @@ import { showToast } from '@/entities/toast';
 import { ROUTES } from '@/shared/config';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
-import { useAppDispatch } from '@/shared/providers/store/hooks';
+import { useAppDispatch } from '@/shared/providers/store/model/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 

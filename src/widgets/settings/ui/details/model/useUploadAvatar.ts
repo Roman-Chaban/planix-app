@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { uploadProfileAvatar } from '@/entities/profile';
 import { showToast } from '@/entities/toast';
 import { NAMESPACE as NS } from '@/shared/i18n';
-import { useAppDispatch } from '@/shared/providers/store/hooks';
+import { useAppDispatch } from '@/shared/providers/store/model/hooks';
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 
 const { SUCCESS, ERROR } = TOAST_VARIANT;

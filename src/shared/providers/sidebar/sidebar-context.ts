@@ -1,6 +1,6 @@
 'use client';
 
-import type { SidebarContextValue } from './types';
+import type { SidebarContextValue } from './model/types';
 
 import { createContext } from 'react';
 

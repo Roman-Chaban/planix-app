@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { useSession } from '@/shared/providers/auth/useSession';
+import { useSession } from '@/shared/providers/auth/model/use-session';
 
 import { getProfile } from '../api';
 import { queryKeys } from '../queryKeys/queryKeys';

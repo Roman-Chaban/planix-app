@@ -1,10 +1,10 @@
 'use client';
 
-import type { SidebarContextValue, SidebarProviderProps } from './types';
+import type { SidebarContextValue, SidebarProviderProps } from './model/types';
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { SidebarContext } from './SidebarContext';
+import { SidebarContext } from './sidebar-context';
 
 const STORAGE_KEY = 'sidebar-collapsed';
 

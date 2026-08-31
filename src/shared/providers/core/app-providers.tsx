@@ -1,4 +1,4 @@
-import type { AppProvidersProps } from './core.types';
+import type { AppProvidersProps } from './model/types';
 
 import { AppToast } from '@/entities/toast';
 

@@ -1,4 +1,4 @@
-import type { RegisterFormValues } from '../model/register.schema';
+import type { RegisterFormValues } from '../model/schema';
 
 import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 

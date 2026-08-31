@@ -5,7 +5,7 @@ import { ROUTES } from '@/shared/config/routes';
 
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
-import { type RegisterFormValues, registerSchema } from './register.schema';
+import { type RegisterFormValues, registerSchema } from './schema';
 
 const { SUBSCRIPTION } = ROUTES;
 
@@ -55,8 +55,8 @@ export const useRegistration = () => {
   return {
     isValid,
     isSubmitting,
-    handleSubmit,
     registrationForm,
     control,
+    handleSubmit,
   };
 };

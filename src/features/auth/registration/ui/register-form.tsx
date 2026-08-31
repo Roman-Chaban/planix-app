@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, AuthButton, Box, FormFields, FormDateField } from '@/shared/ui';
 
-import { registerFormFields } from '../lib/register-fields';
-import { useRegistration } from '../model/useRegistration';
+import { registerFormFields } from '../lib/config';
+import { useRegistration } from '../model/use-registration';
 
-import styles from './RegisterForm.module.scss';
+import styles from './register-form.module.scss';
 
 export const RegisterForm = () => {
   const { t } = useTranslation(NS.AUTH);

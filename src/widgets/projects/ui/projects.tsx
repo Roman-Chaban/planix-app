@@ -24,9 +24,9 @@ export const ProjectManagement = () => {
     projects,
     filteredProjects,
     isFiltering,
-    isLoading,
+    isInitialLoading,
     isEmpty,
-    hasData,
+    isFilteredEmpty,
     deleteModal,
     setStatusId,
     setPlatformId,
@@ -51,11 +51,11 @@ export const ProjectManagement = () => {
         setSearchQuery={setSearchQuery}
       />
 
-      {isEmpty && <EmptyState />}
-
-      {(isLoading || hasData) && (
+      {isEmpty || isFilteredEmpty ? (
+        <EmptyState />
+      ) : (
         <ProjectsTable
-          isLoading={isLoading}
+          isLoading={isInitialLoading}
           isFiltering={isFiltering}
           projects={filteredProjects}
           onDelete={deleteModal.openDeleteModal}

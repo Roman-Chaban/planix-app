@@ -20,6 +20,7 @@ export const useChangePassword = ({ successMessage, errorMessage }: UseChangePas
   const dispatch = useAppDispatch();
 
   const form = useAppForm({
+    mode: 'onChange',
     schema: changePasswordSchema,
     defaultValues: {
       oldPassword: '',
@@ -50,9 +51,13 @@ export const useChangePassword = ({ successMessage, errorMessage }: UseChangePas
     }
   };
 
+  const isPending = mutation.isPending;
+  const isSubmitDisabled = !form.formState.isValid || isPending;
+
   return {
     form,
     onSubmit,
-    isPending: mutation.isPending,
+    isPending,
+    isSubmitDisabled,
   };
 };

@@ -15,7 +15,10 @@ export const ChangePasswordForm = ({
   successMessage,
   errorMessage,
 }: ChangePasswordFormProps) => {
-  const { form, onSubmit } = useChangePassword({ successMessage, errorMessage });
+  const { form, onSubmit, isSubmitDisabled, isPending } = useChangePassword({
+    successMessage,
+    errorMessage,
+  });
 
   return (
     <PasswordForm
@@ -25,7 +28,13 @@ export const ChangePasswordForm = ({
       className={styles.changePasswordForm}
       translationNamespace={translationNamespace}
     >
-      <AuthButton preset="SUBMIT" label={buttonLabel} className={styles.savePassword} />
+      <AuthButton
+        preset="SUBMIT"
+        label={buttonLabel}
+        className={styles.savePassword}
+        disabled={isSubmitDisabled}
+        isLoading={isPending}
+      />
     </PasswordForm>
   );
 };

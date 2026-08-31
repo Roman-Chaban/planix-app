@@ -1,4 +1,4 @@
-import { getCleanPathname } from '@/shared/lib/routing/getCleanPathname';
+import { getCleanPathname } from '@/shared/lib/routing/get-clean-pathname';
 
 const normalize = (path: string) => path.replace(/\/$/, '');
 

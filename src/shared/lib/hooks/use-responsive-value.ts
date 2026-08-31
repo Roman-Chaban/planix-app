@@ -2,7 +2,7 @@
 
 import type { UseResponsiveValueOptions } from './model/types';
 
-import { useMediaQuery } from './useMediaQuery';
+import { useMediaQuery } from './use-media-query';
 
 export const useResponsiveValue = <T>({
   largeScreenValue,

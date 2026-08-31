@@ -1,6 +1,6 @@
 import { BREAKPOINTS } from '../common/constants';
 
-import { useResponsiveValue } from './useResponsiveValue';
+import { useResponsiveValue } from './use-responsive-value';
 
 const { MOBILE_LARGE } = BREAKPOINTS;
 

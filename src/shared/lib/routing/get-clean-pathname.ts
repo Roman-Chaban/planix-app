@@ -1,4 +1,4 @@
-import { isLocale } from '@/shared/lib/routing/isLocale';
+import { isLocale } from '@/shared/lib/routing/is-locale';
 
 export const getCleanPathname = (pathname: string): string => {
   const path = pathname.split('?')[0];

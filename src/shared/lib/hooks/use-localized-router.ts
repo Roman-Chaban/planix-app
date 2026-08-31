@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
 import { DEFAULT_LOCALE } from '@/shared/i18n';
-import { buildHref } from '@/shared/lib/routing/buildHref';
+import { buildHref } from '@/shared/lib/routing/build-href';
 
 export const useLocalizedRouter = () => {
   const router = useRouter();

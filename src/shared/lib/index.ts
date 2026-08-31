@@ -1,8 +1,8 @@
 export { calculateAge, FULL_NAME_REGEX, PASSWORD_REGEX, PHONE_REGEX } from './validation';
 export { buildClassName } from './classnames/build-classname';
-export { buildHref } from './routing/buildHref';
-export { getCleanPathname } from './routing/getCleanPathname';
-export { isLocale } from './routing/isLocale';
+export { buildHref } from './routing/build-href';
+export { getCleanPathname } from './routing/get-clean-pathname';
+export { isLocale } from './routing/is-locale';
 export { formatCurrency, formatDate } from './formatters';
 export { slugify } from './routing/slugify';
 export { getLogoSized, setFormErrors, getInitials, splitFullName, getAvatarPath } from './helpers';

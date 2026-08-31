@@ -58,3 +58,17 @@
   top: 0.5rem;
   right: 0.5rem;
 }
+
+@mixin button-transparent {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+}

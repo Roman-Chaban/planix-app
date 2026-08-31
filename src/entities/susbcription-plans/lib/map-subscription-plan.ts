@@ -1,4 +1,4 @@
-import type { SubscriptionPlanMapOptions } from '../model/susbcription-plans.types';
+import type { SubscriptionPlanMapOptions } from '../model/types';
 
 import { APP_LOCALES } from '@/shared/i18n';
 

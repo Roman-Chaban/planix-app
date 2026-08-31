@@ -1,4 +1,4 @@
-import type { Plan } from '../model/susbcription-plans.types';
+import type { Plan } from '../model/types';
 
 import { PRICE, SUBSCRIPTION_PLANS, supabase } from '@/shared/api';
 

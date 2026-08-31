@@ -12,7 +12,7 @@ export const SELECT_VARIANTS: SelectVariants = {
       borderColor: '#b9b9b9',
       borderRadius: '1rem',
       marginBlockStart: '0',
-      padding: '0.5rem 1.125rem',
+      padding: '0.5rem 0.625rem',
     },
 
     valueContainer: {
@@ -24,6 +24,12 @@ export const SELECT_VARIANTS: SelectVariants = {
       color: '#525252',
       cursor: 'pointer',
       overflow: 'visible',
+
+      '& > div': {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.75rem',
+      },
     },
 
     dropdownIndicator: {
@@ -41,6 +47,12 @@ export const SELECT_VARIANTS: SelectVariants = {
 
     option: {
       cursor: 'pointer',
+      paddingInlineStart: '1.125rem',
+      '& > div': {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.75rem',
+      },
     },
   },
 

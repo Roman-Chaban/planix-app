@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProfileUpdateFormProps } from '../ui/ProfileUpdateForm';
+import type { ProfileUpdateFormProps } from '../ui/profile-update-form';
 
 import { useEffect } from 'react';
 
@@ -8,8 +8,8 @@ import { useProfile } from '@/entities/profile';
 
 import { useAppForm } from '@/shared/lib/hooks';
 
-import { updateSchema, type UpdateFormValues } from './update.schema';
-import { useUpdateForm } from './useUpdateForm';
+import { updateSchema, type UpdateFormValues } from './schema';
+import { useUpdateForm } from './use-update-form';
 
 export const useUpdateProfile = ({ onSuccess }: ProfileUpdateFormProps) => {
   const { profile, refetch } = useProfile();

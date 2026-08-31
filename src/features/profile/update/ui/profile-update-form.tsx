@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { AppForm, Button, FormFields } from '@/shared/ui';
 
-import { updateFields } from '../lib/update-fields';
+import { updateFields } from '../lib/config';
 
-import { useUpdateProfile } from '../model/useUpdateProfile';
+import { useUpdateProfile } from '../model/use-update-profile';
 
 import styles from './ProfileUpdateForm.module.scss';
 

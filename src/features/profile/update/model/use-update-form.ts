@@ -1,6 +1,6 @@
 'use client';
 
-import type { UpdateFormValues } from './update.schema';
+import type { UpdateFormValues } from './schema';
 
 import { useMutation } from '@tanstack/react-query';
 

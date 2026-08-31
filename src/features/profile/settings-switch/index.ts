@@ -1,2 +1,2 @@
-export { SettingSwitchItem } from './ui/SettingSwitchItem';
-export { SettingSwitchList } from './ui/SettingSwitchList';
+export { SettingSwitchItem } from './ui/settings-switch-item';
+export { SettingSwitchList } from './ui/settings-switch-list';

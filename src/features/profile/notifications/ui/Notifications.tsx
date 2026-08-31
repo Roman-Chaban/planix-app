@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, SettingsHeader } from '@/shared/ui';
 
-import { SettingSwitchList } from '../../settings-switch/ui/SettingSwitchList';
+import { SettingSwitchList } from '../../settings-switch/ui/settings-switch-list';
 import { notificationsList } from '../lib/notifications-list';
 
 import styles from './notifications.module.scss';

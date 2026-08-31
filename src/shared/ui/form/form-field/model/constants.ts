@@ -24,7 +24,6 @@ export type FormFieldVariants = (typeof FORM_FIELD_VARIANTS)[keyof typeof FORM_F
 
 export const FORM_FIELD_SIZES = {
   HIDDEN: 'hidden',
-  DEFAULT: 'default',
   SMALL: 'small',
   MEDIUM: 'medium',
   LARGE: 'large',

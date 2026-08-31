@@ -1,8 +1,8 @@
-import type { LogoutContentProps } from '../model/logout.types';
+import type { LogoutContentProps } from '../model/types';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './LogoutModal.module.scss';
+import styles from './logout-modal.module.scss';
 
 export const LogoutContent = ({ title, subtitle }: LogoutContentProps) => {
   return (

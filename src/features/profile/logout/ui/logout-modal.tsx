@@ -5,11 +5,11 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
 import { Button, Modal, ModalActions, ModalContent } from '@/shared/ui';
 
-import { useLogoutAction } from '../model/useLogoutAction';
+import { useLogoutAction } from '../model/use-logout-action';
 
-import { LogoutContent } from './LogoutContent';
-import styles from './LogoutModal.module.scss';
-import { LogoutModalGraphic } from './LogoutModalGraphic';
+import { LogoutContent } from './logout-content';
+import styles from './logout-modal.module.scss';
+import { LogoutModalGraphic } from './logout-modal-graphic';
 
 export const LogoutModal = () => {
   const { t } = useTranslation(NS.SETTINGS);

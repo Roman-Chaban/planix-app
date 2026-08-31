@@ -9,7 +9,7 @@ import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 
-import { useLogout } from './useLogout';
+import { useLogout } from './use-logout';
 
 const { DASHBOARD } = ROUTES;
 const { SUCCESS, ERROR } = TOAST_VARIANT;

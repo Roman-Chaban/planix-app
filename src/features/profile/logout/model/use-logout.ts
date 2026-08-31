@@ -1,4 +1,4 @@
-import { useLogoutMutation } from './useLogout.mutation';
+import { useLogoutMutation } from './use-logout-mutation';
 
 export const useLogout = () => {
   const mutation = useLogoutMutation();

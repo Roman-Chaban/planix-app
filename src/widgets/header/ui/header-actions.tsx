@@ -16,8 +16,8 @@ import { NotificationErrorIcon, NotificationIcon } from '@/shared/ui/icons';
 
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
-import styles from './Header.module.scss';
-import { HeaderActionsSkeleton } from './skeleton/HeaderActionsSkeleton';
+import styles from './header.module.scss';
+import { HeaderActionsSkeleton } from './skeleton/header-actions-skeleton';
 
 const { AUTH, SETTINGS } = ROUTES;
 const { BOTTOM, LEFT } = TOOLTIP_POSITION;

@@ -7,7 +7,7 @@ import { HeaderActions, type HeaderProps } from '@/widgets/header';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './Header.module.scss';
+import styles from './header.module.scss';
 
 export const Header = ({ title }: HeaderProps) => {
   const { t } = useTranslation(NS.HEADER);

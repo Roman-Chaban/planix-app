@@ -2,7 +2,7 @@ import type { TranslateFn } from '@types';
 import type { SubmitHandler } from 'react-hook-form';
 
 import { supabase } from '@/shared/api/supabase';
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 import { setFormErrors } from '@/shared/lib';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 

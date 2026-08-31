@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { useProfile } from '@/entities/profile';
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { BREAKPOINTS } from '@/shared/lib';

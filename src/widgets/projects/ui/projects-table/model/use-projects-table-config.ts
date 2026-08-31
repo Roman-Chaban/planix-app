@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { createProjectRowActions } from '@/features/project-table';
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 

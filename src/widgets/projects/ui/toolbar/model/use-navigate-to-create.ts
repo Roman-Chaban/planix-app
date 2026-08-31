@@ -1,4 +1,4 @@
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 import { useLocalizedRouter } from '@/shared/lib/hooks';
 
 const { PROJECT_CREATE } = ROUTES;

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 import { useAuth, useLocalizedRouter } from '@/shared/lib/hooks';
 
 import { type ProfileTabId, SETTINGS_MENU } from '../ui/menu';

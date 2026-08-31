@@ -10,18 +10,10 @@ export const ProjectButton = ({
   disabled,
   className,
   label,
-  size,
   preset,
 }: ProjectButtonProps) => {
   return (
-    <Button
-      preset={preset}
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      size={size}
-      className={className}
-    >
+    <Button preset={preset} type={type} onClick={onClick} disabled={disabled} className={className}>
       {label}
     </Button>
   );

@@ -1,4 +1,4 @@
-import type { ModalId } from './modal.types';
+import type { ModalId } from './types';
 
 import type { RootState } from '@/shared/providers/store';
 

@@ -1,15 +1,15 @@
 'use client';
 
-import type { ModalId } from './modal.types';
+import type { ModalId } from './types';
 
 import { useEffect } from 'react';
 
 import { useLocalStorage } from '@/shared/lib/hooks';
 import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
 
-import { selectIsModalOpen } from './modal.selectorts';
+import { selectIsModalOpen } from './selectors';
 
-import { openModal } from './modal.slice';
+import { openModal } from './slice';
 
 export const usePersistModal = (modalId: ModalId, storageKey: string) => {
   const dispatch = useAppDispatch();

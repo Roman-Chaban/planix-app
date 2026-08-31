@@ -1,4 +1,4 @@
-import type { ModalId, ModalState } from './modal.types';
+import type { ModalId, ModalState } from './types';
 
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 

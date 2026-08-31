@@ -1,4 +1,4 @@
-import type { LoginFormSchema } from '../model/login.schema';
+import type { LoginFormSchema } from '../model/schema';
 
 import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 

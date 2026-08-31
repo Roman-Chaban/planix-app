@@ -1,6 +1,6 @@
 'use client';
 
-import type { LoginFormProps } from '../model/login.types';
+import type { LoginFormProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -8,12 +8,12 @@ import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { AppForm, Box, FormFields } from '@/shared/ui';
 
-import { loginFormFields } from '../lib/login-fields';
-import { useLogin } from '../model/useLogin';
+import { loginFormFields } from '../lib/config';
+import { useLogin } from '../model/use-login';
 
-import { LoginActions } from './LoginActions';
+import { LoginActions } from './login-actions';
 
-import styles from './LoginForm.module.scss';
+import styles from './login-form.module.scss';
 
 const { FORGOT } = AUTH_STEPS;
 

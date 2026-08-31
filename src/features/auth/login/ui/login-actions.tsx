@@ -1,6 +1,6 @@
 'use client';
 
-import type { LoginActionsProps } from '../model/login.types';
+import type { LoginActionsProps } from '../model/types';
 
 import { Controller } from 'react-hook-form';
 
@@ -8,7 +8,7 @@ import { AuthButton, Box, Checkbox } from '@/shared/ui';
 
 import { Button } from '@/shared/ui/button';
 
-import styles from './LoginForm.module.scss';
+import styles from './login-form.module.scss';
 
 export const LoginActions = ({
   control,

@@ -1,4 +1,4 @@
-import type { Profile, ProfileData } from '../model/profile.types';
+import type { Profile, ProfileData } from '../model/types';
 
 import dayjs from 'dayjs';
 

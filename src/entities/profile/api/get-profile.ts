@@ -1,7 +1,7 @@
 import { AVATARS, PROFILES, ID } from '@/shared/api';
 import { supabase } from '@/shared/api/supabase';
 
-import { mapProfile } from '../lib/profile.mapper';
+import { mapProfile } from '../lib/map-profile';
 
 export const getProfile = async (userId: string) => {
   const { data, error } = await supabase.from(PROFILES).select('*').eq(ID, userId).single();

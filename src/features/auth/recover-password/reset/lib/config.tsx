@@ -1,4 +1,4 @@
-import type { ResetFormSchema } from '../model/reset.schema';
+import type { ResetFormSchema } from '../model/schema';
 
 import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 

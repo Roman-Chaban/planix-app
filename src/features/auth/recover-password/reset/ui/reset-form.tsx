@@ -8,10 +8,10 @@ import { PasswordForm } from '@/features/auth/password';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AuthButton } from '@/shared/ui';
 
-import { resetFormFields } from '../lib/reset-fields';
-import { useResetPassword } from '../model/useResetPassword';
+import { resetFormFields } from '../lib/config';
+import { useResetPassword } from '../model/use-reset-password';
 
-import styles from './ResetForm.module.scss';
+import styles from './reset-form.module.scss';
 
 type ResetFormProps = {
   onNavigate: NavigateFn;

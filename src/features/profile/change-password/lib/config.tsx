@@ -4,7 +4,7 @@ import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 import { LockIcon, ViewOffIcon } from '@/shared/ui/icons';
 
-import styles from '../ui/ChangePasswordForm.module.scss';
+import styles from '../ui/change-password-form.module.scss';
 
 const { PASSWORD } = FORM_FIELD_TYPES;
 

@@ -6,7 +6,7 @@ import { CalendarIcon, ClientIcon, ContactIcon, MessageIcon } from '@/shared/ui/
 
 const { TEXT, EMAIL } = FORM_FIELD_TYPES;
 
-import styles from '../ui/ProfileUpdateForm.module.scss';
+import styles from '../ui/profile-update-form.module.scss';
 
 export const updateFields: readonly FormFieldConfig<UpdateFormValues>[] = [
   {

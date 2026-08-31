@@ -9,7 +9,7 @@ import { updateFields } from '../lib/config';
 
 import { useUpdateProfile } from '../model/use-update-profile';
 
-import styles from './ProfileUpdateForm.module.scss';
+import styles from './profile-update-form.module.scss';
 
 export type ProfileUpdateFormProps = {
   onSuccess?: () => void;

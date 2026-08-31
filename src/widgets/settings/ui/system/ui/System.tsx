@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { LanguageSwitcher } from '@/features/language-switcher';
 import { ChangePasswordForm } from '@/features/profile/change-password';
-import { SettingSwitchList } from '@/features/profile/settings-switch';
+import { SettingsSwitchList } from '@/features/profile/settings-switch';
 import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
@@ -30,7 +30,7 @@ export const System = () => {
       </SystemSection>
 
       <SystemSection title={t('system.securityTitle')}>
-        <SettingSwitchList list={visibleSecurityList} />
+        <SettingsSwitchList list={visibleSecurityList} />
       </SystemSection>
 
       {profile && (

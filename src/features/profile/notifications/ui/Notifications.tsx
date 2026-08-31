@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, SettingsHeader } from '@/shared/ui';
 
-import { SettingSwitchList } from '../../settings-switch/ui/settings-switch-list';
+import { SettingsSwitchList } from '../../settings-switch/ui/settings-switch-list';
 import { notificationsList } from '../lib/notifications-list';
 
 import styles from './notifications.module.scss';
@@ -18,7 +18,7 @@ export const Notifications = () => {
       <Box className={styles.container}>
         <SettingsHeader title={t('notifications.title')} />
 
-        <SettingSwitchList className={styles.notificationsList} list={notificationsList} />
+        <SettingsSwitchList className={styles.notificationsList} list={notificationsList} />
       </Box>
     </Box>
   );

@@ -10,7 +10,7 @@ import { Box, Switch, Typography } from '@/shared/ui';
 
 import styles from './settings-switch.module.scss';
 
-export const SettingSwitchItem = ({ id, icon: Icon, title, subtitle }: SettingSwitchItemProps) => {
+export const SettingsSwitchItem = ({ id, icon: Icon, title, subtitle }: SettingSwitchItemProps) => {
   const { t } = useTranslation(NS.SETTINGS);
   const [isOn, setIsOn, hydrated] = useLocalStorage<boolean>(`switch-${id}`, false);
 

@@ -5,9 +5,9 @@ import { AuthWrapper } from '@/shared/ui';
 import { ForgotModal } from '../../recover-password/forgot/ui/forgot-modal';
 import { getAuthFooter } from '../lib/get-auth-footer';
 import { getAuthHeader } from '../lib/get-auth-header';
-import { useAuthStepper } from '../model/useAuthStepper';
+import { useAuthStepper } from '../model/use-auth-stepper';
 
-import { AuthStep } from './AuthStep';
+import { AuthStep } from './auth-step';
 
 export const AuthStepper = () => {
   const { activeStep, resetEmail, navigateToStep, handleEmailSent, t } = useAuthStepper();

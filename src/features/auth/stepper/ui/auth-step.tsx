@@ -1,4 +1,4 @@
-import type { AuthStepProps } from '../model/stepper.types';
+import type { AuthStepProps } from '../model/types';
 
 import type { ReactNode } from 'react';
 

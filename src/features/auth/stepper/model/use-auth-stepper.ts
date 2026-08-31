@@ -11,7 +11,7 @@ import { buildAuthSearchParams, clearRecoveryState, getAuthStep } from '@/shared
 import { AUTH_STEPS, type AuthStep } from '@/shared/lib/common/constants';
 import { useAppDispatch } from '@/shared/providers/store/hooks';
 
-import { usePasswordRecovery } from './usePasswordRecovery';
+import { usePasswordRecovery } from './use-password-recovery';
 
 const { LOGIN, RESET } = AUTH_STEPS;
 

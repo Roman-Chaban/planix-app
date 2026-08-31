@@ -1,16 +1,16 @@
 'use client';
 
-import type { ForgotFormProps } from '../model/forgot.types';
+import type { ForgotFormProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { AppForm, AuthButton, FormFields } from '@/shared/ui';
 
-import { forgotFormFields } from '../lib/forgot-fields';
-import { useForgotPassword } from '../model/useForgotPassword';
+import { forgotFormFields } from '../lib/config';
+import { useForgotPassword } from '../model/use-forgot-password';
 
-import styles from './ForgotForm.module.scss';
+import styles from './forgot-form.module.scss';
 
 export const ForgotForm = ({ onEmailSent }: ForgotFormProps) => {
   const { t } = useTranslation(NS.AUTH);

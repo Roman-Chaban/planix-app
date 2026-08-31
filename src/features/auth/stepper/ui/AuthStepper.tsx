@@ -2,7 +2,7 @@
 
 import { AuthWrapper } from '@/shared/ui';
 
-import { ForgotModal } from '../../recover-password/forgot/ui/ForgotModal';
+import { ForgotModal } from '../../recover-password/forgot/ui/forgot-modal';
 import { getAuthFooter } from '../lib/get-auth-footer';
 import { getAuthHeader } from '../lib/get-auth-header';
 import { useAuthStepper } from '../model/useAuthStepper';

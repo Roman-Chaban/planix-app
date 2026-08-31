@@ -1,4 +1,4 @@
-import type { ForgotPasswordSchema } from '../model/forgot.schema';
+import type { ForgotPasswordSchema } from '../model/schema';
 
 import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 

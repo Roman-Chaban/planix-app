@@ -12,7 +12,7 @@ import { buildHref } from '@/shared/lib';
 import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { useAppForm } from '@/shared/lib/hooks';
 
-import { forgotPasswordSchema, type ForgotPasswordSchema } from './forgot.schema';
+import { forgotPasswordSchema, type ForgotPasswordSchema } from './schema';
 
 const { AUTH } = ROUTES;
 const { RESET } = AUTH_STEPS;

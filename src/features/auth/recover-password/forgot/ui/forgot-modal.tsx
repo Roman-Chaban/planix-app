@@ -1,6 +1,6 @@
 'use client';
 
-import type { ForgotModalProps } from '../model/forgot.types';
+import type { ForgotModalProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -11,7 +11,7 @@ import { Button, Modal, ModalContent, Typography } from '@/shared/ui';
 
 import { CloseIcon } from '@/shared/ui/icons';
 
-import styles from './ForgotForm.module.scss';
+import styles from './forgot-form.module.scss';
 
 export const ForgotModal = ({ email }: ForgotModalProps) => {
   const { t } = useTranslation(NS.AUTH);

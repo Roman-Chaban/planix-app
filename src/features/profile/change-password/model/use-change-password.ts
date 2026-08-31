@@ -6,8 +6,8 @@ import { useAppDispatch } from '@/shared/providers/store/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 
-import { changePasswordSchema, type ChangePasswordSchema } from './change-password.schema';
-import { useChangePasswordMutation } from './useChangePasswordMutation';
+import { changePasswordSchema, type ChangePasswordSchema } from './schema';
+import { useChangePasswordMutation } from './use-change-password-mutation';
 
 const { SUCCESS, ERROR } = TOAST_VARIANT;
 

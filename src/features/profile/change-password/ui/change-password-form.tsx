@@ -1,13 +1,13 @@
-import type { ChangePasswordFormProps } from '../model/change-password.types';
+import type { ChangePasswordFormProps } from '../model/types';
 
 import { PasswordForm } from '@/features/auth/password';
 
 import { AuthButton } from '@/shared/ui';
 
-import { changePasswordFields } from '../lib/fields';
-import { useChangePassword } from '../model/useChangePassword';
+import { changePasswordFields } from '../lib/config';
+import { useChangePassword } from '../model/use-change-password';
 
-import styles from './ChangePasswordForm.module.scss';
+import styles from './change-password-form.module.scss';
 
 export const ChangePasswordForm = ({
   translationNamespace,

@@ -1,4 +1,4 @@
-import type { ChangePasswordSchema } from '../model/change-password.schema';
+import type { ChangePasswordSchema } from '../model/schema';
 
 import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';

@@ -1,10 +1,10 @@
-import type { Billing } from './billing.types';
+import type { Billing } from './types';
 
 import { useQuery } from '@tanstack/react-query';
 
 import { supabase } from '@/shared/api/supabase';
 
-import { getBillingHistory } from '../api/getBillingHistory';
+import { getBillingHistory } from '../api/get-billing-history';
 import { queryKeys } from '../queryKeys/queryKeys';
 
 export const useBillingHistory = () => {

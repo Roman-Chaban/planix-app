@@ -2,7 +2,7 @@
 
 import { Header } from '@/widgets/header';
 
-import { DeleteModal } from '@/features/delete-project';
+import { DeleteModal } from '@/features/project-delete';
 import { BREAKPOINTS } from '@/shared/lib';
 import { useResponsiveValue } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';

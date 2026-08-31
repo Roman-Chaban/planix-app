@@ -29,10 +29,8 @@ export const DeleteModalActions = ({
         onChange={(event) => onReasonChange(event.target.value)}
         placeholder={t('fieldPlaceholder')}
         label={t('fieldLabel')}
-        textareaClassName={styles.textarea}
-        labelClassName={styles.reasonLabel}
-        disabled={isDeleting}
         error={error ? t('deleteError') : undefined}
+        disabled={isDeleting}
       />
 
       <ModalActions className={styles.deleteActions}>

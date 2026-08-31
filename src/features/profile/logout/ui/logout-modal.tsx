@@ -8,8 +8,8 @@ import { Button, Modal, ModalActions, ModalContent } from '@/shared/ui';
 import { useLogoutAction } from '../model/use-logout-action';
 
 import { LogoutContent } from './logout-content';
-import styles from './logout-modal.module.scss';
 import { LogoutModalGraphic } from './logout-modal-graphic';
+import styles from './logout-modal.module.scss';
 
 export const LogoutModal = () => {
   const { t } = useTranslation(NS.SETTINGS);

@@ -8,7 +8,7 @@ import { useMediaQuery } from '@/shared/lib/hooks';
 import { PlanixLogoIcon } from '@/shared/ui/icons';
 import { Avatar, Box, Typography } from '@/shared/ui/index';
 
-import styles from './BrandBanner.module.scss';
+import styles from './brand-banner.module.scss';
 
 const { MOBILE_LARGE } = BREAKPOINTS;
 

@@ -1,14 +1,13 @@
 import { brandI18n } from '@/widgets/brand-banner/i18n';
 import { dashboardI18n } from '@/widgets/dashboard/i18n';
 import { headerI18n } from '@/widgets/header/i18n';
-import { projectCreateI18n } from '@/widgets/project-create/i18n';
 import { projectI18n } from '@/widgets/project-details/i18n';
 import { projectManagementI18n } from '@/widgets/projects/i18n';
 import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { subscriptionI18n } from '@/widgets/subscription/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
-import { projectAddI18n } from '@/features/project-create/i18n';
+import { projectCreateI18n } from '@/features/project-create/i18n';
 import { deleteModalI18n } from '@/features/project-delete/i18n';
 
 export const resources = {
@@ -22,7 +21,6 @@ export const resources = {
     header: headerI18n.en,
     projectManagement: projectManagementI18n.en,
     project: projectI18n.en,
-    projectAdd: projectAddI18n.en,
     projectCreate: projectCreateI18n.en,
     settings: settingsI18n.en,
   },
@@ -36,7 +34,6 @@ export const resources = {
     header: headerI18n.uk,
     projectManagement: projectManagementI18n.uk,
     project: projectI18n.uk,
-    projectAdd: projectAddI18n.uk,
     projectCreate: projectCreateI18n.en,
     settings: settingsI18n.uk,
   },

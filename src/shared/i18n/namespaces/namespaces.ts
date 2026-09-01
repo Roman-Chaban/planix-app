@@ -9,7 +9,6 @@ export const NAMESPACE = {
   DELETE_MODAL: 'deleteModal',
   HEADER: 'header',
   PROJECT: 'project',
-  PROJECT_ADD: 'projectAdd',
   SIGN_UP_FORM: 'signUpForm',
   FORGOT_PASSWORD_FORM: 'forgotPasswordForm',
   RESET_PASSWORD_FORM: 'resetPasswordForm',

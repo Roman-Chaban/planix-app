@@ -7,11 +7,11 @@ import { useProfile } from '@/entities/profile';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box } from '@/shared/ui';
 
-import styles from '../details.module.scss';
 import { useChangeMode } from '../model/use-change-mode';
 
 import { DetailsHeader } from './details-header';
 import { DetailsList } from './details-list';
+import styles from './details.module.scss';
 
 import { DetailsSkeleton } from './skeleton/details-skeleton';
 

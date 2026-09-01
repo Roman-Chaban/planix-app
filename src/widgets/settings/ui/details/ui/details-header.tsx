@@ -11,8 +11,9 @@ import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import { UploadAvatarIcon } from '@/shared/ui/icons';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
-import styles from '../details.module.scss';
 import { useUploadAvatar } from '../model/use-upload-avatar';
+
+import styles from './details.module.scss';
 
 const { BOTTOM } = TOOLTIP_POSITION;
 const { FILE } = FORM_FIELD_TYPES;

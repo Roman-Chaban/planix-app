@@ -1,6 +1,6 @@
 import { Box, Skeleton } from '@/shared/ui';
 
-import styles from './subscription.module.scss';
+import styles from '../subscription.module.scss';
 
 export const ProfessionalPlanSkeleton = () => {
   return (

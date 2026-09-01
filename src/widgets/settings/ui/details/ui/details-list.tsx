@@ -2,7 +2,7 @@ import type { ProfileInfoListProps } from '../model/types';
 
 import { Box } from '@/shared/ui';
 
-import styles from '../details.module.scss';
+import styles from './details.module.scss';
 import { profileFields } from '../lib/get-info-fields';
 
 import { DetailsItem } from './details-item';

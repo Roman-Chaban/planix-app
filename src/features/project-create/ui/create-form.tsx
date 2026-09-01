@@ -12,7 +12,6 @@ import { AppForm, Box, FormFields, ProjectButton, Typography } from '@/shared/ui
 import { BUTTON_SIZES } from '@/shared/ui/button';
 import { FORM_FIELD_SIZES } from '@/shared/ui/form/form-field';
 
-import { CreateFormFields } from './create-form-fields';
 import styles from './create-form.module.scss';
 
 const { MOBILE_LARGE } = BREAKPOINTS;
@@ -40,8 +39,6 @@ export const CreateForm = () => {
           translationNamespace={NS.PROJECT_ADD}
           size={fieldSize}
         />
-
-        <CreateFormFields fieldSize={fieldSize} />
 
         <ProjectButton
           size={buttonSize}

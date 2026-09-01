@@ -4,9 +4,15 @@ import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 import { ClientIcon, PlatformIcon, PriceIcon, ProjectNameIcon } from '@/shared/ui/icons';
 
+import {
+  renderProjectDateRangeField,
+  renderProjectDescriptionField,
+  renderProjectFilesField,
+} from './field-renderers';
+
 const { TEXT } = FORM_FIELD_TYPES;
 
-export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
+const basicProjectFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
   {
     name: 'projectName',
     label: 'projectNameLabel',
@@ -34,5 +40,27 @@ export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] 
     type: TEXT,
     placeholder: 'pricePlaceholder',
     startIcon: <PriceIcon />,
+  },
+];
+
+export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
+  ...basicProjectFields,
+  {
+    name: 'startDate',
+    label: 'startDateLabel',
+    type: TEXT,
+    render: renderProjectDateRangeField,
+  },
+  {
+    name: 'description',
+    label: 'descriptionLabel',
+    type: TEXT,
+    render: renderProjectDescriptionField,
+  },
+  {
+    name: 'files',
+    label: 'label',
+    type: TEXT,
+    render: renderProjectFilesField,
   },
 ];

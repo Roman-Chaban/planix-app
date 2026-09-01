@@ -12,19 +12,6 @@
   }
 }
 
-.createForm {
-  @include flex-col($space-6, flex-start, flex-start);
-  padding-inline: 1.375rem;
-
-  @include respond(md) {
-    padding-inline: $space-4;
-  }
-
-  @include respond(sm) {
-    padding-inline: $space-3;
-  }
-}
-
 .header {
   width: 100%;
   background: $bg-brand-subtle;
@@ -36,21 +23,15 @@
   @include title-bold($font-weight-semibold, $body-lg-font-size, $text-secondary);
 }
 
-.form {
-  @include flex-col(1.5rem, start, stretch, column);
+.createForm {
+  @include flex-col($space-6, flex-start, flex-start);
   padding-inline: 1.375rem;
-  padding-block-end: 1.875rem;
 
-  @include respond(sm) {
-    padding-inline: 1rem;
+  @include respond(md) {
+    padding-inline: $space-4;
   }
-}
-
-.row {
-  width: 100%;
-  @include flex(flex, row, start, start, 1.5rem);
 
   @include respond(sm) {
-    @include flex-col(1.5rem, start, stretch, column);
+    padding-inline: $space-3;
   }
 }

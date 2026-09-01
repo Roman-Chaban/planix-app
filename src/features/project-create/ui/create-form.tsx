@@ -2,9 +2,8 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
-import { BREAKPOINTS } from '@/shared/lib';
-import { useMediaQuery } from '@/shared/lib/hooks';
+import { NAMESPACE as NS } from '@/shared/i18n';
+import { BREAKPOINTS, useMediaQuery } from '@/shared/lib';
 import { AppForm, Box, FormFields, ProjectButton, Typography } from '@/shared/ui';
 
 import { BUTTON_SIZES } from '@/shared/ui/button';
@@ -20,7 +19,7 @@ const { MOBILE_LARGE } = BREAKPOINTS;
 
 export const CreateForm = () => {
   const { t } = useTranslation(NS.PROJECT_CREATE);
-  const { form, onSubmit, isLoading } = useProjectCreate();
+  const { form, onSubmit, isSubmitDisabled, isLoading } = useProjectCreate();
 
   const isMobileLarge = useMediaQuery(MOBILE_LARGE);
 
@@ -47,7 +46,8 @@ export const CreateForm = () => {
           size={buttonSize}
           label={t('addProjectButton')}
           translationNamespace={NS.PROJECT_CREATE}
-          disabled={isLoading}
+          disabled={isSubmitDisabled}
+          isLoading={isLoading}
         />
       </AppForm>
     </Box>

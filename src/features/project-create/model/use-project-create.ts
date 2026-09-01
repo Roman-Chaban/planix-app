@@ -18,7 +18,7 @@ export const useProjectCreate = () => {
 
   const { createProject, isProjectActionPending } = useProjectActions();
 
-  const projectForm = useAppForm<ProjectCreateSchema>({
+  const projectCreateForm = useAppForm<ProjectCreateSchema>({
     schema: projectCreateSchema,
     mode: 'onChange',
 
@@ -34,6 +34,10 @@ export const useProjectCreate = () => {
       files: [],
     },
   });
+
+  const {
+    formState: { isValid, isSubmitting },
+  } = projectCreateForm;
 
   const processFiles = async (files: ProjectCreateSchema['files']): Promise<ProjectFile[]> => {
     return Promise.all(
@@ -51,7 +55,7 @@ export const useProjectCreate = () => {
     try {
       const uploadedFiles = await processFiles(formData.files);
 
-      createProject.mutate(
+      await createProject.mutateAsync(
         {
           formData,
           files: uploadedFiles,
@@ -67,9 +71,14 @@ export const useProjectCreate = () => {
     }
   };
 
+  const isLoading = isSubmitting || isProjectActionPending;
+  const isSubmitDisabled = !isValid || isLoading;
+
   return {
-    form: projectForm,
-    isLoading: isProjectActionPending,
+    form: projectCreateForm,
+    isLoading,
+    isSubmitDisabled,
+    isSubmitting,
     onSubmit: handleFormSubmit,
   };
 };

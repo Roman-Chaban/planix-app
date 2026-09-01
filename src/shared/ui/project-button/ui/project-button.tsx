@@ -5,15 +5,23 @@ import type { ProjectButtonProps } from '../model/types';
 import { Button } from '../../button';
 
 export const ProjectButton = ({
-  onClick,
   type,
+  isLoading,
   disabled,
   className,
   label,
   preset,
+  onClick,
 }: ProjectButtonProps) => {
   return (
-    <Button preset={preset} type={type} onClick={onClick} disabled={disabled} className={className}>
+    <Button
+      preset={preset}
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      isLoading={isLoading}
+      className={className}
+    >
       {label}
     </Button>
   );

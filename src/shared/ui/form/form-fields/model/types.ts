@@ -1,7 +1,6 @@
 import type { FormFieldSizes } from '../../form-field/model/constants';
 import type { WithClassName } from '@types';
 import type {
-  Control,
   FieldErrors,
   FieldValues,
   Path,
@@ -11,21 +10,29 @@ import type {
 
 import type { ReactNode } from 'react';
 
-type FormFieldFeature = 'password-toggle' | 'none';
+export type DefaultFieldKind = 'text' | 'password' | 'date';
+export type FieldGroupLayout = 'row' | 'column';
+export type FormFieldFeature = 'password-toggle' | 'none';
 
-export type FormFieldRenderProps<T extends FieldValues> = {
-  form: UseFormReturn<T>;
-  control: Control<T>;
-  field: FormFieldConfig<T>;
+export type SharedFieldRendererProps<T extends FieldValues> = {
+  control: UseFormReturn<T>['control'];
   size?: FormFieldSizes;
-  translationNamespace: string;
   t: (key: string) => string;
 };
 
-export type FormFieldConfig<T extends FieldValues> = {
+export type FieldByKind<T extends FieldValues, K extends FormFieldKind> = Extract<
+  FormFieldConfig<T>,
+  { kind: K }
+>;
+
+export type DefaultFieldValue<T extends FieldValues> = Extract<
+  FormFieldConfig<T>,
+  { kind?: DefaultFieldKind }
+>;
+
+type BaseFieldConfig<T extends FieldValues> = {
   name: Path<T>;
   label: string;
-  type: string;
   placeholder?: string;
   autoComplete?: string;
   startIcon?: ReactNode;
@@ -33,8 +40,50 @@ export type FormFieldConfig<T extends FieldValues> = {
   feature?: FormFieldFeature;
   required?: boolean;
   gridArea?: string | null;
-  render?: (props: FormFieldRenderProps<T>) => ReactNode;
+  size?: FormFieldSizes;
+  group?: string;
 } & WithClassName;
+
+type DefaultFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
+  kind?: DefaultFieldKind;
+  type?: string;
+};
+
+type DateRangeFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
+  kind: 'date-range';
+  startField: Path<T>;
+  endField: Path<T>;
+  startLabel?: string;
+  endLabel?: string;
+  startPlaceholder?: string;
+  endPlaceholder?: string;
+};
+
+type TextareaFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
+  kind: 'textarea';
+};
+
+type FileUploadFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
+  kind: 'file-upload';
+};
+
+type GroupFieldConfig<T extends FieldValues> = {
+  kind: 'group';
+  name?: string;
+  label?: string;
+  layout?: FieldGroupLayout;
+  className?: string;
+  fields: readonly FormFieldConfig<T>[];
+};
+
+export type FormFieldKind = DefaultFieldKind | 'date-range' | 'textarea' | 'file-upload' | 'group';
+
+export type FormFieldConfig<T extends FieldValues> =
+  | DefaultFieldConfig<T>
+  | DateRangeFieldConfig<T>
+  | TextareaFieldConfig<T>
+  | FileUploadFieldConfig<T>
+  | GroupFieldConfig<T>;
 
 export type FormFieldsProps<T extends FieldValues> = {
   fields: readonly FormFieldConfig<T>[];
@@ -42,4 +91,20 @@ export type FormFieldsProps<T extends FieldValues> = {
   errors: FieldErrors<T>;
   size?: FormFieldSizes;
   register: UseFormRegister<T>;
+};
+
+export type DateRangeFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
+  field: FieldByKind<T, 'date-range'>;
+};
+
+export type DefaultFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
+  field: DefaultFieldValue<T>;
+};
+
+export type FileUploadFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
+  field: FieldByKind<T, 'file-upload'>;
+};
+
+export type TextareaFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
+  field: FieldByKind<T, 'textarea'>;
 };

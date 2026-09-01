@@ -2,105 +2,23 @@
 
 import type { FormFieldsProps } from '../model/types';
 
-import { Fragment } from 'react';
-import { type FieldValues, Controller, useFormContext } from 'react-hook-form';
+import { Fragment } from 'react/jsx-runtime';
+import { useFormContext, type FieldValues } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { usePasswordToggle } from '@/shared/lib/hooks';
-import { FormField } from '@/shared/ui';
-import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
+import { formFieldsRender } from './form-fields-render';
 
-import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../../form-field/model/constants';
-
-const { TEXT, PASSWORD } = FORM_FIELD_TYPES;
-const { DEFAULT } = FORM_FIELD_VARIANTS;
-
-export function FormFields<T extends FieldValues>({
+export const FormFields = <T extends FieldValues>({
   fields,
   translationNamespace,
   size = 'large',
-}: Omit<FormFieldsProps<T>, 'register' | 'errors'>) {
+}: Omit<FormFieldsProps<T>, 'register' | 'errors'>) => {
   const { t } = useTranslation(translationNamespace);
-
-  const { getVisibility, toggleVisibility } = usePasswordToggle();
-
-  const form = useFormContext<T>();
-  const { control } = form;
+  const { control } = useFormContext<T>();
 
   return (
-    <>
-      {fields.map((field) => {
-        if (field.render) {
-          return (
-            <Fragment key={field.name}>
-              {field.render({
-                form,
-                control,
-                field,
-                size,
-                translationNamespace,
-                t,
-              })}
-            </Fragment>
-          );
-        }
-
-        const isPassword = field.feature === 'password-toggle';
-        const visible = isPassword && getVisibility(field.name);
-        const type = isPassword ? (visible ? TEXT : PASSWORD) : field.type;
-
-        const endIcon = isPassword ? visible ? <ViewIcon /> : <ViewOffIcon /> : field.endIcon;
-
-        return (
-          <Controller
-            key={field.name}
-            name={field.name}
-            control={control}
-            render={({ field: { onChange, onBlur, value, ref }, fieldState }) => {
-              const errorText = fieldState.error?.message ? t(fieldState.error.message) : undefined;
-
-              return (
-                <FormField
-                  id={field.name}
-                  label={t(field.label)}
-                  startIcon={field.startIcon}
-                  endIcon={endIcon}
-                  error={errorText}
-                  size={size}
-                  inputRef={ref}
-                  variant={DEFAULT}
-                  className={field.className}
-                  inputProps={{
-                    type,
-                    name: field.name,
-                    value: value ?? '',
-                    onBlur,
-                    onChange: (event) => {
-                      const actualValue =
-                        event && typeof event === 'object' && 'target' in event
-                          ? event.target.value
-                          : event;
-                      onChange(actualValue);
-                    },
-                    placeholder: field.placeholder ? t(field.placeholder) : undefined,
-                    autoComplete: field.autoComplete,
-                    required: field.required,
-                  }}
-                  onEndIconMouseDown={
-                    isPassword ? () => toggleVisibility(field.name, true) : undefined
-                  }
-                  onEndIconMouseUp={
-                    isPassword ? () => toggleVisibility(field.name, false) : undefined
-                  }
-                  onEndIconMouseLeave={
-                    isPassword ? () => toggleVisibility(field.name, false) : undefined
-                  }
-                />
-              );
-            }}
-          />
-        );
-      })}
-    </>
+    <Fragment>
+      {fields.map((field, index) => formFieldsRender(field, control, size, t, index))}
+    </Fragment>
   );
-}
+};

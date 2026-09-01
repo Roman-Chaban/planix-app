@@ -1,0 +1,13 @@
+@use '@/shared/styles' as *;
+
+.group {
+  width: 100%;
+}
+
+.row {
+  @include flex-row($space-6);
+}
+
+.column {
+  @include flex-col($space-6);
+}

@@ -1,4 +1,10 @@
 {
+  "header": {
+    "title": "Add Project",
+    "label": "Add Project  /",
+    "value": "Project List"
+  },
+
   "projectDetailsTitle": "Project details",
   "projectNameLabel": "Project Name",
   "projectNamePlaceholder": "Enter Project Name",

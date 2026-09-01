@@ -1,4 +1,10 @@
 {
+  "header": {
+    "title": "Додати проєкт",
+    "label": "Додати проєкт  /",
+    "value": "Список проектів"
+  },
+
   "projectDetailsTitle": "Деталі проекту",
   "projectNameLabel": "Назва проекту",
   "projectNamePlaceholder": "Введіть назву проекту",

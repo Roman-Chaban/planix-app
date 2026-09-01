@@ -1,7 +1,7 @@
 import en from './en.json';
 import uk from './uk.json';
 
-export const projectAddI18n = {
+export const projectCreateI18n = {
   en,
   uk,
 };

@@ -9,7 +9,7 @@ import { Box, Button } from '@/shared/ui';
 
 import { SubscriptionHeader } from './header/ui/subscription-header';
 import { SubscriptionPlans } from './plans/ui/subscription-plans';
-import styles from './Subscription.module.scss';
+import styles from './subscription.module.scss';
 
 const { DASHBOARD } = ROUTES;
 

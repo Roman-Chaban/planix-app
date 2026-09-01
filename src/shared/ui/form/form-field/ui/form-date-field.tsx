@@ -24,7 +24,7 @@ export const FormDateField = ({
   size,
   inputProps,
 }: FormDateFieldProps) => {
-  const { t } = useTranslation(NAMESPACE.PROJECT_ADD);
+  const { t } = useTranslation(NAMESPACE.PROJECT_CREATE);
 
   const { value, onChange, ref, required, ...rest } = inputProps;
 

@@ -25,10 +25,10 @@ export const DateRangeField = <T extends FieldValues>({
           <FormDateField
             size={size}
             id={String(dateField.startField)}
-            label={dateField.startLabel ?? dateField.label}
-            placeholder={
-              dateField.startPlaceholder ?? dateField.placeholder ?? 'startDatePlaceholder'
-            }
+            label={t(dateField.startLabel ?? dateField.label)}
+            placeholder={t(
+              dateField.startPlaceholder ?? dateField.placeholder ?? 'startDatePlaceholder',
+            )}
             error={fieldState.error?.message ? t(fieldState.error.message) : undefined}
             inputProps={{
               value: inputField.value ?? '',
@@ -47,8 +47,10 @@ export const DateRangeField = <T extends FieldValues>({
           <FormDateField
             size={size}
             id={String(dateField.endField)}
-            label={dateField.endLabel ?? dateField.label}
-            placeholder={dateField.endPlaceholder ?? dateField.placeholder ?? 'dueDatePlaceholder'}
+            label={t(dateField.endLabel ?? dateField.label)}
+            placeholder={t(
+              dateField.endPlaceholder ?? dateField.placeholder ?? 'dueDatePlaceholder',
+            )}
             error={fieldState.error?.message ? t(fieldState.error.message) : undefined}
             inputProps={{
               value: inputField.value ?? '',

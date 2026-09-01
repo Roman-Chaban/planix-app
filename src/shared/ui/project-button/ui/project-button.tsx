@@ -11,12 +11,14 @@ export const ProjectButton = ({
   className,
   label,
   preset,
+  size,
   onClick,
 }: ProjectButtonProps) => {
   return (
     <Button
       preset={preset}
       type={type}
+      size={size}
       onClick={onClick}
       disabled={disabled}
       isLoading={isLoading}

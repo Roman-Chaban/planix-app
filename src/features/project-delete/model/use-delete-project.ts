@@ -6,7 +6,7 @@ import { closeModal, ModalId, openModal, selectIsModalOpen } from '@/entities/mo
 import { useProjectActions } from '@/entities/projects';
 import { showToast } from '@/entities/toast';
 import { NAMESPACE } from '@/shared/i18n';
-import { useAppDispatch, useAppSelector } from '@/shared/providers/store/hooks';
+import { useAppDispatch, useAppSelector } from '@/shared/providers/store/model/hooks';
 
 import { TOAST_VARIANT } from '@/shared/ui/toast';
 

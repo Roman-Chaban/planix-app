@@ -1,1 +1,1 @@
-export { NotFoundLayout } from './ui/NotFound';
+export { NotFoundLayout } from './ui/not-found';

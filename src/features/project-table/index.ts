@@ -5,4 +5,4 @@ export type {
   ProjectRowActionsFactory,
 } from './model/types';
 
-export { createProjectRowActions } from './lib/createProjectRowActions';
+export { createProjectRowActions } from './lib/create-project-row-actions';

@@ -8,7 +8,7 @@ import { type ProjectFile, uploadProjectFile } from '@/entities/projects';
 
 import { useProjectActions } from '@/entities/projects/model/use-project-actions';
 
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
 const { PROJECT } = ROUTES;

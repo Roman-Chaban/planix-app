@@ -1,0 +1,65 @@
+@use '@/shared/styles' as *;
+
+.cardsWrapper {
+  width: 100%;
+  @include container(dashboard-cards, inline-size);
+}
+
+.cards {
+  @include responsive-grid(18rem, 1.875rem);
+  container-type: inline-size;
+}
+
+@container dashboard-cards (min-width: 20.0625rem) and (max-width: 40rem) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container dashboard-cards (min-width: 40.0625rem) and (max-width: 48rem) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container dashboard-cards (min-width: 48.0625rem) and (max-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@container dashboard-cards (min-width: 64.0625rem) and (max-width: 80rem) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@container dashboard-cards (min-width: 80.0625rem) {
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  background: $neutral-0;
+  border: 0.125rem solid $neutral-200;
+  padding: 1.25rem 1.375rem;
+  background:
+    $gradient-overlay-secondary top / 100% 6rem no-repeat,
+    $neutral-0;
+
+  &::before {
+    @include text-before-decoration(
+      '',
+      absolute,
+      0,
+      0.25rem,
+      1.188rem,
+      0 0.5rem 0.5rem 0,
+      $primary-700
+    );
+  }
+}

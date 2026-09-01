@@ -1,3 +1,3 @@
-export { getProfile } from './getProfile';
-export { uploadProfileAvatar } from './uploadProfileAvatar';
-export { updateProfile } from './updateProfile';
+export { getProfile } from './get-profile';
+export { uploadProfileAvatar } from './upload-profile-avatar';
+export { updateProfile } from './update-profile';

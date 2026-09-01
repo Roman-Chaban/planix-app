@@ -1,7 +1,7 @@
-export { registerSchema, type RegisterFormValues } from './model/register.schema';
+export { registerSchema, type RegisterFormValues } from './model/schema';
 
-export { registerFormFields } from './lib/register-fields';
+export { registerFormFields } from './lib/config';
 
-export { useRegistration } from './model/useRegistration';
+export { useRegistration } from './model/use-registration';
 
-export { RegisterForm } from './ui/RegisterForm';
+export { RegisterForm } from './ui/register-form';

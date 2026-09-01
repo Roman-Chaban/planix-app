@@ -1,1 +1,1 @@
-export { SubscriptionHeader } from './ui/SubscriptionHeader';
+export { SubscriptionHeader } from './ui/subscription-header';

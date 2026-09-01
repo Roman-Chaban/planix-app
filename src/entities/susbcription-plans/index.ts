@@ -1,13 +1,13 @@
-export { mapSubscriptionPlan } from './lib/subscription-plans.mapper';
-export { getSubscriptionPlans } from './api/getSubscriptionPlans';
+export { mapSubscriptionPlan } from './lib/map-subscription-plan';
+export { getSubscriptionPlans } from './api/get-subscription-plans';
 
 export type {
   Plan,
   SubscriptionPlanMapOptions,
   UseSubscriptionPlansOptions,
   SubscriptionPlanCard,
-} from './model/susbcription-plans.types';
+} from './model/types';
 
-export { useSubscriptionPlans } from './model/useSubscriptionPlans';
+export { useSubscriptionPlans } from './model/use-subscription-plans';
 
-export { queryKeys } from './queryKeys/queryKeys';
+export { queryKeys } from './query-keys/query-keys';

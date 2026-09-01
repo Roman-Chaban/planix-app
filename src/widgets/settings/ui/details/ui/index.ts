@@ -1,5 +1,5 @@
-export { Details } from './Details';
-export { DetailsHeader } from './DetailsHeader';
-export { DetailsItem } from './DetailsItem';
-export { DetailsList } from './DetailsList';
-export { DetailsSkeleton } from './skeleton/DetailsSkeleton';
+export { Details } from './details';
+export { DetailsHeader } from './details-header';
+export { DetailsItem } from './details-item';
+export { DetailsList } from './details-list';
+export { DetailsSkeleton } from './skeleton/details-skeleton';

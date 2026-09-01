@@ -1,1 +1,1 @@
-export { System } from './ui/System';
+export { System } from './ui/system';

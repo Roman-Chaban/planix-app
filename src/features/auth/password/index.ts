@@ -1,1 +1,1 @@
-export { PasswordForm } from './ui/PasswordForm';
+export { PasswordForm } from './ui/password-form';

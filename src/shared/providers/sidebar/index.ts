@@ -1,7 +1,7 @@
-export type { SidebarContextValue, SidebarProviderProps } from './types';
+export type { SidebarContextValue, SidebarProviderProps } from './model/types';
 
-export { useSidebar } from './useSidebar';
+export { useSidebar } from './model/use-sidebar';
 
-export { SidebarContext } from './SidebarContext';
+export { SidebarContext } from './sidebar-context';
 
-export { SidebarProvider } from './SidebarProvider';
+export { SidebarProvider } from './sidebar-provider';

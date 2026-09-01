@@ -12,7 +12,7 @@ import {
   updateProject as updateProjectRepository,
 } from '@/entities/projects';
 
-import { queryKeys } from '@/entities/projects/queryKeys/queryKeys';
+import { queryKeys } from '@/entities/projects/query-keys/query-keys';
 
 import { mapCreateProject } from '../lib/map-create-project';
 import { mapUpdateProject } from '../lib/map-update-project';

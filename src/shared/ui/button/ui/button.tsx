@@ -8,7 +8,7 @@ import { ButtonContent } from './button-content';
 export const Button = (props: ButtonProps) => {
   const resolvedProps = resolveButtonProps(props);
 
-  const { uiProps, htmlProps } = splitButtonProps(resolvedProps);
+  const { uiProps, buttonProps } = splitButtonProps(resolvedProps);
 
   const {
     variant = BUTTON_VARIANTS.DEFAULT,
@@ -24,7 +24,7 @@ export const Button = (props: ButtonProps) => {
     children,
   } = uiProps;
 
-  const isDisabled = htmlProps.disabled || isLoading;
+  const isDisabled = buttonProps.disabled || isLoading;
 
   const className = buildButtonClassName({
     variant,
@@ -32,11 +32,11 @@ export const Button = (props: ButtonProps) => {
     shape,
     fullWidth,
     minWidth,
-    className: htmlProps.className,
+    className: buttonProps.className,
   });
 
   return (
-    <button {...htmlProps} className={className} disabled={isDisabled}>
+    <button {...buttonProps} className={className} disabled={isDisabled}>
       <ButtonContent
         startIcon={startIcon}
         endIcon={endIcon}

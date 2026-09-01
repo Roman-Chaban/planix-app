@@ -1,12 +1,27 @@
 export { calculateAge, FULL_NAME_REGEX, PASSWORD_REGEX, PHONE_REGEX } from './validation';
-export { buildClassName } from './classnames/buildClassName';
-export { buildHref } from './routing/buildHref';
-export { getCleanPathname } from './routing/getCleanPathname';
-export { isLocale } from './routing/isLocale';
+export { buildClassName } from './classnames/build-classname';
+export { buildHref } from './routing/build-href';
+export { getCleanPathname } from './routing/get-clean-pathname';
+export { isLocale } from './routing/is-locale';
 export { formatCurrency, formatDate } from './formatters';
 export { slugify } from './routing/slugify';
 export { getLogoSized, setFormErrors, getInitials, splitFullName, getAvatarPath } from './helpers';
 export { applyDateMask, toDisplay, toISO, toInputFormat } from './date/format';
 export { buildAuthSearchParams, getAuthStep, isAuthStep, clearRecoveryState } from './auth';
+
+export {
+  useAppForm,
+  useAuth,
+  useDragScroll,
+  useEscapeKey,
+  useLocalStorage,
+  useLocalizedRouter,
+  useLockBodyScroll,
+  useMediaQuery,
+  usePageTitles,
+  usePasswordToggle,
+  usePortal,
+  useResponsiveValue,
+} from './hooks';
 
 export { AUTH_SESSION, DATE_FORMAT, AUTH_STEP_VALUES, STATUSES, BREAKPOINTS } from './common';

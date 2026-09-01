@@ -1,4 +1,4 @@
-import type { DashboardCards } from '../model/cards.types';
+import type { DashboardCards } from '../model/types';
 
 import type { TranslateFn } from '@types';
 

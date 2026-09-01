@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
-import { ROUTES } from '@/shared/config/routes';
+import { ROUTES } from '@/shared/config';
 import { DEFAULT_LOCALE } from '@/shared/i18n';
 
 const { DASHBOARD } = ROUTES;

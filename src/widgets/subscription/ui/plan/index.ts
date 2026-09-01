@@ -1,4 +1,4 @@
-export { SubscriptionPlan } from './ui/SubscriptionPlan';
-export { SubscriptionPlanFeature } from './ui/SubscriptionPlanFeature';
+export { SubscriptionPlan } from './ui/subscription-plan';
+export { SubscriptionPlanFeature } from './ui/subscription-plan-feature';
 
 export { SubscriptionPlanSkeleton, SubscriptionPlanFeatureSkeleton } from './ui/skeleton';

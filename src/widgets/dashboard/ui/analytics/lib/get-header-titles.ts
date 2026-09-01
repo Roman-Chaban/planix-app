@@ -1,8 +1,8 @@
 import type { TranslateFn } from '@types';
 
-import { VARIANTS } from './analytics.constants';
+import { ANALYTICS_VARIANTS } from '../model/constants';
 
-const { PRIMARY, SECONDARY, TERTIARY } = VARIANTS;
+const { PRIMARY, SECONDARY, TERTIARY } = ANALYTICS_VARIANTS;
 
 export const getHeaderTitles = (t: TranslateFn) => [
   {

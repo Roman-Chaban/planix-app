@@ -37,7 +37,7 @@ export const splitButtonProps = (props: ButtonProps) => {
 
     children,
 
-    ...htmlProps
+    ...buttonProps
   } = props;
 
   return {
@@ -55,7 +55,7 @@ export const splitButtonProps = (props: ButtonProps) => {
       children,
     },
 
-    htmlProps,
+    buttonProps,
   };
 };
 

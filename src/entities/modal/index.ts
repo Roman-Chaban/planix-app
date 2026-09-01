@@ -1,7 +1,7 @@
-export { modalSlice, modalReducer, closeModal, openModal, toggleModal } from './model/modal.slice';
+export { modalSlice, modalReducer, closeModal, openModal, toggleModal } from './model/slice';
 
-export { ModalId, type ModalState } from './model/modal.types';
+export { ModalId, type ModalState } from './model/types';
 
-export { usePersistModal } from './model/usePersistModal';
+export { usePersistModal } from './model/use-persist-modal';
 
-export { selectIsModalOpen, selectActiveModal } from './model/modal.selectorts';
+export { selectIsModalOpen, selectActiveModal } from './model/selectors';

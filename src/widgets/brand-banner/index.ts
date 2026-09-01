@@ -1,1 +1,1 @@
-export { BrandBanner } from './ui/BrandBanner';
+export { BrandBanner } from './ui/band-banner';

@@ -1,4 +1,4 @@
-import type { AuthFooterProps } from '../model/stepper.types';
+import type { AuthFooterProps } from '../model/types';
 
 import type { ReactNode } from 'react';
 

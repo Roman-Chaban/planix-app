@@ -1,7 +1,7 @@
-export { forgotFormFields as registerFormFields } from './lib/forgot-fields';
+export { forgotFormFields } from './lib/config';
 
-export { forgotPasswordSchema, type ForgotPasswordSchema } from './model/forgot.schema';
+export { forgotPasswordSchema, type ForgotPasswordSchema } from './model/schema';
 
-export { useForgotPassword } from './model/useForgotPassword';
+export { useForgotPassword } from './model/use-forgot-password';
 
-export { ForgotForm } from './ui/ForgotForm';
+export { ForgotForm } from './ui/forgot-form';

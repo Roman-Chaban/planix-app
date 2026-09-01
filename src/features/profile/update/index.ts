@@ -1,8 +1,8 @@
-export { updateFields as editFields } from './lib/update-fields';
+export { updateFields as editFields } from './lib/config';
 
-export { type UpdateFormValues as ProfileFormValues, updateSchema } from './model/update.schema';
+export { type UpdateFormValues, updateSchema } from './model/schema';
 
-export { useUpdateProfile } from './model/useUpdateProfile';
-export { useUpdateForm } from './model/useUpdateForm';
+export { useUpdateProfile } from './model/use-update-profile';
+export { useUpdateForm } from './model/use-update-form';
 
-export { ProfileUpdateForm } from './ui/ProfileUpdateForm';
+export { ProfileUpdateForm } from './ui/profile-update-form';

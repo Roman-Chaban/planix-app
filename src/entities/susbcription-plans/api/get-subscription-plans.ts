@@ -1,0 +1,16 @@
+import type { Plan } from '../model/types';
+
+import { PRICE, SUBSCRIPTION_PLANS, supabase } from '@/shared/api';
+
+export const getSubscriptionPlans = async (): Promise<Plan[]> => {
+  const { data, error } = await supabase
+    .from(SUBSCRIPTION_PLANS)
+    .select('*')
+    .order(PRICE, { ascending: true });
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data ?? [];
+};

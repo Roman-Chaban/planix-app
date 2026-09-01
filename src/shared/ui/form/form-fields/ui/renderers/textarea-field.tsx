@@ -6,7 +6,11 @@ import { Controller, type FieldValues } from 'react-hook-form';
 
 import { Textarea } from '@/shared/ui';
 
-export function TextareaField<T extends FieldValues>({ field, control, t }: TextareaFieldProps<T>) {
+export const TextareaField = <T extends FieldValues>({
+  field,
+  control,
+  t,
+}: TextareaFieldProps<T>) => {
   const textareaField = field;
 
   return (
@@ -23,4 +27,4 @@ export function TextareaField<T extends FieldValues>({ field, control, t }: Text
       )}
     />
   );
-}
+};

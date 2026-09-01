@@ -1,10 +1,12 @@
 import type { FormFieldSizes } from '../../form-field/model/constants';
-import type { FormFieldConfig } from '../model/types';
+import type { DefaultFieldValue, FormFieldConfig } from '../model/types';
 
 import type { useFormContext, FieldValues } from 'react-hook-form';
 
 import { buildClassName } from '@/shared/lib';
 import { Box } from '@/shared/ui';
+
+import { FORM_FIELD_KINDS, FORM_FIELD_LAYOUTS } from '../model/constants';
 
 import styles from './form-fields.module.scss';
 import { DateRangeField, DefaultField, FileUploadField, TextareaField } from './renderers';
@@ -16,9 +18,12 @@ export const formFieldsRender = <T extends FieldValues>(
   t: (key: string) => string,
   index: number,
 ) => {
-  switch (field.kind ?? 'text') {
-    case 'date-range': {
-      const dateRangeField = field as Extract<FormFieldConfig<T>, { kind: 'date-range' }>;
+  switch (field.kind ?? FORM_FIELD_KINDS.TEXT) {
+    case FORM_FIELD_KINDS.DATE_RANGE: {
+      const dateRangeField = field as Extract<
+        FormFieldConfig<T>,
+        { kind: typeof FORM_FIELD_KINDS.DATE_RANGE }
+      >;
 
       return (
         <DateRangeField
@@ -30,8 +35,11 @@ export const formFieldsRender = <T extends FieldValues>(
         />
       );
     }
-    case 'textarea': {
-      const textareaField = field as Extract<FormFieldConfig<T>, { kind: 'textarea' }>;
+    case FORM_FIELD_KINDS.TEXTAREA: {
+      const textareaField = field as Extract<
+        FormFieldConfig<T>,
+        { kind: typeof FORM_FIELD_KINDS.TEXTAREA }
+      >;
 
       return (
         <TextareaField
@@ -43,8 +51,11 @@ export const formFieldsRender = <T extends FieldValues>(
         />
       );
     }
-    case 'file-upload': {
-      const fileUploadField = field as Extract<FormFieldConfig<T>, { kind: 'file-upload' }>;
+    case FORM_FIELD_KINDS.FILE_UPLOAD: {
+      const fileUploadField = field as Extract<
+        FormFieldConfig<T>,
+        { kind: typeof FORM_FIELD_KINDS.FILE_UPLOAD }
+      >;
 
       return (
         <FileUploadField
@@ -56,15 +67,18 @@ export const formFieldsRender = <T extends FieldValues>(
         />
       );
     }
-    case 'group': {
-      const groupField = field as Extract<FormFieldConfig<T>, { kind: 'group' }>;
+    case FORM_FIELD_KINDS.GROUP: {
+      const groupField = field as Extract<
+        FormFieldConfig<T>,
+        { kind: typeof FORM_FIELD_KINDS.GROUP }
+      >;
 
       return (
         <Box
-          key={`group-${groupField.name ?? index}`}
+          key={String(groupField.name ?? `${FORM_FIELD_KINDS.GROUP}-${index}`)}
           className={buildClassName(
             styles.group,
-            groupField.layout === 'column' ? styles.column : styles.row,
+            groupField.layout === FORM_FIELD_LAYOUTS.COLUMN ? styles.column : styles.row,
             groupField.className,
           )}
         >
@@ -75,14 +89,13 @@ export const formFieldsRender = <T extends FieldValues>(
       );
     }
     default: {
-      const defaultField = field as Extract<
-        FormFieldConfig<T>,
-        { kind?: 'text' | 'password' | 'date' }
-      >;
+      const defaultField = field as DefaultFieldValue<T>;
 
       return (
         <DefaultField
-          key={String(defaultField.name ?? `${defaultField.kind ?? 'text'}-${index}`)}
+          key={String(
+            defaultField.name ?? `${defaultField.kind ?? FORM_FIELD_KINDS.TEXT}-${index}`,
+          )}
           field={defaultField}
           control={control}
           size={size}

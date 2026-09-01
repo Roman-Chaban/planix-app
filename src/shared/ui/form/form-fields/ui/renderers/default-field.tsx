@@ -9,20 +9,21 @@ import { FormField } from '@/shared/ui';
 import { ViewIcon, ViewOffIcon } from '@/shared/ui/icons';
 
 import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '../../../form-field/model/constants';
+import { FORM_FIELD_KINDS } from '../../model/constants';
 
 const { TEXT, PASSWORD } = FORM_FIELD_TYPES;
 const { DEFAULT } = FORM_FIELD_VARIANTS;
 
-export function DefaultField<T extends FieldValues>({
+export const DefaultField = <T extends FieldValues>({
   field,
   control,
   size,
   t,
-}: DefaultFieldProps<T>) {
+}: DefaultFieldProps<T>) => {
   const { getVisibility, toggleVisibility } = usePasswordToggle();
   const isPassword = field.feature === 'password-toggle';
   const visible = isPassword && getVisibility(String(field.name));
-  const type = isPassword ? (visible ? TEXT : PASSWORD) : (field.type ?? TEXT);
+  const type = isPassword ? (visible ? TEXT : PASSWORD) : (field.type ?? FORM_FIELD_KINDS.TEXT);
   const endIcon = isPassword ? visible ? <ViewIcon /> : <ViewOffIcon /> : field.endIcon;
 
   return (
@@ -74,4 +75,4 @@ export function DefaultField<T extends FieldValues>({
       }}
     />
   );
-}
+};

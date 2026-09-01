@@ -8,12 +8,12 @@ import { Box, FormDateField } from '@/shared/ui';
 
 import styles from '../form-fields.module.scss';
 
-export function DateRangeField<T extends FieldValues>({
+export const DateRangeField = <T extends FieldValues>({
   field,
   control,
   size,
   t,
-}: DateRangeFieldProps<T>) {
+}: DateRangeFieldProps<T>) => {
   const dateField = field;
 
   return (
@@ -62,4 +62,4 @@ export function DateRangeField<T extends FieldValues>({
       />
     </Box>
   );
-}
+};

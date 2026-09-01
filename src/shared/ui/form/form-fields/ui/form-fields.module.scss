@@ -6,6 +6,10 @@
 
 .row {
   @include flex-row($space-6);
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
 }
 
 .column {

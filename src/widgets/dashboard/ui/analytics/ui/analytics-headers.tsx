@@ -6,7 +6,7 @@ import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 
 import { getHeaderTitles } from '../lib/get-header-titles';
 
-import { AnalyticsHeader } from './AnalyticsHeader';
+import { AnalyticsHeader } from './analytics-header';
 
 export const AnalyticsHeaders = () => {
   const { t } = useTranslation(NS.DASHBOARD);

@@ -1,4 +1,4 @@
-import type { AnalyticsHeaderProps } from '../model/analytics.types';
+import type { AnalyticsHeaderProps } from '../model/types';
 
 import { Box, Typography } from '@/shared/ui';
 

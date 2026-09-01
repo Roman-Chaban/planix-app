@@ -8,11 +8,11 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { List } from '@/shared/ui';
 
 import { SubscriptionPlanSkeleton } from '../../plan';
-import { SubscriptionPlan } from '../../plan/ui/SubscriptionPlan';
+import { SubscriptionPlan } from '../../plan/ui/subscription-plan';
 
-import { SKELETONS } from '../lib/plans.constants';
+import { SKELETONS } from '../model/constants';
 
-import styles from './SubscriptionPlans.module.scss';
+import styles from './subscription-plans.module.scss';
 
 export const SubscriptionPlans = () => {
   const { i18n, t } = useTranslation(NS.SUBSCRIPTION);

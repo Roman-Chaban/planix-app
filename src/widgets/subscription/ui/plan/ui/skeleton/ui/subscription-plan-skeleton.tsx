@@ -2,10 +2,10 @@
 
 import { Box, List, Skeleton } from '@/shared/ui';
 
-import { FEATURES } from '../../../lib/plan.constants';
-import styles from '../../SubscriptionPlan.module.scss';
+import { FEATURES } from '../../../model/constants';
+import styles from '../../subscription-plan.module.scss';
 
-import { SubscriptionPlanFeatureSkeleton } from './SubscriptionPlanFeatureSkeleton';
+import { SubscriptionPlanFeatureSkeleton } from './subscription-plan-feature-skeleton';
 
 export const SubscriptionPlanSkeleton = () => {
   return (

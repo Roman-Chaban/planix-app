@@ -1,10 +1,10 @@
-import type { SubscriptionPlanFeatureProps } from '../model/plan-types';
+import type { SubscriptionPlanFeatureProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Typography } from '@/shared/ui';
 import { PlanCheckIcon } from '@/shared/ui/icons';
 
-import styles from './SubscriptionPlan.module.scss';
+import styles from './subscription-plan.module.scss';
 
 export const SubscriptionPlanFeature = ({ feature, isActive }: SubscriptionPlanFeatureProps) => {
   return (

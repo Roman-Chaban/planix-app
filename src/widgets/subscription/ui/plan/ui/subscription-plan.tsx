@@ -1,12 +1,12 @@
 'use client';
 
-import type { SubscriptionPlanProps } from '../model/plan-types';
+import type { SubscriptionPlanProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, List, Typography } from '@/shared/ui';
 
-import styles from './SubscriptionPlan.module.scss';
-import { SubscriptionPlanFeature } from './SubscriptionPlanFeature';
+import { SubscriptionPlanFeature } from './subscription-plan-feature';
+import styles from './subscription-plan.module.scss';
 
 export const SubscriptionPlan = ({
   plan,

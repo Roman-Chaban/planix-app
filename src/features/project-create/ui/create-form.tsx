@@ -2,8 +2,6 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { projectAddFields, useProjectForm } from '@/features/project-create';
-
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { BREAKPOINTS } from '@/shared/lib';
 import { useMediaQuery } from '@/shared/lib/hooks';
@@ -12,13 +10,17 @@ import { AppForm, Box, FormFields, ProjectButton, Typography } from '@/shared/ui
 import { BUTTON_SIZES } from '@/shared/ui/button';
 import { FORM_FIELD_SIZES } from '@/shared/ui/form/form-field';
 
+import { projectCreateFields } from '../lib/config';
+
+import { useProjectCreate } from '../model/use-project-create';
+
 import styles from './create-form.module.scss';
 
 const { MOBILE_LARGE } = BREAKPOINTS;
 
 export const CreateForm = () => {
   const { t } = useTranslation(NS.PROJECT_ADD);
-  const { form, onSubmit, isLoading } = useProjectForm();
+  const { form, onSubmit, isLoading } = useProjectCreate();
 
   const isMobileLarge = useMediaQuery(MOBILE_LARGE);
 
@@ -35,17 +37,17 @@ export const CreateForm = () => {
 
       <AppForm form={form} onSubmit={onSubmit} className={styles.createForm}>
         <FormFields
-          fields={projectAddFields}
-          translationNamespace={NS.PROJECT_ADD}
+          fields={projectCreateFields}
+          translationNamespace={NS.PROJECT_CREATE}
           size={fieldSize}
         />
 
         <ProjectButton
-          size={buttonSize}
           preset="CREATE_PROJECT"
-          disabled={isLoading}
+          size={buttonSize}
           label={t('addProjectButton')}
           translationNamespace={NS.PROJECT_ADD}
+          disabled={isLoading}
         />
       </AppForm>
     </Box>

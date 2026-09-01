@@ -1,0 +1,90 @@
+@use '@/shared/styles' as *;
+
+.sidebar {
+  width: 17.5rem;
+  min-height: 100%;
+  border-right: 0.094rem solid $neutral-100;
+  box-shadow: $shadow-xs;
+  background: $neutral-0;
+  grid-area: sidebar;
+  position: fixed;
+
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.sidebarClosed {
+    max-width: 5rem;
+  }
+}
+
+.sidebarLogo {
+  width: 100%;
+  position: relative;
+  @include flex-row(0.813rem, start, center);
+  padding: 1.125rem 1rem;
+
+  svg,
+  img {
+    flex-shrink: 0;
+  }
+
+  @include respond(lg) {
+    display: none;
+  }
+}
+
+.sidebarTitle {
+  color: $neutral-950;
+  line-height: $line-height-base;
+  font: {
+    weight: $font-weight-semibold;
+    size: $body-md-line-height;
+  }
+
+  white-space: nowrap;
+
+  @include smooth-transitions(opacity 0.2s ease, transform 0.2s ease, max-width 0.35s ease);
+  opacity: 1;
+}
+
+.sidebarClosed .sidebarTitle {
+  opacity: 0;
+  max-width: 0;
+  pointer-events: none;
+  transform: translateX(-0.313rem);
+}
+
+.sidebarClosed .sidebarTitle {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-0.625rem);
+
+  width: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.toggleButton {
+  @include flex-center;
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  color: $primary-700;
+}
+
+.toggleButton.iconCollapsed {
+  top: calc(2.75rem + 1.125rem + 1rem);
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.content {
+  width: 100%;
+  min-height: 100dvh;
+  @include flex-col(3.063rem, start, stretch, column);
+  padding: 1.938rem 1rem 0 1rem;
+
+  @include respond(lg) {
+    display: none;
+  }
+}

@@ -1,11 +1,11 @@
 'use client';
 
-import type { NavItemProps } from '../model/nav.types';
+import type { NavItemProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
 import { AppLink, Box, Typography } from '@/shared/ui';
 
-import styles from './Nav.module.scss';
+import styles from './nav.module.scss';
 
 export const NavItem = ({
   id: key,

@@ -2,6 +2,7 @@
 
 import type { FormFieldsProps } from '../model/types';
 
+import { Fragment } from 'react';
 import { type FieldValues, Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -23,11 +24,27 @@ export function FormFields<T extends FieldValues>({
 
   const { getVisibility, toggleVisibility } = usePasswordToggle();
 
-  const { control } = useFormContext<T>();
+  const form = useFormContext<T>();
+  const { control } = form;
 
   return (
     <>
       {fields.map((field) => {
+        if (field.render) {
+          return (
+            <Fragment key={field.name}>
+              {field.render({
+                form,
+                control,
+                field,
+                size,
+                translationNamespace,
+                t,
+              })}
+            </Fragment>
+          );
+        }
+
         const isPassword = field.feature === 'password-toggle';
         const visible = isPassword && getVisibility(field.name);
         const type = isPassword ? (visible ? TEXT : PASSWORD) : field.type;

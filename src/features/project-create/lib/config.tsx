@@ -4,16 +4,11 @@ import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
 import { ClientIcon, PlatformIcon, PriceIcon, ProjectNameIcon } from '@/shared/ui/icons';
 
-import {
-  renderProjectDateRangeField,
-  renderProjectDescriptionField,
-  renderProjectFilesField,
-} from './field-renderers';
-
 const { TEXT } = FORM_FIELD_TYPES;
 
-const basicProjectFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
+export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
   {
+    kind: 'text',
     name: 'projectName',
     label: 'projectNameLabel',
     type: TEXT,
@@ -21,6 +16,7 @@ const basicProjectFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
     startIcon: <ProjectNameIcon />,
   },
   {
+    kind: 'text',
     name: 'clientName',
     label: 'clientNameLabel',
     type: TEXT,
@@ -28,39 +24,48 @@ const basicProjectFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
     startIcon: <ClientIcon width={20} height={20} />,
   },
   {
-    name: 'platform',
-    label: 'platformLabel',
-    type: TEXT,
-    placeholder: 'platformPlaceholder',
-    startIcon: <PlatformIcon />,
-  },
-  {
-    name: 'price',
-    label: 'priceLabel',
-    type: TEXT,
-    placeholder: 'pricePlaceholder',
-    startIcon: <PriceIcon />,
-  },
-];
-
-export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
-  ...basicProjectFields,
-  {
+    kind: 'date-range',
     name: 'startDate',
-    label: 'startDateLabel',
-    type: TEXT,
-    render: renderProjectDateRangeField,
+    label: 'dateRangeLabel',
+    startField: 'startDate',
+    endField: 'dueDate',
+    startLabel: 'startDateLabel',
+    endLabel: 'dueDateLabel',
+    startPlaceholder: 'startDatePlaceholder',
+    endPlaceholder: 'dueDatePlaceholder',
   },
   {
-    name: 'description',
-    label: 'descriptionLabel',
-    type: TEXT,
-    render: renderProjectDescriptionField,
+    kind: 'group',
+    layout: 'row',
+    fields: [
+      {
+        kind: 'text',
+        name: 'price',
+        label: 'priceLabel',
+        type: TEXT,
+        placeholder: 'pricePlaceholder',
+        startIcon: <PriceIcon />,
+      },
+      {
+        kind: 'text',
+        name: 'platform',
+        label: 'platformLabel',
+        type: TEXT,
+        placeholder: 'platformPlaceholder',
+        startIcon: <PlatformIcon />,
+      },
+    ],
   },
   {
+    kind: 'file-upload',
     name: 'files',
     label: 'label',
-    type: TEXT,
-    render: renderProjectFilesField,
+    placeholder: 'uploadLabel',
+  },
+  {
+    kind: 'textarea',
+    name: 'description',
+    label: 'descriptionLabel',
+    placeholder: 'descriptionPlaceholder',
   },
 ];

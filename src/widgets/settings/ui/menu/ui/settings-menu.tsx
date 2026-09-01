@@ -1,6 +1,6 @@
 'use client';
 
-import type { SettingMenuProps } from '../model/setting-menu.types';
+import type { SettingMenuProps } from '../model/types';
 
 import { useTranslation } from 'react-i18next';
 
@@ -10,10 +10,10 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { useAppDispatch, useAppSelector } from '@/shared/providers/store/model/hooks';
 import { Box, Typography } from '@/shared/ui';
 
-import { SettingTabIdEnum } from '../model/setting-menu.enums';
+import { SettingTabIdEnum } from '../model/enums';
 
-import { Menu } from './Menu';
-import styles from './SettingMenu.module.scss';
+import { Menu } from './menu';
+import styles from './settings-menu.module.scss';
 
 export const ProfileMenu = ({ activeId, setActiveId, isAuthenticated }: SettingMenuProps) => {
   const { t } = useTranslation(NS.SETTINGS);

@@ -1,0 +1,14 @@
+@use '@/shared/styles' as *;
+
+.system {
+  width: 100%;
+  @include flex-col($space-3, start, start, column);
+}
+
+.systemContainer {
+  width: 100%;
+}
+
+.content {
+  padding-inline: 1.625rem;
+}

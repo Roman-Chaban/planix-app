@@ -1,4 +1,4 @@
-import type { MenuTabType, SettingTabIdEnum } from './setting-menu.enums';
+import type { MenuTabType, SettingTabIdEnum } from './enums';
 
 import type { ComponentType } from 'react';
 

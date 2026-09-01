@@ -47,7 +47,7 @@ export const useSettingsModel = () => {
   return {
     activeId: activeTab.id,
     ActiveComponent: activeTab.component,
-    handleTabChange,
     isAuthenticated,
+    handleTabChange,
   };
 };

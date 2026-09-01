@@ -8,7 +8,7 @@ import { NAMESPACE as NS } from '@/shared/i18n';
 import { formatCurrency } from '@/shared/lib/formatters/formatters';
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './Subscription.module.scss';
+import styles from './subscription.module.scss';
 
 export const ProfessionalPlan = ({
   planName,

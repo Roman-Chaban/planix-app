@@ -1,6 +1,6 @@
 'use client';
 
-import type { ProfileHeaderProps } from '../model/details.types';
+import type { ProfileHeaderProps } from '../model/types';
 
 import { Avatar, Box, Input, Tooltip, Typography } from '@/shared/ui';
 
@@ -11,9 +11,8 @@ import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import { UploadAvatarIcon } from '@/shared/ui/icons';
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
-import { useUploadAvatar } from '../model/useUploadAvatar';
-
-import styles from './Details.module.scss';
+import styles from '../details.module.scss';
+import { useUploadAvatar } from '../model/use-upload-avatar';
 
 const { BOTTOM } = TOOLTIP_POSITION;
 const { FILE } = FORM_FIELD_TYPES;

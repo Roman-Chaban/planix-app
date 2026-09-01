@@ -1,8 +1,8 @@
-import type { SystemSectionProps } from '../model/system.types';
+import type { SystemSectionProps } from '../model/types';
 
 import { Box, SettingsHeader } from '@/shared/ui';
 
-import styles from './System.module.scss';
+import styles from './system.module.scss';
 
 export const SystemSection = ({ title, children }: SystemSectionProps) => {
   return (

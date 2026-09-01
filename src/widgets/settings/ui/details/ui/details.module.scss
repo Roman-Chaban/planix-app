@@ -1,0 +1,112 @@
+@use '@/shared/styles' as *;
+
+.details {
+  width: 100%;
+  @include flex(flex, row, start, stretch);
+}
+
+.profile {
+  width: 100%;
+}
+
+.profileDetails {
+  width: 100%;
+  @include flex-col(1.75rem, start, center, column);
+  padding: 1.25rem 1.625rem;
+}
+
+.profileBox {
+  width: 100%;
+  max-width: 24.188rem;
+  @include flex(flex, row, start, center, 1.5rem);
+}
+
+.profileInfo {
+  @include flex(flex, row, space-between, center, 1.5rem);
+  width: 100%;
+  border-radius: $radius-lg;
+  background: $neutral-100;
+  padding: 1.5rem 1.625rem;
+}
+
+.info {
+  @include flex-col(0.188rem, start, start, column);
+}
+
+.avatarBox {
+  position: relative;
+  @include flex-center;
+  width: 100%;
+  max-width: 4.625rem;
+  min-height: 4.625rem;
+  background: $neutral-200;
+  border-radius: $radius-full;
+}
+
+.avatarUpload {
+  @include flex-center;
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  bottom: -0.125rem;
+  right: -0.3rem;
+  box-shadow: $shadow-sm;
+  background: $neutral-0;
+}
+
+.fullName {
+  line-height: $line-height-base;
+  font: {
+    weight: $font-weight-semibold;
+    size: $caption-lg-line-height;
+  }
+}
+
+.email {
+  line-height: $line-height-base;
+  color: $neutral-600;
+  font-size: $body-lg-font-size;
+}
+
+.information {
+  @include grid-fields(
+    3,
+    'firstName lastName birthDate' 'email contact gender' 'address address address'
+  );
+}
+
+.field {
+  @include flex-col(0.25rem, start, start, column);
+
+  &:nth-child(1) {
+    grid-area: firstName;
+  }
+  &:nth-child(2) {
+    grid-area: lastName;
+  }
+  &:nth-child(3) {
+    grid-area: birthDate;
+  }
+  &:nth-child(4) {
+    grid-area: email;
+  }
+  &:nth-child(5) {
+    grid-area: contact;
+  }
+  &:nth-child(6) {
+    grid-area: gender;
+  }
+  &:nth-child(7) {
+    grid-area: address;
+  }
+}
+
+.label {
+  line-height: $line-height-base;
+  color: $neutral-600;
+}
+
+.value {
+  line-height: $line-height-base;
+  font-weight: $font-weight-semibold;
+}

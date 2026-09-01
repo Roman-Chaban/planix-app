@@ -2,7 +2,7 @@
 
 import { useLocalStorage } from '@/shared/lib/hooks';
 
-import { MODE, type Mode } from '../lib/details.constants';
+import { MODE, type Mode } from './constants';
 
 const { VIEW, EDIT } = MODE;
 

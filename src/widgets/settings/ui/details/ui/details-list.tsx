@@ -1,11 +1,11 @@
-import type { ProfileInfoListProps } from '../model/details.types';
+import type { ProfileInfoListProps } from '../model/types';
 
 import { Box } from '@/shared/ui';
 
+import styles from '../details.module.scss';
 import { profileFields } from '../lib/get-info-fields';
 
-import styles from './Details.module.scss';
-import { DetailsItem } from './DetailsItem';
+import { DetailsItem } from './details-item';
 
 export const DetailsList = ({ profile, t }: ProfileInfoListProps) => {
   if (!profile) return null;

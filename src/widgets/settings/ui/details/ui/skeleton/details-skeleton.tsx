@@ -1,7 +1,7 @@
 import { Box, Skeleton } from '@/shared/ui';
 
-import styles from '../Details.module.scss';
-import { DetailsItem } from '../DetailsItem';
+import { DetailsItem } from '../details-item';
+import styles from '../details.module.scss';
 
 const ROWS_COUNT = 5;
 

@@ -1,4 +1,4 @@
-import type { MenuItemProps } from '../model/setting-menu.types';
+import type { MenuItemProps } from '../model/types';
 
 import { buildClassName } from '@/shared/lib';
 import { Box, Button, Tooltip, Typography } from '@/shared/ui';
@@ -9,7 +9,7 @@ import { BlockedIcon } from '@/shared/ui/icons';
 
 import { TOOLTIP_POSITION } from '@/shared/ui/tooltip';
 
-import styles from './SettingMenu.module.scss';
+import styles from './settings-menu.module.scss';
 
 const { TRANSPARENT } = BUTTON_VARIANTS;
 const { RIGHT } = TOOLTIP_POSITION;

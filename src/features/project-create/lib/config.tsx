@@ -1,4 +1,5 @@
-import type { ProjectDetailsSchema } from '@/features/project-create';
+import type { ProjectCreateSchema } from '../model/schema';
+
 import { FORM_FIELD_TYPES } from '@/shared/ui/form/form-field';
 import type { FormFieldConfig } from '@/shared/ui/form/form-fields';
 
@@ -6,7 +7,7 @@ import { ClientIcon, PlatformIcon, PriceIcon, ProjectNameIcon } from '@/shared/u
 
 const { TEXT } = FORM_FIELD_TYPES;
 
-export const projectAddFields: readonly FormFieldConfig<ProjectDetailsSchema>[] = [
+export const projectCreateFields: readonly FormFieldConfig<ProjectCreateSchema>[] = [
   {
     kind: 'text',
     name: 'projectName',

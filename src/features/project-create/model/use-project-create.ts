@@ -2,8 +2,6 @@
 
 import type { SubmitHandler } from 'react-hook-form';
 
-import { projectDetailsSchema, type ProjectDetailsSchema } from '@/features/project-create';
-
 import { type ProjectFile, uploadProjectFile } from '@/entities/projects';
 
 import { useProjectActions } from '@/entities/projects/model/use-project-actions';
@@ -11,15 +9,17 @@ import { useProjectActions } from '@/entities/projects/model/use-project-actions
 import { ROUTES } from '@/shared/config';
 import { useAppForm, useLocalizedRouter } from '@/shared/lib/hooks';
 
+import { projectCreateSchema, type ProjectCreateSchema } from './schema';
+
 const { PROJECT } = ROUTES;
 
-export const useProjectForm = () => {
+export const useProjectCreate = () => {
   const localizedRouter = useLocalizedRouter();
 
   const { createProject, isProjectActionPending } = useProjectActions();
 
-  const projectForm = useAppForm<ProjectDetailsSchema>({
-    schema: projectDetailsSchema,
+  const projectForm = useAppForm<ProjectCreateSchema>({
+    schema: projectCreateSchema,
     mode: 'onChange',
 
     defaultValues: {
@@ -35,7 +35,7 @@ export const useProjectForm = () => {
     },
   });
 
-  const processFiles = async (files: ProjectDetailsSchema['files']): Promise<ProjectFile[]> => {
+  const processFiles = async (files: ProjectCreateSchema['files']): Promise<ProjectFile[]> => {
     return Promise.all(
       files.map(async (file) => {
         if (file instanceof File) {
@@ -47,7 +47,7 @@ export const useProjectForm = () => {
     );
   };
 
-  const handleFormSubmit: SubmitHandler<ProjectDetailsSchema> = async (formData) => {
+  const handleFormSubmit: SubmitHandler<ProjectCreateSchema> = async (formData) => {
     try {
       const uploadedFiles = await processFiles(formData.files);
 
@@ -69,7 +69,7 @@ export const useProjectForm = () => {
 
   return {
     form: projectForm,
-    onSubmit: handleFormSubmit,
     isLoading: isProjectActionPending,
+    onSubmit: handleFormSubmit,
   };
 };

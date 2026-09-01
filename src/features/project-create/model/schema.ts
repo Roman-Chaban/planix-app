@@ -3,7 +3,7 @@ import * as zod from 'zod';
 
 import { DATE_FORMAT } from '@/shared/lib';
 
-export const projectDetailsSchema = zod
+export const projectCreateSchema = zod
   .object({
     projectName: zod
       .string()
@@ -68,4 +68,4 @@ export const projectDetailsSchema = zod
     }
   });
 
-export type ProjectDetailsSchema = zod.infer<typeof projectDetailsSchema>;
+export type ProjectCreateSchema = zod.infer<typeof projectCreateSchema>;

@@ -10,6 +10,10 @@
   @include respond(lg) {
     max-width: 100%;
   }
+
+  @include respond(sm) {
+    padding: 0 0 1.875rem 0;
+  }
 }
 
 .header {
@@ -17,10 +21,20 @@
   background: $bg-brand-subtle;
   border-radius: $radius-md;
   padding: 0.688rem 0 0.625rem 0.813rem;
+
+  @include respond(sm) {
+    border-radius: $radius-lg;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .title {
   @include title-bold($font-weight-semibold, $body-lg-font-size, $text-secondary);
+
+  @include respond(sm) {
+    font-size: $body-md-font-size;
+  }
 }
 
 .createForm {

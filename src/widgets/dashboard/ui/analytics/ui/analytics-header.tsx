@@ -2,7 +2,7 @@ import type { AnalyticsHeaderProps } from '../model/types';
 
 import { Box, Typography } from '@/shared/ui';
 
-import styles from './Analytics.module.scss';
+import styles from './analytics.module.scss';
 
 export const AnalyticsHeader = ({
   id,

@@ -27,12 +27,12 @@
 .inputWrapper {
   width: 100%;
   position: relative;
-  transition: all 0.35s ease-in-out 0s;
   @include flex-center;
 
   @include input-wrapper-border($border-default);
   @include input-border-active($border-focus);
   @include input-disabled($surface-tertiary, $surface-secondary);
+  @include smooth-transition(all, 0.35s, ease-in-out, 0s);
 
   &.small {
     min-height: $space-8;

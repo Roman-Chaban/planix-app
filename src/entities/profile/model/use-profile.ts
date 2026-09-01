@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useSession } from '@/shared/providers/auth/model/use-session';
 
 import { getProfile } from '../api';
-import { queryKeys } from '../queryKeys/queryKeys';
+import { queryKeys } from '../query-keys/query-keys';
 
 export const useProfile = () => {
   const { session, isLoading: isSessionLoading } = useSession();

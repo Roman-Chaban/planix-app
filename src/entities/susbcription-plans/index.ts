@@ -10,4 +10,4 @@ export type {
 
 export { useSubscriptionPlans } from './model/use-subscription-plans';
 
-export { queryKeys } from './queryKeys/queryKeys';
+export { queryKeys } from './query-keys/query-keys';

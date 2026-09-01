@@ -6,4 +6,4 @@ export type { Profile, ProfileData } from './model/types';
 
 export { useProfile } from './model/use-profile';
 
-export { queryKeys } from './queryKeys/queryKeys';
+export { queryKeys } from './query-keys/query-keys';

@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { getSubscriptionPlans } from '../api/get-subscription-plans';
 import { mapSubscriptionPlan } from '../lib/map-subscription-plan';
-import { queryKeys } from '../queryKeys/queryKeys';
+import { queryKeys } from '../query-keys/query-keys';
 
 export const useSubscriptionPlans = ({ lng }: UseSubscriptionPlansOptions) => {
   const query = useQuery({

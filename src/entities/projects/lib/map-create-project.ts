@@ -1,11 +1,11 @@
 import type { Project, ProjectFile } from '../model/types';
 
-import type { ProjectDetailsSchema } from '@/features/project-create';
+import type { ProjectCreateSchema } from '@/features/project-create';
 
 import { getClientAvatar } from './get-client-avatar';
 
 export const mapCreateProject = (
-  formData: ProjectDetailsSchema,
+  formData: ProjectCreateSchema,
   files: ProjectFile[],
 ): Partial<Project> => {
   return {

@@ -1,4 +1,4 @@
-import type { ProjectDetailsSchema } from '@/features/project-create';
+import type { ProjectCreateSchema } from '@/features/project-create';
 import type { Status } from '@/shared/lib/common/constants';
 
 export type ProjectId = string | number;
@@ -35,13 +35,13 @@ export type Project = {
 };
 
 export type CreateProjectPayload = {
-  formData: ProjectDetailsSchema;
+  formData: ProjectCreateSchema;
   files: ProjectFile[];
 };
 
 export type UpdateProjectPayload = {
   id: ProjectId;
-  data: Partial<ProjectDetailsSchema>;
+  data: Partial<ProjectCreateSchema>;
 };
 
 export type DeleteProjectPayload = { id: ProjectId };

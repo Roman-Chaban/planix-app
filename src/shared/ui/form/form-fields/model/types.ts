@@ -1,3 +1,4 @@
+import type { FormFieldKind } from './constants';
 import type { FormFieldSizes } from '../../form-field/model/constants';
 import type { WithClassName } from '@types';
 import type {
@@ -9,6 +10,8 @@ import type {
 } from 'react-hook-form';
 
 import type { ReactNode } from 'react';
+
+export type { FormFieldKind, FormFieldLayout } from './constants';
 
 export type DefaultFieldKind = 'text' | 'password' | 'date';
 export type FieldGroupLayout = 'row' | 'column';
@@ -25,10 +28,7 @@ export type FieldByKind<T extends FieldValues, K extends FormFieldKind> = Extrac
   { kind: K }
 >;
 
-export type DefaultFieldValue<T extends FieldValues> = Extract<
-  FormFieldConfig<T>,
-  { kind?: DefaultFieldKind }
->;
+export type DefaultFieldValue<T extends FieldValues> = DefaultFieldConfig<T>;
 
 type BaseFieldConfig<T extends FieldValues> = {
   name: Path<T>;
@@ -44,7 +44,7 @@ type BaseFieldConfig<T extends FieldValues> = {
   group?: string;
 } & WithClassName;
 
-type DefaultFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
+export type DefaultFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
   kind?: DefaultFieldKind;
   type?: string;
 };
@@ -75,8 +75,6 @@ type GroupFieldConfig<T extends FieldValues> = {
   className?: string;
   fields: readonly FormFieldConfig<T>[];
 };
-
-export type FormFieldKind = DefaultFieldKind | 'date-range' | 'textarea' | 'file-upload' | 'group';
 
 export type FormFieldConfig<T extends FieldValues> =
   | DefaultFieldConfig<T>

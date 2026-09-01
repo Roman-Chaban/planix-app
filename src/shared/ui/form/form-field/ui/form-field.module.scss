@@ -65,6 +65,10 @@
   color: $neutral-600;
   pointer-events: none;
   transition: all 0.2s ease;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
 }
 
 .inputWrapper:focus-within .floatingLabel,

@@ -19,7 +19,7 @@ import styles from './create-form.module.scss';
 const { MOBILE_LARGE } = BREAKPOINTS;
 
 export const CreateForm = () => {
-  const { t } = useTranslation(NS.PROJECT_ADD);
+  const { t } = useTranslation(NS.PROJECT_CREATE);
   const { form, onSubmit, isLoading } = useProjectCreate();
 
   const isMobileLarge = useMediaQuery(MOBILE_LARGE);
@@ -46,7 +46,7 @@ export const CreateForm = () => {
           preset="CREATE_PROJECT"
           size={buttonSize}
           label={t('addProjectButton')}
-          translationNamespace={NS.PROJECT_ADD}
+          translationNamespace={NS.PROJECT_CREATE}
           disabled={isLoading}
         />
       </AppForm>

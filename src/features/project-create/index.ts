@@ -1,4 +1,5 @@
-export { type ProjectCreateSchema, projectCreateSchema } from './model/schema';
+export { projectCreateSchema } from './model/schema';
+export type { ProjectCreateSchema } from './model/schema';
 
 export { useProjectCreate } from './model/use-project-create';
 

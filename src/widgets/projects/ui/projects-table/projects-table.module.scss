@@ -17,7 +17,8 @@
   pointer-events: none;
 }
 
-.clientCell {
+.clientCell,
+.dueDateCell {
   @include flex-start;
   gap: $space-2;
 }

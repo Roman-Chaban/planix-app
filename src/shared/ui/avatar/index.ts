@@ -5,7 +5,6 @@ export {
   AVATAR_EXTENSIONS,
   AVATAR_SIZES,
   DEFAULT_AVATAR_ALT,
-  DEFAULT_AVATAR_FALLBACK,
   type AvatarSizes,
   type AvatarVariants,
 } from './model/constants';

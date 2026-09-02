@@ -6,12 +6,8 @@ import { buildClassName } from '@/shared/lib';
 
 import { Box } from '../../box';
 
-import {
-  AVATAR_SIZES,
-  AVATAR_VARIANTS,
-  DEFAULT_AVATAR_ALT,
-  DEFAULT_AVATAR_FALLBACK,
-} from '../model/constants';
+import { UserFallbackIcon } from '../../icons';
+import { AVATAR_SIZES, AVATAR_VARIANTS, DEFAULT_AVATAR_ALT } from '../model/constants';
 
 import styles from './avatar.module.scss';
 
@@ -42,9 +38,7 @@ export const Avatar = ({
         />
       )}
 
-      {!icon && !src && (
-        <Box className={styles.fallback}>{fallback ?? DEFAULT_AVATAR_FALLBACK}</Box>
-      )}
+      {!icon && !src && (fallback ?? <UserFallbackIcon />)}
     </Box>
   );
 };

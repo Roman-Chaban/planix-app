@@ -48,17 +48,16 @@ export type FormIconProps = {
   HTMLAttributes<HTMLDivElement>;
 
 export type DateInputProps = {
-  value: string;
+  value?: string | null;
   ref?: Ref<HTMLInputElement>;
   onChange: (value: string) => void;
-  onBlur?: () => void;
 };
 
-export type FormDateFieldProps = WithClassName & {
+export type FormDateFieldProps = {
   id: string;
   label: string;
   placeholder: string;
   error?: string;
   size?: FormFieldSizes;
   inputProps: DateInputProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'>;
-};
+} & WithClassName;

@@ -43,8 +43,8 @@ export const AppToast = () => {
       <Toast
         variant={toast.variant}
         description={toast.description}
-        onClose={startClosing}
         isClosing={isClosing}
+        onClose={startClosing}
         onAnimationEnd={handleAnimationEnd}
       />
     </Portal>

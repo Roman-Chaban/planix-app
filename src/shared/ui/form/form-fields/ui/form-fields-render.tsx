@@ -10,6 +10,7 @@ import { FORM_FIELD_KINDS, FORM_FIELD_LAYOUTS } from '../model/constants';
 
 import styles from './form-fields.module.scss';
 import { DateRangeField, DefaultField, FileUploadField, TextareaField } from './renderers';
+import { PriceField } from './renderers/price-field';
 
 export const formFieldsRender = <T extends FieldValues>(
   field: FormFieldConfig<T>,
@@ -88,6 +89,24 @@ export const formFieldsRender = <T extends FieldValues>(
         </Box>
       );
     }
+
+    case FORM_FIELD_KINDS.PRICE: {
+      const priceField = field as Extract<
+        FormFieldConfig<T>,
+        { kind: typeof FORM_FIELD_KINDS.PRICE }
+      >;
+
+      return (
+        <PriceField
+          key={String(priceField.name ?? `${priceField.kind}-${index}`)}
+          field={priceField}
+          control={control}
+          size={size}
+          t={t}
+        />
+      );
+    }
+
     default: {
       const defaultField = field as DefaultFieldValue<T>;
 

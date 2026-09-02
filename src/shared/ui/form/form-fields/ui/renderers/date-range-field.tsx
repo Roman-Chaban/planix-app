@@ -15,49 +15,55 @@ export const DateRangeField = <T extends FieldValues>({
   size,
   t,
 }: DateRangeFieldProps<T>) => {
-  const dateField = field;
-
   return (
     <Box className={buildClassName(styles.group, styles.row)}>
       <Controller
-        name={dateField.startField}
+        name={field.startField}
         control={control}
-        render={({ field: inputField, fieldState }) => (
-          <FormDateField
-            size={size}
-            id={String(dateField.startField)}
-            label={t(dateField.startLabel ?? dateField.label)}
-            placeholder={t(dateField.startPlaceholder ?? '')}
-            error={fieldState.error?.message ? t(fieldState.error.message) : undefined}
-            inputProps={{
-              value: inputField.value ?? '',
-              ref: inputField.ref,
-              required: dateField.required,
-              onChange: inputField.onChange,
-              onBlur: inputField.onBlur,
-            }}
-          />
-        )}
+        render={({ field: inputField, fieldState }) => {
+          const errorText = fieldState.error?.message ? t(fieldState.error.message) : undefined;
+
+          return (
+            <FormDateField
+              size={size}
+              id={String(field.startField)}
+              label={t(field.startLabel ?? field.label)}
+              placeholder={t(field.startPlaceholder ?? '')}
+              error={errorText}
+              inputProps={{
+                value: inputField.value ?? '',
+                ref: inputField.ref,
+                required: field.required,
+                onChange: inputField.onChange,
+                onBlur: inputField.onBlur,
+              }}
+            />
+          );
+        }}
       />
       <Controller
-        name={dateField.endField}
+        name={field.endField}
         control={control}
-        render={({ field: inputField, fieldState }) => (
-          <FormDateField
-            size={size}
-            id={String(dateField.endField)}
-            label={t(dateField.endLabel ?? dateField.label)}
-            placeholder={t(dateField.endPlaceholder ?? '')}
-            error={fieldState.error?.message ? t(fieldState.error.message) : undefined}
-            inputProps={{
-              value: inputField.value ?? '',
-              ref: inputField.ref,
-              required: dateField.required,
-              onChange: inputField.onChange,
-              onBlur: inputField.onBlur,
-            }}
-          />
-        )}
+        render={({ field: inputField, fieldState }) => {
+          const errorText = fieldState.error?.message ? t(fieldState.error.message) : undefined;
+
+          return (
+            <FormDateField
+              size={size}
+              id={String(field.endField)}
+              label={t(field.endLabel ?? field.label)}
+              placeholder={t(field.endPlaceholder ?? '')}
+              error={errorText}
+              inputProps={{
+                value: inputField.value ?? '',
+                ref: inputField.ref,
+                required: field.required,
+                onChange: inputField.onChange,
+                onBlur: inputField.onBlur,
+              }}
+            />
+          );
+        }}
       />
     </Box>
   );

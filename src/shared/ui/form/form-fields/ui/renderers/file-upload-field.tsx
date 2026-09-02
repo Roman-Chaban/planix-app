@@ -12,23 +12,26 @@ export const FileUploadField = <T extends FieldValues>({
   control,
   t,
 }: FileUploadFieldProps<T>) => {
-  const fileField = field;
   const emptyValue: FileUploadValue = [];
 
   return (
     <Controller
-      name={fileField.name}
+      name={field.name}
       control={control}
-      render={({ field: inputField, fieldState }) => (
-        <FileUpload
-          value={Array.isArray(inputField.value) ? inputField.value : emptyValue}
-          onChange={inputField.onChange}
-          error={fieldState.error?.message ? t(fieldState.error.message) : ''}
-          label={t(fileField.label)}
-          uploadLabel={t(fileField.placeholder ?? 'uploadLabel')}
-          uploadPhotosLabel={t('uploadPhotosLabel')}
-        />
-      )}
+      render={({ field: inputField, fieldState }) => {
+        const errorText = fieldState.error?.message ? t(fieldState.error.message) : undefined;
+
+        return (
+          <FileUpload
+            value={Array.isArray(inputField.value) ? inputField.value : emptyValue}
+            onChange={inputField.onChange}
+            error={errorText}
+            label={t(field.label)}
+            uploadLabel={t(field.placeholder ?? 'uploadLabel')}
+            uploadPhotosLabel={t('uploadPhotosLabel')}
+          />
+        );
+      }}
     />
   );
 };

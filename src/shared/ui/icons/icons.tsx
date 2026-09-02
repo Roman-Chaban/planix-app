@@ -1908,7 +1908,7 @@ export const ErrorToastIcon = ({
   );
 };
 
-export const CloseToastIcon = ({ width = 15, height = 15, fill = 'currentColor' }: IconProps) => {
+export const CloseToastIcon = ({ width = 16, height = 16, fill = 'currentColor' }: IconProps) => {
   return (
     <svg
       width={width}

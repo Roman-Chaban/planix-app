@@ -5,6 +5,7 @@ export const FORM_FIELD_KINDS = {
   DATE_RANGE: 'date-range',
   TEXTAREA: 'textarea',
   FILE_UPLOAD: 'file-upload',
+  PRICE: 'price',
   GROUP: 'group',
 } as const;
 

@@ -1,4 +1,4 @@
-import type { FormFieldKind } from './constants';
+import type { FORM_FIELD_KINDS, FormFieldKind, FormFieldLayout } from './constants';
 import type { FormFieldSizes } from '../../form-field/model/constants';
 import type { WithClassName } from '@types';
 import type {
@@ -13,8 +13,9 @@ import type { ReactNode } from 'react';
 
 export type { FormFieldKind, FormFieldLayout } from './constants';
 
-export type DefaultFieldKind = 'text' | 'password' | 'date';
-export type FieldGroupLayout = 'row' | 'column';
+export type DefaultFieldKind =
+  typeof FORM_FIELD_KINDS.TEXT | typeof FORM_FIELD_KINDS.PASSWORD | typeof FORM_FIELD_KINDS.DATE;
+
 export type FormFieldFeature = 'password-toggle' | 'none';
 
 export type SharedFieldRendererProps<T extends FieldValues> = {
@@ -22,13 +23,6 @@ export type SharedFieldRendererProps<T extends FieldValues> = {
   size?: FormFieldSizes;
   t: (key: string) => string;
 };
-
-export type FieldByKind<T extends FieldValues, K extends FormFieldKind> = Extract<
-  FormFieldConfig<T>,
-  { kind: K }
->;
-
-export type DefaultFieldValue<T extends FieldValues> = DefaultFieldConfig<T>;
 
 type BaseFieldConfig<T extends FieldValues> = {
   name: Path<T>;
@@ -50,7 +44,7 @@ export type DefaultFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
 };
 
 type DateRangeFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
-  kind: 'date-range';
+  kind: typeof FORM_FIELD_KINDS.DATE_RANGE;
   startField: Path<T>;
   endField: Path<T>;
   startLabel?: string;
@@ -60,18 +54,23 @@ type DateRangeFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
 };
 
 type TextareaFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
-  kind: 'textarea';
+  kind: typeof FORM_FIELD_KINDS.TEXTAREA;
 };
 
 type FileUploadFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
-  kind: 'file-upload';
+  kind: typeof FORM_FIELD_KINDS.FILE_UPLOAD;
+};
+
+type PriceFieldConfig<T extends FieldValues> = BaseFieldConfig<T> & {
+  kind: typeof FORM_FIELD_KINDS.PRICE;
+  currency?: string;
 };
 
 type GroupFieldConfig<T extends FieldValues> = {
-  kind: 'group';
+  kind: typeof FORM_FIELD_KINDS.GROUP;
   name?: string;
   label?: string;
-  layout?: FieldGroupLayout;
+  layout?: FormFieldLayout;
   className?: string;
   fields: readonly FormFieldConfig<T>[];
 };
@@ -81,6 +80,7 @@ export type FormFieldConfig<T extends FieldValues> =
   | DateRangeFieldConfig<T>
   | TextareaFieldConfig<T>
   | FileUploadFieldConfig<T>
+  | PriceFieldConfig<T>
   | GroupFieldConfig<T>;
 
 export type FormFieldsProps<T extends FieldValues> = {
@@ -91,8 +91,15 @@ export type FormFieldsProps<T extends FieldValues> = {
   register: UseFormRegister<T>;
 };
 
+export type FieldByKind<T extends FieldValues, K extends FormFieldKind> = Extract<
+  FormFieldConfig<T>,
+  { kind: K }
+>;
+
+export type DefaultFieldValue<T extends FieldValues> = DefaultFieldConfig<T>;
+
 export type DateRangeFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
-  field: FieldByKind<T, 'date-range'>;
+  field: FieldByKind<T, typeof FORM_FIELD_KINDS.DATE_RANGE>;
 };
 
 export type DefaultFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
@@ -100,9 +107,13 @@ export type DefaultFieldProps<T extends FieldValues> = SharedFieldRendererProps<
 };
 
 export type FileUploadFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
-  field: FieldByKind<T, 'file-upload'>;
+  field: FieldByKind<T, typeof FORM_FIELD_KINDS.FILE_UPLOAD>;
 };
 
 export type TextareaFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
-  field: FieldByKind<T, 'textarea'>;
+  field: FieldByKind<T, typeof FORM_FIELD_KINDS.TEXTAREA>;
+};
+
+export type PriceFieldProps<T extends FieldValues> = SharedFieldRendererProps<T> & {
+  field: FieldByKind<T, typeof FORM_FIELD_KINDS.PRICE>;
 };

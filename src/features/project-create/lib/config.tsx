@@ -40,11 +40,11 @@ export const projectCreateFields: readonly FormFieldConfig<ProjectCreateSchema>[
     layout: 'row',
     fields: [
       {
-        kind: 'text',
+        kind: 'price',
         name: 'price',
         label: 'priceLabel',
-        type: TEXT,
         placeholder: 'pricePlaceholder',
+        currency: 'USD',
         startIcon: <PriceIcon />,
       },
       {

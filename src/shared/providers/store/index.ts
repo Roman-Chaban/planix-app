@@ -1,5 +1,5 @@
 export { store, type AppDispatch, type AppStore, type RootState } from './store';
 
-export { rootReducer } from './rootReducer';
+export { rootReducer } from './root-reducer';
 
-export { StoreProvider } from './StoreProvider';
+export { StoreProvider } from './store-provider';

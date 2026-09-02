@@ -1,10 +1,10 @@
-export { loginSchema, type LoginFormSchema } from './model/login.schema';
+export { loginSchema, type LoginFormSchema } from './model/schema';
 
-export type { LoginActionsProps } from './model/login.types';
+export type { LoginActionsProps } from './model/types';
 
-export { useLogin } from './model/useLogin';
+export { useLogin } from './model/use-login';
 
-export { loginFormFields } from './lib/login-fields';
+export { loginFormFields } from './lib/config';
 
-export { LoginForm } from './ui/LoginForm';
-export { LoginActions } from './ui/LoginActions';
+export { LoginForm } from './ui/login-form';
+export { LoginActions } from './ui/login-actions';

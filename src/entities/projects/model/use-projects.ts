@@ -3,7 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getProjects } from '../api';
-import { queryKeys } from '../queryKeys/queryKeys';
+import { queryKeys } from '../query-keys/query-keys';
 
 export const useProjects = () => {
   return useQuery({

@@ -1,0 +1,17 @@
+@use '@/shared/styles' as *;
+
+.group {
+  width: 100%;
+}
+
+.row {
+  @include flex-row($space-6, flex-start, flex-start);
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}
+
+.column {
+  @include flex-col($space-6);
+}

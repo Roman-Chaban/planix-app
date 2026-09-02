@@ -2,11 +2,10 @@
 
 import { Header } from '@/widgets/header';
 
-import { DeleteModal } from '@/features/delete-project';
+import { DeleteModal } from '@/features/project-delete';
+import { BREAKPOINTS } from '@/shared/lib';
 import { useResponsiveValue } from '@/shared/lib/hooks';
 import { PageWrapper } from '@/shared/ui';
-
-import { BREAKPOINTS } from '@/shared/ui/theme';
 
 import { useProjectsPageModel } from '../model/use-projects-page-model';
 
@@ -25,9 +24,9 @@ export const ProjectManagement = () => {
     projects,
     filteredProjects,
     isFiltering,
-    isLoading,
+    isInitialLoading,
     isEmpty,
-    hasData,
+    isFilteredEmpty,
     deleteModal,
     setStatusId,
     setPlatformId,
@@ -52,11 +51,11 @@ export const ProjectManagement = () => {
         setSearchQuery={setSearchQuery}
       />
 
-      {isEmpty && <EmptyState />}
-
-      {(isLoading || hasData) && (
+      {isEmpty || isFilteredEmpty ? (
+        <EmptyState />
+      ) : (
         <ProjectsTable
-          isLoading={isLoading}
+          isLoading={isInitialLoading}
           isFiltering={isFiltering}
           projects={filteredProjects}
           onDelete={deleteModal.openDeleteModal}

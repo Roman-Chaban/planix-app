@@ -8,4 +8,4 @@ export {
   Subscription,
 } from './subscription';
 export { System } from './system';
-export { Settings } from './Settings';
+export { Settings } from './settings';

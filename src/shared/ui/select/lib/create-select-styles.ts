@@ -1,6 +1,8 @@
-import type { SelectStyles, SelectVariant } from '../model/types';
+import type { SelectStyles } from '../model/types';
 
 import { type GroupBase } from 'react-select';
+
+import { SELECT_CONTROL_VARIANTS, type SelectControlVariants } from '../model/constants';
 
 import { mergeStyles } from './merge-styles';
 import { SELECT_VARIANTS } from './styles';
@@ -10,7 +12,7 @@ export const createSelectStyles = <
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>,
 >(
-  variant: SelectVariant = 'default',
+  variant: SelectControlVariants = SELECT_CONTROL_VARIANTS.DEFAULT,
 ): SelectStyles<Option, IsMulti, Group> => {
   const styles = SELECT_VARIANTS.default;
   const variantStyles = SELECT_VARIANTS[variant];

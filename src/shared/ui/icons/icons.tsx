@@ -1908,7 +1908,7 @@ export const ErrorToastIcon = ({
   );
 };
 
-export const CloseToastIcon = ({ width = 15, height = 15, fill = 'currentColor' }: IconProps) => {
+export const CloseToastIcon = ({ width = 16, height = 16, fill = 'currentColor' }: IconProps) => {
   return (
     <svg
       width={width}
@@ -1969,6 +1969,26 @@ export const PlatformDropdownIcon = ({ width = 24, height = 24 }: IconProps) => 
       <path
         d="M12 16.7999C11.3 16.7999 10.6 16.5299 10.07 15.9999L3.55002 9.47989C3.26002 9.18989 3.26002 8.70989 3.55002 8.41989C3.84002 8.12989 4.32002 8.12989 4.61002 8.41989L11.13 14.9399C11.61 15.4199 12.39 15.4199 12.87 14.9399L19.39 8.41989C19.68 8.12989 20.16 8.12989 20.45 8.41989C20.74 8.70989 20.74 9.18989 20.45 9.47989L13.93 15.9999C13.4 16.5299 12.7 16.7999 12 16.7999Z"
         fill="#525252"
+      />
+    </svg>
+  );
+};
+
+export const UserFallbackIcon = ({ width = 20, height = 20, fill = 'currentColor' }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 43 43"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="21.5" cy="21.5" r="20" stroke="#141B34" strokeWidth="3" />
+      <path
+        d="M12.5 31.5C17.1634 26.6157 25.7865 26.3857 30.5 31.5M26.4902 16.5C26.4902 19.2614 24.2484 21.5 21.4831 21.5C18.7177 21.5 16.4759 19.2614 16.4759 16.5C16.4759 13.7386 18.7177 11.5 21.4831 11.5C24.2484 11.5 26.4902 13.7386 26.4902 16.5Z"
+        stroke={fill}
+        strokeWidth="3"
+        strokeLinecap="round"
       />
     </svg>
   );

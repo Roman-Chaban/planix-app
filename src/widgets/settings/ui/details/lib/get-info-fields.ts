@@ -1,4 +1,4 @@
-import type { DetailsFieldConfig } from '../model/details.types';
+import type { DetailsFieldConfig } from '../model/types';
 
 import type { Profile } from '@/entities/profile';
 

@@ -8,27 +8,31 @@ import { CloseToastIcon } from '../../icons';
 import { Typography } from '../../typography';
 import { toastConfig } from '../lib/config';
 
+import { TOAST_VARIANT } from '../model/constants';
+
 import styles from './toast.module.scss';
 
-const { TRANSPARENT } = BUTTON_VARIANTS;
-
 export const Toast = ({
-  variant,
+  variant = TOAST_VARIANT.DEFAULT,
   description,
   className,
-  onClose,
   isClosing,
+  onClose,
   onAnimationEnd,
 }: ToastProps) => {
   const { Icon, tone, role, ariaLive } = toastConfig[variant];
 
+  const wrapperClassNames = buildClassName(
+    styles.toast,
+    tone,
+    { [styles.closing]: isClosing },
+    className,
+  );
+
+  const buttonClassNames = buildClassName(styles.close, tone);
+
   return (
-    <Box
-      onClick={onAnimationEnd}
-      role={role}
-      aria-live={ariaLive}
-      className={buildClassName(styles.toast, tone, { [styles.closing]: isClosing }, className)}
-    >
+    <Box role={role} aria-live={ariaLive} className={wrapperClassNames} onClick={onAnimationEnd}>
       <Box className={styles.content}>
         <Icon className={styles.icon} aria-hidden />
 
@@ -37,12 +41,12 @@ export const Toast = ({
 
       {onClose && (
         <Button
-          onClick={onClose}
-          className={styles.close}
-          variant={TRANSPARENT}
+          className={buttonClassNames}
+          variant={BUTTON_VARIANTS.TRANSPARENT}
           aria-label="Close notification"
+          onClick={onClose}
         >
-          <CloseToastIcon aria-hidden className={styles.icon} />
+          <CloseToastIcon aria-hidden />
         </Button>
       )}
     </Box>

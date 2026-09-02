@@ -2,7 +2,8 @@ import { buildClassName } from '@/shared/lib';
 
 import { FormError, FormLabel, Box, FormIcon, Input, Typography } from '@/shared/ui';
 
-import { type FormFieldProps, ICON_POSITION } from '@/shared/ui/form/form-field';
+import { ICON_POSITION } from '../model/constants';
+import { type FormFieldProps } from '../model/types';
 
 import styles from './form-field.module.scss';
 
@@ -12,7 +13,8 @@ export const FormField = ({
   id,
   label,
   error,
-  variant,
+  variant = 'default',
+  size = 'large',
   startIcon,
   endIcon,
   onStartIconClick,
@@ -28,9 +30,10 @@ export const FormField = ({
 
   const isFilled = value !== undefined && value !== null && String(value).length > 0;
 
-  const wrapperClassName = buildClassName(styles.inputWrapper, className, {
+  const wrapperClassName = buildClassName(styles.inputWrapper, {
     [styles.error]: !!error,
     [styles[variant]]: !!variant,
+    [styles[size]]: !!size,
     [styles.filled]: isFilled,
     [styles.withStartIcon]: !!startIcon,
     [styles.withEndIcon]: !!endIcon,

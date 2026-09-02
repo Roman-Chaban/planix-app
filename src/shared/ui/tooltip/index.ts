@@ -1,5 +1,5 @@
-export { TOOLTIP_POSITION } from './lib/constants';
+export { TOOLTIP_POSITION, type TooltipPosition } from './model/constants';
 
-export type { TooltipPosition, TooltipProps } from './model/types';
+export type { TooltipProps } from './model/types';
 
 export { Tooltip } from './ui/tooltip';

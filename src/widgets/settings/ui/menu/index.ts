@@ -6,8 +6,8 @@ export type {
   MenuProps,
   SettingMenuProps,
   ProfileTabId,
-} from './model/setting-menu.types';
+} from './model/types';
 
-export { Menu } from './ui/Menu';
-export { MenuItem } from './ui/MenuItem';
-export { ProfileMenu } from './ui/SettingMenu';
+export { Menu } from './ui/menu';
+export { MenuItem } from './ui/menu-item';
+export { ProfileMenu } from './ui/settings-menu';

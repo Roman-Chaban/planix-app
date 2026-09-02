@@ -2,12 +2,13 @@ import type { TableItem } from '../model/types';
 import type { TranslateFn } from '@types';
 
 import { ActionsBar, MetricBadge, StatusBadge } from '@/shared/ui';
-import type { ActionItem } from '@/shared/ui/actions-bar/model/types';
-import { CalendarIcon } from '@/shared/ui/icons';
-import { METRIC_STATUSES } from '@/shared/ui/metric-badge';
+import type { ActionItem } from '@/shared/ui/actions-bar';
+import { METRIC_BADGE_VARIANTS } from '@/shared/ui/metric-badge';
 import type { TableColumn } from '@/shared/ui/table/model/types';
 
-const { SUCCESS, WARNING } = METRIC_STATUSES;
+import { ClientCell, DueDateCell } from '../cells';
+
+const { SUCCESS, WARNING } = METRIC_BADGE_VARIANTS;
 
 export const getProjectsTableColumns = (
   t: TranslateFn,
@@ -17,6 +18,7 @@ export const getProjectsTableColumns = (
     key: 'client_name',
     title: t('tableHeader.clientName'),
     width: 'max-content',
+    render: (row: TableItem) => <ClientCell {...row} />,
   },
   {
     key: 'project_name',
@@ -27,7 +29,7 @@ export const getProjectsTableColumns = (
     key: 'due_date',
     title: t('tableHeader.dueDate'),
     width: 'max-content',
-    icon: CalendarIcon,
+    render: (row: TableItem) => <DueDateCell {...row} />,
   },
   {
     key: 'platform',

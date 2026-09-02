@@ -1,7 +1,8 @@
+import type { GridProps } from '../model/types';
+
 import { buildClassName } from '@/shared/lib';
 
-import { Box } from '@/shared/ui';
-import type { GridProps } from '@/shared/ui/grid';
+import { Box } from '../../box';
 
 import styles from './grid.module.scss';
 

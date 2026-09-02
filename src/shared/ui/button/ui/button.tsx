@@ -1,51 +1,51 @@
-import { buildClassName } from '@/shared/lib';
+import type { ButtonProps } from '../model/types';
 
-import { Box } from '@/shared/ui';
-import type { ButtonProps } from '@/shared/ui/button';
+import { Loader } from '../../loader';
+import { resolveButtonProps, splitButtonProps, buildButtonClassName } from '../lib/helpers';
+import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_VARIANTS } from '../model/constants';
 
-import { getButtonProps } from '../lib/helpers';
-
-import styles from './button.module.scss';
+import { ButtonContent } from './button-content';
 
 export const Button = (props: ButtonProps) => {
-  const { allProps, htmlProps } = getButtonProps(props);
+  const resolvedProps = resolveButtonProps(props);
+
+  const { uiProps, buttonProps } = splitButtonProps(resolvedProps);
 
   const {
-    variant = 'default',
-    size = 'compact',
-    shape = 'normal',
+    variant = BUTTON_VARIANTS.DEFAULT,
+    size = BUTTON_SIZES.COMPACT,
+    shape = BUTTON_SHAPES.DEFAULT,
     fullWidth = false,
     minWidth,
-    className,
     startIcon,
     endIcon,
     startIconClassName,
     endIconClassName,
-    children,
-    disabled,
     isLoading,
-    type,
-  } = allProps;
+    children,
+  } = uiProps;
 
-  const buttonClasses = buildClassName(
-    styles.button,
-    styles[variant],
-    styles[size],
-    styles[shape],
-    minWidth && styles[`minWidth_${minWidth}`],
-    fullWidth && styles.fullWidth,
-    className,
-  );
+  const isDisabled = buttonProps.disabled || isLoading;
+
+  const className = buildButtonClassName({
+    variant,
+    size,
+    shape,
+    fullWidth,
+    minWidth,
+    className: buttonProps.className,
+  });
 
   return (
-    <button {...htmlProps} className={buttonClasses} disabled={disabled || isLoading} type={type}>
-      {startIcon && (
-        <Box className={buildClassName(styles.icon, startIconClassName)}>{startIcon}</Box>
-      )}
-
-      {children}
-
-      {endIcon && <Box className={buildClassName(styles.icon, endIconClassName)}>{endIcon}</Box>}
+    <button {...buttonProps} className={className} disabled={isDisabled}>
+      <ButtonContent
+        startIcon={startIcon}
+        endIcon={endIcon}
+        startIconClassName={startIconClassName}
+        endIconClassName={endIconClassName}
+      >
+        {isLoading ? <Loader /> : children}
+      </ButtonContent>
     </button>
   );
 };

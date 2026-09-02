@@ -9,5 +9,3 @@ export type ActionItem = {
 export type ActionsBarProps = {
   actions: ActionItem[];
 };
-
-export type ActionItems = ActionItem[];

@@ -1,7 +1,7 @@
 import type { TranslateFn } from '@types';
 
-import type { toProjectTableItem } from '@/entities/projects';
-import type { TableSize, TableVariant } from '@/shared/ui/table';
+import type { mapProjectTableRow } from '@/entities/projects';
+import type { TableSizes, TableVariants } from '@/shared/ui/table';
 
 export type ProjectsTableProps = {
   projects: TableItem[];
@@ -10,10 +10,10 @@ export type ProjectsTableProps = {
   isFiltering?: boolean;
 };
 
-export type TableItem = ReturnType<typeof toProjectTableItem>;
+export type TableItem = ReturnType<typeof mapProjectTableRow>;
 
 export type ProjectsTableSkeletonProps = {
   t: TranslateFn;
-  size?: TableSize;
-  variant?: TableVariant;
+  size?: TableSizes;
+  variant?: TableVariants;
 };

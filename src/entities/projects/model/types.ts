@@ -1,6 +1,5 @@
-import type { Status } from '@types';
-
-import type { ProjectDetailsSchema } from '@/features/project-add';
+import type { ProjectCreateSchema } from '@/features/project-create';
+import type { Status } from '@/shared/lib/common/constants';
 
 export type ProjectId = string | number;
 
@@ -25,18 +24,24 @@ export type Project = {
   start_date: string;
   due_date: string;
   platform: string;
-  progress: string;
+  progress: string | number;
   price: string;
   status: Status;
   slug: string;
   description: string;
   description_uk: string;
-  files: (ProjectFile | File)[];
+  files: ProjectFile[];
+  user_id: string;
 };
 
-export type CreateProjectPayload = ProjectDetailsSchema;
+export type CreateProjectPayload = {
+  formData: ProjectCreateSchema;
+  files: ProjectFile[];
+};
+
 export type UpdateProjectPayload = {
   id: ProjectId;
-  data: Partial<ProjectDetailsSchema>;
+  data: Partial<ProjectCreateSchema>;
 };
+
 export type DeleteProjectPayload = { id: ProjectId };

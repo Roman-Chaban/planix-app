@@ -1,27 +1,38 @@
-import type { KeyboardEvent } from 'react';
+import type { FormFieldSizes } from '../../form/form-field';
 
 import type { ProjectFile } from '@/entities/projects';
 
+export type FileUploadItem = ProjectFile | File;
+export type FileUploadValue = FileUploadItem[];
+
 export type FileUploadProps = {
-  value: (File | ProjectFile)[];
-  onChange?: (files: (File | ProjectFile)[]) => void;
+  value: FileUploadValue;
   label?: string;
   uploadLabel?: string;
   uploadPhotosLabel: string;
   error?: string;
+  size?: FormFieldSizes;
+  onChange: (files: FileUploadValue) => void;
 };
 
-export type FileItemProps = {
-  file: File | ProjectFile;
+export type FilePreviewProps = {
+  file: FileUploadItem;
   onRemove: () => void;
 };
 
 export type UseFileUploadParams = {
-  onFileSelect?: (file: File | ProjectFile) => void;
+  onFilesSelect?: (files: File[]) => void;
 };
 
-export type FileUploadItemProps = {
+type UploadTriggerHandlers = {
   handleTrigger: () => void;
-  handleKeyDown: (event: KeyboardEvent<HTMLElement>) => void;
+  handleKeyDown: (event: React.KeyboardEvent<HTMLElement>) => void;
+};
+
+export type PhotoUploadTriggerProps = UploadTriggerHandlers & {
   uploadPhotosLabel: string;
+};
+
+export type UploadTriggerProps = UploadTriggerHandlers & {
+  uploadLabel: string;
 };

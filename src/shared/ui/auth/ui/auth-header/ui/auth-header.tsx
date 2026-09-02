@@ -1,6 +1,6 @@
-import { Box, Typography } from '@/shared/ui';
+import type { AuthHeaderProps } from '../model/types';
 
-import type { AuthHeaderProps } from '@/shared/ui/auth/ui/auth-header';
+import { Box, Typography } from '@/shared/ui';
 
 import styles from './auth-header.module.scss';
 

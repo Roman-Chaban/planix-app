@@ -5,8 +5,8 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { useDeleteProject } from '@/features/delete-project';
-import { toProjectTableItem, useProjects } from '@/entities/projects';
+import { useDeleteProject } from '@/features/project-delete';
+import { mapProjectTableRow, useProjects } from '@/entities/projects';
 
 import { getProjectQueryParams } from '../lib/get-project-query-params';
 import { updateProjectQueryParams } from '../lib/update-project-query-params';
@@ -21,20 +21,33 @@ export const useProjectsPageModel = () => {
   const searchParams = useSearchParams();
 
   const { search, status, platform } = getProjectQueryParams(searchParams);
-  const [debouncedFilters, setDebouncedFilters] = useState({ search, status, platform });
+
+  const [debouncedFilters, setDebouncedFilters] = useState({
+    search,
+    status,
+    platform,
+  });
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setDebouncedFilters({ search, status, platform });
+      setDebouncedFilters({
+        search,
+        status,
+        platform,
+      });
     }, LOADING_TIMEOUT);
 
     return () => clearTimeout(timeoutId);
   }, [platform, search, status]);
 
   const updateQuery = (updates: ProjectQueryUpdates) => {
-    const nextParams = updateProjectQueryParams({ searchParams, updates });
+    const nextParams = updateProjectQueryParams({
+      searchParams,
+      updates,
+    });
 
     const query = nextParams.toString();
+
     router.replace(query ? `${pathname}?${query}` : pathname);
   };
 
@@ -51,15 +64,16 @@ export const useProjectsPageModel = () => {
   };
 
   const deleteModal = useDeleteProject();
+
   const { data: projectsData, isLoading } = useProjects();
 
   const projects = useMemo(
-    () => (projectsData?.data ?? []).map(toProjectTableItem),
+    () => (projectsData?.data ?? []).map(mapProjectTableRow),
     [projectsData],
   );
 
   const filteredProjects = useMemo(() => {
-    const normalizedSearch = debouncedFilters.search.trim().toLocaleLowerCase();
+    const normalizedSearch = debouncedFilters.search.trim().toLowerCase();
 
     return projects.filter((project) => {
       const matchesSearch =
@@ -75,7 +89,7 @@ export const useProjectsPageModel = () => {
           project.description_uk,
         ]
           .filter(Boolean)
-          .some((value) => value.toLocaleLowerCase().includes(normalizedSearch));
+          .some((value) => value.toLowerCase().includes(normalizedSearch));
 
       return (
         matchesSearch &&
@@ -85,26 +99,32 @@ export const useProjectsPageModel = () => {
     });
   }, [debouncedFilters, projects]);
 
-  const isEmpty = !isLoading && projects.length === 0;
-  const hasData = !isLoading && filteredProjects.length > 0;
   const isFiltering =
     search !== debouncedFilters.search ||
     status !== debouncedFilters.status ||
     platform !== debouncedFilters.platform;
 
+  const isInitialLoading = isLoading && !projectsData;
+
+  const isEmpty = !isInitialLoading && projects.length === 0;
+
+  const isFilteredEmpty =
+    !isInitialLoading && !isFiltering && projects.length > 0 && filteredProjects.length === 0;
+
   return {
     statusId: status,
-    setStatusId,
     platformId: platform,
-    setPlatformId,
     search,
-    setSearchQuery,
     projects,
     filteredProjects,
     isFiltering,
-    isLoading,
+    isInitialLoading,
     isEmpty,
-    hasData,
+    isLoading,
+    isFilteredEmpty,
     deleteModal,
+    setStatusId,
+    setPlatformId,
+    setSearchQuery,
   };
 };

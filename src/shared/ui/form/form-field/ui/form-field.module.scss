@@ -1,13 +1,14 @@
 @use '@/shared/styles' as *;
 
 .field {
+  position: relative;
   width: 100%;
   @include flex-col(0.188rem, start, stretch, column);
 }
 
 .input {
   width: 100%;
-  min-height: 3.375rem;
+  height: 100%;
   border: none;
   outline: none;
   background: transparent;
@@ -15,7 +16,6 @@
   border-radius: 1rem;
   font-size: $body-md-font-size;
   caret-color: $text-secondary;
-  color: $text-secondary;
 
   @include respond(sm) {
     font-size: $body-sm-font-size;
@@ -27,13 +27,28 @@
 .inputWrapper {
   width: 100%;
   position: relative;
-  transition: all 0.35s ease-in-out 0s;
-  display: flex;
-  align-items: center;
+  @include flex-center;
 
   @include input-wrapper-border($border-default);
   @include input-border-active($border-focus);
   @include input-disabled($surface-tertiary, $surface-secondary);
+  @include smooth-transition(all, 0.35s, ease-in-out, 0s);
+
+  &.small {
+    min-height: $space-8;
+  }
+
+  &.medium {
+    min-height: $space-9;
+  }
+
+  &.large {
+    min-height: 3.375rem;
+  }
+
+  &.hidden {
+    min-height: 0;
+  }
 }
 
 .withStartIcon .input,
@@ -50,6 +65,10 @@
   color: $neutral-600;
   pointer-events: none;
   transition: all 0.2s ease;
+
+  @include respond(sm) {
+    font-size: $body-sm-font-size;
+  }
 }
 
 .inputWrapper:focus-within .floatingLabel,
@@ -115,6 +134,9 @@
 }
 
 .errorText {
+  position: absolute;
+  top: calc(100% + 0.188rem);
+  left: 0;
   @include error-text($body-md-font-size, $icon-danger, 0.3rem, $font-weight-medium);
 
   @include respond(sm) {

@@ -1,10 +1,13 @@
 'use client';
 
+import type { PageWrapperProps } from '../model/types';
+
 import { Sidebar } from '@/widgets/sidebar';
 import { buildClassName } from '@/shared/lib';
 import { useSidebar } from '@/shared/providers/sidebar';
-import { Box, Grid } from '@/shared/ui';
-import type { PageWrapperProps } from '@/shared/ui/page-wrapper';
+
+import { Box } from '../../box';
+import { Grid } from '../../grid';
 
 import styles from './page-wrapper.module.scss';
 

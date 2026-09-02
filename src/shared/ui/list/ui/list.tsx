@@ -1,4 +1,4 @@
-import type { ListProps } from '@/shared/ui/list';
+import type { ListProps } from '../model/types';
 
 export const List = <T,>({
   tag: Tag = 'ul',

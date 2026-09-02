@@ -13,4 +13,4 @@ export {
   PROJECT_FILES,
   PRICE,
   SLUG,
-} from './lib/supabase.constants';
+} from './model/constants';

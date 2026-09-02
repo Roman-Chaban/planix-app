@@ -1,6 +1,9 @@
-export type { TableSize, TableVariant } from './model/types';
-
-export { TABLE_SIZES, TABLE_VARIANTS } from './lib/constants';
+export {
+  TABLE_SIZES,
+  TABLE_VARIANTS,
+  type TableSizes,
+  type TableVariants,
+} from './model/constants';
 
 export { TableContainer } from './ui/table-container';
 export { DataTable } from './ui/data-table';

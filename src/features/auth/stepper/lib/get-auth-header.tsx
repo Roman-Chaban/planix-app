@@ -1,10 +1,9 @@
-import type { AuthHeaderProps } from '../model/stepper.types';
+import type { AuthHeaderProps } from '../model/types';
 
 import type { ReactNode } from 'react';
 
+import { AUTH_STEPS } from '@/shared/lib/common/constants';
 import { AuthHeader } from '@/shared/ui';
-
-import { AUTH_STEPS } from './stepper.constants';
 
 const { LOGIN, REGISTER, FORGOT, RESET, VERIFY } = AUTH_STEPS;
 

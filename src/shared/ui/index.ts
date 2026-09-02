@@ -48,3 +48,4 @@ export { PageLoader } from './page-loader';
 export { OtpInput, OtpCell, OtpCursor } from './otp-input';
 export { Select, createSelectStyles, CustomDropdownIndicator } from './select';
 export { TableSkeleton } from './skeletons';
+export { ProjectHeader } from './project-header';

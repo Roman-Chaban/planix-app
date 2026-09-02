@@ -1,17 +1,81 @@
-import { type ButtonProps, BUTTON_PRESETS, BUTTON_UI_PROPS } from '@/shared/ui/button';
+import type { BuildButtonClassNameParams, ButtonProps } from '../model/types';
 
-export const getButtonProps = (props: ButtonProps) => {
-  const { preset, ...rest } = props;
+import { buildClassName } from '@/shared/lib';
 
-  const presetProps = preset && preset in BUTTON_PRESETS ? BUTTON_PRESETS[preset] : {};
+import { BUTTON_DEFAULTS } from '../model/defaults';
 
-  const allProps = { ...presetProps, ...rest };
+import styles from '../ui/button.module.scss';
 
-  const htmlProps = { ...allProps };
+import { BUTTON_PRESETS } from './presets';
 
-  BUTTON_UI_PROPS.forEach((key) => {
-    delete htmlProps[key as keyof typeof htmlProps];
-  });
+export const resolveButtonProps = (props: ButtonProps): ButtonProps => {
+  const { preset, ...explicitProps } = props;
 
-  return { allProps, htmlProps };
+  const presetProps = preset ? BUTTON_PRESETS[preset] : {};
+  const definedExplicitProps = Object.fromEntries(
+    Object.entries(explicitProps).filter(([, value]) => value !== undefined),
+  );
+
+  return {
+    ...BUTTON_DEFAULTS,
+    ...presetProps,
+    ...definedExplicitProps,
+  };
 };
+
+export const splitButtonProps = (props: ButtonProps) => {
+  const {
+    variant,
+    size,
+    shape,
+    fullWidth,
+    minWidth,
+
+    startIcon,
+    endIcon,
+    startIconClassName,
+    endIconClassName,
+
+    isLoading,
+
+    children,
+
+    ...buttonProps
+  } = props;
+
+  return {
+    uiProps: {
+      variant,
+      size,
+      shape,
+      fullWidth,
+      minWidth,
+      startIcon,
+      endIcon,
+      startIconClassName,
+      endIconClassName,
+      isLoading,
+      children,
+    },
+
+    buttonProps,
+  };
+};
+
+export const buildButtonClassName = ({
+  variant,
+  size,
+  shape,
+  fullWidth,
+  minWidth,
+  className,
+}: BuildButtonClassNameParams) =>
+  buildClassName(
+    styles.button,
+    styles[variant],
+    styles[size],
+    styles[shape],
+    minWidth && styles[`minWidth_${minWidth}`],
+    fullWidth && styles.fullWidth,
+    className,
+  );

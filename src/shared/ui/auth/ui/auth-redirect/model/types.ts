@@ -2,7 +2,7 @@ import type { NavigateFn } from '@types';
 
 import type { ReactNode } from 'react';
 
-import type { AuthStep } from '@/features/auth/stepper';
+import type { AuthStep } from '@/shared/lib/common/constants';
 
 export type AuthRedirectProps = {
   title: string;

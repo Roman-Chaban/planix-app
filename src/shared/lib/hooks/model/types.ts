@@ -1,12 +1,11 @@
+import type { Axis } from './constants';
+import type { Breakpoint } from '../../common/constants';
 import type { FieldValues, UseFormProps } from 'react-hook-form';
 
 import type { ZodType } from 'zod';
 
-import type { Breakpoint } from '@/shared/ui/theme';
-
 export type Point = { x: number; y: number };
 export type ScrollPosition = { left: number; top: number };
-export type Axis = 'x' | 'y' | 'both';
 
 export type UseEscapeKeyParams = {
   enabled: boolean;

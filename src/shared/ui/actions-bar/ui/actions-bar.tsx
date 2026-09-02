@@ -1,5 +1,7 @@
-import { Box, Button } from '@/shared/ui';
-import type { ActionsBarProps } from '@/shared/ui/actions-bar';
+import type { ActionsBarProps } from '../model/types';
+
+import { Box } from '../../box';
+import { Button } from '../../button';
 
 import styles from './actions-bar.module.scss';
 

@@ -1,3 +1,4 @@
+import type { SelectControlVariants } from './constants';
 import type {
   GroupBase,
   Props,
@@ -7,8 +8,6 @@ import type {
 } from 'react-select';
 
 import type { ReactNode } from 'react';
-
-export type SelectVariant = 'default' | 'language' | 'toolbar' | 'platform';
 
 export type SelectVariantStyles = {
   container?: CSSObjectWithLabel;
@@ -25,7 +24,7 @@ export type SelectVariantStyles = {
   optionSelected?: CSSObjectWithLabel;
 };
 
-export type SelectVariants = Record<SelectVariant, SelectVariantStyles>;
+export type SelectVariants = Record<SelectControlVariants, SelectVariantStyles>;
 
 export type SelectProps<
   Option,

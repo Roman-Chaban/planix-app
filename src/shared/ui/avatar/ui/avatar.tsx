@@ -1,18 +1,22 @@
+import type { AvatarProps } from '../model/types';
+
 import Image from 'next/image';
 
 import { buildClassName } from '@/shared/lib';
 
-import { Box } from '@/shared/ui';
-import type { AvatarProps } from '@/shared/ui/avatar';
+import { Box } from '../../box';
+
+import { UserFallbackIcon } from '../../icons';
+import { AVATAR_SIZES, AVATAR_VARIANTS, DEFAULT_AVATAR_ALT } from '../model/constants';
 
 import styles from './avatar.module.scss';
 
 export const Avatar = ({
   src,
   icon,
-  alt = 'avatar',
-  size = 'md',
-  variant = 'circle',
+  alt = DEFAULT_AVATAR_ALT,
+  size = AVATAR_SIZES.MEDIUM,
+  variant = AVATAR_VARIANTS.CIRCLE,
   width,
   height,
   fallback,
@@ -34,7 +38,7 @@ export const Avatar = ({
         />
       )}
 
-      {!icon && !src && <Box className={styles.fallback}>{fallback ?? 'Fallback'}</Box>}
+      {!icon && !src && (fallback ?? <UserFallbackIcon />)}
     </Box>
   );
 };

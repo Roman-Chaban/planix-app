@@ -1,4 +1,4 @@
-import type { MenuItems } from '../model/setting-menu.types';
+import type { MenuItems } from '../model/types';
 
 import { Notifications } from '@/features/profile';
 
@@ -7,7 +7,7 @@ import { ModalId } from '@/entities/modal';
 import { Details } from '../../details';
 import { Subscription } from '../../subscription';
 import { System } from '../../system';
-import { MenuTabType, SettingTabIdEnum } from '../model/setting-menu.enums';
+import { MenuTabType, SettingTabIdEnum } from '../model/enums';
 
 export const SETTINGS_MENU: MenuItems = [
   {

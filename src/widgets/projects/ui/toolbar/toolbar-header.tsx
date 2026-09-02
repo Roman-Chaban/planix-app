@@ -4,9 +4,9 @@ import type { ToolbarHeaderProps } from './model/types';
 
 import { useTranslation } from 'react-i18next';
 
-import { getHeaderItems } from '@/widgets/project-details';
 import { NAMESPACE as NS } from '@/shared/i18n';
 import { Box, List } from '@/shared/ui';
+import { getHeaderItems } from '@/shared/ui/project-header';
 
 import { ToolbarHeaderItem } from './toolbar-header-item';
 import styles from './toolbar.module.scss';

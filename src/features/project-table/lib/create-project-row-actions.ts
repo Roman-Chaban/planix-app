@@ -1,0 +1,28 @@
+import type { ProjectRowActionsFactory, ProjectRowActionsConfig } from '@/features/project-table';
+import type { ActionItem } from '@/shared/ui/actions-bar';
+
+import { DeleteIcon, ViewIcon, EditIcon } from '@/shared/ui/icons';
+
+export const createProjectRowActions = ({
+  onView,
+  onEdit,
+  onDelete,
+}: ProjectRowActionsConfig): ProjectRowActionsFactory => {
+  return (projectSlug: string, projectId: string | number): ActionItem[] => [
+    {
+      id: 'view',
+      icon: ViewIcon,
+      onClick: () => onView(projectSlug),
+    },
+    {
+      id: 'edit',
+      icon: EditIcon,
+      onClick: () => onEdit(projectId),
+    },
+    {
+      id: 'delete',
+      icon: DeleteIcon,
+      onClick: () => onDelete(projectId),
+    },
+  ];
+};

@@ -1,12 +1,15 @@
 'use client';
 
+import type { AppLinkProps } from '../model/types';
+
 import Link from 'next/link';
 
 import { useParams } from 'next/navigation';
 
 import { DEFAULT_LOCALE } from '@/shared/i18n/locales/locales';
 import { buildHref, buildClassName } from '@/shared/lib';
-import { type AppLinkProps, LINK_TARGETS } from '@/shared/ui/link';
+
+import { LINK_TARGETS } from '../model/constants';
 
 import styles from './app-link.module.scss';
 

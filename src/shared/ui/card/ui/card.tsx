@@ -1,9 +1,11 @@
 'use client';
 
+import type { CardProps } from '../model/types';
+
 import { buildClassName } from '@/shared/lib';
 
-import { Box, Typography } from '@/shared/ui';
-import type { CardProps } from '@/shared/ui/card';
+import { Box } from '../../box';
+import { Typography } from '../../typography';
 
 import styles from './card.module.scss';
 

@@ -7,13 +7,12 @@ import { useTranslation } from 'react-i18next';
 import { Header } from '@/widgets/header';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { usePageTitles } from '@/shared/lib/hooks';
-import { Box, PageWrapper } from '@/shared/ui';
+import { Box, PageWrapper, ProjectHeader } from '@/shared/ui';
 
 import { mapProjectDetails } from '../lib/map-project-details';
 
 import { Description } from './description/description';
 
-import { ProjectHeader } from './header/project-header';
 import { InfoCard } from './info/info-card';
 import { InfoList } from './info/info-list';
 import styles from './project-details.module.scss';

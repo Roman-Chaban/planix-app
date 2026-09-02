@@ -8,16 +8,16 @@ import { useTranslation } from 'react-i18next';
 import { NAMESPACE as NS } from '@/shared/i18n/namespaces/namespaces';
 import { Box, FormField, ProjectButton } from '@/shared/ui';
 
+import { FORM_FIELD_TYPES, FORM_FIELD_VARIANTS } from '@/shared/ui/form/form-field';
 import { SearchIconPrimary } from '@/shared/ui/icons';
-import { INPUT_TYPES, INPUT_VARIANTS } from '@/shared/ui/input';
 
 import { useNavigateToCreate } from './model/use-navigate-to-create';
 
 import { PlatformSelect } from './platform-select';
 import styles from './toolbar.module.scss';
 
-const { SEARCH } = INPUT_TYPES;
-const { DEFAULT } = INPUT_VARIANTS;
+const { SEARCH } = FORM_FIELD_TYPES;
+const { DEFAULT } = FORM_FIELD_VARIANTS;
 
 export const ToolbarActions = ({
   projects,
@@ -52,7 +52,7 @@ export const ToolbarActions = ({
 
       <ProjectButton
         className={styles.addButton}
-        preset="ADD"
+        preset="CREATE_PROJECT"
         onClick={navigateToCreate}
         label={t('toolbar.addProjectButton')}
       />

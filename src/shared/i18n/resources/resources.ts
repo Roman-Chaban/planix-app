@@ -7,8 +7,8 @@ import { settingsI18n } from '@/widgets/settings/i18n';
 import { sidebarI18n } from '@/widgets/sidebar/i18n';
 import { subscriptionI18n } from '@/widgets/subscription/i18n';
 import { authI18n } from '@/features/auth/stepper/i18n';
-import { deleteModalI18n } from '@/features/delete-project/i18n';
-import { projectAddI18n } from '@/features/project-add/i18n';
+import { projectCreateI18n } from '@/features/project-create/i18n';
+import { deleteModalI18n } from '@/features/project-delete/i18n';
 
 export const resources = {
   en: {
@@ -21,7 +21,7 @@ export const resources = {
     header: headerI18n.en,
     projectManagement: projectManagementI18n.en,
     project: projectI18n.en,
-    projectAdd: projectAddI18n.en,
+    projectCreate: projectCreateI18n.en,
     settings: settingsI18n.en,
   },
   uk: {
@@ -34,7 +34,7 @@ export const resources = {
     header: headerI18n.uk,
     projectManagement: projectManagementI18n.uk,
     project: projectI18n.uk,
-    projectAdd: projectAddI18n.uk,
+    projectCreate: projectCreateI18n.en,
     settings: settingsI18n.uk,
   },
 };

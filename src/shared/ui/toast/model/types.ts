@@ -1,4 +1,4 @@
-import type { ToastVariant } from '../lib/constants';
+import type { ToastVariant } from './constants';
 
 import type { SVGComponent, WithClassName } from '@types';
 
@@ -19,7 +19,7 @@ export type ToastConfigOptions = Record<ToastVariant, ToastConfigItem>;
 export type ToastProps = WithClassName & {
   variant: ToastVariant;
   description: ReactNode;
-  onClose?: () => void;
   isClosing: boolean;
   onAnimationEnd: () => void;
+  onClose?: () => void;
 };

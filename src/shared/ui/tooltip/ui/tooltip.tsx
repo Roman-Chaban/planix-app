@@ -1,5 +1,7 @@
-import { Box } from '@/shared/ui';
-import { TOOLTIP_POSITION, type TooltipProps } from '@/shared/ui/tooltip';
+import type { TooltipProps } from '../model/types';
+
+import { Box } from '../../box';
+import { TOOLTIP_POSITION } from '../model/constants';
 
 import styles from './tooltip.module.scss';
 

@@ -8,12 +8,12 @@ export type {
   DefaultFieldProps,
   DefaultFieldValue,
   FieldByKind,
-  FieldGroupLayout,
   FileUploadFieldProps,
   FormFieldFeature,
   FormFieldLayout,
   SharedFieldRendererProps,
   TextareaFieldProps,
+  PriceFieldProps,
 } from './model/types';
 
 export { FormFields } from './ui/form-fields';

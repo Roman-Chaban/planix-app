@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { useDeleteProject } from '@/features/project-delete';
-import { toProjectTableItem, useProjects } from '@/entities/projects';
+import { mapProjectTableRow, useProjects } from '@/entities/projects';
 
 import { getProjectQueryParams } from '../lib/get-project-query-params';
 import { updateProjectQueryParams } from '../lib/update-project-query-params';
@@ -68,7 +68,7 @@ export const useProjectsPageModel = () => {
   const { data: projectsData, isLoading } = useProjects();
 
   const projects = useMemo(
-    () => (projectsData?.data ?? []).map(toProjectTableItem),
+    () => (projectsData?.data ?? []).map(mapProjectTableRow),
     [projectsData],
   );
 

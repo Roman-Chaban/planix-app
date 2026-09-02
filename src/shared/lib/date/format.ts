@@ -40,7 +40,7 @@ export const toDisplay = (isoDate?: string | null): string => {
     return '';
   }
 
-  const parsed = dayjs(isoDate, DATE_FORMAT.ISO, true);
+  const parsed = dayjs(isoDate);
 
   return parsed.isValid() ? parsed.format(DATE_FORMAT.DISPLAY) : '';
 };

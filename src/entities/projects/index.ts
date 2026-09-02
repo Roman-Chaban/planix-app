@@ -12,4 +12,4 @@ export { useProjects } from './model/use-projects';
 
 export { getProjects, updateProject, createProject, deleteProject, uploadProjectFile } from './api';
 
-export { toProjectTableItem } from './lib/to-project-table-item';
+export { mapProjectTableRow } from './lib/map-project-table-row';

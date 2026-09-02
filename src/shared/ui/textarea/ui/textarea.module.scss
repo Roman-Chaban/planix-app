@@ -41,7 +41,6 @@
   min-height: 5.75rem;
   padding: 1rem 1.125rem;
   caret-color: $text-secondary;
-  color: $text-secondary;
   font-size: $body-md-font-size;
 
   @include input-wrapper-border($border-default);

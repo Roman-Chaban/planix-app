@@ -12,11 +12,14 @@ export const resolveButtonProps = (props: ButtonProps): ButtonProps => {
   const { preset, ...explicitProps } = props;
 
   const presetProps = preset ? BUTTON_PRESETS[preset] : {};
+  const definedExplicitProps = Object.fromEntries(
+    Object.entries(explicitProps).filter(([, value]) => value !== undefined),
+  );
 
   return {
     ...BUTTON_DEFAULTS,
     ...presetProps,
-    ...explicitProps,
+    ...definedExplicitProps,
   };
 };
 

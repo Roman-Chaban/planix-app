@@ -1,6 +1,7 @@
 @use '@/shared/styles' as *;
 
 .field {
+  position: relative;
   width: 100%;
   @include flex-col(0.188rem, start, stretch, column);
 }
@@ -134,6 +135,9 @@
 }
 
 .errorText {
+  position: absolute;
+  top: calc(100% + 0.188rem);
+  left: 0;
   @include error-text($body-md-font-size, $icon-danger, 0.3rem, $font-weight-medium);
 
   @include respond(sm) {

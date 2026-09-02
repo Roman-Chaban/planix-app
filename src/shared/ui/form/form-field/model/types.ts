@@ -14,7 +14,7 @@ export type FormFieldProps = {
   id: string;
   label?: string;
   error?: string;
-  variant: FormFieldVariants;
+  variant?: FormFieldVariants;
   size?: FormFieldSizes;
   startIcon?: ReactNode;
   endIcon?: ReactNode;

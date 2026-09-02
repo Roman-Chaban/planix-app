@@ -1974,7 +1974,7 @@ export const PlatformDropdownIcon = ({ width = 24, height = 24 }: IconProps) => 
   );
 };
 
-export const UserFallbackIcon = ({ width = 24, height = 24, fill = 'currentColor' }: IconProps) => {
+export const UserFallbackIcon = ({ width = 20, height = 20, fill = 'currentColor' }: IconProps) => {
   return (
     <svg
       width={width}

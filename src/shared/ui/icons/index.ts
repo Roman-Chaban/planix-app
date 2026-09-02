@@ -55,3 +55,4 @@ export { ErrorToastIcon } from './icons';
 export { CloseToastIcon } from './icons';
 export { PlanCheckIcon } from './icons';
 export { PlatformDropdownIcon } from './icons';
+export { UserFallbackIcon } from './icons';

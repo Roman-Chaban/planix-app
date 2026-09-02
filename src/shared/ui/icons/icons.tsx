@@ -1973,3 +1973,23 @@ export const PlatformDropdownIcon = ({ width = 24, height = 24 }: IconProps) => 
     </svg>
   );
 };
+
+export const UserFallbackIcon = ({ width = 24, height = 24, fill = 'currentColor' }: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 43 43"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="21.5" cy="21.5" r="20" stroke="#141B34" strokeWidth="3" />
+      <path
+        d="M12.5 31.5C17.1634 26.6157 25.7865 26.3857 30.5 31.5M26.4902 16.5C26.4902 19.2614 24.2484 21.5 21.4831 21.5C18.7177 21.5 16.4759 19.2614 16.4759 16.5C16.4759 13.7386 18.7177 11.5 21.4831 11.5C24.2484 11.5 26.4902 13.7386 26.4902 16.5Z"
+        stroke={fill}
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};

@@ -45,7 +45,7 @@ export const BUTTON_PRESETS = {
   },
 
   CREATE_PROJECT: {
-    type: BUTTON,
+    type: SUBMIT,
     shape: ROUNDED,
     variant: DEFAULT_VARIANT,
     size: MEDIUM,

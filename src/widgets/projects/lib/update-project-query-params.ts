@@ -1,6 +1,7 @@
 import type { UpdateProjectQueryParamsOptions } from '../model/types';
 
 import { PROJECT_QUERY_KEYS, PROJECT_TOOLBAR_NAMES } from '../model/constants';
+import { ProjectQueryParams } from '../model/enums';
 
 const { SEARCH, STATUS, PLATFORM } = PROJECT_QUERY_KEYS;
 const { ALL_PROJECTS } = PROJECT_TOOLBAR_NAMES;
@@ -11,7 +12,7 @@ export const updateProjectQueryParams = ({
 }: UpdateProjectQueryParamsOptions) => {
   const params = new URLSearchParams(searchParams);
 
-  if ('search' in updates) {
+  if (ProjectQueryParams.SEARCH in updates) {
     const value = updates.search ?? '';
 
     if (value.trim()) {
@@ -21,7 +22,7 @@ export const updateProjectQueryParams = ({
     }
   }
 
-  if ('status' in updates) {
+  if (ProjectQueryParams.STATUS in updates) {
     if (!updates.status || updates.status === ALL_PROJECTS) {
       params.delete(STATUS);
     } else {
@@ -29,7 +30,7 @@ export const updateProjectQueryParams = ({
     }
   }
 
-  if ('platform' in updates) {
+  if (ProjectQueryParams.PLATFORM in updates) {
     if (updates.platform == null) {
       params.delete(PLATFORM);
     } else {

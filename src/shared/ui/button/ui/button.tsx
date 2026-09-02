@@ -1,5 +1,6 @@
 import type { ButtonProps } from '../model/types';
 
+import { Loader } from '../../loader';
 import { resolveButtonProps, splitButtonProps, buildButtonClassName } from '../lib/helpers';
 import { BUTTON_SHAPES, BUTTON_SIZES, BUTTON_VARIANTS } from '../model/constants';
 
@@ -43,7 +44,7 @@ export const Button = (props: ButtonProps) => {
         startIconClassName={startIconClassName}
         endIconClassName={endIconClassName}
       >
-        {children}
+        {isLoading ? <Loader /> : children}
       </ButtonContent>
     </button>
   );

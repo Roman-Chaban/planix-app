@@ -3,7 +3,7 @@ import type { AuthButtonProps } from '../model/types';
 import { BREAKPOINTS } from '@/shared/lib';
 
 import { useMediaQuery } from '@/shared/lib/hooks';
-import { Button, Loader } from '@/shared/ui';
+import { Button } from '@/shared/ui';
 
 import { BUTTON_SIZES } from '@/shared/ui/button/model/constants';
 
@@ -19,7 +19,7 @@ export const AuthButton = ({ label, disabled, isLoading, preset, className }: Au
 
   return (
     <Button className={className} preset={preset} size={buttonSizes} disabled={isButtonDisabled}>
-      {isLoading ? <Loader /> : label}
+      {label}
     </Button>
   );
 };

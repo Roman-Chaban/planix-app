@@ -4,12 +4,7 @@ import type { AvatarProps } from '@/shared/ui/avatar/model/types';
 import { Avatar } from '@/shared/ui/index';
 import { createSetup } from '@/mocks';
 
-import {
-  AVATAR_SIZES,
-  AVATAR_VARIANTS,
-  DEFAULT_AVATAR_ALT,
-  DEFAULT_AVATAR_FALLBACK,
-} from '../model/constants';
+import { AVATAR_SIZES, AVATAR_VARIANTS, DEFAULT_AVATAR_ALT } from '../model/constants';
 
 const { LARGE } = AVATAR_SIZES;
 const { SQUARE } = AVATAR_VARIANTS;
@@ -21,7 +16,6 @@ const createProps = (overrides: Partial<AvatarProps> = {}): AvatarProps => ({
   height: 20,
   src: '/avatar.png',
   alt: DEFAULT_AVATAR_ALT,
-  fallback: DEFAULT_AVATAR_FALLBACK,
   size: LARGE,
   variant: SQUARE,
   ...overrides,
@@ -50,10 +44,10 @@ describe('Avatar', () => {
     expect(screen.getByAltText(DEFAULT_AVATAR_ALT)).toBeInTheDocument();
   });
 
-  it('renders fallback when no src and no icon', () => {
+  it('renders fallback icon when no src and no icon', () => {
     setup(createProps({ src: undefined }));
 
-    expect(screen.getByText(DEFAULT_AVATAR_FALLBACK)).toBeInTheDocument();
+    expect(document.querySelector('svg')).toBeInTheDocument();
   });
 
   it('applies size and variant classes to image', () => {
